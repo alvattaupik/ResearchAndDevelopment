@@ -1,0 +1,17 @@
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\obj\Debug\TurnOver.vbproj.ResolveComReference.cache
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\obj\Debug\TurnOver.vbproj.GenerateResource.Cache
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\bin\Debug\TurnOver.exe.config
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\bin\Debug\TurnOver.exe.manifest
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\bin\Debug\TurnOver.application
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\bin\Debug\TurnOver.exe
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\bin\Debug\TurnOver.pdb
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\bin\Debug\TurnOver.xml
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\obj\Debug\TurnOver.FilterExportExcel.resources
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\obj\Debug\TurnOver.Form1.resources
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\obj\Debug\TurnOver.FormUploader.resources
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\obj\Debug\TurnOver.Resources.resources
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\obj\Debug\TurnOver.exe.manifest
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\obj\Debug\TurnOver.application
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\obj\Debug\TurnOver.exe
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\obj\Debug\TurnOver.xml
+D:\Source Code Project\GetRealStock\Export Report Turn Over\Report Turn Over\Export Harga Jual\obj\Debug\TurnOver.pdb
