@@ -1,0 +1,18 @@
+C:\Users\IT-Alvat\AppData\Local\Temporary Projects\GetInventoryStock\bin\Debug\GetInventoryStock.exe.config
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\GetInventoryStock.vbproj.GenerateResource.Cache
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.exe.config
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.exe.manifest
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.application
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.exe
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.pdb
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.xml
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.frmLogin.resources
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.frmSettingKoneksi.resources
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.ItemList.resources
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.MainWindows.resources
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.Resources.resources
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.exe.manifest
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.application
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.exe
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.xml
+D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.pdb
