@@ -1,0 +1,36 @@
+D:\VB.net\Print Struk\Print Struk\bin\Debug\Print Struk.exe.config
+D:\VB.net\Print Struk\Print Struk\bin\Debug\Print Struk.exe
+D:\VB.net\Print Struk\Print Struk\bin\Debug\Print Struk.pdb
+D:\VB.net\Print Struk\Print Struk\bin\Debug\Print Struk.xml
+D:\VB.net\Print Struk\Print Struk\obj\Debug\Print Struk.vbproj.ResolveComReference.cache
+D:\VB.net\Print Struk\Print Struk\obj\Debug\Print_Struk.Form1.resources
+D:\VB.net\Print Struk\Print Struk\obj\Debug\Print_Struk.Resources.resources
+D:\VB.net\Print Struk\Print Struk\obj\Debug\Print Struk.vbproj.GenerateResource.Cache
+D:\VB.net\Print Struk\Print Struk\obj\Debug\Print Struk.exe
+D:\VB.net\Print Struk\Print Struk\obj\Debug\Print Struk.xml
+D:\VB.net\Print Struk\Print Struk\obj\Debug\Print Struk.pdb
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\bin\Debug\Print Struk.exe.config
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print Struk.vbproj.ResolveComReference.cache
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print Struk.exe
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print Struk.xml
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print Struk.pdb
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\bin\Debug\Print Struk.exe
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\bin\Debug\Print Struk.pdb
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\bin\Debug\Print Struk.xml
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print_Struk.Resources.resources
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print Struk.vbproj.GenerateResource.Cache
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print Struk.vbprojResolveAssemblyReference.cache
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print_Struk.FormCetakCashAndCarry.resources
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print_Struk.FormCetakCashAndSO.resources
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print_Struk.FormCetakNonCashAndCarry.resources
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print_Struk.FormCetakNonCashAndSO.resources
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print_Struk.FormUtama.resources
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\bin\Debug\Print Struk.exe.manifest
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\bin\Debug\Print Struk.application
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print Struk.exe.manifest
+C:\Users\IT-Alvat\Desktop\Print Struk\Print Struk\obj\Debug\Print Struk.application
+D:\Source Code Project\Print Struk\Print Struk\bin\Debug\Print Struk.exe.config
+D:\Source Code Project\Print Struk\Print Struk\obj\Debug\Print Struk.vbproj.ResolveComReference.cache
+D:\Source Code Project\Print Struk\Print Struk\obj\Debug\Print Struk.exe
+D:\Source Code Project\Print Struk\Print Struk\obj\Debug\Print Struk.xml
+D:\Source Code Project\Print Struk\Print Struk\obj\Debug\Print Struk.pdb
