@@ -1,0 +1,48 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+IPEfisiensi
+</name>
+</assembly>
+<members>
+<member name="P:IP_Efisiensi.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:IP_Efisiensi.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:IP_Efisiensi.My.Resources.Resources._8d2266d10c0de8283c9f225d7f7b045b_colorful_abstract_geometric_background_vector_by_vexels">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:IP_Efisiensi.My.Resources.Resources.iconfinder_1_04_511562">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:IP_Efisiensi.My.Resources.Resources.iconfinder_icon_136_document_edit_314724">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:IP_Efisiensi.My.Resources.Resources.iconfinder_icon_33_clipboard_add_315154">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:IP_Efisiensi.My.Resources.Resources.kisspng_ip_address_management_internet_protocol_computer_n_adress_5ac2a2f1d01703_7126512115227051378523">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:IP_Efisiensi.My.Resources.Resources.md_5b12306722c18">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:IP_Efisiensi.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,24 @@
+c:\users\data- alvat\documents\visual studio 2012\Projects\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.exe.config
+c:\users\data- alvat\documents\visual studio 2012\Projects\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.exe
+c:\users\data- alvat\documents\visual studio 2012\Projects\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.pdb
+c:\users\data- alvat\documents\visual studio 2012\Projects\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.xml
+c:\users\data- alvat\documents\visual studio 2012\Projects\IP Efisiensi\IP Efisiensi\obj\Debug\IP_Efisiensi.Form1.resources
+c:\users\data- alvat\documents\visual studio 2012\Projects\IP Efisiensi\IP Efisiensi\obj\Debug\IP_Efisiensi.Resources.resources
+c:\users\data- alvat\documents\visual studio 2012\Projects\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.vbproj.GenerateResource.Cache
+c:\users\data- alvat\documents\visual studio 2012\Projects\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.exe
+c:\users\data- alvat\documents\visual studio 2012\Projects\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.xml
+c:\users\data- alvat\documents\visual studio 2012\Projects\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.pdb
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.exe.config
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.exe
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.pdb
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.xml
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\obj\Debug\IP_Efisiensi.Form1.resources
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\obj\Debug\IP_Efisiensi.Resources.resources
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.vbproj.GenerateResource.Cache
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.exe
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.xml
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.pdb
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.exe.manifest
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.application
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.exe.manifest
+D:\Source Code Project\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.application
