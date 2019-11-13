@@ -1,0 +1,41 @@
+C:\Users\IT-Alvat\AppData\Local\Temporary Projects\Export Harga Jual\bin\Debug\Export Harga Jual.exe.config
+C:\Users\IT-Alvat\AppData\Local\Temporary Projects\Export Harga Jual\bin\Debug\Export Harga Jual.exe
+C:\Users\IT-Alvat\AppData\Local\Temporary Projects\Export Harga Jual\bin\Debug\Export Harga Jual.pdb
+C:\Users\IT-Alvat\AppData\Local\Temporary Projects\Export Harga Jual\bin\Debug\Export Harga Jual.xml
+C:\Users\IT-Alvat\AppData\Local\Temporary Projects\Export Harga Jual\obj\Debug\Export_Harga_Jual.Form1.resources
+C:\Users\IT-Alvat\AppData\Local\Temporary Projects\Export Harga Jual\obj\Debug\Export_Harga_Jual.Resources.resources
+C:\Users\IT-Alvat\AppData\Local\Temporary Projects\Export Harga Jual\obj\Debug\Export Harga Jual.vbproj.GenerateResource.Cache
+C:\Users\IT-Alvat\AppData\Local\Temporary Projects\Export Harga Jual\obj\Debug\Export Harga Jual.exe
+C:\Users\IT-Alvat\AppData\Local\Temporary Projects\Export Harga Jual\obj\Debug\Export Harga Jual.xml
+C:\Users\IT-Alvat\AppData\Local\Temporary Projects\Export Harga Jual\obj\Debug\Export Harga Jual.pdb
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.exe.config
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.exe
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.xml
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.pdb
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.exe
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.pdb
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.xml
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Harga_Jual.Form1.resources
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Harga_Jual.Resources.resources
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.vbproj.GenerateResource.Cache
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Harga_Jual.Form3.resources
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.exe.manifest
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.application
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.exe.manifest
+D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.application
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.exe.config
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.exe.manifest
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.application
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.exe
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.pdb
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.xml
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.vbprojResolveAssemblyReference.cache
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Harga_Jual.Form1.resources
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Harga_Jual.Form3.resources
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Harga_Jual.Resources.resources
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.vbproj.GenerateResource.Cache
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.exe.manifest
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.application
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.exe
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.xml
+D:\Source Code Project\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.pdb
