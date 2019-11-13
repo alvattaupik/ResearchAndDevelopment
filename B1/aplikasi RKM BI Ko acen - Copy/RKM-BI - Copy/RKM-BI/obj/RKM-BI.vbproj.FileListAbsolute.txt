@@ -1,0 +1,430 @@
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\RKM-BI.exe
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\RKM-BI.pdb
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\RKM-BI.xml
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\ResolveAssemblyReference.cache
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM_BI.Main.resources
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM_BI.Resources.resources
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM-BI.vbproj.GenerateResource.Cache
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM-BI.exe
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM-BI.xml
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM-BI.pdb
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM_BI.AsetMonitoring.resources
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringapter.resources
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\Interop.MSChart20Lib.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\Interop.MSDATASRC.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\AxInterop.MSChart20Lib.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM-BI.vbproj.ResolveComReference.cache
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\ZedGraph.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\ZedGraph.xml
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\de\ZedGraph.resources.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\es\ZedGraph.resources.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\fr\ZedGraph.resources.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\hu\ZedGraph.resources.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\it\ZedGraph.resources.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\ja\ZedGraph.resources.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\pt\ZedGraph.resources.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\sv\ZedGraph.resources.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\tr\ZedGraph.resources.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\zh-cn\ZedGraph.resources.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\zh-tw\ZedGraph.resources.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\Interop.MSChart20Lib.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\Interop.MSDATASRC.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\bin\Debug\AxInterop.MSChart20Lib.dll
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM_BI.StorePerform.resources
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM_BI.GraphOption1.resources
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM_BI.Dialog2.resources
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM_BI.Sales.resources
+D:\Program Budhay\.Net Exercise\RKM-BI\RKM-BI\obj\Debug\RKM_BI.SalesPerform.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\bin\Debug\ZedGraph.dll
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\bin\x86\Debug\RKM-BI.exe
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\bin\x86\Debug\RKM-BI.pdb
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\bin\x86\Debug\RKM-BI.xml
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM-BI.vbproj.ResolveComReference.cache
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.GroupPerform.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.minmax.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.Report1.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.RKMGroup.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.RKMSales.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.RKMTarget.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.targetreal.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.StorePerform.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.AsetMonitoring.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.GraphOption1.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.Dialog2.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.ImportExcel.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.LogIn.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.omsetsale.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.PaymentState.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.StockProInt.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.viewminmax.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.ViewerForm.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.Reporting.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.Main.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.Resources.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.GroupPerform.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.SalesMonitoringapter.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.SalesPerform.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.StorePerform.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.viewreport1.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.viewreport2.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.viewreport3.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.viewreport4.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.viewreport5.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM_BI.viewreport6.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM-BI.vbproj.GenerateResource.Cache
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RdlCompile.cache
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RdlCompile.compiled
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM-BI.exe
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM-BI.xml
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\x86\Debug\RKM-BI.pdb
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\ResolveAssemblyReference.cache
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.ResolveComReference.cache
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore2Rep.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStoreRep.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.minmax.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Report1.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMGroup.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMSales.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMTarget.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.targetreal.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.rdlc
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.AsetMonitoring.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GraphOption1.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Dialog2.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ImportExcel.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.LogIn.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Margin2View.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginView.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.omsetsale.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.PaymentState.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StockProInt.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewminmax.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ViewerForm.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Reporting.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Main.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Resources.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringapter.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesPerform.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport1.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport2.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport3.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport4.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport5.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport6.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.GenerateResource.Cache
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.cache
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.compiled
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.xml
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.pdb
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.pdb
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.xml
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Stock.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Testing.resources
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\bin\Debug\OutlookGridControl.dll
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe.config
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\bin\Debug\office.dll
+D:\Program Budhay\.Net Exercise\RKM-BI - Copy\RKM-BI\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe.config
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.xml
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.pdb
+D:\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe
+D:\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.pdb
+D:\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.xml
+D:\RKM-BI - Copy\RKM-BI\bin\Debug\OutlookGridControl.dll
+D:\RKM-BI - Copy\RKM-BI\bin\Debug\ZedGraph.dll
+D:\RKM-BI - Copy\RKM-BI\bin\Debug\office.dll
+D:\RKM-BI - Copy\RKM-BI\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\ResolveAssemblyReference.cache
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.ResolveComReference.cache
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.rdlc
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore2Rep.rdlc
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStoreRep.rdlc
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.minmax.rdlc
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Report1.rdlc
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMGroup.rdlc
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMSales.rdlc
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMTarget.rdlc
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.targetreal.rdlc
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.rdlc
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.AsetMonitoring.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GraphOption1.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Dialog2.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ImportExcel.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.LogIn.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Margin2View.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginView.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.omsetsale.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.PaymentState.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Stock.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StockProInt.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Testing.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewminmax.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ViewerForm.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Reporting.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Main.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Resources.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringapter.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesPerform.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport1.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport2.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport3.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport4.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport5.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport6.resources
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.GenerateResource.Cache
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.cache
+D:\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.compiled
+D:\backup\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe.config
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.xml
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.pdb
+D:\backup\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe
+D:\backup\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.pdb
+D:\backup\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.xml
+D:\backup\RKM-BI - Copy\RKM-BI\bin\Debug\ZedGraph.dll
+D:\backup\RKM-BI - Copy\RKM-BI\bin\Debug\Office.dll
+D:\backup\RKM-BI - Copy\RKM-BI\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\ResolveAssemblyReference.cache
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.ResolveComReference.cache
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.rdlc
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore2Rep.rdlc
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStoreRep.rdlc
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.minmax.rdlc
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Report1.rdlc
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMGroup.rdlc
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMSales.rdlc
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMTarget.rdlc
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.targetreal.rdlc
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.rdlc
+D:\backup\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.AsetMonitoring.resources
+D:\backup\RKM-BI
+E:\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe.config
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.xml
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.pdb
+E:\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe
+E:\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.pdb
+E:\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.xml
+E:\RKM-BI - Copy\RKM-BI\bin\Debug\ZedGraph.dll
+E:\RKM-BI - Copy\RKM-BI\bin\Debug\office.dll
+E:\RKM-BI - Copy\RKM-BI\bin\Debug\Microsoft.Office.Interop.Excel.dll
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\ResolveAssemblyReference.cache
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.ResolveComReference.cache
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.rdlc
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore2Rep.rdlc
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStoreRep.rdlc
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.minmax.rdlc
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Report1.rdlc
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMGroup.rdlc
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMSales.rdlc
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMTarget.rdlc
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.targetreal.rdlc
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.rdlc
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.AsetMonitoring.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.deliveryview.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.delivery.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GraphOption1.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Dialog2.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ImportExcel.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.LogIn.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Margin2View.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginView.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.omsetsale.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.PaymentState.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Stock.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StockProInt.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Testing.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewminmax.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ViewerForm.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Reporting.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Main.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Resources.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringapter.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesPerform.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport1.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport2.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport3.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport4.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport5.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport6.resources
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.GenerateResource.Cache
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.cache
+E:\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.compiled
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe.config
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.xml
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.pdb
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.pdb
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.xml
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\bin\Debug\ZedGraph.dll
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\bin\Debug\office.dll
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\bin\Debug\Microsoft.Office.Interop.Excel.dll
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\ResolveAssemblyReference.cache
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.ResolveComReference.cache
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.rdlc
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore2Rep.rdlc
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStoreRep.rdlc
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.minmax.rdlc
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Report1.rdlc
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMGroup.rdlc
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMSales.rdlc
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMTarget.rdlc
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.targetreal.rdlc
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.rdlc
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.AsetMonitoring.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.delivery.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GraphOption1.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Dialog2.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ImportExcel.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.LogIn.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Margin2View.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginView.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.omsetsale.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.PaymentState.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Stock.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StockProInt.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Testing.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewminmax.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ViewerForm.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Reporting.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Main.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Resources.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringapter.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesPerform.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport1.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport2.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport3.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport4.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport5.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport6.resources
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.GenerateResource.Cache
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.cache
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.compiled
+E:\aplikasi RKM BI Ko acen\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.stockView.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe.config
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.xml
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.pdb
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.pdb
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.xml
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\ZedGraph.dll
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\office.dll
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\Microsoft.Office.Interop.Excel.dll
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\ResolveAssemblyReference.cache
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.ResolveComReference.cache
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.rdlc
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore2Rep.rdlc
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStoreRep.rdlc
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.minmax.rdlc
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Report1.rdlc
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMGroup.rdlc
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMSales.rdlc
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMTarget.rdlc
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.targetreal.rdlc
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.rdlc
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.AsetMonitoring.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.stockView.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.delivery.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GraphOption1.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Dialog2.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ImportExcel.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.LogIn.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Margin2View.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginView.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.omsetsale.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.PaymentState.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Stock.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StockProInt.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Testing.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewminmax.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ViewerForm.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Reporting.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Main.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Resources.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringapter.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesPerform.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport1.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport2.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport3.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport4.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport5.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport6.resources
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.GenerateResource.Cache
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.cache
+E:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.compiled
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe.config
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.xml
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.pdb
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\ResolveAssemblyReference.cache
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.ResolveComReference.cache
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.rdlc
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore2Rep.rdlc
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStoreRep.rdlc
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.minmax.rdlc
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Report1.rdlc
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMGroup.rdlc
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMSales.rdlc
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.RKMTarget.rdlc
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.targetreal.rdlc
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.rdlc
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.AsetMonitoring.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.stockView.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.delivery.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GraphOption1.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Dialog2.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ImportExcel.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.LogIn.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Margin2View.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginView.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.omsetsale.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.PaymentState.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Stock.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StockProInt.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Testing.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewminmax.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ViewerForm.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Reporting.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Main.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Resources.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringapter.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesPerform.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport1.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport2.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport3.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport4.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport5.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.viewreport6.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.GenerateResource.Cache
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.cache
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.compiled
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.pdb
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.xml
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginBaru.resources
+D:\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ViewStockWarehouse.resources
