@@ -22,3 +22,7 @@ D:\Source Code Project\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.exe.mani
 D:\Source Code Project\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.application
 D:\Source Code Project\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.exe.manifest
 D:\Source Code Project\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.application
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.exe.config
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.exe
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.xml
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.pdb

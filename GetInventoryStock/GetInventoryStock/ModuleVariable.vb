@@ -21,11 +21,6 @@ Module ModuleVariable
 
 
 
-    Sub MPesanError()
-
-    End Sub
-
-
 
 
 

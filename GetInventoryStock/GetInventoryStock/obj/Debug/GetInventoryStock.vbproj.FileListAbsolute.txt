@@ -16,3 +16,21 @@ D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debu
 D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.exe
 D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.xml
 D:\Source Code Project\GetRealStock\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.pdb
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.exe.config
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.exe
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.xml
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.pdb
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.exe.manifest
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.application
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.exe
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.pdb
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.xml
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.frmLogin.resources
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.frmSettingKoneksi.resources
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.ItemList.resources
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.MainWindows.resources
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.Resources.resources
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\GetInventoryStock.vbproj.GenerateResource.Cache
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.exe.manifest
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.application
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.FormChangeLog.resources

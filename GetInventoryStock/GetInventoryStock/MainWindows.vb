@@ -351,4 +351,16 @@ ErrorHandler:
     End Sub
 
 
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        Close()
+    End Sub
+
+    Private Sub ShowMyIPToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowMyIPToolStripMenuItem.Click
+        Dim h As System.Net.IPHostEntry = System.Net.Dns.GetHostByName(System.Net.Dns.GetHostName)
+        MsgBox("IP Address Anda Adalah : " & vbNewLine & h.AddressList.GetValue(0).ToString, vbInformation, "Monitoring Realstok V1.1")
+    End Sub
+
+    Private Sub ChangeLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeLogToolStripMenuItem.Click
+        FormChangeLog.ShowDialog()
+    End Sub
 End Class
