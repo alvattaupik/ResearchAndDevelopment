@@ -146,10 +146,16 @@
     <Compile Include="SalesMonitoring.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SalesMonitoringNew.Designer.vb">
+    <Compile Include="SalesMonitoringNew.designer.vb">
       <DependentUpon>SalesMonitoringNew.vb</DependentUpon>
     </Compile>
     <Compile Include="SalesMonitoringNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesMonitoringNew2.Designer.vb">
+      <DependentUpon>SalesMonitoringNew2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SalesMonitoringNew2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="stockView.Designer.vb">
@@ -304,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SalesMonitoringNew.resx">
       <DependentUpon>SalesMonitoringNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesMonitoringNew2.resx">
+      <DependentUpon>SalesMonitoringNew2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="stockView.resx">
       <DependentUpon>stockView.vb</DependentUpon>

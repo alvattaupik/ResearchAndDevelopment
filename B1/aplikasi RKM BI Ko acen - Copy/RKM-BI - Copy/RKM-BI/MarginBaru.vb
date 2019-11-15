@@ -1488,7 +1488,7 @@ Public Class MarginBaru
         command.Parameters.AddWithValue("@TanggalAwal", Format(awal))
         command.Parameters.AddWithValue("@TanggalAkhir", Format(akhir))
         command.Parameters.AddWithValue("@PrintByUserName", "xxx")
-        command.Parameters.AddWithValue("@Cabang", "013")
+        command.Parameters.AddWithValue("@Cabang", "014")
         table = New DataTable
         adapter.Fill(table)
         Me.dgSoekarnoHatta.DataSource = table

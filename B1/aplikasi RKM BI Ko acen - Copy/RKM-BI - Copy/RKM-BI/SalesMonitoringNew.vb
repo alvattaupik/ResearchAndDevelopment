@@ -9,9 +9,7 @@ Public Class SalesMonitoringNew
 
     Private Sub SalesMonitoringNew_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadChart()
-        'LoadStaticGraphic()
-        'CreateGraph(zgc)
-        'SetSize()
+
     End Sub
 
 
@@ -39,29 +37,21 @@ Public Class SalesMonitoringNew
 
 
         For Each row As DataRow In Tabel1.Rows
-            'strDetail = row("Detail")
+
+
             ChartPenjualan.Series("Series1").Points.AddXY(row("NamaCabang").ToString, row("Total"))
 
-
-
-
-            'thisPoint = ChartPenjualan.Series("Series1").Points.Add(rng.Next(5) + 5)
-            'Dim someRandomColour As Color = Color.FromArgb(rng.Next(256), rng.Next(256), rng.Next(256))
-            'thisPoint.Color = someRandomColour
 
             ChartPenjualan.ChartAreas("ChartArea1").AxisX.MinorTickMark.Enabled = False
             ChartPenjualan.ChartAreas("ChartArea1").AxisX.Interval = 1
             ChartPenjualan.ChartAreas("ChartArea1").AxisX.IsLabelAutoFit = True
-            ChartPenjualan.ChartAreas("ChartArea1").AxisX.LabelStyle.IsStaggered = True
+            ChartPenjualan.ChartAreas("ChartArea1").AxisX.LabelStyle.IsStaggered = False
             ChartPenjualan.ChartAreas("ChartArea1").AxisX.LabelAutoFitStyle = LabelAutoFitStyles.DecreaseFont
-
-
             ChartPenjualan.ChartAreas("ChartArea1").AxisX.MajorGrid.Enabled = False
             ChartPenjualan.ChartAreas("ChartArea1").AxisY.MajorGrid.Enabled = False
-
-
             ChartPenjualan.ChartAreas("ChartArea1").AxisX.MajorGrid.LineColor = Color.LightGray
             ChartPenjualan.ChartAreas("ChartArea1").AxisY.MajorGrid.LineColor = Color.LightGray
+            ChartPenjualan.Series("Series1").IsValueShownAsLabel = True
 
 
          
@@ -80,6 +70,12 @@ Public Class SalesMonitoringNew
         ChartPenjualan.Series("Series1").Points(5).Color = Color.Purple
         ChartPenjualan.Series("Series1").Points(6).Color = Color.RoyalBlue
         ChartPenjualan.Series("Series1").Points(7).Color = Color.Salmon
+        ChartPenjualan.Series("Series1").Points(8).Color = Color.HotPink
+        ChartPenjualan.Series("Series1").Points(9).Color = Color.CadetBlue
+        ChartPenjualan.Series("Series1").Points(10).Color = Color.Lavender
+        ChartPenjualan.Series("Series1").Points(11).Color = Color.Indigo
+        ChartPenjualan.Series("Series1").Points(12).Color = Color.Linen
+
 
  
 
@@ -200,31 +196,22 @@ Public Class SalesMonitoringNew
 
 
         For Each row As DataRow In Tabel1.Rows
-            'strDetail = row("Detail")
+
             ChartPenjualan.Series("Series1").Points.AddXY(row("NamaCabang").ToString, row("Total"))
 
+            ChartPenjualan.ChartAreas("ChartArea1").AxisY.ScaleBreakStyle.LineWidth = 10
 
-
-
-            'thisPoint = ChartPenjualan.Series("Series1").Points.Add(rng.Next(5) + 5)
-            'Dim someRandomColour As Color = Color.FromArgb(rng.Next(256), rng.Next(256), rng.Next(256))
-            'thisPoint.Color = someRandomColour
-
+            ChartPenjualan.ChartAreas("ChartArea1").AxisX.ScaleBreakStyle.LineWidth = 10
             ChartPenjualan.ChartAreas("ChartArea1").AxisX.MinorTickMark.Enabled = False
             ChartPenjualan.ChartAreas("ChartArea1").AxisX.Interval = 1
-
             ChartPenjualan.ChartAreas("ChartArea1").AxisX.IsLabelAutoFit = True
-            ChartPenjualan.ChartAreas("ChartArea1").AxisX.LabelStyle.IsStaggered = True
+            ChartPenjualan.ChartAreas("ChartArea1").AxisX.LabelStyle.IsStaggered = False
             ChartPenjualan.ChartAreas("ChartArea1").AxisX.LabelAutoFitStyle = LabelAutoFitStyles.DecreaseFont
-
-
             ChartPenjualan.ChartAreas("ChartArea1").AxisX.MajorGrid.Enabled = False
             ChartPenjualan.ChartAreas("ChartArea1").AxisY.MajorGrid.Enabled = False
-
-
             ChartPenjualan.ChartAreas("ChartArea1").AxisX.MajorGrid.LineColor = Color.LightGray
             ChartPenjualan.ChartAreas("ChartArea1").AxisY.MajorGrid.LineColor = Color.LightGray
-
+            ChartPenjualan.Series("Series1").IsValueShownAsLabel = True
 
 
 
@@ -242,6 +229,11 @@ Public Class SalesMonitoringNew
         ChartPenjualan.Series("Series1").Points(5).Color = Color.Purple
         ChartPenjualan.Series("Series1").Points(6).Color = Color.RoyalBlue
         ChartPenjualan.Series("Series1").Points(7).Color = Color.Salmon
+        ChartPenjualan.Series("Series1").Points(8).Color = Color.HotPink
+        ChartPenjualan.Series("Series1").Points(9).Color = Color.CadetBlue
+        ChartPenjualan.Series("Series1").Points(10).Color = Color.Lavender
+        ChartPenjualan.Series("Series1").Points(11).Color = Color.Indigo
+        ChartPenjualan.Series("Series1").Points(12).Color = Color.Linen
 
 
 

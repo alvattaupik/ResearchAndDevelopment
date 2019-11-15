@@ -25,8 +25,22 @@ Partial Class Main
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -107,27 +121,12 @@ Partial Class Main
         Me.t112 = New System.Windows.Forms.Timer(Me.components)
         Me.t121 = New System.Windows.Forms.Timer(Me.components)
         Me.t122 = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblTotalOmset = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.lblNominal = New System.Windows.Forms.Label()
+        Me.lblJmlhCabang = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
-        CType(Me.dgSidebar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridViewTotal, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CekDeh, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,6 +141,12 @@ Partial Class Main
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.dgSidebar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewTotal, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CekDeh, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -170,6 +175,101 @@ Partial Class Main
         Me.Panel1.Size = New System.Drawing.Size(1008, 57)
         Me.Panel1.TabIndex = 3
         '
+        'PictureBox13
+        '
+        Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox13.BackgroundImage = Global.RKM_BI.My.Resources.Resources.stock
+        Me.PictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox13.Location = New System.Drawing.Point(422, 11)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox13.TabIndex = 26
+        Me.PictureBox13.TabStop = False
+        '
+        'PictureBox14
+        '
+        Me.PictureBox14.BackgroundImage = Global.RKM_BI.My.Resources.Resources.box
+        Me.PictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox14.Location = New System.Drawing.Point(381, 11)
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox14.TabIndex = 25
+        Me.PictureBox14.TabStop = False
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox12.BackgroundImage = Global.RKM_BI.My.Resources.Resources.fork
+        Me.PictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox12.Location = New System.Drawing.Point(340, 11)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox12.TabIndex = 23
+        Me.PictureBox12.TabStop = False
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox11.BackgroundImage = Global.RKM_BI.My.Resources.Resources._2_coin256_anwansoon
+        Me.PictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox11.Location = New System.Drawing.Point(299, 11)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox11.TabIndex = 22
+        Me.PictureBox11.TabStop = False
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox10.BackgroundImage = Global.RKM_BI.My.Resources.Resources.charIcon_pay
+        Me.PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox10.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox10.Location = New System.Drawing.Point(258, 11)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox10.TabIndex = 21
+        Me.PictureBox10.TabStop = False
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox9.BackgroundImage = Global.RKM_BI.My.Resources.Resources.inventory_maintenance_256
+        Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox9.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox9.Location = New System.Drawing.Point(217, 11)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox9.TabIndex = 20
+        Me.PictureBox9.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox8.BackgroundImage = Global.RKM_BI.My.Resources.Resources.inventory
+        Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox8.Location = New System.Drawing.Point(176, 11)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox8.TabIndex = 19
+        Me.PictureBox8.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox7.BackgroundImage = Global.RKM_BI.My.Resources.Resources.primary_logout
+        Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox7.Location = New System.Drawing.Point(842, 4)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(20, 20)
+        Me.PictureBox7.TabIndex = 18
+        Me.PictureBox7.TabStop = False
+        '
         'Label2
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -191,6 +291,79 @@ Partial Class Main
         Me.Label1.TabIndex = 16
         Me.Label1.Text = " "
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox6.BackgroundImage = Global.RKM_BI.My.Resources.Resources.integration_icon
+        Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox6.Location = New System.Drawing.Point(820, 4)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(20, 20)
+        Me.PictureBox6.TabIndex = 15
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox4.BackgroundImage = Global.RKM_BI.My.Resources.Resources.anyar_group
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox4.Location = New System.Drawing.Point(868, 3)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(136, 50)
+        Me.PictureBox4.TabIndex = 14
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox5.BackgroundImage = Global.RKM_BI.My.Resources.Resources.stocks
+        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox5.Location = New System.Drawing.Point(135, 11)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox5.TabIndex = 13
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox3.BackgroundImage = Global.RKM_BI.My.Resources.Resources.shop
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox3.Location = New System.Drawing.Point(94, 11)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox3.TabIndex = 12
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.BackgroundImage = Global.RKM_BI.My.Resources.Resources.niBqey6iA
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Location = New System.Drawing.Point(53, 11)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox2.TabIndex = 11
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.BackgroundImage = Global.RKM_BI.My.Resources.Resources.icon_100f
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 11)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
+        Me.PictureBox1.TabIndex = 10
+        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Tag = ""
         '
         'Panel3
         '
@@ -387,6 +560,11 @@ Partial Class Main
         '
         Me.Panel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.lblJmlhCabang)
+        Me.Panel2.Controls.Add(Me.lblNominal)
+        Me.Panel2.Controls.Add(Me.Label10)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.lblTotalOmset)
         Me.Panel2.Controls.Add(Me.lblJumlahCabang)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.dgSidebar)
@@ -418,7 +596,7 @@ Partial Class Main
         Me.Panel2.Controls.Add(Me.b4)
         Me.Panel2.Location = New System.Drawing.Point(767, 58)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(241, 348)
+        Me.Panel2.Size = New System.Drawing.Size(241, 361)
         Me.Panel2.TabIndex = 20
         Me.Panel2.Visible = False
         '
@@ -426,7 +604,7 @@ Partial Class Main
         '
         Me.lblJumlahCabang.AutoSize = True
         Me.lblJumlahCabang.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJumlahCabang.Location = New System.Drawing.Point(22, 328)
+        Me.lblJumlahCabang.Location = New System.Drawing.Point(19, 343)
         Me.lblJumlahCabang.Name = "lblJumlahCabang"
         Me.lblJumlahCabang.Size = New System.Drawing.Size(115, 16)
         Me.lblJumlahCabang.TabIndex = 39
@@ -439,7 +617,7 @@ Partial Class Main
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(0, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(16, 346)
+        Me.Label5.Size = New System.Drawing.Size(16, 359)
         Me.Label5.TabIndex = 26
         Me.Label5.Text = "<<<"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -866,173 +1044,57 @@ Partial Class Main
         Me.n11.Text = "9"
         Me.n11.Visible = False
         '
-        'PictureBox13
+        'lblTotalOmset
         '
-        Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox13.BackgroundImage = Global.RKM_BI.My.Resources.Resources.stock
-        Me.PictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox13.Location = New System.Drawing.Point(422, 11)
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox13.TabIndex = 26
-        Me.PictureBox13.TabStop = False
+        Me.lblTotalOmset.AutoSize = True
+        Me.lblTotalOmset.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalOmset.Location = New System.Drawing.Point(19, 325)
+        Me.lblTotalOmset.Name = "lblTotalOmset"
+        Me.lblTotalOmset.Size = New System.Drawing.Size(96, 16)
+        Me.lblTotalOmset.TabIndex = 40
+        Me.lblTotalOmset.Text = "Total Omset "
         '
-        'PictureBox14
+        'Label8
         '
-        Me.PictureBox14.BackgroundImage = Global.RKM_BI.My.Resources.Resources.box
-        Me.PictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox14.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox14.Location = New System.Drawing.Point(381, 11)
-        Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox14.TabIndex = 25
-        Me.PictureBox14.TabStop = False
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(132, 327)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(12, 16)
+        Me.Label8.TabIndex = 41
+        Me.Label8.Text = ":"
         '
-        'PictureBox12
+        'Label10
         '
-        Me.PictureBox12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox12.BackgroundImage = Global.RKM_BI.My.Resources.Resources.fork
-        Me.PictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox12.Location = New System.Drawing.Point(340, 11)
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox12.TabIndex = 23
-        Me.PictureBox12.TabStop = False
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(133, 344)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(12, 16)
+        Me.Label10.TabIndex = 42
+        Me.Label10.Text = ":"
         '
-        'PictureBox11
+        'lblNominal
         '
-        Me.PictureBox11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox11.BackgroundImage = Global.RKM_BI.My.Resources.Resources._2_coin256_anwansoon
-        Me.PictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox11.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox11.Location = New System.Drawing.Point(299, 11)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox11.TabIndex = 22
-        Me.PictureBox11.TabStop = False
+        Me.lblNominal.AutoSize = True
+        Me.lblNominal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNominal.Location = New System.Drawing.Point(145, 326)
+        Me.lblNominal.Name = "lblNominal"
+        Me.lblNominal.Size = New System.Drawing.Size(65, 16)
+        Me.lblNominal.TabIndex = 43
+        Me.lblNominal.Text = "Nominal"
+        Me.lblNominal.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'PictureBox10
+        'lblJmlhCabang
         '
-        Me.PictureBox10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox10.BackgroundImage = Global.RKM_BI.My.Resources.Resources.charIcon_pay
-        Me.PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox10.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox10.Location = New System.Drawing.Point(258, 11)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox10.TabIndex = 21
-        Me.PictureBox10.TabStop = False
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox9.BackgroundImage = Global.RKM_BI.My.Resources.Resources.inventory_maintenance_256
-        Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox9.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox9.Location = New System.Drawing.Point(217, 11)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox9.TabIndex = 20
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox8.BackgroundImage = Global.RKM_BI.My.Resources.Resources.inventory
-        Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox8.Location = New System.Drawing.Point(176, 11)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox8.TabIndex = 19
-        Me.PictureBox8.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox7.BackgroundImage = Global.RKM_BI.My.Resources.Resources.primary_logout
-        Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox7.Location = New System.Drawing.Point(842, 4)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(20, 20)
-        Me.PictureBox7.TabIndex = 18
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox6.BackgroundImage = Global.RKM_BI.My.Resources.Resources.integration_icon
-        Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox6.Location = New System.Drawing.Point(820, 4)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(20, 20)
-        Me.PictureBox6.TabIndex = 15
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox4.BackgroundImage = Global.RKM_BI.My.Resources.Resources.anyar_group
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox4.Location = New System.Drawing.Point(868, 3)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(136, 50)
-        Me.PictureBox4.TabIndex = 14
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox5.BackgroundImage = Global.RKM_BI.My.Resources.Resources.stocks
-        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox5.Location = New System.Drawing.Point(135, 11)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox5.TabIndex = 13
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox3.BackgroundImage = Global.RKM_BI.My.Resources.Resources.shop
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox3.Location = New System.Drawing.Point(94, 11)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox3.TabIndex = 12
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.BackgroundImage = Global.RKM_BI.My.Resources.Resources.niBqey6iA
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Location = New System.Drawing.Point(53, 11)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox2.TabIndex = 11
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackgroundImage = Global.RKM_BI.My.Resources.Resources.icon_100f
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 11)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
-        Me.PictureBox1.TabIndex = 10
-        Me.PictureBox1.TabStop = False
-        Me.PictureBox1.Tag = ""
+        Me.lblJmlhCabang.AutoSize = True
+        Me.lblJmlhCabang.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJmlhCabang.Location = New System.Drawing.Point(141, 342)
+        Me.lblJmlhCabang.Name = "lblJmlhCabang"
+        Me.lblJmlhCabang.Size = New System.Drawing.Size(94, 16)
+        Me.lblJmlhCabang.TabIndex = 44
+        Me.lblJmlhCabang.Text = "JmlhCabang"
+        Me.lblJmlhCabang.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Main
         '
@@ -1067,13 +1129,6 @@ Partial Class Main
         Me.Text = "Business Inteligence - AnyarGroup"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        CType(Me.dgSidebar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridViewTotal, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CekDeh, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1088,6 +1143,13 @@ Partial Class Main
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.dgSidebar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewTotal, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CekDeh, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1189,5 +1251,10 @@ Partial Class Main
     Friend WithEvents t122 As System.Windows.Forms.Timer
     Friend WithEvents dgSidebar As System.Windows.Forms.DataGridView
     Friend WithEvents lblJumlahCabang As System.Windows.Forms.Label
+    Friend WithEvents lblTotalOmset As System.Windows.Forms.Label
+    Friend WithEvents lblJmlhCabang As System.Windows.Forms.Label
+    Friend WithEvents lblNominal As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 
 End Class

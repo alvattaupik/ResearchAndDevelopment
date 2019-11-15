@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class SalesMonitoringNew
+Partial Class SalesMonitoringNew2
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,19 +22,19 @@ Partial Class SalesMonitoringNew
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cmdTampilkanGrafik = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ChartPenjualan = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ChartPenjualan = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.ChartPenjualan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.ChartPenjualan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -43,10 +43,10 @@ Partial Class SalesMonitoringNew
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker2)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Location = New System.Drawing.Point(2, 3)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 1)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(376, 52)
-        Me.GroupBox1.TabIndex = 90
+        Me.GroupBox1.TabIndex = 91
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Parameter"
         '
@@ -85,65 +85,45 @@ Partial Class SalesMonitoringNew
         Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
         Me.DateTimePicker1.TabIndex = 90
         '
-        'ChartPenjualan
-        '
-        Me.ChartPenjualan.BackColor = System.Drawing.Color.MistyRose
-        Me.ChartPenjualan.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom
-        Me.ChartPenjualan.BackImageTransparentColor = System.Drawing.Color.White
-        Me.ChartPenjualan.BackSecondaryColor = System.Drawing.Color.White
-        ChartArea1.AxisY.LabelStyle.Format = "##,0"
-        ChartArea1.Name = "ChartArea1"
-        Me.ChartPenjualan.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.ChartPenjualan.Legends.Add(Legend1)
-        Me.ChartPenjualan.Location = New System.Drawing.Point(10, 19)
-        Me.ChartPenjualan.Name = "ChartPenjualan"
-        Me.ChartPenjualan.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel
-        Series1.ChartArea = "ChartArea1"
-        Series1.IsValueShownAsLabel = True
-        Series1.IsVisibleInLegend = False
-        Series1.LabelFormat = "Rp ##,0"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Series1.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes
-        Series1.SmartLabelStyle.IsOverlappedHidden = False
-        Series1.SmartLabelStyle.MovingDirection = CType(((((((((System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.Top Or System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.Bottom) _
-            Or System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.Right) _
-            Or System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.Left) _
-            Or System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.TopLeft) _
-            Or System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.TopRight) _
-            Or System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.BottomLeft) _
-            Or System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.BottomRight) _
-            Or System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles.Center), System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles)
-        Me.ChartPenjualan.Series.Add(Series1)
-        Me.ChartPenjualan.Size = New System.Drawing.Size(1146, 310)
-        Me.ChartPenjualan.TabIndex = 70
-        Me.ChartPenjualan.Text = "TURN OVER STORE"
-        '
         'GroupBox2
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.GroupBox2.Controls.Add(Me.ChartPenjualan)
-        Me.GroupBox2.Location = New System.Drawing.Point(2, 65)
+        Me.GroupBox2.Location = New System.Drawing.Point(4, 66)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1170, 349)
+        Me.GroupBox2.Size = New System.Drawing.Size(801, 281)
         Me.GroupBox2.TabIndex = 92
         Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "GroupBox2"
         '
-        'SalesMonitoringNew
+        'ChartPenjualan
+        '
+        ChartArea2.Name = "ChartArea1"
+        Me.ChartPenjualan.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.ChartPenjualan.Legends.Add(Legend2)
+        Me.ChartPenjualan.Location = New System.Drawing.Point(14, 24)
+        Me.ChartPenjualan.Name = "ChartPenjualan"
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.ChartPenjualan.Series.Add(Series2)
+        Me.ChartPenjualan.Size = New System.Drawing.Size(774, 240)
+        Me.ChartPenjualan.TabIndex = 0
+        Me.ChartPenjualan.Text = "Chart1"
+        '
+        'SalesMonitoringNew2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1175, 430)
+        Me.ClientSize = New System.Drawing.Size(811, 382)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "SalesMonitoringNew"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "SalesMonitoringNew"
+        Me.Name = "SalesMonitoringNew2"
+        Me.Text = "SalesMonitoringNew2"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.ChartPenjualan, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
+        CType(Me.ChartPenjualan, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -152,6 +132,6 @@ Partial Class SalesMonitoringNew
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents ChartPenjualan As System.Windows.Forms.DataVisualization.Charting.Chart
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents ChartPenjualan As System.Windows.Forms.DataVisualization.Charting.Chart
 End Class

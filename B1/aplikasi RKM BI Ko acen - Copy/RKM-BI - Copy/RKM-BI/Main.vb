@@ -164,7 +164,12 @@ Public Class Main
         'SalesMonitoringapter.MdiParent = Me
         'SalesMonitoringapter.Show()
 
-        Dim frm As New SalesMonitoringNew
+        'Dim frm As New SalesMonitoringNew
+
+        'frm.MdiParent = Me
+        'frm.Show()
+
+        Dim frm As New SalesMonitoringapter
 
         frm.MdiParent = Me
         frm.Show()
@@ -277,7 +282,19 @@ Public Class Main
         dgSidebar.Columns(0).Width = 112
         dgSidebar.Columns(1).Width = 98
 
-        lblJumlahCabang.Text = "Jumlah Cabang : " & dgSidebar.RowCount
+
+        If dgSidebar.RowCount > 1 Then
+            Dim iSales As Integer = 0
+            For index As Integer = 0 To dgSidebar.RowCount - 1
+                iSales += Convert.ToInt32(dgSidebar.Rows(index).Cells(1).Value)
+            Next
+            lblNominal.Text = CDbl(iSales).ToString("##,0")
+        End If
+
+
+
+
+        lblJmlhCabang.Text = dgSidebar.RowCount
 
 
     End Sub
