@@ -37,6 +37,9 @@
             .Footer = txtFooter.Text
 
             .Save()
+
+            MsgBox("Konfigurasi Berhasil Disimpan", vbInformation, "Sukses!")
+
         End With
     End Sub
 End Class

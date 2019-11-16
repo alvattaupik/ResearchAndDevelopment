@@ -578,7 +578,7 @@ Errorhandler:
 
                 rptDoc = New crManualDiscount
 
-                Dim cmd As New SqlCommand("Select * From V_DaftarManualDiscount Where TransactionKey='" & Trim(txtNoDokumen.Text) & "'", Koneksi)
+                Dim cmd As New SqlCommand("Select *  From  Where TransactionKey='" & Trim(txtNoDokumen.Text) & "'", Koneksi)
                 Dim adapter1 As New SqlDataAdapter(cmd)
                 Dim Tabel1 As New DataTable
 

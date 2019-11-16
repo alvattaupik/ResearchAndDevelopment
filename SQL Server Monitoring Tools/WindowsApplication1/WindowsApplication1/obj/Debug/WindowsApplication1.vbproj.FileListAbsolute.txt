@@ -16,3 +16,14 @@ D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\W
 D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
 D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
 D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FormKillSession.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmConnectionMonitor.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmExpensiveQuery.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmMonitoring.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmSessionTrace.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FrmSetting.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache

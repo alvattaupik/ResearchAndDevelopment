@@ -67,15 +67,15 @@ Partial Class frmUtama
         Me.cmdRetry = New System.Windows.Forms.Button()
         Me.dgFailed = New System.Windows.Forms.DataGridView()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.cmdPaused = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.cmdStart = New System.Windows.Forms.Button()
         Me.lblCounter = New System.Windows.Forms.Label()
         Me.lblAwal = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
@@ -98,7 +98,7 @@ Partial Class frmUtama
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.SettingToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(946, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(937, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -508,6 +508,36 @@ Partial Class frmUtama
         Me.GroupBox6.TabIndex = 6
         Me.GroupBox6.TabStop = False
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(272, 14)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(39, 15)
+        Me.Label8.TabIndex = 17
+        Me.Label8.Text = "V 1.0"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(86, -4)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(225, 18)
+        Me.Label7.TabIndex = 16
+        Me.Label7.Text = "Manual Discount Notification"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.FormUtama.My.Resources.Resources.Sale_Notification_512
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(91, 86)
+        Me.PictureBox1.TabIndex = 15
+        Me.PictureBox1.TabStop = False
+        '
         'cmdPaused
         '
         Me.cmdPaused.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
@@ -565,41 +595,11 @@ Partial Class frmUtama
         '
         Me.Timer2.Interval = 1000
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.FormUtama.My.Resources.Resources.Sale_Notification_512
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(91, 86)
-        Me.PictureBox1.TabIndex = 15
-        Me.PictureBox1.TabStop = False
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(86, -4)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(225, 18)
-        Me.Label7.TabIndex = 16
-        Me.Label7.Text = "Manual Discount Notification"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(272, 14)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(39, 15)
-        Me.Label8.TabIndex = 17
-        Me.Label8.Text = "V 1.0"
-        '
         'frmUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(946, 749)
+        Me.ClientSize = New System.Drawing.Size(937, 749)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox4)

@@ -26,3 +26,18 @@ D:\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.Reso
 D:\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.vbproj.GenerateResource.Cache
 D:\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.frmErrorHandler.resources
 D:\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.SplashScreen.resources
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\bin\Debug\FormUtama.exe.config
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.exe
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.xml
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.pdb
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\bin\Debug\FormUtama.exe
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\bin\Debug\FormUtama.pdb
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\bin\Debug\FormUtama.xml
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.vbprojResolveAssemblyReference.cache
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.frmErrorHandler.resources
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.frmKonfigurasiAplikasi.resources
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.frmUtama.resources
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.frmSetting.resources
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.Resources.resources
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.SplashScreen.resources
+D:\Research And Development\ResearchAndDevelopment\Mailer Generator Manual Discount\FormUtama\FormUtama\obj\Debug\FormUtama.vbproj.GenerateResource.Cache

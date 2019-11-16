@@ -164,15 +164,15 @@ Public Class Main
         'SalesMonitoringapter.MdiParent = Me
         'SalesMonitoringapter.Show()
 
-        'Dim frm As New SalesMonitoringNew
-
-        'frm.MdiParent = Me
-        'frm.Show()
-
-        Dim frm As New SalesMonitoringapter
+        Dim frm As New SalesMonitoringNew2
 
         frm.MdiParent = Me
         frm.Show()
+
+        'Dim frm As New SalesMonitoringapter
+
+        'frm.MdiParent = Me
+        'frm.Show()
 
 
     End Sub
@@ -277,6 +277,8 @@ Public Class Main
         dgSidebar.DataSource = Tabel1
         dgSidebar.Columns(1).DefaultCellStyle.Format = "##,0"
         dgSidebar.Columns("Total").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        dgSidebar.DefaultCellStyle.Font = New Font("Tahoma", 8)
+        dgSidebar.ColumnHeadersDefaultCellStyle.Font = New Font("Tahoma", 8)
         'dgSidebar.AutoResizeColumns()
 
         dgSidebar.Columns(0).Width = 112

@@ -27,6 +27,7 @@ Partial Class frmMonitoring
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.cmdRefresh = New System.Windows.Forms.Button()
         Me.cmdStopMonitoring = New System.Windows.Forms.Button()
         Me.cmdStartMonitoring = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -34,13 +35,12 @@ Partial Class frmMonitoring
         Me.dgDaftarTugas = New System.Windows.Forms.DataGridView()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.cmdRefresh = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.cmdConnectionMonitor = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.cmdSessionTrace = New System.Windows.Forms.Button()
         Me.cmdKillSession = New System.Windows.Forms.Button()
+        Me.cmdSessionTrace = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cmdConnectionMonitor = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -95,6 +95,15 @@ Partial Class frmMonitoring
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Task Monitor"
+        '
+        'cmdRefresh
+        '
+        Me.cmdRefresh.Location = New System.Drawing.Point(291, 64)
+        Me.cmdRefresh.Name = "cmdRefresh"
+        Me.cmdRefresh.Size = New System.Drawing.Size(143, 28)
+        Me.cmdRefresh.TabIndex = 5
+        Me.cmdRefresh.Text = "Refresh"
+        Me.cmdRefresh.UseVisualStyleBackColor = True
         '
         'cmdStopMonitoring
         '
@@ -153,15 +162,6 @@ Partial Class frmMonitoring
         '
         Me.Timer1.Interval = 1000
         '
-        'cmdRefresh
-        '
-        Me.cmdRefresh.Location = New System.Drawing.Point(291, 64)
-        Me.cmdRefresh.Name = "cmdRefresh"
-        Me.cmdRefresh.Size = New System.Drawing.Size(143, 28)
-        Me.cmdRefresh.TabIndex = 5
-        Me.cmdRefresh.Text = "Refresh"
-        Me.cmdRefresh.UseVisualStyleBackColor = True
-        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.cmdKillSession)
@@ -177,35 +177,15 @@ Partial Class frmMonitoring
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Feature"
         '
-        'cmdConnectionMonitor
+        'cmdKillSession
         '
-        Me.cmdConnectionMonitor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdConnectionMonitor.Location = New System.Drawing.Point(6, 30)
-        Me.cmdConnectionMonitor.Name = "cmdConnectionMonitor"
-        Me.cmdConnectionMonitor.Size = New System.Drawing.Size(96, 51)
-        Me.cmdConnectionMonitor.TabIndex = 0
-        Me.cmdConnectionMonitor.Text = "Connection Monitor"
-        Me.cmdConnectionMonitor.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(108, 30)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(105, 51)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Performance Monitor"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(219, 30)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(90, 51)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Expensive Query"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.cmdKillSession.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdKillSession.Location = New System.Drawing.Point(520, 30)
+        Me.cmdKillSession.Name = "cmdKillSession"
+        Me.cmdKillSession.Size = New System.Drawing.Size(86, 51)
+        Me.cmdKillSession.TabIndex = 4
+        Me.cmdKillSession.Text = "Kill Session"
+        Me.cmdKillSession.UseVisualStyleBackColor = True
         '
         'cmdSessionTrace
         '
@@ -217,15 +197,35 @@ Partial Class frmMonitoring
         Me.cmdSessionTrace.Text = "Session Trace"
         Me.cmdSessionTrace.UseVisualStyleBackColor = True
         '
-        'cmdKillSession
+        'Button2
         '
-        Me.cmdKillSession.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdKillSession.Location = New System.Drawing.Point(520, 30)
-        Me.cmdKillSession.Name = "cmdKillSession"
-        Me.cmdKillSession.Size = New System.Drawing.Size(86, 51)
-        Me.cmdKillSession.TabIndex = 4
-        Me.cmdKillSession.Text = "Kill Session"
-        Me.cmdKillSession.UseVisualStyleBackColor = True
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(219, 30)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(90, 51)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Expensive Query"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(108, 30)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(105, 51)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Performance Monitor"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'cmdConnectionMonitor
+        '
+        Me.cmdConnectionMonitor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdConnectionMonitor.Location = New System.Drawing.Point(6, 30)
+        Me.cmdConnectionMonitor.Name = "cmdConnectionMonitor"
+        Me.cmdConnectionMonitor.Size = New System.Drawing.Size(96, 51)
+        Me.cmdConnectionMonitor.TabIndex = 0
+        Me.cmdConnectionMonitor.Text = "Connection Monitor"
+        Me.cmdConnectionMonitor.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '

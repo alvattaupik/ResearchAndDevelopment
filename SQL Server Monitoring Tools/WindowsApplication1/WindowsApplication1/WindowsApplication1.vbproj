@@ -70,6 +70,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormKillSession.Designer.vb">
+      <DependentUpon>FormKillSession.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormKillSession.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmConnectionMonitor.Designer.vb">
       <DependentUpon>frmConnectionMonitor.vb</DependentUpon>
     </Compile>
@@ -121,6 +127,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormKillSession.resx">
+      <DependentUpon>FormKillSession.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConnectionMonitor.resx">
       <DependentUpon>frmConnectionMonitor.vb</DependentUpon>
     </EmbeddedResource>
