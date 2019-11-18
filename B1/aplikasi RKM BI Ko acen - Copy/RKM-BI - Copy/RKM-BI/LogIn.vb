@@ -40,8 +40,15 @@ Public Class LogIn
         TextBox2.Text = My.Settings.PasswordLogin
 
         Main.Panel1.Enabled = False
+
         Main.Panel1.BackColor = Color.LightGray
+
         Main.Panel2.Enabled = False
+
+
+
+
+
 
 
         'KoneksiDatabaseLoginAplikasi()
@@ -123,7 +130,7 @@ Public Class LogIn
             Main.Timer1.Enabled = True
             Main.Timer3.Enabled = True
             Main.Panel2.Enabled = True
-
+            Main.Panel2.Visible = True
         Else
 
             MsgBox("Username dan Password Yang Anda Masukan Salah", vbInformation, "Hubungi Administrator")
@@ -169,9 +176,5 @@ Public Class LogIn
         If e.KeyCode = Keys.Enter Then
             Button1.PerformClick()
         End If
-    End Sub
-
-    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox2.TextChanged
-
     End Sub
 End Class

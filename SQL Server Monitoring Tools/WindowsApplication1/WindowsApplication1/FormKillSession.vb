@@ -35,4 +35,30 @@ Public Class FormKillSession
             Exit Sub
         End If
     End Sub
+
+
+
+
+
+    Sub loadStatusRollback()
+
+        KoneksiDatabase2()
+        Dim cmd As New SqlCommand("SELECT @@SPID AS 'ID', SYSTEM_USER AS 'Login Name'", Koneksi2)
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable
+
+        adapter.Fill(table)
+
+
+
+        If table.Rows.Count > 0 Then
+            strSessionID = table.Rows(0).Item(0)
+        Else
+            Exit Sub
+        End If
+
+        Koneksi2.Close()
+    End Sub
+
+
 End Class

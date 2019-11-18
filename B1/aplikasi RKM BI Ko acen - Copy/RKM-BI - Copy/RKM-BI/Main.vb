@@ -57,7 +57,9 @@ Public Class Main
         n1.Parent = Me
 
 
-        LoadSideBar()
+  
+
+
 
         'Button1_Click_1(sender, e)
 
@@ -113,7 +115,7 @@ Public Class Main
         'Application.Exit()
         'End If
 
-        'Panel2.Location = New Point(Me.Width - 33, 58)
+        Panel2.Location = New Point(Me.Width - 33, 58)
         'r1 = 1
         'r2 = 2
         'r3 = 3
@@ -140,7 +142,7 @@ Public Class Main
 
         LogIn.MdiParent = Me
         LogIn.Show()
-
+        LoadSideBar()
 
 
     End Sub

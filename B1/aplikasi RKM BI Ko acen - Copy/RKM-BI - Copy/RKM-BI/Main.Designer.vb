@@ -68,6 +68,7 @@ Partial Class Main
         Me.t51 = New System.Windows.Forms.Timer(Me.components)
         Me.t52 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.lblJmlhCabang = New System.Windows.Forms.Label()
         Me.lblNominal = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.lblTotalOmset = New System.Windows.Forms.Label()
@@ -94,8 +95,12 @@ Partial Class Main
         Me.u1 = New System.Windows.Forms.Label()
         Me.b6 = New System.Windows.Forms.Label()
         Me.lblJumlahCabang = New System.Windows.Forms.Label()
-        Me.lblJmlhCabang = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.n7 = New System.Windows.Forms.TextBox()
         Me.n6 = New System.Windows.Forms.TextBox()
@@ -126,11 +131,6 @@ Partial Class Main
         Me.t112 = New System.Windows.Forms.Timer(Me.components)
         Me.t121 = New System.Windows.Forms.Timer(Me.components)
         Me.t122 = New System.Windows.Forms.Timer(Me.components)
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -606,6 +606,17 @@ Partial Class Main
         Me.Panel2.TabIndex = 20
         Me.Panel2.Visible = False
         '
+        'lblJmlhCabang
+        '
+        Me.lblJmlhCabang.AutoSize = True
+        Me.lblJmlhCabang.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJmlhCabang.Location = New System.Drawing.Point(150, 346)
+        Me.lblJmlhCabang.Name = "lblJmlhCabang"
+        Me.lblJmlhCabang.Size = New System.Drawing.Size(75, 13)
+        Me.lblJmlhCabang.TabIndex = 44
+        Me.lblJmlhCabang.Text = "JmlhCabang"
+        Me.lblJmlhCabang.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
         'lblNominal
         '
         Me.lblNominal.AutoSize = True
@@ -912,17 +923,6 @@ Partial Class Main
         Me.lblJumlahCabang.TabIndex = 39
         Me.lblJumlahCabang.Text = "Jumlah Cabang"
         '
-        'lblJmlhCabang
-        '
-        Me.lblJmlhCabang.AutoSize = True
-        Me.lblJmlhCabang.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJmlhCabang.Location = New System.Drawing.Point(150, 346)
-        Me.lblJmlhCabang.Name = "lblJmlhCabang"
-        Me.lblJmlhCabang.Size = New System.Drawing.Size(75, 13)
-        Me.lblJmlhCabang.TabIndex = 44
-        Me.lblJmlhCabang.Text = "JmlhCabang"
-        Me.lblJmlhCabang.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -932,6 +932,48 @@ Partial Class Main
         Me.Label10.Size = New System.Drawing.Size(12, 16)
         Me.Label10.TabIndex = 42
         Me.Label10.Text = ":"
+        '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape4, Me.LineShape3, Me.LineShape2, Me.LineShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(239, 370)
+        Me.ShapeContainer1.TabIndex = 45
+        Me.ShapeContainer1.TabStop = False
+        '
+        'LineShape4
+        '
+        Me.LineShape4.Name = "LineShape4"
+        Me.LineShape4.X1 = 234
+        Me.LineShape4.X2 = 234
+        Me.LineShape4.Y1 = 325
+        Me.LineShape4.Y2 = 362
+        '
+        'LineShape3
+        '
+        Me.LineShape3.Name = "LineShape3"
+        Me.LineShape3.X1 = 23
+        Me.LineShape3.X2 = 23
+        Me.LineShape3.Y1 = 324
+        Me.LineShape3.Y2 = 362
+        '
+        'LineShape2
+        '
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 23
+        Me.LineShape2.X2 = 233
+        Me.LineShape2.Y1 = 362
+        Me.LineShape2.Y2 = 362
+        '
+        'LineShape1
+        '
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 22
+        Me.LineShape1.X2 = 233
+        Me.LineShape1.Y1 = 324
+        Me.LineShape1.Y2 = 324
         '
         'Label3
         '
@@ -1101,48 +1143,6 @@ Partial Class Main
         Me.n11.TabIndex = 36
         Me.n11.Text = "9"
         Me.n11.Visible = False
-        '
-        'ShapeContainer1
-        '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape4, Me.LineShape3, Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(239, 370)
-        Me.ShapeContainer1.TabIndex = 45
-        Me.ShapeContainer1.TabStop = False
-        '
-        'LineShape1
-        '
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 22
-        Me.LineShape1.X2 = 233
-        Me.LineShape1.Y1 = 324
-        Me.LineShape1.Y2 = 324
-        '
-        'LineShape2
-        '
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 23
-        Me.LineShape2.X2 = 233
-        Me.LineShape2.Y1 = 362
-        Me.LineShape2.Y2 = 362
-        '
-        'LineShape3
-        '
-        Me.LineShape3.Name = "LineShape3"
-        Me.LineShape3.X1 = 23
-        Me.LineShape3.X2 = 23
-        Me.LineShape3.Y1 = 324
-        Me.LineShape3.Y2 = 362
-        '
-        'LineShape4
-        '
-        Me.LineShape4.Name = "LineShape4"
-        Me.LineShape4.X1 = 234
-        Me.LineShape4.X2 = 234
-        Me.LineShape4.Y1 = 325
-        Me.LineShape4.Y2 = 362
         '
         'Main
         '
