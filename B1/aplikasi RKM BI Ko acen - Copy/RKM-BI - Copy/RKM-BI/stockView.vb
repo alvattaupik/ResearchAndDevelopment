@@ -938,51 +938,61 @@ Public Class stockView
   
 
     Private Sub DataGridStock_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridStock.CellMouseClick
+        On Error Resume Next
         TextBox1.Text = DataGridStock.Rows(e.RowIndex).Cells(2).Value
         Button2.PerformClick()
     End Sub
 
     Private Sub DataGridViewAyani_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridViewAyani.CellMouseClick
+        On Error Resume Next
         TextBox1.Text = DataGridViewAyani.Rows(e.RowIndex).Cells(2).Value
         Button2.PerformClick()
     End Sub
 
     Private Sub DataGridViewCIBABAT_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridViewCIBABAT.CellMouseClick
+        On Error Resume Next
         TextBox1.Text = DataGridViewCIBABAT.Rows(e.RowIndex).Cells(2).Value
         Button2.PerformClick()
     End Sub
 
     Private Sub DataGridViewCIBIRU_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridViewCIBIRU.CellMouseClick
+        On Error Resume Next
         TextBox1.Text = DataGridViewCIBIRU.Rows(e.RowIndex).Cells(2).Value
         Button2.PerformClick()
     End Sub
 
     Private Sub datagridviewCIPARAY_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles datagridviewCIPARAY.CellMouseClick
+        On Error Resume Next
         TextBox1.Text = datagridviewCIPARAY.Rows(e.RowIndex).Cells(2).Value
         Button2.PerformClick()
     End Sub
 
     Private Sub DataGridViewCIREBON_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridViewCIREBON.CellMouseClick
+        On Error Resume Next
         TextBox1.Text = DataGridViewCIREBON.Rows(e.RowIndex).Cells(2).Value
         Button2.PerformClick()
     End Sub
 
     Private Sub DataGridViewGARUT_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridViewGARUT.CellMouseClick
+        On Error Resume Next
         TextBox1.Text = DataGridViewGARUT.Rows(e.RowIndex).Cells(2).Value
         Button2.PerformClick()
     End Sub
 
     Private Sub DataGridViewKOPO_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridViewKOPO.CellMouseClick
+        On Error Resume Next
         TextBox1.Text = DataGridViewKOPO.Rows(e.RowIndex).Cells(2).Value
         Button2.PerformClick()
     End Sub
 
     Private Sub DataGridViewRANCAEKEK_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridViewRANCAEKEK.CellMouseClick
+        On Error Resume Next
         TextBox1.Text = DataGridViewRANCAEKEK.Rows(e.RowIndex).Cells(2).Value
         Button2.PerformClick()
     End Sub
 
     Private Sub DataGridViewSUMEDANG_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridViewSUMEDANG.CellMouseClick
+        On Error Resume Next
         TextBox1.Text = DataGridViewSUMEDANG.Rows(e.RowIndex).Cells(2).Value
         Button2.PerformClick()
     End Sub

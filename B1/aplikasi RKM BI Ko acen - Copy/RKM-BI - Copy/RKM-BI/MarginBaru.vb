@@ -1429,26 +1429,31 @@ Public Class MarginBaru
             DataGridViewPAMANUKAN.Rows(i).Cells(7).Value = DataGridViewPAMANUKAN.Rows(i).Cells(7).Value 'Harga Jual
 
             DataGridViewPAMANUKAN.Rows(i).Cells(8).Value = DataGridViewPAMANUKAN.Rows(i).Cells(8).Value 'Discount
-            hasil4 = hasil4 + (DataGridViewPAMANUKAN.Rows(i).Cells(8).Value)
-
+            'hasil4 = hasil4 + (DataGridViewPAMANUKAN.Rows(i).Cells(8).Value)
+            hasil4 = hasil4 + IIf(IsDBNull(DataGridViewPAMANUKAN.Rows(i).Cells(8).Value) = True, 0, DataGridViewPAMANUKAN.Rows(i).Cells(8).Value)
             DataGridViewPAMANUKAN.Rows(i).Cells(9).Value = DataGridViewPAMANUKAN.Rows(i).Cells(9).Value 'harga beli
 
             DataGridViewPAMANUKAN.Rows(i).Cells(10).Value = DataGridViewPAMANUKAN.Rows(i).Cells(10).Value 'margin
-            hasil = hasil + (DataGridViewPAMANUKAN.Rows(i).Cells(10).Value)
+            'hasil = hasil + (DataGridViewPAMANUKAN.Rows(i).Cells(10).Value)
+            hasil = hasil + IIf(IsDBNull(DataGridViewPAMANUKAN.Rows(i).Cells(10).Value) = True, 0, DataGridViewPAMANUKAN.Rows(i).Cells(10).Value)
+
 
             DataGridViewPAMANUKAN.Rows(i).Cells(11).Value = DataGridViewPAMANUKAN.Rows(i).Cells(11).Value 'total jual
-            hasil1 = hasil1 + (DataGridViewPAMANUKAN.Rows(i).Cells(11).Value)
+            'hasil1 = hasil1 + (DataGridViewPAMANUKAN.Rows(i).Cells(11).Value)
+            hasil1 = hasil1 + IIf(IsDBNull(DataGridViewPAMANUKAN.Rows(i).Cells(11).Value) = True, 0, DataGridViewPAMANUKAN.Rows(i).Cells(11).Value)
+
 
             DataGridViewPAMANUKAN.Rows(i).Cells(12).Value = DataGridViewPAMANUKAN.Rows(i).Cells(12).Value 'total beli
-            hasil2 = hasil2 + (DataGridViewPAMANUKAN.Rows(i).Cells(12).Value)
+            'hasil2 = hasil2 + (DataGridViewPAMANUKAN.Rows(i).Cells(12).Value)
+            hasil2 = hasil2 + IIf(IsDBNull(DataGridViewPAMANUKAN.Rows(i).Cells(12).Value) = True, 0, DataGridViewPAMANUKAN.Rows(i).Cells(12).Value)
 
             DataGridViewPAMANUKAN.Rows(i).Cells(13).Value = DataGridViewPAMANUKAN.Rows(i).Cells(13).Value ' total margin
-            hasil3 = hasil3 + (DataGridViewPAMANUKAN.Rows(i).Cells(13).Value)
+            'hasil3 = hasil3 + (DataGridViewPAMANUKAN.Rows(i).Cells(13).Value)
+            hasil3 = hasil3 + IIf(IsDBNull(DataGridViewPAMANUKAN.Rows(i).Cells(13).Value) = True, 0, DataGridViewPAMANUKAN.Rows(i).Cells(13).Value)
 
             DataGridViewPAMANUKAN.Rows(i).Cells(14).Value = DataGridViewPAMANUKAN.Rows(i).Cells(14).Value 'status
             'hasil5 = hasil5 + (DataGridViewpamanukan.Rows(i).Cells(14).Value)
             DataGridViewPAMANUKAN.Rows(i).Cells(15).Value = DataGridViewPAMANUKAN.Rows(i).Cells(15).Value 'persion
-
 
         Next
 
@@ -1603,6 +1608,7 @@ Public Class MarginBaru
 
     End Sub
     Private Sub DataGridABM_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridABM.CellContentClick
+        On Error Resume Next
         TxtCek.Text = DataGridABM.Rows(e.RowIndex).Cells(2).Value
     End Sub
 
@@ -1622,6 +1628,7 @@ Public Class MarginBaru
     End Sub
 
     Private Sub DataGridViewAyani_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewAyani.CellContentClick
+        On Error Resume Next
         TxtCek.Text = DataGridViewAyani.Rows(e.RowIndex).Cells(2).Value
     End Sub
 
@@ -1632,6 +1639,7 @@ Public Class MarginBaru
     End Sub
 
     Private Sub DataGridViewCibabat_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewCibabat.CellContentClick
+        On Error Resume Next
         TxtCek.Text = DataGridViewCibabat.Rows(e.RowIndex).Cells(2).Value
     End Sub
 
@@ -1642,6 +1650,7 @@ Public Class MarginBaru
     End Sub
 
     Private Sub DataGridViewCibiru_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewCibiru.CellContentClick
+        On Error Resume Next
         TxtCek.Text = DataGridViewCibiru.Rows(e.RowIndex).Cells(2).Value
     End Sub
 
@@ -1652,6 +1661,7 @@ Public Class MarginBaru
     End Sub
 
     Private Sub DataGridViewCiparay_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewCiparay.CellContentClick
+        On Error Resume Next
         TxtCek.Text = DataGridViewCiparay.Rows(e.RowIndex).Cells(2).Value
     End Sub
 
@@ -1662,6 +1672,7 @@ Public Class MarginBaru
     End Sub
 
     Private Sub DataGridViewCirebon_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewCirebon.CellContentClick
+        On Error Resume Next
         TxtCek.Text = DataGridViewCirebon.Rows(e.RowIndex).Cells(2).Value
     End Sub
 
@@ -1672,6 +1683,7 @@ Public Class MarginBaru
     End Sub
 
     Private Sub DataGridViewGarut_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewGarut.CellContentClick
+        On Error Resume Next
         TxtCek.Text = DataGridViewGarut.Rows(e.RowIndex).Cells(2).Value
     End Sub
 
@@ -1682,6 +1694,7 @@ Public Class MarginBaru
     End Sub
 
     Private Sub DataGridViewKopo_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewKopo.CellContentClick
+        On Error Resume Next
         TxtCek.Text = DataGridViewGarut.Rows(e.RowIndex).Cells(2).Value
     End Sub
 
@@ -1692,6 +1705,7 @@ Public Class MarginBaru
     End Sub
 
     Private Sub DataGridViewPAMANUKAN_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewPAMANUKAN.CellContentClick
+        On Error Resume Next
         TxtCek.Text = DataGridViewPAMANUKAN.Rows(e.RowIndex).Cells(2).Value
     End Sub
 
@@ -1702,6 +1716,7 @@ Public Class MarginBaru
     End Sub
 
     Private Sub DataGridViewRancaekek_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewRancaekek.CellContentClick
+        On Error Resume Next
         TxtCek.Text = DataGridViewRancaekek.Rows(e.RowIndex).Cells(2).Value
     End Sub
 
@@ -1712,6 +1727,7 @@ Public Class MarginBaru
     End Sub
 
     Private Sub DataGridViewSumedang_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewSumedang.CellContentClick
+        On Error Resume Next
         TxtCek.Text = DataGridViewSumedang.Rows(e.RowIndex).Cells(2).Value
     End Sub
 
@@ -1722,6 +1738,7 @@ Public Class MarginBaru
     End Sub
 
     Private Sub DataGridViewTASIKMALAYA_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewTASIKMALAYA.CellContentClick
+        On Error Resume Next
         TxtCek.Text = DataGridViewTASIKMALAYA.Rows(e.RowIndex).Cells(2).Value
     End Sub
 
@@ -1729,5 +1746,10 @@ Public Class MarginBaru
         If (e.RowIndex2 = DataGridViewTASIKMALAYA.Rows.Count - 1) Then
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub dgSoekarnoHatta_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgSoekarnoHatta.CellContentClick
+        On Error Resume Next
+        TxtCek.Text = dgSoekarnoHatta.Rows(e.RowIndex).Cells(2).Value
     End Sub
 End Class

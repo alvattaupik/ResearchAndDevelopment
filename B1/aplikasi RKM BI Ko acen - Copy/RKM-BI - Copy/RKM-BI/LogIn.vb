@@ -121,6 +121,7 @@ Public Class LogIn
             Main.Show()
             Main.Label5.Enabled = True
             Main.Timer1.Enabled = True
+            Main.Timer3.Enabled = True
             Main.Panel2.Enabled = True
 
         Else

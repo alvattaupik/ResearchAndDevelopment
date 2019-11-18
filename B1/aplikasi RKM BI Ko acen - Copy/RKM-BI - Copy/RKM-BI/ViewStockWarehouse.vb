@@ -28,6 +28,7 @@ Public Class ViewStockWarehouse
     Dim ProMyCommand2 As SqlDataAdapter
     Dim ProDtSet2 As System.Data.DataSet
     Dim cnt As Integer
+    Dim strNamabarang As String
 
 
     Sub Koneksi()
@@ -42,14 +43,17 @@ Public Class ViewStockWarehouse
     End Sub
 
     Private Sub ViewStockWarehouse_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        On Error Resume Next
 
         Koneksi()
-        GroupBox1.Text = MarginBaru.TxtCek.Text
+        'GroupBox1.Text = MarginBaru.TxtCek.Text
+        txtKodebarang.Text = MarginBaru.TxtCek.Text
+
         MyCommand = New SqlDataAdapter("select t0.WhsCode,t2.WhsName,t0.OnHand-t0.IsCommited,t0.OnHand,t0.IsCommited,t0.OnOrder from oitw t0 left join oitm t1 on t1.ItemCode=t0.ItemCode left join owhs t2 on t2.WhsCode=t0.WhsCode where (t0.WhsCode not like '%002' and t0.whscode not like '01000001' and t0.WhsCode not like '%003' and t0.WhsCode  not like 'ds') and t0.ItemCode='" + Trim(MarginBaru.TxtCek.Text) + "'", MyConnection)
         DtSet = New DataSet()
         DtSet.Clear()
         MyCommand.Fill(DtSet, "oitw")
-        DataGridView1.Columns.Clear()
+        'DataGridView1.Columns.Clear()
         DataGridView1.DataSource = DtSet.Tables("oitw").DefaultView
 
 
@@ -71,5 +75,36 @@ Public Class ViewStockWarehouse
         DataGridView1.Columns(3).DefaultCellStyle.Format = "N0"
         DataGridView1.Columns(4).DefaultCellStyle.Format = "N0"
         DataGridView1.Columns(5).DefaultCellStyle.Format = "N0"
+
+
+        LoadNamaBarang()
+
+        txtNamaBarang.Text = strNamabarang
+
+
     End Sub
+
+
+
+    Sub LoadNamaBarang()
+
+        Koneksi()
+        Dim cmd As New SqlCommand("Select Itemname From Oitm Where itemcode ='" & Trim(txtKodebarang.Text) & "'", MyConnection)
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable
+
+        adapter.Fill(table)
+
+
+
+        If table.Rows.Count > 0 Then
+            strNamabarang = table.Rows(0).Item(0)
+        Else
+            Exit Sub
+        End If
+
+        Koneksi2.Close()
+    End Sub
+
+
 End Class
