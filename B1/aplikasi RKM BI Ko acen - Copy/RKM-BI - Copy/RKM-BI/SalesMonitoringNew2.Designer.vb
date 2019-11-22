@@ -31,9 +31,9 @@ Partial Class SalesMonitoringNew2
         Me.dtpAkhir = New System.Windows.Forms.DateTimePicker()
         Me.dtpAwal = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.ChartPenjualan = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.txtTotalALL = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtTotalALL = New System.Windows.Forms.TextBox()
+        Me.ChartPenjualan = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.ChartPenjualan, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -98,8 +98,32 @@ Partial Class SalesMonitoringNew2
         Me.GroupBox2.TabIndex = 92
         Me.GroupBox2.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(330, 347)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(85, 25)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "TOTAL"
+        '
+        'txtTotalALL
+        '
+        Me.txtTotalALL.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalALL.Location = New System.Drawing.Point(421, 346)
+        Me.txtTotalALL.Multiline = True
+        Me.txtTotalALL.Name = "txtTotalALL"
+        Me.txtTotalALL.Size = New System.Drawing.Size(383, 31)
+        Me.txtTotalALL.TabIndex = 1
+        Me.txtTotalALL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'ChartPenjualan
         '
+        ChartArea1.AxisX.IsLabelAutoFit = False
+        ChartArea1.AxisX.LabelStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea1.AxisX.TitleFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea1.IsSameFontSizeForAllAxes = True
         ChartArea1.Name = "ChartArea1"
         Me.ChartPenjualan.ChartAreas.Add(ChartArea1)
         Legend1.Name = "Legend1"
@@ -119,26 +143,6 @@ Partial Class SalesMonitoringNew2
         Me.ChartPenjualan.Size = New System.Drawing.Size(1139, 327)
         Me.ChartPenjualan.TabIndex = 0
         Me.ChartPenjualan.Text = "Chart1"
-        '
-        'txtTotalALL
-        '
-        Me.txtTotalALL.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalALL.Location = New System.Drawing.Point(421, 346)
-        Me.txtTotalALL.Multiline = True
-        Me.txtTotalALL.Name = "txtTotalALL"
-        Me.txtTotalALL.Size = New System.Drawing.Size(383, 31)
-        Me.txtTotalALL.TabIndex = 1
-        Me.txtTotalALL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(330, 347)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 25)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "TOTAL"
         '
         'SalesMonitoringNew2
         '

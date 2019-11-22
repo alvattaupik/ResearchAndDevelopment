@@ -14,34 +14,26 @@ Public Class FormKillSession
         Dim table As New DataTable
 
         adapter.Fill(table)
-
-
-
         If table.Rows.Count > 0 Then
             strSessionID = table.Rows(0).Item(0)
         Else
             Exit Sub
         End If
-
         Koneksi2.Close()
+
     End Sub
-
-
 
 
     Private Sub cmdKIll_Click(sender As Object, e As EventArgs) Handles cmdKIll.Click
         If Trim(txtIdSession.Text) = strSessionID Then
             MsgBox("Anda Tidak dapat Mengakhiri Session Anda Sendiri", vbCritical, "Warning!")
             Exit Sub
+        Else
+
         End If
     End Sub
 
-
-
-
-
     Sub loadStatusRollback()
-
         KoneksiDatabase2()
         Dim cmd As New SqlCommand("SELECT @@SPID AS 'ID', SYSTEM_USER AS 'Login Name'", Koneksi2)
         Dim adapter As New SqlDataAdapter(cmd)
@@ -49,8 +41,6 @@ Public Class FormKillSession
 
         adapter.Fill(table)
 
-
-
         If table.Rows.Count > 0 Then
             strSessionID = table.Rows(0).Item(0)
         Else
@@ -58,6 +48,7 @@ Public Class FormKillSession
         End If
 
         Koneksi2.Close()
+
     End Sub
 
 

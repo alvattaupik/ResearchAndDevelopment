@@ -26,7 +26,7 @@ Public Class AsetMonitoring
     Dim cnt As Integer
 
     Sub Koneksi()
-        MyConnection = New SqlConnection("Data Source=" + "10.1.0.6" + ";Initial Catalog=RKM_LIVE_2;User ID=sa;Password=anyarretailindonesia")
+        MyConnection = New SqlConnection("Data Source=" + "10.1.0.53" + ";Initial Catalog=RKM_LIVE_2;User ID=sa;Password=h0spit4lity#")
         If MyConnection.State = ConnectionState.Closed Then
             MyConnection.Open()
         End If
@@ -38,8 +38,6 @@ Public Class AsetMonitoring
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim myPane As GraphPane = zgc.GraphPane
-
-
         zgc.GraphPane.CurveList.Clear()
         zgc.GraphPane.GraphObjList.Clear()
 
@@ -71,12 +69,10 @@ Public Class AsetMonitoring
         command.CommandType = CommandType.StoredProcedure
         command.Parameters.AddWithValue("@Cabang", "7")
         Dim table As New DataTable
-
-
-
         adapter.Fill(table)
-        Me.DataGridView1.DataSource = table
 
+
+        Me.DataGridView1.DataSource = table
         Dim total As Double = 0
         Dim k As Integer
         For k = 0 To DataGridView1.RowCount - 1
@@ -100,7 +96,7 @@ Public Class AsetMonitoring
         command = New SqlCommand("_TmSp_StockAset", MyConnection)
         adapter = New SqlDataAdapter(command)
         command.CommandType = CommandType.StoredProcedure
-        command.Parameters.AddWithValue("@Tanggal", Format("yyyy-mm-dd", Now))
+        command.Parameters.AddWithValue("@Tanggal", Format(Now, "yyyy-MM-dd"))
         command.Parameters.AddWithValue("@Cabang", "RKM Garut")
         command.Parameters.AddWithValue("@PrintByUserName", "xxx")
         table = New DataTable
@@ -120,7 +116,7 @@ Public Class AsetMonitoring
         x1 = x1 + 1
 
 
-        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format("yyyy-mm-dd", Now) + "' and jdt1.account='" + "1101003002" + "'", MyConnection)
+        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format(Now, "yyyy-MM-dd") + "' and jdt1.account='" + "1101003002" + "'", MyConnection)
         adapter = New SqlDataAdapter(command)
         table = New DataTable
         adapter.Fill(table)
@@ -131,7 +127,7 @@ Public Class AsetMonitoring
             total2 = total2 + DataGridView1.Rows(0).Cells(0).Value
         End If
 
-        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format("yyyy-mm-dd", Now) + "' and jdt1.account='" + "1101004001" + "'", MyConnection)
+        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format(Now, "yyyy-MM-dd") + "' and jdt1.account='" + "1101004001" + "'", MyConnection)
         adapter = New SqlDataAdapter(command)
         table = New DataTable
         adapter.Fill(table)
@@ -175,7 +171,7 @@ Public Class AsetMonitoring
         command = New SqlCommand("_TmSp_StockAset", MyConnection)
         adapter = New SqlDataAdapter(command)
         command.CommandType = CommandType.StoredProcedure
-        command.Parameters.AddWithValue("@Tanggal", Format("yyyy-mm-dd", Now))
+        command.Parameters.AddWithValue("@Tanggal", Format(Now, "yyyy-MM-dd"))
         command.Parameters.AddWithValue("@Cabang", "RKM Cirebon")
         command.Parameters.AddWithValue("@PrintByUserName", "xxx")
         table = New DataTable
@@ -193,7 +189,7 @@ Public Class AsetMonitoring
         x1 = x1 + 1
 
 
-        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format("yyyy-mm-dd", Now) + "' and jdt1.account='" + "1101003003" + "'", MyConnection)
+        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format(Now, "yyyy-MM-dd") + "' and jdt1.account='" + "1101003003" + "'", MyConnection)
         adapter = New SqlDataAdapter(command)
         table = New DataTable
         adapter.Fill(table)
@@ -204,7 +200,7 @@ Public Class AsetMonitoring
             total2 = total2 + DataGridView1.Rows(0).Cells(0).Value
         End If
 
-        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format("yyyy-mm-dd", Now) + "' and jdt1.account='" + "1101004002" + "'", MyConnection)
+        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format(Now, "yyyy-MM-dd") + "' and jdt1.account='" + "1101004002" + "'", MyConnection)
         adapter = New SqlDataAdapter(command)
         table = New DataTable
         adapter.Fill(table)
@@ -239,7 +235,7 @@ Public Class AsetMonitoring
         command = New SqlCommand("_TmSp_StockAset", MyConnection)
         adapter = New SqlDataAdapter(command)
         command.CommandType = CommandType.StoredProcedure
-        command.Parameters.AddWithValue("@Tanggal", Format("yyyy-mm-dd", Now))
+        command.Parameters.AddWithValue("@Tanggal", Format(Now, "yyyy-MM-dd"))
         command.Parameters.AddWithValue("@Cabang", "RKM A. Yani")
         command.Parameters.AddWithValue("@PrintByUserName", "xxx")
         table = New DataTable
@@ -267,7 +263,7 @@ Public Class AsetMonitoring
         'adapter.Fill(table)
         'Me.DataGridView1.DataSource = table
 
-        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format("yyyy-mm-dd", Now) + "' and jdt1.account='" + "1101003006" + "'", MyConnection)
+        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format(Now, "yyyy-MM-dd") + "' and jdt1.account='" + "1101003006" + "'", MyConnection)
         adapter = New SqlDataAdapter(command)
         table = New DataTable
         adapter.Fill(table)
@@ -278,7 +274,7 @@ Public Class AsetMonitoring
             total2 = total2 + DataGridView1.Rows(0).Cells(0).Value
         End If
 
-        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format("yyyy-mm-dd", Now) + "' and jdt1.account='" + "1101004005" + "'", MyConnection)
+        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format(Now, "yyyy-MM-dd") + "' and jdt1.account='" + "1101004005" + "'", MyConnection)
         adapter = New SqlDataAdapter(command)
         table = New DataTable
         adapter.Fill(table)
@@ -372,7 +368,7 @@ Public Class AsetMonitoring
         command = New SqlCommand("_TmSp_StockAset", MyConnection)
         adapter = New SqlDataAdapter(command)
         command.CommandType = CommandType.StoredProcedure
-        command.Parameters.AddWithValue("@Tanggal", Format("yyyy-mm-dd", Now))
+        command.Parameters.AddWithValue("@Tanggal", Format(Now, "yyyy-MM-dd"))
         command.Parameters.AddWithValue("@Cabang", "RKM Kopo")
         command.Parameters.AddWithValue("@PrintByUserName", "xxx")
         table = New DataTable
@@ -389,7 +385,7 @@ Public Class AsetMonitoring
         list1.Add(x1, total1)
         x1 = x1 + 1
 
-        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format("yyyy-mm-dd", Now) + "' and jdt1.account='" + "1101003006" + "'", MyConnection)
+        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format(Now, "yyyy-MM-dd") + "' and jdt1.account='" + "1101003006" + "'", MyConnection)
         adapter = New SqlDataAdapter(command)
         table = New DataTable
         adapter.Fill(table)
@@ -400,7 +396,7 @@ Public Class AsetMonitoring
             total2 = total2 + DataGridView1.Rows(0).Cells(0).Value
         End If
 
-        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format("yyyy-mm-dd", Now) + "' and jdt1.account='" + "1101004005" + "'", MyConnection)
+        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format(Now, "yyyy-MM-dd") + "' and jdt1.account='" + "1101004005" + "'", MyConnection)
         adapter = New SqlDataAdapter(command)
         table = New DataTable
         adapter.Fill(table)
@@ -433,7 +429,7 @@ Public Class AsetMonitoring
         command = New SqlCommand("_TmSp_StockAset", MyConnection)
         adapter = New SqlDataAdapter(command)
         command.CommandType = CommandType.StoredProcedure
-        command.Parameters.AddWithValue("@Tanggal", Format("yyyy-mm-dd", Now))
+        command.Parameters.AddWithValue("@Tanggal", Format(Now, "yyyy-MM-dd"))
         command.Parameters.AddWithValue("@Cabang", "RKM Kopo")
         command.Parameters.AddWithValue("@PrintByUserName", "xxx")
         table = New DataTable
@@ -450,7 +446,7 @@ Public Class AsetMonitoring
         list1.Add(x1, total1)
         x1 = x1 + 1
 
-        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format("yyyy-mm-dd", Now) + "' and jdt1.account='" + "1101003006" + "'", MyConnection)
+        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format(Now, "yyyy-MM-dd") + "' and jdt1.account='" + "1101003006" + "'", MyConnection)
         adapter = New SqlDataAdapter(command)
         table = New DataTable
         adapter.Fill(table)
@@ -461,7 +457,7 @@ Public Class AsetMonitoring
             total2 = total2 + DataGridView1.Rows(0).Cells(0).Value
         End If
 
-        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format("yyyy-mm-dd", Now) + "' and jdt1.account='" + "1101004005" + "'", MyConnection)
+        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format(Now, "yyyy-MM-dd") + "' and jdt1.account='" + "1101004005" + "'", MyConnection)
         adapter = New SqlDataAdapter(command)
         table = New DataTable
         adapter.Fill(table)
@@ -498,7 +494,7 @@ Public Class AsetMonitoring
         command = New SqlCommand("_TmSp_StockAset", MyConnection)
         adapter = New SqlDataAdapter(command)
         command.CommandType = CommandType.StoredProcedure
-        command.Parameters.AddWithValue("@Tanggal", Format("yyyy-mm-dd", Now))
+        command.Parameters.AddWithValue("@Tanggal", Format(Now, "yyyy-MM-dd"))
         command.Parameters.AddWithValue("@Cabang", "ABM")
         command.Parameters.AddWithValue("@PrintByUserName", "xxx")
         table = New DataTable
@@ -523,7 +519,7 @@ Public Class AsetMonitoring
         'adapter.Fill(table)
         'Me.DataGridView1.DataSource = table
 
-        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format("yyyy-mm-dd", Now) + "' and jdt1.account='" + "1101003008" + "'", MyConnection)
+        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format(Now, "yyyy-MM-dd") + "' and jdt1.account='" + "1101003008" + "'", MyConnection)
         adapter = New SqlDataAdapter(command)
         table = New DataTable
         adapter.Fill(table)
@@ -534,7 +530,7 @@ Public Class AsetMonitoring
             total2 = total2 + DataGridView1.Rows(0).Cells(0).Value
         End If
 
-        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format("yyyy-mm-dd", Now) + "' and jdt1.account='" + "1101004004" + "'", MyConnection)
+        command = New SqlCommand("select sum(jdt1.debit)-sum(jdt1.credit) from ojdt left join jdt1 on jdt1.transid=ojdt.transid where ojdt.refdate<'" + Format(Now, "yyyy-MM-dd") + "' and jdt1.account='" + "1101004004" + "'", MyConnection)
         adapter = New SqlDataAdapter(command)
         table = New DataTable
         adapter.Fill(table)

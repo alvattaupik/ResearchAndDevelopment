@@ -69,10 +69,13 @@ Public Class SalesMonitoringNew2
         ChartPenjualan.ChartAreas("ChartArea1").AxisX.MinorTickMark.Enabled = False
         ChartPenjualan.ChartAreas("ChartArea1").AxisX.Interval = 1
         ChartPenjualan.ChartAreas("ChartArea1").AxisX.IsLabelAutoFit = True
-        ChartPenjualan.ChartAreas("ChartArea1").AxisX.LabelStyle.IsStaggered = False
-        'ChartPenjualan.ChartAreas("ChartArea1").AxisX.LabelStyle.Angle = 70
+        ChartPenjualan.ChartAreas("ChartArea1").AxisX.LabelStyle.IsStaggered = True
+
+        'ChartPenjualan.ChartAreas("ChartArea1").AxisX.LabelStyle.Angle = 30
+
         ChartPenjualan.ChartAreas("ChartArea1").AxisX.LabelAutoFitStyle = LabelAutoFitStyles.DecreaseFont
         ChartPenjualan.ChartAreas("ChartArea1").AxisX.LabelAutoFitStyle = LabelAutoFitStyles.WordWrap
+
         ChartPenjualan.ChartAreas("ChartArea1").AxisX.MajorGrid.Enabled = False
         ChartPenjualan.ChartAreas("ChartArea1").AxisY.MajorGrid.Enabled = False
         ChartPenjualan.ChartAreas("ChartArea1").AxisX.MajorGrid.LineColor = Color.LightGray
@@ -110,7 +113,7 @@ Public Class SalesMonitoringNew2
 
         'Next row
 
-        ChartPenjualan.Titles.Add("TURN OVER PENJUALAN")
+        ChartPenjualan.Titles.Add("TURN OVER PENJUALAN").Font = New Font("Arial", 14, FontStyle.Bold)
 
 
 
@@ -148,6 +151,12 @@ Public Class SalesMonitoringNew2
         'ChartPenjualan.Series("Series1").Points(11).Color = Color.Indigo
         'ChartPenjualan.Series("Series1").Points(12).Color = Color.Linen
 
+        ChartPenjualan.Series("Series1").IsValueShownAsLabel = True
+        ChartPenjualan.Series("Series1").Font = New Font("Times", 7, FontStyle.Bold)  ' will change value label font
+        'ChartPenjualan.ChartAreas("ChartArea1").AxisX.LabelStyle.Font = New Font("Verdana", 10)  ' will change x
+
+
+
 
 
 
@@ -162,8 +171,8 @@ Public Class SalesMonitoringNew2
         ChartPenjualan.Series("Series1").Points.Clear()
         ChartPenjualan.Titles.Clear()
 
-        Dim TotalALlFix As Integer
-        Dim totalTemp As Integer
+        Dim TotalALlFix As Long
+        Dim totalTemp As Long
 
 
         Dim cmd As SqlCommand
@@ -194,14 +203,9 @@ Public Class SalesMonitoringNew2
         End If
 
 
-
-
-
+        ChartPenjualan.Titles.Add("TURN OVER PENJUALAN").Font = New Font("Arial", 14, FontStyle.Bold)
         'ChartPenjualan.Titles.Add("TURN OVER PENJUALAN")
-
         'ChartPenjualan.Titles("Title1").Font = New System.Drawing.Font("Times New Roman", 25, System.Drawing.FontStyle.Bold)
-
-
         ChartPenjualan.Series(0).Points.AddXY("ABM", FormatCurrency(Tabel1.Rows(0).Item(1)))
         ChartPenjualan.Series(0).Points.AddXY("RKM AYANI", FormatCurrency(Tabel1.Rows(1).Item(1)))
         ChartPenjualan.Series(0).Points.AddXY("RKM CIBABAT", FormatCurrency(Tabel1.Rows(2).Item(1)))
@@ -232,7 +236,6 @@ Public Class SalesMonitoringNew2
 
 
 
-
         ChartPenjualan.Series("Series1").Points(0).Color = Color.LightBlue
         ChartPenjualan.Series("Series1").Points(1).Color = Color.LightCoral
         ChartPenjualan.Series("Series1").Points(2).Color = Color.LightCyan
@@ -250,6 +253,9 @@ Public Class SalesMonitoringNew2
 
         txtTotalALL.Text = "Rp. " & Format(TotalALlFix, "##,0")
 
+
+        ChartPenjualan.Series("Series1").IsValueShownAsLabel = True
+        ChartPenjualan.Series("Series1").Font = New Font("Times", 7, FontStyle.Bold)  ' will
 
 
     End Sub

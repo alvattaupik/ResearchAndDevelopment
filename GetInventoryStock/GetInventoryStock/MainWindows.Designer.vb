@@ -52,6 +52,7 @@ Partial Class MainWindows
         Me.ShowMyIPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
@@ -327,12 +328,12 @@ Partial Class MainWindows
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'AboutToolStripMenuItem
         '
-        Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowMyIPToolStripMenuItem})
+        Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowMyIPToolStripMenuItem, Me.PingToolStripMenuItem})
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.AboutToolStripMenuItem.Text = "Extra"
@@ -353,8 +354,14 @@ Partial Class MainWindows
         'ChangeLogToolStripMenuItem
         '
         Me.ChangeLogToolStripMenuItem.Name = "ChangeLogToolStripMenuItem"
-        Me.ChangeLogToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ChangeLogToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.ChangeLogToolStripMenuItem.Text = "Change Log"
+        '
+        'PingToolStripMenuItem
+        '
+        Me.PingToolStripMenuItem.Name = "PingToolStripMenuItem"
+        Me.PingToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PingToolStripMenuItem.Text = "Ping"
         '
         'PictureBox2
         '
@@ -440,4 +447,5 @@ Partial Class MainWindows
     Friend WithEvents ShowMyIPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ChangeLogToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PingToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

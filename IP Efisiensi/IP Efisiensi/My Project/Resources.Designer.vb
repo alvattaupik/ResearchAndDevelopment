@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _123521() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("123521", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property _8d2266d10c0de8283c9f225d7f7b045b_colorful_abstract_geometric_background_vector_by_vexels() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("8d2266d10c0de8283c9f225d7f7b045b-colorful-abstract-geometric-background-vector-by"& _ 

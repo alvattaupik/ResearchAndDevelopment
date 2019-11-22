@@ -1,7 +1,10 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
-Public Class Form1
+Imports System.Net
+Imports System.Net.NetworkInformation
 
+Public Class Form1
+    Dim pi As New Net.NetworkInformation.Ping
     Dim BolTambah As Boolean
     Dim BolUbahCabang As Boolean
     Dim strkodeCabangTemp As String
@@ -354,5 +357,16 @@ Public Class Form1
     Private Sub cmbCabang2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCabang2.SelectedIndexChanged
         'LoadComboBox2()
     End Sub
+
+  
+
+    Private Sub cmdPing_Click(sender As Object, e As EventArgs) Handles cmdPing.Click
+        'Timer1.Enabled = True
+        'Panel1.Visible = True
+        'Dim IP As String = InputBox("Enter Client's IP", "Ping To Client")
+
+        Shell("CMD.exe /C ping " & (Trim(dgData.Item(2, dgData.CurrentRow.Index).Value)) & " -t", AppWinStyle.NormalFocus)
+    End Sub
+
 
 End Class

@@ -105,13 +105,13 @@ Public Class MarginBaru
         DataGridABM.Columns(15).Width = 50
         'DataGridABM.Columns(16).Width = 100
 
-        Dim hasil As Integer = 0
-        Dim hasil1 As Integer = 0
-        Dim hasil2 As Integer = 0
-        Dim hasil3 As Integer = 0
-        Dim hasil4 As Integer = 0
-        Dim hasil5 As Integer = 0
-        Dim hasil6 As Integer = 0
+        Dim hasil As Long = 0
+        Dim hasil1 As Long = 0
+        Dim hasil2 As Long = 0
+        Dim hasil3 As Long = 0
+        Dim hasil4 As Long = 0
+        Dim hasil5 As Long = 0
+        Dim hasil6 As Long = 0
 
         For i = 0 To DataGridABM.RowCount - 1
             'DataGridABM.RowCount = DataGridABM.RowCount + 1

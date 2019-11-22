@@ -96,11 +96,6 @@ Partial Class Main
         Me.b6 = New System.Windows.Forms.Label()
         Me.lblJumlahCabang = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.n7 = New System.Windows.Forms.TextBox()
         Me.n6 = New System.Windows.Forms.TextBox()
@@ -131,6 +126,7 @@ Partial Class Main
         Me.t112 = New System.Windows.Forms.Timer(Me.components)
         Me.t121 = New System.Windows.Forms.Timer(Me.components)
         Me.t122 = New System.Windows.Forms.Timer(Me.components)
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -152,6 +148,7 @@ Partial Class Main
         CType(Me.dgSidebar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewTotal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CekDeh, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -566,10 +563,9 @@ Partial Class Main
         '
         Me.Panel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.GroupBox1)
+        Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.lblJmlhCabang)
-        Me.Panel2.Controls.Add(Me.lblNominal)
-        Me.Panel2.Controls.Add(Me.Label8)
-        Me.Panel2.Controls.Add(Me.lblTotalOmset)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.dgSidebar)
         Me.Panel2.Controls.Add(Me.Label9)
@@ -599,10 +595,9 @@ Partial Class Main
         Me.Panel2.Controls.Add(Me.b4)
         Me.Panel2.Controls.Add(Me.lblJumlahCabang)
         Me.Panel2.Controls.Add(Me.Label10)
-        Me.Panel2.Controls.Add(Me.ShapeContainer1)
         Me.Panel2.Location = New System.Drawing.Point(767, 58)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(241, 372)
+        Me.Panel2.Size = New System.Drawing.Size(241, 382)
         Me.Panel2.TabIndex = 20
         Me.Panel2.Visible = False
         '
@@ -610,18 +605,19 @@ Partial Class Main
         '
         Me.lblJmlhCabang.AutoSize = True
         Me.lblJmlhCabang.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJmlhCabang.Location = New System.Drawing.Point(150, 346)
+        Me.lblJmlhCabang.Location = New System.Drawing.Point(150, 344)
         Me.lblJmlhCabang.Name = "lblJmlhCabang"
         Me.lblJmlhCabang.Size = New System.Drawing.Size(75, 13)
         Me.lblJmlhCabang.TabIndex = 44
         Me.lblJmlhCabang.Text = "JmlhCabang"
         Me.lblJmlhCabang.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblJmlhCabang.Visible = False
         '
         'lblNominal
         '
         Me.lblNominal.AutoSize = True
         Me.lblNominal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNominal.Location = New System.Drawing.Point(150, 327)
+        Me.lblNominal.Location = New System.Drawing.Point(127, 11)
         Me.lblNominal.Name = "lblNominal"
         Me.lblNominal.Size = New System.Drawing.Size(52, 13)
         Me.lblNominal.TabIndex = 43
@@ -632,7 +628,7 @@ Partial Class Main
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(132, 326)
+        Me.Label8.Location = New System.Drawing.Point(109, 9)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(12, 16)
         Me.Label8.TabIndex = 41
@@ -642,7 +638,7 @@ Partial Class Main
         '
         Me.lblTotalOmset.AutoSize = True
         Me.lblTotalOmset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalOmset.Location = New System.Drawing.Point(25, 325)
+        Me.lblTotalOmset.Location = New System.Drawing.Point(2, 12)
         Me.lblTotalOmset.Name = "lblTotalOmset"
         Me.lblTotalOmset.Size = New System.Drawing.Size(79, 13)
         Me.lblTotalOmset.TabIndex = 40
@@ -655,7 +651,7 @@ Partial Class Main
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(0, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(16, 370)
+        Me.Label5.Size = New System.Drawing.Size(16, 380)
         Me.Label5.TabIndex = 26
         Me.Label5.Text = "<<<"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -922,6 +918,7 @@ Partial Class Main
         Me.lblJumlahCabang.Size = New System.Drawing.Size(93, 13)
         Me.lblJumlahCabang.TabIndex = 39
         Me.lblJumlahCabang.Text = "Jumlah Cabang"
+        Me.lblJumlahCabang.Visible = False
         '
         'Label10
         '
@@ -932,58 +929,16 @@ Partial Class Main
         Me.Label10.Size = New System.Drawing.Size(12, 16)
         Me.Label10.TabIndex = 42
         Me.Label10.Text = ":"
-        '
-        'ShapeContainer1
-        '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape4, Me.LineShape3, Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(239, 370)
-        Me.ShapeContainer1.TabIndex = 45
-        Me.ShapeContainer1.TabStop = False
-        '
-        'LineShape4
-        '
-        Me.LineShape4.Name = "LineShape4"
-        Me.LineShape4.X1 = 234
-        Me.LineShape4.X2 = 234
-        Me.LineShape4.Y1 = 325
-        Me.LineShape4.Y2 = 362
-        '
-        'LineShape3
-        '
-        Me.LineShape3.Name = "LineShape3"
-        Me.LineShape3.X1 = 23
-        Me.LineShape3.X2 = 23
-        Me.LineShape3.Y1 = 324
-        Me.LineShape3.Y2 = 362
-        '
-        'LineShape2
-        '
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 23
-        Me.LineShape2.X2 = 233
-        Me.LineShape2.Y1 = 362
-        Me.LineShape2.Y2 = 362
-        '
-        'LineShape1
-        '
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 22
-        Me.LineShape1.X2 = 233
-        Me.LineShape1.Y1 = 324
-        Me.LineShape1.Y2 = 324
+        Me.Label10.Visible = False
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(764, 437)
+        Me.Label3.Location = New System.Drawing.Point(22, 359)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(41, 16)
         Me.Label3.TabIndex = 25
         Me.Label3.Text = "30"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.Label3.Visible = False
         '
         'n7
         '
@@ -1144,6 +1099,17 @@ Partial Class Main
         Me.n11.Text = "9"
         Me.n11.Visible = False
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.lblNominal)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.lblTotalOmset)
+        Me.GroupBox1.Location = New System.Drawing.Point(23, 325)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(212, 31)
+        Me.GroupBox1.TabIndex = 45
+        Me.GroupBox1.TabStop = False
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1151,7 +1117,6 @@ Partial Class Main
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.n12)
         Me.Controls.Add(Me.n11)
         Me.Controls.Add(Me.n10)
@@ -1199,6 +1164,8 @@ Partial Class Main
         CType(Me.dgSidebar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridViewTotal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CekDeh, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1305,10 +1272,6 @@ Partial Class Main
     Friend WithEvents lblNominal As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
-    Friend WithEvents LineShape4 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents LineShape3 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 
 End Class

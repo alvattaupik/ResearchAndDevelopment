@@ -15,6 +15,10 @@ IPEfisiensi
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:IP_Efisiensi.My.Resources.Resources._123521">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:IP_Efisiensi.My.Resources.Resources._8d2266d10c0de8283c9f225d7f7b045b_colorful_abstract_geometric_background_vector_by_vexels">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monitoring Real Stock.exe" size="780800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monitoring Real Stock.exe" size="832000">
       <assemblyIdentity name="Monitoring Real Stock" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>apaa4gw9cifX3EtmPTZiKZ7F0H00K7UwvgJJmIGFAco=</dsig:DigestValue>
+        <dsig:DigestValue>I96532x3oQYQNHy2zG/Qb6WP6Y+Jun9hVGcNQ8Kr31k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

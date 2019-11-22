@@ -1,0 +1,34 @@
+E:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ResolveAssemblyReference.cache
+E:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.Resources.resources
+E:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.pingserver.resources
+E:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.vbproj.GenerateResource.Cache
+E:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\bin\Debug\ConnectionServer.exe
+E:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\bin\Debug\ConnectionServer.pdb
+E:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\bin\Debug\ConnectionServer.xml
+E:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.exe
+E:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.xml
+E:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.pdb
+D:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.exe
+D:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.xml
+D:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.pdb
+D:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\bin\Debug\ConnectionServer.exe
+D:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ResolveAssemblyReference.cache
+D:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.Resources.resources
+D:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.pingserver.resources
+D:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.vbproj.GenerateResource.Cache
+D:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\bin\Debug\ConnectionServer.pdb
+D:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\bin\Debug\ConnectionServer.xml
+D:\program\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.Form1.resources
+D:\Sharing Files\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.xml
+D:\Sharing Files\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.pdb
+D:\Sharing Files\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\bin\Debug\ConnectionServer.exe
+D:\Sharing Files\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\bin\Debug\ConnectionServer.pdb
+D:\Sharing Files\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\bin\Debug\ConnectionServer.xml
+D:\Sharing Files\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.Form1.resources
+D:\Sharing Files\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.Resources.resources
+D:\Sharing Files\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.pingserver.resources
+D:\Sharing Files\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.vbproj.GenerateResource.Cache
+D:\Sharing Files\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.exe
+D:\Research And Development\ResearchAndDevelopment\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.exe
+D:\Research And Development\ResearchAndDevelopment\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.xml
+D:\Research And Development\ResearchAndDevelopment\Program Koneksi Jaringan Anyar Group\ConnectionServer\ConnectionServer\obj\Debug\ConnectionServer.pdb

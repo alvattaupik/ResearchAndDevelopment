@@ -180,8 +180,10 @@ Public Class Main
     End Sub
 
     Private Sub PictureBox5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox5.Click
-        Reporting.MdiParent = Me
-        Reporting.Show()
+        MsgBox("Sorry This Feature Unavailable, Is Currently Under Development", vbInformation, "Informasi")
+        Exit Sub
+        'Reporting.MdiParent = Me
+        'Reporting.Show()
     End Sub
 
     Private Sub PictureBox3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.Click
@@ -190,9 +192,12 @@ Public Class Main
     End Sub
 
     Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox2.Click
-        Dim frm As New AsetMonitoring
-        frm.MdiParent = Me
-        frm.Show()
+        MsgBox("Sorry This Feature Unavailable, Is Currently Under Development", vbInformation, "Informasi")
+        Exit Sub
+
+        'Dim frm As New AsetMonitoring
+        'frm.MdiParent = Me
+        'frm.Show()
     End Sub
 
     Private Sub PictureBox7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox7.Click

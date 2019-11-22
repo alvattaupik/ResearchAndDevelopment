@@ -803,6 +803,7 @@ Public Class delivery
     End Sub
 
     Private Sub DataGridABM_CellMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridABM.CellMouseClick
+        On Error Resume Next
         TextBox1.Text = DataGridABM.Rows(e.RowIndex).Cells(2).Value
         Button2.PerformClick()
     End Sub

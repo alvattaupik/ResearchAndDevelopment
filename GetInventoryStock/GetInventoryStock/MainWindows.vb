@@ -363,4 +363,8 @@ ErrorHandler:
     Private Sub ChangeLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeLogToolStripMenuItem.Click
         FormChangeLog.ShowDialog()
     End Sub
+
+    Private Sub PingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PingToolStripMenuItem.Click
+        FormPing.ShowDialog()
+    End Sub
 End Class

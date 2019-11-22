@@ -53,14 +53,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IP Efisiensi.exe" size="432640">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IP Efisiensi.exe" size="458752">
       <assemblyIdentity name="IP Efisiensi" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>sBa+ulDpyw4ewSfQvaFLLgQo9wk=</dsig:DigestValue>
+        <dsig:DigestValue>AvfoGuCgomS/QJBghA0Xl7lobWQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -110,6 +110,12 @@
     <Compile Include="FormChangeLog.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormPing.Designer.vb">
+      <DependentUpon>FormPing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPing.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
@@ -157,6 +163,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FormChangeLog.resx">
       <DependentUpon>FormChangeLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPing.resx">
+      <DependentUpon>FormPing.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
@@ -227,6 +236,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iconfinder_inventory-maintenance_49590.ico" />
+    <None Include="Resources\366-3662832_network-connection-connect-internet-server-web-ping-connect.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

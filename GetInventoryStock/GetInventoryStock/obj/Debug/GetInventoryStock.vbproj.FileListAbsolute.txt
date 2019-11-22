@@ -34,3 +34,4 @@ D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventor
 D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.exe.manifest
 D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.application
 D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.FormChangeLog.resources
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.FormPing.resources

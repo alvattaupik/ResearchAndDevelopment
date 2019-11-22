@@ -8,6 +8,7 @@ Public Class SalesMonitoringNew
 
 
     Private Sub SalesMonitoringNew_Load(sender As Object, e As EventArgs) Handles Me.Load
+        LoadDinamicGraphic()
         LoadChart()
 
     End Sub
@@ -85,7 +86,7 @@ Public Class SalesMonitoringNew
 
 
 
-    Sub LoadStaticGraphic()
+    Sub LoadDinamicGraphic()
 
 
 
@@ -137,16 +138,16 @@ Public Class SalesMonitoringNew
 
 
 
-        'Dim rng As New Random
+        Dim rng As New Random
 
-        'For p As Integer = 1 To 13
-        '    Dim thisPoint As DataVisualization.Charting.DataPoint
-        '    thisPoint = Chart1.Series("Series1").Points.Add(rng.Next(5) + 5)
+        For p As Integer = 1 To 13
+            Dim thisPoint As DataVisualization.Charting.DataPoint
+            thisPoint = Chart1.Series("Series1").Points.Add(rng.Next(5) + 5)
 
-        '    Dim someRandomColour As Color = Color.FromArgb(rng.Next(256), rng.Next(256), rng.Next(256))
-        '    thisPoint.Color = someRandomColour
+            Dim someRandomColour As Color = Color.FromArgb(rng.Next(256), rng.Next(256), rng.Next(256))
+            thisPoint.Color = someRandomColour
 
-        'Next
+        Next
 
 
 

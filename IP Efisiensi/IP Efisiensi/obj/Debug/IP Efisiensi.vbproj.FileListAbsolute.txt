@@ -26,3 +26,13 @@ D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin
 D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.exe
 D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.xml
 D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.pdb
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.exe.manifest
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.application
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.exe
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.pdb
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.xml
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP_Efisiensi.Form1.resources
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP_Efisiensi.Resources.resources
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.vbproj.GenerateResource.Cache
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.exe.manifest
+D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.application

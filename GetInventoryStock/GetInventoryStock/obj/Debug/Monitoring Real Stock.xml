@@ -15,6 +15,10 @@ MonitoringRealStock
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:MonitoringRealStock.My.Resources.Resources._366_3662832_network_connection_connect_internet_server_web_ping_connect">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:MonitoringRealStock.My.Resources.Resources._67_675670_inventory_management_system_icon">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

@@ -118,23 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="md_5b12306722c18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\md_5b12306722c18.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="8d2266d10c0de8283c9f225d7f7b045b-colorful-abstract-geometric-background-vector-by-vexels" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8d2266d10c0de8283c9f225d7f7b045b-colorful-abstract-geometric-background-vector-by-vexels.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-ip-address-management-internet-protocol-computer-n-adress-5ac2a2f1d01703.7126512115227051378523" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-ip-address-management-internet-protocol-computer-n-adress-5ac2a2f1d01703.7126512115227051378523.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_icon-33-clipboard-add_315154" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_icon-33-clipboard-add_315154.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="iconfinder_icon-136-document-edit_314724" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_icon-136-document-edit_314724.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_icon-33-clipboard-add_315154" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_icon-33-clipboard-add_315154.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_1-04_511562" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_1-04_511562.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="md_5b12306722c18" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\md_5b12306722c18.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="123521" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\123521.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

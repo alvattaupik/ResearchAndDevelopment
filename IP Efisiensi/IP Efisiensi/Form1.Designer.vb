@@ -28,6 +28,8 @@ Partial Class Form1
         Me.cmbCabang = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.cmdPing = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -58,6 +60,7 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         CType(Me.dgData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.FraTambahUbah.SuspendLayout()
@@ -71,7 +74,7 @@ Partial Class Form1
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(363, 13)
+        Me.Label5.Location = New System.Drawing.Point(353, 15)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(80, 20)
         Me.Label5.TabIndex = 1
@@ -84,7 +87,8 @@ Partial Class Form1
         Me.dgData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgData.Location = New System.Drawing.Point(-4, 244)
         Me.dgData.Name = "dgData"
-        Me.dgData.Size = New System.Drawing.Size(452, 308)
+        Me.dgData.ReadOnly = True
+        Me.dgData.Size = New System.Drawing.Size(452, 297)
         Me.dgData.TabIndex = 1
         '
         'cmbCabang
@@ -108,6 +112,9 @@ Partial Class Form1
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox3.Controls.Add(Me.Label15)
+        Me.GroupBox3.Controls.Add(Me.Label14)
+        Me.GroupBox3.Controls.Add(Me.cmdPing)
         Me.GroupBox3.Controls.Add(Me.Label13)
         Me.GroupBox3.Controls.Add(Me.Label12)
         Me.GroupBox3.Controls.Add(Me.Label8)
@@ -122,10 +129,33 @@ Partial Class Form1
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Aksi"
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(38, 59)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(28, 13)
+        Me.Label14.TabIndex = 13
+        Me.Label14.Text = "Ping"
+        '
+        'cmdPing
+        '
+        Me.cmdPing.BackColor = System.Drawing.Color.LightCoral
+        Me.cmdPing.BackgroundImage = Global.IP_Efisiensi.My.Resources.Resources._123521
+        Me.cmdPing.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.cmdPing.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdPing.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdPing.Location = New System.Drawing.Point(41, 15)
+        Me.cmdPing.Name = "cmdPing"
+        Me.cmdPing.Size = New System.Drawing.Size(64, 41)
+        Me.cmdPing.TabIndex = 12
+        Me.cmdPing.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.cmdPing.UseVisualStyleBackColor = False
+        '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(261, 59)
+        Me.Label13.Location = New System.Drawing.Point(256, 61)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(38, 13)
         Me.Label13.TabIndex = 11
@@ -134,7 +164,7 @@ Partial Class Form1
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(176, 59)
+        Me.Label12.Location = New System.Drawing.Point(180, 59)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(33, 13)
         Me.Label12.TabIndex = 10
@@ -143,7 +173,7 @@ Partial Class Form1
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(89, 59)
+        Me.Label8.Location = New System.Drawing.Point(110, 59)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(46, 13)
         Me.Label8.TabIndex = 9
@@ -153,10 +183,10 @@ Partial Class Form1
         '
         Me.Button2.BackColor = System.Drawing.Color.Cornsilk
         Me.Button2.BackgroundImage = Global.IP_Efisiensi.My.Resources.Resources.iconfinder_1_04_511562
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(243, 13)
+        Me.Button2.Location = New System.Drawing.Point(257, 15)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(70, 43)
         Me.Button2.TabIndex = 8
@@ -167,10 +197,10 @@ Partial Class Form1
         '
         Me.Button1.BackColor = System.Drawing.Color.PeachPuff
         Me.Button1.BackgroundImage = Global.IP_Efisiensi.My.Resources.Resources.iconfinder_icon_136_document_edit_314724
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(157, 13)
+        Me.Button1.Location = New System.Drawing.Point(183, 13)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(68, 43)
         Me.Button1.TabIndex = 7
@@ -184,7 +214,7 @@ Partial Class Form1
         Me.btTambah.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btTambah.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btTambah.Location = New System.Drawing.Point(80, 15)
+        Me.btTambah.Location = New System.Drawing.Point(113, 15)
         Me.btTambah.Name = "btTambah"
         Me.btTambah.Size = New System.Drawing.Size(64, 41)
         Me.btTambah.TabIndex = 6
@@ -201,7 +231,7 @@ Partial Class Form1
         Me.FraTambahUbah.Controls.Add(Me.btBatal)
         Me.FraTambahUbah.Controls.Add(Me.GroupBox5)
         Me.FraTambahUbah.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FraTambahUbah.Location = New System.Drawing.Point(12, 260)
+        Me.FraTambahUbah.Location = New System.Drawing.Point(17, 260)
         Me.FraTambahUbah.Name = "FraTambahUbah"
         Me.FraTambahUbah.Size = New System.Drawing.Size(430, 281)
         Me.FraTambahUbah.TabIndex = 9
@@ -443,6 +473,16 @@ Partial Class Form1
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "IP EFISIENSI"
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(354, 39)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(89, 13)
+        Me.Label15.TabIndex = 14
+        Me.Label15.Text = "Build 21.11.19"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -512,5 +552,8 @@ Partial Class Form1
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents cmdPing As System.Windows.Forms.Button
+    Friend WithEvents Label15 As System.Windows.Forms.Label
 
 End Class
