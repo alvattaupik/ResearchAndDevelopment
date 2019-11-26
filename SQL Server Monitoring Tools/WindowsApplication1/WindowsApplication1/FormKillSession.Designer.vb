@@ -23,12 +23,13 @@ Partial Class FormKillSession
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.cmdKIll = New System.Windows.Forms.Button()
         Me.txtIdSession = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgBackgroundProcess = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgBackgroundProcess, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,30 +41,40 @@ Partial Class FormKillSession
         Me.GroupBox1.Controls.Add(Me.cmdKIll)
         Me.GroupBox1.Controls.Add(Me.txtIdSession)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(5, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(616, 76)
+        Me.GroupBox1.Size = New System.Drawing.Size(428, 76)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Input Session to KILL"
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(295, 19)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(127, 40)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "See Background Process"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'cmdKIll
         '
         Me.cmdKIll.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdKIll.Location = New System.Drawing.Point(224, 28)
+        Me.cmdKIll.Location = New System.Drawing.Point(212, 19)
         Me.cmdKIll.Name = "cmdKIll"
-        Me.cmdKIll.Size = New System.Drawing.Size(98, 31)
+        Me.cmdKIll.Size = New System.Drawing.Size(77, 40)
         Me.cmdKIll.TabIndex = 2
         Me.cmdKIll.Text = "KILL"
         Me.cmdKIll.UseVisualStyleBackColor = True
         '
         'txtIdSession
         '
-        Me.txtIdSession.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIdSession.Location = New System.Drawing.Point(117, 28)
+        Me.txtIdSession.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtIdSession.Location = New System.Drawing.Point(128, 19)
         Me.txtIdSession.Multiline = True
         Me.txtIdSession.Name = "txtIdSession"
-        Me.txtIdSession.Size = New System.Drawing.Size(101, 29)
+        Me.txtIdSession.Size = New System.Drawing.Size(78, 40)
         Me.txtIdSession.TabIndex = 1
         '
         'Label1
@@ -79,9 +90,9 @@ Partial Class FormKillSession
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.dgBackgroundProcess)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 94)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 90)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(615, 161)
+        Me.GroupBox2.Size = New System.Drawing.Size(428, 161)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Background Process"
@@ -91,24 +102,23 @@ Partial Class FormKillSession
         Me.dgBackgroundProcess.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgBackgroundProcess.Location = New System.Drawing.Point(9, 24)
         Me.dgBackgroundProcess.Name = "dgBackgroundProcess"
-        Me.dgBackgroundProcess.Size = New System.Drawing.Size(594, 127)
+        Me.dgBackgroundProcess.Size = New System.Drawing.Size(413, 127)
         Me.dgBackgroundProcess.TabIndex = 0
         '
-        'Button1
+        'StatusStrip1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(328, 28)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(138, 31)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "BACKGROUND"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 250)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(436, 22)
+        Me.StatusStrip1.TabIndex = 2
+        Me.StatusStrip1.Text = "StatusStrip1"
         '
         'FormKillSession
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(634, 260)
+        Me.ClientSize = New System.Drawing.Size(436, 272)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "FormKillSession"
@@ -119,6 +129,7 @@ Partial Class FormKillSession
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.dgBackgroundProcess, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
@@ -128,4 +139,5 @@ Partial Class FormKillSession
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents dgBackgroundProcess As System.Windows.Forms.DataGridView
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
 End Class
