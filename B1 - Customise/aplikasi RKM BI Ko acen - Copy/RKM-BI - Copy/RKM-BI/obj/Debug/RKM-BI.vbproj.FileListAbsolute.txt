@@ -1,0 +1,115 @@
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe.config
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.ResolveComReference.cache
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.xml
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.pdb
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.AsetMonitoring.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginBaru.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.stockView.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.delivery.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GraphOption1.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Dialog2.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ImportExcel.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.LogIn.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.omsetsale.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.PaymentState.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Stock.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StockProInt.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Testing.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Reporting.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Main.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Resources.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringapter.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesPerform.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ViewStockWarehouse.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.GenerateResource.Cache
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.cache
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.compiled
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.pdb
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.xml
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringNew.resources
+C:\Share\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbprojResolveAssemblyReference.cache
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe.config
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.ResolveComReference.cache
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.xml
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.pdb
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe.manifest
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.application
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.pdb
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.xml
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbprojResolveAssemblyReference.cache
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.AsetMonitoring.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginBaru.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringapter.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringNew.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.stockView.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.delivery.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GraphOption1.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Dialog2.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ImportExcel.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.LogIn.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.omsetsale.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.PaymentState.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Stock.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StockProInt.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Testing.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Reporting.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Main.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Resources.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesPerform.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ViewStockWarehouse.resources
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.GenerateResource.Cache
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.cache
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.compiled
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe.manifest
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.application
+D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringNew2.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe.config
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.ResolveComReference.cache
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.xml
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.pdb
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe.manifest
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.application
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.pdb
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.xml
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbprojResolveAssemblyReference.cache
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.AsetMonitoring.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginBaru.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringapter.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringNew.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringNew2.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.stockView.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.delivery.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GraphOption1.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Dialog2.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ImportExcel.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.LogIn.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginStore.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.omsetsale.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.PaymentState.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Stock.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StockProInt.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Testing.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Reporting.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Main.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.Resources.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.GroupPerform.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesPerform.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StorePerform.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.ViewStockWarehouse.resources
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.GenerateResource.Cache
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.cache
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.compiled
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe.manifest
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.application
