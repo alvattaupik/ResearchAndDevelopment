@@ -29,9 +29,18 @@ Partial Class frmSessionTrace
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtIdSesi = New System.Windows.Forms.TextBox()
         Me.cmdFindSession = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txtNamaProgram = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtQuery = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtStatus = New System.Windows.Forms.TextBox()
+        Me.cmdcopyclipboard = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgSessionTrace, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -40,7 +49,7 @@ Partial Class frmSessionTrace
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(6, 1)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(357, 64)
+        Me.GroupBox1.Size = New System.Drawing.Size(375, 64)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -58,7 +67,7 @@ Partial Class frmSessionTrace
         Me.GroupBox2.Controls.Add(Me.dgSessionTrace)
         Me.GroupBox2.Location = New System.Drawing.Point(8, 109)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(355, 131)
+        Me.GroupBox2.Size = New System.Drawing.Size(373, 191)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         '
@@ -69,14 +78,15 @@ Partial Class frmSessionTrace
         Me.dgSessionTrace.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgSessionTrace.Location = New System.Drawing.Point(8, 16)
         Me.dgSessionTrace.Name = "dgSessionTrace"
-        Me.dgSessionTrace.Size = New System.Drawing.Size(337, 105)
+        Me.dgSessionTrace.ReadOnly = True
+        Me.dgSessionTrace.Size = New System.Drawing.Size(355, 169)
         Me.dgSessionTrace.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 82)
+        Me.Label2.Location = New System.Drawing.Point(12, 71)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(68, 20)
         Me.Label2.TabIndex = 2
@@ -84,25 +94,109 @@ Partial Class frmSessionTrace
         '
         'txtIdSesi
         '
-        Me.txtIdSesi.Location = New System.Drawing.Point(86, 84)
+        Me.txtIdSesi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtIdSesi.Location = New System.Drawing.Point(86, 71)
+        Me.txtIdSesi.Multiline = True
         Me.txtIdSesi.Name = "txtIdSesi"
-        Me.txtIdSesi.Size = New System.Drawing.Size(174, 20)
+        Me.txtIdSesi.Size = New System.Drawing.Size(119, 33)
         Me.txtIdSesi.TabIndex = 3
         '
         'cmdFindSession
         '
-        Me.cmdFindSession.Location = New System.Drawing.Point(270, 86)
+        Me.cmdFindSession.Location = New System.Drawing.Point(211, 71)
         Me.cmdFindSession.Name = "cmdFindSession"
-        Me.cmdFindSession.Size = New System.Drawing.Size(92, 23)
+        Me.cmdFindSession.Size = New System.Drawing.Size(170, 35)
         Me.cmdFindSession.TabIndex = 4
         Me.cmdFindSession.Text = "Cari Sesi"
         Me.cmdFindSession.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.cmdcopyclipboard)
+        Me.GroupBox3.Controls.Add(Me.txtNamaProgram)
+        Me.GroupBox3.Controls.Add(Me.Label5)
+        Me.GroupBox3.Controls.Add(Me.txtQuery)
+        Me.GroupBox3.Controls.Add(Me.Label4)
+        Me.GroupBox3.Controls.Add(Me.Label3)
+        Me.GroupBox3.Controls.Add(Me.txtStatus)
+        Me.GroupBox3.Location = New System.Drawing.Point(387, 1)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(276, 298)
+        Me.GroupBox3.TabIndex = 5
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Session Detail"
+        '
+        'txtNamaProgram
+        '
+        Me.txtNamaProgram.Enabled = False
+        Me.txtNamaProgram.Location = New System.Drawing.Point(115, 52)
+        Me.txtNamaProgram.Multiline = True
+        Me.txtNamaProgram.Name = "txtNamaProgram"
+        Me.txtNamaProgram.Size = New System.Drawing.Size(154, 23)
+        Me.txtNamaProgram.TabIndex = 5
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(4, 53)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(112, 16)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "Nama Program"
+        '
+        'txtQuery
+        '
+        Me.txtQuery.Location = New System.Drawing.Point(6, 99)
+        Me.txtQuery.Multiline = True
+        Me.txtQuery.Name = "txtQuery"
+        Me.txtQuery.Size = New System.Drawing.Size(263, 165)
+        Me.txtQuery.TabIndex = 3
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(2, 76)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(56, 20)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "Query"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(2, 27)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(62, 20)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Status"
+        '
+        'txtStatus
+        '
+        Me.txtStatus.Enabled = False
+        Me.txtStatus.Location = New System.Drawing.Point(115, 27)
+        Me.txtStatus.Multiline = True
+        Me.txtStatus.Name = "txtStatus"
+        Me.txtStatus.Size = New System.Drawing.Size(154, 23)
+        Me.txtStatus.TabIndex = 0
+        '
+        'cmdcopyclipboard
+        '
+        Me.cmdcopyclipboard.Location = New System.Drawing.Point(6, 270)
+        Me.cmdcopyclipboard.Name = "cmdcopyclipboard"
+        Me.cmdcopyclipboard.Size = New System.Drawing.Size(124, 20)
+        Me.cmdcopyclipboard.TabIndex = 6
+        Me.cmdcopyclipboard.Text = "Copy To Clipboard"
+        Me.cmdcopyclipboard.UseVisualStyleBackColor = True
         '
         'frmSessionTrace
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(370, 262)
+        Me.ClientSize = New System.Drawing.Size(668, 312)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.cmdFindSession)
         Me.Controls.Add(Me.txtIdSesi)
         Me.Controls.Add(Me.Label2)
@@ -115,6 +209,8 @@ Partial Class frmSessionTrace
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.dgSessionTrace, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -126,4 +222,12 @@ Partial Class frmSessionTrace
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtIdSesi As System.Windows.Forms.TextBox
     Friend WithEvents cmdFindSession As System.Windows.Forms.Button
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents txtStatus As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtQuery As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents txtNamaProgram As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents cmdcopyclipboard As System.Windows.Forms.Button
 End Class

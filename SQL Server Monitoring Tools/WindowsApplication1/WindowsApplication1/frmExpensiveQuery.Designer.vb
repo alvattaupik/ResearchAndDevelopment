@@ -27,9 +27,9 @@ Partial Class frmExpensiveQuery
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgTop50 = New System.Windows.Forms.DataGridView()
         Me.gbDetailQuery = New System.Windows.Forms.GroupBox()
-        Me.txtDetailQuery = New System.Windows.Forms.TextBox()
-        Me.cmdcopyclipboard = New System.Windows.Forms.Button()
         Me.cmdClose = New System.Windows.Forms.Button()
+        Me.cmdcopyclipboard = New System.Windows.Forms.Button()
+        Me.txtDetailQuery = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgTop50, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,13 +87,14 @@ Partial Class frmExpensiveQuery
         Me.gbDetailQuery.Text = "QueryDetails"
         Me.gbDetailQuery.Visible = False
         '
-        'txtDetailQuery
+        'cmdClose
         '
-        Me.txtDetailQuery.Location = New System.Drawing.Point(8, 20)
-        Me.txtDetailQuery.Multiline = True
-        Me.txtDetailQuery.Name = "txtDetailQuery"
-        Me.txtDetailQuery.Size = New System.Drawing.Size(458, 280)
-        Me.txtDetailQuery.TabIndex = 0
+        Me.cmdClose.Location = New System.Drawing.Point(347, 306)
+        Me.cmdClose.Name = "cmdClose"
+        Me.cmdClose.Size = New System.Drawing.Size(118, 19)
+        Me.cmdClose.TabIndex = 2
+        Me.cmdClose.Text = "Close"
+        Me.cmdClose.UseVisualStyleBackColor = True
         '
         'cmdcopyclipboard
         '
@@ -104,14 +105,13 @@ Partial Class frmExpensiveQuery
         Me.cmdcopyclipboard.Text = "Copy To Clipboard"
         Me.cmdcopyclipboard.UseVisualStyleBackColor = True
         '
-        'cmdClose
+        'txtDetailQuery
         '
-        Me.cmdClose.Location = New System.Drawing.Point(347, 306)
-        Me.cmdClose.Name = "cmdClose"
-        Me.cmdClose.Size = New System.Drawing.Size(118, 19)
-        Me.cmdClose.TabIndex = 2
-        Me.cmdClose.Text = "Close"
-        Me.cmdClose.UseVisualStyleBackColor = True
+        Me.txtDetailQuery.Location = New System.Drawing.Point(8, 20)
+        Me.txtDetailQuery.Multiline = True
+        Me.txtDetailQuery.Name = "txtDetailQuery"
+        Me.txtDetailQuery.Size = New System.Drawing.Size(458, 280)
+        Me.txtDetailQuery.TabIndex = 0
         '
         'frmExpensiveQuery
         '

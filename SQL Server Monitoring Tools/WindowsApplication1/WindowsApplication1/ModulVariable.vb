@@ -22,12 +22,14 @@ Module ModulVariable
     Public strKoneksi3 As String
     Public strKoneksi4 As String
     Public strKoneksi5 As String
+    Public strKoneksi6 As String
 
     Public Koneksi As SqlConnection
     Public Koneksi2 As SqlConnection
     Public Koneksi3 As SqlConnection
     Public Koneksi4 As SqlConnection
     Public Koneksi5 As SqlConnection
+    Public Koneksi6 As SqlConnection
 
 
 

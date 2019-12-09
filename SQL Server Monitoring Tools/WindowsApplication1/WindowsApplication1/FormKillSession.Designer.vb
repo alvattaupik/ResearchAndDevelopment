@@ -23,7 +23,6 @@ Partial Class FormKillSession
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.cmdKIll = New System.Windows.Forms.Button()
         Me.txtIdSession = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -37,7 +36,6 @@ Partial Class FormKillSession
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.cmdKIll)
         Me.GroupBox1.Controls.Add(Me.txtIdSession)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -48,22 +46,12 @@ Partial Class FormKillSession
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Input Session to KILL"
         '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(295, 19)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(127, 40)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "See Background Process"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'cmdKIll
         '
         Me.cmdKIll.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdKIll.Location = New System.Drawing.Point(212, 19)
+        Me.cmdKIll.Location = New System.Drawing.Point(273, 19)
         Me.cmdKIll.Name = "cmdKIll"
-        Me.cmdKIll.Size = New System.Drawing.Size(77, 40)
+        Me.cmdKIll.Size = New System.Drawing.Size(146, 40)
         Me.cmdKIll.TabIndex = 2
         Me.cmdKIll.Text = "KILL"
         Me.cmdKIll.UseVisualStyleBackColor = True
@@ -74,7 +62,7 @@ Partial Class FormKillSession
         Me.txtIdSession.Location = New System.Drawing.Point(128, 19)
         Me.txtIdSession.Multiline = True
         Me.txtIdSession.Name = "txtIdSession"
-        Me.txtIdSession.Size = New System.Drawing.Size(78, 40)
+        Me.txtIdSession.Size = New System.Drawing.Size(139, 40)
         Me.txtIdSession.TabIndex = 1
         '
         'Label1
@@ -99,6 +87,8 @@ Partial Class FormKillSession
         '
         'dgBackgroundProcess
         '
+        Me.dgBackgroundProcess.AllowUserToAddRows = False
+        Me.dgBackgroundProcess.AllowUserToDeleteRows = False
         Me.dgBackgroundProcess.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgBackgroundProcess.Location = New System.Drawing.Point(9, 24)
         Me.dgBackgroundProcess.Name = "dgBackgroundProcess"
@@ -138,6 +128,5 @@ Partial Class FormKillSession
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents dgBackgroundProcess As System.Windows.Forms.DataGridView
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
 End Class

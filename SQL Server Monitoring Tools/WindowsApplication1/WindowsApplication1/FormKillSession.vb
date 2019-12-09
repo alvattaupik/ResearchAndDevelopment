@@ -30,7 +30,29 @@ Public Class FormKillSession
             Exit Sub
         Else
 
+            Call KoneksiDatabase6()
+
+            Dim sqlCon = New SqlConnection(strKoneksi6)
+
+            Using (sqlCon)
+
+                Dim sqlComm As New SqlCommand
+
+                sqlComm.Connection = sqlCon
+                sqlComm.CommandText = "[tmspEndSession]"
+                sqlComm.CommandType = CommandType.StoredProcedure
+                sqlComm.Parameters.AddWithValue("KodeSession", Trim(txtIdSession.Text))
+                sqlCon.Open()
+                sqlComm.ExecuteNonQuery()
+
+            End Using
+            MsgBox("Kill Session Berhasil ! Silahkan Lihat Process Rollback", vbInformation, "Informasi")
+            LoadBackgroundProcess()
+
         End If
+
+        LoadBackgroundProcess()
+
     End Sub
 
     Sub loadStatusRollback()
@@ -50,6 +72,25 @@ Public Class FormKillSession
         Koneksi2.Close()
 
     End Sub
+
+
+    Sub LoadBackgroundProcess()
+
+        KoneksiDatabase6()
+        Dim cmd As New SqlCommand("SELECT spid,sys.sysprocesses.status,hostname,cpu,memusage,physical_io," & _
+        " SYS.DM_EXEC_REQuESTS.percent_complete,SYS.DM_EXEC_REQuESTS.estimated_completion_time " & _
+        " FROM sys.sysprocesses LEFT OUTER JOIN	 SYS.DM_EXEC_REQuESTS ON SYS.DM_EXEC_REQuESTS.session_id=sys.sysprocesses.spid " & _
+        " WHERE sys.sysprocesses.spid= '" & Trim(txtIdSession.Text) & "'", Koneksi6)
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable
+
+        adapter.Fill(table)
+
+        dgBackgroundProcess.DataSource = table
+        Koneksi6.Close()
+
+    End Sub
+
 
 
 End Class

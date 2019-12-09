@@ -283,6 +283,7 @@ Public Class Form1
                 Exit Sub
             End If
 
+
             Using (Koneksi)
 
                 Dim sqlComm As New SqlCommand

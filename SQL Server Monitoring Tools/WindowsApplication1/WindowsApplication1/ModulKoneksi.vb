@@ -111,6 +111,25 @@ Module ModulKoneksi
 
 
 
+    Public Sub KoneksiDatabase6()
+
+        strKoneksi6 = "data source=" & strServerName & ";user id=" & strLoginName & ";password=" & strPasswordLogin & ";initial catalog=" & strNamaDatabase2 & ";Application Name=SQLServer Monitoring Tools 1.1;MultipleActiveResultSets=True  "
+        strKoneksi6 = String.Format(strKoneksi6, strServerName, strLoginName, strPasswordLogin, strNamaDatabase2)
+        Koneksi6 = New SqlConnection(strKoneksi6)
+
+        Try
+            If Koneksi6.State = ConnectionState.Closed Then
+                Koneksi6.Open()
+            End If
+        Catch ex As Exception
+            MsgBox(Err.Description, MsgBoxStyle.Critical, "Error")
+        End Try
+
+
+    End Sub
+
+
+
 
 
 End Module

@@ -43,8 +43,8 @@ Public Class frmMonitoring
         strNamaDatabase2 = cmbListDB.Text
 
         KoneksiDatabase2()
-        Dim cmd As New SqlCommand("SELECT  host_name AS NamaHost,session_id AS Sesi ,[Blk by] AS BlockedBy ,status AS Status, " & _
-        " cpu_time,[Wait M] AS DurasiTunggu,program_name AS NamaProgram,command_text AS Query," & _
+        Dim cmd As New SqlCommand("SELECT  host_name AS NamaHost,session_id AS Sesi ,program_name AS NamaProgram,[Blk by] AS BlockedBy ,status AS Status, " & _
+        " cpu_time,[Wait M] AS DurasiTunggu,command_text AS Query," & _
         " wait_type AS Tipe ,wait_resource ," & _
         " logical_reads,reads,writes From dbo.V_MonitoringTraffic ORDER BY cpu_time DESC ", Koneksi2)
         Dim adapter As New SqlDataAdapter(cmd)
