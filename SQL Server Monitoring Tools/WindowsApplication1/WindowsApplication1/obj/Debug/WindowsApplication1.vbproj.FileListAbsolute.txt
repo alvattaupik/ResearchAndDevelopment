@@ -12,18 +12,22 @@ D:\IT\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\De
 D:\IT\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmConnectionMonitor.resources
 D:\IT\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmSessionTrace.resources
 D:\IT\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmExpensiveQuery.resources
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FormKillSession.resources
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmConnectionMonitor.resources
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmExpensiveQuery.resources
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmMonitoring.resources
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmSessionTrace.resources
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FrmSetting.resources
-D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
 D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\bin\Debug\SQL Server Monitoring Tools 1.0.exe.config
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\bin\Debug\SQL Server Monitoring Tools 1.0.exe.manifest
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\bin\Debug\SQL Server Monitoring Tools 1.0.application
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\bin\Debug\SQL Server Monitoring Tools 1.0.exe
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\bin\Debug\SQL Server Monitoring Tools 1.0.pdb
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\bin\Debug\SQL Server Monitoring Tools 1.0.xml
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\SQLServerMonitoringTools.FormKillSession.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\SQLServerMonitoringTools.frmConnectionMonitor.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\SQLServerMonitoringTools.frmExpensiveQuery.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\SQLServerMonitoringTools.frmMonitoring.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\SQLServerMonitoringTools.frmSessionTrace.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\SQLServerMonitoringTools.FrmSetting.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\SQLServerMonitoringTools.Resources.resources
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\SQL Server Monitoring Tools 1.0.exe.manifest
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\SQL Server Monitoring Tools 1.0.application
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\SQL Server Monitoring Tools 1.0.exe
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\SQL Server Monitoring Tools 1.0.xml
+D:\Research And Development\ResearchAndDevelopment\SQL Server Monitoring Tools\WindowsApplication1\WindowsApplication1\obj\Debug\SQL Server Monitoring Tools 1.0.pdb

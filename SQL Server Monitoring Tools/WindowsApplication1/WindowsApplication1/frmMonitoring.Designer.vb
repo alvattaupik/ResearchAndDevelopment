@@ -26,6 +26,7 @@ Partial Class frmMonitoring
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.cmdRefresh = New System.Windows.Forms.Button()
         Me.cmdStopMonitoring = New System.Windows.Forms.Button()
@@ -41,12 +42,11 @@ Partial Class frmMonitoring
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.cmdConnectionMonitor = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgDaftarTugas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -56,7 +56,7 @@ Partial Class frmMonitoring
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(626, 128)
+        Me.GroupBox1.Size = New System.Drawing.Size(813, 128)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -80,6 +80,16 @@ Partial Class frmMonitoring
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "SQL SERVER"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.SQLServerMonitoringTools.My.Resources.Resources.microsoftsqlserver
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(112, 111)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.cmdRefresh)
@@ -91,14 +101,14 @@ Partial Class frmMonitoring
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(8, 234)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(612, 354)
+        Me.GroupBox2.Size = New System.Drawing.Size(805, 354)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Task Monitor"
         '
         'cmdRefresh
         '
-        Me.cmdRefresh.Location = New System.Drawing.Point(291, 64)
+        Me.cmdRefresh.Location = New System.Drawing.Point(441, 60)
         Me.cmdRefresh.Name = "cmdRefresh"
         Me.cmdRefresh.Size = New System.Drawing.Size(143, 28)
         Me.cmdRefresh.TabIndex = 5
@@ -107,7 +117,7 @@ Partial Class frmMonitoring
         '
         'cmdStopMonitoring
         '
-        Me.cmdStopMonitoring.Location = New System.Drawing.Point(440, 30)
+        Me.cmdStopMonitoring.Location = New System.Drawing.Point(622, 26)
         Me.cmdStopMonitoring.Name = "cmdStopMonitoring"
         Me.cmdStopMonitoring.Size = New System.Drawing.Size(166, 27)
         Me.cmdStopMonitoring.TabIndex = 4
@@ -116,7 +126,7 @@ Partial Class frmMonitoring
         '
         'cmdStartMonitoring
         '
-        Me.cmdStartMonitoring.Location = New System.Drawing.Point(291, 30)
+        Me.cmdStartMonitoring.Location = New System.Drawing.Point(441, 26)
         Me.cmdStartMonitoring.Name = "cmdStartMonitoring"
         Me.cmdStartMonitoring.Size = New System.Drawing.Size(143, 28)
         Me.cmdStartMonitoring.TabIndex = 3
@@ -137,7 +147,7 @@ Partial Class frmMonitoring
         Me.cmbListDB.FormattingEnabled = True
         Me.cmbListDB.Location = New System.Drawing.Point(86, 32)
         Me.cmbListDB.Name = "cmbListDB"
-        Me.cmbListDB.Size = New System.Drawing.Size(199, 26)
+        Me.cmbListDB.Size = New System.Drawing.Size(337, 26)
         Me.cmbListDB.TabIndex = 1
         '
         'dgDaftarTugas
@@ -147,14 +157,14 @@ Partial Class frmMonitoring
         Me.dgDaftarTugas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgDaftarTugas.Location = New System.Drawing.Point(4, 98)
         Me.dgDaftarTugas.Name = "dgDaftarTugas"
-        Me.dgDaftarTugas.Size = New System.Drawing.Size(600, 250)
+        Me.dgDaftarTugas.Size = New System.Drawing.Size(795, 250)
         Me.dgDaftarTugas.TabIndex = 0
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 603)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 607)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(630, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(825, 22)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -172,7 +182,7 @@ Partial Class frmMonitoring
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(8, 133)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(616, 95)
+        Me.GroupBox3.Size = New System.Drawing.Size(805, 95)
         Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Feature"
@@ -180,7 +190,7 @@ Partial Class frmMonitoring
         'cmdKillSession
         '
         Me.cmdKillSession.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdKillSession.Location = New System.Drawing.Point(520, 30)
+        Me.cmdKillSession.Location = New System.Drawing.Point(713, 30)
         Me.cmdKillSession.Name = "cmdKillSession"
         Me.cmdKillSession.Size = New System.Drawing.Size(86, 51)
         Me.cmdKillSession.TabIndex = 4
@@ -227,21 +237,11 @@ Partial Class frmMonitoring
         Me.cmdConnectionMonitor.Text = "Connection Monitor"
         Me.cmdConnectionMonitor.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.microsoftsqlserver
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(112, 111)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'frmMonitoring
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(630, 625)
+        Me.ClientSize = New System.Drawing.Size(825, 629)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.GroupBox2)
@@ -251,11 +251,11 @@ Partial Class frmMonitoring
         Me.Text = "Form Monitoring"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.dgDaftarTugas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

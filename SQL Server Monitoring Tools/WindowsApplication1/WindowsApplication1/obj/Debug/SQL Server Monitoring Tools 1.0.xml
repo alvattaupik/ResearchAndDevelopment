@@ -2,40 +2,40 @@
 <doc>
 <assembly>
 <name>
-WindowsApplication1
+SQLServerMonitoringTools1.0
 </name>
 </assembly>
 <members>
-<member name="P:WindowsApplication1.My.Resources.Resources.ResourceManager">
+<member name="P:SQLServerMonitoringTools.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
-</member><member name="P:WindowsApplication1.My.Resources.Resources.Culture">
+</member><member name="P:SQLServerMonitoringTools.My.Resources.Resources.Culture">
 	<summary>
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
-</member><member name="P:WindowsApplication1.My.Resources.Resources.images">
+</member><member name="P:SQLServerMonitoringTools.My.Resources.Resources.images">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:WindowsApplication1.My.Resources.Resources.images__1_">
+</member><member name="P:SQLServerMonitoringTools.My.Resources.Resources.images__1_">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:WindowsApplication1.My.Resources.Resources.images1">
+</member><member name="P:SQLServerMonitoringTools.My.Resources.Resources.images1">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:WindowsApplication1.My.Resources.Resources.microsoft_sql_server_database_server_computer_servers_microsoft">
+</member><member name="P:SQLServerMonitoringTools.My.Resources.Resources.microsoft_sql_server_database_server_computer_servers_microsoft">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:WindowsApplication1.My.Resources.Resources.microsoftsqlserver">
+</member><member name="P:SQLServerMonitoringTools.My.Resources.Resources.microsoftsqlserver">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="T:WindowsApplication1.My.Resources.Resources">
+</member><member name="T:SQLServerMonitoringTools.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
