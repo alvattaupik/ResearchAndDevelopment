@@ -1,0 +1,24 @@
+D:\Program Nandang\.Net Exercise\PrintM100\PrintM100\bin\Debug\PrintM100.exe
+D:\Program Nandang\.Net Exercise\PrintM100\PrintM100\bin\Debug\PrintM100.pdb
+D:\Program Nandang\.Net Exercise\PrintM100\PrintM100\bin\Debug\PrintM100.xml
+D:\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\ResolveAssemblyReference.cache
+D:\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.Form1.resources
+D:\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.Laporan.resources
+D:\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.Resources.resources
+D:\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.TabPrint.resources
+D:\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.vbproj.GenerateResource.Cache
+D:\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.exe
+D:\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.xml
+D:\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.pdb
+D:\Backup F\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.xml
+D:\Backup F\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.pdb
+D:\Backup F\Program Nandang\.Net Exercise\PrintM100\PrintM100\bin\Debug\PrintM100.exe
+D:\Backup F\Program Nandang\.Net Exercise\PrintM100\PrintM100\bin\Debug\PrintM100.pdb
+D:\Backup F\Program Nandang\.Net Exercise\PrintM100\PrintM100\bin\Debug\PrintM100.xml
+D:\Backup F\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\ResolveAssemblyReference.cache
+D:\Backup F\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.Form1.resources
+D:\Backup F\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.Laporan.resources
+D:\Backup F\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.Resources.resources
+D:\Backup F\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.TabPrint.resources
+D:\Backup F\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.vbproj.GenerateResource.Cache
+D:\Backup F\Program Nandang\.Net Exercise\PrintM100\PrintM100\obj\Debug\PrintM100.exe

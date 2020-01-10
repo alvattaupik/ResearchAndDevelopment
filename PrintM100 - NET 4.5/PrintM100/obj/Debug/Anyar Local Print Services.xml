@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AnyarLocalPrintServices
+</name>
+</assembly>
+<members>
+<member name="P:AnyarLocalPrintServices.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AnyarLocalPrintServices.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:AnyarLocalPrintServices.My.Resources.Resources.blue_background_with_abstract_dynamic_shapes_1393_161">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AnyarLocalPrintServices.My.Resources.Resources.IT_DEPARTMENT">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AnyarLocalPrintServices.My.Resources.Resources.Logo_Android">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AnyarLocalPrintServices.My.Resources.Resources.My_profile_orange">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AnyarLocalPrintServices.My.Resources.Resources.printing_files_from_a_folder_icon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:AnyarLocalPrintServices.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
