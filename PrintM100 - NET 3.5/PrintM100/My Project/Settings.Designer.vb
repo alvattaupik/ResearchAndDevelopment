@@ -149,6 +149,78 @@ Namespace My
                 Me("OutgoingPaymentsPath") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property IncomingPaymentsPath() As String
+            Get
+                Return CType(Me("IncomingPaymentsPath"),String)
+            End Get
+            Set
+                Me("IncomingPaymentsPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property GoodsReceiptPath() As String
+            Get
+                Return CType(Me("GoodsReceiptPath"),String)
+            End Get
+            Set
+                Me("GoodsReceiptPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property PickListPath() As String
+            Get
+                Return CType(Me("PickListPath"),String)
+            End Get
+            Set
+                Me("PickListPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property GoodsReturnPath() As String
+            Get
+                Return CType(Me("GoodsReturnPath"),String)
+            End Get
+            Set
+                Me("GoodsReturnPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property ReturnPath() As String
+            Get
+                Return CType(Me("ReturnPath"),String)
+            End Get
+            Set
+                Me("ReturnPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SalesOrderPath() As String
+            Get
+                Return CType(Me("SalesOrderPath"),String)
+            End Get
+            Set
+                Me("SalesOrderPath") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

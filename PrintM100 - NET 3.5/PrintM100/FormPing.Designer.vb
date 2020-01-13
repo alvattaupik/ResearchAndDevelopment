@@ -110,9 +110,9 @@ Partial Class FormPing
         'txtIPSAP
         '
         Me.txtIPSAP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIPSAP.Location = New System.Drawing.Point(175, 16)
+        Me.txtIPSAP.Location = New System.Drawing.Point(243, 16)
         Me.txtIPSAP.Name = "txtIPSAP"
-        Me.txtIPSAP.Size = New System.Drawing.Size(225, 22)
+        Me.txtIPSAP.Size = New System.Drawing.Size(157, 22)
         Me.txtIPSAP.TabIndex = 1
         '
         'Label2
@@ -121,9 +121,9 @@ Partial Class FormPing
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(25, 16)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(144, 16)
+        Me.Label2.Size = New System.Drawing.Size(212, 16)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "PING SAP SERVER"
+        Me.Label2.Text = "PING SAP REMOTE SERVER"
         '
         'FormPing
         '

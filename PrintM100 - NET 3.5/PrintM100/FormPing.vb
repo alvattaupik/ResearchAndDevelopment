@@ -1,7 +1,7 @@
 ﻿Public Class FormPing
 
     Private Sub FormPing_Load(sender As Object, e As EventArgs) Handles Me.Load
-        txtIPSAP.Text = "10.1.0.53"
+        txtIPSAP.Text = "10.1.0.4"
     End Sub
 
     Private Sub cmdCustomPing_Click(sender As Object, e As EventArgs) Handles cmdCustomPing.Click

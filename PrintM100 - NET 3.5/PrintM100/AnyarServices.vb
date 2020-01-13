@@ -226,14 +226,14 @@ Public Class AnyarServices
     End Sub
 
     Private Sub cmdPreviewInventoryRequest_Click(sender As Object, e As EventArgs) Handles cmdPreviewInventoryRequest.Click
-        MsgBox("Feature Ini akan Tiba Segera", vbInformation, "Information")
-        Exit Sub
+        'MsgBox("Feature Ini akan Tiba Segera", vbInformation, "Information")
+        'Exit Sub
 
 
         Dim strPathReport As String
         Dim strStatusPath As String
 
-        strStatusPath = My.Settings.GoodsIssuePath
+        strStatusPath = My.Settings.InventoryRequestPath
 
         If strStatusPath = "" Then
             MsgBox("Lokasi Default Report Belum Di Isi,Silahkan Buka Menu Setting", vbInformation, "Informasi")
@@ -246,7 +246,7 @@ Public Class AnyarServices
             Exit Sub
         Else
 
-            strPathReport = My.Settings.InventoryTransferPath
+            strPathReport = My.Settings.InventoryRequestPath
 
             KoneksiDatabase()
             Dim strSQL As String
@@ -367,6 +367,8 @@ Public Class AnyarServices
             Me.Dispose()
             MsgBox("Terimakasih " & strNamaUser, vbInformation, "Hatur Nuhun!")
             LoginForm.Show()
+            LoginForm.txtPassword.Text = ""
+            LoginForm.txtUseName.Text = ""
         Else
             Exit Sub
         End If
@@ -442,5 +444,357 @@ Public Class AnyarServices
 
         End If
 
+    End Sub
+
+
+    Private Sub cmdPreviewIncomingPayment_Click(sender As Object, e As EventArgs) Handles cmdPreviewIncomingPayment.Click
+        Dim strPathReport As String
+        Dim strStatusPath As String
+
+        strStatusPath = My.Settings.IncomingPaymentsPath
+
+        If strStatusPath = "" Then
+            MsgBox("Lokasi Default Report Belum Di Isi,Silahkan Buka Menu Setting", vbInformation, "Informasi")
+            Exit Sub
+        End If
+
+
+        If txtNoIncomingPayment.Text = "" Then
+            MsgBox("No Incoming Payments Harus Di Isi")
+            Exit Sub
+        Else
+
+            strPathReport = My.Settings.IncomingPaymentsPath
+
+            KoneksiDatabase()
+            Dim strSQL As String
+
+            strSQL = "SELECT TOP 1 CAST(DocEntry AS VARCHAR(100)) AS DocEntry FROM dbo.ORCT WITH (NOLOCK) WHERE DocNum='" & Trim(txtNoIncomingPayment.Text) & "'"
+            cmd = New SqlCommand(strSQL, KoneksiSQl)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
+
+                strDocEntry = dr.GetString(0)
+
+            Else
+
+                MsgBox("Docentry Tidak Dapat Ditemukan", vbInformation, "Hubungi Administrator")
+                Exit Sub
+            End If
+
+
+
+            paramField.Name = "Dockey@"
+            paramDiscreteValue.Value = Format(Trim(strDocEntry))
+            paramField.CurrentValues.Add(paramDiscreteValue)
+            paramFields.Add(paramField)
+
+            paramField2.Name = "usercode@"
+            paramDiscreteValue2.Value = strUsernameSAP
+            paramField2.CurrentValues.Add(paramDiscreteValue2)
+            paramFields.Add(paramField2)
+            CRVIncomingPayment.ParameterFieldInfo = paramFields
+
+            cryRpt.Load(strPathReport)
+            Module_Konfigurasi_laporan()
+            CRVIncomingPayment.ReportSource = cryRpt
+            CRVIncomingPayment.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+            CRVIncomingPayment.Refresh()
+
+        End If
+    End Sub
+
+    Private Sub cmdPreviewGoodsReceipt_Click_1(sender As Object, e As EventArgs) Handles cmdPreviewGoodsReceipt.Click
+        Dim strPathReport As String
+        Dim strStatusPath As String
+
+        strStatusPath = My.Settings.GoodsReceiptPath
+
+        If strStatusPath = "" Then
+            MsgBox("Lokasi Default Report Belum Di Isi,Silahkan Buka Menu Setting", vbInformation, "Informasi")
+            Exit Sub
+        End If
+
+
+        If txtNoGoodsReceipt.Text = "" Then
+            MsgBox("No Goods Receipt Harus Di Isi")
+            Exit Sub
+        Else
+
+            strPathReport = My.Settings.GoodsReceiptPath
+
+            KoneksiDatabase()
+            Dim strSQL As String
+
+            strSQL = "SELECT TOP 1 CAST(DocEntry AS VARCHAR(100)) AS DocEntry FROM dbo.OIGN WITH (NOLOCK) WHERE DocNum='" & Trim(txtNoGoodsReceipt.Text) & "'"
+            cmd = New SqlCommand(strSQL, KoneksiSQl)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
+
+                strDocEntry = dr.GetString(0)
+
+            Else
+
+                MsgBox("Docentry Tidak Dapat Ditemukan", vbInformation, "Hubungi Administrator")
+                Exit Sub
+            End If
+
+
+
+            paramField.Name = "Dockey@"
+            paramDiscreteValue.Value = Format(Trim(strDocEntry))
+            paramField.CurrentValues.Add(paramDiscreteValue)
+            paramFields.Add(paramField)
+
+            paramField2.Name = "usercode@"
+            paramDiscreteValue2.Value = strUsernameSAP
+            paramField2.CurrentValues.Add(paramDiscreteValue2)
+            paramFields.Add(paramField2)
+            CRVGoodsReceipt.ParameterFieldInfo = paramFields
+
+            cryRpt.Load(strPathReport)
+            Module_Konfigurasi_laporan()
+            CRVGoodsReceipt.ReportSource = cryRpt
+            CRVGoodsReceipt.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+            CRVGoodsReceipt.Refresh()
+
+        End If
+    End Sub
+
+    Private Sub cmdPreviewNoPickList_Click(sender As Object, e As EventArgs) Handles cmdPreviewNoPickList.Click
+
+        Dim strPathReport As String
+        Dim strStatusPath As String
+
+        strStatusPath = My.Settings.PickListPath
+
+        If strStatusPath = "" Then
+            MsgBox("Lokasi Default Report Belum Di Isi,Silahkan Buka Menu Setting", vbInformation, "Informasi")
+            Exit Sub
+        End If
+
+
+        If txtNoPickList.Text = "" Then
+            MsgBox("No Pick List Harus Di Isi")
+            Exit Sub
+        Else
+
+            strPathReport = My.Settings.PickListPath
+
+            'KoneksiDatabase()
+            'Dim strSQL As String
+
+            'strSQL = "SELECT TOP 1 CAST(DocEntry AS VARCHAR(100)) AS DocEntry FROM dbo.OIGN WITH (NOLOCK) WHERE DocNum='" & Trim(txtNoGoodsReceipt.Text) & "'"
+            'cmd = New SqlCommand(strSQL, KoneksiSQl)
+            'dr = cmd.ExecuteReader
+            'dr.Read()
+            'If dr.HasRows = True Then
+
+            '    strDocEntry = dr.GetString(0)
+
+            'Else
+
+            '    MsgBox("Docentry Tidak Dapat Ditemukan", vbInformation, "Hubungi Administrator")
+            '    Exit Sub
+            'End If
+
+
+
+            paramField.Name = "Dockey@"
+            paramDiscreteValue.Value = Format(Trim(txtNoPickList.Text))
+            paramField.CurrentValues.Add(paramDiscreteValue)
+            paramFields.Add(paramField)
+
+            paramField2.Name = "ExtParam@"
+            paramDiscreteValue2.Value = "0"
+            paramField2.CurrentValues.Add(paramDiscreteValue2)
+            paramFields.Add(paramField2)
+            CRVPickList.ParameterFieldInfo = paramFields
+
+            cryRpt.Load(strPathReport)
+            Module_Konfigurasi_laporan()
+            CRVPickList.ReportSource = cryRpt
+            CRVPickList.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+            CRVPickList.Refresh()
+
+        End If
+
+
+    End Sub
+
+    Private Sub cmdPreviewGoodsReturn_Click(sender As Object, e As EventArgs) Handles cmdPreviewGoodsReturn.Click
+        Dim strPathReport As String
+        Dim strStatusPath As String
+
+        strStatusPath = My.Settings.GoodsReturnPath
+
+        If strStatusPath = "" Then
+            MsgBox("Lokasi Default Report Belum Di Isi,Silahkan Buka Menu Setting", vbInformation, "Informasi")
+            Exit Sub
+        End If
+
+
+        If txtNoGoodsReturn.Text = "" Then
+            MsgBox("No Goods Return Harus Di Isi")
+            Exit Sub
+        Else
+
+            strPathReport = My.Settings.GoodsReturnPath
+
+            KoneksiDatabase()
+            Dim strSQL As String
+
+            strSQL = "SELECT TOP 1 CAST(DocEntry AS VARCHAR(100)) AS DocEntry FROM dbo.ORPD WITH (NOLOCK) WHERE DocNum='" & Trim(txtNoGoodsReturn.Text) & "'"
+            cmd = New SqlCommand(strSQL, KoneksiSQl)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
+
+                strDocEntry = dr.GetString(0)
+
+            Else
+
+                MsgBox("Docentry Tidak Dapat Ditemukan", vbInformation, "Hubungi Administrator")
+                Exit Sub
+            End If
+
+
+
+            paramField.Name = "Dockey@"
+            paramDiscreteValue.Value = Format(Trim(strDocEntry))
+            paramField.CurrentValues.Add(paramDiscreteValue)
+            paramFields.Add(paramField)
+
+            paramField2.Name = "usercode@"
+            paramDiscreteValue2.Value = strUsernameSAP
+            paramField2.CurrentValues.Add(paramDiscreteValue2)
+            paramFields.Add(paramField2)
+            CRvGoodsReturn.ParameterFieldInfo = paramFields
+
+            cryRpt.Load(strPathReport)
+            Module_Konfigurasi_laporan()
+            CRvGoodsReturn.ReportSource = cryRpt
+            CRvGoodsReturn.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+            CRvGoodsReturn.Refresh()
+
+        End If
+    End Sub
+
+    Private Sub cmdPreviewSO_Click(sender As Object, e As EventArgs) Handles cmdPreviewSO.Click
+        Dim strPathReport As String
+        Dim strStatusPath As String
+
+        strStatusPath = My.Settings.SalesOrderPath
+
+        If strStatusPath = "" Then
+            MsgBox("Lokasi Default Report Belum Di Isi,Silahkan Buka Menu Setting", vbInformation, "Informasi")
+            Exit Sub
+        End If
+
+
+        If txtNoSO.Text = "" Then
+            MsgBox("No Sales Order Harus Di Isi")
+            Exit Sub
+        Else
+
+            strPathReport = My.Settings.SalesOrderPath
+
+            KoneksiDatabase()
+            Dim strSQL As String
+
+            strSQL = "SELECT TOP 1 CAST(DocEntry AS VARCHAR(100)) AS DocEntry FROM dbo.ORDR WITH (NOLOCK) WHERE DocNum='" & Trim(txtNoSO.Text) & "'"
+            cmd = New SqlCommand(strSQL, KoneksiSQl)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
+
+                strDocEntry = dr.GetString(0)
+
+            Else
+
+                MsgBox("Docentry Tidak Dapat Ditemukan", vbInformation, "Hubungi Administrator")
+                Exit Sub
+            End If
+
+
+
+            paramField.Name = "Dockey@"
+            paramDiscreteValue.Value = Format(Trim(strDocEntry))
+            paramField.CurrentValues.Add(paramDiscreteValue)
+            paramFields.Add(paramField)
+
+            paramField2.Name = "usercode@"
+            paramDiscreteValue2.Value = strUsernameSAP
+            paramField2.CurrentValues.Add(paramDiscreteValue2)
+            paramFields.Add(paramField2)
+            CRvGoodsReturn.ParameterFieldInfo = paramFields
+
+            cryRpt.Load(strPathReport)
+            Module_Konfigurasi_laporan()
+            CRVSO.ReportSource = cryRpt
+            CRVSO.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+            CRVSO.Refresh()
+
+        End If
+    End Sub
+
+    Private Sub cmdPreviewReturn_Click(sender As Object, e As EventArgs) Handles cmdPreviewReturn.Click
+        Dim strPathReport As String
+        Dim strStatusPath As String
+
+        strStatusPath = My.Settings.ReturnPath
+
+        If strStatusPath = "" Then
+            MsgBox("Lokasi Default Report Belum Di Isi,Silahkan Buka Menu Setting", vbInformation, "Informasi")
+            Exit Sub
+        End If
+
+
+        If txtNoReturn.Text = "" Then
+            MsgBox("No Return Harus Di Isi")
+            Exit Sub
+        Else
+
+            strPathReport = My.Settings.ReturnPath
+
+            KoneksiDatabase()
+            Dim strSQL As String
+
+            strSQL = "SELECT TOP 1 CAST(DocEntry AS VARCHAR(100)) AS DocEntry FROM dbo.ORDN WITH (NOLOCK) WHERE DocNum='" & Trim(txtNoReturn.Text) & "'"
+            cmd = New SqlCommand(strSQL, KoneksiSQl)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
+
+                strDocEntry = dr.GetString(0)
+
+            Else
+
+                MsgBox("Docentry Tidak Dapat Ditemukan", vbInformation, "Hubungi Administrator")
+                Exit Sub
+            End If
+
+
+
+            paramField.Name = "Dockey@"
+            paramDiscreteValue.Value = Format(Trim(strDocEntry))
+            paramField.CurrentValues.Add(paramDiscreteValue)
+            paramFields.Add(paramField)
+
+            paramField2.Name = "usercode@"
+            paramDiscreteValue2.Value = strUsernameSAP
+            paramField2.CurrentValues.Add(paramDiscreteValue2)
+            paramFields.Add(paramField2)
+            CRVReturn.ParameterFieldInfo = paramFields
+
+            cryRpt.Load(strPathReport)
+            Module_Konfigurasi_laporan()
+            CRVReturn.ReportSource = cryRpt
+            CRVReturn.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+            CRVReturn.Refresh()
+
+        End If
     End Sub
 End Class
