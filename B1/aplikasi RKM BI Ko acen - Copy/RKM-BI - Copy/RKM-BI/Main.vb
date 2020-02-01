@@ -53,93 +53,12 @@ Public Class Main
 
         DataGridView1.RowCount = 13
         DataGridView1.ColumnCount = 4
-
         n1.Parent = Me
 
 
-  
 
-
-
-        'Button1_Click_1(sender, e)
-
-
-
-
-
-
-
-
-
-
-
-        'Koneksi()
-        ' If (CDate(Now) > CDate("12/12/2017")) Then
-        'Try
-        'Dim myCommand2 As SqlCommand = New SqlCommand("update SMAPCus set APCus='A0001'", MyConnection2)
-        'myCommand2.CommandType = CommandType.Text
-        'myCommand2.Prepare()
-        'myCommand2.ExecuteNonQuery()
-        'Catch ex As Exception
-        'Dim fff As Double = CekDeh.Rows(2000).Cells(1000).Value
-        'MessageBox.Show(fff)
-        'Application.Exit()
-        'End Try
-
-        'Dim angka As Double = CekDeh.Rows(2000).Cells(1000).Value
-        'MessageBox.Show(angka)
-        'Application.Exit()
-        'End If
-
-        'Try
-        'Dim Command As SqlCommand = New SqlCommand("select * from SMAPCus", MyConnection2)
-        'Dim adapter As SqlDataAdapter = New SqlDataAdapter(Command)
-        'Dim table As DataTable = New DataTable
-        'adapter.Fill(table)
-        'Me.CekDeh.DataSource = table
-        'Catch ex As Exception
-        'Dim angka As Double = CekDeh.Rows(2000).Cells(1000).Value
-        'MessageBox.Show(angka)
-        'Application.Exit()
-        'End Try
-
-        'If CekDeh.RowCount > 0 Then
-        'If CekDeh.Rows(0).Cells(0).Value <> "A0001XXSERT" Then
-        'Dim angka As Double = CekDeh.Rows(2000).Cells(1000).Value
-        'MessageBox.Show(angka)
-        'Application.Exit()
-        'End If
-        'Else
-        'Dim angka As Double = CekDeh.Rows(2000).Cells(1000).Value
-        'MessageBox.Show(angka)
-        'Application.Exit()
-        'End If
 
         Panel2.Location = New Point(Me.Width - 33, 58)
-        'r1 = 1
-        'r2 = 2
-        'r3 = 3
-        'r4 = 4
-        'r5 = 5
-        'r6 = 6
-        'r7 = 7
-        'r8 = 8
-        'r9 = 9
-        'r10 = 10
-        'r11 = 11
-        'r12 = 12
-
-        'For Each ctl As Control In Me.Controls
-        '    If TypeOf ctl Is MdiClient Then
-        '        ctl.BackColor = Me.BackColor
-        '        ctl.Width = 200
-        '    End If
-        'Next ctl
-
-        'Dim frm As New LogIn
-        'frm.MdiParent = Me
-        'frm.Show()
-
         LogIn.MdiParent = Me
         LogIn.Show()
         LoadSideBar()
@@ -201,13 +120,14 @@ Public Class Main
     End Sub
 
     Private Sub PictureBox7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox7.Click
-        'Timer4.Enabled = True
 
         If MsgBox("Anda Akan Keluar Dari Aplikasi Ini", vbYesNo, "Lanjutkan?") = vbYes Then
             Panel1.Enabled = False
+
             LogIn.MdiParent = Me
             Panel1.BackColor = Color.LightGray
             LogIn.Show()
+
         End If
 
     End Sub

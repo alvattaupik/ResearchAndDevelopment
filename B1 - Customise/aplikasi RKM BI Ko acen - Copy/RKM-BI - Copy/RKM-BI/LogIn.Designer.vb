@@ -80,7 +80,7 @@ Partial Class LogIn
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(300, 16)
         Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Business Intelligence - Version : 19.1.2"
+        Me.Label3.Text = "Business Intelligence - V 1.1 Build 30.01.2020"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Button1
@@ -145,7 +145,7 @@ Partial Class LogIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(345, 216)
+        Me.ClientSize = New System.Drawing.Size(341, 212)
         Me.ControlBox = False
         Me.Controls.Add(Me.chkRememberMe)
         Me.Controls.Add(Me.Label3)

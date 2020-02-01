@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RKM-BI.exe" size="3727360">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RKM-BI.exe" size="3776512">
       <assemblyIdentity name="RKM-BI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>qPPOOtVWTI37KcwU48Ojx6brlOg=</dsig:DigestValue>
+        <dsig:DigestValue>C6Nbo+0fx4BrSinOEJaX2UjnAyI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -20,7 +20,7 @@
     <OldToolsVersion>2.0</OldToolsVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\DATA- Alvat\Music\UpdateSoftware\B1 Customise\</PublishUrl>
+    <PublishUrl>C:\Users\DATA- Alvat\Music\UpdateSoftware\B1 Customise Build 30012020\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -30,7 +30,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -132,7 +132,7 @@
     <Compile Include="AsetMonitoring.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MarginBaru.Designer.vb">
+    <Compile Include="MarginBaru.designer.vb">
       <DependentUpon>MarginBaru.vb</DependentUpon>
     </Compile>
     <Compile Include="MarginBaru.vb">
@@ -303,7 +303,6 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MarginBaru.resx">
-      <SubType>Designer</SubType>
       <DependentUpon>MarginBaru.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalesMonitoring.resx">

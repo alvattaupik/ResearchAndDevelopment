@@ -19,7 +19,6 @@ Partial Class MarginBaru
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -64,8 +63,6 @@ Partial Class MarginBaru
         Me.Label86 = New System.Windows.Forms.Label()
         Me.Label87 = New System.Windows.Forms.Label()
         Me.DataGridABM = New System.Windows.Forms.DataGridView()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.CopyTableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.AYANI = New System.Windows.Forms.TabPage()
         Me.Ayani5 = New System.Windows.Forms.Label()
@@ -210,7 +207,7 @@ Partial Class MarginBaru
         Me.Label79 = New System.Windows.Forms.Label()
         Me.Label80 = New System.Windows.Forms.Label()
         Me.DataGridViewPAMANUKAN = New System.Windows.Forms.DataGridView()
-        Me.SOEKARNOHATTA = New System.Windows.Forms.TabPage()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Soetta5 = New System.Windows.Forms.Label()
         Me.Soetta3 = New System.Windows.Forms.Label()
         Me.soetta4 = New System.Windows.Forms.Label()
@@ -222,7 +219,7 @@ Partial Class MarginBaru
         Me.Label59 = New System.Windows.Forms.Label()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.Label67 = New System.Windows.Forms.Label()
-        Me.DataGridViewSOEKARNOHATTA = New System.Windows.Forms.DataGridView()
+        Me.dgSoekarnoHatta = New System.Windows.Forms.DataGridView()
         Me.TxtCek = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -230,12 +227,9 @@ Partial Class MarginBaru
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tab.SuspendLayout()
         Me.ABM.SuspendLayout()
         CType(Me.DataGridABM, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AYANI.SuspendLayout()
         CType(Me.DataGridViewAyani, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -259,10 +253,9 @@ Partial Class MarginBaru
         CType(Me.DataGridViewTASIKMALAYA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PAMANUKAN.SuspendLayout()
         CType(Me.DataGridViewPAMANUKAN, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SOEKARNOHATTA.SuspendLayout()
-        CType(Me.DataGridViewSOEKARNOHATTA, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.dgSoekarnoHatta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'tab
@@ -282,7 +275,7 @@ Partial Class MarginBaru
         Me.tab.Controls.Add(Me.RANCAEKEK)
         Me.tab.Controls.Add(Me.TASIKMALAYA)
         Me.tab.Controls.Add(Me.PAMANUKAN)
-        Me.tab.Controls.Add(Me.SOEKARNOHATTA)
+        Me.tab.Controls.Add(Me.TabPage1)
         Me.tab.Location = New System.Drawing.Point(12, 62)
         Me.tab.Name = "tab"
         Me.tab.SelectedIndex = 0
@@ -457,7 +450,6 @@ Partial Class MarginBaru
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridABM.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridABM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridABM.ContextMenuStrip = Me.ContextMenuStrip1
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -466,7 +458,7 @@ Partial Class MarginBaru
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridABM.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridABM.Location = New System.Drawing.Point(7, 26)
+        Me.DataGridABM.Location = New System.Drawing.Point(7, 6)
         Me.DataGridABM.Name = "DataGridABM"
         Me.DataGridABM.ReadOnly = True
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -478,20 +470,8 @@ Partial Class MarginBaru
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridABM.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridABM.RowHeadersWidth = 10
-        Me.DataGridABM.Size = New System.Drawing.Size(936, 277)
+        Me.DataGridABM.Size = New System.Drawing.Size(936, 297)
         Me.DataGridABM.TabIndex = 16
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyTableToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(134, 26)
-        '
-        'CopyTableToolStripMenuItem
-        '
-        Me.CopyTableToolStripMenuItem.Name = "CopyTableToolStripMenuItem"
-        Me.CopyTableToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
-        Me.CopyTableToolStripMenuItem.Text = "Copy Table"
         '
         'DataGridView1
         '
@@ -531,7 +511,6 @@ Partial Class MarginBaru
         '
         'AYANI
         '
-        Me.AYANI.ContextMenuStrip = Me.ContextMenuStrip1
         Me.AYANI.Controls.Add(Me.Ayani5)
         Me.AYANI.Controls.Add(Me.Ayani3)
         Me.AYANI.Controls.Add(Me.Ayani4)
@@ -696,7 +675,6 @@ Partial Class MarginBaru
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewAyani.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridViewAyani.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewAyani.ContextMenuStrip = Me.ContextMenuStrip1
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -705,11 +683,11 @@ Partial Class MarginBaru
         DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewAyani.DefaultCellStyle = DataGridViewCellStyle8
-        Me.DataGridViewAyani.Location = New System.Drawing.Point(7, 26)
+        Me.DataGridViewAyani.Location = New System.Drawing.Point(7, 6)
         Me.DataGridViewAyani.Name = "DataGridViewAyani"
         Me.DataGridViewAyani.ReadOnly = True
         Me.DataGridViewAyani.RowHeadersWidth = 10
-        Me.DataGridViewAyani.Size = New System.Drawing.Size(936, 277)
+        Me.DataGridViewAyani.Size = New System.Drawing.Size(936, 297)
         Me.DataGridViewAyani.TabIndex = 0
         '
         'CIBABAT
@@ -877,7 +855,6 @@ Partial Class MarginBaru
         DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewCibabat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridViewCibabat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewCibabat.ContextMenuStrip = Me.ContextMenuStrip1
         DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -886,11 +863,11 @@ Partial Class MarginBaru
         DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewCibabat.DefaultCellStyle = DataGridViewCellStyle10
-        Me.DataGridViewCibabat.Location = New System.Drawing.Point(7, 25)
+        Me.DataGridViewCibabat.Location = New System.Drawing.Point(7, 6)
         Me.DataGridViewCibabat.Name = "DataGridViewCibabat"
         Me.DataGridViewCibabat.ReadOnly = True
         Me.DataGridViewCibabat.RowHeadersWidth = 10
-        Me.DataGridViewCibabat.Size = New System.Drawing.Size(936, 278)
+        Me.DataGridViewCibabat.Size = New System.Drawing.Size(936, 297)
         Me.DataGridViewCibabat.TabIndex = 18
         '
         'KOPO
@@ -1058,7 +1035,6 @@ Partial Class MarginBaru
         DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewKopo.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.DataGridViewKopo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewKopo.ContextMenuStrip = Me.ContextMenuStrip1
         DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1067,11 +1043,11 @@ Partial Class MarginBaru
         DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewKopo.DefaultCellStyle = DataGridViewCellStyle12
-        Me.DataGridViewKopo.Location = New System.Drawing.Point(7, 24)
+        Me.DataGridViewKopo.Location = New System.Drawing.Point(7, 6)
         Me.DataGridViewKopo.Name = "DataGridViewKopo"
         Me.DataGridViewKopo.ReadOnly = True
         Me.DataGridViewKopo.RowHeadersWidth = 10
-        Me.DataGridViewKopo.Size = New System.Drawing.Size(936, 279)
+        Me.DataGridViewKopo.Size = New System.Drawing.Size(936, 297)
         Me.DataGridViewKopo.TabIndex = 17
         '
         'CIBIRU
@@ -1239,7 +1215,6 @@ Partial Class MarginBaru
         DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewCibiru.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.DataGridViewCibiru.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewCibiru.ContextMenuStrip = Me.ContextMenuStrip1
         DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1248,11 +1223,11 @@ Partial Class MarginBaru
         DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewCibiru.DefaultCellStyle = DataGridViewCellStyle14
-        Me.DataGridViewCibiru.Location = New System.Drawing.Point(7, 24)
+        Me.DataGridViewCibiru.Location = New System.Drawing.Point(7, 6)
         Me.DataGridViewCibiru.Name = "DataGridViewCibiru"
         Me.DataGridViewCibiru.ReadOnly = True
         Me.DataGridViewCibiru.RowHeadersWidth = 10
-        Me.DataGridViewCibiru.Size = New System.Drawing.Size(936, 279)
+        Me.DataGridViewCibiru.Size = New System.Drawing.Size(936, 297)
         Me.DataGridViewCibiru.TabIndex = 18
         '
         'GARUT
@@ -1420,7 +1395,6 @@ Partial Class MarginBaru
         DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewGarut.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
         Me.DataGridViewGarut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewGarut.ContextMenuStrip = Me.ContextMenuStrip1
         DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1429,11 +1403,11 @@ Partial Class MarginBaru
         DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewGarut.DefaultCellStyle = DataGridViewCellStyle16
-        Me.DataGridViewGarut.Location = New System.Drawing.Point(7, 26)
+        Me.DataGridViewGarut.Location = New System.Drawing.Point(7, 6)
         Me.DataGridViewGarut.Name = "DataGridViewGarut"
         Me.DataGridViewGarut.ReadOnly = True
         Me.DataGridViewGarut.RowHeadersWidth = 10
-        Me.DataGridViewGarut.Size = New System.Drawing.Size(936, 277)
+        Me.DataGridViewGarut.Size = New System.Drawing.Size(936, 297)
         Me.DataGridViewGarut.TabIndex = 17
         '
         'CIREBON
@@ -1601,7 +1575,6 @@ Partial Class MarginBaru
         DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewCirebon.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
         Me.DataGridViewCirebon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewCirebon.ContextMenuStrip = Me.ContextMenuStrip1
         DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1610,11 +1583,11 @@ Partial Class MarginBaru
         DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewCirebon.DefaultCellStyle = DataGridViewCellStyle18
-        Me.DataGridViewCirebon.Location = New System.Drawing.Point(7, 26)
+        Me.DataGridViewCirebon.Location = New System.Drawing.Point(7, 6)
         Me.DataGridViewCirebon.Name = "DataGridViewCirebon"
         Me.DataGridViewCirebon.ReadOnly = True
         Me.DataGridViewCirebon.RowHeadersWidth = 10
-        Me.DataGridViewCirebon.Size = New System.Drawing.Size(936, 277)
+        Me.DataGridViewCirebon.Size = New System.Drawing.Size(936, 297)
         Me.DataGridViewCirebon.TabIndex = 17
         '
         'SUMEDANG
@@ -1782,7 +1755,6 @@ Partial Class MarginBaru
         DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewSumedang.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
         Me.DataGridViewSumedang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewSumedang.ContextMenuStrip = Me.ContextMenuStrip1
         DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1791,11 +1763,11 @@ Partial Class MarginBaru
         DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewSumedang.DefaultCellStyle = DataGridViewCellStyle20
-        Me.DataGridViewSumedang.Location = New System.Drawing.Point(6, 25)
+        Me.DataGridViewSumedang.Location = New System.Drawing.Point(6, 6)
         Me.DataGridViewSumedang.Name = "DataGridViewSumedang"
         Me.DataGridViewSumedang.ReadOnly = True
         Me.DataGridViewSumedang.RowHeadersWidth = 10
-        Me.DataGridViewSumedang.Size = New System.Drawing.Size(936, 278)
+        Me.DataGridViewSumedang.Size = New System.Drawing.Size(936, 297)
         Me.DataGridViewSumedang.TabIndex = 19
         '
         'CIPARAY
@@ -1963,7 +1935,6 @@ Partial Class MarginBaru
         DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewCiparay.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle21
         Me.DataGridViewCiparay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewCiparay.ContextMenuStrip = Me.ContextMenuStrip1
         DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1972,11 +1943,11 @@ Partial Class MarginBaru
         DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewCiparay.DefaultCellStyle = DataGridViewCellStyle22
-        Me.DataGridViewCiparay.Location = New System.Drawing.Point(6, 26)
+        Me.DataGridViewCiparay.Location = New System.Drawing.Point(6, 6)
         Me.DataGridViewCiparay.Name = "DataGridViewCiparay"
         Me.DataGridViewCiparay.ReadOnly = True
         Me.DataGridViewCiparay.RowHeadersWidth = 10
-        Me.DataGridViewCiparay.Size = New System.Drawing.Size(936, 277)
+        Me.DataGridViewCiparay.Size = New System.Drawing.Size(936, 297)
         Me.DataGridViewCiparay.TabIndex = 17
         '
         'RANCAEKEK
@@ -2144,7 +2115,6 @@ Partial Class MarginBaru
         DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewRancaekek.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
         Me.DataGridViewRancaekek.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewRancaekek.ContextMenuStrip = Me.ContextMenuStrip1
         DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -2153,11 +2123,11 @@ Partial Class MarginBaru
         DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewRancaekek.DefaultCellStyle = DataGridViewCellStyle24
-        Me.DataGridViewRancaekek.Location = New System.Drawing.Point(8, 27)
+        Me.DataGridViewRancaekek.Location = New System.Drawing.Point(8, 6)
         Me.DataGridViewRancaekek.Name = "DataGridViewRancaekek"
         Me.DataGridViewRancaekek.ReadOnly = True
         Me.DataGridViewRancaekek.RowHeadersWidth = 10
-        Me.DataGridViewRancaekek.Size = New System.Drawing.Size(936, 276)
+        Me.DataGridViewRancaekek.Size = New System.Drawing.Size(936, 297)
         Me.DataGridViewRancaekek.TabIndex = 42
         '
         'TASIKMALAYA
@@ -2325,7 +2295,6 @@ Partial Class MarginBaru
         DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewTASIKMALAYA.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle25
         Me.DataGridViewTASIKMALAYA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewTASIKMALAYA.ContextMenuStrip = Me.ContextMenuStrip1
         DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -2334,11 +2303,11 @@ Partial Class MarginBaru
         DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewTASIKMALAYA.DefaultCellStyle = DataGridViewCellStyle26
-        Me.DataGridViewTASIKMALAYA.Location = New System.Drawing.Point(8, 28)
+        Me.DataGridViewTASIKMALAYA.Location = New System.Drawing.Point(8, 6)
         Me.DataGridViewTASIKMALAYA.Name = "DataGridViewTASIKMALAYA"
         Me.DataGridViewTASIKMALAYA.ReadOnly = True
         Me.DataGridViewTASIKMALAYA.RowHeadersWidth = 10
-        Me.DataGridViewTASIKMALAYA.Size = New System.Drawing.Size(936, 275)
+        Me.DataGridViewTASIKMALAYA.Size = New System.Drawing.Size(936, 297)
         Me.DataGridViewTASIKMALAYA.TabIndex = 54
         '
         'PAMANUKAN
@@ -2506,7 +2475,6 @@ Partial Class MarginBaru
         DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewPAMANUKAN.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle27
         Me.DataGridViewPAMANUKAN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewPAMANUKAN.ContextMenuStrip = Me.ContextMenuStrip1
         DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -2515,34 +2483,34 @@ Partial Class MarginBaru
         DataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridViewPAMANUKAN.DefaultCellStyle = DataGridViewCellStyle28
-        Me.DataGridViewPAMANUKAN.Location = New System.Drawing.Point(8, 27)
+        Me.DataGridViewPAMANUKAN.Location = New System.Drawing.Point(8, 6)
         Me.DataGridViewPAMANUKAN.Name = "DataGridViewPAMANUKAN"
         Me.DataGridViewPAMANUKAN.ReadOnly = True
         Me.DataGridViewPAMANUKAN.RowHeadersWidth = 10
-        Me.DataGridViewPAMANUKAN.Size = New System.Drawing.Size(936, 276)
+        Me.DataGridViewPAMANUKAN.Size = New System.Drawing.Size(936, 297)
         Me.DataGridViewPAMANUKAN.TabIndex = 54
         '
-        'SOEKARNOHATTA
+        'TabPage1
         '
-        Me.SOEKARNOHATTA.Controls.Add(Me.Soetta5)
-        Me.SOEKARNOHATTA.Controls.Add(Me.Soetta3)
-        Me.SOEKARNOHATTA.Controls.Add(Me.soetta4)
-        Me.SOEKARNOHATTA.Controls.Add(Me.Soetta2)
-        Me.SOEKARNOHATTA.Controls.Add(Me.Soetta1)
-        Me.SOEKARNOHATTA.Controls.Add(Me.Label14)
-        Me.SOEKARNOHATTA.Controls.Add(Me.Label15)
-        Me.SOEKARNOHATTA.Controls.Add(Me.Label58)
-        Me.SOEKARNOHATTA.Controls.Add(Me.Label59)
-        Me.SOEKARNOHATTA.Controls.Add(Me.Label66)
-        Me.SOEKARNOHATTA.Controls.Add(Me.Label67)
-        Me.SOEKARNOHATTA.Controls.Add(Me.DataGridViewSOEKARNOHATTA)
-        Me.SOEKARNOHATTA.Location = New System.Drawing.Point(4, 22)
-        Me.SOEKARNOHATTA.Name = "SOEKARNOHATTA"
-        Me.SOEKARNOHATTA.Padding = New System.Windows.Forms.Padding(3)
-        Me.SOEKARNOHATTA.Size = New System.Drawing.Size(951, 352)
-        Me.SOEKARNOHATTA.TabIndex = 12
-        Me.SOEKARNOHATTA.Text = "SOEKARNO HATTA"
-        Me.SOEKARNOHATTA.UseVisualStyleBackColor = True
+        Me.TabPage1.Controls.Add(Me.Soetta5)
+        Me.TabPage1.Controls.Add(Me.Soetta3)
+        Me.TabPage1.Controls.Add(Me.soetta4)
+        Me.TabPage1.Controls.Add(Me.Soetta2)
+        Me.TabPage1.Controls.Add(Me.Soetta1)
+        Me.TabPage1.Controls.Add(Me.Label14)
+        Me.TabPage1.Controls.Add(Me.Label15)
+        Me.TabPage1.Controls.Add(Me.Label58)
+        Me.TabPage1.Controls.Add(Me.Label59)
+        Me.TabPage1.Controls.Add(Me.Label66)
+        Me.TabPage1.Controls.Add(Me.Label67)
+        Me.TabPage1.Controls.Add(Me.dgSoekarnoHatta)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(951, 352)
+        Me.TabPage1.TabIndex = 12
+        Me.TabPage1.Text = "SOEKARNO HATTA"
+        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'Soetta5
         '
@@ -2672,11 +2640,11 @@ Partial Class MarginBaru
         Me.Label67.Text = "TOTAL"
         Me.Label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'DataGridViewSOEKARNOHATTA
+        'dgSoekarnoHatta
         '
-        Me.DataGridViewSOEKARNOHATTA.AllowUserToAddRows = False
-        Me.DataGridViewSOEKARNOHATTA.AllowUserToDeleteRows = False
-        Me.DataGridViewSOEKARNOHATTA.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.dgSoekarnoHatta.AllowUserToAddRows = False
+        Me.dgSoekarnoHatta.AllowUserToDeleteRows = False
+        Me.dgSoekarnoHatta.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -2686,9 +2654,8 @@ Partial Class MarginBaru
         DataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewSOEKARNOHATTA.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle29
-        Me.DataGridViewSOEKARNOHATTA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewSOEKARNOHATTA.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.dgSoekarnoHatta.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle29
+        Me.dgSoekarnoHatta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -2696,13 +2663,13 @@ Partial Class MarginBaru
         DataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewSOEKARNOHATTA.DefaultCellStyle = DataGridViewCellStyle30
-        Me.DataGridViewSOEKARNOHATTA.Location = New System.Drawing.Point(9, 32)
-        Me.DataGridViewSOEKARNOHATTA.Name = "DataGridViewSOEKARNOHATTA"
-        Me.DataGridViewSOEKARNOHATTA.ReadOnly = True
-        Me.DataGridViewSOEKARNOHATTA.RowHeadersWidth = 10
-        Me.DataGridViewSOEKARNOHATTA.Size = New System.Drawing.Size(936, 271)
-        Me.DataGridViewSOEKARNOHATTA.TabIndex = 55
+        Me.dgSoekarnoHatta.DefaultCellStyle = DataGridViewCellStyle30
+        Me.dgSoekarnoHatta.Location = New System.Drawing.Point(9, 6)
+        Me.dgSoekarnoHatta.Name = "dgSoekarnoHatta"
+        Me.dgSoekarnoHatta.ReadOnly = True
+        Me.dgSoekarnoHatta.RowHeadersWidth = 10
+        Me.dgSoekarnoHatta.Size = New System.Drawing.Size(936, 297)
+        Me.dgSoekarnoHatta.TabIndex = 55
         '
         'TxtCek
         '
@@ -2770,38 +2737,20 @@ Partial Class MarginBaru
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Periode :"
         '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 430)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1006, 22)
-        Me.StatusStrip1.TabIndex = 22
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(179, 17)
-        Me.ToolStripStatusLabel1.Text = "RKM Margin V1.1 Build 30.1.2020"
-        '
         'MarginBaru
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1006, 452)
-        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TxtCek)
         Me.Controls.Add(Me.tab)
         Me.Name = "MarginBaru"
         Me.ShowIcon = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = " RKM Margin"
+        Me.Text = "MarginBaru"
         Me.tab.ResumeLayout(False)
         Me.ABM.ResumeLayout(False)
         CType(Me.DataGridABM, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AYANI.ResumeLayout(False)
         CType(Me.DataGridViewAyani, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2825,12 +2774,10 @@ Partial Class MarginBaru
         CType(Me.DataGridViewTASIKMALAYA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PAMANUKAN.ResumeLayout(False)
         CType(Me.DataGridViewPAMANUKAN, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SOEKARNOHATTA.ResumeLayout(False)
-        CType(Me.DataGridViewSOEKARNOHATTA, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.ResumeLayout(False)
+        CType(Me.dgSoekarnoHatta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3000,8 +2947,8 @@ Partial Class MarginBaru
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents SOEKARNOHATTA As System.Windows.Forms.TabPage
-    Friend WithEvents DataGridViewSOEKARNOHATTA As System.Windows.Forms.DataGridView
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents dgSoekarnoHatta As System.Windows.Forms.DataGridView
     Friend WithEvents Soetta5 As System.Windows.Forms.Label
     Friend WithEvents Soetta3 As System.Windows.Forms.Label
     Friend WithEvents soetta4 As System.Windows.Forms.Label
@@ -3013,8 +2960,4 @@ Partial Class MarginBaru
     Friend WithEvents Label59 As System.Windows.Forms.Label
     Friend WithEvents Label66 As System.Windows.Forms.Label
     Friend WithEvents Label67 As System.Windows.Forms.Label
-    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
-    Friend WithEvents CopyTableToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
-    Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
 End Class

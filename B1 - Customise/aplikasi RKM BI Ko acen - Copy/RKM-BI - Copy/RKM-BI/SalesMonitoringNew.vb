@@ -34,9 +34,6 @@ Public Class SalesMonitoringNew
 
         Dim rng As New Random
 
-
-
-
         For Each row As DataRow In Tabel1.Rows
 
 

@@ -23,3 +23,7 @@ D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga J
 D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.application
 D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.exe.manifest
 D:\Source Code Project\GetRealStock\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.application
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.exe.config
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.exe
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.xml
+D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.pdb
