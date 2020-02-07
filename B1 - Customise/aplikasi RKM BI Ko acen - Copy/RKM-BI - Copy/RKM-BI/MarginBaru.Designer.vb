@@ -20,36 +20,36 @@ Partial Class MarginBaru
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tab = New System.Windows.Forms.TabControl()
         Me.ABM = New System.Windows.Forms.TabPage()
         Me.ABM5 = New System.Windows.Forms.Label()
@@ -283,7 +283,7 @@ Partial Class MarginBaru
         Me.tab.Controls.Add(Me.TASIKMALAYA)
         Me.tab.Controls.Add(Me.PAMANUKAN)
         Me.tab.Controls.Add(Me.SOEKARNOHATTA)
-        Me.tab.Location = New System.Drawing.Point(12, 62)
+        Me.tab.Location = New System.Drawing.Point(12, 49)
         Me.tab.Name = "tab"
         Me.tab.SelectedIndex = 0
         Me.tab.Size = New System.Drawing.Size(959, 378)
@@ -318,7 +318,7 @@ Partial Class MarginBaru
         Me.ABM5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ABM5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ABM5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ABM5.Location = New System.Drawing.Point(841, 332)
+        Me.ABM5.Location = New System.Drawing.Point(841, 337)
         Me.ABM5.Name = "ABM5"
         Me.ABM5.Size = New System.Drawing.Size(102, 14)
         Me.ABM5.TabIndex = 41
@@ -330,7 +330,7 @@ Partial Class MarginBaru
         Me.ABM3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ABM3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ABM3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ABM3.Location = New System.Drawing.Point(639, 332)
+        Me.ABM3.Location = New System.Drawing.Point(639, 337)
         Me.ABM3.Name = "ABM3"
         Me.ABM3.Size = New System.Drawing.Size(89, 14)
         Me.ABM3.TabIndex = 40
@@ -342,7 +342,7 @@ Partial Class MarginBaru
         Me.ABM4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ABM4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ABM4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ABM4.Location = New System.Drawing.Point(739, 332)
+        Me.ABM4.Location = New System.Drawing.Point(739, 337)
         Me.ABM4.Name = "ABM4"
         Me.ABM4.Size = New System.Drawing.Size(89, 14)
         Me.ABM4.TabIndex = 39
@@ -354,7 +354,7 @@ Partial Class MarginBaru
         Me.ABM2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ABM2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ABM2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ABM2.Location = New System.Drawing.Point(540, 332)
+        Me.ABM2.Location = New System.Drawing.Point(540, 337)
         Me.ABM2.Name = "ABM2"
         Me.ABM2.Size = New System.Drawing.Size(89, 14)
         Me.ABM2.TabIndex = 38
@@ -366,7 +366,7 @@ Partial Class MarginBaru
         Me.ABM1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ABM1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ABM1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ABM1.Location = New System.Drawing.Point(439, 332)
+        Me.ABM1.Location = New System.Drawing.Point(439, 337)
         Me.ABM1.Name = "ABM1"
         Me.ABM1.Size = New System.Drawing.Size(89, 14)
         Me.ABM1.TabIndex = 37
@@ -448,35 +448,35 @@ Partial Class MarginBaru
         Me.DataGridABM.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridABM.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridABM.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridABM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridABM.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridABM.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridABM.DefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridABM.Location = New System.Drawing.Point(7, 26)
         Me.DataGridABM.Name = "DataGridABM"
         Me.DataGridABM.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridABM.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle45.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridABM.RowHeadersDefaultCellStyle = DataGridViewCellStyle45
         Me.DataGridABM.RowHeadersWidth = 10
         Me.DataGridABM.Size = New System.Drawing.Size(936, 277)
         Me.DataGridABM.TabIndex = 16
@@ -498,34 +498,34 @@ Partial Class MarginBaru
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle14
         Me.DataGridView1.Location = New System.Drawing.Point(72, 39)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle42.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle42
         Me.DataGridView1.Size = New System.Drawing.Size(88, 43)
         Me.DataGridView1.TabIndex = 15
         '
@@ -557,7 +557,7 @@ Partial Class MarginBaru
         Me.Ayani5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Ayani5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Ayani5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ayani5.Location = New System.Drawing.Point(854, 332)
+        Me.Ayani5.Location = New System.Drawing.Point(854, 337)
         Me.Ayani5.Name = "Ayani5"
         Me.Ayani5.Size = New System.Drawing.Size(89, 14)
         Me.Ayani5.TabIndex = 41
@@ -569,7 +569,7 @@ Partial Class MarginBaru
         Me.Ayani3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Ayani3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Ayani3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ayani3.Location = New System.Drawing.Point(657, 332)
+        Me.Ayani3.Location = New System.Drawing.Point(657, 337)
         Me.Ayani3.Name = "Ayani3"
         Me.Ayani3.Size = New System.Drawing.Size(89, 14)
         Me.Ayani3.TabIndex = 40
@@ -581,7 +581,7 @@ Partial Class MarginBaru
         Me.Ayani4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Ayani4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Ayani4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ayani4.Location = New System.Drawing.Point(754, 332)
+        Me.Ayani4.Location = New System.Drawing.Point(754, 337)
         Me.Ayani4.Name = "Ayani4"
         Me.Ayani4.Size = New System.Drawing.Size(89, 14)
         Me.Ayani4.TabIndex = 39
@@ -593,7 +593,7 @@ Partial Class MarginBaru
         Me.Ayani2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Ayani2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Ayani2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ayani2.Location = New System.Drawing.Point(559, 332)
+        Me.Ayani2.Location = New System.Drawing.Point(559, 336)
         Me.Ayani2.Name = "Ayani2"
         Me.Ayani2.Size = New System.Drawing.Size(89, 14)
         Me.Ayani2.TabIndex = 38
@@ -605,7 +605,7 @@ Partial Class MarginBaru
         Me.Ayani1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Ayani1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Ayani1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ayani1.Location = New System.Drawing.Point(461, 332)
+        Me.Ayani1.Location = New System.Drawing.Point(461, 336)
         Me.Ayani1.Name = "Ayani1"
         Me.Ayani1.Size = New System.Drawing.Size(89, 14)
         Me.Ayani1.TabIndex = 37
@@ -616,9 +616,9 @@ Partial Class MarginBaru
         '
         Me.Label71.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label71.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label71.Location = New System.Drawing.Point(854, 319)
+        Me.Label71.Location = New System.Drawing.Point(843, 318)
         Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(89, 10)
+        Me.Label71.Size = New System.Drawing.Size(107, 23)
         Me.Label71.TabIndex = 36
         Me.Label71.Text = "TOTAL MARGIN"
         Me.Label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -627,7 +627,7 @@ Partial Class MarginBaru
         '
         Me.Label72.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label72.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label72.Location = New System.Drawing.Point(657, 319)
+        Me.Label72.Location = New System.Drawing.Point(657, 325)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(89, 10)
         Me.Label72.TabIndex = 35
@@ -638,9 +638,9 @@ Partial Class MarginBaru
         '
         Me.Label73.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label73.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label73.Location = New System.Drawing.Point(754, 319)
+        Me.Label73.Location = New System.Drawing.Point(754, 323)
         Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(89, 10)
+        Me.Label73.Size = New System.Drawing.Size(89, 13)
         Me.Label73.TabIndex = 34
         Me.Label73.Text = "TOTAL BELI"
         Me.Label73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -649,9 +649,9 @@ Partial Class MarginBaru
         '
         Me.Label74.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label74.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label74.Location = New System.Drawing.Point(559, 319)
+        Me.Label74.Location = New System.Drawing.Point(559, 321)
         Me.Label74.Name = "Label74"
-        Me.Label74.Size = New System.Drawing.Size(89, 10)
+        Me.Label74.Size = New System.Drawing.Size(89, 16)
         Me.Label74.TabIndex = 33
         Me.Label74.Text = "MARGIN"
         Me.Label74.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -660,9 +660,9 @@ Partial Class MarginBaru
         '
         Me.Label75.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label75.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label75.Location = New System.Drawing.Point(461, 319)
+        Me.Label75.Location = New System.Drawing.Point(461, 321)
         Me.Label75.Name = "Label75"
-        Me.Label75.Size = New System.Drawing.Size(89, 10)
+        Me.Label75.Size = New System.Drawing.Size(89, 16)
         Me.Label75.TabIndex = 32
         Me.Label75.Text = "DISKON"
         Me.Label75.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -687,24 +687,24 @@ Partial Class MarginBaru
         Me.DataGridViewAyani.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewAyani.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle46.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewAyani.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle46
         Me.DataGridViewAyani.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewAyani.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewAyani.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle47.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewAyani.DefaultCellStyle = DataGridViewCellStyle47
         Me.DataGridViewAyani.Location = New System.Drawing.Point(7, 26)
         Me.DataGridViewAyani.Name = "DataGridViewAyani"
         Me.DataGridViewAyani.ReadOnly = True
@@ -738,7 +738,7 @@ Partial Class MarginBaru
         Me.Cibabat5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cibabat5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cibabat5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cibabat5.Location = New System.Drawing.Point(854, 332)
+        Me.Cibabat5.Location = New System.Drawing.Point(854, 337)
         Me.Cibabat5.Name = "Cibabat5"
         Me.Cibabat5.Size = New System.Drawing.Size(89, 14)
         Me.Cibabat5.TabIndex = 41
@@ -750,7 +750,7 @@ Partial Class MarginBaru
         Me.Cibabat3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cibabat3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cibabat3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cibabat3.Location = New System.Drawing.Point(657, 332)
+        Me.Cibabat3.Location = New System.Drawing.Point(657, 337)
         Me.Cibabat3.Name = "Cibabat3"
         Me.Cibabat3.Size = New System.Drawing.Size(89, 14)
         Me.Cibabat3.TabIndex = 40
@@ -762,7 +762,7 @@ Partial Class MarginBaru
         Me.Cibabat4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cibabat4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cibabat4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cibabat4.Location = New System.Drawing.Point(754, 332)
+        Me.Cibabat4.Location = New System.Drawing.Point(754, 337)
         Me.Cibabat4.Name = "Cibabat4"
         Me.Cibabat4.Size = New System.Drawing.Size(89, 14)
         Me.Cibabat4.TabIndex = 39
@@ -774,7 +774,7 @@ Partial Class MarginBaru
         Me.Cibabat2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cibabat2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cibabat2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cibabat2.Location = New System.Drawing.Point(559, 332)
+        Me.Cibabat2.Location = New System.Drawing.Point(559, 337)
         Me.Cibabat2.Name = "Cibabat2"
         Me.Cibabat2.Size = New System.Drawing.Size(89, 14)
         Me.Cibabat2.TabIndex = 38
@@ -786,7 +786,7 @@ Partial Class MarginBaru
         Me.Cibabat1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cibabat1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cibabat1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cibabat1.Location = New System.Drawing.Point(461, 332)
+        Me.Cibabat1.Location = New System.Drawing.Point(461, 336)
         Me.Cibabat1.Name = "Cibabat1"
         Me.Cibabat1.Size = New System.Drawing.Size(89, 14)
         Me.Cibabat1.TabIndex = 37
@@ -797,9 +797,9 @@ Partial Class MarginBaru
         '
         Me.Label60.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label60.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label60.Location = New System.Drawing.Point(854, 319)
+        Me.Label60.Location = New System.Drawing.Point(842, 316)
         Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(89, 10)
+        Me.Label60.Size = New System.Drawing.Size(106, 24)
         Me.Label60.TabIndex = 36
         Me.Label60.Text = "TOTAL MARGIN"
         Me.Label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -808,9 +808,9 @@ Partial Class MarginBaru
         '
         Me.Label61.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label61.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label61.Location = New System.Drawing.Point(657, 319)
+        Me.Label61.Location = New System.Drawing.Point(657, 322)
         Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(89, 10)
+        Me.Label61.Size = New System.Drawing.Size(89, 18)
         Me.Label61.TabIndex = 35
         Me.Label61.Text = "TOTAL JUAL"
         Me.Label61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -819,9 +819,9 @@ Partial Class MarginBaru
         '
         Me.Label62.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label62.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label62.Location = New System.Drawing.Point(754, 319)
+        Me.Label62.Location = New System.Drawing.Point(754, 320)
         Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(89, 10)
+        Me.Label62.Size = New System.Drawing.Size(89, 17)
         Me.Label62.TabIndex = 34
         Me.Label62.Text = "TOTAL BELI"
         Me.Label62.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -830,7 +830,7 @@ Partial Class MarginBaru
         '
         Me.Label63.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label63.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label63.Location = New System.Drawing.Point(559, 319)
+        Me.Label63.Location = New System.Drawing.Point(559, 326)
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(89, 10)
         Me.Label63.TabIndex = 33
@@ -841,7 +841,7 @@ Partial Class MarginBaru
         '
         Me.Label64.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label64.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label64.Location = New System.Drawing.Point(461, 319)
+        Me.Label64.Location = New System.Drawing.Point(461, 325)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(89, 10)
         Me.Label64.TabIndex = 32
@@ -854,7 +854,7 @@ Partial Class MarginBaru
         Me.Label65.BackColor = System.Drawing.Color.PeachPuff
         Me.Label65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label65.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label65.Location = New System.Drawing.Point(367, 320)
+        Me.Label65.Location = New System.Drawing.Point(367, 323)
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(88, 26)
         Me.Label65.TabIndex = 31
@@ -868,24 +868,24 @@ Partial Class MarginBaru
         Me.DataGridViewCibabat.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewCibabat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewCibabat.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle25
         Me.DataGridViewCibabat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewCibabat.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewCibabat.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewCibabat.DefaultCellStyle = DataGridViewCellStyle26
         Me.DataGridViewCibabat.Location = New System.Drawing.Point(7, 25)
         Me.DataGridViewCibabat.Name = "DataGridViewCibabat"
         Me.DataGridViewCibabat.ReadOnly = True
@@ -919,7 +919,7 @@ Partial Class MarginBaru
         Me.Kopo5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Kopo5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Kopo5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Kopo5.Location = New System.Drawing.Point(854, 332)
+        Me.Kopo5.Location = New System.Drawing.Point(854, 336)
         Me.Kopo5.Name = "Kopo5"
         Me.Kopo5.Size = New System.Drawing.Size(89, 14)
         Me.Kopo5.TabIndex = 41
@@ -931,7 +931,7 @@ Partial Class MarginBaru
         Me.Kopo3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Kopo3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Kopo3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Kopo3.Location = New System.Drawing.Point(657, 332)
+        Me.Kopo3.Location = New System.Drawing.Point(657, 335)
         Me.Kopo3.Name = "Kopo3"
         Me.Kopo3.Size = New System.Drawing.Size(89, 14)
         Me.Kopo3.TabIndex = 40
@@ -943,7 +943,7 @@ Partial Class MarginBaru
         Me.Kopo4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Kopo4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Kopo4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Kopo4.Location = New System.Drawing.Point(754, 332)
+        Me.Kopo4.Location = New System.Drawing.Point(754, 336)
         Me.Kopo4.Name = "Kopo4"
         Me.Kopo4.Size = New System.Drawing.Size(89, 14)
         Me.Kopo4.TabIndex = 39
@@ -955,7 +955,7 @@ Partial Class MarginBaru
         Me.Kopo2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Kopo2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Kopo2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Kopo2.Location = New System.Drawing.Point(559, 332)
+        Me.Kopo2.Location = New System.Drawing.Point(559, 336)
         Me.Kopo2.Name = "Kopo2"
         Me.Kopo2.Size = New System.Drawing.Size(89, 14)
         Me.Kopo2.TabIndex = 38
@@ -967,7 +967,7 @@ Partial Class MarginBaru
         Me.Kopo1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Kopo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Kopo1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Kopo1.Location = New System.Drawing.Point(461, 332)
+        Me.Kopo1.Location = New System.Drawing.Point(461, 336)
         Me.Kopo1.Name = "Kopo1"
         Me.Kopo1.Size = New System.Drawing.Size(89, 14)
         Me.Kopo1.TabIndex = 37
@@ -978,9 +978,9 @@ Partial Class MarginBaru
         '
         Me.Label49.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(854, 319)
+        Me.Label49.Location = New System.Drawing.Point(840, 318)
         Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(89, 10)
+        Me.Label49.Size = New System.Drawing.Size(113, 23)
         Me.Label49.TabIndex = 36
         Me.Label49.Text = "TOTAL MARGIN"
         Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -989,9 +989,9 @@ Partial Class MarginBaru
         '
         Me.Label50.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label50.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label50.Location = New System.Drawing.Point(657, 319)
+        Me.Label50.Location = New System.Drawing.Point(657, 320)
         Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(89, 10)
+        Me.Label50.Size = New System.Drawing.Size(89, 16)
         Me.Label50.TabIndex = 35
         Me.Label50.Text = "TOTAL JUAL"
         Me.Label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1000,9 +1000,9 @@ Partial Class MarginBaru
         '
         Me.Label51.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label51.Location = New System.Drawing.Point(754, 319)
+        Me.Label51.Location = New System.Drawing.Point(754, 321)
         Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(89, 10)
+        Me.Label51.Size = New System.Drawing.Size(89, 17)
         Me.Label51.TabIndex = 34
         Me.Label51.Text = "TOTAL BELI"
         Me.Label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1011,7 +1011,7 @@ Partial Class MarginBaru
         '
         Me.Label52.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label52.Location = New System.Drawing.Point(559, 319)
+        Me.Label52.Location = New System.Drawing.Point(559, 325)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(89, 10)
         Me.Label52.TabIndex = 33
@@ -1022,9 +1022,9 @@ Partial Class MarginBaru
         '
         Me.Label53.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label53.Location = New System.Drawing.Point(461, 319)
+        Me.Label53.Location = New System.Drawing.Point(461, 324)
         Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(89, 10)
+        Me.Label53.Size = New System.Drawing.Size(89, 12)
         Me.Label53.TabIndex = 32
         Me.Label53.Text = "DISKON"
         Me.Label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1035,7 +1035,7 @@ Partial Class MarginBaru
         Me.Label54.BackColor = System.Drawing.Color.PeachPuff
         Me.Label54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label54.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label54.Location = New System.Drawing.Point(367, 320)
+        Me.Label54.Location = New System.Drawing.Point(367, 325)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(88, 26)
         Me.Label54.TabIndex = 31
@@ -1049,24 +1049,24 @@ Partial Class MarginBaru
         Me.DataGridViewKopo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewKopo.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle43.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewKopo.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle43
         Me.DataGridViewKopo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewKopo.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewKopo.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle44.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewKopo.DefaultCellStyle = DataGridViewCellStyle44
         Me.DataGridViewKopo.Location = New System.Drawing.Point(7, 24)
         Me.DataGridViewKopo.Name = "DataGridViewKopo"
         Me.DataGridViewKopo.ReadOnly = True
@@ -1100,7 +1100,7 @@ Partial Class MarginBaru
         Me.Cibiru5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cibiru5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cibiru5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cibiru5.Location = New System.Drawing.Point(854, 332)
+        Me.Cibiru5.Location = New System.Drawing.Point(854, 337)
         Me.Cibiru5.Name = "Cibiru5"
         Me.Cibiru5.Size = New System.Drawing.Size(89, 14)
         Me.Cibiru5.TabIndex = 41
@@ -1112,7 +1112,7 @@ Partial Class MarginBaru
         Me.Cibiru3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cibiru3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cibiru3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cibiru3.Location = New System.Drawing.Point(657, 332)
+        Me.Cibiru3.Location = New System.Drawing.Point(657, 337)
         Me.Cibiru3.Name = "Cibiru3"
         Me.Cibiru3.Size = New System.Drawing.Size(89, 14)
         Me.Cibiru3.TabIndex = 40
@@ -1124,7 +1124,7 @@ Partial Class MarginBaru
         Me.Cibiru4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cibiru4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cibiru4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cibiru4.Location = New System.Drawing.Point(754, 332)
+        Me.Cibiru4.Location = New System.Drawing.Point(754, 337)
         Me.Cibiru4.Name = "Cibiru4"
         Me.Cibiru4.Size = New System.Drawing.Size(89, 14)
         Me.Cibiru4.TabIndex = 39
@@ -1136,7 +1136,7 @@ Partial Class MarginBaru
         Me.Cibiru2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cibiru2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cibiru2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cibiru2.Location = New System.Drawing.Point(559, 332)
+        Me.Cibiru2.Location = New System.Drawing.Point(559, 337)
         Me.Cibiru2.Name = "Cibiru2"
         Me.Cibiru2.Size = New System.Drawing.Size(89, 14)
         Me.Cibiru2.TabIndex = 38
@@ -1148,7 +1148,7 @@ Partial Class MarginBaru
         Me.Cibiru1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cibiru1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cibiru1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cibiru1.Location = New System.Drawing.Point(461, 332)
+        Me.Cibiru1.Location = New System.Drawing.Point(461, 336)
         Me.Cibiru1.Name = "Cibiru1"
         Me.Cibiru1.Size = New System.Drawing.Size(89, 14)
         Me.Cibiru1.TabIndex = 37
@@ -1159,9 +1159,9 @@ Partial Class MarginBaru
         '
         Me.Label38.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(854, 319)
+        Me.Label38.Location = New System.Drawing.Point(847, 325)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(89, 10)
+        Me.Label38.Size = New System.Drawing.Size(101, 11)
         Me.Label38.TabIndex = 36
         Me.Label38.Text = "TOTAL MARGIN"
         Me.Label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1170,9 +1170,9 @@ Partial Class MarginBaru
         '
         Me.Label39.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(657, 319)
+        Me.Label39.Location = New System.Drawing.Point(657, 323)
         Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(89, 10)
+        Me.Label39.Size = New System.Drawing.Size(89, 14)
         Me.Label39.TabIndex = 35
         Me.Label39.Text = "TOTAL JUAL"
         Me.Label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1181,9 +1181,9 @@ Partial Class MarginBaru
         '
         Me.Label40.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.Location = New System.Drawing.Point(754, 319)
+        Me.Label40.Location = New System.Drawing.Point(754, 322)
         Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(89, 10)
+        Me.Label40.Size = New System.Drawing.Size(89, 17)
         Me.Label40.TabIndex = 34
         Me.Label40.Text = "TOTAL BELI"
         Me.Label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1192,7 +1192,7 @@ Partial Class MarginBaru
         '
         Me.Label41.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(559, 319)
+        Me.Label41.Location = New System.Drawing.Point(559, 325)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(89, 10)
         Me.Label41.TabIndex = 33
@@ -1203,9 +1203,9 @@ Partial Class MarginBaru
         '
         Me.Label42.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.Location = New System.Drawing.Point(461, 319)
+        Me.Label42.Location = New System.Drawing.Point(461, 324)
         Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(89, 10)
+        Me.Label42.Size = New System.Drawing.Size(89, 13)
         Me.Label42.TabIndex = 32
         Me.Label42.Text = "DISKON"
         Me.Label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1216,7 +1216,7 @@ Partial Class MarginBaru
         Me.Label43.BackColor = System.Drawing.Color.PeachPuff
         Me.Label43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.Location = New System.Drawing.Point(367, 320)
+        Me.Label43.Location = New System.Drawing.Point(367, 325)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(88, 26)
         Me.Label43.TabIndex = 31
@@ -1230,24 +1230,24 @@ Partial Class MarginBaru
         Me.DataGridViewCibiru.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewCibiru.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle40.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewCibiru.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle40
         Me.DataGridViewCibiru.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewCibiru.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewCibiru.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle41.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewCibiru.DefaultCellStyle = DataGridViewCellStyle41
         Me.DataGridViewCibiru.Location = New System.Drawing.Point(7, 24)
         Me.DataGridViewCibiru.Name = "DataGridViewCibiru"
         Me.DataGridViewCibiru.ReadOnly = True
@@ -1281,7 +1281,7 @@ Partial Class MarginBaru
         Me.Garut5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Garut5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Garut5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Garut5.Location = New System.Drawing.Point(854, 332)
+        Me.Garut5.Location = New System.Drawing.Point(854, 337)
         Me.Garut5.Name = "Garut5"
         Me.Garut5.Size = New System.Drawing.Size(89, 14)
         Me.Garut5.TabIndex = 41
@@ -1293,7 +1293,7 @@ Partial Class MarginBaru
         Me.Garut3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Garut3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Garut3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Garut3.Location = New System.Drawing.Point(657, 332)
+        Me.Garut3.Location = New System.Drawing.Point(657, 336)
         Me.Garut3.Name = "Garut3"
         Me.Garut3.Size = New System.Drawing.Size(89, 14)
         Me.Garut3.TabIndex = 40
@@ -1305,7 +1305,7 @@ Partial Class MarginBaru
         Me.Garut4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Garut4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Garut4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Garut4.Location = New System.Drawing.Point(754, 332)
+        Me.Garut4.Location = New System.Drawing.Point(754, 336)
         Me.Garut4.Name = "Garut4"
         Me.Garut4.Size = New System.Drawing.Size(89, 14)
         Me.Garut4.TabIndex = 39
@@ -1317,7 +1317,7 @@ Partial Class MarginBaru
         Me.Garut2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Garut2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Garut2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Garut2.Location = New System.Drawing.Point(559, 332)
+        Me.Garut2.Location = New System.Drawing.Point(559, 336)
         Me.Garut2.Name = "Garut2"
         Me.Garut2.Size = New System.Drawing.Size(89, 14)
         Me.Garut2.TabIndex = 38
@@ -1329,7 +1329,7 @@ Partial Class MarginBaru
         Me.Garut1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Garut1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Garut1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Garut1.Location = New System.Drawing.Point(461, 332)
+        Me.Garut1.Location = New System.Drawing.Point(461, 336)
         Me.Garut1.Name = "Garut1"
         Me.Garut1.Size = New System.Drawing.Size(89, 14)
         Me.Garut1.TabIndex = 37
@@ -1340,9 +1340,9 @@ Partial Class MarginBaru
         '
         Me.Label27.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(854, 319)
+        Me.Label27.Location = New System.Drawing.Point(843, 319)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(89, 10)
+        Me.Label27.Size = New System.Drawing.Size(107, 20)
         Me.Label27.TabIndex = 36
         Me.Label27.Text = "TOTAL MARGIN"
         Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1351,9 +1351,9 @@ Partial Class MarginBaru
         '
         Me.Label28.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(657, 319)
+        Me.Label28.Location = New System.Drawing.Point(657, 323)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(89, 10)
+        Me.Label28.Size = New System.Drawing.Size(89, 15)
         Me.Label28.TabIndex = 35
         Me.Label28.Text = "TOTAL JUAL"
         Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1362,7 +1362,7 @@ Partial Class MarginBaru
         '
         Me.Label29.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(754, 319)
+        Me.Label29.Location = New System.Drawing.Point(754, 324)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(89, 10)
         Me.Label29.TabIndex = 34
@@ -1373,7 +1373,7 @@ Partial Class MarginBaru
         '
         Me.Label30.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(559, 319)
+        Me.Label30.Location = New System.Drawing.Point(559, 324)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(89, 10)
         Me.Label30.TabIndex = 33
@@ -1384,9 +1384,9 @@ Partial Class MarginBaru
         '
         Me.Label31.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(461, 319)
+        Me.Label31.Location = New System.Drawing.Point(461, 324)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(89, 10)
+        Me.Label31.Size = New System.Drawing.Size(89, 13)
         Me.Label31.TabIndex = 32
         Me.Label31.Text = "DISKON"
         Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1397,7 +1397,7 @@ Partial Class MarginBaru
         Me.Label32.BackColor = System.Drawing.Color.PeachPuff
         Me.Label32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(367, 320)
+        Me.Label32.Location = New System.Drawing.Point(367, 325)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(88, 26)
         Me.Label32.TabIndex = 31
@@ -1411,24 +1411,24 @@ Partial Class MarginBaru
         Me.DataGridViewGarut.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewGarut.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle37.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewGarut.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle37
         Me.DataGridViewGarut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewGarut.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewGarut.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle38.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewGarut.DefaultCellStyle = DataGridViewCellStyle38
         Me.DataGridViewGarut.Location = New System.Drawing.Point(7, 26)
         Me.DataGridViewGarut.Name = "DataGridViewGarut"
         Me.DataGridViewGarut.ReadOnly = True
@@ -1462,7 +1462,7 @@ Partial Class MarginBaru
         Me.Cirebon5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cirebon5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cirebon5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cirebon5.Location = New System.Drawing.Point(854, 332)
+        Me.Cirebon5.Location = New System.Drawing.Point(854, 336)
         Me.Cirebon5.Name = "Cirebon5"
         Me.Cirebon5.Size = New System.Drawing.Size(89, 14)
         Me.Cirebon5.TabIndex = 41
@@ -1474,7 +1474,7 @@ Partial Class MarginBaru
         Me.Cirebon3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cirebon3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cirebon3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cirebon3.Location = New System.Drawing.Point(657, 332)
+        Me.Cirebon3.Location = New System.Drawing.Point(657, 336)
         Me.Cirebon3.Name = "Cirebon3"
         Me.Cirebon3.Size = New System.Drawing.Size(89, 14)
         Me.Cirebon3.TabIndex = 40
@@ -1486,7 +1486,7 @@ Partial Class MarginBaru
         Me.Cirebon4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cirebon4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cirebon4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cirebon4.Location = New System.Drawing.Point(754, 332)
+        Me.Cirebon4.Location = New System.Drawing.Point(754, 336)
         Me.Cirebon4.Name = "Cirebon4"
         Me.Cirebon4.Size = New System.Drawing.Size(89, 14)
         Me.Cirebon4.TabIndex = 39
@@ -1498,7 +1498,7 @@ Partial Class MarginBaru
         Me.Cirebon2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cirebon2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cirebon2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cirebon2.Location = New System.Drawing.Point(559, 332)
+        Me.Cirebon2.Location = New System.Drawing.Point(559, 336)
         Me.Cirebon2.Name = "Cirebon2"
         Me.Cirebon2.Size = New System.Drawing.Size(89, 14)
         Me.Cirebon2.TabIndex = 38
@@ -1510,7 +1510,7 @@ Partial Class MarginBaru
         Me.Cirebon1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Cirebon1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Cirebon1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cirebon1.Location = New System.Drawing.Point(461, 332)
+        Me.Cirebon1.Location = New System.Drawing.Point(461, 336)
         Me.Cirebon1.Name = "Cirebon1"
         Me.Cirebon1.Size = New System.Drawing.Size(89, 14)
         Me.Cirebon1.TabIndex = 37
@@ -1521,9 +1521,9 @@ Partial Class MarginBaru
         '
         Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(854, 319)
+        Me.Label16.Location = New System.Drawing.Point(844, 319)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(89, 10)
+        Me.Label16.Size = New System.Drawing.Size(105, 23)
         Me.Label16.TabIndex = 36
         Me.Label16.Text = "TOTAL MARGIN"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1532,9 +1532,9 @@ Partial Class MarginBaru
         '
         Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(657, 319)
+        Me.Label17.Location = New System.Drawing.Point(657, 322)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(89, 10)
+        Me.Label17.Size = New System.Drawing.Size(89, 14)
         Me.Label17.TabIndex = 35
         Me.Label17.Text = "TOTAL JUAL"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1543,9 +1543,9 @@ Partial Class MarginBaru
         '
         Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(754, 319)
+        Me.Label18.Location = New System.Drawing.Point(754, 322)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(89, 10)
+        Me.Label18.Size = New System.Drawing.Size(89, 16)
         Me.Label18.TabIndex = 34
         Me.Label18.Text = "TOTAL BELI"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1554,9 +1554,9 @@ Partial Class MarginBaru
         '
         Me.Label19.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(559, 319)
+        Me.Label19.Location = New System.Drawing.Point(558, 323)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(89, 10)
+        Me.Label19.Size = New System.Drawing.Size(89, 15)
         Me.Label19.TabIndex = 33
         Me.Label19.Text = "MARGIN"
         Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1565,9 +1565,9 @@ Partial Class MarginBaru
         '
         Me.Label20.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(461, 319)
+        Me.Label20.Location = New System.Drawing.Point(461, 321)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(89, 10)
+        Me.Label20.Size = New System.Drawing.Size(89, 17)
         Me.Label20.TabIndex = 32
         Me.Label20.Text = "DISKON"
         Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1578,7 +1578,7 @@ Partial Class MarginBaru
         Me.Label21.BackColor = System.Drawing.Color.PeachPuff
         Me.Label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(367, 320)
+        Me.Label21.Location = New System.Drawing.Point(367, 324)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(88, 26)
         Me.Label21.TabIndex = 31
@@ -1592,24 +1592,24 @@ Partial Class MarginBaru
         Me.DataGridViewCirebon.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewCirebon.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle34.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewCirebon.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle34
         Me.DataGridViewCirebon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewCirebon.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewCirebon.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle35.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewCirebon.DefaultCellStyle = DataGridViewCellStyle35
         Me.DataGridViewCirebon.Location = New System.Drawing.Point(7, 26)
         Me.DataGridViewCirebon.Name = "DataGridViewCirebon"
         Me.DataGridViewCirebon.ReadOnly = True
@@ -1643,7 +1643,7 @@ Partial Class MarginBaru
         Me.Sumedang5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Sumedang5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Sumedang5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Sumedang5.Location = New System.Drawing.Point(854, 332)
+        Me.Sumedang5.Location = New System.Drawing.Point(854, 336)
         Me.Sumedang5.Name = "Sumedang5"
         Me.Sumedang5.Size = New System.Drawing.Size(89, 14)
         Me.Sumedang5.TabIndex = 30
@@ -1655,7 +1655,7 @@ Partial Class MarginBaru
         Me.Sumedang3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Sumedang3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Sumedang3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Sumedang3.Location = New System.Drawing.Point(657, 332)
+        Me.Sumedang3.Location = New System.Drawing.Point(657, 336)
         Me.Sumedang3.Name = "Sumedang3"
         Me.Sumedang3.Size = New System.Drawing.Size(89, 14)
         Me.Sumedang3.TabIndex = 29
@@ -1667,7 +1667,7 @@ Partial Class MarginBaru
         Me.Sumedang4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Sumedang4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Sumedang4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Sumedang4.Location = New System.Drawing.Point(754, 332)
+        Me.Sumedang4.Location = New System.Drawing.Point(754, 336)
         Me.Sumedang4.Name = "Sumedang4"
         Me.Sumedang4.Size = New System.Drawing.Size(89, 14)
         Me.Sumedang4.TabIndex = 28
@@ -1679,7 +1679,7 @@ Partial Class MarginBaru
         Me.Sumedang2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Sumedang2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Sumedang2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Sumedang2.Location = New System.Drawing.Point(559, 332)
+        Me.Sumedang2.Location = New System.Drawing.Point(559, 337)
         Me.Sumedang2.Name = "Sumedang2"
         Me.Sumedang2.Size = New System.Drawing.Size(89, 14)
         Me.Sumedang2.TabIndex = 27
@@ -1691,7 +1691,7 @@ Partial Class MarginBaru
         Me.Sumedang1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Sumedang1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Sumedang1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Sumedang1.Location = New System.Drawing.Point(461, 332)
+        Me.Sumedang1.Location = New System.Drawing.Point(461, 336)
         Me.Sumedang1.Name = "Sumedang1"
         Me.Sumedang1.Size = New System.Drawing.Size(89, 14)
         Me.Sumedang1.TabIndex = 26
@@ -1702,9 +1702,9 @@ Partial Class MarginBaru
         '
         Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(854, 319)
+        Me.Label10.Location = New System.Drawing.Point(841, 318)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(89, 10)
+        Me.Label10.Size = New System.Drawing.Size(109, 22)
         Me.Label10.TabIndex = 25
         Me.Label10.Text = "TOTAL MARGIN"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1713,9 +1713,9 @@ Partial Class MarginBaru
         '
         Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(657, 319)
+        Me.Label9.Location = New System.Drawing.Point(657, 322)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(89, 10)
+        Me.Label9.Size = New System.Drawing.Size(89, 17)
         Me.Label9.TabIndex = 24
         Me.Label9.Text = "TOTAL JUAL"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1724,9 +1724,9 @@ Partial Class MarginBaru
         '
         Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(754, 319)
+        Me.Label8.Location = New System.Drawing.Point(752, 322)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(89, 10)
+        Me.Label8.Size = New System.Drawing.Size(89, 17)
         Me.Label8.TabIndex = 23
         Me.Label8.Text = "TOTAL BELI"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1735,7 +1735,7 @@ Partial Class MarginBaru
         '
         Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(559, 319)
+        Me.Label7.Location = New System.Drawing.Point(559, 327)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(89, 10)
         Me.Label7.TabIndex = 22
@@ -1746,9 +1746,9 @@ Partial Class MarginBaru
         '
         Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(461, 319)
+        Me.Label6.Location = New System.Drawing.Point(461, 322)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(89, 10)
+        Me.Label6.Size = New System.Drawing.Size(89, 16)
         Me.Label6.TabIndex = 21
         Me.Label6.Text = "DISKON"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1759,7 +1759,7 @@ Partial Class MarginBaru
         Me.Label4.BackColor = System.Drawing.Color.PeachPuff
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(367, 320)
+        Me.Label4.Location = New System.Drawing.Point(367, 324)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(88, 26)
         Me.Label4.TabIndex = 20
@@ -1773,24 +1773,24 @@ Partial Class MarginBaru
         Me.DataGridViewSumedang.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewSumedang.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewSumedang.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridViewSumedang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewSumedang.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewSumedang.DefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewSumedang.DefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridViewSumedang.Location = New System.Drawing.Point(6, 25)
         Me.DataGridViewSumedang.Name = "DataGridViewSumedang"
         Me.DataGridViewSumedang.ReadOnly = True
@@ -1824,7 +1824,7 @@ Partial Class MarginBaru
         Me.Ciparay5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Ciparay5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Ciparay5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ciparay5.Location = New System.Drawing.Point(854, 332)
+        Me.Ciparay5.Location = New System.Drawing.Point(854, 336)
         Me.Ciparay5.Name = "Ciparay5"
         Me.Ciparay5.Size = New System.Drawing.Size(89, 14)
         Me.Ciparay5.TabIndex = 41
@@ -1836,7 +1836,7 @@ Partial Class MarginBaru
         Me.Ciparay3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Ciparay3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Ciparay3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ciparay3.Location = New System.Drawing.Point(657, 332)
+        Me.Ciparay3.Location = New System.Drawing.Point(657, 337)
         Me.Ciparay3.Name = "Ciparay3"
         Me.Ciparay3.Size = New System.Drawing.Size(89, 14)
         Me.Ciparay3.TabIndex = 40
@@ -1848,7 +1848,7 @@ Partial Class MarginBaru
         Me.Ciparay4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Ciparay4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Ciparay4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ciparay4.Location = New System.Drawing.Point(754, 332)
+        Me.Ciparay4.Location = New System.Drawing.Point(754, 336)
         Me.Ciparay4.Name = "Ciparay4"
         Me.Ciparay4.Size = New System.Drawing.Size(89, 14)
         Me.Ciparay4.TabIndex = 39
@@ -1860,7 +1860,7 @@ Partial Class MarginBaru
         Me.Ciparay2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Ciparay2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Ciparay2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ciparay2.Location = New System.Drawing.Point(559, 332)
+        Me.Ciparay2.Location = New System.Drawing.Point(559, 336)
         Me.Ciparay2.Name = "Ciparay2"
         Me.Ciparay2.Size = New System.Drawing.Size(89, 14)
         Me.Ciparay2.TabIndex = 38
@@ -1872,7 +1872,7 @@ Partial Class MarginBaru
         Me.Ciparay1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Ciparay1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Ciparay1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ciparay1.Location = New System.Drawing.Point(461, 332)
+        Me.Ciparay1.Location = New System.Drawing.Point(461, 336)
         Me.Ciparay1.Name = "Ciparay1"
         Me.Ciparay1.Size = New System.Drawing.Size(89, 14)
         Me.Ciparay1.TabIndex = 37
@@ -1883,9 +1883,9 @@ Partial Class MarginBaru
         '
         Me.Label22.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(854, 319)
+        Me.Label22.Location = New System.Drawing.Point(843, 324)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(89, 10)
+        Me.Label22.Size = New System.Drawing.Size(106, 11)
         Me.Label22.TabIndex = 36
         Me.Label22.Text = "TOTAL MARGIN"
         Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1894,9 +1894,9 @@ Partial Class MarginBaru
         '
         Me.Label23.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(657, 319)
+        Me.Label23.Location = New System.Drawing.Point(657, 323)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(89, 10)
+        Me.Label23.Size = New System.Drawing.Size(89, 16)
         Me.Label23.TabIndex = 35
         Me.Label23.Text = "TOTAL JUAL"
         Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1905,9 +1905,9 @@ Partial Class MarginBaru
         '
         Me.Label24.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(754, 319)
+        Me.Label24.Location = New System.Drawing.Point(752, 322)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(89, 10)
+        Me.Label24.Size = New System.Drawing.Size(89, 17)
         Me.Label24.TabIndex = 34
         Me.Label24.Text = "TOTAL BELI"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1916,7 +1916,7 @@ Partial Class MarginBaru
         '
         Me.Label25.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(559, 319)
+        Me.Label25.Location = New System.Drawing.Point(558, 324)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(89, 10)
         Me.Label25.TabIndex = 33
@@ -1927,9 +1927,9 @@ Partial Class MarginBaru
         '
         Me.Label26.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(461, 319)
+        Me.Label26.Location = New System.Drawing.Point(461, 323)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(89, 10)
+        Me.Label26.Size = New System.Drawing.Size(89, 13)
         Me.Label26.TabIndex = 32
         Me.Label26.Text = "DISKON"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1940,7 +1940,7 @@ Partial Class MarginBaru
         Me.Label33.BackColor = System.Drawing.Color.PeachPuff
         Me.Label33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(367, 320)
+        Me.Label33.Location = New System.Drawing.Point(367, 325)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(88, 26)
         Me.Label33.TabIndex = 31
@@ -1954,24 +1954,24 @@ Partial Class MarginBaru
         Me.DataGridViewCiparay.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewCiparay.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewCiparay.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
         Me.DataGridViewCiparay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewCiparay.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewCiparay.DefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewCiparay.DefaultCellStyle = DataGridViewCellStyle24
         Me.DataGridViewCiparay.Location = New System.Drawing.Point(6, 26)
         Me.DataGridViewCiparay.Name = "DataGridViewCiparay"
         Me.DataGridViewCiparay.ReadOnly = True
@@ -2005,7 +2005,7 @@ Partial Class MarginBaru
         Me.Rancaekek5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Rancaekek5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Rancaekek5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Rancaekek5.Location = New System.Drawing.Point(855, 332)
+        Me.Rancaekek5.Location = New System.Drawing.Point(855, 336)
         Me.Rancaekek5.Name = "Rancaekek5"
         Me.Rancaekek5.Size = New System.Drawing.Size(89, 14)
         Me.Rancaekek5.TabIndex = 53
@@ -2017,7 +2017,7 @@ Partial Class MarginBaru
         Me.Rancaekek3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Rancaekek3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Rancaekek3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Rancaekek3.Location = New System.Drawing.Point(658, 332)
+        Me.Rancaekek3.Location = New System.Drawing.Point(658, 336)
         Me.Rancaekek3.Name = "Rancaekek3"
         Me.Rancaekek3.Size = New System.Drawing.Size(89, 14)
         Me.Rancaekek3.TabIndex = 52
@@ -2029,7 +2029,7 @@ Partial Class MarginBaru
         Me.Rancaekek4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Rancaekek4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Rancaekek4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Rancaekek4.Location = New System.Drawing.Point(755, 332)
+        Me.Rancaekek4.Location = New System.Drawing.Point(755, 336)
         Me.Rancaekek4.Name = "Rancaekek4"
         Me.Rancaekek4.Size = New System.Drawing.Size(89, 14)
         Me.Rancaekek4.TabIndex = 51
@@ -2041,7 +2041,7 @@ Partial Class MarginBaru
         Me.Rancaekek2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Rancaekek2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Rancaekek2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Rancaekek2.Location = New System.Drawing.Point(560, 332)
+        Me.Rancaekek2.Location = New System.Drawing.Point(560, 336)
         Me.Rancaekek2.Name = "Rancaekek2"
         Me.Rancaekek2.Size = New System.Drawing.Size(89, 14)
         Me.Rancaekek2.TabIndex = 50
@@ -2053,7 +2053,7 @@ Partial Class MarginBaru
         Me.Rancaekek1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Rancaekek1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Rancaekek1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Rancaekek1.Location = New System.Drawing.Point(462, 332)
+        Me.Rancaekek1.Location = New System.Drawing.Point(462, 336)
         Me.Rancaekek1.Name = "Rancaekek1"
         Me.Rancaekek1.Size = New System.Drawing.Size(89, 14)
         Me.Rancaekek1.TabIndex = 49
@@ -2064,9 +2064,9 @@ Partial Class MarginBaru
         '
         Me.Label34.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(855, 319)
+        Me.Label34.Location = New System.Drawing.Point(844, 319)
         Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(89, 10)
+        Me.Label34.Size = New System.Drawing.Size(109, 17)
         Me.Label34.TabIndex = 48
         Me.Label34.Text = "TOTAL MARGIN"
         Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2075,9 +2075,9 @@ Partial Class MarginBaru
         '
         Me.Label35.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(658, 319)
+        Me.Label35.Location = New System.Drawing.Point(658, 320)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(89, 10)
+        Me.Label35.Size = New System.Drawing.Size(89, 17)
         Me.Label35.TabIndex = 47
         Me.Label35.Text = "TOTAL JUAL"
         Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2086,9 +2086,9 @@ Partial Class MarginBaru
         '
         Me.Label36.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(755, 319)
+        Me.Label36.Location = New System.Drawing.Point(755, 321)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(89, 10)
+        Me.Label36.Size = New System.Drawing.Size(89, 17)
         Me.Label36.TabIndex = 46
         Me.Label36.Text = "TOTAL BELI"
         Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2097,9 +2097,9 @@ Partial Class MarginBaru
         '
         Me.Label37.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(560, 319)
+        Me.Label37.Location = New System.Drawing.Point(560, 320)
         Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(89, 10)
+        Me.Label37.Size = New System.Drawing.Size(89, 17)
         Me.Label37.TabIndex = 45
         Me.Label37.Text = "MARGIN"
         Me.Label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2108,9 +2108,9 @@ Partial Class MarginBaru
         '
         Me.Label44.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label44.Location = New System.Drawing.Point(462, 319)
+        Me.Label44.Location = New System.Drawing.Point(462, 322)
         Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(89, 10)
+        Me.Label44.Size = New System.Drawing.Size(89, 13)
         Me.Label44.TabIndex = 44
         Me.Label44.Text = "DISKON"
         Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2121,7 +2121,7 @@ Partial Class MarginBaru
         Me.Label45.BackColor = System.Drawing.Color.PeachPuff
         Me.Label45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label45.Location = New System.Drawing.Point(368, 320)
+        Me.Label45.Location = New System.Drawing.Point(368, 326)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(88, 26)
         Me.Label45.TabIndex = 43
@@ -2135,24 +2135,24 @@ Partial Class MarginBaru
         Me.DataGridViewRancaekek.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewRancaekek.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewRancaekek.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.DataGridViewRancaekek.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewRancaekek.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewRancaekek.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewRancaekek.DefaultCellStyle = DataGridViewCellStyle12
         Me.DataGridViewRancaekek.Location = New System.Drawing.Point(8, 27)
         Me.DataGridViewRancaekek.Name = "DataGridViewRancaekek"
         Me.DataGridViewRancaekek.ReadOnly = True
@@ -2186,7 +2186,7 @@ Partial Class MarginBaru
         Me.TASIKMALAYA5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TASIKMALAYA5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TASIKMALAYA5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TASIKMALAYA5.Location = New System.Drawing.Point(855, 332)
+        Me.TASIKMALAYA5.Location = New System.Drawing.Point(855, 336)
         Me.TASIKMALAYA5.Name = "TASIKMALAYA5"
         Me.TASIKMALAYA5.Size = New System.Drawing.Size(89, 14)
         Me.TASIKMALAYA5.TabIndex = 65
@@ -2198,7 +2198,7 @@ Partial Class MarginBaru
         Me.TASIKMALAYA3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TASIKMALAYA3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TASIKMALAYA3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TASIKMALAYA3.Location = New System.Drawing.Point(658, 332)
+        Me.TASIKMALAYA3.Location = New System.Drawing.Point(658, 337)
         Me.TASIKMALAYA3.Name = "TASIKMALAYA3"
         Me.TASIKMALAYA3.Size = New System.Drawing.Size(89, 14)
         Me.TASIKMALAYA3.TabIndex = 64
@@ -2210,7 +2210,7 @@ Partial Class MarginBaru
         Me.TASIKMALAYA4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TASIKMALAYA4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TASIKMALAYA4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TASIKMALAYA4.Location = New System.Drawing.Point(755, 332)
+        Me.TASIKMALAYA4.Location = New System.Drawing.Point(755, 337)
         Me.TASIKMALAYA4.Name = "TASIKMALAYA4"
         Me.TASIKMALAYA4.Size = New System.Drawing.Size(89, 14)
         Me.TASIKMALAYA4.TabIndex = 63
@@ -2222,7 +2222,7 @@ Partial Class MarginBaru
         Me.TASIKMALAYA2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TASIKMALAYA2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TASIKMALAYA2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TASIKMALAYA2.Location = New System.Drawing.Point(560, 332)
+        Me.TASIKMALAYA2.Location = New System.Drawing.Point(560, 337)
         Me.TASIKMALAYA2.Name = "TASIKMALAYA2"
         Me.TASIKMALAYA2.Size = New System.Drawing.Size(89, 14)
         Me.TASIKMALAYA2.TabIndex = 62
@@ -2234,7 +2234,7 @@ Partial Class MarginBaru
         Me.TASIKMALAYA1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TASIKMALAYA1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TASIKMALAYA1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TASIKMALAYA1.Location = New System.Drawing.Point(462, 332)
+        Me.TASIKMALAYA1.Location = New System.Drawing.Point(462, 337)
         Me.TASIKMALAYA1.Name = "TASIKMALAYA1"
         Me.TASIKMALAYA1.Size = New System.Drawing.Size(89, 14)
         Me.TASIKMALAYA1.TabIndex = 61
@@ -2245,9 +2245,9 @@ Partial Class MarginBaru
         '
         Me.Label46.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label46.Location = New System.Drawing.Point(855, 319)
+        Me.Label46.Location = New System.Drawing.Point(842, 324)
         Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(89, 10)
+        Me.Label46.Size = New System.Drawing.Size(109, 11)
         Me.Label46.TabIndex = 60
         Me.Label46.Text = "TOTAL MARGIN"
         Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2256,9 +2256,9 @@ Partial Class MarginBaru
         '
         Me.Label47.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label47.Location = New System.Drawing.Point(658, 319)
+        Me.Label47.Location = New System.Drawing.Point(658, 324)
         Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(89, 10)
+        Me.Label47.Size = New System.Drawing.Size(89, 13)
         Me.Label47.TabIndex = 59
         Me.Label47.Text = "TOTAL JUAL"
         Me.Label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2267,9 +2267,9 @@ Partial Class MarginBaru
         '
         Me.Label48.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label48.Location = New System.Drawing.Point(755, 319)
+        Me.Label48.Location = New System.Drawing.Point(754, 321)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(89, 10)
+        Me.Label48.Size = New System.Drawing.Size(91, 18)
         Me.Label48.TabIndex = 58
         Me.Label48.Text = "TOTAL BELI"
         Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2278,9 +2278,9 @@ Partial Class MarginBaru
         '
         Me.Label55.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label55.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label55.Location = New System.Drawing.Point(560, 319)
+        Me.Label55.Location = New System.Drawing.Point(560, 321)
         Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(89, 10)
+        Me.Label55.Size = New System.Drawing.Size(89, 18)
         Me.Label55.TabIndex = 57
         Me.Label55.Text = "MARGIN"
         Me.Label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2289,9 +2289,9 @@ Partial Class MarginBaru
         '
         Me.Label56.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label56.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label56.Location = New System.Drawing.Point(462, 319)
+        Me.Label56.Location = New System.Drawing.Point(462, 321)
         Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(89, 10)
+        Me.Label56.Size = New System.Drawing.Size(89, 18)
         Me.Label56.TabIndex = 56
         Me.Label56.Text = "DISKON"
         Me.Label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2316,24 +2316,24 @@ Partial Class MarginBaru
         Me.DataGridViewTASIKMALAYA.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTASIKMALAYA.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTASIKMALAYA.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle29
         Me.DataGridViewTASIKMALAYA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewTASIKMALAYA.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewTASIKMALAYA.DefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTASIKMALAYA.DefaultCellStyle = DataGridViewCellStyle30
         Me.DataGridViewTASIKMALAYA.Location = New System.Drawing.Point(8, 28)
         Me.DataGridViewTASIKMALAYA.Name = "DataGridViewTASIKMALAYA"
         Me.DataGridViewTASIKMALAYA.ReadOnly = True
@@ -2367,7 +2367,7 @@ Partial Class MarginBaru
         Me.PAMANUKAN5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PAMANUKAN5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PAMANUKAN5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PAMANUKAN5.Location = New System.Drawing.Point(855, 332)
+        Me.PAMANUKAN5.Location = New System.Drawing.Point(855, 337)
         Me.PAMANUKAN5.Name = "PAMANUKAN5"
         Me.PAMANUKAN5.Size = New System.Drawing.Size(89, 14)
         Me.PAMANUKAN5.TabIndex = 65
@@ -2379,7 +2379,7 @@ Partial Class MarginBaru
         Me.PAMANUKAN3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PAMANUKAN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PAMANUKAN3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PAMANUKAN3.Location = New System.Drawing.Point(658, 332)
+        Me.PAMANUKAN3.Location = New System.Drawing.Point(658, 336)
         Me.PAMANUKAN3.Name = "PAMANUKAN3"
         Me.PAMANUKAN3.Size = New System.Drawing.Size(89, 14)
         Me.PAMANUKAN3.TabIndex = 64
@@ -2391,7 +2391,7 @@ Partial Class MarginBaru
         Me.PAMANUKAN4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PAMANUKAN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PAMANUKAN4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PAMANUKAN4.Location = New System.Drawing.Point(755, 332)
+        Me.PAMANUKAN4.Location = New System.Drawing.Point(755, 336)
         Me.PAMANUKAN4.Name = "PAMANUKAN4"
         Me.PAMANUKAN4.Size = New System.Drawing.Size(89, 14)
         Me.PAMANUKAN4.TabIndex = 63
@@ -2403,7 +2403,7 @@ Partial Class MarginBaru
         Me.PAMANUKAN2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PAMANUKAN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PAMANUKAN2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PAMANUKAN2.Location = New System.Drawing.Point(560, 332)
+        Me.PAMANUKAN2.Location = New System.Drawing.Point(560, 336)
         Me.PAMANUKAN2.Name = "PAMANUKAN2"
         Me.PAMANUKAN2.Size = New System.Drawing.Size(89, 14)
         Me.PAMANUKAN2.TabIndex = 62
@@ -2415,7 +2415,7 @@ Partial Class MarginBaru
         Me.PAMANUKAN1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PAMANUKAN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PAMANUKAN1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PAMANUKAN1.Location = New System.Drawing.Point(462, 332)
+        Me.PAMANUKAN1.Location = New System.Drawing.Point(462, 336)
         Me.PAMANUKAN1.Name = "PAMANUKAN1"
         Me.PAMANUKAN1.Size = New System.Drawing.Size(89, 14)
         Me.PAMANUKAN1.TabIndex = 61
@@ -2426,9 +2426,9 @@ Partial Class MarginBaru
         '
         Me.Label69.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label69.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label69.Location = New System.Drawing.Point(855, 316)
+        Me.Label69.Location = New System.Drawing.Point(846, 316)
         Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(89, 16)
+        Me.Label69.Size = New System.Drawing.Size(103, 16)
         Me.Label69.TabIndex = 60
         Me.Label69.Text = "TOTAL MARGIN"
         Me.Label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2483,7 +2483,7 @@ Partial Class MarginBaru
         Me.Label80.BackColor = System.Drawing.Color.PeachPuff
         Me.Label80.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label80.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label80.Location = New System.Drawing.Point(368, 320)
+        Me.Label80.Location = New System.Drawing.Point(368, 324)
         Me.Label80.Name = "Label80"
         Me.Label80.Size = New System.Drawing.Size(88, 26)
         Me.Label80.TabIndex = 55
@@ -2497,24 +2497,24 @@ Partial Class MarginBaru
         Me.DataGridViewPAMANUKAN.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewPAMANUKAN.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewPAMANUKAN.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
         Me.DataGridViewPAMANUKAN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewPAMANUKAN.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewPAMANUKAN.DefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewPAMANUKAN.DefaultCellStyle = DataGridViewCellStyle16
         Me.DataGridViewPAMANUKAN.Location = New System.Drawing.Point(8, 27)
         Me.DataGridViewPAMANUKAN.Name = "DataGridViewPAMANUKAN"
         Me.DataGridViewPAMANUKAN.ReadOnly = True
@@ -2549,7 +2549,7 @@ Partial Class MarginBaru
         Me.Soetta5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Soetta5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Soetta5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Soetta5.Location = New System.Drawing.Point(856, 331)
+        Me.Soetta5.Location = New System.Drawing.Point(851, 331)
         Me.Soetta5.Name = "Soetta5"
         Me.Soetta5.Size = New System.Drawing.Size(89, 14)
         Me.Soetta5.TabIndex = 76
@@ -2608,9 +2608,9 @@ Partial Class MarginBaru
         '
         Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(856, 319)
+        Me.Label14.Location = New System.Drawing.Point(839, 313)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(89, 16)
+        Me.Label14.Size = New System.Drawing.Size(109, 18)
         Me.Label14.TabIndex = 71
         Me.Label14.Text = "TOTAL MARGIN"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2630,7 +2630,7 @@ Partial Class MarginBaru
         '
         Me.Label58.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label58.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label58.Location = New System.Drawing.Point(756, 318)
+        Me.Label58.Location = New System.Drawing.Point(753, 315)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(89, 15)
         Me.Label58.TabIndex = 69
@@ -2679,24 +2679,24 @@ Partial Class MarginBaru
         Me.DataGridViewSOEKARNOHATTA.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewSOEKARNOHATTA.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewSOEKARNOHATTA.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle31
         Me.DataGridViewSOEKARNOHATTA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewSOEKARNOHATTA.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewSOEKARNOHATTA.DefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle32.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewSOEKARNOHATTA.DefaultCellStyle = DataGridViewCellStyle32
         Me.DataGridViewSOEKARNOHATTA.Location = New System.Drawing.Point(9, 32)
         Me.DataGridViewSOEKARNOHATTA.Name = "DataGridViewSOEKARNOHATTA"
         Me.DataGridViewSOEKARNOHATTA.ReadOnly = True
