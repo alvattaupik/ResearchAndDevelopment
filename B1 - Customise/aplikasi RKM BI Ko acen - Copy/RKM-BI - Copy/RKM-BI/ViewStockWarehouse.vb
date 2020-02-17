@@ -47,9 +47,9 @@ Public Class ViewStockWarehouse
 
         Koneksi()
         'GroupBox1.Text = MarginBaru.TxtCek.Text
-        txtKodebarang.Text = MarginBaru.TxtCek.Text
+        txtKodebarang.Text = MarginBaruV1_1.TxtCek.Text
 
-        MyCommand = New SqlDataAdapter("select t0.WhsCode,t2.WhsName,t0.OnHand-t0.IsCommited,t0.OnHand,t0.IsCommited,t0.OnOrder from oitw t0 left join oitm t1 on t1.ItemCode=t0.ItemCode left join owhs t2 on t2.WhsCode=t0.WhsCode where (t0.WhsCode not like '%002' and t0.whscode not like '01000001' and t0.WhsCode not like '%003' and t0.WhsCode  not like 'ds') and t0.ItemCode='" + Trim(MarginBaru.TxtCek.Text) + "'", MyConnection)
+        MyCommand = New SqlDataAdapter("select t0.WhsCode,t2.WhsName,t0.OnHand-t0.IsCommited,t0.OnHand,t0.IsCommited,t0.OnOrder from oitw t0 left join oitm t1 on t1.ItemCode=t0.ItemCode left join owhs t2 on t2.WhsCode=t0.WhsCode where (t0.WhsCode not like '%002' and t0.whscode not like '01000001' and t0.WhsCode not like '%003' and t0.WhsCode  not like 'ds') and t0.ItemCode='" + Trim(MarginBaruV1_1.TxtCek.Text) + "'", MyConnection)
         DtSet = New DataSet()
         DtSet.Clear()
         MyCommand.Fill(DtSet, "oitw")

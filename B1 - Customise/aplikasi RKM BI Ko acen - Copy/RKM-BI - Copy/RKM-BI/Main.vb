@@ -844,8 +844,11 @@ Public Class Main
     End Sub
 
     Private Sub PictureBox11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox11.Click
-        MarginBaru.MdiParent = Me
-        MarginBaru.Show()
+        'MarginBaru.MdiParent = Me
+        'MarginBaru.Show()
+        MarginBaruV1_1.MdiParent = Me
+        MarginBaruV1_1.Show()
+
     End Sub
 
     Private Sub PictureBox12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox12.Click

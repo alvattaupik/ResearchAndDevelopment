@@ -367,4 +367,31 @@ ErrorHandler:
     Private Sub PingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PingToolStripMenuItem.Click
         FormPing.ShowDialog()
     End Sub
+
+
+
+    Private Sub dgInventoryData_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgInventoryData.ColumnHeaderMouseClick
+        For i As Integer = 0 To dgInventoryData.Rows.Count - 1
+            dgInventoryData.Rows(i).Cells(2).Style.ForeColor = Color.Black
+        Next
+    End Sub
+
+
+
+    Private Sub dgInventoryData_SelectionChanged(sender As Object, e As EventArgs) Handles dgInventoryData.SelectionChanged
+
+        On Error Resume Next
+        For i As Integer = 0 To dgInventoryData.Rows.Count - 1
+            dgInventoryData.Rows(i).Cells(2).Style.ForeColor = Color.Black
+        Next
+
+    End Sub
+
+    Private Sub dgInventoryData_Sorted(sender As Object, e As EventArgs) Handles dgInventoryData.Sorted
+        On Error Resume Next
+        For i As Integer = 0 To dgInventoryData.Rows.Count - 1
+            dgInventoryData.Rows(i).Cells(2).Style.ForeColor = Color.Black
+        Next
+    End Sub
+
 End Class

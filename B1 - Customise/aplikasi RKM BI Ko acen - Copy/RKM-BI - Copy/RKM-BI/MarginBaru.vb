@@ -92,7 +92,7 @@ Public Class MarginBaru
         DataGridABM.Columns(5).Width = 50
         DataGridABM.Columns(6).Width = 50
         DataGridABM.Columns(7).Width = 80
-        DataGridABM.Columns(8).Width = 80
+        DataGridABM.Columns(8).Width = 0
         DataGridABM.Columns(9).Width = 80
         DataGridABM.Columns(10).Width = 80
         DataGridABM.Columns(11).Width = 80
@@ -197,7 +197,7 @@ Public Class MarginBaru
         DataGridViewAyani.Columns(5).Width = 50
         DataGridViewAyani.Columns(6).Width = 50
         DataGridViewAyani.Columns(7).Width = 80
-        DataGridViewAyani.Columns(8).Width = 80
+        DataGridViewAyani.Columns(8).Width = 0 'Diskon
         DataGridViewAyani.Columns(9).Width = 80
         DataGridViewAyani.Columns(10).Width = 80
         DataGridViewAyani.Columns(11).Width = 80
@@ -307,7 +307,7 @@ Public Class MarginBaru
         DataGridViewGarut.Columns(5).Width = 50
         DataGridViewGarut.Columns(6).Width = 50
         DataGridViewGarut.Columns(7).Width = 80
-        DataGridViewGarut.Columns(8).Width = 80
+        DataGridViewGarut.Columns(8).Width = 0 'Diskon
         DataGridViewGarut.Columns(9).Width = 80
         DataGridViewGarut.Columns(10).Width = 80
         DataGridViewGarut.Columns(11).Width = 80
@@ -416,7 +416,7 @@ Public Class MarginBaru
         DataGridViewCirebon.Columns(5).Width = 50
         DataGridViewCirebon.Columns(6).Width = 50
         DataGridViewCirebon.Columns(7).Width = 80
-        DataGridViewCirebon.Columns(8).Width = 80
+        DataGridViewCirebon.Columns(8).Width = 0 'Diskon
         DataGridViewCirebon.Columns(9).Width = 80
         DataGridViewCirebon.Columns(10).Width = 80
         DataGridViewCirebon.Columns(11).Width = 80
@@ -522,7 +522,7 @@ Public Class MarginBaru
         DataGridViewKopo.Columns(5).Width = 50
         DataGridViewKopo.Columns(6).Width = 50
         DataGridViewKopo.Columns(7).Width = 80
-        DataGridViewKopo.Columns(8).Width = 80
+        DataGridViewKopo.Columns(8).Width = 0 'Diskon
         DataGridViewKopo.Columns(9).Width = 80
         DataGridViewKopo.Columns(10).Width = 80
         DataGridViewKopo.Columns(11).Width = 80
@@ -628,7 +628,7 @@ Public Class MarginBaru
         DataGridViewCibabat.Columns(5).Width = 50
         DataGridViewCibabat.Columns(6).Width = 50
         DataGridViewCibabat.Columns(7).Width = 80
-        DataGridViewCibabat.Columns(8).Width = 80
+        DataGridViewCibabat.Columns(8).Width = 0 'Diskon
         DataGridViewCibabat.Columns(9).Width = 80
         DataGridViewCibabat.Columns(10).Width = 80
         DataGridViewCibabat.Columns(11).Width = 80
@@ -733,7 +733,7 @@ Public Class MarginBaru
         DataGridViewCibiru.Columns(5).Width = 50
         DataGridViewCibiru.Columns(6).Width = 50
         DataGridViewCibiru.Columns(7).Width = 80
-        DataGridViewCibiru.Columns(8).Width = 80
+        DataGridViewCibiru.Columns(8).Width = 0 'Diskon
         DataGridViewCibiru.Columns(9).Width = 80
         DataGridViewCibiru.Columns(10).Width = 80
         DataGridViewCibiru.Columns(11).Width = 80
@@ -840,7 +840,7 @@ Public Class MarginBaru
         DataGridViewSumedang.Columns(5).Width = 50
         DataGridViewSumedang.Columns(6).Width = 50
         DataGridViewSumedang.Columns(7).Width = 80
-        DataGridViewSumedang.Columns(8).Width = 80
+        DataGridViewSumedang.Columns(8).Width = 0 'Diskon
         DataGridViewSumedang.Columns(9).Width = 80
         DataGridViewSumedang.Columns(10).Width = 80
         DataGridViewSumedang.Columns(11).Width = 80
@@ -946,7 +946,7 @@ Public Class MarginBaru
         DataGridViewRancaekek.Columns(5).Width = 50
         DataGridViewRancaekek.Columns(6).Width = 50
         DataGridViewRancaekek.Columns(7).Width = 80
-        DataGridViewRancaekek.Columns(8).Width = 80
+        DataGridViewRancaekek.Columns(8).Width = 0 'Diskon
         DataGridViewRancaekek.Columns(9).Width = 80
         DataGridViewRancaekek.Columns(10).Width = 80
         DataGridViewRancaekek.Columns(11).Width = 80
@@ -1056,7 +1056,7 @@ Public Class MarginBaru
         DataGridViewCiparay.Columns(5).Width = 50
         DataGridViewCiparay.Columns(6).Width = 50
         DataGridViewCiparay.Columns(7).Width = 80
-        DataGridViewCiparay.Columns(8).Width = 80
+        DataGridViewCiparay.Columns(8).Width = 0 'Diskon
         DataGridViewCiparay.Columns(9).Width = 80
         DataGridViewCiparay.Columns(10).Width = 80
         DataGridViewCiparay.Columns(11).Width = 80
@@ -1166,7 +1166,7 @@ Public Class MarginBaru
         DataGridViewTASIKMALAYA.Columns(5).Width = 50
         DataGridViewTASIKMALAYA.Columns(6).Width = 50
         DataGridViewTASIKMALAYA.Columns(7).Width = 80
-        DataGridViewTASIKMALAYA.Columns(8).Width = 80
+        DataGridViewTASIKMALAYA.Columns(8).Width = 0 'Diskon
         DataGridViewTASIKMALAYA.Columns(9).Width = 80
         DataGridViewTASIKMALAYA.Columns(10).Width = 80
         DataGridViewTASIKMALAYA.Columns(11).Width = 80
@@ -1276,7 +1276,7 @@ Public Class MarginBaru
         DataGridViewPAMANUKAN.Columns(5).Width = 50
         DataGridViewPAMANUKAN.Columns(6).Width = 50
         DataGridViewPAMANUKAN.Columns(7).Width = 80
-        DataGridViewPAMANUKAN.Columns(8).Width = 80
+        DataGridViewPAMANUKAN.Columns(8).Width = 0 'Diskon
         DataGridViewPAMANUKAN.Columns(9).Width = 80
         DataGridViewPAMANUKAN.Columns(10).Width = 80
         DataGridViewPAMANUKAN.Columns(11).Width = 80
@@ -1384,7 +1384,7 @@ Public Class MarginBaru
         DataGridViewSOEKARNOHATTA.Columns(5).Width = 50
         DataGridViewSOEKARNOHATTA.Columns(6).Width = 50
         DataGridViewSOEKARNOHATTA.Columns(7).Width = 80
-        DataGridViewSOEKARNOHATTA.Columns(8).Width = 80
+        DataGridViewSOEKARNOHATTA.Columns(8).Width = 0 'Diskon
         DataGridViewSOEKARNOHATTA.Columns(9).Width = 80
         DataGridViewSOEKARNOHATTA.Columns(10).Width = 80
         DataGridViewSOEKARNOHATTA.Columns(11).Width = 80
@@ -1557,7 +1557,7 @@ Public Class MarginBaru
 
         Next
 
-    
+
         ABM1.Text = Format(hasil4, "N0")
         ABM2.Text = Format(hasil, "N0")
         ABM3.Text = Format(hasil1, "N0")
@@ -1576,7 +1576,7 @@ Public Class MarginBaru
 
     End Sub
     Sub LoadDataMarginAYANI()
- 
+
         Koneksi()
         Dim i As Integer
         Dim awal, akhir As String
@@ -2398,7 +2398,7 @@ Public Class MarginBaru
 
         Next
 
-      
+
 
         Sumedang1.Text = Format(hasil4, "N0")
         Sumedang2.Text = Format(hasil, "N0")
@@ -3239,7 +3239,7 @@ Public Class MarginBaru
             Call CopyDataGridViewToClipboard(DataGridViewPAMANUKAN)
         End If
 
-        If strNamaGrid = "dgSoekarnoHatta" Then
+        If strNamaGrid = "DataGridViewSoekarnoHatta" Then
             Call CopyDataGridViewToClipboard(DataGridViewSOEKARNOHATTA)
         End If
 
@@ -3298,7 +3298,7 @@ Public Class MarginBaru
 
 
     Private Sub SOEKARNOHATTA_Click(sender As Object, e As EventArgs) Handles SOEKARNOHATTA.Click
-        strNamaGrid = "dgSoekarnoHatta"
+        strNamaGrid = "DataGridViewSoekarnoHatta"
     End Sub
 
 

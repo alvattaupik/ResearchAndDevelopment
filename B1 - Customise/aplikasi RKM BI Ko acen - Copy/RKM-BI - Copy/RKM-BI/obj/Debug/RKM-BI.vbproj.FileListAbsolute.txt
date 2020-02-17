@@ -113,3 +113,4 @@ D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM B
 D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RdlCompile.compiled
 D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe.manifest
 D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.application
+D:\Research And Development\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginBaruV1_1.resources

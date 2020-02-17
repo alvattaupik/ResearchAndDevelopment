@@ -7,7 +7,7 @@ Imports System.Data.SqlClient
 Imports System.IO
 Imports Microsoft.VisualBasic
 Imports ZedGraph
-Public Class MarginBaru
+Public Class MarginBaruV1_1
     Public kodeBarang As String
     Dim MyCommand As SqlDataAdapter
     Dim DtSet As System.Data.DataSet
@@ -1557,7 +1557,7 @@ Public Class MarginBaru
 
         Next
 
-    
+
         ABM1.Text = Format(hasil4, "N0")
         ABM2.Text = Format(hasil, "N0")
         ABM3.Text = Format(hasil1, "N0")
@@ -1576,7 +1576,7 @@ Public Class MarginBaru
 
     End Sub
     Sub LoadDataMarginAYANI()
- 
+
         Koneksi()
         Dim i As Integer
         Dim awal, akhir As String
@@ -2398,7 +2398,7 @@ Public Class MarginBaru
 
         Next
 
-      
+
 
         Sumedang1.Text = Format(hasil4, "N0")
         Sumedang2.Text = Format(hasil, "N0")
@@ -3239,7 +3239,7 @@ Public Class MarginBaru
             Call CopyDataGridViewToClipboard(DataGridViewPAMANUKAN)
         End If
 
-        If strNamaGrid = "DataGridViewSOEKARNOHATTA" Then
+        If strNamaGrid = "DataGridViewSoekarnoHatta" Then
             Call CopyDataGridViewToClipboard(DataGridViewSOEKARNOHATTA)
         End If
 
@@ -3298,7 +3298,7 @@ Public Class MarginBaru
 
 
     Private Sub SOEKARNOHATTA_Click(sender As Object, e As EventArgs) Handles SOEKARNOHATTA.Click
-        strNamaGrid = "DataGridViewSOEKARNOHATTA"
+        strNamaGrid = "DataGridViewSoekarnoHatta"
     End Sub
 
 

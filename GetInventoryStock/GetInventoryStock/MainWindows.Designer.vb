@@ -26,6 +26,7 @@ Partial Class MainWindows
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblJudul = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.cmdStopALL = New System.Windows.Forms.Button()
         Me.lblStatus = New System.Windows.Forms.Label()
@@ -34,6 +35,7 @@ Partial Class MainWindows
         Me.btTutup = New System.Windows.Forms.Button()
         Me.dgItemList = New System.Windows.Forms.DataGridView()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.lblItemGroup = New System.Windows.Forms.Label()
         Me.lblDescription = New System.Windows.Forms.Label()
         Me.lbltemNo = New System.Windows.Forms.Label()
@@ -50,22 +52,20 @@ Partial Class MainWindows
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowMyIPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.gbItem.SuspendLayout()
         CType(Me.dgItemList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgInventoryData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -104,6 +104,16 @@ Partial Class MainWindows
         Me.lblJudul.TabIndex = 0
         Me.lblJudul.Text = "REAL STOCK MONITORING"
         Me.lblJudul.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.MonitoringRealStock.My.Resources.Resources.kop_surat_RKM
+        Me.PictureBox2.Location = New System.Drawing.Point(9, 6)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(166, 70)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
         '
         'GroupBox2
         '
@@ -203,6 +213,16 @@ Partial Class MainWindows
         Me.GroupBox3.Size = New System.Drawing.Size(796, 157)
         Me.GroupBox3.TabIndex = 24
         Me.GroupBox3.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.MonitoringRealStock.My.Resources.Resources.Inventory_Module_icon
+        Me.PictureBox3.Location = New System.Drawing.Point(6, 18)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(119, 112)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 24
+        Me.PictureBox3.TabStop = False
         '
         'lblItemGroup
         '
@@ -341,8 +361,14 @@ Partial Class MainWindows
         'ShowMyIPToolStripMenuItem
         '
         Me.ShowMyIPToolStripMenuItem.Name = "ShowMyIPToolStripMenuItem"
-        Me.ShowMyIPToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ShowMyIPToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.ShowMyIPToolStripMenuItem.Text = "Show My IP"
+        '
+        'PingToolStripMenuItem
+        '
+        Me.PingToolStripMenuItem.Name = "PingToolStripMenuItem"
+        Me.PingToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.PingToolStripMenuItem.Text = "Ping"
         '
         'AboutToolStripMenuItem1
         '
@@ -356,32 +382,6 @@ Partial Class MainWindows
         Me.ChangeLogToolStripMenuItem.Name = "ChangeLogToolStripMenuItem"
         Me.ChangeLogToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.ChangeLogToolStripMenuItem.Text = "Change Log"
-        '
-        'PingToolStripMenuItem
-        '
-        Me.PingToolStripMenuItem.Name = "PingToolStripMenuItem"
-        Me.PingToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PingToolStripMenuItem.Text = "Ping"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.MonitoringRealStock.My.Resources.Resources.kop_surat_RKM
-        Me.PictureBox2.Location = New System.Drawing.Point(9, 6)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(166, 70)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 2
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.MonitoringRealStock.My.Resources.Resources.Inventory_Module_icon
-        Me.PictureBox3.Location = New System.Drawing.Point(6, 18)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(119, 112)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 24
-        Me.PictureBox3.TabStop = False
         '
         'MainWindows
         '
@@ -398,20 +398,20 @@ Partial Class MainWindows
         Me.Text = "Real Stock Monitoring"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.gbItem.ResumeLayout(False)
         CType(Me.dgItemList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.dgInventoryData, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
