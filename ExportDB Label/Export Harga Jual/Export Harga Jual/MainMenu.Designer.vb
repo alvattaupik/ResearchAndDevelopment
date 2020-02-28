@@ -22,7 +22,10 @@ Partial Class MainMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.cmbGroup = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.StatusStrip2 = New System.Windows.Forms.StatusStrip()
         Me.lblJumlahDataSAP = New System.Windows.Forms.ToolStripStatusLabel()
         Me.txtCariAset = New System.Windows.Forms.TextBox()
@@ -69,6 +72,8 @@ Partial Class MainMenu
         Me.cmdTambahSudahDicetak = New System.Windows.Forms.Button()
         Me.dgAsetSAPSudahDicetak = New System.Windows.Forms.DataGridView()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CopyTableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox2.SuspendLayout()
         Me.StatusStrip2.SuspendLayout()
         CType(Me.dgAsetSAP, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,10 +91,13 @@ Partial Class MainMenu
         Me.GroupBox4.SuspendLayout()
         Me.test.SuspendLayout()
         CType(Me.dgAsetSAPSudahDicetak, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.cmbGroup)
+        Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.StatusStrip2)
         Me.GroupBox2.Controls.Add(Me.txtCariAset)
         Me.GroupBox2.Controls.Add(Me.Label4)
@@ -99,15 +107,34 @@ Partial Class MainMenu
         Me.GroupBox2.Controls.Add(Me.dgAsetSAP)
         Me.GroupBox2.Location = New System.Drawing.Point(7, 6)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(612, 260)
+        Me.GroupBox2.Size = New System.Drawing.Size(612, 290)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Daftar Aset SAP"
         '
+        'cmbGroup
+        '
+        Me.cmbGroup.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbGroup.FormattingEnabled = True
+        Me.cmbGroup.Location = New System.Drawing.Point(148, 45)
+        Me.cmbGroup.Name = "cmbGroup"
+        Me.cmbGroup.Size = New System.Drawing.Size(458, 24)
+        Me.cmbGroup.TabIndex = 8
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(18, 52)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(54, 17)
+        Me.Label8.TabIndex = 7
+        Me.Label8.Text = "Group"
+        '
         'StatusStrip2
         '
         Me.StatusStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblJumlahDataSAP})
-        Me.StatusStrip2.Location = New System.Drawing.Point(3, 235)
+        Me.StatusStrip2.Location = New System.Drawing.Point(3, 265)
         Me.StatusStrip2.Name = "StatusStrip2"
         Me.StatusStrip2.Size = New System.Drawing.Size(606, 22)
         Me.StatusStrip2.TabIndex = 6
@@ -123,35 +150,35 @@ Partial Class MainMenu
         'txtCariAset
         '
         Me.txtCariAset.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCariAset.Location = New System.Drawing.Point(342, 19)
+        Me.txtCariAset.Location = New System.Drawing.Point(148, 75)
         Me.txtCariAset.Name = "txtCariAset"
-        Me.txtCariAset.Size = New System.Drawing.Size(264, 25)
+        Me.txtCariAset.Size = New System.Drawing.Size(458, 25)
         Me.txtCariAset.TabIndex = 5
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(260, 24)
+        Me.Label4.Location = New System.Drawing.Point(16, 81)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 17)
+        Me.Label4.Size = New System.Drawing.Size(91, 17)
         Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Cari Aset"
+        Me.Label4.Text = "Nama  Aset"
         '
         'cmbLokasi
         '
         Me.cmbLokasi.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbLokasi.FormattingEnabled = True
-        Me.cmbLokasi.Location = New System.Drawing.Point(76, 22)
+        Me.cmbLokasi.Location = New System.Drawing.Point(148, 15)
         Me.cmbLokasi.Name = "cmbLokasi"
-        Me.cmbLokasi.Size = New System.Drawing.Size(178, 24)
+        Me.cmbLokasi.Size = New System.Drawing.Size(458, 24)
         Me.cmbLokasi.TabIndex = 3
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(14, 22)
+        Me.Label3.Location = New System.Drawing.Point(19, 22)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 17)
         Me.Label3.TabIndex = 2
@@ -160,9 +187,9 @@ Partial Class MainMenu
         'cmdTambah
         '
         Me.cmdTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdTambah.Location = New System.Drawing.Point(538, 57)
+        Me.cmdTambah.Location = New System.Drawing.Point(538, 117)
         Me.cmdTambah.Name = "cmdTambah"
-        Me.cmdTambah.Size = New System.Drawing.Size(68, 172)
+        Me.cmdTambah.Size = New System.Drawing.Size(68, 141)
         Me.cmdTambah.TabIndex = 1
         Me.cmdTambah.Text = "Tambah"
         Me.cmdTambah.UseVisualStyleBackColor = True
@@ -172,9 +199,10 @@ Partial Class MainMenu
         Me.dgAsetSAP.AllowUserToAddRows = False
         Me.dgAsetSAP.AllowUserToDeleteRows = False
         Me.dgAsetSAP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgAsetSAP.Location = New System.Drawing.Point(15, 57)
+        Me.dgAsetSAP.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.dgAsetSAP.Location = New System.Drawing.Point(11, 117)
         Me.dgAsetSAP.Name = "dgAsetSAP"
-        Me.dgAsetSAP.Size = New System.Drawing.Size(517, 176)
+        Me.dgAsetSAP.Size = New System.Drawing.Size(517, 145)
         Me.dgAsetSAP.TabIndex = 0
         '
         'GroupBox3
@@ -182,9 +210,9 @@ Partial Class MainMenu
         Me.GroupBox3.Controls.Add(Me.StatusStrip3)
         Me.GroupBox3.Controls.Add(Me.cmdExportDB)
         Me.GroupBox3.Controls.Add(Me.dgKeranjangExport)
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 272)
+        Me.GroupBox3.Location = New System.Drawing.Point(6, 300)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(613, 256)
+        Me.GroupBox3.Size = New System.Drawing.Size(613, 235)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Keranjang Export"
@@ -192,7 +220,7 @@ Partial Class MainMenu
         'StatusStrip3
         '
         Me.StatusStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblJumlahData})
-        Me.StatusStrip3.Location = New System.Drawing.Point(3, 228)
+        Me.StatusStrip3.Location = New System.Drawing.Point(3, 207)
         Me.StatusStrip3.Name = "StatusStrip3"
         Me.StatusStrip3.Size = New System.Drawing.Size(607, 25)
         Me.StatusStrip3.TabIndex = 3
@@ -208,9 +236,9 @@ Partial Class MainMenu
         'cmdExportDB
         '
         Me.cmdExportDB.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdExportDB.Location = New System.Drawing.Point(539, 19)
+        Me.cmdExportDB.Location = New System.Drawing.Point(539, 26)
         Me.cmdExportDB.Name = "cmdExportDB"
-        Me.cmdExportDB.Size = New System.Drawing.Size(68, 204)
+        Me.cmdExportDB.Size = New System.Drawing.Size(68, 173)
         Me.cmdExportDB.TabIndex = 2
         Me.cmdExportDB.Text = "Export Data"
         Me.cmdExportDB.UseVisualStyleBackColor = True
@@ -220,9 +248,9 @@ Partial Class MainMenu
         Me.dgKeranjangExport.AllowUserToAddRows = False
         Me.dgKeranjangExport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgKeranjangExport.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.KodeAset, Me.NamaAset, Me.Tahun, Me.ItemName, Me.Lokasi})
-        Me.dgKeranjangExport.Location = New System.Drawing.Point(12, 19)
+        Me.dgKeranjangExport.Location = New System.Drawing.Point(12, 26)
         Me.dgKeranjangExport.Name = "dgKeranjangExport"
-        Me.dgKeranjangExport.Size = New System.Drawing.Size(521, 204)
+        Me.dgKeranjangExport.Size = New System.Drawing.Size(521, 172)
         Me.dgKeranjangExport.TabIndex = 0
         '
         'KodeAset
@@ -520,6 +548,18 @@ Partial Class MainMenu
         Me.StatusStrip1.TabIndex = 3
         Me.StatusStrip1.Text = "StatusStrip1"
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyTableToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(134, 26)
+        '
+        'CopyTableToolStripMenuItem
+        '
+        Me.CopyTableToolStripMenuItem.Name = "CopyTableToolStripMenuItem"
+        Me.CopyTableToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CopyTableToolStripMenuItem.Text = "Copy Table"
+        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -558,6 +598,7 @@ Partial Class MainMenu
         Me.test.ResumeLayout(False)
         Me.test.PerformLayout()
         CType(Me.dgAsetSAPSudahDicetak, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -609,4 +650,8 @@ Partial Class MainMenu
     Friend WithEvents cmdTambahSudahDicetak As System.Windows.Forms.Button
     Friend WithEvents dgAsetSAPSudahDicetak As System.Windows.Forms.DataGridView
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents cmbGroup As System.Windows.Forms.ComboBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents CopyTableToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

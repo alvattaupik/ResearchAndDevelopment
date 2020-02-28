@@ -8,7 +8,7 @@ Public Class MainMenu
 
         If Tombol = 13 Then
 
-            If cmbLokasi.Text = "" Then
+            If cmbLokasi.Text = "" And cmbGroup.Text = "" Then
 
                 KoneksiDatabase()
 
@@ -31,12 +31,19 @@ Public Class MainMenu
                 Koneksi.Close()
 
                 lblJumlahDataSAP.Text = "Jumlah Aset : " & dgAsetSAP.RowCount
+            End If
+        End If
 
-            Else
+
+
+
+        If Tombol = 13 Then
+
+            If cmbLokasi.Text <> "" And cmbGroup.Text <> "" Then
 
                 KoneksiDatabase()
 
-                Dim cmd As New SqlCommand("SELECT  [Kode Aset],[Nama Aset],Tahun,ItemName,Lokasi From V_LabelAsetRKM Where ItemName  LIKE  '%" & Trim(txtCariAset.Text) & "%' AND Lokasi= '" & Trim(cmbLokasi.Text) & "' Order By ItemName ", Koneksi)
+                Dim cmd As New SqlCommand("SELECT  [Kode Aset],[Nama Aset],Tahun,ItemName,Lokasi From V_LabelAsetRKM Where Lokasi  LIKE  '%" & Trim(cmbLokasi.Text) & "%' AND AssetClass LIKE  '%" & Trim(cmbGroup.Text) & "%' Order By ItemName ", Koneksi)
 
                 Dim adapter As New SqlDataAdapter(cmd)
 
@@ -53,15 +60,123 @@ Public Class MainMenu
 
                 dgAsetSAP.AutoResizeColumns()
                 Koneksi.Close()
+
                 lblJumlahDataSAP.Text = "Jumlah Aset : " & dgAsetSAP.RowCount
-
             End If
-
-
-
-        Else
-            Exit Sub
         End If
+
+
+
+
+
+
+        If Tombol = 13 Then
+
+            If cmbLokasi.Text <> "" And cmbGroup.Text = "" Then
+
+                KoneksiDatabase()
+
+                Dim cmd As New SqlCommand("SELECT  [Kode Aset],[Nama Aset],Tahun,ItemName,Lokasi From V_LabelAsetRKM Where Lokasi  LIKE  '%" & Trim(cmbLokasi.Text) & "%' AND ItemName Like '%" & Trim(txtCariAset.Text) & "%' Order By ItemName ", Koneksi)
+
+                Dim adapter As New SqlDataAdapter(cmd)
+
+                Dim table As New DataTable
+
+                adapter.Fill(table)
+
+
+                dgAsetSAP.DataSource = table
+
+                'aturDGV()
+                dgAsetSAP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+                dgAsetSAP.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+
+                dgAsetSAP.AutoResizeColumns()
+                Koneksi.Close()
+
+                lblJumlahDataSAP.Text = "Jumlah Aset : " & dgAsetSAP.RowCount
+            End If
+        End If
+
+
+
+
+        If Tombol = 13 Then
+
+            If cmbLokasi.Text = "" And cmbGroup.Text <> "" Then
+
+                KoneksiDatabase()
+
+                Dim cmd As New SqlCommand("SELECT  [Kode Aset],[Nama Aset],Tahun,ItemName,Lokasi From V_LabelAsetRKM Where AssetClass  LIKE  '%" & Trim(cmbGroup.Text) & "%' AND ItemName Like '%" & Trim(txtCariAset.Text) & "%' Order By ItemName ", Koneksi)
+
+                Dim adapter As New SqlDataAdapter(cmd)
+
+                Dim table As New DataTable
+
+                adapter.Fill(table)
+
+
+                dgAsetSAP.DataSource = table
+
+                'aturDGV()
+                dgAsetSAP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+                dgAsetSAP.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+
+                dgAsetSAP.AutoResizeColumns()
+                Koneksi.Close()
+
+                lblJumlahDataSAP.Text = "Jumlah Aset : " & dgAsetSAP.RowCount
+            End If
+        End If
+
+
+
+
+
+
+
+
+
+
+        'ElseIf cmbLokasi.Text <> "" And cmbGroup.Text = "" Then
+
+        '    KoneksiDatabase()
+
+        '    Dim cmd As New SqlCommand("SELECT  [Kode Aset],[Nama Aset],Tahun,ItemName,Lokasi From V_LabelAsetRKM Where ItemName  LIKE  '%" & Trim(txtCariAset.Text) & "%' AND Lokasi= '" & Trim(cmbLokasi.Text) & "' Order By ItemName ", Koneksi)
+
+        '    Dim adapter As New SqlDataAdapter(cmd)
+
+        '    Dim table As New DataTable
+
+        '    adapter.Fill(table)
+
+
+        '    dgAsetSAP.DataSource = table
+
+        '    'aturDGV()
+        '    dgAsetSAP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        '    dgAsetSAP.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+
+        '    dgAsetSAP.AutoResizeColumns()
+        '    Koneksi.Close()
+        '    lblJumlahDataSAP.Text = "Jumlah Aset : " & dgAsetSAP.RowCount
+
+        'End If
+
+
+
+        'Else
+
+
+
+
+
+
+
+
+
+
+
 
     End Sub
 
@@ -140,6 +255,32 @@ Public Class MainMenu
         End Try
 
     End Sub
+
+
+    Private Sub LoadComboGroup()
+
+        KoneksiDatabase()
+        Dim da As New SqlDataAdapter("SELECT DISTINCT '000' AS Kode,AssetClass FROM RKM_LIVE_2.dbo.OITM WHERE AssetClass<>''", Koneksi)
+        Dim dt As New DataTable
+        ' enclose in try-catch block
+        ' untuk menghindari crash jika terjadi kesalahan database
+        Try
+            ' ambil data dari database
+            da.Fill(dt)
+            ' bind data ke combobox
+            cmbGroup.DataSource = dt
+            cmbGroup.ValueMember = "Kode"
+            cmbGroup.DisplayMember = "AssetClass"
+            ' DONE!!!
+        Catch ex As Exception
+            ' tampilkan pesan error
+            MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+
+
 
     Private Sub LoadDaftarCabangSudahDicetak()
 
@@ -432,4 +573,53 @@ ErrorLoad:
         MsubPesanError()
         Exit Sub
     End Sub
+
+    Private Sub cmbGroup_Click(sender As Object, e As EventArgs) Handles cmbGroup.Click
+        LoadComboGroup()
+    End Sub
+
+
+
+
+    Private Sub CopyDataGridViewToClipboard(ByRef dgv As DataGridView)
+        Dim s As String = ""
+        Dim oCurrentCol As DataGridViewColumn    'Get header
+        oCurrentCol = dgv.Columns.GetFirstColumn(DataGridViewElementStates.Visible)
+        Do
+            s &= oCurrentCol.HeaderText & Chr(Keys.Tab)
+            oCurrentCol = dgv.Columns.GetNextColumn(oCurrentCol, _
+               DataGridViewElementStates.Visible, DataGridViewElementStates.None)
+        Loop Until oCurrentCol Is Nothing
+        s = s.Substring(0, s.Length - 1)
+        s &= Environment.NewLine    'Get rows
+        For Each row As DataGridViewRow In dgv.Rows
+            oCurrentCol = dgv.Columns.GetFirstColumn(DataGridViewElementStates.Visible)
+            Do
+                If row.Cells(oCurrentCol.Index).Value IsNot Nothing Then
+                    s &= row.Cells(oCurrentCol.Index).Value.ToString
+                End If
+                s &= Chr(Keys.Tab)
+                oCurrentCol = dgv.Columns.GetNextColumn(oCurrentCol, _
+                      DataGridViewElementStates.Visible, DataGridViewElementStates.None)
+            Loop Until oCurrentCol Is Nothing
+            s = s.Substring(0, s.Length - 1)
+            s &= Environment.NewLine
+        Next    'Put to clipboard
+        Dim o As New DataObject
+        o.SetText(s)
+
+        Clipboard.ContainsText()
+        Clipboard.SetDataObject(o, True, 10, 200)
+
+
+
+    End Sub
+
+
+
+    Private Sub CopyTableToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyTableToolStripMenuItem.Click
+        CopyDataGridViewToClipboard(dgAsetSAP)
+    End Sub
+
+
 End Class
