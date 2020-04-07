@@ -22,32 +22,32 @@ Partial Class TabPrint
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl
-        Me.TabPage2 = New System.Windows.Forms.TabPage
-        Me.BtnDMDeliveryM100 = New System.Windows.Forms.Button
-        Me.txtUserDeliveryM100 = New System.Windows.Forms.TextBox
-        Me.txtDMDeliveryM100 = New System.Windows.Forms.TextBox
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.TabPage4 = New System.Windows.Forms.TabPage
-        Me.BtnTransM100 = New System.Windows.Forms.Button
-        Me.txtTransuserM100 = New System.Windows.Forms.TextBox
-        Me.txtTransDMM100 = New System.Windows.Forms.TextBox
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.TabPage6 = New System.Windows.Forms.TabPage
-        Me.BtnReqM100 = New System.Windows.Forms.Button
-        Me.txtReqUserM100 = New System.Windows.Forms.TextBox
-        Me.txtReqDmM100 = New System.Windows.Forms.TextBox
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.TabPage8 = New System.Windows.Forms.TabPage
-        Me.BtnGRPOM100 = New System.Windows.Forms.Button
-        Me.txtGRPOUserM100 = New System.Windows.Forms.TextBox
-        Me.txtGRPODmM100 = New System.Windows.Forms.TextBox
-        Me.Label17 = New System.Windows.Forms.Label
-        Me.Label18 = New System.Windows.Forms.Label
-        Me.TabPage10 = New System.Windows.Forms.TabPage
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.BtnDMDeliveryM100 = New System.Windows.Forms.Button()
+        Me.txtUserDeliveryM100 = New System.Windows.Forms.TextBox()
+        Me.txtDMDeliveryM100 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.BtnTransM100 = New System.Windows.Forms.Button()
+        Me.txtTransuserM100 = New System.Windows.Forms.TextBox()
+        Me.txtTransDMM100 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.BtnReqM100 = New System.Windows.Forms.Button()
+        Me.txtReqUserM100 = New System.Windows.Forms.TextBox()
+        Me.txtReqDmM100 = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.BtnGRPOM100 = New System.Windows.Forms.Button()
+        Me.txtGRPOUserM100 = New System.Windows.Forms.TextBox()
+        Me.txtGRPODmM100 = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.TabPage10 = New System.Windows.Forms.TabPage()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage4.SuspendLayout()
@@ -302,7 +302,7 @@ Partial Class TabPrint
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(310, 166)
+        Me.ClientSize = New System.Drawing.Size(298, 142)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "TabPrint"
         Me.Text = "Form1"

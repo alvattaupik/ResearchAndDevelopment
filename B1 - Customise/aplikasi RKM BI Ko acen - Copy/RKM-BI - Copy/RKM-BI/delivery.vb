@@ -34,10 +34,10 @@ Public Class delivery
         If MyConnection.State = ConnectionState.Closed Then
             MyConnection.Open()
         End If
-        MyConnection2 = New SqlConnection("Data Source=" + "10.1.0.4" + ";Initial Catalog=ProInt_ERP;User ID=sa;Password=stip3ndium")
-        If MyConnection2.State = ConnectionState.Closed Then
-            MyConnection2.Open()
-        End If
+        'MyConnection2 = New SqlConnection("Data Source=" + "10.1.0.4" + ";Initial Catalog=ProInt_ERP;User ID=sa;Password=stip3ndium")
+        'If MyConnection2.State = ConnectionState.Closed Then
+        '    MyConnection2.Open()
+        'End If
     End Sub
 
   

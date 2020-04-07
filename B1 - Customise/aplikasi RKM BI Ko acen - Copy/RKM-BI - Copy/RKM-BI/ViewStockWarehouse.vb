@@ -31,58 +31,102 @@ Public Class ViewStockWarehouse
     Dim strNamabarang As String
 
 
+    'Sub Koneksi()
+    '    MyConnection = New SqlConnection("Data Source=" + "10.1.0.53" + ";Initial Catalog=RKM_LIVE_2;User ID=sa;Password=h0spit4lity#")
+    '    If MyConnection.State = ConnectionState.Closed Then
+    '        MyConnection.Open()
+    '    End If
+    '    MyConnection2 = New SqlConnection("Data Source=" + "10.1.0.4" + ";Initial Catalog=ProInt_ERP;User ID=sa;Password=stip3ndium")
+    '    If MyConnection2.State = ConnectionState.Closed Then
+    '        MyConnection2.Open()
+    '    End If
+    'End Sub
+
+
     Sub Koneksi()
         MyConnection = New SqlConnection("Data Source=" + "10.1.0.53" + ";Initial Catalog=RKM_LIVE_2;User ID=sa;Password=h0spit4lity#")
         If MyConnection.State = ConnectionState.Closed Then
             MyConnection.Open()
         End If
-        MyConnection2 = New SqlConnection("Data Source=" + "10.1.0.4" + ";Initial Catalog=ProInt_ERP;User ID=sa;Password=stip3ndium")
-        If MyConnection2.State = ConnectionState.Closed Then
-            MyConnection2.Open()
-        End If
     End Sub
+
 
     Private Sub ViewStockWarehouse_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        On Error Resume Next
 
-        Koneksi()
-        'GroupBox1.Text = MarginBaru.TxtCek.Text
-        txtKodebarang.Text = MarginBaruV1_1.TxtCek.Text
+        LoadStokItems()
 
-        MyCommand = New SqlDataAdapter("select t0.WhsCode,t2.WhsName,t0.OnHand-t0.IsCommited,t0.OnHand,t0.IsCommited,t0.OnOrder from oitw t0 left join oitm t1 on t1.ItemCode=t0.ItemCode left join owhs t2 on t2.WhsCode=t0.WhsCode where (t0.WhsCode not like '%002' and t0.whscode not like '01000001' and t0.WhsCode not like '%003' and t0.WhsCode  not like 'ds') and t0.ItemCode='" + Trim(MarginBaruV1_1.TxtCek.Text) + "'", MyConnection)
-        DtSet = New DataSet()
-        DtSet.Clear()
-        MyCommand.Fill(DtSet, "oitw")
-        'DataGridView1.Columns.Clear()
-        DataGridView1.DataSource = DtSet.Tables("oitw").DefaultView
+        txtKodebarang.Text = GlobalstrKodeBarang
+        txtNamaBarang.Text = GlobalStrNamaBarang
+        'On Error Resume Next
 
+        'Koneksi()
+        ''GroupBox1.Text = MarginBaru.TxtCek.Text
+        'txtKodebarang.Text = MarginBaruV1_1.TxtCek.Text
 
-        DataGridView1.Columns(0).HeaderText = "Kode Warehouse"
-        DataGridView1.Columns(1).HeaderText = "Nama Warehouse"
-        DataGridView1.Columns(2).HeaderText = "Stock Akhir"
-        DataGridView1.Columns(3).HeaderText = "Stock Awal"
-        DataGridView1.Columns(4).HeaderText = "Keluar Barang"
-        DataGridView1.Columns(5).HeaderText = "On Order"
-
-        DataGridView1.Columns(0).Width = 80
-        DataGridView1.Columns(1).Width = 180
-        DataGridView1.Columns(2).Width = 50
-        DataGridView1.Columns(3).Width = 50
-        DataGridView1.Columns(4).Width = 50
-        DataGridView1.Columns(5).Width = 50
-
-        DataGridView1.Columns(2).DefaultCellStyle.Format = "N0"
-        DataGridView1.Columns(3).DefaultCellStyle.Format = "N0"
-        DataGridView1.Columns(4).DefaultCellStyle.Format = "N0"
-        DataGridView1.Columns(5).DefaultCellStyle.Format = "N0"
+        'MyCommand = New SqlDataAdapter("select t0.WhsCode,t2.WhsName,t0.OnHand-t0.IsCommited,t0.OnHand,t0.IsCommited,t0.OnOrder from oitw t0 left join oitm t1 on t1.ItemCode=t0.ItemCode left join owhs t2 on t2.WhsCode=t0.WhsCode where (t0.WhsCode not like '%002' and t0.whscode not like '01000001' and t0.WhsCode not like '%003' and t0.WhsCode  not like 'ds') and t0.ItemCode='" + Trim(MarginBaruV1_1.TxtCek.Text) + "'", MyConnection)
+        'DtSet = New DataSet()
+        'DtSet.Clear()
+        'MyCommand.Fill(DtSet, "oitw")
+        ''DataGridView1.Columns.Clear()
+        'DataGridView1.DataSource = DtSet.Tables("oitw").DefaultView
 
 
-        LoadNamaBarang()
+        'DataGridView1.Columns(0).HeaderText = "Kode Warehouse"
+        'DataGridView1.Columns(1).HeaderText = "Nama Warehouse"
+        'DataGridView1.Columns(2).HeaderText = "Stock Akhir"
+        'DataGridView1.Columns(3).HeaderText = "Stock Awal"
+        'DataGridView1.Columns(4).HeaderText = "Keluar Barang"
+        'DataGridView1.Columns(5).HeaderText = "On Order"
 
-        txtNamaBarang.Text = strNamabarang
+        'DataGridView1.Columns(0).Width = 80
+        'DataGridView1.Columns(1).Width = 180
+        'DataGridView1.Columns(2).Width = 50
+        'DataGridView1.Columns(3).Width = 50
+        'DataGridView1.Columns(4).Width = 50
+        'DataGridView1.Columns(5).Width = 50
+
+        'DataGridView1.Columns(2).DefaultCellStyle.Format = "N0"
+        'DataGridView1.Columns(3).DefaultCellStyle.Format = "N0"
+        'DataGridView1.Columns(4).DefaultCellStyle.Format = "N0"
+        'DataGridView1.Columns(5).DefaultCellStyle.Format = "N0"
+
+
+        'LoadNamaBarang()
+
+        'txtNamaBarang.Text = strNamabarang
 
 
     End Sub
+
+
+    Sub LoadStokItems()
+        On Error Resume Next
+        Dim i As Integer
+        Dim longStokAkhir As Long
+        Koneksi()
+
+        Dim command As SqlCommand
+        command = New SqlCommand("_tmspStokBI", MyConnection)
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        command.Parameters.AddWithValue("KodeBarang", GlobalstrKodeBarang)
+        Dim table As New DataTable
+        adapter.Fill(table)
+        Me.DataGridView1.DataSource = table
+        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        DataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridView1.AutoResizeColumns()
+
+
+    End Sub
+
+
+
+
+
+
+
+
 
 
 

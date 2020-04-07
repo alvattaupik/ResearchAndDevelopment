@@ -59,13 +59,14 @@ Partial Class FrmSetting
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 36)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(406, 168)
+        Me.GroupBox1.Size = New System.Drawing.Size(406, 198)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(128, 137)
+        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Location = New System.Drawing.Point(128, 160)
         Me.txtPassword.Multiline = True
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -74,7 +75,8 @@ Partial Class FrmSetting
         '
         'txtLogin
         '
-        Me.txtLogin.Location = New System.Drawing.Point(128, 110)
+        Me.txtLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLogin.Location = New System.Drawing.Point(129, 122)
         Me.txtLogin.Multiline = True
         Me.txtLogin.Name = "txtLogin"
         Me.txtLogin.Size = New System.Drawing.Size(272, 23)
@@ -84,7 +86,7 @@ Partial Class FrmSetting
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(13, 138)
+        Me.Label4.Location = New System.Drawing.Point(13, 167)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(76, 16)
         Me.Label4.TabIndex = 10
@@ -94,7 +96,7 @@ Partial Class FrmSetting
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(13, 107)
+        Me.Label3.Location = New System.Drawing.Point(13, 122)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(46, 16)
         Me.Label3.TabIndex = 9
@@ -155,9 +157,9 @@ Partial Class FrmSetting
         'cmdSimpan
         '
         Me.cmdSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdSimpan.Location = New System.Drawing.Point(262, 212)
+        Me.cmdSimpan.Location = New System.Drawing.Point(263, 240)
         Me.cmdSimpan.Name = "cmdSimpan"
-        Me.cmdSimpan.Size = New System.Drawing.Size(155, 31)
+        Me.cmdSimpan.Size = New System.Drawing.Size(155, 56)
         Me.cmdSimpan.TabIndex = 3
         Me.cmdSimpan.Text = "Simpan"
         Me.cmdSimpan.UseVisualStyleBackColor = True
@@ -166,7 +168,7 @@ Partial Class FrmSetting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(427, 249)
+        Me.ClientSize = New System.Drawing.Size(421, 296)
         Me.Controls.Add(Me.cmdSimpan)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)

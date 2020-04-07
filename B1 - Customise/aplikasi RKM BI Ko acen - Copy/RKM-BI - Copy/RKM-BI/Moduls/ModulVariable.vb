@@ -25,7 +25,10 @@ Module ModulVariable
     Public strNamaDB2 As String
     Public strKoneksi2 As String
     Public Koneksi2 As SqlConnection
-
+    Public GlobalstrKodeBarang As String
+    Public GlobalStrNamaBarang As String
+    Public GlobalStrKodeCabang As String
+    Public GlobalStrNoStruk As String
 
 
 

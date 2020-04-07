@@ -30,13 +30,14 @@ Partial Class frmSessionTrace
         Me.txtIdSesi = New System.Windows.Forms.TextBox()
         Me.cmdFindSession = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.cmdcopyclipboard = New System.Windows.Forms.Button()
         Me.txtNamaProgram = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtQuery = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtStatus = New System.Windows.Forms.TextBox()
-        Me.cmdcopyclipboard = New System.Windows.Forms.Button()
+        Me.cmdKillThisSession = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgSessionTrace, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,7 +68,7 @@ Partial Class frmSessionTrace
         Me.GroupBox2.Controls.Add(Me.dgSessionTrace)
         Me.GroupBox2.Location = New System.Drawing.Point(8, 109)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(373, 191)
+        Me.GroupBox2.Size = New System.Drawing.Size(373, 226)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         '
@@ -79,7 +80,7 @@ Partial Class frmSessionTrace
         Me.dgSessionTrace.Location = New System.Drawing.Point(8, 16)
         Me.dgSessionTrace.Name = "dgSessionTrace"
         Me.dgSessionTrace.ReadOnly = True
-        Me.dgSessionTrace.Size = New System.Drawing.Size(355, 169)
+        Me.dgSessionTrace.Size = New System.Drawing.Size(355, 199)
         Me.dgSessionTrace.TabIndex = 0
         '
         'Label2
@@ -112,6 +113,7 @@ Partial Class frmSessionTrace
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.cmdKillThisSession)
         Me.GroupBox3.Controls.Add(Me.cmdcopyclipboard)
         Me.GroupBox3.Controls.Add(Me.txtNamaProgram)
         Me.GroupBox3.Controls.Add(Me.Label5)
@@ -121,10 +123,19 @@ Partial Class frmSessionTrace
         Me.GroupBox3.Controls.Add(Me.txtStatus)
         Me.GroupBox3.Location = New System.Drawing.Point(387, 1)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(276, 298)
+        Me.GroupBox3.Size = New System.Drawing.Size(410, 334)
         Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Session Detail"
+        '
+        'cmdcopyclipboard
+        '
+        Me.cmdcopyclipboard.Location = New System.Drawing.Point(7, 302)
+        Me.cmdcopyclipboard.Name = "cmdcopyclipboard"
+        Me.cmdcopyclipboard.Size = New System.Drawing.Size(124, 32)
+        Me.cmdcopyclipboard.TabIndex = 6
+        Me.cmdcopyclipboard.Text = "Copy To Clipboard"
+        Me.cmdcopyclipboard.UseVisualStyleBackColor = True
         '
         'txtNamaProgram
         '
@@ -132,7 +143,7 @@ Partial Class frmSessionTrace
         Me.txtNamaProgram.Location = New System.Drawing.Point(115, 52)
         Me.txtNamaProgram.Multiline = True
         Me.txtNamaProgram.Name = "txtNamaProgram"
-        Me.txtNamaProgram.Size = New System.Drawing.Size(154, 23)
+        Me.txtNamaProgram.Size = New System.Drawing.Size(289, 23)
         Me.txtNamaProgram.TabIndex = 5
         '
         'Label5
@@ -150,7 +161,7 @@ Partial Class frmSessionTrace
         Me.txtQuery.Location = New System.Drawing.Point(6, 99)
         Me.txtQuery.Multiline = True
         Me.txtQuery.Name = "txtQuery"
-        Me.txtQuery.Size = New System.Drawing.Size(263, 165)
+        Me.txtQuery.Size = New System.Drawing.Size(398, 197)
         Me.txtQuery.TabIndex = 3
         '
         'Label4
@@ -167,7 +178,7 @@ Partial Class frmSessionTrace
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(2, 27)
+        Me.Label3.Location = New System.Drawing.Point(6, 20)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(62, 20)
         Me.Label3.TabIndex = 1
@@ -176,26 +187,26 @@ Partial Class frmSessionTrace
         'txtStatus
         '
         Me.txtStatus.Enabled = False
-        Me.txtStatus.Location = New System.Drawing.Point(115, 27)
+        Me.txtStatus.Location = New System.Drawing.Point(115, 22)
         Me.txtStatus.Multiline = True
         Me.txtStatus.Name = "txtStatus"
-        Me.txtStatus.Size = New System.Drawing.Size(154, 23)
+        Me.txtStatus.Size = New System.Drawing.Size(289, 23)
         Me.txtStatus.TabIndex = 0
         '
-        'cmdcopyclipboard
+        'cmdKillThisSession
         '
-        Me.cmdcopyclipboard.Location = New System.Drawing.Point(6, 270)
-        Me.cmdcopyclipboard.Name = "cmdcopyclipboard"
-        Me.cmdcopyclipboard.Size = New System.Drawing.Size(124, 20)
-        Me.cmdcopyclipboard.TabIndex = 6
-        Me.cmdcopyclipboard.Text = "Copy To Clipboard"
-        Me.cmdcopyclipboard.UseVisualStyleBackColor = True
+        Me.cmdKillThisSession.Location = New System.Drawing.Point(260, 302)
+        Me.cmdKillThisSession.Name = "cmdKillThisSession"
+        Me.cmdKillThisSession.Size = New System.Drawing.Size(144, 31)
+        Me.cmdKillThisSession.TabIndex = 7
+        Me.cmdKillThisSession.Text = "Kill This Session"
+        Me.cmdKillThisSession.UseVisualStyleBackColor = True
         '
         'frmSessionTrace
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(668, 312)
+        Me.ClientSize = New System.Drawing.Size(809, 336)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.cmdFindSession)
         Me.Controls.Add(Me.txtIdSesi)
@@ -230,4 +241,5 @@ Partial Class frmSessionTrace
     Friend WithEvents txtNamaProgram As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents cmdcopyclipboard As System.Windows.Forms.Button
+    Friend WithEvents cmdKillThisSession As System.Windows.Forms.Button
 End Class

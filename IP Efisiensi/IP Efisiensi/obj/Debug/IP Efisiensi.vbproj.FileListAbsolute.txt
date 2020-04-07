@@ -36,3 +36,7 @@ D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj
 D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.vbproj.GenerateResource.Cache
 D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.exe.manifest
 D:\Research And Development\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.application
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.exe.config
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.exe
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.xml
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.pdb

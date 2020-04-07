@@ -37,11 +37,15 @@ Partial Class frmMonitoring
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.cmdKillSession = New System.Windows.Forms.Button()
         Me.cmdSessionTrace = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.cmdConnectionMonitor = New System.Windows.Forms.Button()
+        Me.txtBebanLoad = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -51,6 +55,7 @@ Partial Class frmMonitoring
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
@@ -64,7 +69,7 @@ Partial Class frmMonitoring
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(238, 70)
+        Me.Label2.Location = New System.Drawing.Point(130, 53)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(376, 42)
         Me.Label2.TabIndex = 2
@@ -74,7 +79,7 @@ Partial Class frmMonitoring
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(164, 24)
+        Me.Label1.Location = New System.Drawing.Point(130, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(267, 42)
         Me.Label1.TabIndex = 1
@@ -117,18 +122,18 @@ Partial Class frmMonitoring
         '
         'cmdStopMonitoring
         '
-        Me.cmdStopMonitoring.Location = New System.Drawing.Point(622, 26)
+        Me.cmdStopMonitoring.Location = New System.Drawing.Point(633, 13)
         Me.cmdStopMonitoring.Name = "cmdStopMonitoring"
-        Me.cmdStopMonitoring.Size = New System.Drawing.Size(166, 27)
+        Me.cmdStopMonitoring.Size = New System.Drawing.Size(166, 75)
         Me.cmdStopMonitoring.TabIndex = 4
         Me.cmdStopMonitoring.Text = "Stop"
         Me.cmdStopMonitoring.UseVisualStyleBackColor = True
         '
         'cmdStartMonitoring
         '
-        Me.cmdStartMonitoring.Location = New System.Drawing.Point(441, 26)
+        Me.cmdStartMonitoring.Location = New System.Drawing.Point(441, 13)
         Me.cmdStartMonitoring.Name = "cmdStartMonitoring"
-        Me.cmdStartMonitoring.Size = New System.Drawing.Size(143, 28)
+        Me.cmdStartMonitoring.Size = New System.Drawing.Size(143, 41)
         Me.cmdStartMonitoring.TabIndex = 3
         Me.cmdStartMonitoring.Text = "Start Monitoring"
         Me.cmdStartMonitoring.UseVisualStyleBackColor = True
@@ -174,6 +179,7 @@ Partial Class frmMonitoring
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.Button3)
         Me.GroupBox3.Controls.Add(Me.cmdKillSession)
         Me.GroupBox3.Controls.Add(Me.cmdSessionTrace)
         Me.GroupBox3.Controls.Add(Me.Button2)
@@ -186,6 +192,16 @@ Partial Class frmMonitoring
         Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Feature"
+        '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(315, 30)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(127, 51)
+        Me.Button3.TabIndex = 5
+        Me.Button3.Text = "Fragmentation Status"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'cmdKillSession
         '
@@ -200,7 +216,7 @@ Partial Class frmMonitoring
         'cmdSessionTrace
         '
         Me.cmdSessionTrace.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdSessionTrace.Location = New System.Drawing.Point(315, 30)
+        Me.cmdSessionTrace.Location = New System.Drawing.Point(482, 30)
         Me.cmdSessionTrace.Name = "cmdSessionTrace"
         Me.cmdSessionTrace.Size = New System.Drawing.Size(88, 51)
         Me.cmdSessionTrace.TabIndex = 3
@@ -237,11 +253,43 @@ Partial Class frmMonitoring
         Me.cmdConnectionMonitor.Text = "Connection Monitor"
         Me.cmdConnectionMonitor.UseVisualStyleBackColor = True
         '
+        'txtBebanLoad
+        '
+        Me.txtBebanLoad.AutoSize = True
+        Me.txtBebanLoad.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBebanLoad.Location = New System.Drawing.Point(759, 609)
+        Me.txtBebanLoad.Name = "txtBebanLoad"
+        Me.txtBebanLoad.Size = New System.Drawing.Size(54, 20)
+        Me.txtBebanLoad.TabIndex = 4
+        Me.txtBebanLoad.Text = "Load "
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(648, 610)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(105, 20)
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "Work Load :"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(134, 100)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(122, 18)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "Build 05042020"
+        '
         'frmMonitoring
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(825, 629)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.txtBebanLoad)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.GroupBox2)
@@ -279,5 +327,9 @@ Partial Class frmMonitoring
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents cmdKillSession As System.Windows.Forms.Button
     Friend WithEvents cmdSessionTrace As System.Windows.Forms.Button
+    Friend WithEvents txtBebanLoad As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 
 End Class

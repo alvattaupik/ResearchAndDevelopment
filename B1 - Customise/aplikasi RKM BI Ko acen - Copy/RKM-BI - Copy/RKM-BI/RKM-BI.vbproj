@@ -20,7 +20,7 @@
     <OldToolsVersion>2.0</OldToolsVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\DATA- Alvat\Music\UpdateSoftware\B1 Customise Build150220201619\</PublishUrl>
+    <PublishUrl>C:\Users\IT-ALVAT\Pictures\BI Customise 24032020\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -30,7 +30,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationRevision>17</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -86,6 +86,9 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\Guna.UI-Framework-Lib\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Build.Framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -104,6 +107,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
@@ -130,6 +134,12 @@
       <DependentUpon>AsetMonitoring.vb</DependentUpon>
     </Compile>
     <Compile Include="AsetMonitoring.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuditItems.Designer.vb">
+      <DependentUpon>FormAuditItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAuditItems.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MarginBaru.designer.vb">
@@ -307,6 +317,9 @@
     <EmbeddedResource Include="AsetMonitoring.resx">
       <DependentUpon>AsetMonitoring.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAuditItems.resx">
+      <DependentUpon>FormAuditItems.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MarginBaru.resx">
       <DependentUpon>MarginBaru.vb</DependentUpon>
@@ -516,7 +529,7 @@
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
+      <PublishState>Exclude</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>

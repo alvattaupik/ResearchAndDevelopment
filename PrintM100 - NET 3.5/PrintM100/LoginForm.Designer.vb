@@ -112,9 +112,9 @@ Partial Class LoginForm
         '
         Me.PictureBox1.BackgroundImage = Global.AnyarLocalPrintServices.My.Resources.Resources.IT_DEPARTMENT
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(9, 40)
+        Me.PictureBox1.Location = New System.Drawing.Point(35, 57)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(256, 128)
+        Me.PictureBox1.Size = New System.Drawing.Size(208, 77)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '

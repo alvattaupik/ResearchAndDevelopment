@@ -43,3 +43,26 @@ D:\Research And Development\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100
 D:\Research And Development\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\Anyar Local Print.vbproj.GenerateResource.Cache
 D:\Research And Development\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\Anyar Local Print Services.exe.manifest
 D:\Research And Development\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\Anyar Local Print Services.application
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\AnyarLocalPrintServices.AnyarServices.resources
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\AnyarLocalPrintServices.Form1.resources
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\AnyarLocalPrintServices.FormChangeLog.resources
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\AnyarLocalPrintServices.FormKonfigurasiFormatLaporan.resources
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\AnyarLocalPrintServices.FormPing.resources
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\AnyarLocalPrintServices.FormSplashScreen.resources
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\AnyarLocalPrintServices.Laporan.resources
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\AnyarLocalPrintServices.LoginForm.resources
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\AnyarLocalPrintServices.Resources.resources
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\AnyarLocalPrintServices.TabPrint.resources
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\Anyar Local Print.vbproj.GenerateResource.Cache
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\bin\Debug\Anyar Local Print Services.exe.config
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\bin\Debug\Anyar Local Print Services.exe.manifest
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\bin\Debug\Anyar Local Print Services.application
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\bin\Debug\Anyar Local Print Services.exe
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\bin\Debug\Anyar Local Print Services.pdb
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\bin\Debug\Anyar Local Print Services.xml
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\Anyar Local Print Services.exe.manifest
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\Anyar Local Print Services.application
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\Anyar Local Print Services.exe
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\Anyar Local Print Services.xml
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\Anyar Local Print Services.pdb
+D:\ResearchAndDevelopment\PrintM100 - NET 3.5\PrintM100\obj\Debug\Anyar Local Print.vbprojResolveAssemblyReference.cache
