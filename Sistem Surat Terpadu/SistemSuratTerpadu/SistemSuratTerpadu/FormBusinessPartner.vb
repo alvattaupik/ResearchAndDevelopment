@@ -63,14 +63,20 @@ Public Class FormBusinessPartner
 
     Private Sub dgDaftarCabang_Click(sender As Object, e As EventArgs) Handles dgDaftarCabang.Click
 
-
-    
-
         GlobalstrPenerima = dgDaftarCabang.Item(0, dgDaftarCabang.CurrentRow.Index).Value
         GlobalstrAlamat = dgDaftarCabang.Item(1, dgDaftarCabang.CurrentRow.Index).Value
         Globalstrtelepon = dgDaftarCabang.Item(2, dgDaftarCabang.CurrentRow.Index).Value
-        FormBuatSuratJalan.LoadPenerima()
         Me.Close()
+
+        If MstrNamaForm = "Surat Jalan" Then
+            FormBuatSuratJalan.LoadPenerima()
+        End If
+
+        If MstrNamaForm = "Surat Serah Terima" Then
+            FormBuatSuratTerima.LoadPenerima()
+        End If
+
+
 
 
 
@@ -78,7 +84,6 @@ Public Class FormBusinessPartner
 
     Private Sub txtCariVendor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCariVendor.KeyPress
         Dim tombol As Integer = Asc(e.KeyChar)
-        'Call NumberOnly(tombol, e)
 
         If tombol = 13 Then
             LoadDaftarVendor()
@@ -98,8 +103,17 @@ Public Class FormBusinessPartner
         GlobalstrPenerima = dgDaftarvendor.Item(0, dgDaftarvendor.CurrentRow.Index).Value
         GlobalstrAlamat = dgDaftarvendor.Item(1, dgDaftarvendor.CurrentRow.Index).Value
         Globalstrtelepon = dgDaftarvendor.Item(2, dgDaftarvendor.CurrentRow.Index).Value
-        FormBuatSuratJalan.LoadPenerima()
         Me.Close()
 
+        If MstrNamaForm = "Surat Jalan" Then
+            FormBuatSuratJalan.LoadPenerima()
+        End If
+
+        If MstrNamaForm = "Surat Serah Terima" Then
+            FormBuatSuratTerima.LoadPenerima()
+        End If
+
+
     End Sub
+
 End Class

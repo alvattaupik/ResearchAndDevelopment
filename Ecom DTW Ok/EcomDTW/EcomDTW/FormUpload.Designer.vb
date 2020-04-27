@@ -31,6 +31,13 @@ Partial Class FormUpload
         Me.lblJumlahItem = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.lblJumlahUpload = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmdLogoff = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.lblJumlahItem2 = New System.Windows.Forms.Label()
+        Me.lblDari = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.id_produk = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.id_categories = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.id_brands = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,6 +45,7 @@ Partial Class FormUpload
         Me.NamaBarang = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Deskripsi = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Weight = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HargaBeli = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.strike_price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Diskon = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -46,13 +54,6 @@ Partial Class FormUpload
         Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Availability = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Image = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmdLogoff = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.lblJumlahItem2 = New System.Windows.Forms.Label()
-        Me.lblDari = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.dgListUpload, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,7 +86,7 @@ Partial Class FormUpload
         '
         Me.dgListUpload.AllowUserToAddRows = False
         Me.dgListUpload.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgListUpload.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_produk, Me.id_categories, Me.id_brands, Me.id_event, Me.NamaBarang, Me.Deskripsi, Me.Weight, Me.strike_price, Me.Price, Me.Diskon, Me.Unit, Me.Stock, Me.Status, Me.Availability, Me.Image})
+        Me.dgListUpload.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_produk, Me.id_categories, Me.id_brands, Me.id_event, Me.NamaBarang, Me.Deskripsi, Me.Weight, Me.HargaBeli, Me.strike_price, Me.Price, Me.Diskon, Me.Unit, Me.Stock, Me.Status, Me.Availability, Me.Image})
         Me.dgListUpload.Location = New System.Drawing.Point(13, 84)
         Me.dgListUpload.Name = "dgListUpload"
         Me.dgListUpload.Size = New System.Drawing.Size(833, 265)
@@ -127,95 +128,6 @@ Partial Class FormUpload
         Me.lblJumlahUpload.TabIndex = 8
         Me.lblJumlahUpload.Text = "0"
         Me.lblJumlahUpload.Visible = False
-        '
-        'id_produk
-        '
-        Me.id_produk.HeaderText = "Kode Produk"
-        Me.id_produk.Name = "id_produk"
-        '
-        'id_categories
-        '
-        Me.id_categories.HeaderText = "Kode Kategori"
-        Me.id_categories.Name = "id_categories"
-        Me.id_categories.ReadOnly = True
-        '
-        'id_brands
-        '
-        Me.id_brands.HeaderText = "Kode Brand"
-        Me.id_brands.Name = "id_brands"
-        Me.id_brands.ReadOnly = True
-        '
-        'id_event
-        '
-        Me.id_event.HeaderText = "Kode Event"
-        Me.id_event.Name = "id_event"
-        Me.id_event.ReadOnly = True
-        '
-        'NamaBarang
-        '
-        Me.NamaBarang.HeaderText = "NamaBarang"
-        Me.NamaBarang.Name = "NamaBarang"
-        Me.NamaBarang.ReadOnly = True
-        '
-        'Deskripsi
-        '
-        Me.Deskripsi.HeaderText = "Deskripsi"
-        Me.Deskripsi.Name = "Deskripsi"
-        Me.Deskripsi.ReadOnly = True
-        '
-        'Weight
-        '
-        Me.Weight.HeaderText = "Berat"
-        Me.Weight.Name = "Weight"
-        Me.Weight.ReadOnly = True
-        '
-        'strike_price
-        '
-        Me.strike_price.HeaderText = "Strike Price"
-        Me.strike_price.Name = "strike_price"
-        Me.strike_price.ReadOnly = True
-        '
-        'Price
-        '
-        Me.Price.HeaderText = "Price"
-        Me.Price.Name = "Price"
-        Me.Price.ReadOnly = True
-        '
-        'Diskon
-        '
-        Me.Diskon.HeaderText = "Diskon"
-        Me.Diskon.Name = "Diskon"
-        Me.Diskon.ReadOnly = True
-        '
-        'Unit
-        '
-        Me.Unit.HeaderText = "Unit"
-        Me.Unit.Name = "Unit"
-        Me.Unit.ReadOnly = True
-        '
-        'Stock
-        '
-        Me.Stock.HeaderText = "Stok"
-        Me.Stock.Name = "Stock"
-        Me.Stock.ReadOnly = True
-        '
-        'Status
-        '
-        Me.Status.HeaderText = "Status"
-        Me.Status.Name = "Status"
-        Me.Status.ReadOnly = True
-        '
-        'Availability
-        '
-        Me.Availability.HeaderText = "Availability"
-        Me.Availability.Name = "Availability"
-        Me.Availability.ReadOnly = True
-        '
-        'Image
-        '
-        Me.Image.HeaderText = "Image"
-        Me.Image.Name = "Image"
-        Me.Image.ReadOnly = True
         '
         'Label1
         '
@@ -290,6 +202,101 @@ Partial Class FormUpload
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "Mengupload:"
         '
+        'id_produk
+        '
+        Me.id_produk.HeaderText = "Kode Produk"
+        Me.id_produk.Name = "id_produk"
+        '
+        'id_categories
+        '
+        Me.id_categories.HeaderText = "Kode Kategori"
+        Me.id_categories.Name = "id_categories"
+        Me.id_categories.ReadOnly = True
+        '
+        'id_brands
+        '
+        Me.id_brands.HeaderText = "Kode Brand"
+        Me.id_brands.Name = "id_brands"
+        Me.id_brands.ReadOnly = True
+        '
+        'id_event
+        '
+        Me.id_event.HeaderText = "Kode Event"
+        Me.id_event.Name = "id_event"
+        Me.id_event.ReadOnly = True
+        '
+        'NamaBarang
+        '
+        Me.NamaBarang.HeaderText = "NamaBarang"
+        Me.NamaBarang.Name = "NamaBarang"
+        Me.NamaBarang.ReadOnly = True
+        '
+        'Deskripsi
+        '
+        Me.Deskripsi.HeaderText = "Deskripsi"
+        Me.Deskripsi.Name = "Deskripsi"
+        Me.Deskripsi.ReadOnly = True
+        '
+        'Weight
+        '
+        Me.Weight.HeaderText = "Berat"
+        Me.Weight.Name = "Weight"
+        Me.Weight.ReadOnly = True
+        '
+        'HargaBeli
+        '
+        Me.HargaBeli.HeaderText = "HargaBeli"
+        Me.HargaBeli.Name = "HargaBeli"
+        Me.HargaBeli.ReadOnly = True
+        '
+        'strike_price
+        '
+        Me.strike_price.HeaderText = "Strike Price"
+        Me.strike_price.Name = "strike_price"
+        Me.strike_price.ReadOnly = True
+        '
+        'Price
+        '
+        Me.Price.HeaderText = "Price"
+        Me.Price.Name = "Price"
+        Me.Price.ReadOnly = True
+        '
+        'Diskon
+        '
+        Me.Diskon.HeaderText = "Diskon"
+        Me.Diskon.Name = "Diskon"
+        Me.Diskon.ReadOnly = True
+        '
+        'Unit
+        '
+        Me.Unit.HeaderText = "Unit"
+        Me.Unit.Name = "Unit"
+        Me.Unit.ReadOnly = True
+        '
+        'Stock
+        '
+        Me.Stock.HeaderText = "Stok"
+        Me.Stock.Name = "Stock"
+        Me.Stock.ReadOnly = True
+        '
+        'Status
+        '
+        Me.Status.HeaderText = "Status"
+        Me.Status.Name = "Status"
+        Me.Status.ReadOnly = True
+        '
+        'Availability
+        '
+        Me.Availability.HeaderText = "Availability"
+        Me.Availability.Name = "Availability"
+        Me.Availability.ReadOnly = True
+        '
+        'Image
+        '
+        Me.Image.HeaderText = "Image"
+        Me.Image.Name = "Image"
+        Me.Image.ReadOnly = True
+        '
         'FormUpload
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -329,6 +336,12 @@ Partial Class FormUpload
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents lblJumlahUpload As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents cmdLogoff As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents lblJumlahItem2 As System.Windows.Forms.Label
+    Friend WithEvents lblDari As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents id_produk As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents id_categories As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents id_brands As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -336,6 +349,7 @@ Partial Class FormUpload
     Friend WithEvents NamaBarang As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Deskripsi As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Weight As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents HargaBeli As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents strike_price As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Price As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Diskon As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -344,11 +358,5 @@ Partial Class FormUpload
     Friend WithEvents Status As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Availability As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Image As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents cmdLogoff As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents lblJumlahItem2 As System.Windows.Forms.Label
-    Friend WithEvents lblDari As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
 
 End Class

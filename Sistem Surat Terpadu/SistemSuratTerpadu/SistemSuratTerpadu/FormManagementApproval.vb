@@ -9,7 +9,7 @@ Public Class FormManagementApproval
     Sub LoadDaftarRequestValidasiBelumApproved()
 
         Call KoneksiDatabase1()
-        Dim cmd As New SqlCommand("SELECT NoValidasi,StatusApproval,NamaUser AS RequestName,Pesan AS PesanUser,CreateDate,JenisRequest,Komponen,JenisValidasi FROM dbo.V_DetailValidasi WHERE StatusApproval='Belum DiApprove'", Koneksi1)
+        Dim cmd As New SqlCommand("SELECT NoValidasi,StatusApproval,NamaUser AS RequestName,Pesan AS PesanUser,CreateDate,JenisRequest,Komponen,JenisValidasi FROM dbo.V_DetailValidasi WHERE StatusApproval='Belum DiApprove' AND KodeSPV in ('" & MstrKdSupervisor & "','-','" & GlobalstrKodeUser & "')", Koneksi1)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -27,7 +27,7 @@ Public Class FormManagementApproval
     Sub LoadDaftarRequestValidasiALL()
 
         Call KoneksiDatabase1()
-        Dim cmd As New SqlCommand("SELECT NoValidasi,StatusApproval,NamaUser AS RequestName,Pesan AS PesanUser,CreateDate,JenisRequest,Komponen,JenisValidasi FROM dbo.V_DetailValidasi WHERE NamaUser Like '%" & Trim(txtDibuatOleh.Text) & "%' AND  Cast(CreateDate As Date) between '" & dtpAwal.Value.ToString("yyyy-MM-dd") & "' AND '" & dtpAkhir.Value.ToString("yyyy-MM-dd") & "' Order by CreateDate desc", Koneksi1)
+        Dim cmd As New SqlCommand("SELECT NoValidasi,StatusApproval,NamaUser AS RequestName,Pesan AS PesanUser,CreateDate,JenisRequest,Komponen,JenisValidasi FROM dbo.V_DetailValidasi WHERE NamaUser Like '%" & Trim(txtDibuatOleh.Text) & "%' AND  Cast(CreateDate As Date) between '" & dtpAwal.Value.ToString("yyyy-MM-dd") & "' AND '" & dtpAkhir.Value.ToString("yyyy-MM-dd") & "' AND KodeSPV in ('" & MstrKdSupervisor & "','-','" & GlobalstrKodeUser & "') Order by CreateDate desc", Koneksi1)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -44,6 +44,8 @@ Public Class FormManagementApproval
 
     Private Sub FormManagementApproval_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadDaftarRequestValidasiBelumApproved()
+        dtpAwal.Value = Now
+        dtpAkhir.Value = Now
     End Sub
 
     Private Sub cmdCari_Click(sender As Object, e As EventArgs) Handles cmdCari.Click
@@ -59,5 +61,9 @@ Public Class FormManagementApproval
 
         GlobalstrNoSurat = dgRequestApproval.Item(0, dgRequestApproval.CurrentRow.Index).Value
         FormDetailApproval.ShowDialog()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Close()
     End Sub
 End Class

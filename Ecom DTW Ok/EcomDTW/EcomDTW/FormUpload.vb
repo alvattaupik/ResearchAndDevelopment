@@ -48,10 +48,7 @@ Public Class FormUpload
 
 
 
-                dgListUpload.Rows.Add(splitLine(0), splitLine(1), splitLine(2), splitLine(3), splitLine(4), splitLine(5), splitLine(6), splitLine(7), splitLine(8), splitLine(9), splitLine(10), splitLine(11), splitLine(12), splitLine(13), splitLine(14))
-                'dgListUpload.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-                'dgListUpload.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
-                'dgListUpload.AutoResizeColumns()
+                dgListUpload.Rows.Add(splitLine(0), splitLine(1), splitLine(2), splitLine(3), splitLine(4), splitLine(5), splitLine(6), splitLine(7), splitLine(8), splitLine(9), splitLine(10), splitLine(11), splitLine(12), splitLine(13), splitLine(14), splitLine(15))
             Loop
             lblJumlahItem.Text = "Jumlah Item: " & dgListUpload.Rows.Count
         End Using
@@ -59,14 +56,6 @@ Public Class FormUpload
 
     Sub koneksiDatabase()
         Try
-
-            'This is the server IP/Server name.  If server is intalled on your local machine, your IP should be 127.0.0.1 or you may use localhost
-            'Dim strServer As String = "45.64.1.65"
-            'Dim strDbase As String = "k7839728_rkm_helpdesk" 'Database name
-            'Dim strUser As String = "k7839728"  'Database user
-            'Dim strPass As String = "p15NdHs5y7"     'Database password
-
-            'MySQL Connection String
             If connDB.State <> ConnectionState.Open Then connDB.ConnectionString = "server=" & strServer.Trim & ";database=" & strDbase.Trim & ";user=" & strUser.Trim & ";password=" & strPass
             If connDB.State <> ConnectionState.Open Then connDB.Open() Else connDB.Close()
             MsgBox("Connected")
@@ -79,12 +68,6 @@ Public Class FormUpload
     Private Sub cmdTestKoneksi_Click(sender As Object, e As EventArgs)
         Call koneksiDatabase()
     End Sub
-
-
-
-
-
-
 
 
     Sub UploadDatamaster()
@@ -103,7 +86,7 @@ Public Class FormUpload
                 Call initCMD()
 
                 With comDB
-                    .CommandText = "Call AU_MasterBarang('" & splitLine(0) & "','" & splitLine(1) & "','" & splitLine(2) & "','" & splitLine(3) & "','" & splitLine(4) & "','" & splitLine(5) & "','" & splitLine(6) & "','" & splitLine(7) & "','" & splitLine(8) & "','" & splitLine(9) & "','" & splitLine(10) & "','" & splitLine(11) & "','" & splitLine(12) & "','" & splitLine(13) & "','" & splitLine(14) & "','" & MstrKdPegawai & "','A')"
+                    .CommandText = "Call AU_MasterBarang('" & splitLine(0) & "','" & splitLine(1) & "','" & splitLine(2) & "','" & splitLine(3) & "','" & splitLine(4) & "','" & splitLine(5) & "','" & splitLine(6) & "','" & splitLine(7) & "','" & splitLine(8) & "','" & splitLine(9) & "','" & splitLine(10) & "','" & splitLine(11) & "','" & splitLine(12) & "','" & splitLine(13) & "','" & splitLine(14) & "','" & splitLine(15) & "','" & MstrKdPegawai & "','A')"
                     .ExecuteNonQuery()
                 End With
 
@@ -127,10 +110,11 @@ ErrorLoad:
             MsgBox(Err.Description)
 
             Exit Sub
-
-
-
         End Using
+
+
+
+
 
     End Sub
 
@@ -172,7 +156,7 @@ ErrorLoad:
             Call initCMD()
 
             With comDB
-                .CommandText = "Call AU_MasterBarang('" & dgListUpload.Rows(i).Cells(0).Value & "','" & dgListUpload.Rows(i).Cells(1).Value & "','" & dgListUpload.Rows(i).Cells(2).Value & "','" & dgListUpload.Rows(i).Cells(3).Value & "','" & dgListUpload.Rows(i).Cells(4).Value & "','" & dgListUpload.Rows(i).Cells(5).Value & "','" & dgListUpload.Rows(i).Cells(6).Value & "','" & dgListUpload.Rows(i).Cells(7).Value & "','" & dgListUpload.Rows(i).Cells(8).Value & "','" & dgListUpload.Rows(i).Cells(9).Value & "','" & dgListUpload.Rows(i).Cells(10).Value & "','" & dgListUpload.Rows(i).Cells(11).Value & "','" & dgListUpload.Rows(i).Cells(12).Value & "','" & dgListUpload.Rows(i).Cells(13).Value & "','" & dgListUpload.Rows(i).Cells(14).Value & "','" & MstrKdPegawai & "','A')"
+                .CommandText = "Call AU_MasterBarang('" & dgListUpload.Rows(i).Cells(0).Value & "','" & dgListUpload.Rows(i).Cells(1).Value & "','" & dgListUpload.Rows(i).Cells(2).Value & "','" & dgListUpload.Rows(i).Cells(3).Value & "','" & dgListUpload.Rows(i).Cells(4).Value & "','" & dgListUpload.Rows(i).Cells(5).Value & "','" & dgListUpload.Rows(i).Cells(6).Value & "','" & dgListUpload.Rows(i).Cells(7).Value & "','" & dgListUpload.Rows(i).Cells(8).Value & "','" & dgListUpload.Rows(i).Cells(9).Value & "','" & dgListUpload.Rows(i).Cells(10).Value & "','" & dgListUpload.Rows(i).Cells(11).Value & "','" & dgListUpload.Rows(i).Cells(12).Value & "','" & dgListUpload.Rows(i).Cells(13).Value & "','" & dgListUpload.Rows(i).Cells(14).Value & "','" & dgListUpload.Rows(i).Cells(15).Value & "','" & MstrKdPegawai & "','A')"
                 .ExecuteNonQuery()
             End With
 

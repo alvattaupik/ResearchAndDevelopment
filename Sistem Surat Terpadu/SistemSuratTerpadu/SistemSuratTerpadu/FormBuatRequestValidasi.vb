@@ -3,12 +3,15 @@ Imports System.Data
 Imports System.Data.Sql
 Imports System.Data.SqlClient
 
-Public Class FormValidasi
+Public Class FormBuatRequestValidasi
 
     Dim strKodeKomponen As String
     Dim strKodeJenisValidasi As String
-
+    Dim strpathAttatchments As String
+    Dim strNamaAttachments As String
+    Dim strExtentionFile As String
     Private Sub FormValidasi_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Bersihkan()
         txtNamaLengkap.Text = GlobalstrNamaUser
         txtNamaSupervisor.Text = GlobalstrSupervisor
         txtDivisi.Text = GlobalstrNamaDivisi
@@ -16,58 +19,25 @@ Public Class FormValidasi
         JamAkhir.Value = Now
     End Sub
 
-    Sub LoadComboKomponenValidasi()
-        Dim ds As New DataSet()
-        Dim adapter As New SqlDataAdapter()
 
-        Try
-            KoneksiDatabase1()
-            cmd = New SqlCommand("SELECT DocCode,NamaDokumen FROM dbo.KomponenValidasi WHERE StatusEnabled='Y'", Koneksi1)
-            adapter.SelectCommand = cmd
-            adapter.Fill(ds)
-            adapter.Dispose()
-            cmd.Dispose()
-            Koneksi1.Close()
-            cmbKomponen.DataSource = ds.Tables(0)
-            cmbKomponen.ValueMember = "DocCode"
-            cmbKomponen.DisplayMember = "NamaDokumen"
-        Catch ex As Exception
-            MessageBox.Show("Can not open connection ! ")
-        End Try
-    End Sub
-    Sub CariKodeKomponen()
-        KoneksiDatabase1()
-        Dim strSQlLogin As String
+    Sub GetExtentionfile()
+        ' Input path.
+        Dim p As String = txtPathAttachments.Text
+        ' Get extension.
+        Dim extension As String = Path.GetExtension(p)
 
-        strSQlLogin = "SELECT DocCode,NamaDokumen FROM dbo.KomponenValidasi WHERE NamaDokumen='" & Trim(cmbKomponen.Text) & "'"
-        cmd = New SqlCommand(strSQlLogin, Koneksi1)
-        dr = cmd.ExecuteReader
-        dr.Read()
-        If dr.HasRows = True Then
-
-            strKodeKomponen = dr.GetString(0)
-            dr.Close()
-
-        Else
-
-            dr.Close()
-            strTempkodeJenisSurat = "001"
-            Exit Sub
-        End If
-
-
-        Exit Sub
-
-ErrorLoad:
-        MsgBox(Err.Description)
-        Exit Sub
+        ' Display extension.
+        strExtentionFile = extension
 
     End Sub
+
+
+
     Sub CariKodeJenisValidasi()
         KoneksiDatabase1()
         Dim strSQlLogin As String
 
-        strSQlLogin = "SELECT top 1 KdJenisValidasi,NamaValidasi FROM dbo.JenisValidasi WHERE Namavalidasi='" & Trim(cmbJenisValidasi.Text) & "'"
+        strSQlLogin = "SELECT top 1 Cast(KdJenisValidasi As varchar(20)),NamaValidasi FROM dbo.JenisValidasi WHERE Namavalidasi='" & Trim(cmbJenisValidasi.Text) & "'"
         cmd = New SqlCommand(strSQlLogin, Koneksi1)
         dr = cmd.ExecuteReader
         dr.Read()
@@ -115,23 +85,24 @@ ErrorLoad:
             MessageBox.Show("Can not open connection ! ")
         End Try
     End Sub
-    Private Sub cmbKomponen_Click(sender As Object, e As EventArgs) Handles cmbKomponen.Click
-        LoadComboKomponenValidasi()
-    End Sub
+    'Private Sub cmbKomponen_Click(sender As Object, e As EventArgs)
+    '    LoadComboKomponenValidasi()
+    'End Sub
 
     Private Sub cmbJenisValidasi_Click(sender As Object, e As EventArgs) Handles cmbJenisValidasi.Click
         LoadComboJenisValidasi()
     End Sub
 
     Private Sub GunaGradientButton1_Click(sender As Object, e As EventArgs) Handles GunaGradientButton1.Click
-        On Error GoTo Errorload
+        On Error GoTo ErrorLoad
+        GetExtentionfile()
+
+        Call CopyFileKeDirectoryAttachment()
+
+        CariKodeJenisValidasi()
+        'CariKodeKomponen()
 
         If MsgBox("Apakah Data Yang Di Inputkan Sudah Benar?", vbYesNo, "Konfirmasi") = vbYes Then
-
-
-
-
-
 
             If cmbJenisRequest.Text = "" Then
                 MsgBox("Jenis Request Harus Di Isi!", vbCritical, "Penting!")
@@ -139,14 +110,11 @@ ErrorLoad:
                 Exit Sub
             End If
 
-
             If cmbJenisValidasi.Text = "" Then
                 MsgBox("Jenis Validasi Harus Di Isi!", vbCritical, "Penting!")
                 cmbJenisValidasi.BackColor = Color.Yellow
                 Exit Sub
             End If
-
-
 
             If JamAwal.Value.ToString("H:mm") = JamAkhir.Value.ToString("H:mm") Then
                 If MsgBox("Apakah Anda Yakin Telah Mengatur Durasi Permintaan ini Dengan Benar?", vbYesNo, "Konfirmasi") = vbYes Then
@@ -156,7 +124,6 @@ ErrorLoad:
                 End If
                 Exit Sub
             End If
-
 
 
 Lanjut:
@@ -171,17 +138,19 @@ Lanjut:
             cmd.Parameters.AddWithValue("KdJenisSurat", Trim(lblKdJenisSurat.Text))
             cmd.Parameters.AddWithValue("KdDivisi", Trim(GlobalstrKodeDivisi))
             cmd.Parameters.AddWithValue("KdUser", Trim(GlobalstrKodeUser))
+            cmd.Parameters.AddWithValue("KdSupervisor", Trim(MstrKdSupervisor))
             cmd.Parameters.AddWithValue("Pesan", Trim(txtPesan.Text))
             cmd.Parameters.AddWithValue("JenisRequest", Trim(cmbJenisRequest.Text))
             cmd.Parameters.AddWithValue("Durasi1", JamAwal.Value.ToString("HH:mm"))
             cmd.Parameters.AddWithValue("Durasi2", JamAkhir.Value.ToString("HH:mm"))
-            cmd.Parameters.AddWithValue("KdKomponen", Trim(strKodeKomponen))
-            cmd.Parameters.AddWithValue("KdJenisValidasi", Trim(strKodeJenisValidasi))
+            cmd.Parameters.AddWithValue("KdKomponen", Trim(txtKodeKomponen.Text))
+            cmd.Parameters.AddWithValue("KdJenisValidasi", Trim(cmbJenisValidasi.Text))
             cmd.Parameters.AddWithValue("PesanError", Trim(txtError.Text))
             cmd.Parameters.AddWithValue("Catatan", Trim(""))
             cmd.Parameters.AddWithValue("Status", "")
             cmd.Parameters.Add("OutputNoSurat", SqlDbType.VarChar, 50)
             cmd.Parameters("OutputNoSurat").Direction = ParameterDirection.Output
+            cmd.Parameters.AddWithValue("Attatchment", Trim(strpathAttatchments))
             cmd.Parameters.AddWithValue("StatusSP", "A")
 
             If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
@@ -190,7 +159,7 @@ Lanjut:
             cmd.ExecuteNonQuery()
             txtNoValidasi.Text = cmd.Parameters("OutputNoSurat").Value.ToString()
             MsgBox("Permintaan Validasi Berhasil Disimpan Dengan Nomor: " & txtNoValidasi.Text & " Silahkan Cek Monitoring Request!", vbInformation, "Sukses!")
-
+            Bersihkan()
             Exit Sub
         Else
 
@@ -208,6 +177,30 @@ ErrorLoad:
         Exit Sub
     End Sub
 
+
+    Sub CopyFileKeDirectoryAttachment()
+        If txtPathAttachments.Text = "" Then Exit Sub
+        Call KoneksiDatabase1()
+        Dim cmd As New SqlCommand
+        cmd.CommandText = "[OutNamaAttachments]"
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.Parameters.Add("NamaAttachments", SqlDbType.VarChar, 50)
+        cmd.Parameters("NamaAttachments").Direction = ParameterDirection.Output
+
+        If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
+        cmd.Connection = Koneksi1
+        Koneksi1.Open()
+        cmd.ExecuteNonQuery()
+        strNamaAttachments = cmd.Parameters("NamaAttachments").Value.ToString()
+        strpathAttatchments = "\\10.1.0.52\Attachments Surat\" & Trim(strNamaAttachments) & strExtentionFile
+        My.Computer.FileSystem.CopyFile(Trim(txtPathAttachments.Text), strpathAttatchments, FileIO.UIOption.OnlyErrorDialogs, FileIO.UICancelOption.DoNothing)
+        Exit Sub
+
+
+    End Sub
+
+
+
     Private Sub cmdCetak_Click(sender As Object, e As EventArgs)
         If txtNoValidasi.Text = "" Then
             MsgBox("Tidak Ada Dokumen Yang akan dicetak!  Silahkan Buat Baru Atau Cetak di menu utama", vbCritical, "Tidak Ada Data")
@@ -215,23 +208,53 @@ ErrorLoad:
         End If
     End Sub
 
-    Private Sub cmdBuatSuratValidasiBaru_Click(sender As Object, e As EventArgs) Handles cmdBuatSuratValidasiBaru.Click
+    Private Sub cmdBuatSuratValidasiBaru_Click(sender As Object, e As EventArgs)
         If txtNoValidasi.Text = "" Then
             If MsgBox("Data Belum disimpan, lanjutkan?", vbYesNo, "Konfirmasi?") = vbYes Then
-
                 txtNoValidasi.Text = ""
                 txtPesan.Text = ""
                 cmbJenisRequest.Text = ""
                 JamAwal.Value = Now
                 JamAkhir.Value = Now
-                cmbKomponen.Text = ""
+                txtKomponen.Text = ""
                 txtError.Text = ""
-
             Else
                 Exit Sub
             End If
         End If
+    End Sub
 
-      
+    Sub Bersihkan()
+        txtNoValidasi.Text = ""
+        txtPesan.Text = ""
+        cmbJenisRequest.Text = ""
+        JamAwal.Value = Now
+        JamAkhir.Value = Now
+        txtKomponen.Text = ""
+        txtError.Text = ""
+        txtPathAttachments.Text = ""
+    End Sub
+
+
+    Private Sub cmdBrowse_Click(sender As Object, e As EventArgs) Handles cmdBrowse.Click
+        On Error Resume Next
+        FormCariKomponenSAP.ShowDialog()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        Close()
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Close()
+    End Sub
+
+    Private Sub cmdBrowseAttatchment_Click(sender As Object, e As EventArgs) Handles cmdBrowseAttatchment.Click
+        Using O As New OpenFileDialog
+            If O.ShowDialog = 1 Then
+                txtPathAttachments.Text = O.FileName
+            End If
+        End Using
+
     End Sub
 End Class

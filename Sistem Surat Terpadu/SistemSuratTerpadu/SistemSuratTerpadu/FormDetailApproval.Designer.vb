@@ -22,15 +22,17 @@ Partial Class FormDetailApproval
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GunaGradientButton1 = New Guna.UI.WinForms.GunaGradientButton()
         Me.cmdApproved = New Guna.UI.WinForms.GunaGradientButton()
         Me.lblJumlahUserApproved = New System.Windows.Forms.Label()
         Me.dgDaftarUserApproval = New Guna.UI.WinForms.GunaDataGridView()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtCreatedBy = New Guna.UI.WinForms.GunaTextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.txtPesanUser = New Guna.UI.WinForms.GunaTextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtStatus = New Guna.UI.WinForms.GunaTextBox()
@@ -48,7 +50,10 @@ Partial Class FormDetailApproval
         Me.txtKomponen = New Guna.UI.WinForms.GunaTextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmdLihatAttachment = New System.Windows.Forms.Button()
+        Me.txtPathAttachment = New Guna.UI.WinForms.GunaTextBox()
         CType(Me.dgDaftarUserApproval, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -68,7 +73,7 @@ Partial Class FormDetailApproval
         Me.GunaGradientButton1.ForeColor = System.Drawing.Color.White
         Me.GunaGradientButton1.Image = Nothing
         Me.GunaGradientButton1.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaGradientButton1.Location = New System.Drawing.Point(325, 428)
+        Me.GunaGradientButton1.Location = New System.Drawing.Point(351, 439)
         Me.GunaGradientButton1.Name = "GunaGradientButton1"
         Me.GunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.GunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -96,7 +101,7 @@ Partial Class FormDetailApproval
         Me.cmdApproved.ForeColor = System.Drawing.Color.White
         Me.cmdApproved.Image = Nothing
         Me.cmdApproved.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdApproved.Location = New System.Drawing.Point(326, 320)
+        Me.cmdApproved.Location = New System.Drawing.Point(351, 392)
         Me.cmdApproved.Name = "cmdApproved"
         Me.cmdApproved.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdApproved.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -114,7 +119,7 @@ Partial Class FormDetailApproval
         '
         Me.lblJumlahUserApproved.AutoSize = True
         Me.lblJumlahUserApproved.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJumlahUserApproved.Location = New System.Drawing.Point(9, 472)
+        Me.lblJumlahUserApproved.Location = New System.Drawing.Point(12, 513)
         Me.lblJumlahUserApproved.Name = "lblJumlahUserApproved"
         Me.lblJumlahUserApproved.Size = New System.Drawing.Size(166, 16)
         Me.lblJumlahUserApproved.TabIndex = 48
@@ -124,33 +129,33 @@ Partial Class FormDetailApproval
         '
         Me.dgDaftarUserApproval.AllowUserToAddRows = False
         Me.dgDaftarUserApproval.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.dgDaftarUserApproval.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgDaftarUserApproval.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgDaftarUserApproval.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgDaftarUserApproval.BackgroundColor = System.Drawing.Color.White
         Me.dgDaftarUserApproval.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgDaftarUserApproval.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgDaftarUserApproval.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgDaftarUserApproval.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgDaftarUserApproval.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgDaftarUserApproval.ColumnHeadersHeight = 30
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgDaftarUserApproval.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgDaftarUserApproval.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgDaftarUserApproval.EnableHeadersVisualStyles = False
         Me.dgDaftarUserApproval.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgDaftarUserApproval.Location = New System.Drawing.Point(12, 320)
+        Me.dgDaftarUserApproval.Location = New System.Drawing.Point(15, 361)
         Me.dgDaftarUserApproval.Name = "dgDaftarUserApproval"
         Me.dgDaftarUserApproval.ReadOnly = True
         Me.dgDaftarUserApproval.RowHeadersVisible = False
@@ -184,7 +189,7 @@ Partial Class FormDetailApproval
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(12, 299)
+        Me.Label10.Location = New System.Drawing.Point(12, 340)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(159, 18)
         Me.Label10.TabIndex = 46
@@ -192,6 +197,9 @@ Partial Class FormDetailApproval
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.cmdLihatAttachment)
+        Me.GroupBox2.Controls.Add(Me.txtCreatedBy)
+        Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.txtPesanUser)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.txtStatus)
@@ -210,9 +218,35 @@ Partial Class FormDetailApproval
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Location = New System.Drawing.Point(2, 59)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(555, 237)
+        Me.GroupBox2.Size = New System.Drawing.Size(574, 278)
         Me.GroupBox2.TabIndex = 45
         Me.GroupBox2.TabStop = False
+        '
+        'txtCreatedBy
+        '
+        Me.txtCreatedBy.BaseColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtCreatedBy.BorderColor = System.Drawing.Color.Silver
+        Me.txtCreatedBy.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtCreatedBy.Enabled = False
+        Me.txtCreatedBy.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtCreatedBy.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtCreatedBy.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtCreatedBy.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtCreatedBy.Location = New System.Drawing.Point(407, 80)
+        Me.txtCreatedBy.Name = "txtCreatedBy"
+        Me.txtCreatedBy.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtCreatedBy.Size = New System.Drawing.Size(162, 26)
+        Me.txtCreatedBy.TabIndex = 17
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(313, 85)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(91, 18)
+        Me.Label11.TabIndex = 16
+        Me.Label11.Text = "Created By"
         '
         'txtPesanUser
         '
@@ -227,18 +261,18 @@ Partial Class FormDetailApproval
         Me.txtPesanUser.Location = New System.Drawing.Point(145, 196)
         Me.txtPesanUser.Name = "txtPesanUser"
         Me.txtPesanUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtPesanUser.Size = New System.Drawing.Size(404, 26)
+        Me.txtPesanUser.Size = New System.Drawing.Size(315, 76)
         Me.txtPesanUser.TabIndex = 15
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(84, 196)
+        Me.Label9.Location = New System.Drawing.Point(35, 196)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(55, 18)
+        Me.Label9.Size = New System.Drawing.Size(96, 18)
         Me.Label9.TabIndex = 14
-        Me.Label9.Text = "Pesan"
+        Me.Label9.Text = "Pesan User"
         '
         'txtStatus
         '
@@ -251,10 +285,10 @@ Partial Class FormDetailApproval
         Me.txtStatus.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtStatus.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtStatus.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtStatus.Location = New System.Drawing.Point(386, 48)
+        Me.txtStatus.Location = New System.Drawing.Point(407, 48)
         Me.txtStatus.Name = "txtStatus"
         Me.txtStatus.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtStatus.Size = New System.Drawing.Size(162, 26)
+        Me.txtStatus.Size = New System.Drawing.Size(161, 26)
         Me.txtStatus.TabIndex = 13
         '
         'Label8
@@ -298,7 +332,7 @@ Partial Class FormDetailApproval
         Me.txtErrorvalidasi.Enabled = False
         Me.txtErrorvalidasi.Location = New System.Drawing.Point(146, 138)
         Me.txtErrorvalidasi.Name = "txtErrorvalidasi"
-        Me.txtErrorvalidasi.Size = New System.Drawing.Size(403, 52)
+        Me.txtErrorvalidasi.Size = New System.Drawing.Size(422, 52)
         Me.txtErrorvalidasi.TabIndex = 9
         Me.txtErrorvalidasi.Text = ""
         '
@@ -325,7 +359,7 @@ Partial Class FormDetailApproval
         Me.txtJenisValidasi.Location = New System.Drawing.Point(145, 106)
         Me.txtJenisValidasi.Name = "txtJenisValidasi"
         Me.txtJenisValidasi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtJenisValidasi.Size = New System.Drawing.Size(404, 26)
+        Me.txtJenisValidasi.Size = New System.Drawing.Size(162, 26)
         Me.txtJenisValidasi.TabIndex = 7
         '
         'Label5
@@ -348,7 +382,7 @@ Partial Class FormDetailApproval
         Me.txtTanggal.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtTanggal.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtTanggal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtTanggal.Location = New System.Drawing.Point(387, 19)
+        Me.txtTanggal.Location = New System.Drawing.Point(407, 19)
         Me.txtTanggal.Name = "txtTanggal"
         Me.txtTanggal.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtTanggal.Size = New System.Drawing.Size(162, 26)
@@ -403,7 +437,7 @@ Partial Class FormDetailApproval
         Me.txtKomponen.Location = New System.Drawing.Point(145, 77)
         Me.txtKomponen.Name = "txtKomponen"
         Me.txtKomponen.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtKomponen.Size = New System.Drawing.Size(403, 26)
+        Me.txtKomponen.Size = New System.Drawing.Size(162, 26)
         Me.txtKomponen.TabIndex = 1
         '
         'Label2
@@ -418,28 +452,69 @@ Partial Class FormDetailApproval
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.txtPathAttachment)
+        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(2, 3)
+        Me.GroupBox1.Location = New System.Drawing.Point(2, -7)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(555, 59)
+        Me.GroupBox1.Size = New System.Drawing.Size(585, 59)
         Me.GroupBox1.TabIndex = 44
         Me.GroupBox1.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Red
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(545, 8)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(38, 35)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "X"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(182, 16)
+        Me.Label1.Location = New System.Drawing.Point(188, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(173, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Detail Approval"
         '
+        'cmdLihatAttachment
+        '
+        Me.cmdLihatAttachment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdLihatAttachment.Location = New System.Drawing.Point(467, 197)
+        Me.cmdLihatAttachment.Name = "cmdLihatAttachment"
+        Me.cmdLihatAttachment.Size = New System.Drawing.Size(100, 74)
+        Me.cmdLihatAttachment.TabIndex = 18
+        Me.cmdLihatAttachment.Text = "Lihat Attachment"
+        Me.cmdLihatAttachment.UseVisualStyleBackColor = True
+        '
+        'txtPathAttachment
+        '
+        Me.txtPathAttachment.BaseColor = System.Drawing.Color.White
+        Me.txtPathAttachment.BorderColor = System.Drawing.Color.Silver
+        Me.txtPathAttachment.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPathAttachment.Enabled = False
+        Me.txtPathAttachment.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtPathAttachment.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPathAttachment.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtPathAttachment.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtPathAttachment.Location = New System.Drawing.Point(12, 19)
+        Me.txtPathAttachment.Name = "txtPathAttachment"
+        Me.txtPathAttachment.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPathAttachment.Size = New System.Drawing.Size(162, 26)
+        Me.txtPathAttachment.TabIndex = 4
+        '
         'FormDetailApproval
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(562, 489)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(588, 538)
         Me.Controls.Add(Me.GunaGradientButton1)
         Me.Controls.Add(Me.cmdApproved)
         Me.Controls.Add(Me.lblJumlahUserApproved)
@@ -447,6 +522,7 @@ Partial Class FormDetailApproval
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.Name = "FormDetailApproval"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -484,4 +560,9 @@ Partial Class FormDetailApproval
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtCreatedBy As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents cmdLihatAttachment As System.Windows.Forms.Button
+    Friend WithEvents txtPathAttachment As Guna.UI.WinForms.GunaTextBox
 End Class

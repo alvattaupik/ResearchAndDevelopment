@@ -36,7 +36,7 @@ Public Class FormKonfigurasiCetakanSurat
         End If
 
 
-        If MsgBox("Apakah yakin Anda Akan Menyimpan Transaksi Ini?", vbYesNo, "Konfirmasi") = vbYes Then
+        If MsgBox("Apakah yakin Anda Akan Menyimpan Setting Ini?", vbYesNo, "Konfirmasi") = vbYes Then
 
             On Error GoTo ErrorLoad
 
@@ -209,9 +209,6 @@ ErrorLoad:
 
             Call KoneksiDatabase1()
             Dim cmd As New SqlCommand
-
-
-
             cmd.CommandText = "[AUD_KonfigurasiTemplate]"
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("DocEntry", Trim(txtDocEntry.Text))
@@ -235,7 +232,7 @@ ErrorLoad:
             Exit Sub
         End If
 
-   
+        Exit Sub
 
 ErrorLoad:
         MsgBox(Err.Description)
@@ -253,5 +250,9 @@ ErrorLoad:
         chkStatus.Checked = False
         Exit Sub
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Close()
     End Sub
 End Class

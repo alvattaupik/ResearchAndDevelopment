@@ -16,7 +16,10 @@ Public Class FormLogin
             GlobalstrNamaUser = dr.GetString(1)
             GlobalstrKodeDivisi = dr.GetString(6)
             GlobalstrNamaDivisi = dr.GetString(7)
-            GlobalstrSupervisor = dr.GetString(8)
+
+            MstrLevelUser = dr.GetString(5)
+            MstrKdSupervisor = dr.GetString(8)
+            GlobalstrSupervisor = dr.GetString(9)
 
             FormMenuUtama.Show()
             Me.Dispose()

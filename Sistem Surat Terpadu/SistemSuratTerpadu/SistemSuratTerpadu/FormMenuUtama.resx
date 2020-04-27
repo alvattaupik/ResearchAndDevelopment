@@ -147,6 +147,32 @@
         3gyuBE6i6P01WTMK/A3d4guDMTjY2Jy7wgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="GunaAdvenceButton1.CheckedImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC41ZYUyZQAAAYNJREFUSEu1lL1N
+        BDEUhE8EEIBEJfwECFEEFAMB9EAEdABVENACxBRwFUAC0TLfasea83r3AMFIn27v2X679pvnRdd1/0Iz
+        KDbEqXgSl0PM7IkP8SjOhtiIZlCcC+td7AqP3QnrTeS6QjMojkXqWbwMv7zIuhet9ZOJ4VWs07VorZ1M
+        fCvQp+D5ROwM8EyMMcQza9glR0h9SmKKwHmxNb4CLcWh8JwaxpiDcncUvSSmwim+Zi6pORA4JIWTSuJ6
+        kMpngjnSJRS2t6cH8SYTXHHOMRfPwVyEY4ot60kMok1Rj02xJRBrSzwnAF5FP0mMU9BkYrbhL/7NUXCM
+        WI9jLYk58Owoe/M7MDeFEUpiLJJiECtlghb7onYU1i2JMbVls69rEF7sBqGpaC6arL/xPIk2vBC0Jf+9
+        PRrlRhyJ7QGeidUtvcIoELi158TuWmtnEz8Ii8LiGF+dKe9yhVEg4Lys3C62TAdxo+W6nlEgoAhUmKr3
+        3gyuBE6i6P01WTMK/A3d4guDMTjY2Jy7wgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="GunaAdvenceButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC41ZYUyZQAAAYNJREFUSEu1lL1N
+        BDEUhE8EEIBEJfwECFEEFAMB9EAEdABVENACxBRwFUAC0TLfasea83r3AMFIn27v2X679pvnRdd1/0Iz
+        KDbEqXgSl0PM7IkP8SjOhtiIZlCcC+td7AqP3QnrTeS6QjMojkXqWbwMv7zIuhet9ZOJ4VWs07VorZ1M
+        fCvQp+D5ROwM8EyMMcQza9glR0h9SmKKwHmxNb4CLcWh8JwaxpiDcncUvSSmwim+Zi6pORA4JIWTSuJ6
+        kMpngjnSJRS2t6cH8SYTXHHOMRfPwVyEY4ot60kMok1Rj02xJRBrSzwnAF5FP0mMU9BkYrbhL/7NUXCM
+        WI9jLYk58Owoe/M7MDeFEUpiLJJiECtlghb7onYU1i2JMbVls69rEF7sBqGpaC6arL/xPIk2vBC0Jf+9
+        PRrlRhyJ7QGeidUtvcIoELi158TuWmtnEz8Ii8LiGF+dKe9yhVEg4Lys3C62TAdxo+W6nlEgoAhUmKr3
+        3gyuBE6i6P01WTMK/A3d4guDMTjY2Jy7wgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="GunaPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA04AAABqCAIAAAAEF5ZrAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAACH

@@ -21,11 +21,33 @@ Public Class FormValidasiPassword
             dr.Read()
             If dr.HasRows = True Then
 
-                GlobalstrKodeUser = dr.GetString(0)
-                GlobalstrPassword = dr.GetString(3)
-                FormDetailApproval.AUD_Approval()
-                Me.Dispose()
-                dr.Close()
+                If MstrNamaForm = "Detail Approval" Then
+
+                    GlobalstrKodeUser = dr.GetString(0)
+                    GlobalstrPassword = dr.GetString(3)
+                    FormDetailApproval.AUD_Approval()
+                    FormDetailApproval.LoadDaftarUserValidasi()
+                    FormManagementApproval.LoadDaftarRequestValidasiALL()
+                    FormManagementApproval.LoadDaftarRequestValidasiBelumApproved()
+
+                    Me.Dispose()
+                    dr.Close()
+                End If
+
+
+
+                If MstrNamaForm = "Proses Request" Then
+
+                    GlobalstrKodeUser = dr.GetString(0)
+                    GlobalstrPassword = dr.GetString(3)
+                    ProsesRequest.AUD_Approval()
+                    ProsesRequest.LoadDaftarUserValidasi()
+
+                    Me.Dispose()
+                    dr.Close()
+                End If
+
+
 
             Else
 
@@ -43,4 +65,6 @@ ErrorHandler:
         MsgBox(Err.Description)
         Exit Sub
     End Sub
+
+
 End Class

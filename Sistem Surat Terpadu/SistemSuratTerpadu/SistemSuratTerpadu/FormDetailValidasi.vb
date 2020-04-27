@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class FormDetailValidasi
-
+    Public Declare Function ShellExecute Lib "shell32.dll" Alias "ShellExecuteA" (ByVal hwnd As Long, ByVal lpOperation As String, ByVal lpFile As String, ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Long) As Long
 
     Sub LoadDetailValidasi()
         Call KoneksiDatabase1()
@@ -21,6 +21,8 @@ Public Class FormDetailValidasi
             txtTanggal.Text = dr.GetDateTime(3)
             txtErrorvalidasi.Text = dr.GetString(7)
             txtPesanUser.Text = dr.GetString(12)
+            txtPesanAdmin.Text = dr.GetString(13)
+            txtPathAttachment.Text = dr.GetString(16)
 
         Else
 
@@ -72,9 +74,106 @@ ErrorLoad:
         If txtStatus.Text <> "Lengkap Disetujui" Then
             If MsgBox("Status Approval Belum Lengkap, Lanjutkan?", vbYesNo, "Konfirmasi?") = vbYes Then
 
+
+
+                GlobalstrNoSurat = Trim(txtNoDokumen.Text)
+
+                Call KoneksiDatabase1()
+                Dim strSQlLogin As String
+
+                strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(GlobalstrKodeUser) & "' AND KdJenisSurat='IT003' AND StatusEnabled='Y'"
+                cmd = New SqlCommand(strSQlLogin, Koneksi1)
+                dr = cmd.ExecuteReader
+                dr.Read()
+                If dr.HasRows = True Then
+
+                    GlobalstrPathReport = dr.GetString(0)
+                    FormTampilkanSurat.Show()
+                    dr.Close()
+
+                Else
+
+                    MsgBox("Template Tidak Ada!!!", vbInformation, "Hubungi Administrator")
+                    dr.Close()
+                    Exit Sub
+                End If
+
+                Exit Sub
             Else
+
+
+                GlobalstrNoSurat = Trim(txtNoDokumen.Text)
+
+                Call KoneksiDatabase1()
+                Dim strSQlLogin As String
+
+                strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(GlobalstrKodeUser) & "' AND KdJenisSurat='IT003' AND StatusEnabled='Y'"
+                cmd = New SqlCommand(strSQlLogin, Koneksi1)
+                dr = cmd.ExecuteReader
+                dr.Read()
+
+                If dr.HasRows = True Then
+
+                    GlobalstrPathReport = dr.GetString(0)
+                    FormTampilkanSurat.Show()
+                    dr.Close()
+
+                Else
+
+                    MsgBox("Template Tidak Ada!!!", vbInformation, "Hubungi Administrator")
+                    dr.Close()
+                    Exit Sub
+                End If
+
                 Exit Sub
             End If
+        Else
+
+            GlobalstrNoSurat = Trim(txtNoDokumen.Text)
+
+            Call KoneksiDatabase1()
+            Dim strSQlLogin As String
+
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(GlobalstrKodeUser) & "' AND KdJenisSurat='IT003' AND StatusEnabled='Y'"
+            cmd = New SqlCommand(strSQlLogin, Koneksi1)
+            dr = cmd.ExecuteReader
+            dr.Read()
+
+            If dr.HasRows = True Then
+
+                GlobalstrPathReport = dr.GetString(0)
+                FormTampilkanSurat.Show()
+                dr.Close()
+
+            Else
+
+                MsgBox("Template Tidak Ada!!!", vbInformation, "Hubungi Administrator")
+                dr.Close()
+                Exit Sub
+            End If
+
         End If
+
+        Exit Sub
+
+ErrorLoad:
+        MsgBox(Err.Description)
+        Exit Sub
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Close()
+    End Sub
+
+    Private Sub cmdLihatAttchment_Click(sender As Object, e As EventArgs) Handles cmdLihatAttchment.Click
+        If txtPathAttachment.Text = "" Then
+            MsgBox("Tidak Ada Attatchment Yang Dilampirkan", vbInformation, "Information")
+            Exit Sub
+        End If
+
+        Dim FilePath As String
+        FilePath = txtPathAttachment.Text
+        Call ShellExecute(0, "Open", FilePath, "", "", 1)
     End Sub
 End Class

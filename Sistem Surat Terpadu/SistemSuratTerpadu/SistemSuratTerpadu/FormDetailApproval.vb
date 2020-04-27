@@ -5,12 +5,12 @@ Imports System.Data.SqlClient
 Imports SistemSuratTerpadu.ClassCrypt
 
 Public Class FormDetailApproval
-
+    Public Declare Function ShellExecute Lib "shell32.dll" Alias "ShellExecuteA" (ByVal hwnd As Long, ByVal lpOperation As String, ByVal lpFile As String, ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Long) As Long
     Private Sub cmdApproved_Click(sender As Object, e As EventArgs) Handles cmdApproved.Click
 
         Dim test As Boolean = False
         For Each row In dgDaftarUserApproval.Rows
-            If GlobalstrKodeUser = row.Cells("KdUserApproved").Value Then
+            If GlobalstrKodeUser = row.Cells("KdUserApproved").Value And row.Cells("TglApproved").Value.ToString <> "" Then
                 test = True
                 Exit For
             End If
@@ -20,9 +20,10 @@ Public Class FormDetailApproval
 
 
             If MsgBox("Apakah Anda Telah yakin menyetujui Request ini?", vbYesNo, "Konfirmasi") = vbYes Then
-                cmdApproved.Enabled = False
+                FormValidasiPassword.ShowDialog()
                 Exit Sub
             Else
+
                 Exit Sub
             End If
 
@@ -30,6 +31,7 @@ Public Class FormDetailApproval
 
         Else
             MsgBox("Anda Sudah Pernah Melakukan Approval Untuk Dokumen Ini", vbInformation, "Informasi")
+            cmdApproved.Enabled = False
             Exit Sub
         End If
 
@@ -83,7 +85,9 @@ Public Class FormDetailApproval
             txtStatus.Text = dr.GetString(1)
             txtTanggal.Text = dr.GetDateTime(3)
             txtErrorvalidasi.Text = dr.GetString(7)
+            txtCreatedBy.Text = dr.GetString(11)
             txtPesanUser.Text = dr.GetString(12)
+            txtPathAttachment.Text = dr.GetString(16)
 
         Else
 
@@ -101,6 +105,7 @@ ErrorLoad:
 
 
     Private Sub GunaGradientButton1_Click(sender As Object, e As EventArgs) Handles GunaGradientButton1.Click
+        cmdApproved.Enabled = True
         Close()
     End Sub
 
@@ -133,8 +138,24 @@ ErrorLoad:
     End Sub
 
     Private Sub FormDetailApproval_Load(sender As Object, e As EventArgs) Handles Me.Load
+        MstrNamaForm = "Detail Approval"
         LoadDetailValidasi()
         LoadDaftarUserValidasi()
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Close()
+    End Sub
+
+    Private Sub cmdLihatAttachment_Click(sender As Object, e As EventArgs) Handles cmdLihatAttachment.Click
+        If txtPathAttachment.Text = "" Then
+            MsgBox("Tidak Ada Attatchment Yang Dilampirkan", vbInformation, "Information")
+            Exit Sub
+        End If
+
+        Dim FilePath As String
+        FilePath = txtPathAttachment.Text
+        Call ShellExecute(0, "Open", FilePath, "", "", 1)
     End Sub
 End Class

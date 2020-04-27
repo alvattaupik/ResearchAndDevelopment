@@ -38,6 +38,12 @@ Public Class FormBuatSuratJalan
     End Sub
 
     Private Sub cmdSimpan_Click(sender As Object, e As EventArgs) Handles cmdSimpan.Click
+        If dgItem.RowCount = 0 Then
+            MsgBox("Item Surat Jalan Masih Kosong", vbInformation, "Harus di Isi Min 1")
+            Exit Sub
+        End If
+
+
         For i As Integer = 0 To dgItem.Rows.Count - 1
 
 
@@ -115,11 +121,36 @@ Public Class FormBuatSuratJalan
                 cmd1.CommandType = CommandType.StoredProcedure
                 cmd1.Parameters.AddWithValue("NomorSurat", Trim(txtNoSurat.Text))
                 cmd1.Parameters.AddWithValue("DocEntry", 0)
-                cmd1.Parameters.AddWithValue("KodeBarang", dgItem.Rows(i).Cells(0).Value)
-                cmd1.Parameters.AddWithValue("Deskripsi1", dgItem.Rows(i).Cells(1).Value)
-                cmd1.Parameters.AddWithValue("Qty", dgItem.Rows(i).Cells(2).Value)
+
+                If dgItem.Rows(i).Cells(0).Value = Nothing Then
+                    cmd1.Parameters.AddWithValue("KodeBarang", "")
+                Else
+                    cmd1.Parameters.AddWithValue("KodeBarang", dgItem.Rows(i).Cells(0).Value)
+
+                End If
+
+                If dgItem.Rows(i).Cells(1).Value = Nothing Then
+
+                    cmd1.Parameters.AddWithValue("Deskripsi1", "")
+                Else
+                    cmd1.Parameters.AddWithValue("Deskripsi1", dgItem.Rows(i).Cells(1).Value)
+                End If
+
+                If dgItem.Rows(i).Cells(2).Value = Nothing Then
+                    cmd1.Parameters.AddWithValue("Qty", "")
+                Else
+
+                    cmd1.Parameters.AddWithValue("Qty", dgItem.Rows(i).Cells(2).Value)
+                End If
+
                 cmd1.Parameters.AddWithValue("Deskripsi2", "")
-                cmd1.Parameters.AddWithValue("Keterangan", dgItem.Rows(i).Cells(3).Value)
+
+                If dgItem.Rows(i).Cells(3).Value = Nothing Then
+                    cmd1.Parameters.AddWithValue("Keterangan", "")
+                Else
+                    cmd1.Parameters.AddWithValue("Keterangan", dgItem.Rows(i).Cells(3).Value)
+                End If
+
                 cmd1.Parameters.AddWithValue("StatusSP", "A")
 
                 If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
@@ -140,7 +171,7 @@ Public Class FormBuatSuratJalan
 
         End If
 
-
+        Exit Sub
 
 ErrorLoad:
         MsgBox(Err.Description)
@@ -152,5 +183,7 @@ ErrorLoad:
 
     Private Sub FormBuatSuratJalan_Load(sender As Object, e As EventArgs) Handles Me.Load
         txtPengirim.Text = GlobalstrNamaUser
+        MstrNamaForm = "Surat Jalan"
+        dtpTglSurat.Value = Now
     End Sub
 End Class

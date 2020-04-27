@@ -41,6 +41,7 @@ Partial Class FormKonfigurasiCetakanSurat
         Me.dgSettingTemplate = New System.Windows.Forms.DataGridView()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.txtDocEntry = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgSettingTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,7 +62,7 @@ Partial Class FormKonfigurasiCetakanSurat
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(5, 51)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(594, 146)
+        Me.GroupBox1.Size = New System.Drawing.Size(594, 167)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Konfigurasi Template"
@@ -71,7 +72,7 @@ Partial Class FormKonfigurasiCetakanSurat
         Me.cmdTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdTambah.Location = New System.Drawing.Point(102, 114)
         Me.cmdTambah.Name = "cmdTambah"
-        Me.cmdTambah.Size = New System.Drawing.Size(165, 26)
+        Me.cmdTambah.Size = New System.Drawing.Size(146, 36)
         Me.cmdTambah.TabIndex = 10
         Me.cmdTambah.Text = "Tambah"
         Me.cmdTambah.UseVisualStyleBackColor = True
@@ -107,9 +108,9 @@ Partial Class FormKonfigurasiCetakanSurat
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(440, 114)
+        Me.Button1.Location = New System.Drawing.Point(469, 113)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(144, 26)
+        Me.Button1.Size = New System.Drawing.Size(115, 37)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Hapus"
         Me.Button1.UseVisualStyleBackColor = True
@@ -117,9 +118,9 @@ Partial Class FormKonfigurasiCetakanSurat
         'cmdSimpan
         '
         Me.cmdSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdSimpan.Location = New System.Drawing.Point(269, 114)
+        Me.cmdSimpan.Location = New System.Drawing.Point(311, 112)
         Me.cmdSimpan.Name = "cmdSimpan"
-        Me.cmdSimpan.Size = New System.Drawing.Size(165, 26)
+        Me.cmdSimpan.Size = New System.Drawing.Size(128, 38)
         Me.cmdSimpan.TabIndex = 5
         Me.cmdSimpan.Text = "Simpan"
         Me.cmdSimpan.UseVisualStyleBackColor = True
@@ -144,9 +145,9 @@ Partial Class FormKonfigurasiCetakanSurat
         'cmdbrowse
         '
         Me.cmdbrowse.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdbrowse.Location = New System.Drawing.Point(493, 12)
+        Me.cmdbrowse.Location = New System.Drawing.Point(493, 29)
         Me.cmdbrowse.Name = "cmdbrowse"
-        Me.cmdbrowse.Size = New System.Drawing.Size(91, 96)
+        Me.cmdbrowse.Size = New System.Drawing.Size(91, 50)
         Me.cmdbrowse.TabIndex = 2
         Me.cmdbrowse.Text = "Browse.."
         Me.cmdbrowse.UseVisualStyleBackColor = True
@@ -227,15 +228,29 @@ Partial Class FormKonfigurasiCetakanSurat
         Me.txtDocEntry.TabIndex = 3
         Me.txtDocEntry.Visible = False
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Red
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(548, 0)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(54, 26)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "X"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'FormKonfigurasiCetakanSurat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(601, 425)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.txtDocEntry)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormKonfigurasiCetakanSurat"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Konfigurasi Template"
@@ -267,4 +282,5 @@ Partial Class FormKonfigurasiCetakanSurat
     Friend WithEvents chkStatus As Guna.UI.WinForms.GunaCheckBox
     Friend WithEvents txtDocEntry As System.Windows.Forms.TextBox
     Friend WithEvents cmdTambah As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

@@ -113,6 +113,10 @@ Public Class FormItemsSuratjalan
                 Exit Sub
             Else
                 FormBuatSuratJalan.dgItem.Rows.Add(row2)
+                FormBuatSuratJalan.dgItem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+                FormBuatSuratJalan.dgItem.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+                FormBuatSuratJalan.dgItem.AutoResizeColumns()
+
                 Me.Close()
             End If
 
@@ -158,6 +162,9 @@ Public Class FormItemsSuratjalan
                 Exit Sub
             Else
                 FormBuatSuratJalan.dgItem.Rows.Add(row2)
+                FormBuatSuratJalan.dgItem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+                FormBuatSuratJalan.dgItem.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+                FormBuatSuratJalan.dgItem.AutoResizeColumns()
                 Me.Close()
             End If
 

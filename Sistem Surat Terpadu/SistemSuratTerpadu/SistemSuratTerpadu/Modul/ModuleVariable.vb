@@ -15,6 +15,37 @@
     Public GlobalstrAlamat As String
 
 
+    Public MstrNamaForm As String
+    Public MstrLevelUser As String
+    Public MstrKdSupervisor As String
+
+
+
+
+
+
+    Public MstrMenuSuratJalan As String
+    Public MstrMenuSuratTerima As String
+    Public MstrMenuSuratTugas As String
+    Public MstrMenuSuratPengajuanBiaya As String
+
+    Public MstrMenuBAPPenyelesaian As String
+    Public MstrMenuBAPSerahTerima As String
+
+
+    Public MstrMenuFormValidasi As String
+    Public MstrMenuFormCancelDanClose As String
+    Public MstrMenuFormOpenDanClose As String
+
+
+    Public MstrMenuTemplate As String
+    Public MstrMenuMasterValidasi As String
+    Public MstrMenuUserLogindanHakAkses As String
+    Public MstrMenuUbahPassword As String
+
+    Public MstrMenuMonitoringMyRequest As String
+    Public MstrMenuApprovalRequest As String
+    Public MstrMenuProsesReqFullfilments As String
 
 
 
