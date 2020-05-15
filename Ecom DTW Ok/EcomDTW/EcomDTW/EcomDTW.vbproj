@@ -13,7 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\IT-ALVAT\Music\ECommDTW 1\</PublishUrl>
+    <PublishUrl>C:\Users\IT-ALVAT\Music\ECommDTW 28042020 1\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -109,10 +109,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormKonfigurasiIntegrasi.Designer.vb">
+      <DependentUpon>FormKonfigurasiIntegrasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonfigurasiIntegrasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormKonfigurasiDatabase.Designer.vb">
       <DependentUpon>FormKonfigurasiDatabase.vb</DependentUpon>
     </Compile>
     <Compile Include="FormKonfigurasiDatabase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIntegrasi.Designer.vb">
+      <DependentUpon>FormIntegrasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormIntegrasi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormUpload.vb">
@@ -153,8 +165,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormKonfigurasiIntegrasi.resx">
+      <DependentUpon>FormKonfigurasiIntegrasi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormKonfigurasiDatabase.resx">
       <DependentUpon>FormKonfigurasiDatabase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIntegrasi.resx">
+      <DependentUpon>FormIntegrasi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpload.resx">
       <DependentUpon>FormUpload.vb</DependentUpon>
@@ -205,6 +223,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon fix.ico" />
+    <None Include="Resources\sql-server-logo-png-8.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -222,6 +241,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="MySql.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

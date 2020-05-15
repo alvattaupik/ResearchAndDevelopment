@@ -131,4 +131,8 @@ ErrorHandler:
     Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
 
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        FormKonfigurasiIntegrasi.ShowDialog()
+    End Sub
 End Class

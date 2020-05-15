@@ -27,17 +27,6 @@ Partial Class FormUpload
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.txtPathLokasi = New System.Windows.Forms.TextBox()
         Me.dgListUpload = New System.Windows.Forms.DataGridView()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.lblJumlahItem = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.lblJumlahUpload = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmdLogoff = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.lblJumlahItem2 = New System.Windows.Forms.Label()
-        Me.lblDari = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.id_produk = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.id_categories = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.id_brands = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,17 +43,34 @@ Partial Class FormUpload
         Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Availability = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Image = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.lblJumlahItem = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.lblJumlahUpload = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmdLogoff = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.lblJumlahItem2 = New System.Windows.Forms.Label()
+        Me.lblDari = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IntegrasiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LihatPerubahanItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.dgListUpload, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(512, 6)
+        Me.Button1.Location = New System.Drawing.Point(512, 42)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(102, 66)
+        Me.Button1.Size = New System.Drawing.Size(102, 69)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "....Browse"
         Me.Button1.UseVisualStyleBackColor = True
@@ -77,7 +83,7 @@ Partial Class FormUpload
         '
         Me.txtPathLokasi.Enabled = False
         Me.txtPathLokasi.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPathLokasi.Location = New System.Drawing.Point(111, 45)
+        Me.txtPathLokasi.Location = New System.Drawing.Point(111, 82)
         Me.txtPathLokasi.Name = "txtPathLokasi"
         Me.txtPathLokasi.Size = New System.Drawing.Size(396, 29)
         Me.txtPathLokasi.TabIndex = 1
@@ -87,120 +93,10 @@ Partial Class FormUpload
         Me.dgListUpload.AllowUserToAddRows = False
         Me.dgListUpload.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgListUpload.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_produk, Me.id_categories, Me.id_brands, Me.id_event, Me.NamaBarang, Me.Deskripsi, Me.Weight, Me.HargaBeli, Me.strike_price, Me.Price, Me.Diskon, Me.Unit, Me.Stock, Me.Status, Me.Availability, Me.Image})
-        Me.dgListUpload.Location = New System.Drawing.Point(13, 84)
+        Me.dgListUpload.Location = New System.Drawing.Point(13, 117)
         Me.dgListUpload.Name = "dgListUpload"
         Me.dgListUpload.Size = New System.Drawing.Size(833, 265)
         Me.dgListUpload.TabIndex = 5
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblJumlahItem})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 365)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(858, 26)
-        Me.StatusStrip1.TabIndex = 6
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'lblJumlahItem
-        '
-        Me.lblJumlahItem.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJumlahItem.Name = "lblJumlahItem"
-        Me.lblJumlahItem.Size = New System.Drawing.Size(98, 21)
-        Me.lblJumlahItem.Text = "Jumlah Item"
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(620, 6)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(97, 69)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Upload"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'lblJumlahUpload
-        '
-        Me.lblJumlahUpload.AutoSize = True
-        Me.lblJumlahUpload.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJumlahUpload.Location = New System.Drawing.Point(657, 368)
-        Me.lblJumlahUpload.Name = "lblJumlahUpload"
-        Me.lblJumlahUpload.Size = New System.Drawing.Size(19, 20)
-        Me.lblJumlahUpload.TabIndex = 8
-        Me.lblJumlahUpload.Text = "0"
-        Me.lblJumlahUpload.Visible = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(193, 6)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(291, 33)
-        Me.Label1.TabIndex = 10
-        Me.Label1.Text = "Upload Master Data"
-        '
-        'cmdLogoff
-        '
-        Me.cmdLogoff.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdLogoff.Location = New System.Drawing.Point(723, 8)
-        Me.cmdLogoff.Name = "cmdLogoff"
-        Me.cmdLogoff.Size = New System.Drawing.Size(107, 66)
-        Me.cmdLogoff.TabIndex = 11
-        Me.cmdLogoff.Text = "Logoff"
-        Me.cmdLogoff.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.EcomDTW.My.Resources.Resources.unnamed
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 1)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(93, 77)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 9
-        Me.PictureBox1.TabStop = False
-        '
-        'Button3
-        '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(124, -8)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(85, 47)
-        Me.Button3.TabIndex = 12
-        Me.Button3.Text = "Upload"
-        Me.Button3.UseVisualStyleBackColor = True
-        Me.Button3.Visible = False
-        '
-        'lblJumlahItem2
-        '
-        Me.lblJumlahItem2.AutoSize = True
-        Me.lblJumlahItem2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJumlahItem2.Location = New System.Drawing.Point(782, 368)
-        Me.lblJumlahItem2.Name = "lblJumlahItem2"
-        Me.lblJumlahItem2.Size = New System.Drawing.Size(19, 20)
-        Me.lblJumlahItem2.TabIndex = 13
-        Me.lblJumlahItem2.Text = "0"
-        Me.lblJumlahItem2.Visible = False
-        '
-        'lblDari
-        '
-        Me.lblDari.AutoSize = True
-        Me.lblDari.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDari.Location = New System.Drawing.Point(714, 368)
-        Me.lblDari.Name = "lblDari"
-        Me.lblDari.Size = New System.Drawing.Size(42, 20)
-        Me.lblDari.TabIndex = 14
-        Me.lblDari.Text = "Dari"
-        Me.lblDari.Visible = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(527, 368)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(112, 20)
-        Me.Label3.TabIndex = 15
-        Me.Label3.Text = "Mengupload:"
         '
         'id_produk
         '
@@ -297,11 +193,156 @@ Partial Class FormUpload
         Me.Image.Name = "Image"
         Me.Image.ReadOnly = True
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblJumlahItem})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 389)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(858, 26)
+        Me.StatusStrip1.TabIndex = 6
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'lblJumlahItem
+        '
+        Me.lblJumlahItem.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJumlahItem.Name = "lblJumlahItem"
+        Me.lblJumlahItem.Size = New System.Drawing.Size(98, 21)
+        Me.lblJumlahItem.Text = "Jumlah Item"
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(620, 42)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(97, 69)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "Upload"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'lblJumlahUpload
+        '
+        Me.lblJumlahUpload.AutoSize = True
+        Me.lblJumlahUpload.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJumlahUpload.Location = New System.Drawing.Point(654, 395)
+        Me.lblJumlahUpload.Name = "lblJumlahUpload"
+        Me.lblJumlahUpload.Size = New System.Drawing.Size(19, 20)
+        Me.lblJumlahUpload.TabIndex = 8
+        Me.lblJumlahUpload.Text = "0"
+        Me.lblJumlahUpload.Visible = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(216, 46)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(291, 33)
+        Me.Label1.TabIndex = 10
+        Me.Label1.Text = "Upload Master Data"
+        '
+        'cmdLogoff
+        '
+        Me.cmdLogoff.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdLogoff.Location = New System.Drawing.Point(723, 42)
+        Me.cmdLogoff.Name = "cmdLogoff"
+        Me.cmdLogoff.Size = New System.Drawing.Size(107, 66)
+        Me.cmdLogoff.TabIndex = 11
+        Me.cmdLogoff.Text = "Logoff"
+        Me.cmdLogoff.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(111, 34)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(85, 47)
+        Me.Button3.TabIndex = 12
+        Me.Button3.Text = "Upload"
+        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.Visible = False
+        '
+        'lblJumlahItem2
+        '
+        Me.lblJumlahItem2.AutoSize = True
+        Me.lblJumlahItem2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJumlahItem2.Location = New System.Drawing.Point(781, 395)
+        Me.lblJumlahItem2.Name = "lblJumlahItem2"
+        Me.lblJumlahItem2.Size = New System.Drawing.Size(19, 20)
+        Me.lblJumlahItem2.TabIndex = 13
+        Me.lblJumlahItem2.Text = "0"
+        Me.lblJumlahItem2.Visible = False
+        '
+        'lblDari
+        '
+        Me.lblDari.AutoSize = True
+        Me.lblDari.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDari.Location = New System.Drawing.Point(702, 395)
+        Me.lblDari.Name = "lblDari"
+        Me.lblDari.Size = New System.Drawing.Size(42, 20)
+        Me.lblDari.TabIndex = 14
+        Me.lblDari.Text = "Dari"
+        Me.lblDari.Visible = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(527, 395)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(112, 20)
+        Me.Label3.TabIndex = 15
+        Me.Label3.Text = "Mengupload:"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.IntegrasiToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(858, 24)
+        Me.MenuStrip1.TabIndex = 16
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(93, 22)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'IntegrasiToolStripMenuItem
+        '
+        Me.IntegrasiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LihatPerubahanItemToolStripMenuItem})
+        Me.IntegrasiToolStripMenuItem.Name = "IntegrasiToolStripMenuItem"
+        Me.IntegrasiToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
+        Me.IntegrasiToolStripMenuItem.Text = "Integrasi"
+        '
+        'LihatPerubahanItemToolStripMenuItem
+        '
+        Me.LihatPerubahanItemToolStripMenuItem.Name = "LihatPerubahanItemToolStripMenuItem"
+        Me.LihatPerubahanItemToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.LihatPerubahanItemToolStripMenuItem.Text = "Lihat Perubahan Item"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.EcomDTW.My.Resources.Resources.unnamed
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 34)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(93, 77)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
         'FormUpload
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(858, 391)
+        Me.ClientSize = New System.Drawing.Size(858, 415)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lblDari)
         Me.Controls.Add(Me.lblJumlahItem2)
@@ -312,16 +353,20 @@ Partial Class FormUpload
         Me.Controls.Add(Me.lblJumlahUpload)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.StatusStrip1)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.dgListUpload)
         Me.Controls.Add(Me.txtPathLokasi)
         Me.Controls.Add(Me.Button1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FormUpload"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Upload Master Barang"
         CType(Me.dgListUpload, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -358,5 +403,10 @@ Partial Class FormUpload
     Friend WithEvents Status As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Availability As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Image As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents IntegrasiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LihatPerubahanItemToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

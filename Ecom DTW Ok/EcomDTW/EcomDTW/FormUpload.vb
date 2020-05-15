@@ -197,4 +197,8 @@ ErrorLoad:
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Call UploadDatamaster()
     End Sub
+
+    Private Sub LihatPerubahanItemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LihatPerubahanItemToolStripMenuItem.Click
+        FormIntegrasi.ShowDialog()
+    End Sub
 End Class

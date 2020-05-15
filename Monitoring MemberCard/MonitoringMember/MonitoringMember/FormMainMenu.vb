@@ -4,7 +4,7 @@ Imports System.Data.Sql
 Imports System.Data.SqlClient
 Public Class FormMainMenu
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         End
     End Sub
 
@@ -205,6 +205,40 @@ Public Class FormMainMenu
     End Sub
 
 
+    Sub LoadRiwayatTransaksiCustomerByNoMember()
+        Call KoneksiDatabaseSAP()
+        Dim cmd As New SqlCommand("SELECT * FROM V_PembelianCustomer WHERE NoMember ='" & Trim(txtKodeMember.Text) & "'", Koneksi2)
+        cmd.CommandTimeout = 0
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable
+        adapter.Fill(table)
+        dgHistoryTransaksiCustomer.DataSource = table
+
+        dgHistoryTransaksiCustomer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgHistoryTransaksiCustomer.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+        dgHistoryTransaksiCustomer.AutoResizeColumns()
+    End Sub
+
+
+
+
+    Sub LoadRiwayatTransaksiCustomerByNoStruk()
+        Call KoneksiDatabaseSAP()
+        Dim cmd As New SqlCommand("SELECT * FROM V_PembelianCustomer WHERE NoStruk ='" & Trim(txtNoStruk.Text) & "'", Koneksi2)
+        cmd.CommandTimeout = 0
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable
+        adapter.Fill(table)
+        dgHistoryTransaksiCustomer.DataSource = table
+
+        dgHistoryTransaksiCustomer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgHistoryTransaksiCustomer.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+        dgHistoryTransaksiCustomer.AutoResizeColumns()
+    End Sub
+
+
+
+
     Sub LoadDataCustomer()
         On Error GoTo ErrorLoad
         KoneksiDatabaseSAP()
@@ -278,5 +312,71 @@ ErrorLoad:
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         End
+    End Sub
+
+    Private Sub GunaGradientButton1_Click(sender As Object, e As EventArgs) Handles GunaGradientButton1.Click
+
+        LoadRiwayatTransaksiCustomerByNoMember()
+
+
+        Dim LongMargin As Long = 0
+        Dim LongTotalJual As Long = 0
+        Dim LongTotalBeli As Long = 0
+        Dim LongTotalMargin As Long = 0
+
+
+        For i = 0 To dgHistoryTransaksiCustomer.RowCount - 1
+
+
+
+            dgHistoryTransaksiCustomer.Rows(i).Cells(9).Value = dgHistoryTransaksiCustomer.Rows(i).Cells(9).Value 'Total Jual
+            LongTotalJual = LongTotalJual + dgHistoryTransaksiCustomer.Rows(i).Cells(9).Value
+
+
+
+
+        Next
+
+
+
+        lblTotalTransaksi.Text = "Total Transaksi: " & Format(LongTotalJual, "N0")
+
+
+
+    End Sub
+
+    Private Sub LihatRiwayatTransaksiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LihatRiwayatTransaksiToolStripMenuItem.Click
+        If dgDaftarMember.RowCount = 0 Then Exit Sub
+
+        MstrNoMember = dgDaftarMember.Item(2, dgDaftarMember.CurrentRow.Index).Value
+        FormRiwayatTransaksi.ShowDialog()
+    End Sub
+
+    Private Sub GunaGradientButton2_Click(sender As Object, e As EventArgs) Handles GunaGradientButton2.Click
+        LoadRiwayatTransaksiCustomerByNoStruk()
+
+        Dim LongMargin As Long = 0
+        Dim LongTotalJual As Long = 0
+        Dim LongTotalBeli As Long = 0
+        Dim LongTotalMargin As Long = 0
+
+
+        For i = 0 To dgHistoryTransaksiCustomer.RowCount - 1
+
+
+
+            dgHistoryTransaksiCustomer.Rows(i).Cells(9).Value = dgHistoryTransaksiCustomer.Rows(i).Cells(9).Value 'Total Jual
+            LongTotalJual = LongTotalJual + dgHistoryTransaksiCustomer.Rows(i).Cells(9).Value
+
+
+
+
+        Next
+
+
+
+        lblTotalTransaksi.Text = "Total Transaksi: " & Format(LongTotalJual, "N0")
+
+
     End Sub
 End Class

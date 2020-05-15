@@ -25,6 +25,10 @@ Module ModuleKoneksi
     Public rd As SqlDataReader
 
 
+    Public MstrNoMember As String
+
+
+
 
 
 

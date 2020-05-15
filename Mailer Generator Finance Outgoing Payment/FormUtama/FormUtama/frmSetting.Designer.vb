@@ -46,14 +46,14 @@ Partial Class frmSetting
         Me.txtNamaPenerima = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txtHeader = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.txtFooter = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtBody = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtSubject = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtHeader = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -293,12 +293,29 @@ Partial Class frmSetting
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Body"
         '
+        'txtHeader
+        '
+        Me.txtHeader.Location = New System.Drawing.Point(103, 41)
+        Me.txtHeader.Multiline = True
+        Me.txtHeader.Name = "txtHeader"
+        Me.txtHeader.Size = New System.Drawing.Size(250, 31)
+        Me.txtHeader.TabIndex = 13
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(14, 44)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(42, 13)
+        Me.Label13.TabIndex = 12
+        Me.Label13.Text = "Header"
+        '
         'txtFooter
         '
-        Me.txtFooter.Location = New System.Drawing.Point(102, 119)
+        Me.txtFooter.Location = New System.Drawing.Point(103, 119)
         Me.txtFooter.Multiline = True
         Me.txtFooter.Name = "txtFooter"
-        Me.txtFooter.Size = New System.Drawing.Size(250, 35)
+        Me.txtFooter.Size = New System.Drawing.Size(249, 35)
         Me.txtFooter.TabIndex = 11
         '
         'Label12
@@ -342,23 +359,6 @@ Partial Class frmSetting
         Me.Label6.Size = New System.Drawing.Size(43, 13)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Subject"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(14, 44)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(42, 13)
-        Me.Label13.TabIndex = 12
-        Me.Label13.Text = "Header"
-        '
-        'txtHeader
-        '
-        Me.txtHeader.Location = New System.Drawing.Point(103, 41)
-        Me.txtHeader.Multiline = True
-        Me.txtHeader.Name = "txtHeader"
-        Me.txtHeader.Size = New System.Drawing.Size(250, 31)
-        Me.txtHeader.TabIndex = 13
         '
         'frmSetting
         '

@@ -9,7 +9,7 @@ Public Class FormManagementApproval
     Sub LoadDaftarRequestValidasiBelumApproved()
 
         Call KoneksiDatabase1()
-        Dim cmd As New SqlCommand("SELECT NoValidasi,StatusApproval,NamaUser AS RequestName,Pesan AS PesanUser,CreateDate,JenisRequest,Komponen,JenisValidasi FROM dbo.V_DetailValidasi WHERE StatusApproval='Belum DiApprove' AND KodeSPV in ('" & MstrKdSupervisor & "','-','" & GlobalstrKodeUser & "')", Koneksi1)
+        Dim cmd As New SqlCommand("SELECT NoValidasi,NamaUser,CreateDate,JENIS,JenisRequest,StatusApproval,StatusRequest FROM V_DaftarMonitoringRequest", Koneksi1)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -27,7 +27,7 @@ Public Class FormManagementApproval
     Sub LoadDaftarRequestValidasiALL()
 
         Call KoneksiDatabase1()
-        Dim cmd As New SqlCommand("SELECT NoValidasi,StatusApproval,NamaUser AS RequestName,Pesan AS PesanUser,CreateDate,JenisRequest,Komponen,JenisValidasi FROM dbo.V_DetailValidasi WHERE NamaUser Like '%" & Trim(txtDibuatOleh.Text) & "%' AND  Cast(CreateDate As Date) between '" & dtpAwal.Value.ToString("yyyy-MM-dd") & "' AND '" & dtpAkhir.Value.ToString("yyyy-MM-dd") & "' AND KodeSPV in ('" & MstrKdSupervisor & "','-','" & GlobalstrKodeUser & "') Order by CreateDate desc", Koneksi1)
+        Dim cmd As New SqlCommand("SELECT NoValidasi,NamaUser,CreateDate,JENIS,JenisRequest,StatusApproval,StatusRequest FROM V_DaftarMonitoringRequest WHERE Cast(CreateDate As Date) between '" & dtpAwal.Value.ToString("yyyy-MM-dd") & "' AND '" & dtpAkhir.Value.ToString("yyyy-MM-dd") & "' ) Order by CreateDate desc", Koneksi1)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable

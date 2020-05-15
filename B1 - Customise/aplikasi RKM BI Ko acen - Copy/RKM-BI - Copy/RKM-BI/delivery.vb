@@ -967,7 +967,5 @@ Public Class delivery
     End Sub
 
 
-    Private Sub DataGridABM_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridABM.CellContentClick
 
-    End Sub
 End Class

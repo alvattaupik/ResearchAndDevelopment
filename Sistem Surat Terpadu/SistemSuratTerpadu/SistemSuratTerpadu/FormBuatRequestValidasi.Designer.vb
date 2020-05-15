@@ -124,7 +124,7 @@ Partial Class FormBuatRequestValidasi
         '
         Me.lblKdJenisSurat.AutoSize = True
         Me.lblKdJenisSurat.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblKdJenisSurat.Location = New System.Drawing.Point(9, 23)
+        Me.lblKdJenisSurat.Location = New System.Drawing.Point(6, 22)
         Me.lblKdJenisSurat.Name = "lblKdJenisSurat"
         Me.lblKdJenisSurat.Size = New System.Drawing.Size(40, 13)
         Me.lblKdJenisSurat.TabIndex = 0

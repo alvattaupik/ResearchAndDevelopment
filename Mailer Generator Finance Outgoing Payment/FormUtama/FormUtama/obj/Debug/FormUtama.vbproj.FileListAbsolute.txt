@@ -33,3 +33,7 @@ D:\Research And Development\ResearchAndDevelopment\Mailer Generator Finance Outg
 D:\Research And Development\ResearchAndDevelopment\Mailer Generator Finance Outgoing Payment\FormUtama\FormUtama\obj\Debug\Outgoing Payment Notification 1.1.exe
 D:\Research And Development\ResearchAndDevelopment\Mailer Generator Finance Outgoing Payment\FormUtama\FormUtama\obj\Debug\Outgoing Payment Notification 1.1.xml
 D:\Research And Development\ResearchAndDevelopment\Mailer Generator Finance Outgoing Payment\FormUtama\FormUtama\obj\Debug\Outgoing Payment Notification 1.1.pdb
+D:\ResearchAndDevelopment\Mailer Generator Finance Outgoing Payment\FormUtama\FormUtama\bin\Debug\Outgoing Payment Notification 1.1.exe.config
+D:\ResearchAndDevelopment\Mailer Generator Finance Outgoing Payment\FormUtama\FormUtama\obj\Debug\Outgoing Payment Notification 1.1.exe
+D:\ResearchAndDevelopment\Mailer Generator Finance Outgoing Payment\FormUtama\FormUtama\obj\Debug\Outgoing Payment Notification 1.1.xml
+D:\ResearchAndDevelopment\Mailer Generator Finance Outgoing Payment\FormUtama\FormUtama\obj\Debug\Outgoing Payment Notification 1.1.pdb

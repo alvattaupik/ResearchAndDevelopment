@@ -101,6 +101,54 @@ Namespace My
                 Me("PasswordDB") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property ServerNameIntegrasi() As String
+            Get
+                Return CType(Me("ServerNameIntegrasi"),String)
+            End Get
+            Set
+                Me("ServerNameIntegrasi") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property DatabasenameIntegrasi() As String
+            Get
+                Return CType(Me("DatabasenameIntegrasi"),String)
+            End Get
+            Set
+                Me("DatabasenameIntegrasi") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property UsernameDBIntegrasi() As String
+            Get
+                Return CType(Me("UsernameDBIntegrasi"),String)
+            End Get
+            Set
+                Me("UsernameDBIntegrasi") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property PasswordDBIntegrasi() As String
+            Get
+                Return CType(Me("PasswordDBIntegrasi"),String)
+            End Get
+            Set
+                Me("PasswordDBIntegrasi") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
