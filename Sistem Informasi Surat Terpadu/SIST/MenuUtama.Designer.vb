@@ -22,14 +22,13 @@ Partial Class MenuUtama
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuUtama))
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
         Me.cmdUbahUserNamePassword = New Guna.UI.WinForms.GunaGradientButton()
-        Me.GunaGradientButton3 = New Guna.UI.WinForms.GunaGradientButton()
         Me.cmdLogout = New Guna.UI.WinForms.GunaGradientButton()
         Me.txtNamaUser = New System.Windows.Forms.TextBox()
         Me.GunaLabel2 = New Guna.UI.WinForms.GunaLabel()
@@ -68,16 +67,20 @@ Partial Class MenuUtama
         Me.JenisValidasiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UbahPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmailNotifikasiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MonitoringToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MyRequestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PeminjamanAssetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ApprovalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DaftarRequestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProsesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RequestToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DaftarBantuanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PeminjamanAssetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmailNotifikasiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cmdCancel = New Guna.UI.WinForms.GunaGradientButton()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChangeLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GunaAdvenceButton1 = New Guna.UI.WinForms.GunaAdvenceButton()
         Me.GunaPictureBox2 = New Guna.UI.WinForms.GunaPictureBox()
         Me.GunaPanel1.SuspendLayout()
@@ -91,8 +94,8 @@ Partial Class MenuUtama
         'GunaPanel1
         '
         Me.GunaPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.GunaPanel1.Controls.Add(Me.Label3)
         Me.GunaPanel1.Controls.Add(Me.cmdUbahUserNamePassword)
-        Me.GunaPanel1.Controls.Add(Me.GunaGradientButton3)
         Me.GunaPanel1.Controls.Add(Me.cmdLogout)
         Me.GunaPanel1.Controls.Add(Me.txtNamaUser)
         Me.GunaPanel1.Controls.Add(Me.GunaLabel2)
@@ -131,34 +134,6 @@ Partial Class MenuUtama
         Me.cmdUbahUserNamePassword.Text = "Ubah Password"
         Me.cmdUbahUserNamePassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'GunaGradientButton3
-        '
-        Me.GunaGradientButton3.AnimationHoverSpeed = 0.07!
-        Me.GunaGradientButton3.AnimationSpeed = 0.03!
-        Me.GunaGradientButton3.BackColor = System.Drawing.Color.Transparent
-        Me.GunaGradientButton3.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
-        Me.GunaGradientButton3.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.GunaGradientButton3.BorderColor = System.Drawing.Color.Black
-        Me.GunaGradientButton3.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.GunaGradientButton3.FocusedColor = System.Drawing.Color.Empty
-        Me.GunaGradientButton3.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.GunaGradientButton3.ForeColor = System.Drawing.Color.White
-        Me.GunaGradientButton3.Image = Nothing
-        Me.GunaGradientButton3.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaGradientButton3.Location = New System.Drawing.Point(82, 183)
-        Me.GunaGradientButton3.Name = "GunaGradientButton3"
-        Me.GunaGradientButton3.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.GunaGradientButton3.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaGradientButton3.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.GunaGradientButton3.OnHoverForeColor = System.Drawing.Color.White
-        Me.GunaGradientButton3.OnHoverImage = Nothing
-        Me.GunaGradientButton3.OnPressedColor = System.Drawing.Color.Black
-        Me.GunaGradientButton3.Radius = 2
-        Me.GunaGradientButton3.Size = New System.Drawing.Size(64, 37)
-        Me.GunaGradientButton3.TabIndex = 28
-        Me.GunaGradientButton3.Text = "Profil"
-        Me.GunaGradientButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'cmdLogout
         '
         Me.cmdLogout.AnimationHoverSpeed = 0.07!
@@ -182,7 +157,7 @@ Partial Class MenuUtama
         Me.cmdLogout.OnHoverImage = Nothing
         Me.cmdLogout.OnPressedColor = System.Drawing.Color.Black
         Me.cmdLogout.Radius = 2
-        Me.cmdLogout.Size = New System.Drawing.Size(64, 37)
+        Me.cmdLogout.Size = New System.Drawing.Size(134, 37)
         Me.cmdLogout.TabIndex = 27
         Me.cmdLogout.Text = "Logout"
         Me.cmdLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -214,6 +189,7 @@ Partial Class MenuUtama
         Me.GunaGroupBox1.BackColor = System.Drawing.Color.Turquoise
         Me.GunaGroupBox1.BaseColor = System.Drawing.Color.Gray
         Me.GunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro
+        Me.GunaGroupBox1.Controls.Add(Me.cmdCancel)
         Me.GunaGroupBox1.Controls.Add(Me.GroupBox1)
         Me.GunaGroupBox1.Controls.Add(Me.cmdRefresh)
         Me.GunaGroupBox1.Controls.Add(Me.GunaAdvenceButton1)
@@ -287,7 +263,7 @@ Partial Class MenuUtama
         Me.cmdRefresh.ForeColor = System.Drawing.Color.White
         Me.cmdRefresh.Image = Nothing
         Me.cmdRefresh.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdRefresh.Location = New System.Drawing.Point(374, 396)
+        Me.cmdRefresh.Location = New System.Drawing.Point(324, 396)
         Me.cmdRefresh.Name = "cmdRefresh"
         Me.cmdRefresh.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdRefresh.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -296,7 +272,7 @@ Partial Class MenuUtama
         Me.cmdRefresh.OnHoverImage = Nothing
         Me.cmdRefresh.OnPressedColor = System.Drawing.Color.Black
         Me.cmdRefresh.Radius = 2
-        Me.cmdRefresh.Size = New System.Drawing.Size(126, 37)
+        Me.cmdRefresh.Size = New System.Drawing.Size(85, 37)
         Me.cmdRefresh.TabIndex = 28
         Me.cmdRefresh.Text = "Refresh"
         Me.cmdRefresh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -315,7 +291,7 @@ Partial Class MenuUtama
         Me.cmdLihatSurat.ForeColor = System.Drawing.Color.White
         Me.cmdLihatSurat.Image = Nothing
         Me.cmdLihatSurat.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdLihatSurat.Location = New System.Drawing.Point(22, 396)
+        Me.cmdLihatSurat.Location = New System.Drawing.Point(18, 396)
         Me.cmdLihatSurat.Name = "cmdLihatSurat"
         Me.cmdLihatSurat.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdLihatSurat.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -324,7 +300,7 @@ Partial Class MenuUtama
         Me.cmdLihatSurat.OnHoverImage = Nothing
         Me.cmdLihatSurat.OnPressedColor = System.Drawing.Color.Black
         Me.cmdLihatSurat.Radius = 2
-        Me.cmdLihatSurat.Size = New System.Drawing.Size(126, 37)
+        Me.cmdLihatSurat.Size = New System.Drawing.Size(96, 37)
         Me.cmdLihatSurat.TabIndex = 26
         Me.cmdLihatSurat.Text = "Lihat"
         Me.cmdLihatSurat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -332,43 +308,43 @@ Partial Class MenuUtama
         'dgSuratSaya
         '
         Me.dgSuratSaya.AllowUserToAddRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dgSuratSaya.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+        Me.dgSuratSaya.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
         Me.dgSuratSaya.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgSuratSaya.BackgroundColor = System.Drawing.Color.White
         Me.dgSuratSaya.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgSuratSaya.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgSuratSaya.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgSuratSaya.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgSuratSaya.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.dgSuratSaya.ColumnHeadersHeight = 30
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgSuratSaya.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgSuratSaya.DefaultCellStyle = DataGridViewCellStyle15
         Me.dgSuratSaya.EnableHeadersVisualStyles = False
         Me.dgSuratSaya.GridColor = System.Drawing.Color.Blue
         Me.dgSuratSaya.Location = New System.Drawing.Point(18, 130)
         Me.dgSuratSaya.Name = "dgSuratSaya"
         Me.dgSuratSaya.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgSuratSaya.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgSuratSaya.RowHeadersDefaultCellStyle = DataGridViewCellStyle16
         Me.dgSuratSaya.RowHeadersVisible = False
         Me.dgSuratSaya.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgSuratSaya.Size = New System.Drawing.Size(593, 260)
@@ -398,7 +374,7 @@ Partial Class MenuUtama
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.BuatSuratToolStripMenuItem, Me.SettingToolStripMenuItem, Me.MonitoringToolStripMenuItem, Me.ApprovalToolStripMenuItem, Me.ProsesToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.BuatSuratToolStripMenuItem, Me.SettingToolStripMenuItem, Me.MonitoringToolStripMenuItem, Me.ApprovalToolStripMenuItem, Me.ProsesToolStripMenuItem, Me.HelpToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(801, 24)
@@ -563,6 +539,12 @@ Partial Class MenuUtama
         Me.UbahPasswordToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.UbahPasswordToolStripMenuItem.Text = "Ubah Password"
         '
+        'EmailNotifikasiToolStripMenuItem
+        '
+        Me.EmailNotifikasiToolStripMenuItem.Name = "EmailNotifikasiToolStripMenuItem"
+        Me.EmailNotifikasiToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.EmailNotifikasiToolStripMenuItem.Text = "Email Notifikasi"
+        '
         'MonitoringToolStripMenuItem
         '
         Me.MonitoringToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MyRequestToolStripMenuItem, Me.PeminjamanAssetToolStripMenuItem})
@@ -575,6 +557,12 @@ Partial Class MenuUtama
         Me.MyRequestToolStripMenuItem.Name = "MyRequestToolStripMenuItem"
         Me.MyRequestToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.MyRequestToolStripMenuItem.Text = "My Request"
+        '
+        'PeminjamanAssetToolStripMenuItem
+        '
+        Me.PeminjamanAssetToolStripMenuItem.Name = "PeminjamanAssetToolStripMenuItem"
+        Me.PeminjamanAssetToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.PeminjamanAssetToolStripMenuItem.Text = "Peminjaman Asset"
         '
         'ApprovalToolStripMenuItem
         '
@@ -615,17 +603,56 @@ Partial Class MenuUtama
         Me.DaftarBantuanToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.DaftarBantuanToolStripMenuItem.Text = "Daftar Bantuan"
         '
-        'PeminjamanAssetToolStripMenuItem
+        'Label3
         '
-        Me.PeminjamanAssetToolStripMenuItem.Name = "PeminjamanAssetToolStripMenuItem"
-        Me.PeminjamanAssetToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
-        Me.PeminjamanAssetToolStripMenuItem.Text = "Peminjaman Asset"
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(-1, 425)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(154, 13)
+        Me.Label3.TabIndex = 30
+        Me.Label3.Text = "SISTER V1.1 Build 19.05.2020"
         '
-        'EmailNotifikasiToolStripMenuItem
+        'cmdCancel
         '
-        Me.EmailNotifikasiToolStripMenuItem.Name = "EmailNotifikasiToolStripMenuItem"
-        Me.EmailNotifikasiToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
-        Me.EmailNotifikasiToolStripMenuItem.Text = "Email Notifikasi"
+        Me.cmdCancel.AnimationHoverSpeed = 0.07!
+        Me.cmdCancel.AnimationSpeed = 0.03!
+        Me.cmdCancel.BackColor = System.Drawing.Color.Transparent
+        Me.cmdCancel.BaseColor1 = System.Drawing.Color.Red
+        Me.cmdCancel.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.cmdCancel.BorderColor = System.Drawing.Color.Black
+        Me.cmdCancel.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.cmdCancel.FocusedColor = System.Drawing.Color.Empty
+        Me.cmdCancel.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmdCancel.ForeColor = System.Drawing.Color.White
+        Me.cmdCancel.Image = Nothing
+        Me.cmdCancel.ImageSize = New System.Drawing.Size(20, 20)
+        Me.cmdCancel.Location = New System.Drawing.Point(489, 396)
+        Me.cmdCancel.Name = "cmdCancel"
+        Me.cmdCancel.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.cmdCancel.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmdCancel.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.cmdCancel.OnHoverForeColor = System.Drawing.Color.White
+        Me.cmdCancel.OnHoverImage = Nothing
+        Me.cmdCancel.OnPressedColor = System.Drawing.Color.Black
+        Me.cmdCancel.Radius = 2
+        Me.cmdCancel.Size = New System.Drawing.Size(122, 37)
+        Me.cmdCancel.TabIndex = 30
+        Me.cmdCancel.Text = "Batalkan Surat"
+        Me.cmdCancel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeLogToolStripMenuItem})
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'ChangeLogToolStripMenuItem
+        '
+        Me.ChangeLogToolStripMenuItem.Name = "ChangeLogToolStripMenuItem"
+        Me.ChangeLogToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ChangeLogToolStripMenuItem.Text = "Change Log"
         '
         'GunaAdvenceButton1
         '
@@ -648,7 +675,7 @@ Partial Class MenuUtama
         Me.GunaAdvenceButton1.ImageSize = New System.Drawing.Size(22, 22)
         Me.GunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.GunaAdvenceButton1.LineTop = 1
-        Me.GunaAdvenceButton1.Location = New System.Drawing.Point(154, 396)
+        Me.GunaAdvenceButton1.Location = New System.Drawing.Point(120, 396)
         Me.GunaAdvenceButton1.Name = "GunaAdvenceButton1"
         Me.GunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.GunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black
@@ -657,7 +684,7 @@ Partial Class MenuUtama
         Me.GunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.GunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black
         Me.GunaAdvenceButton1.OnPressedDepth = 0
-        Me.GunaAdvenceButton1.Size = New System.Drawing.Size(214, 37)
+        Me.GunaAdvenceButton1.Size = New System.Drawing.Size(198, 37)
         Me.GunaAdvenceButton1.TabIndex = 27
         Me.GunaAdvenceButton1.Text = "Setting Template"
         Me.GunaAdvenceButton1.TextOffsetX = 10
@@ -702,7 +729,6 @@ Partial Class MenuUtama
 
     End Sub
     Friend WithEvents GunaPanel1 As Guna.UI.WinForms.GunaPanel
-    Friend WithEvents GunaGradientButton3 As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents cmdLogout As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents txtNamaUser As System.Windows.Forms.TextBox
     Friend WithEvents GunaLabel2 As Guna.UI.WinForms.GunaLabel
@@ -754,4 +780,8 @@ Partial Class MenuUtama
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PeminjamanAssetToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EmailNotifikasiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents cmdCancel As Guna.UI.WinForms.GunaGradientButton
+    Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ChangeLogToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

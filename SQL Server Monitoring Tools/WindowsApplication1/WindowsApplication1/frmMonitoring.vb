@@ -1,13 +1,22 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class frmMonitoring
-
+    Dim strStatusnamaServer As String
     Private Sub PictureBox1_DoubleClick(sender As Object, e As EventArgs) Handles PictureBox1.DoubleClick
         FrmSetting.ShowDialog()
     End Sub
 
     Private Sub cmbListDB_Click(sender As Object, e As EventArgs) Handles cmbListDB.Click
-        LoadComboDaftarDB()
+
+        If My.Settings.Servername = "" Then
+            MsgBox("Konfigurasi Server Belum Diatur", vbCritical, "Warning!")
+            FrmSetting.ShowDialog()
+            Exit Sub
+        End If
+
+        GetLoginSetting()
+
+            LoadComboDaftarDB()
     End Sub
 
     Private Sub LoadComboDaftarDB()
@@ -64,6 +73,7 @@ Public Class frmMonitoring
             MsgBox("Pilih Database yang akan Dimonitor", vbInformation, "Informasi")
             Exit Sub
         End If
+        cmbListDB.Enabled = False
         Timer1.Enabled = True
 
     End Sub
@@ -74,6 +84,7 @@ Public Class frmMonitoring
 
     Private Sub cmdStopMonitoring_Click(sender As Object, e As EventArgs) Handles cmdStopMonitoring.Click
         Timer1.Enabled = False
+        cmbListDB.Enabled = True
     End Sub
 
     Private Sub cmdRefresh_Click(sender As Object, e As EventArgs) Handles cmdRefresh.Click
@@ -119,5 +130,29 @@ Public Class frmMonitoring
         Else
             Exit Sub
         End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        GetLoginSetting()
+        If strNamaDatabase2 = "" Then
+            MsgBox("Nama Database Belum Dipilih", vbCritical, "Pilih Database!")
+
+            FormListDatabase.ShowDialog()
+            Exit Sub
+        End If
+
+        FormStatusMaintenanceDanBackup.ShowDialog()
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        FrmSetting.ShowDialog()
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
     End Sub
 End Class

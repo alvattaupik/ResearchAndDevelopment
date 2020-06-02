@@ -64,7 +64,25 @@ Public Class FormMainMenu
     Sub LoadDaftarMember()
 
         Call KoneksiDatabaseIvend()
-        Dim cmd As New SqlCommand("SELECT * FROM V_MonitoringMember WHERE Cabang Like'%" & Trim(cmbCabang.Text) & "%' AND Kota Like'%" & Trim(cmbKota.Text) & "%' ", Koneksi1)
+        Dim cmd As New SqlCommand("SELECT * FROM V_MonitoringMember WHERE Cabang Like'%" & Trim(cmbCabang.Text) & "%' And Status='" & Trim(cmbStatus.Text) & "'  ", Koneksi1)
+        cmd.CommandTimeout = 0
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable
+        adapter.Fill(table)
+        dgDaftarMember.DataSource = table
+        lblJumlahMember.Text = "Jumlah Member : " & dgDaftarMember.RowCount
+        dgDaftarMember.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgDaftarMember.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+        dgDaftarMember.AutoResizeColumns()
+
+    End Sub
+
+
+
+    Sub LoadDaftarMemberAll()
+
+        Call KoneksiDatabaseIvend()
+        Dim cmd As New SqlCommand("SELECT * FROM V_MonitoringMember WHERE Cabang Like'%" & Trim(cmbCabang.Text) & "%'", Koneksi1)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -84,13 +102,17 @@ Public Class FormMainMenu
             MsgBox("Pilih Cabang", vbInformation, "Informasi!")
             Exit Sub
         End If
-        LoadDaftarMember()
+        If cmbStatus.Text = "" Then
+            LoadDaftarMemberAll()
+        Else
+            LoadDaftarMember()
+        End If
+
+
+
     End Sub
 
-    Private Sub cmbBatal_Click(sender As Object, e As EventArgs) Handles cmbBatal.Click
-        cmbCabang.Text = ""
-        cmbKota.Text = ""
-    End Sub
+
 
     Private Sub cmbKota_Click1(sender As Object, e As EventArgs) Handles cmbKota.Click
         LoadComboKota()
@@ -348,7 +370,7 @@ ErrorLoad:
     Private Sub LihatRiwayatTransaksiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LihatRiwayatTransaksiToolStripMenuItem.Click
         If dgDaftarMember.RowCount = 0 Then Exit Sub
 
-        MstrNoMember = dgDaftarMember.Item(2, dgDaftarMember.CurrentRow.Index).Value
+        MstrNoMember = dgDaftarMember.Item(3, dgDaftarMember.CurrentRow.Index).Value
         FormRiwayatTransaksi.ShowDialog()
     End Sub
 
@@ -379,4 +401,62 @@ ErrorLoad:
 
 
     End Sub
+
+    Private Sub cmbCabang2_Click(sender As Object, e As EventArgs) Handles cmbCabang2.Click
+        Dim ds As New DataSet()
+        Dim adapter As New SqlDataAdapter()
+
+        Try
+            KoneksiDatabaseIvend()
+            cmd = New SqlCommand("SELECT Id,Description FROM dbo.RtlStore WHERE CashCustomerKey<>0 ORDER BY Id", Koneksi1)
+            adapter.SelectCommand = cmd
+            adapter.Fill(ds)
+            adapter.Dispose()
+            cmd.Dispose()
+            Koneksi1.Close()
+            cmbCabang2.DataSource = ds.Tables(0)
+            cmbCabang2.ValueMember = "Id"
+            cmbCabang2.DisplayMember = "Description"
+        Catch ex As Exception
+            MessageBox.Show("Can not open connection ! ")
+        End Try
+    End Sub
+
+    Private Sub GunaGradientButton3_Click(sender As Object, e As EventArgs) Handles GunaGradientButton3.Click
+        If cmbCabang2.Text = "" Then
+
+            Call KoneksiDatabaseIvend()
+            Dim cmd As New SqlCommand("SELECT  * FROM V_MonitoringMember WHERE Cast(TglRegistrasi As Date) between '" & dtp1.Value.ToString("yyyy-MM-dd") & "' AND  '" & dtp2.Value.ToString("yyyy-MM-dd") & "' AND Status='Aktif'", Koneksi1)
+            cmd.CommandTimeout = 0
+            Dim adapter As New SqlDataAdapter(cmd)
+            Dim table As New DataTable
+            adapter.Fill(table)
+            dgDaftarMember.DataSource = table
+            lblJumlahMember.Text = "Jumlah Member : " & dgDaftarMember.RowCount
+            dgDaftarMember.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+            dgDaftarMember.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+            dgDaftarMember.AutoResizeColumns()
+
+
+        Else
+
+
+            Call KoneksiDatabaseIvend()
+            Dim cmd As New SqlCommand("SELECT  * FROM V_MonitoringMember WHERE Cast(TglRegistrasi As Date) between '" & dtp1.Value.ToString("yyyy-MM-dd") & "' AND  '" & dtp2.Value.ToString("yyyy-MM-dd") & "' AND Cabang Like'%" & Trim(cmbCabang2.Text) & "%' AND Status='Aktif' ", Koneksi1)
+            cmd.CommandTimeout = 0
+            Dim adapter As New SqlDataAdapter(cmd)
+            Dim table As New DataTable
+            adapter.Fill(table)
+            dgDaftarMember.DataSource = table
+            lblJumlahMember.Text = "Jumlah Member : " & dgDaftarMember.RowCount
+            dgDaftarMember.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+            dgDaftarMember.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+            dgDaftarMember.AutoResizeColumns()
+
+
+
+        End If
+    End Sub
+
+ 
 End Class

@@ -34,3 +34,21 @@ D:\Research And Development\ResearchAndDevelopment\ExportDB Label\Export Harga J
 D:\Research And Development\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export DB ASET.vbproj.GenerateResource.Cache
 D:\Research And Development\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Database Aset.exe.manifest
 D:\Research And Development\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Database Aset.application
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\bin\Debug\Export Database Aset.exe.config
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Database Aset.exe
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Database Aset.xml
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Database Aset.pdb
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\bin\Debug\Export Database Aset.exe.manifest
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\bin\Debug\Export Database Aset.application
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\bin\Debug\Export Database Aset.exe
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\bin\Debug\Export Database Aset.pdb
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\bin\Debug\Export Database Aset.xml
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export DB ASET.vbprojResolveAssemblyReference.cache
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Database_LabelAset.Form1.resources
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Database_LabelAset.Form3.resources
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Database_LabelAset.frmSplashScreen.resources
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Database_LabelAset.MainMenu.resources
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Database_LabelAset.Resources.resources
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export DB ASET.vbproj.GenerateResource.Cache
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Database Aset.exe.manifest
+D:\ResearchAndDevelopment\ExportDB Label\Export Harga Jual\Export Harga Jual\obj\Debug\Export Database Aset.application

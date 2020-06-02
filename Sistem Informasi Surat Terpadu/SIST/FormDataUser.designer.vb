@@ -548,7 +548,7 @@ Partial Class FormDataUser
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SIST.My.Resources.Resources.user
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.user
         Me.PictureBox1.Location = New System.Drawing.Point(12, 6)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(61, 54)

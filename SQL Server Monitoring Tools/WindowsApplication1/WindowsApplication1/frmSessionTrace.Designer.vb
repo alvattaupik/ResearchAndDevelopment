@@ -30,6 +30,7 @@ Partial Class frmSessionTrace
         Me.txtIdSesi = New System.Windows.Forms.TextBox()
         Me.cmdFindSession = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.cmdKillThisSession = New System.Windows.Forms.Button()
         Me.cmdcopyclipboard = New System.Windows.Forms.Button()
         Me.txtNamaProgram = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -37,7 +38,7 @@ Partial Class frmSessionTrace
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtStatus = New System.Windows.Forms.TextBox()
-        Me.cmdKillThisSession = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgSessionTrace, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,16 +49,16 @@ Partial Class frmSessionTrace
         '
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 1)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, -6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(375, 64)
+        Me.GroupBox1.Size = New System.Drawing.Size(375, 45)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(106, 22)
+        Me.Label1.Location = New System.Drawing.Point(110, 17)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(123, 20)
         Me.Label1.TabIndex = 0
@@ -87,7 +88,7 @@ Partial Class frmSessionTrace
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 71)
+        Me.Label2.Location = New System.Drawing.Point(12, 47)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(68, 20)
         Me.Label2.TabIndex = 2
@@ -96,17 +97,17 @@ Partial Class frmSessionTrace
         'txtIdSesi
         '
         Me.txtIdSesi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIdSesi.Location = New System.Drawing.Point(86, 71)
+        Me.txtIdSesi.Location = New System.Drawing.Point(96, 41)
         Me.txtIdSesi.Multiline = True
         Me.txtIdSesi.Name = "txtIdSesi"
-        Me.txtIdSesi.Size = New System.Drawing.Size(119, 33)
+        Me.txtIdSesi.Size = New System.Drawing.Size(119, 32)
         Me.txtIdSesi.TabIndex = 3
         '
         'cmdFindSession
         '
-        Me.cmdFindSession.Location = New System.Drawing.Point(211, 71)
+        Me.cmdFindSession.Location = New System.Drawing.Point(221, 39)
         Me.cmdFindSession.Name = "cmdFindSession"
-        Me.cmdFindSession.Size = New System.Drawing.Size(170, 35)
+        Me.cmdFindSession.Size = New System.Drawing.Size(160, 35)
         Me.cmdFindSession.TabIndex = 4
         Me.cmdFindSession.Text = "Cari Sesi"
         Me.cmdFindSession.UseVisualStyleBackColor = True
@@ -127,6 +128,15 @@ Partial Class frmSessionTrace
         Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Session Detail"
+        '
+        'cmdKillThisSession
+        '
+        Me.cmdKillThisSession.Location = New System.Drawing.Point(260, 302)
+        Me.cmdKillThisSession.Name = "cmdKillThisSession"
+        Me.cmdKillThisSession.Size = New System.Drawing.Size(144, 31)
+        Me.cmdKillThisSession.TabIndex = 7
+        Me.cmdKillThisSession.Text = "Kill This Session"
+        Me.cmdKillThisSession.UseVisualStyleBackColor = True
         '
         'cmdcopyclipboard
         '
@@ -193,20 +203,21 @@ Partial Class frmSessionTrace
         Me.txtStatus.Size = New System.Drawing.Size(289, 23)
         Me.txtStatus.TabIndex = 0
         '
-        'cmdKillThisSession
+        'Button1
         '
-        Me.cmdKillThisSession.Location = New System.Drawing.Point(260, 302)
-        Me.cmdKillThisSession.Name = "cmdKillThisSession"
-        Me.cmdKillThisSession.Size = New System.Drawing.Size(144, 31)
-        Me.cmdKillThisSession.TabIndex = 7
-        Me.cmdKillThisSession.Text = "Kill This Session"
-        Me.cmdKillThisSession.UseVisualStyleBackColor = True
+        Me.Button1.Location = New System.Drawing.Point(221, 77)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(160, 35)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Get Sleeping Session"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'frmSessionTrace
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(809, 336)
+        Me.ClientSize = New System.Drawing.Size(802, 338)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.cmdFindSession)
         Me.Controls.Add(Me.txtIdSesi)
@@ -242,4 +253,5 @@ Partial Class frmSessionTrace
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents cmdcopyclipboard As System.Windows.Forms.Button
     Friend WithEvents cmdKillThisSession As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

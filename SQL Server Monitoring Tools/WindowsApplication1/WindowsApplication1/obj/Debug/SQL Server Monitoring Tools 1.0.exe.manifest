@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SQL Server Monitoring Tools 1.0.exe" size="714240">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SQL Server Monitoring Tools 1.0.exe" size="799744">
       <assemblyIdentity name="SQL Server Monitoring Tools 1.0" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zVdctA/Ot/9w1nfxCb3+VjmahfTkDFxCu69FlHX8ezc=</dsig:DigestValue>
+        <dsig:DigestValue>U5ljqMuFIY8OJZf51kKpjLkBjxsrzV3o934R+KLAjUc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,13 +63,13 @@
       <dsig:DigestValue>sj0y5DBhTkVgeTuNmy6eS/OHZxcqOBlOFlGeA7Zh6yM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SQL Server Monitoring Tools 1.0.exe.config" size="1294">
+  <file name="SQL Server Monitoring Tools 1.0.exe.config" size="1409">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>OZWKJR1DjWfsGlgtY9Zd95h73IoOa2F5u6G6Dsy86BY=</dsig:DigestValue>
+      <dsig:DigestValue>8lJLd9yiaseWkWvevykcHJUCCyM1dCUQ2Sj68q1fM+8=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

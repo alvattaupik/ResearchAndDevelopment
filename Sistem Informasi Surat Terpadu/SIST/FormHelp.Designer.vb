@@ -34,7 +34,7 @@ Partial Class FormHelp
         '
         'Panel1
         '
-        Me.Panel1.BackgroundImage = Global.SIST.My.Resources.Resources.Vector_2
+        Me.Panel1.BackgroundImage = Global.SISTER.My.Resources.Resources.Vector_2
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(6, 3)
         Me.Panel1.Name = "Panel1"

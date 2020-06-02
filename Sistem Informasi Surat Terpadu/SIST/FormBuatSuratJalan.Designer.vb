@@ -650,7 +650,7 @@ Partial Class FormBuatSuratJalan
         Me.cmbBuatBaru.FocusedColor = System.Drawing.Color.Empty
         Me.cmbBuatBaru.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cmbBuatBaru.ForeColor = System.Drawing.Color.White
-        Me.cmbBuatBaru.Image = Global.SIST.My.Resources.Resources.download
+        Me.cmbBuatBaru.Image = Global.SISTER.My.Resources.Resources.download
         Me.cmbBuatBaru.ImageSize = New System.Drawing.Size(20, 20)
         Me.cmbBuatBaru.Location = New System.Drawing.Point(655, 120)
         Me.cmbBuatBaru.Name = "cmbBuatBaru"
@@ -678,7 +678,7 @@ Partial Class FormBuatSuratJalan
         Me.cmdSimpan.FocusedColor = System.Drawing.Color.Empty
         Me.cmdSimpan.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cmdSimpan.ForeColor = System.Drawing.Color.White
-        Me.cmdSimpan.Image = Global.SIST.My.Resources.Resources.icon_save_png_1
+        Me.cmdSimpan.Image = Global.SISTER.My.Resources.Resources.icon_save_png_1
         Me.cmdSimpan.ImageSize = New System.Drawing.Size(20, 20)
         Me.cmdSimpan.Location = New System.Drawing.Point(655, 188)
         Me.cmdSimpan.Name = "cmdSimpan"
@@ -696,7 +696,7 @@ Partial Class FormBuatSuratJalan
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SIST.My.Resources.Resources.send_mail_icon_png_3
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.send_mail_icon_png_3
         Me.PictureBox1.Location = New System.Drawing.Point(10, 8)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(95, 95)
@@ -706,7 +706,7 @@ Partial Class FormBuatSuratJalan
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.SIST.My.Resources.Resources.Vector_1
+        Me.PictureBox2.Image = Global.SISTER.My.Resources.Resources.Vector_1
         Me.PictureBox2.Location = New System.Drawing.Point(286, 3)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(508, 111)

@@ -3,7 +3,7 @@
 Public Class frmSessionTrace
 
     Dim strSessionID As String
-
+    Dim BolStatusLoadSession As Boolean
 
 
     Sub LoadDetailSession()
@@ -43,7 +43,36 @@ Public Class frmSessionTrace
     End Sub
 
 
+
+    Sub GetSleepingSession()
+
+        KoneksiDatabase4()
+        Dim cmd As New SqlCommand("SELECT * FROM V_GetStatusClient WHERE status='sleeping'", Koneksi4)
+
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable
+
+        adapter.Fill(table)
+
+        dgSessionTrace.DataSource = table
+        'aturDGSAP()
+        dgSessionTrace.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgSessionTrace.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+        dgSessionTrace.AutoResizeColumns()
+        Koneksi4.Close()
+
+
+    End Sub
+
+
+
+
+
+
+
+
     Private Sub cmdFindSession_Click(sender As Object, e As EventArgs) Handles cmdFindSession.Click
+        BolStatusLoadSession = True
         LoadDetailSession()
     End Sub
 
@@ -67,9 +96,16 @@ Public Class frmSessionTrace
 
 
     Private Sub dgSessionTrace_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgSessionTrace.CellContentClick
-        txtStatus.Text = dgSessionTrace.Item(0, dgSessionTrace.CurrentRow.Index).Value
-        txtNamaProgram.Text = dgSessionTrace.Item(4, dgSessionTrace.CurrentRow.Index).Value
-        txtQuery.Text = dgSessionTrace.Item(3, dgSessionTrace.CurrentRow.Index).Value
+        If BolStatusLoadSession = True Then
+            txtStatus.Text = dgSessionTrace.Item(0, dgSessionTrace.CurrentRow.Index).Value
+            txtNamaProgram.Text = dgSessionTrace.Item(4, dgSessionTrace.CurrentRow.Index).Value
+            txtQuery.Text = dgSessionTrace.Item(3, dgSessionTrace.CurrentRow.Index).Value
+        Else
+            txtStatus.Text = dgSessionTrace.Item(0, dgSessionTrace.CurrentRow.Index).Value
+            txtNamaProgram.Text = dgSessionTrace.Item(4, dgSessionTrace.CurrentRow.Index).Value
+            txtQuery.Text = dgSessionTrace.Item(3, dgSessionTrace.CurrentRow.Index).Value
+            txtIdSesi.Text = dgSessionTrace.Item(6, dgSessionTrace.CurrentRow.Index).Value
+        End If
     End Sub
 
     Private Sub dgSessionTrace_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgSessionTrace.CellContentDoubleClick
@@ -104,5 +140,10 @@ Public Class frmSessionTrace
             End Using
             MsgBox("Kill Session Berhasil !", vbInformation, "Informasi")
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        BolStatusLoadSession = False
+        GetSleepingSession()
     End Sub
 End Class

@@ -15,6 +15,10 @@ SQLServerMonitoringTools1.0
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:SQLServerMonitoringTools.My.Resources.Resources._22_512">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:SQLServerMonitoringTools.My.Resources.Resources.images">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

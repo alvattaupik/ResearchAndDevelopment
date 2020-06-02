@@ -341,7 +341,7 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
-        Me.GroupBox1.BackgroundImage = Global.SIST.My.Resources.Resources.Vector_2
+        Me.GroupBox1.BackgroundImage = Global.SISTER.My.Resources.Resources.Vector_2
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.txtKodeKomponen)
         Me.GroupBox1.Controls.Add(Me.txtNoValidasi)

@@ -27,3 +27,18 @@ D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\ExportPrice
 D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.exe
 D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.xml
 D:\Research And Development\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.pdb
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.exe.config
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.exe
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.xml
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.pdb
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.exe.manifest
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.application
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.exe
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.pdb
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\bin\Debug\Export Harga Jual.xml
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Harga_Jual.Form1.resources
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Harga_Jual.Form3.resources
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export_Harga_Jual.Resources.resources
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.vbproj.GenerateResource.Cache
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.exe.manifest
+D:\ResearchAndDevelopment\GetInventoryStock\ExportPrice\Export Harga Jual\Export Harga Jual\obj\Debug\Export Harga Jual.application

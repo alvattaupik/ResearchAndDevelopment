@@ -4,16 +4,25 @@ Imports System.Data
 Imports System.Data.SqlClient
 
 Public Class FormIntegrasi
+    Dim _Loop As Integer = 0
     Public connDB As New MySql.Data.MySqlClient.MySqlConnection
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles cmdProses.Click
 
         If My.Settings.ServerNameIntegrasi = "" Then
             MsgBox("Konfigurasi Server Integrasi Belum Di Atur", vbInformation, "Perhatian!")
             FormKonfigurasiIntegrasi.ShowDialog()
             Exit Sub
         End If
+
+
+        _Loop = 30
+        cmdLogoff.Enabled = False
+        cmdUpload.Enabled = False
+        cmdStopProses.Enabled = True
+
+
 
 
         KoneksiDatabaseSQLSERVER()
@@ -23,12 +32,21 @@ Public Class FormIntegrasi
         Dim adapter As New SqlDataAdapter(cmdSQLRV)
         cmdSQLRV.CommandType = CommandType.StoredProcedure
         cmdSQLRV.CommandTimeout = 0
+        BgWorker.RunWorkerAsync()
         Dim table As New DataTable
         adapter.Fill(table)
         Me.dgListUpload.DataSource = table
 
+        lblJumlahItem.Text = "Jumlah Item : " & dgListUpload.RowCount
+
+       
+
 
     End Sub
+
+
+
+
 
     Private Sub cmdLoadData_Click(sender As Object, e As EventArgs)
 
@@ -144,10 +162,10 @@ Public Class FormIntegrasi
 
 
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles cmdUpload.Click
 
         If dgListUpload.RowCount = 0 Then
-            MsgBox("Tidak Ada Data Untuk Di Upload, Silahkan Load File yang akan di Upload", vbInformation, "Kosong?")
+            MsgBox("Tidak Ada Data Untuk Di Integrasikan, Silahkan Load File yang akan di Upload", vbInformation, "Kosong?")
             Exit Sub
         End If
 
@@ -168,7 +186,7 @@ Public Class FormIntegrasi
             Call initCMD()
 
             With comDB
-                .CommandText = "Call AU_MasterBarang('" & dgListUpload.Rows(i).Cells(0).Value & "','" & dgListUpload.Rows(i).Cells(1).Value & "','" & dgListUpload.Rows(i).Cells(2).Value & "','" & dgListUpload.Rows(i).Cells(3).Value & "','" & dgListUpload.Rows(i).Cells(4).Value & "','" & dgListUpload.Rows(i).Cells(5).Value & "','" & dgListUpload.Rows(i).Cells(6).Value & "','" & dgListUpload.Rows(i).Cells(7).Value & "','" & dgListUpload.Rows(i).Cells(8).Value & "','" & dgListUpload.Rows(i).Cells(9).Value & "','" & dgListUpload.Rows(i).Cells(10).Value & "','" & dgListUpload.Rows(i).Cells(11).Value & "','" & dgListUpload.Rows(i).Cells(12).Value & "','" & dgListUpload.Rows(i).Cells(13).Value & "','" & dgListUpload.Rows(i).Cells(14).Value & "','" & dgListUpload.Rows(i).Cells(15).Value & "','" & MstrKdPegawai & "','A')"
+                .CommandText = "Call AU_MasterBarangIntegrasi('" & dgListUpload.Rows(i).Cells(0).Value & "','','','','','','','" & dgListUpload.Rows(i).Cells(2).Value & "','" & dgListUpload.Rows(i).Cells(4).Value & "','" & dgListUpload.Rows(i).Cells(6).Value & "','" & dgListUpload.Rows(i).Cells(7).Value & "','','','','','','" & MstrKdPegawai & "','A')"
                 .ExecuteNonQuery()
             End With
 
@@ -209,4 +227,61 @@ ErrorLoad:
     Private Sub Button3_Click(sender As Object, e As EventArgs)
         'Call UploadDatamaster()
     End Sub
+
+    Private Sub cmdStopProses_Click(sender As Object, e As EventArgs) Handles cmdStopProses.Click
+        If BgWorker.IsBusy Then
+            If BgWorker.WorkerSupportsCancellation Then
+                BgWorker.CancelAsync()
+            End If
+        End If
+        cmdProses.Enabled = True
+    End Sub
+
+    Private Sub BgWorker_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BgWorker.DoWork
+        For x As Integer = 0 To _Loop
+            If BgWorker.CancellationPending Then
+                e.Cancel = True
+                Exit For
+            End If
+            System.Threading.Thread.Sleep(1000)
+            BgWorker.ReportProgress(CInt((x / _Loop) * 100))
+            UpdateLabel(Me.lblStatus, _
+            FormatPercent(x / _Loop, 2))
+        Next
+
+       
+
+    End Sub
+
+    Private Sub BgWorker_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BgWorker.ProgressChanged
+        Me.ProgressBar1.Value = e.ProgressPercentage
+    End Sub
+
+
+    Private Sub BgWorker_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BgWorker.RunWorkerCompleted
+        If e.Cancelled Then
+            lblStatus.Text = "Dibatalkan!"
+            cmdLogoff.Enabled = True
+            cmdUpload.Enabled = True
+        Else
+            lblStatus.Text = "Proses Selesai!"
+            cmdLogoff.Enabled = True
+            cmdUpload.Enabled = True
+        End If
+    End Sub
+
+    Delegate Sub SetLabelText_Delegate(ByVal [Label] As Label, ByVal [text] As String)
+
+
+    Private Sub UpdateLabel(ByVal [Label] As Label, ByVal [text] As String)
+        If [Label].InvokeRequired Then
+            Dim MyDelegate As New  _
+            SetLabelText_Delegate(AddressOf UpdateLabel)
+            Me.Invoke(MyDelegate, New Object() _
+            {[Label], [text]})
+        Else
+            [Label].Text = [text]
+        End If
+    End Sub
+
 End Class

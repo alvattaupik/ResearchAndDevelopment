@@ -55,11 +55,11 @@ Partial Class FormBuatRequestValidasi
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.txtKodeKomponen = New Guna.UI.WinForms.GunaTextBox()
-        Me.txtNoValidasi = New Guna.UI.WinForms.GunaTextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.lblKdJenisSurat = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtNoValidasi = New Guna.UI.WinForms.GunaTextBox()
+        Me.txtKodeKomponen = New Guna.UI.WinForms.GunaTextBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -366,7 +366,7 @@ Partial Class FormBuatRequestValidasi
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(10, 114)
+        Me.Label9.Location = New System.Drawing.Point(6, 116)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(111, 18)
         Me.Label9.TabIndex = 8
@@ -474,7 +474,7 @@ Partial Class FormBuatRequestValidasi
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
-        Me.GroupBox1.BackgroundImage = Global.SIST.My.Resources.Resources.Vector_2
+        Me.GroupBox1.BackgroundImage = Global.SISTER.My.Resources.Resources.Vector_2
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -496,40 +496,6 @@ Partial Class FormBuatRequestValidasi
         Me.Button1.TabIndex = 39
         Me.Button1.Text = "X"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'txtKodeKomponen
-        '
-        Me.txtKodeKomponen.BaseColor = System.Drawing.Color.White
-        Me.txtKodeKomponen.BorderColor = System.Drawing.Color.Silver
-        Me.txtKodeKomponen.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtKodeKomponen.Enabled = False
-        Me.txtKodeKomponen.FocusedBaseColor = System.Drawing.Color.White
-        Me.txtKodeKomponen.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtKodeKomponen.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.txtKodeKomponen.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtKodeKomponen.Location = New System.Drawing.Point(477, 30)
-        Me.txtKodeKomponen.Name = "txtKodeKomponen"
-        Me.txtKodeKomponen.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtKodeKomponen.Size = New System.Drawing.Size(55, 30)
-        Me.txtKodeKomponen.TabIndex = 17
-        Me.txtKodeKomponen.Visible = False
-        '
-        'txtNoValidasi
-        '
-        Me.txtNoValidasi.BaseColor = System.Drawing.Color.White
-        Me.txtNoValidasi.BorderColor = System.Drawing.Color.Silver
-        Me.txtNoValidasi.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtNoValidasi.Enabled = False
-        Me.txtNoValidasi.FocusedBaseColor = System.Drawing.Color.White
-        Me.txtNoValidasi.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNoValidasi.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.txtNoValidasi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtNoValidasi.Location = New System.Drawing.Point(242, 30)
-        Me.txtNoValidasi.Name = "txtNoValidasi"
-        Me.txtNoValidasi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNoValidasi.Size = New System.Drawing.Size(251, 30)
-        Me.txtNoValidasi.TabIndex = 2
-        Me.txtNoValidasi.Visible = False
         '
         'GroupBox3
         '
@@ -559,6 +525,40 @@ Partial Class FormBuatRequestValidasi
         Me.Label1.Size = New System.Drawing.Size(301, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "FORM REQUEST VALIDASI"
+        '
+        'txtNoValidasi
+        '
+        Me.txtNoValidasi.BaseColor = System.Drawing.Color.White
+        Me.txtNoValidasi.BorderColor = System.Drawing.Color.Silver
+        Me.txtNoValidasi.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtNoValidasi.Enabled = False
+        Me.txtNoValidasi.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtNoValidasi.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtNoValidasi.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtNoValidasi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtNoValidasi.Location = New System.Drawing.Point(242, 30)
+        Me.txtNoValidasi.Name = "txtNoValidasi"
+        Me.txtNoValidasi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNoValidasi.Size = New System.Drawing.Size(251, 30)
+        Me.txtNoValidasi.TabIndex = 2
+        Me.txtNoValidasi.Visible = False
+        '
+        'txtKodeKomponen
+        '
+        Me.txtKodeKomponen.BaseColor = System.Drawing.Color.White
+        Me.txtKodeKomponen.BorderColor = System.Drawing.Color.Silver
+        Me.txtKodeKomponen.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtKodeKomponen.Enabled = False
+        Me.txtKodeKomponen.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtKodeKomponen.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtKodeKomponen.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtKodeKomponen.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtKodeKomponen.Location = New System.Drawing.Point(477, 30)
+        Me.txtKodeKomponen.Name = "txtKodeKomponen"
+        Me.txtKodeKomponen.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtKodeKomponen.Size = New System.Drawing.Size(55, 30)
+        Me.txtKodeKomponen.TabIndex = 17
+        Me.txtKodeKomponen.Visible = False
         '
         'FormBuatRequestValidasi
         '

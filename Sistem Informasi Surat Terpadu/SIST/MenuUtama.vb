@@ -9,6 +9,7 @@ Public Class MenuUtama
     Public Declare Function ShellExecute Lib "shell32.dll" Alias "ShellExecuteA" (ByVal hwnd As Long, ByVal lpOperation As String, ByVal lpFile As String, ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Long) As Long
     Dim strPathPhoto As String
     Dim strPathHelp As String
+    Dim strReasons As String
     Private Sub MenuUtama_Load(sender As Object, e As EventArgs) Handles Me.Load
         SetKontrolObject()
 
@@ -282,7 +283,7 @@ ErrorLoad:
     End Sub
 
 
-    Private Sub GunaGradientButton3_Click(sender As Object, e As EventArgs) Handles GunaGradientButton3.Click
+    Private Sub GunaGradientButton3_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -339,5 +340,74 @@ ErrorLoad:
 
     Private Sub EmailNotifikasiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmailNotifikasiToolStripMenuItem.Click
         frmSetting.ShowDialog()
+    End Sub
+
+    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
+        If MsgBox("Apakah Anda Akan Logout dari Aplikasi Ini?", vbYesNo, "Konfirmasi") = vbYes Then
+            Me.Close()
+            FormLogin.Show()
+            FormLogin.txtUsername.Text = ""
+            FormLogin.txtPassword.Text = ""
+            MsgBox("Terimakasih " & MstrNamaUser, vbInformation, "Terimakasih!")
+        Else
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        End
+    End Sub
+
+    Private Sub cmdCancel_Click(sender As Object, e As EventArgs) Handles cmdCancel.Click
+        If dgSuratSaya.RowCount = 0 Then Exit Sub
+
+        MstrNoSurat = dgSuratSaya.Item(0, dgSuratSaya.CurrentRow.Index).Value
+        MstrJenisDokumen = dgSuratSaya.Item(7, dgSuratSaya.CurrentRow.Index).Value
+
+
+
+        If MsgBox("Apakah Yakin Anda Akan Membatalkan Surat Ini? Nomor Surat Tidak Dapat Digunakan Kembali", vbYesNo, "Konfirmasi?!") = vbYes Then
+
+
+            Dim userMsg As String
+            userMsg = Microsoft.VisualBasic.InputBox("AlasanPembatalan Surat?", "Masukan Alasan Pembatalan", "", 500, 300)
+            If userMsg <> "" Then
+
+                Call KoneksiDatabase1()
+                Dim cmd1 As New SqlCommand
+                cmd1.CommandText = "[AU_CancelSurat]"
+                cmd1.CommandType = CommandType.StoredProcedure
+                cmd1.Parameters.AddWithValue("NomorSurat", Trim(MstrNoSurat))
+                cmd1.Parameters.AddWithValue("KdJenisSurat", Trim(MstrJenisDokumen))
+                cmd1.Parameters.AddWithValue("KdUser", Trim(MstrKodeUser))
+                cmd1.Parameters.AddWithValue("Reasons", Trim(userMsg))
+                If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
+                cmd1.Connection = Koneksi1
+                Koneksi1.Open()
+                cmd1.ExecuteNonQuery()
+                MsgBox("Surat Berhasil Dibatalkan", vbInformation, "Sukses!")
+                LoadDaftarSuratMenuUtama()
+                Exit Sub
+
+            Else
+                MsgBox("Alasan Pembatalan Harus Di Isi", vbCritical, "Penting!")
+                Exit Sub
+            End If
+
+
+
+
+
+        Else
+            Exit Sub
+        End If
+
+
+
+          
+    End Sub
+
+    Private Sub ChangeLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeLogToolStripMenuItem.Click
+        FormChangelog.ShowDialog()
     End Sub
 End Class

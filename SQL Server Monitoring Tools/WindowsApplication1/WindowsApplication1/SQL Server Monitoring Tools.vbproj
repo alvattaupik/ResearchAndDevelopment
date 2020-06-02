@@ -107,10 +107,28 @@
     <Compile Include="FormFragmentationStatus.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormGetSleeping.Designer.vb">
+      <DependentUpon>FormGetSleeping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGetSleeping.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormKillSession.Designer.vb">
       <DependentUpon>FormKillSession.vb</DependentUpon>
     </Compile>
     <Compile Include="FormKillSession.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListDatabase.Designer.vb">
+      <DependentUpon>FormListDatabase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormListDatabase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStatusMaintenanceDanBackup.Designer.vb">
+      <DependentUpon>FormStatusMaintenanceDanBackup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormStatusMaintenanceDanBackup.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmConnectionMonitor.Designer.vb">
@@ -170,6 +188,12 @@
     <EmbeddedResource Include="FormKillSession.resx">
       <DependentUpon>FormKillSession.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormListDatabase.resx">
+      <DependentUpon>FormListDatabase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStatusMaintenanceDanBackup.resx">
+      <DependentUpon>FormStatusMaintenanceDanBackup.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConnectionMonitor.resx">
       <DependentUpon>frmConnectionMonitor.vb</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +246,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Custom-Icon-Design-Pretty-Office-7-Sql-runner.ico" />
+    <None Include="Resources\22-512.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

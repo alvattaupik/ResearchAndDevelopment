@@ -115,7 +115,7 @@ Public Class FormMonitoringPeminjamanAset
         Call KoneksiDatabase1()
         Dim strSQlLogin As String
 
-        strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT003' AND StatusEnabled='Y'"
+        strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT006' AND StatusEnabled='Y'"
         cmd = New SqlCommand(strSQlLogin, Koneksi1)
         dr = cmd.ExecuteReader
         dr.Read()
@@ -193,6 +193,11 @@ ErrorLoad:
     End Sub
 
     Private Sub cmdPengembalian_Click(sender As Object, e As EventArgs) Handles cmdPengembalian.Click
+        If dgRequestMonitoring.RowCount = 0 Then Exit Sub
+
+        MstrNoSurat = dgRequestMonitoring.Item(0, dgRequestMonitoring.CurrentRow.Index).Value
+        MstrJenisDokumen = dgRequestMonitoring.Item(2, dgRequestMonitoring.CurrentRow.Index).Value
+
         strCek = "SELECT TOP 1 ISNULL(TanggalKembali,'') As TanggalKembali,PetugasPenerima From Peminjaman WHERE NomorSurat='" & Trim(MstrNoSurat) & "'"
         cmd = New SqlCommand(strCek, Koneksi1)
         dr = cmd.ExecuteReader

@@ -348,7 +348,7 @@ Partial Class FormBuatRequestCloseAndCancel
         Me.GunaGradientButton1.ForeColor = System.Drawing.Color.White
         Me.GunaGradientButton1.Image = Nothing
         Me.GunaGradientButton1.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaGradientButton1.Location = New System.Drawing.Point(11, 178)
+        Me.GunaGradientButton1.Location = New System.Drawing.Point(13, 185)
         Me.GunaGradientButton1.Name = "GunaGradientButton1"
         Me.GunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.GunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -369,7 +369,7 @@ Partial Class FormBuatRequestCloseAndCancel
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
-        Me.GroupBox1.BackgroundImage = Global.SIST.My.Resources.Resources.Vector_2
+        Me.GroupBox1.BackgroundImage = Global.SISTER.My.Resources.Resources.Vector_2
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.txtKodeKomponen)
         Me.GroupBox1.Controls.Add(Me.txtNoValidasi)
@@ -402,7 +402,7 @@ Partial Class FormBuatRequestCloseAndCancel
         Me.txtKodeKomponen.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtKodeKomponen.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtKodeKomponen.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtKodeKomponen.Location = New System.Drawing.Point(429, 30)
+        Me.txtKodeKomponen.Location = New System.Drawing.Point(457, 30)
         Me.txtKodeKomponen.Name = "txtKodeKomponen"
         Me.txtKodeKomponen.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtKodeKomponen.Size = New System.Drawing.Size(70, 30)
@@ -419,7 +419,7 @@ Partial Class FormBuatRequestCloseAndCancel
         Me.txtNoValidasi.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNoValidasi.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtNoValidasi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtNoValidasi.Location = New System.Drawing.Point(172, 30)
+        Me.txtNoValidasi.Location = New System.Drawing.Point(200, 30)
         Me.txtNoValidasi.Name = "txtNoValidasi"
         Me.txtNoValidasi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtNoValidasi.Size = New System.Drawing.Size(251, 30)

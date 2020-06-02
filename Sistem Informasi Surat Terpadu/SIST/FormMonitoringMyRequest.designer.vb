@@ -92,7 +92,7 @@ Partial Class FormMonitoringMyRequest
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SIST.My.Resources.Resources.Network_Operation_Center_NOC
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.Network_Operation_Center_NOC
         Me.PictureBox1.Location = New System.Drawing.Point(6, 128)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(213, 175)

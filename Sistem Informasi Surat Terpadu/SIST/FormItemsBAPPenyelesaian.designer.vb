@@ -161,7 +161,7 @@ Partial Class FormItemsBAPPenyelesaian
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.SIST.My.Resources.Resources.Vector_5
+        Me.PictureBox2.Image = Global.SISTER.My.Resources.Resources.Vector_5
         Me.PictureBox2.Location = New System.Drawing.Point(178, 5)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(404, 87)
@@ -171,7 +171,7 @@ Partial Class FormItemsBAPPenyelesaian
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SIST.My.Resources.Resources.item_png_3
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.item_png_3
         Me.PictureBox1.Location = New System.Drawing.Point(7, 5)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(88, 88)

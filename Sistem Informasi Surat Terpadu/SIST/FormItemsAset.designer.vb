@@ -32,6 +32,7 @@ Partial Class FormItemsAset
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.dgDaftarItem, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,6 +53,7 @@ Partial Class FormItemsAset
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.dgDaftarItem)
         Me.TabPage1.Controls.Add(Me.txtCariItemMasterData)
         Me.TabPage1.Controls.Add(Me.Label2)
@@ -75,7 +77,7 @@ Partial Class FormItemsAset
         '
         'txtCariItemMasterData
         '
-        Me.txtCariItemMasterData.Location = New System.Drawing.Point(81, 17)
+        Me.txtCariItemMasterData.Location = New System.Drawing.Point(81, 6)
         Me.txtCariItemMasterData.Name = "txtCariItemMasterData"
         Me.txtCariItemMasterData.Size = New System.Drawing.Size(472, 20)
         Me.txtCariItemMasterData.TabIndex = 1
@@ -84,7 +86,7 @@ Partial Class FormItemsAset
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 17)
+        Me.Label2.Location = New System.Drawing.Point(6, 7)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 16)
         Me.Label2.TabIndex = 0
@@ -114,7 +116,7 @@ Partial Class FormItemsAset
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.SIST.My.Resources.Resources.Vector_5
+        Me.PictureBox2.Image = Global.SISTER.My.Resources.Resources.Vector_5
         Me.PictureBox2.Location = New System.Drawing.Point(178, 5)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(404, 87)
@@ -134,13 +136,23 @@ Partial Class FormItemsAset
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SIST.My.Resources.Resources.item_png_3
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.item_png_3
         Me.PictureBox1.Location = New System.Drawing.Point(7, 5)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(88, 88)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(132, 29)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(311, 16)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Sorot Satu Baris Untuk Menambahkan Asset"
         '
         'FormItemsAset
         '
@@ -174,4 +186,5 @@ Partial Class FormItemsAset
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class

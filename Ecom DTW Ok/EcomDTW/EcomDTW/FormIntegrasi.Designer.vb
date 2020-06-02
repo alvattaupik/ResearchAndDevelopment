@@ -23,12 +23,12 @@ Partial Class FormIntegrasi
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormIntegrasi))
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cmdProses = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.dgListUpload = New System.Windows.Forms.DataGridView()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblJumlahItem = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.cmdUpload = New System.Windows.Forms.Button()
         Me.lblJumlahUpload = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmdLogoff = New System.Windows.Forms.Button()
@@ -36,20 +36,24 @@ Partial Class FormIntegrasi
         Me.lblJumlahItem2 = New System.Windows.Forms.Label()
         Me.lblDari = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.BgWorker = New System.ComponentModel.BackgroundWorker()
+        Me.cmdStopProses = New System.Windows.Forms.Button()
+        Me.lblStatus = New System.Windows.Forms.Label()
         CType(Me.dgListUpload, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'cmdProses
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(543, 8)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(102, 66)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Cek Perubahan"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cmdProses.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdProses.Location = New System.Drawing.Point(460, 9)
+        Me.cmdProses.Name = "cmdProses"
+        Me.cmdProses.Size = New System.Drawing.Size(102, 89)
+        Me.cmdProses.TabIndex = 0
+        Me.cmdProses.Text = "Proses"
+        Me.cmdProses.UseVisualStyleBackColor = True
         '
         'OpenFileDialog1
         '
@@ -59,17 +63,17 @@ Partial Class FormIntegrasi
         '
         Me.dgListUpload.AllowUserToAddRows = False
         Me.dgListUpload.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgListUpload.Location = New System.Drawing.Point(13, 84)
+        Me.dgListUpload.Location = New System.Drawing.Point(13, 114)
         Me.dgListUpload.Name = "dgListUpload"
-        Me.dgListUpload.Size = New System.Drawing.Size(833, 265)
+        Me.dgListUpload.Size = New System.Drawing.Size(833, 287)
         Me.dgListUpload.TabIndex = 5
         '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblJumlahItem})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 365)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 404)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(858, 26)
+        Me.StatusStrip1.Size = New System.Drawing.Size(862, 26)
         Me.StatusStrip1.TabIndex = 6
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -80,21 +84,21 @@ Partial Class FormIntegrasi
         Me.lblJumlahItem.Size = New System.Drawing.Size(98, 21)
         Me.lblJumlahItem.Text = "Jumlah Item"
         '
-        'Button2
+        'cmdUpload
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(651, 6)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(97, 69)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Upload"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.cmdUpload.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdUpload.Location = New System.Drawing.Point(705, 6)
+        Me.cmdUpload.Name = "cmdUpload"
+        Me.cmdUpload.Size = New System.Drawing.Size(70, 92)
+        Me.cmdUpload.TabIndex = 7
+        Me.cmdUpload.Text = "Upload"
+        Me.cmdUpload.UseVisualStyleBackColor = True
         '
         'lblJumlahUpload
         '
         Me.lblJumlahUpload.AutoSize = True
         Me.lblJumlahUpload.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJumlahUpload.Location = New System.Drawing.Point(657, 368)
+        Me.lblJumlahUpload.Location = New System.Drawing.Point(651, 410)
         Me.lblJumlahUpload.Name = "lblJumlahUpload"
         Me.lblJumlahUpload.Size = New System.Drawing.Size(19, 20)
         Me.lblJumlahUpload.TabIndex = 8
@@ -105,7 +109,7 @@ Partial Class FormIntegrasi
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(205, 19)
+        Me.Label1.Location = New System.Drawing.Point(111, 6)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(314, 33)
         Me.Label1.TabIndex = 10
@@ -114,9 +118,9 @@ Partial Class FormIntegrasi
         'cmdLogoff
         '
         Me.cmdLogoff.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdLogoff.Location = New System.Drawing.Point(754, 6)
+        Me.cmdLogoff.Location = New System.Drawing.Point(781, 6)
         Me.cmdLogoff.Name = "cmdLogoff"
-        Me.cmdLogoff.Size = New System.Drawing.Size(92, 68)
+        Me.cmdLogoff.Size = New System.Drawing.Size(65, 92)
         Me.cmdLogoff.TabIndex = 11
         Me.cmdLogoff.Text = "Logoff"
         Me.cmdLogoff.UseVisualStyleBackColor = True
@@ -126,7 +130,7 @@ Partial Class FormIntegrasi
         Me.PictureBox1.Image = Global.EcomDTW.My.Resources.Resources.unnamed
         Me.PictureBox1.Location = New System.Drawing.Point(13, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(93, 77)
+        Me.PictureBox1.Size = New System.Drawing.Size(98, 104)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
@@ -135,7 +139,7 @@ Partial Class FormIntegrasi
         '
         Me.lblJumlahItem2.AutoSize = True
         Me.lblJumlahItem2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJumlahItem2.Location = New System.Drawing.Point(782, 368)
+        Me.lblJumlahItem2.Location = New System.Drawing.Point(777, 410)
         Me.lblJumlahItem2.Name = "lblJumlahItem2"
         Me.lblJumlahItem2.Size = New System.Drawing.Size(19, 20)
         Me.lblJumlahItem2.TabIndex = 13
@@ -146,7 +150,7 @@ Partial Class FormIntegrasi
         '
         Me.lblDari.AutoSize = True
         Me.lblDari.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDari.Location = New System.Drawing.Point(714, 368)
+        Me.lblDari.Location = New System.Drawing.Point(701, 408)
         Me.lblDari.Name = "lblDari"
         Me.lblDari.Size = New System.Drawing.Size(42, 20)
         Me.lblDari.TabIndex = 14
@@ -157,17 +161,52 @@ Partial Class FormIntegrasi
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(527, 368)
+        Me.Label3.Location = New System.Drawing.Point(514, 407)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(112, 20)
+        Me.Label3.Size = New System.Drawing.Size(156, 20)
         Me.Label3.TabIndex = 15
-        Me.Label3.Text = "Mengupload:"
+        Me.Label3.Text = "Mengintegrasikan:"
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(117, 46)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(308, 27)
+        Me.ProgressBar1.TabIndex = 16
+        '
+        'BgWorker
+        '
+        Me.BgWorker.WorkerReportsProgress = True
+        Me.BgWorker.WorkerSupportsCancellation = True
+        '
+        'cmdStopProses
+        '
+        Me.cmdStopProses.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdStopProses.Location = New System.Drawing.Point(568, 9)
+        Me.cmdStopProses.Name = "cmdStopProses"
+        Me.cmdStopProses.Size = New System.Drawing.Size(102, 89)
+        Me.cmdStopProses.TabIndex = 17
+        Me.cmdStopProses.Text = "Stop Proses"
+        Me.cmdStopProses.UseVisualStyleBackColor = True
+        '
+        'lblStatus
+        '
+        Me.lblStatus.AutoSize = True
+        Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStatus.Location = New System.Drawing.Point(117, 80)
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(115, 18)
+        Me.lblStatus.TabIndex = 18
+        Me.lblStatus.Text = "Status Proses"
         '
         'FormIntegrasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(858, 391)
+        Me.ClientSize = New System.Drawing.Size(862, 430)
+        Me.Controls.Add(Me.lblStatus)
+        Me.Controls.Add(Me.cmdStopProses)
+        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lblDari)
         Me.Controls.Add(Me.lblJumlahItem2)
@@ -175,10 +214,10 @@ Partial Class FormIntegrasi
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblJumlahUpload)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.cmdUpload)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.dgListUpload)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.cmdProses)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormIntegrasi"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -191,12 +230,12 @@ Partial Class FormIntegrasi
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents cmdProses As System.Windows.Forms.Button
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents dgListUpload As System.Windows.Forms.DataGridView
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents lblJumlahItem As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents cmdUpload As System.Windows.Forms.Button
     Friend WithEvents lblJumlahUpload As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -204,5 +243,9 @@ Partial Class FormIntegrasi
     Friend WithEvents lblJumlahItem2 As System.Windows.Forms.Label
     Friend WithEvents lblDari As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
+    Friend WithEvents BgWorker As System.ComponentModel.BackgroundWorker
+    Friend WithEvents cmdStopProses As System.Windows.Forms.Button
+    Friend WithEvents lblStatus As System.Windows.Forms.Label
 
 End Class

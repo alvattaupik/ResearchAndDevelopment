@@ -71,7 +71,7 @@ Partial Class FormDataUserSAP
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SIST.My.Resources.Resources._743px_SAP_Logo_svg
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources._743px_SAP_Logo_svg
         Me.PictureBox1.Location = New System.Drawing.Point(12, 72)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(129, 139)

@@ -59,7 +59,7 @@ Partial Class Form1
         '
         Me.RichTextBox1.Location = New System.Drawing.Point(34, 100)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(229, 65)
+        Me.RichTextBox1.Size = New System.Drawing.Size(229, 70)
         Me.RichTextBox1.TabIndex = 7
         Me.RichTextBox1.Text = ""
         '

@@ -633,7 +633,7 @@ Partial Class FormBuatBeritaAcaraSerahTerima
         Me.cmbBuatBaru.FocusedColor = System.Drawing.Color.Empty
         Me.cmbBuatBaru.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cmbBuatBaru.ForeColor = System.Drawing.Color.White
-        Me.cmbBuatBaru.Image = Global.SIST.My.Resources.Resources.download
+        Me.cmbBuatBaru.Image = Global.SISTER.My.Resources.Resources.download
         Me.cmbBuatBaru.ImageSize = New System.Drawing.Size(20, 20)
         Me.cmbBuatBaru.Location = New System.Drawing.Point(655, 120)
         Me.cmbBuatBaru.Name = "cmbBuatBaru"
@@ -661,7 +661,7 @@ Partial Class FormBuatBeritaAcaraSerahTerima
         Me.GunaGradientButton2.FocusedColor = System.Drawing.Color.Empty
         Me.GunaGradientButton2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.GunaGradientButton2.ForeColor = System.Drawing.Color.White
-        Me.GunaGradientButton2.Image = Global.SIST.My.Resources.Resources.icon_save_png_1
+        Me.GunaGradientButton2.Image = Global.SISTER.My.Resources.Resources.icon_save_png_1
         Me.GunaGradientButton2.ImageSize = New System.Drawing.Size(20, 20)
         Me.GunaGradientButton2.Location = New System.Drawing.Point(655, 188)
         Me.GunaGradientButton2.Name = "GunaGradientButton2"
@@ -679,7 +679,7 @@ Partial Class FormBuatBeritaAcaraSerahTerima
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SIST.My.Resources.Resources.expand_color_emails_22_512
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.expand_color_emails_22_512
         Me.PictureBox1.Location = New System.Drawing.Point(10, 8)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(95, 95)
@@ -689,7 +689,7 @@ Partial Class FormBuatBeritaAcaraSerahTerima
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.SIST.My.Resources.Resources.Vector_4
+        Me.PictureBox2.Image = Global.SISTER.My.Resources.Resources.Vector_4
         Me.PictureBox2.Location = New System.Drawing.Point(430, -2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(361, 111)
@@ -699,7 +699,7 @@ Partial Class FormBuatBeritaAcaraSerahTerima
         '
         'PictureBox3
         '
-        Me.PictureBox3.Image = Global.SIST.My.Resources.Resources.Vector_4
+        Me.PictureBox3.Image = Global.SISTER.My.Resources.Resources.Vector_4
         Me.PictureBox3.Location = New System.Drawing.Point(74, 0)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(361, 111)

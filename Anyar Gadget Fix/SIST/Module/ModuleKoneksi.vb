@@ -1,0 +1,145 @@
+﻿Imports System.Data.SqlClient
+Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
+
+Module ModuleKoneksi
+
+    Public conn As SqlConnection
+    Public server As String
+    Public conn_server As String
+    Public conn_user As String
+    Public conn_pass As String
+    Public conn_database As String
+
+    Public cryRpt As New ReportDocument
+    Public crtableLogoninfos As New TableLogOnInfos
+    Public crtableLogoninfo As New TableLogOnInfo
+    Public crConnectionInfo As New ConnectionInfo
+    Public CrTables As Tables
+    Public CrTable As Table
+    Public RptDocument As New ReportDocument
+    Public reportDocument As New ReportDocument()
+    Public paramField As New ParameterField()
+    Public paramFields As New ParameterFields()
+    Public paramDiscreteValue As New ParameterDiscreteValue()
+    Public paramField2 As New ParameterField()
+    Public paramFields2 As New ParameterFields()
+    Public paramDiscreteValue2 As New ParameterDiscreteValue()
+
+
+    Public Koneksi1 As SqlConnection
+    Public Koneksi2 As SqlConnection
+    Public strKoneksi1 As String
+    Public strKoneksi2 As String
+
+    Public strServer As String
+    Public strNamaDatabase As String
+    Public strUserNameDB As String
+    Public strPasswordDB As String
+
+    Public strNamaUser As String
+    Public strUsernameSAP As String
+
+
+
+    Public dr As SqlDataReader
+    Public da As SqlDataAdapter
+    Public ds As DataSet
+    Public cmd As SqlCommand
+    Public rd As SqlDataReader
+
+
+
+
+
+    Public Sub KoneksiDatabase1()
+
+        strServer = "10.1.0.53"
+        strNamaDatabase = "DB_EMAIL"
+        strUserNameDB = "sa"
+        strPasswordDB = "h0spit4lity#"
+
+        strKoneksi1 = "data source=" & strServer & ";user id=" & strUserNameDB & ";password=" & strPasswordDB & ";initial catalog=" & strNamaDatabase & ";MultipleActiveResultSets=True;Application Name=Anyar Local Print Services 1.1;  "
+        strKoneksi1 = String.Format(strKoneksi1, strServer, strUserNameDB, strPasswordDB, strNamaDatabase)
+        Koneksi1 = New SqlConnection(strKoneksi1)
+
+
+
+        Try
+            If Koneksi1.State = ConnectionState.Closed Then
+                Koneksi1.Open()
+            End If
+        Catch ex As Exception
+            MsgBox(Err.Description, MsgBoxStyle.Critical, "Error")
+        End Try
+
+    End Sub
+    Public Sub KoneksiDatabase2()
+
+        strServer = "10.1.0.53"
+        strNamaDatabase = "RKM_LIVE_2"
+        strUserNameDB = "sa"
+        strPasswordDB = "h0spit4lity#"
+
+        strKoneksi2 = "data source=" & strServer & ";user id=" & strUserNameDB & ";password=" & strPasswordDB & ";initial catalog=" & strNamaDatabase & ";MultipleActiveResultSets=True;Application Name=Anyar Local Print Services 1.1;  "
+        strKoneksi2 = String.Format(strKoneksi1, strServer, strUserNameDB, strPasswordDB, strNamaDatabase)
+        Koneksi2 = New SqlConnection(strKoneksi1)
+
+
+
+        Try
+            If Koneksi2.State = ConnectionState.Closed Then
+                Koneksi2.Open()
+            End If
+        Catch ex As Exception
+            MsgBox(Err.Description, MsgBoxStyle.Critical, "Error")
+        End Try
+
+    End Sub
+
+
+
+
+
+    Public Sub Module_Konfigurasi_laporan()
+        With crConnectionInfo
+            .ServerName = "10.1.0.53"
+            .UserID = "sa"
+            .Password = "h0spit4lity#"
+            .DatabaseName = "DB_EMAIL"
+        End With
+        CrTables = cryRpt.Database.Tables
+        For Each CrTable In CrTables
+            crtableLogoninfo = CrTable.LogOnInfo
+            crtableLogoninfo.ConnectionInfo = crConnectionInfo
+            CrTable.ApplyLogOnInfo(crtableLogoninfo)
+        Next
+    End Sub
+
+
+
+
+
+    Public Function koneksiMenu() As Boolean
+        Try
+
+            'server = "data source={0};user id={1};password={2};initial catalog={3}"
+
+            server = "data source=" & conn_server & ";user id=" & conn_user & ";password=" & conn_pass & ";initial catalog=" & conn_database & ";Application Name=Anyar Gadget 1.1;MultipleActiveResultSets=True  "
+            server = String.Format(server, conn_server, conn_user, conn_pass, conn_database)
+
+            conn = New SqlConnection(server)
+            conn.Open()
+
+
+            Return True
+        Catch ex As Exception
+            MsgBox("Connection Error" + vbNewLine + "Please Check Setting Info!", MsgBoxStyle.Critical, "ERROR")
+
+            Return False
+        End Try
+
+    End Function
+
+
+End Module

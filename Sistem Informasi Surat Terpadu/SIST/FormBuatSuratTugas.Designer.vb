@@ -402,7 +402,7 @@ Partial Class FormBuatSuratTugas
         Me.cmbBuatBaru.FocusedColor = System.Drawing.Color.Empty
         Me.cmbBuatBaru.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cmbBuatBaru.ForeColor = System.Drawing.Color.White
-        Me.cmbBuatBaru.Image = Global.SIST.My.Resources.Resources.download
+        Me.cmbBuatBaru.Image = Global.SISTER.My.Resources.Resources.download
         Me.cmbBuatBaru.ImageSize = New System.Drawing.Size(20, 20)
         Me.cmbBuatBaru.Location = New System.Drawing.Point(655, 121)
         Me.cmbBuatBaru.Name = "cmbBuatBaru"
@@ -430,7 +430,7 @@ Partial Class FormBuatSuratTugas
         Me.GunaGradientButton2.FocusedColor = System.Drawing.Color.Empty
         Me.GunaGradientButton2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.GunaGradientButton2.ForeColor = System.Drawing.Color.White
-        Me.GunaGradientButton2.Image = Global.SIST.My.Resources.Resources.icon_save_png_1
+        Me.GunaGradientButton2.Image = Global.SISTER.My.Resources.Resources.icon_save_png_1
         Me.GunaGradientButton2.ImageSize = New System.Drawing.Size(20, 20)
         Me.GunaGradientButton2.Location = New System.Drawing.Point(655, 235)
         Me.GunaGradientButton2.Name = "GunaGradientButton2"
@@ -448,7 +448,7 @@ Partial Class FormBuatSuratTugas
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SIST.My.Resources.Resources.CHECKLIST
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.CHECKLIST
         Me.PictureBox1.Location = New System.Drawing.Point(10, 8)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(95, 95)
@@ -458,7 +458,7 @@ Partial Class FormBuatSuratTugas
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.SIST.My.Resources.Resources.Vector_2
+        Me.PictureBox2.Image = Global.SISTER.My.Resources.Resources.Vector_2
         Me.PictureBox2.Location = New System.Drawing.Point(286, 3)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(508, 111)

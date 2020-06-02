@@ -262,7 +262,7 @@ Partial Class FormMonitoringPeminjamanAset
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SIST.My.Resources.Resources.Monitoring_2
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.Monitoring_2
         Me.PictureBox1.Location = New System.Drawing.Point(8, 21)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(168, 215)

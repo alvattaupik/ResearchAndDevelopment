@@ -1,0 +1,1001 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75BA20C5-63D9-44CC-89E7-371C2D442B91}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AnyarGadget.My.MyApplication</StartupObject>
+    <RootNamespace>AnyarGadget</RootNamespace>
+    <AssemblyName>Anyar Gadget</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\IT-ALVAT\Music\SISTER V1.1 BUILD 19052020  NEW\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Anyar Gadget.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Anyar Gadget.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>Off</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A5987A9B4D449869BBFAFB9D4C86809C56A9993E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SIST_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Custom-Icon-Design-Flatastic-5-Message-already-read.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\Guna.UI-Framework-Lib\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EditUsernamePassword.designer.vb">
+      <DependentUpon>EditUsernamePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditUsernamePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuatPeminjamanAset.Designer.vb">
+      <DependentUpon>FormBuatPeminjamanAset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuatPeminjamanAset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataUserALL.designer.vb">
+      <DependentUpon>FormDataUserALL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataUserALL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetaiPeminjamanSaya.designer.vb">
+      <DependentUpon>FormDetaiPeminjamanSaya.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetaiPeminjamanSaya.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangeLog.Designer.vb">
+      <DependentUpon>FormChangeLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangeLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHelp.Designer.vb">
+      <DependentUpon>FormHelp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormHelp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormItemsAset.designer.vb">
+      <DependentUpon>FormItemsAset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormItemsAset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormItemsBAPPenyelesaian.designer.vb">
+      <DependentUpon>FormItemsBAPPenyelesaian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormItemsBAPPenyelesaian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormItemsBAPSerahTerima.designer.vb">
+      <DependentUpon>FormItemsBAPSerahTerima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormItemsBAPSerahTerima.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormItemsSuratTerima.designer.vb">
+      <DependentUpon>FormItemsSuratTerima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormItemsSuratTerima.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMonitoringPeminjamanAset.designer.vb">
+      <DependentUpon>FormMonitoringPeminjamanAset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMonitoringPeminjamanAset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProsesDetailMonitoringPeminjaman.designer.vb">
+      <DependentUpon>FormProsesDetailMonitoringPeminjaman.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormProsesDetailMonitoringPeminjaman.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProsesDetailPeminjamanUsers.designer.vb">
+      <DependentUpon>FormProsesDetailPeminjamanUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormProsesDetailPeminjamanUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProsesDetaiMyRequestCloseCancelDocument.designer.vb">
+      <DependentUpon>FormProsesDetaiMyRequestCloseCancelDocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormProsesDetaiMyRequestCloseCancelDocument.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProsesDetaiMyRequestCloseAndOpenPostingPeriode .designer.vb">
+      <DependentUpon>FormProsesDetaiMyRequestCloseAndOpenPostingPeriode .vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormProsesDetaiMyRequestCloseAndOpenPostingPeriode .vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMonitoringProsesRequest.designer.vb">
+      <DependentUpon>FormMonitoringProsesRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMonitoringProsesRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProsesDetaiMyRequest.designer.vb">
+      <DependentUpon>FormProsesDetaiMyRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormProsesDetaiMyRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuatBeritaAcaraSerahTerima.Designer.vb">
+      <DependentUpon>FormBuatBeritaAcaraSerahTerima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuatBeritaAcaraSerahTerima.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuatBeritaAcaraPenyelesaian.Designer.vb">
+      <DependentUpon>FormBuatBeritaAcaraPenyelesaian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuatBeritaAcaraPenyelesaian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuatRequestOpenDanClosingPeriode.designer.vb">
+      <DependentUpon>FormBuatRequestOpenDanClosingPeriode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuatRequestOpenDanClosingPeriode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuatRequestCloseAndCancel.designer.vb">
+      <DependentUpon>FormBuatRequestCloseAndCancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuatRequestCloseAndCancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuatRequestValidasi.designer.vb">
+      <DependentUpon>FormBuatRequestValidasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuatRequestValidasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuatSuratPengajuanBiayaPerjalananDinas.Designer.vb">
+      <DependentUpon>FormBuatSuratPengajuanBiayaPerjalananDinas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuatSuratPengajuanBiayaPerjalananDinas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuatSuratTugas.Designer.vb">
+      <DependentUpon>FormBuatSuratTugas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuatSuratTugas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuatSuratTerima.Designer.vb">
+      <DependentUpon>FormBuatSuratTerima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuatSuratTerima.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuatSuratJalan.Designer.vb">
+      <DependentUpon>FormBuatSuratJalan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuatSuratJalan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusinessPartner.designer.vb">
+      <DependentUpon>FormBusinessPartner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusinessPartner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCariKomponenSAP.designer.vb">
+      <DependentUpon>FormCariKomponenSAP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCariKomponenSAP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataUserSAP.designer.vb">
+      <DependentUpon>FormDataUserSAP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataUserSAP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetailHakAkses.designer.vb">
+      <DependentUpon>FormDetailHakAkses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetailHakAkses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.designer.vb">
+      <DependentUpon>FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetaiMyRequestCloseAndOpenPostingPeriode.designer.vb">
+      <DependentUpon>FormDetaiMyRequestCloseAndOpenPostingPeriode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetaiMyRequestCloseAndOpenPostingPeriode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormApprovalDetaiMyRequestCloseCancelDocument.designer.vb">
+      <DependentUpon>FormApprovalDetaiMyRequestCloseCancelDocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormApprovalDetaiMyRequestCloseCancelDocument.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetaiMyRequestCloseCancelDocument.designer.vb">
+      <DependentUpon>FormDetaiMyRequestCloseCancelDocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetaiMyRequestCloseCancelDocument.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormApprovalDetaiMyRequest .designer.vb">
+      <DependentUpon>FormApprovalDetaiMyRequest .vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormApprovalDetaiMyRequest .vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetaiMyRequest.designer.vb">
+      <DependentUpon>FormDetaiMyRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetaiMyRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormItemsSuratjalan.designer.vb">
+      <DependentUpon>FormItemsSuratjalan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormItemsSuratjalan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterJenisValidasi.designer.vb">
+      <DependentUpon>FormMasterJenisValidasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterJenisValidasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMonitoringUserRequest.designer.vb">
+      <DependentUpon>FormMonitoringUserRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMonitoringUserRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMonitoringMyRequest.designer.vb">
+      <DependentUpon>FormMonitoringMyRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMonitoringMyRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTemplate.designer.vb">
+      <DependentUpon>FormTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTampilkanCetakan.designer.vb">
+      <DependentUpon>FormTampilkanCetakan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTampilkanCetakan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataUser.designer.vb">
+      <DependentUpon>FormDataUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormValidasiPasswordPengembalianAsset.designer.vb">
+      <DependentUpon>FormValidasiPasswordPengembalianAsset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormValidasiPasswordPengembalianAsset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormValidasiPassword.designer.vb">
+      <DependentUpon>FormValidasiPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormValidasiPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.designer.vb">
+      <DependentUpon>frmSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuUtama.designer.vb">
+      <DependentUpon>MenuUtama.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUtama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\AnyarLocalPrint.Designer.vb">
+      <DependentUpon>AnyarLocalPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\AnyarLocalPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\AnyarRepository.Designer.vb">
+      <DependentUpon>AnyarRepository.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\AnyarRepository.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MonitoringDelivery.Designer.vb">
+      <DependentUpon>MonitoringDelivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MonitoringDelivery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MonitoringRealStock.Designer.vb">
+      <DependentUpon>MonitoringRealStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MonitoringRealStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SideBar.Designer.vb">
+      <DependentUpon>SideBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SideBar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\ClassCrypt.vb" />
+    <Compile Include="Module\ModuleKoneksi.vb" />
+    <Compile Include="Module\ModuleUltility.vb" />
+    <Compile Include="Module\ModuleVariable.vb" />
+    <Compile Include="Settings.vb" />
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EditUsernamePassword.resx">
+      <DependentUpon>EditUsernamePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuatPeminjamanAset.resx">
+      <DependentUpon>FormBuatPeminjamanAset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataUserALL.resx">
+      <DependentUpon>FormDataUserALL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetaiPeminjamanSaya.resx">
+      <DependentUpon>FormDetaiPeminjamanSaya.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangeLog.resx">
+      <DependentUpon>FormChangeLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHelp.resx">
+      <DependentUpon>FormHelp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormItemsAset.resx">
+      <DependentUpon>FormItemsAset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormItemsBAPPenyelesaian.resx">
+      <DependentUpon>FormItemsBAPPenyelesaian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormItemsBAPSerahTerima.resx">
+      <DependentUpon>FormItemsBAPSerahTerima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormItemsSuratTerima.resx">
+      <DependentUpon>FormItemsSuratTerima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMonitoringPeminjamanAset.resx">
+      <DependentUpon>FormMonitoringPeminjamanAset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProsesDetailMonitoringPeminjaman.resx">
+      <DependentUpon>FormProsesDetailMonitoringPeminjaman.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProsesDetailPeminjamanUsers.resx">
+      <DependentUpon>FormProsesDetailPeminjamanUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProsesDetaiMyRequestCloseCancelDocument.resx">
+      <DependentUpon>FormProsesDetaiMyRequestCloseCancelDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProsesDetaiMyRequestCloseAndOpenPostingPeriode .resx">
+      <DependentUpon>FormProsesDetaiMyRequestCloseAndOpenPostingPeriode .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMonitoringProsesRequest.resx">
+      <DependentUpon>FormMonitoringProsesRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProsesDetaiMyRequest.resx">
+      <DependentUpon>FormProsesDetaiMyRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuatBeritaAcaraSerahTerima.resx">
+      <DependentUpon>FormBuatBeritaAcaraSerahTerima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuatBeritaAcaraPenyelesaian.resx">
+      <DependentUpon>FormBuatBeritaAcaraPenyelesaian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuatRequestOpenDanClosingPeriode.resx">
+      <DependentUpon>FormBuatRequestOpenDanClosingPeriode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuatRequestCloseAndCancel.resx">
+      <DependentUpon>FormBuatRequestCloseAndCancel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuatRequestValidasi.resx">
+      <DependentUpon>FormBuatRequestValidasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuatSuratPengajuanBiayaPerjalananDinas.resx">
+      <DependentUpon>FormBuatSuratPengajuanBiayaPerjalananDinas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuatSuratTugas.resx">
+      <DependentUpon>FormBuatSuratTugas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuatSuratTerima.resx">
+      <DependentUpon>FormBuatSuratTerima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuatSuratJalan.resx">
+      <DependentUpon>FormBuatSuratJalan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusinessPartner.resx">
+      <DependentUpon>FormBusinessPartner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCariKomponenSAP.resx">
+      <DependentUpon>FormCariKomponenSAP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataUserSAP.resx">
+      <DependentUpon>FormDataUserSAP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetailHakAkses.resx">
+      <DependentUpon>FormDetailHakAkses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.resx">
+      <DependentUpon>FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetaiMyRequestCloseAndOpenPostingPeriode.resx">
+      <DependentUpon>FormDetaiMyRequestCloseAndOpenPostingPeriode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormApprovalDetaiMyRequestCloseCancelDocument.resx">
+      <DependentUpon>FormApprovalDetaiMyRequestCloseCancelDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetaiMyRequestCloseCancelDocument.resx">
+      <DependentUpon>FormDetaiMyRequestCloseCancelDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormApprovalDetaiMyRequest .resx">
+      <DependentUpon>FormApprovalDetaiMyRequest .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetaiMyRequest.resx">
+      <DependentUpon>FormDetaiMyRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormItemsSuratjalan.resx">
+      <DependentUpon>FormItemsSuratjalan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterJenisValidasi.resx">
+      <DependentUpon>FormMasterJenisValidasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMonitoringUserRequest.resx">
+      <DependentUpon>FormMonitoringUserRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMonitoringMyRequest.resx">
+      <DependentUpon>FormMonitoringMyRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTemplate.resx">
+      <DependentUpon>FormTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTampilkanCetakan.resx">
+      <DependentUpon>FormTampilkanCetakan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataUser.resx">
+      <DependentUpon>FormDataUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormValidasiPasswordPengembalianAsset.resx">
+      <DependentUpon>FormValidasiPasswordPengembalianAsset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormValidasiPassword.resx">
+      <DependentUpon>FormValidasiPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuUtama.resx">
+      <DependentUpon>MenuUtama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\AnyarLocalPrint.resx">
+      <DependentUpon>AnyarLocalPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\AnyarRepository.resx">
+      <DependentUpon>AnyarRepository.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MonitoringDelivery.resx">
+      <DependentUpon>MonitoringDelivery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MonitoringRealStock.resx">
+      <DependentUpon>MonitoringRealStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SideBar.resx">
+      <DependentUpon>SideBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SIST_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\844-8446064_message-clipart-envelope-letter-envelope-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send-mail-icon-png-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-save-png-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHECKLIST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector 3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expense-tracking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\completed-stamp-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector-PNG-Pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand-color-emails-22-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\460-4604403_triangle-computer-graphics-graphic-design-square-triangle-abstract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item-png-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\489203.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\743px-SAP-Logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="AxShockwaveFlashObjects">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Design">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Web">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ShockwaveFlashObjects">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Custom-Icon-Design-Flatastic-5-Message-already-read.ico" />
+    <None Include="Resources\repository.png" />
+    <None Include="Resources\LOGO ANYAR BULAT.png" />
+    <None Include="Resources\Monitoring 2.png" />
+    <None Include="Resources\monitoring.png" />
+    <None Include="Resources\borrow-png.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\Network Operation Center NOC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxRepositoryExplorerLib">
+      <Guid>{C0AB18DE-81D8-4245-B461-FB6648A3CDA7}</Guid>
+      <VersionMajor>14</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="RepositoryExplorerLib">
+      <Guid>{C0AB18DE-81D8-4245-B461-FB6648A3CDA7}</Guid>
+      <VersionMajor>14</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
