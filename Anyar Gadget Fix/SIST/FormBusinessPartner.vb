@@ -74,13 +74,13 @@ Public Class FormBusinessPartner
         End If
 
         If MstrNamaForm = "Berita Acara Penyelesaian" Then
-            FormBuatBeritaAcaraPenyelesaian.LoadPenerima()
+            'FormBuatBeritaAcaraPenyelesaian.LoadPenerima()
         End If
 
 
 
         If MstrNamaForm = "Form Berita Acara Serah Terima" Then
-            FormBuatBeritaAcaraSerahTerima.LoadPenerima()
+            'FormBuatBeritaAcaraSerahTerima.LoadPenerima()
         End If
 
 
@@ -118,12 +118,12 @@ Public Class FormBusinessPartner
         End If
 
         If MstrNamaForm = "Berita Acara Penyelesaian" Then
-            FormBuatBeritaAcaraPenyelesaian.LoadPenerima()
+            'FormBuatBeritaAcaraPenyelesaian.LoadPenerima()
         End If
 
 
         If MstrNamaForm = "Form Berita Acara Serah Terima" Then
-            FormBuatBeritaAcaraSerahTerima.LoadPenerima()
+            'FormBuatBeritaAcaraSerahTerima.LoadPenerima()
         End If
 
 

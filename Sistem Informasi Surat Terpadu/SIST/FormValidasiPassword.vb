@@ -21,46 +21,40 @@ Public Class FormValidasiPassword
             dr.Read()
             If dr.HasRows = True Then
 
-                If MstrJenisDokumen = "FORM VALIDASI" Then
+
+                If MstrJenisDokumen = "IT003" Then
                     MstrKodeUser = dr.GetString(0)
                     MstrPassword = dr.GetString(3)
-                    FormApprovalDetaiMyRequest.AUD_Approval()
-                    FormApprovalDetaiMyRequest.LoadDaftarUserValidasi()
-                    FormMonitoringUserRequest.BelumDiproses()
-
+                    FormApprovalDetaiMyRequestValidasi.AUD_Approval()
+                    FormApprovalDetaiMyRequestValidasi.LoadDaftarUserValidasi()
+                    FormApprovalDetaiMyRequestValidasi.LoadDetailValidasi()
+                    FormMonitoringApprovalUserRequest.LoadDaftarApprovalActive()
                     Me.Dispose()
                     dr.Close()
                 End If
 
-
-
-                If MstrJenisDokumen = "FORM CLOSE AND CANCEL DOCUMENTS" Then
-
+                If MstrJenisDokumen = "IT004" Then
                     MstrKodeUser = dr.GetString(0)
                     MstrPassword = dr.GetString(3)
                     FormApprovalDetaiMyRequestCloseCancelDocument.AUD_Approval()
+                    FormApprovalDetaiMyRequestCloseCancelDocument.LoadDetailValidasi()
                     FormApprovalDetaiMyRequestCloseCancelDocument.LoadDaftarUserValidasi()
-                    FormMonitoringUserRequest.BelumDiproses()
+                    FormMonitoringApprovalUserRequest.LoadDaftarApprovalActive()
                     Me.Dispose()
                     dr.Close()
                 End If
 
 
-
-
-
-
-                If MstrJenisDokumen = "FORM CLOSE AND OPEN POSTING PERIODE" Then
-
+                If MstrJenisDokumen = "IT005" Then
                     MstrKodeUser = dr.GetString(0)
                     MstrPassword = dr.GetString(3)
                     FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.AUD_Approval()
+                    FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.LoadDetailValidasi()
                     FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.LoadDaftarUserValidasi()
-                    FormMonitoringUserRequest.BelumDiproses()
+                    FormMonitoringApprovalUserRequest.LoadDaftarApprovalActive()
                     Me.Dispose()
                     dr.Close()
                 End If
-
 
 
             Else

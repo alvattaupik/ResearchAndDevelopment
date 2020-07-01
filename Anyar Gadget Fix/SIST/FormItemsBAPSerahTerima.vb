@@ -112,10 +112,10 @@ Public Class FormItemsBAPSerahTerima
             If JumlahDuplikat > 0 Then
                 Exit Sub
             Else
-                FormBuatBeritaAcaraSerahTerima.dgItem.Rows.Add(row2)
-                FormBuatBeritaAcaraSerahTerima.dgItem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-                FormBuatBeritaAcaraSerahTerima.dgItem.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
-                FormBuatBeritaAcaraSerahTerima.dgItem.AutoResizeColumns()
+                'FormBuatBeritaAcaraSerahTerima.dgItem.Rows.Add(row2)
+                'FormBuatBeritaAcaraSerahTerima.dgItem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+                'FormBuatBeritaAcaraSerahTerima.dgItem.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+                'FormBuatBeritaAcaraSerahTerima.dgItem.AutoResizeColumns()
                 Me.Close()
             End If
         Next

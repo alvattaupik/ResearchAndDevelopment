@@ -124,11 +124,11 @@
   <data name="CHECKLIST" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CHECKLIST.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Monitoring 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Monitoring 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="460-4604403_triangle-computer-graphics-graphic-design-square-triangle-abstract" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\460-4604403_triangle-computer-graphics-graphic-design-square-triangle-abstract.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="monitoring" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\monitoring.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="743px-SAP-Logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\743px-SAP-Logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,8 +136,8 @@
   <data name="Network Operation Center NOC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Network Operation Center NOC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Vector 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vector 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="monitoring" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monitoring.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vector 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector 3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +151,8 @@
   <data name="borrow-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\borrow-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="item-png-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\item-png-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="expense-tracking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expense-tracking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="489203" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\489203.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,11 +169,14 @@
   <data name="icon-save-png-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-save-png-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Vector-PNG-Pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vector-PNG-Pic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Vector 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="item-png-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\item-png-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="expand-color-emails-22-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expand-color-emails-22-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,16 +187,16 @@
   <data name="send-mail-icon-png-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\send-mail-icon-png-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Vector 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vector 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="expense-tracking" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\expense-tracking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Vector-PNG-Pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vector-PNG-Pic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Monitoring 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Monitoring 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logo Anyar PNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo Anyar PNG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

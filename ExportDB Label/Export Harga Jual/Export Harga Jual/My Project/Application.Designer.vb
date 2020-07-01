@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Export_Database_LabelAset.Form1
+            Me.MainForm = Global.Export_Database_LabelAset.frmSplashScreen
         End Sub
     End Class
 End Namespace

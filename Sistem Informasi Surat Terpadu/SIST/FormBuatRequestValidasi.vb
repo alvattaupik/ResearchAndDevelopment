@@ -86,6 +86,32 @@ ErrorLoad:
             MessageBox.Show("Can not open connection ! ")
         End Try
     End Sub
+
+
+
+    Sub LoadComboCabang()
+        Dim ds As New DataSet()
+        Dim adapter As New SqlDataAdapter()
+        Try
+            KoneksiDatabase1()
+            cmd = New SqlCommand("SELECT KodeDivisi,NamaDivisi FROM dbo.V_Divisi WHERE KodeDivisi LIKE '%1%'", Koneksi1)
+            adapter.SelectCommand = cmd
+            adapter.Fill(ds)
+            adapter.Dispose()
+            cmd.Dispose()
+            Koneksi1.Close()
+            cmbCabang.DataSource = ds.Tables(0)
+            cmbCabang.ValueMember = "KodeDivisi"
+            cmbCabang.DisplayMember = "NamaDivisi"
+        Catch ex As Exception
+            MessageBox.Show("Can not open connection ! ")
+        End Try
+    End Sub
+
+
+
+
+
     'Private Sub cmbKomponen_Click(sender As Object, e As EventArgs)
     '    LoadComboKomponenValidasi()
     'End Sub
@@ -101,7 +127,6 @@ ErrorLoad:
         Call CopyFileKeDirectoryAttachment()
 
         CariKodeJenisValidasi()
-        'CariKodeKomponen()
 
         If MsgBox("Apakah Data Yang Di Inputkan Sudah Benar?", vbYesNo, "Konfirmasi") = vbYes Then
 
@@ -118,10 +143,20 @@ ErrorLoad:
             End If
 
 
+
+            If cmbCabang.Text = "" Then
+                MsgBox("Cabang / Lokasi Harus DI Isi!", vbCritical, "Penting!")
+                cmbCabang.BackColor = Color.Yellow
+                Exit Sub
+            End If
+
+
+
             If txtKomponen.Text = "" Then
                 MsgBox("Komponen SAP Harus Di Isi!", vbCritical, "Penting!")
                 cmdBrowse.PerformClick()
                 txtKomponen.BackColor = Color.Yellow
+                cmdBrowse.PerformClick()
                 Exit Sub
             End If
 
@@ -157,6 +192,7 @@ Lanjut:
             cmd.Parameters.AddWithValue("KdUser", Trim(MstrKodeUser))
             cmd.Parameters.AddWithValue("KdSupervisor", Trim(MstrKdSupervisor))
             cmd.Parameters.AddWithValue("Pesan", Trim(txtPesan.Text))
+            cmd.Parameters.AddWithValue("KdCabang", Trim(cmbCabang.SelectedValue))
             cmd.Parameters.AddWithValue("JenisRequest", Trim(cmbJenisRequest.Text))
             cmd.Parameters.AddWithValue("Durasi1", JamAwal.Value.ToString("HH:mm"))
             cmd.Parameters.AddWithValue("Durasi2", JamAkhir.Value.ToString("HH:mm"))
@@ -176,7 +212,7 @@ Lanjut:
             cmd.ExecuteNonQuery()
             txtNoValidasi.Text = cmd.Parameters("OutputNoSurat").Value.ToString()
             MsgBox("Permintaan Validasi Berhasil Disimpan Dengan Nomor: " & txtNoValidasi.Text & " Silahkan Cek Monitoring Request!", vbInformation, "Sukses!")
-            Bersihkan()
+            Me.Dispose()
             Exit Sub
         Else
 
@@ -273,6 +309,14 @@ ErrorLoad:
                 txtPathAttachments.Text = O.FileName
             End If
         End Using
+
+    End Sub
+
+    Private Sub cmbCabang_Click(sender As Object, e As EventArgs) Handles cmbCabang.Click
+        LoadComboCabang()
+    End Sub
+
+    Private Sub cmbJenisRequest_Click(sender As Object, e As EventArgs) Handles cmbJenisRequest.Click
 
     End Sub
 End Class

@@ -210,6 +210,10 @@ ErrorHandler:
         '    MsgBox(Err.Description)
         'End Try
     End Sub
+
+    Private Sub rbTampilSemua_CheckedChanged(sender As Object, e As EventArgs) Handles rbTampilSemua.CheckedChanged
+
+    End Sub
 End Class
 
 

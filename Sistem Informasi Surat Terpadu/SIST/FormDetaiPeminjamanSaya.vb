@@ -64,7 +64,7 @@ ErrorLoad:
                 txtStatusRequest.Text = dr.GetString(2)
                 txtStatusRequest.BackColor = Color.White
             End If
-            'txtNamaUser.Text = dr.GetString(11)
+            txtNamaUser.Text = dr.GetString(11)
             txtJenisRequest.Text = dr.GetString(4)
             txtKomponen.Text = dr.GetString(5)
             txtJenisValidasi.Text = dr.GetString(6)
@@ -185,89 +185,18 @@ ErrorLoad:
     End Sub
 
     Private Sub cmdSimpan_Click(sender As Object, e As EventArgs) Handles cmdSimpan.Click
-        If txtStatus.Text <> "Lengkap Disetujui" Then
-            If MsgBox("Status Approval Belum Lengkap, Lanjutkan?", vbYesNo, "Konfirmasi?") = vbYes Then
+     On Error GoTo ErrorLoad
+        If txtDiprosesOleh.Text = "" Then
 
-
-
-                MstrNoSurat = Trim(txtNoDokumen.Text)
-
-                Call KoneksiDatabase1()
-                Dim strSQlLogin As String
-
-                strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT003' AND StatusEnabled='Y'"
-                cmd = New SqlCommand(strSQlLogin, Koneksi1)
-                dr = cmd.ExecuteReader
-                dr.Read()
-                If dr.HasRows = True Then
-
-                    MstrPathReport = dr.GetString(0)
-                    FormTampilkanCetakan.Show()
-                    dr.Close()
-
-                Else
-
-                    MsgBox("Template Tidak Ada!!!", vbInformation, "Hubungi Administrator")
-                    dr.Close()
-                    Exit Sub
-                End If
-
-                Exit Sub
+            If MsgBox("Permintaan Belum DiTanggapi, Lanjutkan Cetak?", vbYesNo, "Konfirmasi?") = vbYes Then
+                LoadTemplateSurat()
             Else
-
-
-                MstrNoSurat = Trim(txtNoDokumen.Text)
-
-                Call KoneksiDatabase1()
-                Dim strSQlLogin As String
-
-                strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT003' AND StatusEnabled='Y'"
-                cmd = New SqlCommand(strSQlLogin, Koneksi1)
-                dr = cmd.ExecuteReader
-                dr.Read()
-
-                If dr.HasRows = True Then
-
-                    MstrPathReport = dr.GetString(0)
-                    FormTampilkanCetakan.Show()
-                    dr.Close()
-
-                Else
-
-                    MsgBox("Template Tidak Ada!!!", vbInformation, "Hubungi Administrator")
-                    dr.Close()
-                    Exit Sub
-                End If
-
                 Exit Sub
             End If
+
         Else
-
-            MstrNoSurat = Trim(txtNoDokumen.Text)
-
-            Call KoneksiDatabase1()
-            Dim strSQlLogin As String
-
-            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT003' AND StatusEnabled='Y'"
-            cmd = New SqlCommand(strSQlLogin, Koneksi1)
-            dr = cmd.ExecuteReader
-            dr.Read()
-
-            If dr.HasRows = True Then
-
-                MstrPathReport = dr.GetString(0)
-                FormTampilkanCetakan.Show()
-                dr.Close()
-
-            Else
-
-                MsgBox("Template Tidak Ada!!!", vbInformation, "Hubungi Administrator")
-                dr.Close()
-                Exit Sub
-            End If
-
+            LoadTemplateSurat()
         End If
-
         Exit Sub
 
 ErrorLoad:

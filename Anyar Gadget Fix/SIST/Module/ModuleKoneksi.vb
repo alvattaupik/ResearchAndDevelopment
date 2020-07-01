@@ -32,6 +32,14 @@ Module ModuleKoneksi
     Public strKoneksi1 As String
     Public strKoneksi2 As String
 
+
+
+    Public KoneksiIvend As SqlConnection
+    Public strKoneksiIvend As String
+
+
+
+
     Public strServer As String
     Public strNamaDatabase As String
     Public strUserNameDB As String
@@ -39,6 +47,16 @@ Module ModuleKoneksi
 
     Public strNamaUser As String
     Public strUsernameSAP As String
+
+
+
+
+    Public strServer2 As String
+    Public strNamaDatabase2 As String
+    Public strUserNameDB2 As String
+    Public strPasswordDB2 As String
+
+
 
 
 
@@ -82,8 +100,8 @@ Module ModuleKoneksi
         strPasswordDB = "h0spit4lity#"
 
         strKoneksi2 = "data source=" & strServer & ";user id=" & strUserNameDB & ";password=" & strPasswordDB & ";initial catalog=" & strNamaDatabase & ";MultipleActiveResultSets=True;Application Name=Anyar Local Print Services 1.1;  "
-        strKoneksi2 = String.Format(strKoneksi1, strServer, strUserNameDB, strPasswordDB, strNamaDatabase)
-        Koneksi2 = New SqlConnection(strKoneksi1)
+        strKoneksi2 = String.Format(strKoneksi2, strServer, strUserNameDB, strPasswordDB, strNamaDatabase)
+        Koneksi2 = New SqlConnection(strKoneksi2)
 
 
 
@@ -101,12 +119,44 @@ Module ModuleKoneksi
 
 
 
+    Public Sub KoneksiMonitoringDatabase()
+
+        strServer = My.Settings.ServerNameDB
+        strNamaDatabase = My.Settings.DatabaseName
+        strUserNameDB = My.Settings.UsernameDB
+        strPasswordDB = My.Settings.PasswordDB
+
+        strKoneksi2 = "data source=" & strServer & ";user id=" & strUserNameDB & ";password=" & strPasswordDB & ";initial catalog=" & strNamaDatabase & ";MultipleActiveResultSets=True;Application Name=AG- SQL Monitoring Tools;  "
+        strKoneksi2 = String.Format(strKoneksi2, strServer, strUserNameDB, strPasswordDB, strNamaDatabase)
+        Koneksi2 = New SqlConnection(strKoneksi2)
+
+
+
+        Try
+            If Koneksi2.State = ConnectionState.Closed Then
+                Koneksi2.Open()
+            End If
+        Catch ex As Exception
+            MsgBox(Err.Description, MsgBoxStyle.Critical, "Error")
+        End Try
+
+    End Sub
+
+
+
+
+
+
+
+
+
+
     Public Sub Module_Konfigurasi_laporan()
         With crConnectionInfo
             .ServerName = "10.1.0.53"
             .UserID = "sa"
             .Password = "h0spit4lity#"
-            .DatabaseName = "DB_EMAIL"
+            .DatabaseName = "RKM_live_2"
         End With
         CrTables = cryRpt.Database.Tables
         For Each CrTable In CrTables
@@ -140,6 +190,65 @@ Module ModuleKoneksi
         End Try
 
     End Function
+
+
+
+
+
+
+
+
+    Public Sub KoneksiDatabaseIvend()
+
+        strServer = "10.1.0.55"
+        strNamaDatabase = "CXSRetail_HO_2"
+        strUserNameDB = "sa"
+        strPasswordDB = "h0spit4lity#"
+
+        strKoneksiIvend = "data source=" & strServer & ";user id=" & strUserNameDB & ";password=" & strPasswordDB & ";initial catalog=" & strNamaDatabase & ";MultipleActiveResultSets=True;Application Name=Anyar Local Print Services 1.1;  "
+        strKoneksiIvend = String.Format(strKoneksiIvend, strServer, strUserNameDB, strPasswordDB, strNamaDatabase)
+        KoneksiIvend = New SqlConnection(strKoneksiIvend)
+
+
+
+        Try
+            If KoneksiIvend.State = ConnectionState.Closed Then
+                KoneksiIvend.Open()
+            End If
+        Catch ex As Exception
+            MsgBox(Err.Description, MsgBoxStyle.Critical, "Error")
+        End Try
+
+    End Sub
+
+
+
+
+
+    Public Sub CekKoneksiDatabase()
+
+
+        strKoneksi2 = "data source=" & strServer2 & ";user id=" & strUserNameDB2 & ";password=" & strPasswordDB2 & ";initial catalog=" & strNamaDatabase2 & ";MultipleActiveResultSets=True;Application Name=BCP V1.0;  "
+        strKoneksi2 = String.Format(strKoneksi2, strServer2, strUserNameDB2, strPasswordDB2, strNamaDatabase2)
+        Koneksi2 = New SqlConnection(strKoneksi2)
+
+        Try
+            If Koneksi2.State = ConnectionState.Closed Then
+                Koneksi2.Open()
+                bolStatusKoneksi = True
+            End If
+        Catch ex As Exception
+            bolStatusKoneksi = False
+            MsgBox(Err.Description, MsgBoxStyle.Critical, "Error")
+        End Try
+
+    End Sub
+
+
+
+
+
+
 
 
 End Module

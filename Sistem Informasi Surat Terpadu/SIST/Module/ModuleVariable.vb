@@ -8,6 +8,7 @@
     Public MstrNoSurat As String
     Public MstrPathReport As String
     Public MstrPassword As String
+    Public MstrNamaAplikasi As String = "SISTER"
 
 
     Public MstrPenerima As String
@@ -51,6 +52,9 @@
     Public MstrMenuMonitoringPeminjamanAsset As String
     Public MstrMenuApprovalRequest As String
     Public MstrMenuProsesRequest As String
+
+
+    Public MstrCmdMonitorMyRequest As String
 
 
 

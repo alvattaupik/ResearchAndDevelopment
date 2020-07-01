@@ -79,26 +79,26 @@ Public Class FormMonitoringUserRequest
     End Sub
 
     Private Sub cmdLihatDetail_Click(sender As Object, e As EventArgs) Handles cmdLihatDetail.Click
-        If dgRequestMonitoring.RowCount = 0 Then Exit Sub
-        MstrNoSurat = dgRequestMonitoring.Item(0, dgRequestMonitoring.CurrentRow.Index).Value
-        MstrJenisDokumen = dgRequestMonitoring.Item(2, dgRequestMonitoring.CurrentRow.Index).Value
+        'If dgRequestMonitoring.RowCount = 0 Then Exit Sub
+        'MstrNoSurat = dgRequestMonitoring.Item(0, dgRequestMonitoring.CurrentRow.Index).Value
+        'MstrJenisDokumen = dgRequestMonitoring.Item(2, dgRequestMonitoring.CurrentRow.Index).Value
 
-        If MstrJenisDokumen = "FORM VALIDASI" Then
-            FormApprovalDetaiMyRequest.ShowDialog()
-        End If
+        'If MstrJenisDokumen = "FORM VALIDASI" Then
+        '    FormApprovalDetaiMyRequest.ShowDialog()
+        'End If
 
-        If MstrJenisDokumen = "FORM CLOSE AND CANCEL DOCUMENTS" Then
-            FormApprovalDetaiMyRequestCloseCancelDocument.ShowDialog()
-        End If
+        'If MstrJenisDokumen = "FORM CLOSE AND CANCEL DOCUMENTS" Then
+        '    FormApprovalDetaiMyRequestCloseCancelDocument.ShowDialog()
+        'End If
 
 
-        If MstrJenisDokumen = "FORM CLOSE AND OPEN POSTING PERIODE" Then
-            FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.ShowDialog()
-        End If
+        'If MstrJenisDokumen = "FORM CLOSE AND OPEN POSTING PERIODE" Then
+        '    FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.ShowDialog()
+        'End If
 
-        If MstrJenisDokumen = "FORM PEMINJAMAN ASSET " Then
-            FormDetailPeminjamanSaya.ShowDialog()
-        End If
+        'If MstrJenisDokumen = "FORM PEMINJAMAN ASSET " Then
+        '    FormDetailPeminjamanSaya.ShowDialog()
+        'End If
 
     End Sub
 

@@ -34,7 +34,11 @@ Partial Class FormLogin
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
         Me.GunaLabel6 = New Guna.UI.WinForms.GunaLabel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.GunaLabel5 = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaLabel7 = New Guna.UI.WinForms.GunaLabel()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdBatal
@@ -51,7 +55,7 @@ Partial Class FormLogin
         Me.cmdBatal.ForeColor = System.Drawing.Color.White
         Me.cmdBatal.Image = Nothing
         Me.cmdBatal.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdBatal.Location = New System.Drawing.Point(270, 252)
+        Me.cmdBatal.Location = New System.Drawing.Point(380, 256)
         Me.cmdBatal.Name = "cmdBatal"
         Me.cmdBatal.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdBatal.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -79,7 +83,7 @@ Partial Class FormLogin
         Me.GunaGradientButton1.ForeColor = System.Drawing.Color.White
         Me.GunaGradientButton1.Image = Nothing
         Me.GunaGradientButton1.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaGradientButton1.Location = New System.Drawing.Point(138, 252)
+        Me.GunaGradientButton1.Location = New System.Drawing.Point(248, 256)
         Me.GunaGradientButton1.Name = "GunaGradientButton1"
         Me.GunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.GunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -100,7 +104,7 @@ Partial Class FormLogin
         Me.GunaLinkLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GunaLinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.GunaLinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(91, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(134, Byte), Integer))
-        Me.GunaLinkLabel1.Location = New System.Drawing.Point(206, 292)
+        Me.GunaLinkLabel1.Location = New System.Drawing.Point(316, 296)
         Me.GunaLinkLabel1.Name = "GunaLinkLabel1"
         Me.GunaLinkLabel1.Size = New System.Drawing.Size(126, 15)
         Me.GunaLinkLabel1.TabIndex = 36
@@ -119,7 +123,7 @@ Partial Class FormLogin
         Me.txtPassword.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtPassword.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtPassword.ForeColor = System.Drawing.Color.White
-        Me.txtPassword.Location = New System.Drawing.Point(138, 195)
+        Me.txtPassword.Location = New System.Drawing.Point(248, 199)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Radius = 2
@@ -131,7 +135,7 @@ Partial Class FormLogin
         Me.GunaLabel4.AutoSize = True
         Me.GunaLabel4.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.GunaLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.GunaLabel4.Location = New System.Drawing.Point(134, 173)
+        Me.GunaLabel4.Location = New System.Drawing.Point(244, 177)
         Me.GunaLabel4.Name = "GunaLabel4"
         Me.GunaLabel4.Size = New System.Drawing.Size(67, 19)
         Me.GunaLabel4.TabIndex = 33
@@ -149,7 +153,7 @@ Partial Class FormLogin
         Me.txtUsername.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtUsername.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtUsername.ForeColor = System.Drawing.Color.White
-        Me.txtUsername.Location = New System.Drawing.Point(138, 133)
+        Me.txtUsername.Location = New System.Drawing.Point(248, 137)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtUsername.Radius = 2
@@ -161,7 +165,7 @@ Partial Class FormLogin
         Me.GunaLabel3.AutoSize = True
         Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.GunaLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.GunaLabel3.Location = New System.Drawing.Point(134, 111)
+        Me.GunaLabel3.Location = New System.Drawing.Point(244, 115)
         Me.GunaLabel3.Name = "GunaLabel3"
         Me.GunaLabel3.Size = New System.Drawing.Size(71, 19)
         Me.GunaLabel3.TabIndex = 31
@@ -172,7 +176,7 @@ Partial Class FormLogin
         Me.GunaLabel2.AutoSize = True
         Me.GunaLabel2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GunaLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.GunaLabel2.Location = New System.Drawing.Point(135, 77)
+        Me.GunaLabel2.Location = New System.Drawing.Point(245, 81)
         Me.GunaLabel2.Name = "GunaLabel2"
         Me.GunaLabel2.Size = New System.Drawing.Size(79, 15)
         Me.GunaLabel2.TabIndex = 30
@@ -183,7 +187,7 @@ Partial Class FormLogin
         Me.GunaLabel1.AutoSize = True
         Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold)
         Me.GunaLabel1.ForeColor = System.Drawing.Color.White
-        Me.GunaLabel1.Location = New System.Drawing.Point(133, 49)
+        Me.GunaLabel1.Location = New System.Drawing.Point(243, 53)
         Me.GunaLabel1.Name = "GunaLabel1"
         Me.GunaLabel1.Size = New System.Drawing.Size(191, 28)
         Me.GunaLabel1.TabIndex = 29
@@ -206,11 +210,45 @@ Partial Class FormLogin
         Me.GunaLabel6.BackColor = System.Drawing.Color.Transparent
         Me.GunaLabel6.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold)
         Me.GunaLabel6.ForeColor = System.Drawing.Color.White
-        Me.GunaLabel6.Location = New System.Drawing.Point(73, 325)
+        Me.GunaLabel6.Location = New System.Drawing.Point(18, 253)
         Me.GunaLabel6.Name = "GunaLabel6"
-        Me.GunaLabel6.Size = New System.Drawing.Size(363, 28)
+        Me.GunaLabel6.Size = New System.Drawing.Size(198, 28)
         Me.GunaLabel6.TabIndex = 40
-        Me.GunaLabel6.Text = "SISTEM INFORMASI SURAT TERPADU"
+        Me.GunaLabel6.Text = "SISTEM INFORMASI"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources._844_8446064_message_clipart_envelope_letter_envelope_png
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 37)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(204, 213)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 41
+        Me.PictureBox1.TabStop = False
+        '
+        'GunaLabel5
+        '
+        Me.GunaLabel5.AutoSize = True
+        Me.GunaLabel5.BackColor = System.Drawing.Color.Transparent
+        Me.GunaLabel5.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.GunaLabel5.ForeColor = System.Drawing.Color.White
+        Me.GunaLabel5.Location = New System.Drawing.Point(31, 283)
+        Me.GunaLabel5.Name = "GunaLabel5"
+        Me.GunaLabel5.Size = New System.Drawing.Size(171, 28)
+        Me.GunaLabel5.TabIndex = 42
+        Me.GunaLabel5.Text = "SURAT TERPADU"
+        '
+        'GunaLabel7
+        '
+        Me.GunaLabel7.AutoSize = True
+        Me.GunaLabel7.BackColor = System.Drawing.Color.Transparent
+        Me.GunaLabel7.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaLabel7.ForeColor = System.Drawing.Color.White
+        Me.GunaLabel7.Location = New System.Drawing.Point(41, 314)
+        Me.GunaLabel7.Name = "GunaLabel7"
+        Me.GunaLabel7.Size = New System.Drawing.Size(147, 13)
+        Me.GunaLabel7.TabIndex = 43
+        Me.GunaLabel7.Text = "Sister V1.1 Build 08.06.2020"
         '
         'FormLogin
         '
@@ -218,6 +256,9 @@ Partial Class FormLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(518, 362)
+        Me.Controls.Add(Me.GunaLabel7)
+        Me.Controls.Add(Me.GunaLabel5)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GunaLabel6)
         Me.Controls.Add(Me.cmdBatal)
         Me.Controls.Add(Me.GunaGradientButton1)
@@ -234,6 +275,7 @@ Partial Class FormLogin
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormLogin"
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -249,4 +291,7 @@ Partial Class FormLogin
     Friend WithEvents GunaLabel2 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel1 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel6 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents GunaLabel5 As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents GunaLabel7 As Guna.UI.WinForms.GunaLabel
 End Class

@@ -6,6 +6,8 @@ Imports System.Data.SqlClient
 
 Module ModuleUltility
 
+    Dim strSQlLogin As String
+
     Public Sub ClearTextBoxes(frm As Form)
 
         For Each Control In frm.Controls
@@ -15,6 +17,61 @@ Module ModuleUltility
         Next Control
 
     End Sub
+
+
+
+
+
+
+    Sub LoadComboBoxDBEMAIL(cmb As ComboBox, strSQL As String, strValue As String, strMember As String)
+        Dim ds As New DataSet()
+        Dim adapter As New SqlDataAdapter()
+
+        Try
+            KoneksiDatabase1()
+            cmd = New SqlCommand(strSQL, Koneksi1)
+            adapter.SelectCommand = cmd
+            adapter.Fill(ds)
+            adapter.Dispose()
+            cmd.Dispose()
+            Koneksi1.Close()
+            cmb.DataSource = ds.Tables(0)
+            cmb.ValueMember = strValue
+            cmb.DisplayMember = strMember
+        Catch ex As Exception
+            MessageBox.Show("Can not open connection ! ")
+        End Try
+
+    End Sub
+
+
+    Sub LoadComboBoxDBLive(cmb As ComboBox, strSQL As String, strValue As String, strMember As String)
+        Dim ds As New DataSet()
+        Dim adapter As New SqlDataAdapter()
+
+        Try
+            KoneksiDatabase2()
+            cmd = New SqlCommand(strSQL, Koneksi2)
+            adapter.SelectCommand = cmd
+            adapter.Fill(ds)
+            adapter.Dispose()
+            cmd.Dispose()
+            Koneksi1.Close()
+            cmb.DataSource = ds.Tables(0)
+            cmb.ValueMember = strValue
+            cmb.DisplayMember = strMember
+        Catch ex As Exception
+            MessageBox.Show("Can not open connection ! ")
+        End Try
+
+    End Sub
+
+
+
+
+
+
+
 
 
     Sub GetKontrolObjek()
@@ -269,6 +326,21 @@ Module ModuleUltility
 
 
 
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='cmd001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+            MstrCmdMonitorMyRequest = dr.GetString(0)
+            dr.Close()
+        Else
+            dr.Close()
+        End If
+
+
+
+
         Exit Sub
 
 ErrorLoad:
@@ -279,26 +351,22 @@ ErrorLoad:
 
     Public Sub SetKontrolObject()
 
-        If MstrMenuSuratJalan = "Y" Then
-            MenuUtama.SuratJalanToolStripMenuItem.Visible = True
-        Else
-            MenuUtama.SuratJalanToolStripMenuItem.Visible = False
-        End If
 
 
-        If MstrMenuSuratTerima = "Y" Then
+
+        If MstrMenuSuratTerima = "1" Then
             MenuUtama.SuratTerimaToolStripMenuItem.Visible = True
         Else
             MenuUtama.SuratTerimaToolStripMenuItem.Visible = False
         End If
 
-        If MstrMenuSuratTugas = "Y" Then
+        If MstrMenuSuratTugas = "1" Then
             MenuUtama.SuratTugasToolStripMenuItem.Visible = True
         Else
             MenuUtama.SuratTugasToolStripMenuItem.Visible = False
         End If
 
-        If MstrMenuSuratPengajuanBiaya = "Y" Then
+        If MstrMenuSuratPengajuanBiaya = "1" Then
             MenuUtama.SuratPengajuanBiayaPerjalananToolStripMenuItem.Visible = True
         Else
             MenuUtama.SuratPengajuanBiayaPerjalananToolStripMenuItem.Visible = False
@@ -306,46 +374,46 @@ ErrorLoad:
 
 
 
-        If MstrMenuBAPPenyelesaian = "Y" Then
+        If MstrMenuBAPPenyelesaian = "1" Then
             MenuUtama.BAPPenyelesaianToolStripMenuItem.Visible = True
         Else
             MenuUtama.BAPPenyelesaianToolStripMenuItem.Visible = False
         End If
 
-        If MstrMenuBAPSerahTerima = "Y" Then
+        If MstrMenuBAPSerahTerima = "1" Then
             MenuUtama.BAPSerahTerimaToolStripMenuItem.Visible = True
         Else
             MenuUtama.BAPSerahTerimaToolStripMenuItem.Visible = False
         End If
 
 
-        If MstrMenuFormValidasi = "Y" Then
+        If MstrMenuFormValidasi = "1" Then
             MenuUtama.FormValidasiToolStripMenuItem.Visible = True
         Else
             MenuUtama.FormValidasiToolStripMenuItem.Visible = False
         End If
 
-        If MstrMenuFormCancelDanClose = "Y" Then
+        If MstrMenuFormCancelDanClose = "1" Then
             MenuUtama.CancelDanCloseDokumenToolStripMenuItem.Visible = True
         Else
             MenuUtama.CancelDanCloseDokumenToolStripMenuItem.Visible = False
         End If
 
-        If MstrMenuFormOpenDanClose = "Y" Then
+        If MstrMenuFormOpenDanClose = "1" Then
             MenuUtama.OpenDanClosingPeriodeToolStripMenuItem.Visible = True
         Else
             MenuUtama.OpenDanClosingPeriodeToolStripMenuItem.Visible = False
         End If
 
 
-        If MstrMenuMyTemplate = "Y" Then
+        If MstrMenuMyTemplate = "1" Then
             MenuUtama.MyTemplateToolStripMenuItem.Visible = True
         Else
             MenuUtama.MyTemplateToolStripMenuItem.Visible = False
         End If
 
 
-        If MstrMenuAllUsersTemplate = "Y" Then
+        If MstrMenuAllUsersTemplate = "1" Then
             MenuUtama.AllUsersTemplateToolStripMenuItem.Visible = True
         Else
             MenuUtama.AllUsersTemplateToolStripMenuItem.Visible = False
@@ -354,35 +422,35 @@ ErrorLoad:
 
 
 
-        If MstrMenuMasterValidasi = "Y" Then
+        If MstrMenuMasterValidasi = "1" Then
             MenuUtama.JenisValidasiToolStripMenuItem.Visible = True
         Else
             MenuUtama.JenisValidasiToolStripMenuItem.Visible = False
         End If
 
 
-        If MstrMenuUserLogindanHakAkses = "Y" Then
+        If MstrMenuUserLogindanHakAkses = "1" Then
             MenuUtama.DataUserToolStripMenuItem.Visible = True
         Else
             MenuUtama.DataUserToolStripMenuItem.Visible = False
         End If
 
 
-        If MstrMenuUbahPassword = "Y" Then
+        If MstrMenuUbahPassword = "1" Then
             MenuUtama.UbahPasswordToolStripMenuItem.Visible = True
         Else
             MenuUtama.UbahPasswordToolStripMenuItem.Visible = False
         End If
 
 
-        If MstrMenuMonitoringMyRequest = "Y" Then
+        If MstrMenuMonitoringMyRequest = "1" Then
             MenuUtama.MonitoringToolStripMenuItem.Visible = True
         Else
             MenuUtama.MonitoringToolStripMenuItem.Visible = False
         End If
 
 
-        If MstrMenuApprovalRequest = "Y" Then
+        If MstrMenuApprovalRequest = "1" Then
             MenuUtama.ApprovalToolStripMenuItem.Visible = True
             MenuUtama.DaftarRequestToolStripMenuItem.Visible = True
         Else
@@ -391,26 +459,230 @@ ErrorLoad:
         End If
 
 
-        If MstrMenuProsesRequest = "Y" Then
+        If MstrMenuProsesRequest = "1" Then
             MenuUtama.ProsesToolStripMenuItem.Visible = True
         Else
             MenuUtama.ProsesToolStripMenuItem.Visible = False
         End If
 
 
-        If MstrMenuFormPeminjamanAsset = "Y" Then
+        If MstrMenuFormPeminjamanAsset = "1" Then
             MenuUtama.FormPeminjamanAsetToolStripMenuItem.Visible = True
         Else
             MenuUtama.FormPeminjamanAsetToolStripMenuItem.Visible = False
         End If
 
 
-        If MstrMenuMonitoringPeminjamanAsset = "Y" Then
+        If MstrMenuMonitoringPeminjamanAsset = "1" Then
             MenuUtama.PeminjamanAssetToolStripMenuItem.Visible = True
         Else
             MenuUtama.PeminjamanAssetToolStripMenuItem.Visible = False
         End If
 
+
+        If MstrCmdMonitorMyRequest = "1" Then
+            MenuUtama.cmdMonitorMyRequest.Visible = True
+        Else
+            MenuUtama.cmdMonitorMyRequest.Visible = False
+        End If
+
+
+
+    End Sub
+
+
+
+    Sub LoadTemplateSurat()
+
+        On Error GoTo ErrorLoad
+        Call KoneksiDatabase1()
+
+
+
+
+        If MstrJenisDokumen = "G001" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='G001' AND StatusEnabled='1'"
+        End If
+
+
+        If MstrJenisDokumen = "G002" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='G002' AND StatusEnabled='1'"
+        End If
+
+
+        If MstrJenisDokumen = "G003" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='G003' AND StatusEnabled='1'"
+        End If
+
+
+        If MstrJenisDokumen = "G004" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='G004' AND StatusEnabled='1'"
+        End If
+
+
+        If MstrJenisDokumen = "G005" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='G005' AND StatusEnabled='1'"
+        End If
+
+
+
+
+        If MstrJenisDokumen = "GA001" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='GA001' AND StatusEnabled='1'"
+        End If
+
+        If MstrJenisDokumen = "GA002" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='GA002' AND StatusEnabled='1'"
+        End If
+
+
+        If MstrJenisDokumen = "GA003" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='GA003' AND StatusEnabled='1'"
+        End If
+
+
+        If MstrJenisDokumen = "GA004" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='GA004' AND StatusEnabled='1'"
+        End If
+
+        If MstrJenisDokumen = "GA005" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='GA005' AND StatusEnabled='1'"
+        End If
+
+
+
+
+
+        If MstrJenisDokumen = "IT001" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT001' AND StatusEnabled='1'"
+        End If
+
+        If MstrJenisDokumen = "IT002" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT002' AND StatusEnabled='1'"
+        End If
+
+
+        If MstrJenisDokumen = "IT003" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT003' AND StatusEnabled='1'"
+        End If
+
+        If MstrJenisDokumen = "IT004" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT004' AND StatusEnabled='1'"
+        End If
+
+
+        If MstrJenisDokumen = "IT005" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT005' AND StatusEnabled='1'"
+        End If
+
+
+        If MstrJenisDokumen = "IT006" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT006' AND StatusEnabled='1'"
+        End If
+
+
+
+        If MstrJenisDokumen = "IT007" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT007' AND StatusEnabled='1'"
+        End If
+
+
+        If MstrJenisDokumen = "IT008" Then
+            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT008' AND StatusEnabled='1'"
+        End If
+
+
+        cmd = New SqlCommand(strSQlLogin, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            MstrPathReport = dr.GetString(0)
+            FormTampilkanCetakan.Show()
+            dr.Close()
+
+        Else
+
+            MsgBox("Template Belum Ada " & vbCrLf & "Silahkan Masukan Template di Menu Setting - Template - My Template ", vbInformation, "Hubungi Administrator")
+            dr.Close()
+            Exit Sub
+        End If
+
+        Exit Sub
+
+ErrorLoad:
+        MsgBox(Err.Description)
+        Exit Sub
+
+    End Sub
+
+
+
+
+    Sub LoadFormDetailMyRequest()
+        If MstrJenisDokumen = "IT003" Then
+            FormDetaiMyRequestValidasi.ShowDialog()
+        End If
+
+        If MstrJenisDokumen = "IT004" Then
+            FormDetaiMyRequestCloseCancelDocument.ShowDialog()
+        End If
+
+        If MstrJenisDokumen = "IT005" Then
+            FormDetaiMyRequestCloseAndOpenPostingPeriode.ShowDialog()
+        End If
+
+        If MstrJenisDokumen = "IT006" Then
+            FormDetailPeminjamanSaya.ShowDialog()
+        End If
+
+    End Sub
+
+
+
+
+    Sub LoadFormDetailApprovalRequest()
+        If MstrJenisDokumen = "IT003" Then
+            FormApprovalDetaiMyRequestValidasi.ShowDialog()
+        End If
+
+        If MstrJenisDokumen = "IT004" Then
+            FormApprovalDetaiMyRequestCloseCancelDocument.ShowDialog()
+        End If
+
+
+        If MstrJenisDokumen = "IT005" Then
+            FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.ShowDialog()
+        End If
+
+
+        If MstrJenisDokumen = "IT006" Then
+            FormDetailPeminjamanSaya.ShowDialog()
+        End If
+
+
+    End Sub
+
+
+
+    Sub LoadFormDetailProsesRequest()
+        If MstrJenisDokumen = "IT003" Then
+            FormProsesRequestValidasi.ShowDialog()
+        End If
+
+        If MstrJenisDokumen = "IT004" Then
+            FormProsesCloseAndCancelDocuments.ShowDialog()
+        End If
+
+
+        If MstrJenisDokumen = "IT005" Then
+            FormProsesClosingAndOpenPeriode.ShowDialog()
+        End If
+
+
+        If MstrJenisDokumen = "IT006" Then
+            FormProsesPeminjamanAsset.ShowDialog()
+        End If
 
 
     End Sub
@@ -429,7 +701,6 @@ ErrorLoad:
         MenuUtama.dgSuratSaya.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
         MenuUtama.dgSuratSaya.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
         MenuUtama.dgSuratSaya.AutoResizeColumns()
-
     End Sub
 
 

@@ -83,7 +83,7 @@ Public Class MenuUtama
     End Sub
 
     Private Sub DaftarRequestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarRequestToolStripMenuItem.Click
-        FormMonitoringUserRequest.ShowDialog()
+        FormMonitoringApprovalUserRequest.ShowDialog()
     End Sub
 
     Private Sub RequestToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles RequestToolStripMenuItem2.Click
@@ -98,25 +98,9 @@ Public Class MenuUtama
         If dgSuratSaya.RowCount = 0 Then Exit Sub
 
         MstrNoSurat = dgSuratSaya.Item(0, dgSuratSaya.CurrentRow.Index).Value
+        MstrJenisDokumen = dgSuratSaya.Item(7, dgSuratSaya.CurrentRow.Index).Value
 
-        Call KoneksiDatabase1()
-        Dim strSQlLogin As String
-
-        strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='" & dgSuratSaya.Item(7, dgSuratSaya.CurrentRow.Index).Value & "' AND StatusEnabled='Y'"
-        cmd = New SqlCommand(strSQlLogin, Koneksi1)
-        dr = cmd.ExecuteReader
-        dr.Read()
-        If dr.HasRows = True Then
-            MstrPathReport = dr.GetString(0)
-            FormTampilkanCetakan.Show()
-            dr.Close()
-
-        Else
-
-            MsgBox("Template Tidak Ada!!!", vbInformation, "Hubungi Administrator")
-            dr.Close()
-            Exit Sub
-        End If
+        LoadTemplateSurat()
 
         Exit Sub
 
@@ -265,7 +249,7 @@ ErrorLoad:
         Call KoneksiDatabase1()
 
 
-        Dim cmd As New SqlCommand("SELECT DISTINCT NomorSurat,DibuatOleh,TanggalSurat,JenisSurat,Perihal,Penerima,Attachment,KdJenisSurat,KdUser FROM V_DaftarSuratUser Where KdDivisi='" & Trim(GlobalstrKodeDivisi) & "'", Koneksi1)
+        Dim cmd As New SqlCommand("SELECT DISTINCT NomorSurat,DibuatOleh,TanggalSurat,JenisSurat,Perihal,Penerima,Attachment,KdJenisSurat,KdUser FROM V_DaftarSuratUser Where KdDivisi='" & Trim(MstrKodeDivisi) & "'", Koneksi1)
 
         cmd.CommandTimeout = 0
 
@@ -410,4 +394,14 @@ ErrorLoad:
     Private Sub ChangeLogToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeLogToolStripMenuItem.Click
         FormChangelog.ShowDialog()
     End Sub
+
+    Private Sub cmdMonitorMyRequest_Click(sender As Object, e As EventArgs) Handles cmdMonitorMyRequest.Click
+        FormMonitoringMyRequest.ShowDialog()
+    End Sub
+
+    Private Sub cmdAnyarChat_Click(sender As Object, e As EventArgs) Handles cmdAnyarChat.Click
+        FormAnyarChat.Show()
+    End Sub
+
+
 End Class

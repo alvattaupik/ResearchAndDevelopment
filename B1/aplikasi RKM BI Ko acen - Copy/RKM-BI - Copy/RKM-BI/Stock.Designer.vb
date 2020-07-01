@@ -25,6 +25,8 @@ Partial Class Stock
         Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CopyTableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.r1 = New System.Windows.Forms.Label()
@@ -61,13 +63,11 @@ Partial Class Stock
         Me.Label16 = New System.Windows.Forms.Label()
         Me.r10 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.CopyTableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -94,6 +94,18 @@ Partial Class Stock
         Me.DataGridView1.RowHeadersWidth = 10
         Me.DataGridView1.Size = New System.Drawing.Size(992, 323)
         Me.DataGridView1.TabIndex = 3
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyTableToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(133, 26)
+        '
+        'CopyTableToolStripMenuItem
+        '
+        Me.CopyTableToolStripMenuItem.Name = "CopyTableToolStripMenuItem"
+        Me.CopyTableToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.CopyTableToolStripMenuItem.Text = "Copy Table"
         '
         'TextBox1
         '
@@ -469,24 +481,12 @@ Partial Class Stock
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Image = Global.RKM_BI.My.Resources.Resources.loading__1_
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 40)
+        Me.PictureBox1.Location = New System.Drawing.Point(115, 132)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(1031, 497)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 42
         Me.PictureBox1.TabStop = False
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyTableToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 48)
-        '
-        'CopyTableToolStripMenuItem
-        '
-        Me.CopyTableToolStripMenuItem.Name = "CopyTableToolStripMenuItem"
-        Me.CopyTableToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.CopyTableToolStripMenuItem.Text = "Copy Table"
         '
         'Stock
         '
@@ -536,9 +536,9 @@ Partial Class Stock
         Me.Text = "Stock"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -112,10 +112,10 @@ Public Class FormItemsBAPPenyelesaian
             If JumlahDuplikat > 0 Then
                 Exit Sub
             Else
-                FormBuatBeritaAcaraPenyelesaian.dgItem.Rows.Add(row2)
-                FormBuatBeritaAcaraPenyelesaian.dgItem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-                FormBuatBeritaAcaraPenyelesaian.dgItem.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
-                FormBuatBeritaAcaraPenyelesaian.dgItem.AutoResizeColumns()
+                'FormBuatBeritaAcaraPenyelesaian.dgItem.Rows.Add(row2)
+                'FormBuatBeritaAcaraPenyelesaian.dgItem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+                'FormBuatBeritaAcaraPenyelesaian.dgItem.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+                'FormBuatBeritaAcaraPenyelesaian.dgItem.AutoResizeColumns()
                 Me.Close()
             End If
         Next

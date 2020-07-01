@@ -14,9 +14,19 @@ Public Class frmMonitoring
             Exit Sub
         End If
 
-        GetLoginSetting()
 
-            LoadComboDaftarDB()
+
+
+        GetLoginSetting()
+        LoadComboDaftarDB()
+
+        strNamaDatabase2 = cmbListDB.Text
+
+        With My.Settings
+            .DatabaseName = strNamaDatabase2
+            .Save()
+        End With
+
     End Sub
 
     Private Sub LoadComboDaftarDB()
@@ -155,4 +165,5 @@ Public Class frmMonitoring
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
 
     End Sub
+
 End Class

@@ -331,31 +331,17 @@ ErrorLoad:
         On Error GoTo ErrorLoad
 
 
+      On Error GoTo ErrorLoad
+
+
         If txtNoSurat.Text = "" Then
             MsgBox("Tidak Ada Surat Yang Akan Dicetak", vbInformation, "Hah Kosong?")
         Else
 
             MstrNoSurat = txtNoSurat.Text
+            MstrJenisDokumen = LblkdJenisSurat.Text
+            LoadTemplateSurat()
 
-            Call KoneksiDatabase1()
-            Dim strSQlLogin As String
-
-            strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='" & LblkdJenisSurat.Text & "' AND StatusEnabled='Y'"
-            cmd = New SqlCommand(strSQlLogin, Koneksi1)
-            dr = cmd.ExecuteReader
-            dr.Read()
-            If dr.HasRows = True Then
-                MstrPathReport = dr.GetString(0)
-                FormTampilkanCetakan.Show()
-                dr.Close()
-            Else
-
-                MsgBox("Template Tidak Ada!!!", vbInformation, "Hubungi Administrator")
-                dr.Close()
-                Exit Sub
-            End If
-
-            Exit Sub
         End If
         Exit Sub
 

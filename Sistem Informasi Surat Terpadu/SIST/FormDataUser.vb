@@ -327,6 +327,7 @@ ErrorLoad:
         cmd.Parameters.AddWithValue("Username", Trim(txtusername.Text))
         cmd.Parameters.AddWithValue("Password", Trim(txtPassword.Text))
         cmd.Parameters.AddWithValue("StatusEnabled", Trim(chkAktif.CheckState))
+        cmd.Parameters.AddWithValue("StatusEnabled", Trim("SISTER"))
         cmd.Parameters.AddWithValue("StatusSP", Trim(strStatusSp))
 
         If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()

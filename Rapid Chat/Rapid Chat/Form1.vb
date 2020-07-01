@@ -1,7 +1,7 @@
 ﻿'This Program is not copyrighted in any way. This code is freely distributable.
 'Some of the code for this Application has been provided from various sources.
 'Created By Andrew Courtice
-
+Imports System.Data.SqlClient
 Imports System.Net.Sockets
 Imports System.Threading
 Imports System.IO
@@ -200,7 +200,7 @@ Public Class Form1
             MessageBox.Show("Please Enter a Valid Address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             btnConnect.Text = "Connecting"
-            Dim pingresult As String = My.Computer.Network.Ping(cmbAddress.Text)
+            Dim pingresult As String = My.Computer.Network.Ping(cmbAddress.SelectedValue)
             If pingresult = "True" Then
                 btnConnect.Text = "Connected"
             Else
@@ -210,8 +210,34 @@ Public Class Form1
        
     End Sub
 
+    Private Sub cmbAddress_Click(sender As Object, e As EventArgs) Handles cmbAddress.Click
+        LoadComboListIP()
+    End Sub
+
     Private Sub cmbAddress_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbAddress.TextChanged
         btnConnect.Text = "Connect..."
+    End Sub
+
+
+
+    Sub LoadComboListIP()
+        Dim ds As New DataSet()
+        Dim adapter As New SqlDataAdapter()
+
+        Try
+            KoneksiDatabase1()
+            cmd = New SqlCommand("SELECT IPAddress,NamaComputer FROM dbo.ListKomputerRKM", Koneksi1)
+            adapter.SelectCommand = cmd
+            adapter.Fill(ds)
+            adapter.Dispose()
+            cmd.Dispose()
+            Koneksi1.Close()
+            cmbAddress.DataSource = ds.Tables(0)
+            cmbAddress.ValueMember = "IPAddress"
+            cmbAddress.DisplayMember = "NamaComputer"
+        Catch ex As Exception
+            MessageBox.Show("Can not open connection ! ")
+        End Try
     End Sub
 
 
@@ -461,5 +487,9 @@ Public Class Form1
    
     Private Sub AboutRapidChatToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutRapidChatToolStripMenuItem.Click
         Process.Start(My.Application.Info.DirectoryPath & "\About Rapid Chat\About Rapid Chat.exe")
+    End Sub
+
+    Private Sub AddToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem.Click
+        frmNewAddress.ShowDialog()
     End Sub
 End Class

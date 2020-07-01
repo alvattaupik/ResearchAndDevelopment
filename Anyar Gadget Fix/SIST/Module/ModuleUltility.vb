@@ -17,261 +17,582 @@ Module ModuleUltility
     End Sub
 
 
+
+    Public Sub ShowLocation(frm As Form)
+
+        Dim p As Point
+        p = frm.Location
+
+        MenuUtama.lblMousePosition.Text = "Form Position : " & "X : " & p.X & "  Y : " & p.Y
+        MenuUtama.lblFormSize.Text = " Form Size Width: " & frm.Width.ToString & " Height:" & frm.Height.ToString
+    End Sub
+
+
+
+
+
+    Sub LoadComboBoxDBEMAIL(cmb As ComboBox, strSQL As String, strValue As String, strMember As String)
+        Dim ds As New DataSet()
+        Dim adapter As New SqlDataAdapter()
+
+        Try
+            KoneksiDatabase1()
+            cmd = New SqlCommand(strSQL, Koneksi1)
+            adapter.SelectCommand = cmd
+            adapter.Fill(ds)
+            adapter.Dispose()
+            cmd.Dispose()
+            Koneksi1.Close()
+            cmb.DataSource = ds.Tables(0)
+            cmb.ValueMember = strValue
+            cmb.DisplayMember = strMember
+        Catch ex As Exception
+            MessageBox.Show("Can not open connection ! ")
+        End Try
+
+    End Sub
+
+
+    Sub LoadComboBoxDBLive(cmb As ComboBox, strSQL As String, strValue As String, strMember As String)
+        Dim ds As New DataSet()
+        Dim adapter As New SqlDataAdapter()
+
+        Try
+            KoneksiDatabase2()
+            cmd = New SqlCommand(strSQL, Koneksi2)
+            adapter.SelectCommand = cmd
+            adapter.Fill(ds)
+            adapter.Dispose()
+            cmd.Dispose()
+            Koneksi1.Close()
+            cmb.DataSource = ds.Tables(0)
+            cmb.ValueMember = strValue
+            cmb.DisplayMember = strMember
+        Catch ex As Exception
+            MessageBox.Show("Can not open connection ! ")
+        End Try
+
+    End Sub
+
+
+
+
+
     Sub MsubPesanError()
         MsgBox("Kesalahan :" & Err.Description, vbCritical, "Silahkan Hubungi IT - Department")
     End Sub
 
 
     Sub GetKontrolObjek()
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Surat001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='File001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
         cmd = New SqlCommand(strSQL, Koneksi1)
         dr = cmd.ExecuteReader
         dr.Read()
         If dr.HasRows = True Then
-            MstrMenuSuratJalan = dr.GetString(0)
+            MstrMenuLogout = dr.GetString(0)
+
+            If MstrMenuLogout = "1" Then
+                MenuUtama.LogoutToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.LogoutToolStripMenuItem.Visible = False
+            End If
+
+
             dr.Close()
         Else
+            MenuUtama.LogoutToolStripMenuItem.Visible = False
             dr.Close()
         End If
 
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Surat002' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='File002' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
         cmd = New SqlCommand(strSQL, Koneksi1)
         dr = cmd.ExecuteReader
         dr.Read()
         If dr.HasRows = True Then
-            MstrMenuSuratTerima = dr.GetString(0)
+            MstrMenuShutdown = dr.GetString(0)
+
+
+            If MstrMenuShutdown = "1" Then
+                MenuUtama.ShutDownAppsToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.ShutDownAppsToolStripMenuItem.Visible = False
+            End If
+
+
             dr.Close()
         Else
+
+            MenuUtama.ShutDownAppsToolStripMenuItem.Visible = False
+
             dr.Close()
         End If
 
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Surat003' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Gadget001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
         cmd = New SqlCommand(strSQL, Koneksi1)
         dr = cmd.ExecuteReader
         dr.Read()
         If dr.HasRows = True Then
-            MstrMenuSuratTugas = dr.GetString(0)
+            MstrMenuMonitoringRealstok = dr.GetString(0)
+
+
+            If MstrMenuMonitoringRealstok = "1" Then
+                MenuUtama.MonitoringRealstokToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.MonitoringRealstokToolStripMenuItem.Visible = False
+            End If
+
+
             dr.Close()
         Else
+            MenuUtama.MonitoringRealstokToolStripMenuItem.Visible = False
             dr.Close()
         End If
 
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Surat004' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Gadget002' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
         cmd = New SqlCommand(strSQL, Koneksi1)
         dr = cmd.ExecuteReader
         dr.Read()
         If dr.HasRows = True Then
-            MstrMenuSuratPengajuanBiaya = dr.GetString(0)
+            MstrMenuDelivery = dr.GetString(0)
+
+            If MstrMenuDelivery = "1" Then
+                MenuUtama.MonitoringDeliveryToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.MonitoringDeliveryToolStripMenuItem.Visible = False
+            End If
+
             dr.Close()
         Else
-            dr.Close()
-        End If
-
-
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='BA001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
-        cmd = New SqlCommand(strSQL, Koneksi1)
-        dr = cmd.ExecuteReader
-        dr.Read()
-        If dr.HasRows = True Then
-            MstrMenuBAPPenyelesaian = dr.GetString(0)
-            dr.Close()
-        Else
-            dr.Close()
-        End If
-
-
-
-
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='BA002' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
-        cmd = New SqlCommand(strSQL, Koneksi1)
-        dr = cmd.ExecuteReader
-        dr.Read()
-        If dr.HasRows = True Then
-            MstrMenuBAPSerahTerima = dr.GetString(0)
-            dr.Close()
-        Else
-            dr.Close()
-        End If
-
-
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Req001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
-        cmd = New SqlCommand(strSQL, Koneksi1)
-        dr = cmd.ExecuteReader
-        dr.Read()
-        If dr.HasRows = True Then
-            MstrMenuFormValidasi = dr.GetString(0)
-            dr.Close()
-        Else
-            dr.Close()
-        End If
-
-
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Req002' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
-        cmd = New SqlCommand(strSQL, Koneksi1)
-        dr = cmd.ExecuteReader
-        dr.Read()
-        If dr.HasRows = True Then
-            MstrMenuFormCancelDanClose = dr.GetString(0)
-            dr.Close()
-        Else
+            MenuUtama.MonitoringDeliveryToolStripMenuItem.Visible = False
             dr.Close()
         End If
 
 
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Req003' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Gadget003' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
         cmd = New SqlCommand(strSQL, Koneksi1)
         dr = cmd.ExecuteReader
         dr.Read()
         If dr.HasRows = True Then
-            MstrMenuFormOpenDanClose = dr.GetString(0)
+            MstrMenuAnyarLocalPrint = dr.GetString(0)
+
+
+            If MstrMenuAnyarLocalPrint = "1" Then
+                MenuUtama.AnyarLocalPrintToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.AnyarLocalPrintToolStripMenuItem.Visible = False
+            End If
+
+
             dr.Close()
         Else
+            MenuUtama.AnyarLocalPrintToolStripMenuItem.Visible = False
             dr.Close()
-        End If
-
-
-
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Mon001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
-        cmd = New SqlCommand(strSQL, Koneksi1)
-        dr = cmd.ExecuteReader
-        dr.Read()
-        If dr.HasRows = True Then
-            MstrMenuMonitoringMyRequest = dr.GetString(0)
-            dr.Close()
-        Else
-            dr.Close()
-            Exit Sub
-        End If
-
-
-
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Aprv001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
-        cmd = New SqlCommand(strSQL, Koneksi1)
-        dr = cmd.ExecuteReader
-        dr.Read()
-        If dr.HasRows = True Then
-            MstrMenuApprovalRequest = dr.GetString(0)
-            dr.Close()
-        Else
-            dr.Close()
-            Exit Sub
         End If
 
 
 
 
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Proc001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Gadget004' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
         cmd = New SqlCommand(strSQL, Koneksi1)
         dr = cmd.ExecuteReader
         dr.Read()
         If dr.HasRows = True Then
-            MstrMenuProsesRequest = dr.GetString(0)
+            MstrMenuRKMDisplayTag = dr.GetString(0)
+
+
+            If MstrMenuRKMDisplayTag = "1" Then
+                MenuUtama.RKMDisplayTagToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.RKMDisplayTagToolStripMenuItem.Visible = False
+            End If
+
+
             dr.Close()
         Else
+            MenuUtama.RKMDisplayTagToolStripMenuItem.Visible = False
             dr.Close()
-            Exit Sub
         End If
 
 
-
-
-
-
-
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Set001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Gadget005' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
         cmd = New SqlCommand(strSQL, Koneksi1)
         dr = cmd.ExecuteReader
         dr.Read()
         If dr.HasRows = True Then
-            MstrMenuMyTemplate = dr.GetString(0)
+            MstrMenuExportHargaJual = dr.GetString(0)
+
+            If MstrMenuExportHargaJual = "1" Then
+                MenuUtama.ExportHargaJualToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.ExportHargaJualToolStripMenuItem.Visible = False
+            End If
+
+
+
             dr.Close()
         Else
+            MenuUtama.ExportHargaJualToolStripMenuItem.Visible = False
             dr.Close()
-            Exit Sub
         End If
 
 
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Set002' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Gadget006' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
         cmd = New SqlCommand(strSQL, Koneksi1)
         dr = cmd.ExecuteReader
         dr.Read()
         If dr.HasRows = True Then
-            MstrMenuMasterValidasi = dr.GetString(0)
+            MstrMenuPing = dr.GetString(0)
+
+
+            If MstrMenuPing = "1" Then
+                MenuUtama.ShowMyIPToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.ShowMyIPToolStripMenuItem.Visible = False
+            End If
+
+
             dr.Close()
         Else
+            MenuUtama.ShowMyIPToolStripMenuItem.Visible = False
             dr.Close()
-            Exit Sub
         End If
 
 
-
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Set003' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
-        cmd = New SqlCommand(strSQL, Koneksi1)
-        dr = cmd.ExecuteReader
-        dr.Read()
-        If dr.HasRows = True Then
-            MstrMenuUserLogindanHakAkses = dr.GetString(0)
-            dr.Close()
-        Else
-            dr.Close()
-            Exit Sub
-        End If
-
-
-
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Set004' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
-        cmd = New SqlCommand(strSQL, Koneksi1)
-        dr = cmd.ExecuteReader
-        dr.Read()
-        If dr.HasRows = True Then
-            MstrMenuUbahPassword = dr.GetString(0)
-            dr.Close()
-        Else
-            dr.Close()
-            Exit Sub
-        End If
-
-
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Set005' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
-        cmd = New SqlCommand(strSQL, Koneksi1)
-        dr = cmd.ExecuteReader
-        dr.Read()
-        If dr.HasRows = True Then
-            MstrMenuAllUsersTemplate = dr.GetString(0)
-            dr.Close()
-        Else
-            dr.Close()
-            Exit Sub
-        End If
-
-
-
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Req004' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Gadget009' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
         cmd = New SqlCommand(strSQL, Koneksi1)
         dr = cmd.ExecuteReader
         dr.Read()
         If dr.HasRows = True Then
             MstrMenuFormPeminjamanAsset = dr.GetString(0)
+
+            If MstrMenuFormPeminjamanAsset = "1" Then
+                MenuUtama.FormPeminjamanAssetToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.FormPeminjamanAssetToolStripMenuItem.Visible = False
+            End If
+
+
             dr.Close()
         Else
+            MenuUtama.FormPeminjamanAssetToolStripMenuItem.Visible = False
             dr.Close()
             Exit Sub
         End If
 
 
 
-        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAplikasi WHERE KodeObject='Mon002' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Gadget010' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
         cmd = New SqlCommand(strSQL, Koneksi1)
         dr = cmd.ExecuteReader
         dr.Read()
         If dr.HasRows = True Then
-            MstrMenuMonitoringPeminjamanAsset = dr.GetString(0)
+            MstrMenuFormBukaValidasi = dr.GetString(0)
+
+            If MstrMenuFormBukaValidasi = "1" Then
+                MenuUtama.FormBukaValidasiToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.FormBukaValidasiToolStripMenuItem.Visible = False
+            End If
+
+
             dr.Close()
         Else
+
+            MenuUtama.FormBukaValidasiToolStripMenuItem.Visible = False
             dr.Close()
             Exit Sub
         End If
 
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Gadget011' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+            MstrMenuFormBukaPostingPeriode = dr.GetString(0)
+
+
+            If MstrMenuFormBukaPostingPeriode = "1" Then
+                MenuUtama.FormBukaPostingPeriodeToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.FormBukaPostingPeriodeToolStripMenuItem.Visible = False
+            End If
+
+            dr.Close()
+        Else
+
+            MenuUtama.FormBukaPostingPeriodeToolStripMenuItem.Visible = False
+            dr.Close()
+            Exit Sub
+        End If
+
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Gadget012' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+            MstrMenuFormRequestUmum = dr.GetString(0)
+
+
+            If MstrMenuFormRequestUmum = "1" Then
+                MenuUtama.FormRequestUmumToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.FormRequestUmumToolStripMenuItem.Visible = False
+            End If
+
+            dr.Close()
+        Else
+            MenuUtama.FormRequestUmumToolStripMenuItem.Visible = False
+            dr.Close()
+            Exit Sub
+        End If
+
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Gadget013' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+            MstrMenuAnyarDirectory = dr.GetString(0)
+
+            If MstrMenuAnyarDirectory = "1" Then
+                MenuUtama.AnyarDirectoryToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.AnyarDirectoryToolStripMenuItem.Visible = False
+            End If
+
+
+            dr.Close()
+        Else
+            MenuUtama.AnyarDirectoryToolStripMenuItem.Visible = False
+            dr.Close()
+            Exit Sub
+        End If
+
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Gadget014' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+            MstrMenuIntegrationMonitor = dr.GetString(0)
+
+
+            If MstrMenuIntegrationMonitor = "1" Then
+                MenuUtama.IntegrationMonitoringToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.IntegrationMonitoringToolStripMenuItem.Visible = False
+            End If
+
+
+            dr.Close()
+        Else
+
+            MenuUtama.IntegrationMonitoringToolStripMenuItem.Visible = False
+            dr.Close()
+            Exit Sub
+        End If
+
+
+
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Gadget007' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+            MstrMenuAnyarChat = dr.GetString(0)
+
+
+            If MstrMenuAnyarChat = "1" Then
+                MenuUtama.AnyarChatToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.AnyarChatToolStripMenuItem.Visible = False
+            End If
+
+
+            dr.Close()
+        Else
+
+            MenuUtama.AnyarChatToolStripMenuItem.Visible = False
+            dr.Close()
+            Exit Sub
+        End If
+
+
+
+
+
+
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Sett001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+            MstrMenuTemplateAnyarLocalPrint = dr.GetString(0)
+
+            If MstrMenuTemplateAnyarLocalPrint = "1" Then
+                MenuUtama.AnyarLocalPrintServicesTemplateToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.AnyarLocalPrintServicesTemplateToolStripMenuItem.Visible = False
+            End If
+
+
+            dr.Close()
+        Else
+            MenuUtama.AnyarLocalPrintServicesTemplateToolStripMenuItem.Visible = False
+            dr.Close()
+            Exit Sub
+        End If
+
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Sett002' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+            MstrMenuFotoProfile = dr.GetString(0)
+
+
+            If MstrMenuFotoProfile = "1" Then
+                MenuUtama.FotoProfileToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.FotoProfileToolStripMenuItem.Visible = False
+            End If
+
+            dr.Close()
+        Else
+            MenuUtama.FotoProfileToolStripMenuItem.Visible = False
+            dr.Close()
+            Exit Sub
+        End If
+
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Sett003' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+            MstrMenuPushNotifications = dr.GetString(0)
+
+            If MstrMenuPushNotifications = "1" Then
+                MenuUtama.PushNotificationsToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.PushNotificationsToolStripMenuItem.Visible = False
+            End If
+
+            dr.Close()
+        Else
+            MenuUtama.PushNotificationsToolStripMenuItem.Visible = False
+            dr.Close()
+            Exit Sub
+        End If
+
+
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Sett004' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+            MstrMenuSettingUserLogin = dr.GetString(0)
+
+            If MstrMenuSettingUserLogin = "1" Then
+                MenuUtama.UserLoginDanHakAksesToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.UserLoginDanHakAksesToolStripMenuItem.Visible = False
+            End If
+
+            dr.Close()
+        Else
+            MenuUtama.UserLoginDanHakAksesToolStripMenuItem.Visible = False
+            dr.Close()
+            Exit Sub
+        End If
+
+
+
+
+
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Support001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+            MstrMenuDaftarbantuanDanMasalah = dr.GetString(0)
+
+            If MstrMenuDaftarbantuanDanMasalah = "1" Then
+                MenuUtama.DaftarBantuanDanPermasalahanToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.DaftarBantuanDanPermasalahanToolStripMenuItem.Visible = False
+            End If
+
+
+            dr.Close()
+        Else
+            MenuUtama.DaftarBantuanDanPermasalahanToolStripMenuItem.Visible = False
+            dr.Close()
+            Exit Sub
+        End If
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='CL001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+            MstrMenuVersiSaatIni = dr.GetString(0)
+
+            If MstrMenuVersiSaatIni = "1" Then
+                MenuUtama.ChangeLogToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.ChangeLogToolStripMenuItem.Visible = False
+            End If
+
+
+            dr.Close()
+        Else
+
+            MenuUtama.ChangeLogToolStripMenuItem.Visible = False
+            dr.Close()
+            Exit Sub
+        End If
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Support002' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+            MstrMenuLaporkanmasalah = dr.GetString(0)
+
+            If MstrMenuLaporkanmasalah = "1" Then
+                MenuUtama.LaporkanMasalahToolStripMenuItem.Visible = True
+            Else
+                MenuUtama.LaporkanMasalahToolStripMenuItem.Visible = False
+            End If
+
+
+            dr.Close()
+        Else
+            MenuUtama.LaporkanMasalahToolStripMenuItem.Visible = False
+            dr.Close()
+            Exit Sub
+        End If
 
 
         Exit Sub
@@ -282,143 +603,7 @@ ErrorLoad:
     End Sub
 
 
-    Public Sub SetKontrolObject()
-
-        'If MstrMenuSuratJalan = "Y" Then
-        '    MenuUtama.SuratJalanToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.SuratJalanToolStripMenuItem.Visible = False
-        'End If
-
-
-        'If MstrMenuSuratTerima = "Y" Then
-        '    MenuUtama.SuratTerimaToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.SuratTerimaToolStripMenuItem.Visible = False
-        'End If
-
-        'If MstrMenuSuratTugas = "Y" Then
-        '    MenuUtama.SuratTugasToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.SuratTugasToolStripMenuItem.Visible = False
-        'End If
-
-        'If MstrMenuSuratPengajuanBiaya = "Y" Then
-        '    MenuUtama.SuratPengajuanBiayaPerjalananToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.SuratPengajuanBiayaPerjalananToolStripMenuItem.Visible = False
-        'End If
-
-
-
-        'If MstrMenuBAPPenyelesaian = "Y" Then
-        '    MenuUtama.BAPPenyelesaianToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.BAPPenyelesaianToolStripMenuItem.Visible = False
-        'End If
-
-        'If MstrMenuBAPSerahTerima = "Y" Then
-        '    MenuUtama.BAPSerahTerimaToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.BAPSerahTerimaToolStripMenuItem.Visible = False
-        'End If
-
-
-        'If MstrMenuFormValidasi = "Y" Then
-        '    MenuUtama.FormValidasiToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.FormValidasiToolStripMenuItem.Visible = False
-        'End If
-
-        'If MstrMenuFormCancelDanClose = "Y" Then
-        '    MenuUtama.CancelDanCloseDokumenToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.CancelDanCloseDokumenToolStripMenuItem.Visible = False
-        'End If
-
-        'If MstrMenuFormOpenDanClose = "Y" Then
-        '    MenuUtama.OpenDanClosingPeriodeToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.OpenDanClosingPeriodeToolStripMenuItem.Visible = False
-        'End If
-
-
-        'If MstrMenuMyTemplate = "Y" Then
-        '    MenuUtama.MyTemplateToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.MyTemplateToolStripMenuItem.Visible = False
-        'End If
-
-
-        'If MstrMenuAllUsersTemplate = "Y" Then
-        '    MenuUtama.AllUsersTemplateToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.AllUsersTemplateToolStripMenuItem.Visible = False
-        'End If
-
-
-
-
-        'If MstrMenuMasterValidasi = "Y" Then
-        '    MenuUtama.JenisValidasiToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.JenisValidasiToolStripMenuItem.Visible = False
-        'End If
-
-
-        'If MstrMenuUserLogindanHakAkses = "Y" Then
-        '    MenuUtama.DataUserToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.DataUserToolStripMenuItem.Visible = False
-        'End If
-
-
-        'If MstrMenuUbahPassword = "Y" Then
-        '    MenuUtama.UbahPasswordToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.UbahPasswordToolStripMenuItem.Visible = False
-        'End If
-
-
-        'If MstrMenuMonitoringMyRequest = "Y" Then
-        '    MenuUtama.MonitoringToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.MonitoringToolStripMenuItem.Visible = False
-        'End If
-
-
-        'If MstrMenuApprovalRequest = "Y" Then
-        '    MenuUtama.ApprovalToolStripMenuItem.Visible = True
-        '    MenuUtama.DaftarRequestToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.ApprovalToolStripMenuItem.Visible = False
-        '    MenuUtama.DaftarRequestToolStripMenuItem.Visible = False
-        'End If
-
-
-        'If MstrMenuProsesRequest = "Y" Then
-        '    MenuUtama.ProsesToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.ProsesToolStripMenuItem.Visible = False
-        'End If
-
-
-        'If MstrMenuFormPeminjamanAsset = "Y" Then
-        '    MenuUtama.FormPeminjamanAsetToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.FormPeminjamanAsetToolStripMenuItem.Visible = False
-        'End If
-
-
-        'If MstrMenuMonitoringPeminjamanAsset = "Y" Then
-        '    MenuUtama.PeminjamanAssetToolStripMenuItem.Visible = True
-        'Else
-        '    MenuUtama.PeminjamanAssetToolStripMenuItem.Visible = False
-        'End If
-
-
-
-    End Sub
+   
 
 
 
@@ -434,6 +619,53 @@ ErrorLoad:
         'MenuUtama.dgSuratSaya.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
         'MenuUtama.dgSuratSaya.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
         'MenuUtama.dgSuratSaya.AutoResizeColumns()
+
+    End Sub
+
+
+    'Sub getPriceListNumber()
+    '    KoneksiDatabase2()
+    '    strSQlLogin = "SELECT Top 1 ListNum FROM dbo.CustomMessage WHERE KdAplikasi='AG' AND StatusEnabled='1'"
+    '    cmd = New SqlCommand(strSQlLogin, Koneksi1)
+    '    dr = cmd.ExecuteReader
+    '    dr.Read()
+    '    If dr.HasRows = True Then
+
+    '        MsgBox("Penting! " & vbCrLf & "Kategori :" & dr.GetString(2) & vbCrLf & "Pesan :" & dr.GetString(3), vbInformation)
+
+    '        Exit Sub
+    '    Else
+    '        'GoTo Lanjut
+    '    End If
+    'End Sub
+
+
+
+    Sub LoadNotifPerubahanHarga()
+        KoneksiDatabase2()
+        Dim command As SqlCommand
+        command = New SqlCommand("_tmspPerubahanHargaJual", Koneksi2)
+
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        command.Parameters.AddWithValue("@HargaJual", MstrHargaJual)
+        command.Parameters.AddWithValue("@NotifSelect", "Header")
+
+
+        Dim table As New DataTable
+        adapter.Fill(table)
+
+
+        If table.Rows.Count = 0 Then
+            Exit Sub
+        Else
+
+            PerubahanHargaJual.dgListPerubahanHargaJual.DataSource = table
+            PerubahanHargaJual.dgListPerubahanHargaJual.DataSource = table
+            PerubahanHargaJual.dgListPerubahanHargaJual.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+            PerubahanHargaJual.dgListPerubahanHargaJual.AutoResizeColumns()
+            PerubahanHargaJual.dgListPerubahanHargaJual.RowHeadersVisible = False
+        End If
 
     End Sub
 

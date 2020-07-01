@@ -25,11 +25,14 @@ Partial Class FormBuatSuratJalan
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormBuatSuratJalan))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtNoSurat = New System.Windows.Forms.TextBox()
         Me.LblkdJenisSurat = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtPengirim = New Guna.UI.WinForms.GunaTextBox()
+        Me.LblPengirim = New System.Windows.Forms.Label()
         Me.txtAlamatPenerima = New System.Windows.Forms.RichTextBox()
         Me.txtNoTelpPenerima = New Guna.UI.WinForms.GunaTextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -60,8 +63,6 @@ Partial Class FormBuatSuratJalan
         Me.txtSupervisor = New Guna.UI.WinForms.GunaTextBox()
         Me.GunaGradientButton1 = New Guna.UI.WinForms.GunaGradientButton()
         Me.GunaGradientButton2 = New Guna.UI.WinForms.GunaGradientButton()
-        Me.LblPengirim = New System.Windows.Forms.Label()
-        Me.txtPengirim = New Guna.UI.WinForms.GunaTextBox()
         Me.cmbBuatBaru = New Guna.UI.WinForms.GunaGradientButton()
         Me.cmdSimpan = New Guna.UI.WinForms.GunaGradientButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -141,6 +142,31 @@ Partial Class FormBuatSuratJalan
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detail Identitas Penerima"
+        '
+        'txtPengirim
+        '
+        Me.txtPengirim.BaseColor = System.Drawing.Color.White
+        Me.txtPengirim.BorderColor = System.Drawing.Color.Silver
+        Me.txtPengirim.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPengirim.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtPengirim.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPengirim.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtPengirim.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtPengirim.Location = New System.Drawing.Point(96, 108)
+        Me.txtPengirim.Name = "txtPengirim"
+        Me.txtPengirim.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPengirim.Size = New System.Drawing.Size(214, 26)
+        Me.txtPengirim.TabIndex = 49
+        '
+        'LblPengirim
+        '
+        Me.LblPengirim.AutoSize = True
+        Me.LblPengirim.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPengirim.Location = New System.Drawing.Point(5, 110)
+        Me.LblPengirim.Name = "LblPengirim"
+        Me.LblPengirim.Size = New System.Drawing.Size(78, 20)
+        Me.LblPengirim.TabIndex = 48
+        Me.LblPengirim.Text = "Pengirim"
         '
         'txtAlamatPenerima
         '
@@ -613,31 +639,6 @@ Partial Class FormBuatSuratJalan
         Me.GunaGradientButton2.Text = "Setting Template"
         Me.GunaGradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'LblPengirim
-        '
-        Me.LblPengirim.AutoSize = True
-        Me.LblPengirim.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPengirim.Location = New System.Drawing.Point(5, 110)
-        Me.LblPengirim.Name = "LblPengirim"
-        Me.LblPengirim.Size = New System.Drawing.Size(78, 20)
-        Me.LblPengirim.TabIndex = 48
-        Me.LblPengirim.Text = "Pengirim"
-        '
-        'txtPengirim
-        '
-        Me.txtPengirim.BaseColor = System.Drawing.Color.White
-        Me.txtPengirim.BorderColor = System.Drawing.Color.Silver
-        Me.txtPengirim.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtPengirim.FocusedBaseColor = System.Drawing.Color.White
-        Me.txtPengirim.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPengirim.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.txtPengirim.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtPengirim.Location = New System.Drawing.Point(96, 108)
-        Me.txtPengirim.Name = "txtPengirim"
-        Me.txtPengirim.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtPengirim.Size = New System.Drawing.Size(214, 26)
-        Me.txtPengirim.TabIndex = 49
-        '
         'cmbBuatBaru
         '
         Me.cmbBuatBaru.AnimationHoverSpeed = 0.07!
@@ -730,6 +731,7 @@ Partial Class FormBuatSuratJalan
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "FormBuatSuratJalan"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

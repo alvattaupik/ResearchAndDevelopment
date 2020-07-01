@@ -84,8 +84,9 @@
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="Guna.UI">
-      <HintPath>..\..\..\..\Guna.UI-Framework-Lib\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+    <Reference Include="Guna.UI, Version=1.9.0.0, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Guna.UI-Framework-Lib\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -94,6 +95,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -215,18 +217,6 @@
     <Compile Include="FormProsesDetaiMyRequest.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBuatBeritaAcaraSerahTerima.Designer.vb">
-      <DependentUpon>FormBuatBeritaAcaraSerahTerima.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormBuatBeritaAcaraSerahTerima.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormBuatBeritaAcaraPenyelesaian.Designer.vb">
-      <DependentUpon>FormBuatBeritaAcaraPenyelesaian.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormBuatBeritaAcaraPenyelesaian.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormBuatRequestOpenDanClosingPeriode.designer.vb">
       <DependentUpon>FormBuatRequestOpenDanClosingPeriode.vb</DependentUpon>
     </Compile>
@@ -281,22 +271,10 @@
     <Compile Include="FormCariKomponenSAP.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDataUserSAP.designer.vb">
-      <DependentUpon>FormDataUserSAP.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormDataUserSAP.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormDetailHakAkses.designer.vb">
       <DependentUpon>FormDetailHakAkses.vb</DependentUpon>
     </Compile>
     <Compile Include="FormDetailHakAkses.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.designer.vb">
-      <DependentUpon>FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDetaiMyRequestCloseAndOpenPostingPeriode.designer.vb">
@@ -305,22 +283,10 @@
     <Compile Include="FormDetaiMyRequestCloseAndOpenPostingPeriode.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormApprovalDetaiMyRequestCloseCancelDocument.designer.vb">
-      <DependentUpon>FormApprovalDetaiMyRequestCloseCancelDocument.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormApprovalDetaiMyRequestCloseCancelDocument.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormDetaiMyRequestCloseCancelDocument.designer.vb">
       <DependentUpon>FormDetaiMyRequestCloseCancelDocument.vb</DependentUpon>
     </Compile>
     <Compile Include="FormDetaiMyRequestCloseCancelDocument.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormApprovalDetaiMyRequest .designer.vb">
-      <DependentUpon>FormApprovalDetaiMyRequest .vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormApprovalDetaiMyRequest .vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDetaiMyRequest.designer.vb">
@@ -353,6 +319,12 @@
     <Compile Include="FormMonitoringMyRequest.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormSettingMonitoringDatabase.Designer.vb">
+      <DependentUpon>FormSettingMonitoringDatabase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingMonitoringDatabase.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormTemplate.designer.vb">
       <DependentUpon>FormTemplate.vb</DependentUpon>
     </Compile>
@@ -369,12 +341,6 @@
       <DependentUpon>FormTampilkanCetakan.vb</DependentUpon>
     </Compile>
     <Compile Include="FormTampilkanCetakan.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDataUser.designer.vb">
-      <DependentUpon>FormDataUser.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormDataUser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormValidasiPasswordPengembalianAsset.designer.vb">
@@ -395,6 +361,24 @@
     <Compile Include="frmSetting.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Menu\AlertsSetup.Designer.vb">
+      <DependentUpon>AlertsSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\AlertsSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\DetailFailedItegration.Designer.vb">
+      <DependentUpon>DetailFailedItegration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\DetailFailedItegration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\IntegrationMonitoring.Designer.vb">
+      <DependentUpon>IntegrationMonitoring.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\IntegrationMonitoring.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MenuUtama.designer.vb">
       <DependentUpon>MenuUtama.vb</DependentUpon>
     </Compile>
@@ -413,6 +397,24 @@
     <Compile Include="Menu\AnyarRepository.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Menu\ExportHargaJual.Designer.vb">
+      <DependentUpon>ExportHargaJual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\ExportHargaJual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FormAvailableToPromise.Designer.vb">
+      <DependentUpon>FormAvailableToPromise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormAvailableToPromise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FormUserLoginDanHakAkses.designer.vb">
+      <DependentUpon>FormUserLoginDanHakAkses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormUserLoginDanHakAkses.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Menu\MonitoringDelivery.Designer.vb">
       <DependentUpon>MonitoringDelivery.vb</DependentUpon>
     </Compile>
@@ -425,6 +427,12 @@
     <Compile Include="Menu\MonitoringRealStock.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Menu\PerubahanHargaJual.Designer.vb">
+      <DependentUpon>PerubahanHargaJual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\PerubahanHargaJual.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Menu\SideBar.Designer.vb">
       <DependentUpon>SideBar.vb</DependentUpon>
     </Compile>
@@ -435,6 +443,18 @@
     <Compile Include="Module\ModuleKoneksi.vb" />
     <Compile Include="Module\ModuleUltility.vb" />
     <Compile Include="Module\ModuleVariable.vb" />
+    <Compile Include="SettingMenu\FormUserSAP.designer.vb">
+      <DependentUpon>FormUserSAP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SettingMenu\FormUserSAP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingMenu\FormKonfigurasiFormatLaporan.designer.vb">
+      <DependentUpon>FormKonfigurasiFormatLaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SettingMenu\FormKonfigurasiFormatLaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Settings.vb" />
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
@@ -511,12 +531,6 @@
     <EmbeddedResource Include="FormProsesDetaiMyRequest.resx">
       <DependentUpon>FormProsesDetaiMyRequest.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBuatBeritaAcaraSerahTerima.resx">
-      <DependentUpon>FormBuatBeritaAcaraSerahTerima.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormBuatBeritaAcaraPenyelesaian.resx">
-      <DependentUpon>FormBuatBeritaAcaraPenyelesaian.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormBuatRequestOpenDanClosingPeriode.resx">
       <DependentUpon>FormBuatRequestOpenDanClosingPeriode.vb</DependentUpon>
     </EmbeddedResource>
@@ -544,26 +558,14 @@
     <EmbeddedResource Include="FormCariKomponenSAP.resx">
       <DependentUpon>FormCariKomponenSAP.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDataUserSAP.resx">
-      <DependentUpon>FormDataUserSAP.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormDetailHakAkses.resx">
       <DependentUpon>FormDetailHakAkses.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.resx">
-      <DependentUpon>FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetaiMyRequestCloseAndOpenPostingPeriode.resx">
       <DependentUpon>FormDetaiMyRequestCloseAndOpenPostingPeriode.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormApprovalDetaiMyRequestCloseCancelDocument.resx">
-      <DependentUpon>FormApprovalDetaiMyRequestCloseCancelDocument.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormDetaiMyRequestCloseCancelDocument.resx">
       <DependentUpon>FormDetaiMyRequestCloseCancelDocument.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormApprovalDetaiMyRequest .resx">
-      <DependentUpon>FormApprovalDetaiMyRequest .vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetaiMyRequest.resx">
       <DependentUpon>FormDetaiMyRequest.vb</DependentUpon>
@@ -580,6 +582,9 @@
     <EmbeddedResource Include="FormMonitoringMyRequest.resx">
       <DependentUpon>FormMonitoringMyRequest.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingMonitoringDatabase.resx">
+      <DependentUpon>FormSettingMonitoringDatabase.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTemplate.resx">
       <DependentUpon>FormTemplate.vb</DependentUpon>
     </EmbeddedResource>
@@ -588,9 +593,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTampilkanCetakan.resx">
       <DependentUpon>FormTampilkanCetakan.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDataUser.resx">
-      <DependentUpon>FormDataUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormValidasiPasswordPengembalianAsset.resx">
       <DependentUpon>FormValidasiPasswordPengembalianAsset.vb</DependentUpon>
@@ -601,6 +603,15 @@
     <EmbeddedResource Include="frmSetting.resx">
       <DependentUpon>frmSetting.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\AlertsSetup.resx">
+      <DependentUpon>AlertsSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\DetailFailedItegration.resx">
+      <DependentUpon>DetailFailedItegration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\IntegrationMonitoring.resx">
+      <DependentUpon>IntegrationMonitoring.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuUtama.resx">
       <DependentUpon>MenuUtama.vb</DependentUpon>
     </EmbeddedResource>
@@ -610,14 +621,32 @@
     <EmbeddedResource Include="Menu\AnyarRepository.resx">
       <DependentUpon>AnyarRepository.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\ExportHargaJual.resx">
+      <DependentUpon>ExportHargaJual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormAvailableToPromise.resx">
+      <DependentUpon>FormAvailableToPromise.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormUserLoginDanHakAkses.resx">
+      <DependentUpon>FormUserLoginDanHakAkses.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\MonitoringDelivery.resx">
       <DependentUpon>MonitoringDelivery.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\MonitoringRealStock.resx">
       <DependentUpon>MonitoringRealStock.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\PerubahanHargaJual.resx">
+      <DependentUpon>PerubahanHargaJual.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\SideBar.resx">
       <DependentUpon>SideBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingMenu\FormUserSAP.resx">
+      <DependentUpon>FormUserSAP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingMenu\FormKonfigurasiFormatLaporan.resx">
+      <DependentUpon>FormKonfigurasiFormatLaporan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
@@ -953,6 +982,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Custom-Icon-Design-Flatastic-5-Message-already-read.ico" />
+    <None Include="Resources\marketing_monitoring.png" />
+    <None Include="Resources\772409_music_512x5121.png" />
+    <None Include="Resources\772409_music_512x512.png" />
+    <None Include="Resources\performance-icon-png-6.png" />
+    <None Include="Resources\SQl Server.png" />
+    <None Include="Resources\coming-soon-hd-png-download-coming-soon-png-images-transparent-gallery-advertisement-845.png" />
+    <None Include="Resources\60ac66ae2cf6843b28687fc1438614041.png" />
+    <None Include="Resources\60ac66ae2cf6843b28687fc143861404.png" />
+    <None Include="Resources\eye-digital-eye-11562985074yw2swmclxv.png" />
+    <None Include="Resources\163-1632551_machine-integration-and-monitoring-photograph-clipart.png" />
+    <None Include="Resources\ivend-retail.png" />
+    <None Include="Resources\api.png" />
+    <None Include="Resources\Sap-B1-Logo-png.png" />
+    <None Include="Resources\unnamed %281%29.png" />
+    <None Include="Resources\Price-Tag-PNG-Clipart.png" />
+    <None Include="Resources\Available-1.png" />
     <None Include="Resources\repository.png" />
     <None Include="Resources\LOGO ANYAR BULAT.png" />
     <None Include="Resources\Monitoring 2.png" />

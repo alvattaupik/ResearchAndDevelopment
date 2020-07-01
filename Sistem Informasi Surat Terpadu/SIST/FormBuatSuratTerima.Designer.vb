@@ -25,6 +25,7 @@ Partial Class FormBuatSuratTerima
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormBuatSuratTerima))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtNoSurat = New System.Windows.Forms.TextBox()
         Me.LblkdJenisSurat = New System.Windows.Forms.Label()
@@ -730,6 +731,7 @@ Partial Class FormBuatSuratTerima
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "FormBuatSuratTerima"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

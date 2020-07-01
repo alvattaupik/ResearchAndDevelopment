@@ -6,10 +6,10 @@ Public Class FormDataUserALL
     End Sub
     Sub LoadDaftarUserSAP()
 
-        Call KoneksiDatabase2()
+        Call KoneksiDatabase1()
 
 
-        Dim cmd As New SqlCommand("Select * From V_ListMasterUser WHERE NamaUser Like '%" & Trim(txtCariUer.Text) & "%'", Koneksi2)
+        Dim cmd As New SqlCommand("Select * From V_ListMasterUser WHERE NamaUser Like '%" & Trim(txtCariUer.Text) & "%'", Koneksi1)
 
         cmd.CommandTimeout = 0
 

@@ -79,7 +79,11 @@ Public Class FormBuatRequestCloseAndCancel
 
         Call CopyFileKeDirectoryAttachment()
 
-        'CariKodeJenisValidasi()
+        If txtJumlahDokumen.Text = "" Then
+            MsgBox("Jumlah Dokumen Harus DI Isi", vbInformation, "Informasi!")
+            txtJumlahDokumen.BackColor = Color.Yellow
+            Exit Sub
+        End If
 
         If MsgBox("Apakah Data Yang Di Inputkan Sudah Benar?", vbYesNo, "Konfirmasi") = vbYes Then
 
@@ -112,6 +116,8 @@ Public Class FormBuatRequestCloseAndCancel
             cmd.Parameters.AddWithValue("KdSupervisor", Trim(MstrKdSupervisor))
             cmd.Parameters.AddWithValue("JenisRequest", Trim(cmbJenisRequest.Text))
             cmd.Parameters.AddWithValue("KdKomponen", Trim(txtKodeKomponen.Text))
+            cmd.Parameters.AddWithValue("KdCabang", Trim(cmbCabang.SelectedValue))
+            cmd.Parameters.AddWithValue("JumlahDokumen", Trim(txtJumlahDokumen.Text))
             cmd.Parameters.AddWithValue("PesanUser", Trim(txtPesan.Text))
             cmd.Parameters.AddWithValue("Status", "")
             cmd.Parameters.Add("OutputNoSurat", SqlDbType.VarChar, 50)
@@ -126,6 +132,7 @@ Public Class FormBuatRequestCloseAndCancel
             txtNoValidasi.Text = cmd.Parameters("OutputNoSurat").Value.ToString()
             MsgBox("Permintaan Close dan Cancel Dokumen Berhasil Disimpan Dengan Nomor: " & txtNoValidasi.Text & " Silahkan Cek Monitoring Request!", vbInformation, "Sukses!")
             Call ClearTextBoxes(Me)
+            Me.Dispose()
             Exit Sub
         Else
 
@@ -212,5 +219,30 @@ ErrorLoad:
     Private Sub GunaGradientButton2_Click(sender As Object, e As EventArgs) Handles GunaGradientButton2.Click
         On Error Resume Next
         FormCariKomponenSAP.ShowDialog()
+    End Sub
+
+
+
+    Sub LoadComboCabang()
+        Dim ds As New DataSet()
+        Dim adapter As New SqlDataAdapter()
+        Try
+            KoneksiDatabase1()
+            cmd = New SqlCommand("SELECT KodeDivisi,NamaDivisi FROM dbo.V_Divisi WHERE KodeDivisi LIKE '%1%'", Koneksi1)
+            adapter.SelectCommand = cmd
+            adapter.Fill(ds)
+            adapter.Dispose()
+            cmd.Dispose()
+            Koneksi1.Close()
+            cmbCabang.DataSource = ds.Tables(0)
+            cmbCabang.ValueMember = "KodeDivisi"
+            cmbCabang.DisplayMember = "NamaDivisi"
+        Catch ex As Exception
+            MessageBox.Show("Can not open connection ! ")
+        End Try
+    End Sub
+
+    Private Sub cmbJenisRequest_Click(sender As Object, e As EventArgs) Handles cmbJenisRequest.Click
+        LoadComboCabang()
     End Sub
 End Class

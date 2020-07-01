@@ -22,6 +22,7 @@ Partial Class FormHelp
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormHelp))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgDaftarBantuan = New System.Windows.Forms.DataGridView()
@@ -117,6 +118,7 @@ Partial Class FormHelp
         Me.Controls.Add(Me.dgDaftarBantuan)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "FormHelp"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

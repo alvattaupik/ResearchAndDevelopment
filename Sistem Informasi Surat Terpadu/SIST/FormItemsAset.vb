@@ -5,9 +5,9 @@ Public Class FormItemsAset
 
     Sub LoadDaftarItemMasterData()
 
-        Call KoneksiDatabase2()
+        Call KoneksiDatabase1()
 
-        Dim cmd As New SqlCommand("Select * From V_ListAssetUntukDipinjam WHere Deskripsi Like'%" & Trim(txtCariItemMasterData.Text) & "%'", Koneksi2)
+        Dim cmd As New SqlCommand("Select * From V_ListAssetUntukDipinjam WHere Deskripsi Like'%" & Trim(txtCariItemMasterData.Text) & "%'", Koneksi1)
 
         cmd.CommandTimeout = 0
 

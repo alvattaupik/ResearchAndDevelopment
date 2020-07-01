@@ -149,4 +149,19 @@ Errorhandler:
     Private Sub cmdTutup_Click(sender As Object, e As EventArgs) Handles cmdTutup.Click
         gbItem.Visible = False
     End Sub
+
+    Private Sub AvailableToPromiseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AvailableToPromiseToolStripMenuItem.Click
+
+        Dim frm As New FormAvailableToPromise
+
+        frm.MdiParent = MenuUtama
+
+        frm.txtItemCode.Text = Me.txtKodeBarang.Text
+        frm.txtItemName.Text = Me.txtNamaBarang.Text
+        frm.Location = New Point(294, 39)
+
+        frm.TopMost = True
+        frm.Show()
+
+    End Sub
 End Class

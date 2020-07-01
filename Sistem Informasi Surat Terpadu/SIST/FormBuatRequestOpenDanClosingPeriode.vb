@@ -11,12 +11,12 @@ Public Class FormBuatRequestOpenDanClosingPeriode
     Dim strNamaAttachments As String
     Dim strExtentionFile As String
     Private Sub FormValidasi_Load(sender As Object, e As EventArgs) Handles Me.Load
-        MstrNamaForm = "Buat Request Close Dan Open Periode"
-        ClearTextBoxes(Me)
+        JamAwal.Value = Now
+        JamAkhir.Value = Now
+
         txtNamaLengkap.Text = MstrNamaUser
         txtNamaSupervisor.Text = MstrSupervisor
         txtDivisi.Text = MstrNamaDivisi
-
     End Sub
 
 
@@ -33,43 +33,26 @@ Public Class FormBuatRequestOpenDanClosingPeriode
 
 
 
-    '    Sub CariKodeJenisValidasi()
-    '        KoneksiDatabase1()
-    '        Dim strSQlLogin As String
 
-    '        strSQlLogin = "SELECT top 1 Cast(KdJenisValidasi As varchar(20)),NamaValidasi FROM dbo.JenisValidasi WHERE Namavalidasi='" & Trim(cmbJenisValidasi.Text) & "'"
-    '        cmd = New SqlCommand(strSQlLogin, Koneksi1)
-    '        dr = cmd.ExecuteReader
-    '        dr.Read()
-    '        If dr.HasRows = True Then
+    Sub LoadComboCabang()
+        Dim ds As New DataSet()
+        Dim adapter As New SqlDataAdapter()
+        Try
+            KoneksiDatabase1()
+            cmd = New SqlCommand("SELECT KodeDivisi,NamaDivisi FROM dbo.V_Divisi WHERE KodeDivisi NOT LIKE '%Centr%'", Koneksi1)
+            adapter.SelectCommand = cmd
+            adapter.Fill(ds)
+            adapter.Dispose()
+            cmd.Dispose()
+            Koneksi1.Close()
+            cmbCabang.DataSource = ds.Tables(0)
+            cmbCabang.ValueMember = "KodeDivisi"
+            cmbCabang.DisplayMember = "NamaDivisi"
+        Catch ex As Exception
+            MessageBox.Show("Can not open connection ! ")
+        End Try
+    End Sub
 
-    '            strKodeJenisValidasi = dr.GetString(0)
-    '            dr.Close()
-
-    '        Else
-
-    '            dr.Close()
-    '            strKodeJenisValidasi = "001"
-    '            Exit Sub
-    '        End If
-
-
-    '        Exit Sub
-
-    'ErrorLoad:
-    '        MsgBox(Err.Description)
-    '        Exit Sub
-
-    '    End Sub
-
-
-
-
-
-
-    'Private Sub cmbKomponen_Click(sender As Object, e As EventArgs)
-    '    LoadComboKomponenValidasi()
-    'End Sub
 
 
 
@@ -77,9 +60,15 @@ Public Class FormBuatRequestOpenDanClosingPeriode
         On Error GoTo ErrorLoad
         GetExtentionfile()
 
-        Call CopyFileKeDirectoryAttachment()
+        If dgDaftarPeriode.RowCount = 0 Then
+            MsgBox("List Periode Yang Akan Dibukan Tidak Boleh Kosong!", vbInformation, "Penting!")
+            cmdInputPeriode.PerformClick()
+            Exit Sub
+        End If
 
-        'CariKodeJenisValidasi()
+
+
+        Call CopyFileKeDirectoryAttachment()
 
         If MsgBox("Apakah Data Yang Di Inputkan Sudah Benar?", vbYesNo, "Konfirmasi") = vbYes Then
 
@@ -98,6 +87,15 @@ Public Class FormBuatRequestOpenDanClosingPeriode
             End If
 
 
+
+            If cmbCabang.Text = "" Then
+                MsgBox("Cabang / Lokasi Harus Di Isi!", vbCritical, "Penting!")
+                cmbCabang.BackColor = Color.Yellow
+                Exit Sub
+            End If
+
+
+
             Call KoneksiDatabase1()
             Dim cmd As New SqlCommand
             cmd.CommandText = "[AU_CloseAndOpenPeriode]"
@@ -110,6 +108,9 @@ Public Class FormBuatRequestOpenDanClosingPeriode
             cmd.Parameters.AddWithValue("JenisRequest", Trim(cmbJenisRequest.Text))
             cmd.Parameters.AddWithValue("KdKomponen", Trim(txtKodeKomponen.Text))
             cmd.Parameters.AddWithValue("PesanUser", Trim(txtPesan.Text))
+            cmd.Parameters.AddWithValue("KdCabang", Trim(cmbCabang.SelectedValue))
+            cmd.Parameters.AddWithValue("Durasi1", JamAwal.Value.ToString("HH:mm"))
+            cmd.Parameters.AddWithValue("Durasi2", JamAkhir.Value.ToString("HH:mm"))
             cmd.Parameters.AddWithValue("Status", "")
             cmd.Parameters.Add("OutputNoSurat", SqlDbType.VarChar, 50)
             cmd.Parameters("OutputNoSurat").Direction = ParameterDirection.Output
@@ -121,8 +122,67 @@ Public Class FormBuatRequestOpenDanClosingPeriode
             Koneksi1.Open()
             cmd.ExecuteNonQuery()
             txtNoValidasi.Text = cmd.Parameters("OutputNoSurat").Value.ToString()
-            MsgBox("Permintaan Close dan Cancel Dokumen Berhasil Disimpan Dengan Nomor: " & txtNoValidasi.Text & " Silahkan Cek Monitoring Request!", vbInformation, "Sukses!")
+
+
+
+
+
+            For i As Integer = 0 To dgDaftarPeriode.Rows.Count - 1
+
+
+
+                Call KoneksiDatabase1()
+                Dim cmd1 As New SqlCommand
+
+
+
+                cmd1.CommandText = "[ADD_DetailSuratMenyurat]"
+                cmd1.CommandType = CommandType.StoredProcedure
+                cmd1.Parameters.AddWithValue("NomorSurat", Trim(txtNoValidasi.Text))
+                cmd1.Parameters.AddWithValue("DocEntry", 0)
+
+
+                'If dgDaftarPeriode.Rows(i).Cells(0).Value = "" Then
+                '    cmd1.Parameters.AddWithValue("KodeBarang", "")
+                'Else
+                cmd1.Parameters.AddWithValue("KodeBarang", dgDaftarPeriode.Rows(i).Cells(0).Value)
+                'End If
+
+                If dgDaftarPeriode.Rows(i).Cells(1).Value = "" Then
+                    cmd1.Parameters.AddWithValue("Deskripsi1", "")
+                Else
+                    cmd1.Parameters.AddWithValue("Deskripsi1", dgDaftarPeriode.Rows(i).Cells(1).Value)
+                End If
+
+
+                'If dgDaftarPeriode.Rows(i).Cells(2).Value = "" Then
+                cmd1.Parameters.AddWithValue("Qty", "")
+                'Else
+                'cmd1.Parameters.AddWithValue("Qty", dgDaftarPeriode.Rows(i).Cells(2).Value)
+                'End If
+
+                If dgDaftarPeriode.Rows(i).Cells(2).Value = "" Then
+                    cmd1.Parameters.AddWithValue("Deskripsi2", "")
+                Else
+                    cmd1.Parameters.AddWithValue("Deskripsi2", dgDaftarPeriode.Rows(i).Cells(2).Value)
+                End If
+
+                cmd1.Parameters.AddWithValue("Keterangan", "")
+                cmd1.Parameters.AddWithValue("StatusSP", "A")
+
+                If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
+                cmd1.Connection = Koneksi1
+                Koneksi1.Open()
+                cmd1.ExecuteNonQuery()
+
+            Next
+            Koneksi1.Close()
+
+
+
+            MsgBox("Permintaan Open dan Close Periode Berhasil Disimpan Dengan Nomor: " & txtNoValidasi.Text & " Silahkan Cek Monitoring Request!", vbInformation, "Sukses!")
             Call ClearTextBoxes(Me)
+            Me.Dispose()
             Exit Sub
         Else
 
@@ -184,21 +244,6 @@ ErrorLoad:
         End If
     End Sub
 
-
-
-
-    Private Sub cmdBrowse_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        Close()
-    End Sub
-
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        Close()
-    End Sub
-
     Private Sub cmdBrowseAttatchment_Click(sender As Object, e As EventArgs) Handles cmdBrowseAttatchment.Click
         Using O As New OpenFileDialog
             If O.ShowDialog = 1 Then
@@ -209,6 +254,36 @@ ErrorLoad:
 
     Private Sub GunaGradientButton2_Click(sender As Object, e As EventArgs) Handles GunaGradientButton2.Click
         On Error Resume Next
+        MstrNamaForm = "Buat Request Close Dan Open Periode"
         FormCariKomponenSAP.ShowDialog()
+    End Sub
+
+    Private Sub cmbCabang_Click(sender As Object, e As EventArgs) Handles cmbCabang.Click
+        LoadComboCabang()
+    End Sub
+
+    Private Sub cmdRemove_Click(sender As Object, e As EventArgs) Handles cmdRemove.Click
+        On Error Resume Next
+        Dim row As Integer
+        Dim index As Integer
+
+
+        If dgDaftarPeriode.RowCount = 0 Then Exit Sub
+
+        index = dgDaftarPeriode.SelectedRows.Item(0).Index
+        selRow = dgDaftarPeriode.Rows.Item(index)
+        dgDaftarPeriode.Rows.Remove(selRow)
+        row = row - 1
+
+        lblJumlahPeriode.Text = "Jumlah Periode : " & dgDaftarPeriode.RowCount
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Close()
+    End Sub
+
+    Private Sub cmdInputPeriode_Click(sender As Object, e As EventArgs) Handles cmdInputPeriode.Click
+        FormItemsPostingPeriode.ShowDialog()
     End Sub
 End Class

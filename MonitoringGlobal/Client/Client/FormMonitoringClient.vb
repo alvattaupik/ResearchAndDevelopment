@@ -108,7 +108,7 @@ Public Class FormMonitoringClient
         Try
             REM IP, Port
             REM If port is in a textbox, use: integer.parse(textbox1.text)  instead of the port number vvv
-            Client = New TcpClient("10.1.0.100", 4305)
+            Client = New TcpClient("10.1.0.55", 4305)
             If Client.GetStream.CanRead = True Then
                 RX = New StreamReader(Client.GetStream)
                 TX = New StreamWriter(Client.GetStream)

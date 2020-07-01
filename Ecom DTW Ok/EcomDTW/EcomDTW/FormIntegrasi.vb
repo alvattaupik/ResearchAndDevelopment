@@ -16,14 +16,10 @@ Public Class FormIntegrasi
             Exit Sub
         End If
 
-
         _Loop = 30
         cmdLogoff.Enabled = False
         cmdUpload.Enabled = False
         cmdStopProses.Enabled = True
-
-
-
 
         KoneksiDatabaseSQLSERVER()
         Dim cmdSQLRV As SqlCommand
@@ -38,8 +34,6 @@ Public Class FormIntegrasi
         Me.dgListUpload.DataSource = table
 
         lblJumlahItem.Text = "Jumlah Item : " & dgListUpload.RowCount
-
-       
 
 
     End Sub

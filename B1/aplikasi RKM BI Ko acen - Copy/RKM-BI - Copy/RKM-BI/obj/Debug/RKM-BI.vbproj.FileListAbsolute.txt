@@ -73,3 +73,8 @@ D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - 
 D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe.manifest
 D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.application
 D:\Research And Development\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.SalesMonitoringNew2.resources
+D:\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\RKM-BI.exe.config
+D:\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.vbproj.ResolveComReference.cache
+D:\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.exe
+D:\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.xml
+D:\ResearchAndDevelopment\B1\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM-BI.pdb

@@ -23,15 +23,15 @@ Partial Class FormMonitoringMyRequest
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMonitoringMyRequest))
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.cmdClose = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GunaAdvenceButton1 = New Guna.UI.WinForms.GunaAdvenceButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.cmbStatusRequest = New Guna.UI.WinForms.GunaComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cmbStatus = New Guna.UI.WinForms.GunaComboBox()
@@ -47,8 +47,8 @@ Partial Class FormMonitoringMyRequest
         Me.dgRequestMonitoring = New Guna.UI.WinForms.GunaDataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgRequestMonitoring, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -57,7 +57,7 @@ Partial Class FormMonitoringMyRequest
         '
         Me.cmdClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.cmdClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdClose.Location = New System.Drawing.Point(636, 0)
+        Me.cmdClose.Location = New System.Drawing.Point(812, 0)
         Me.cmdClose.Name = "cmdClose"
         Me.cmdClose.Size = New System.Drawing.Size(39, 27)
         Me.cmdClose.TabIndex = 2
@@ -67,17 +67,16 @@ Partial Class FormMonitoringMyRequest
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(192, 16)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(144, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(255, 25)
+        Me.Label1.Size = New System.Drawing.Size(394, 39)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Monitoring My Request"
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.White
-        Me.GroupBox2.Controls.Add(Me.PictureBox1)
         Me.GroupBox2.Controls.Add(Me.GunaAdvenceButton1)
         Me.GroupBox2.Controls.Add(Me.GroupBox3)
         Me.GroupBox2.Controls.Add(Me.cmdCetakForm)
@@ -86,19 +85,9 @@ Partial Class FormMonitoringMyRequest
         Me.GroupBox2.Controls.Add(Me.dgRequestMonitoring)
         Me.GroupBox2.Location = New System.Drawing.Point(13, 84)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(674, 312)
+        Me.GroupBox2.Size = New System.Drawing.Size(856, 312)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.Network_Operation_Center_NOC
-        Me.PictureBox1.Location = New System.Drawing.Point(6, 128)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(213, 175)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
         '
         'GunaAdvenceButton1
         '
@@ -122,7 +111,7 @@ Partial Class FormMonitoringMyRequest
         Me.GunaAdvenceButton1.ImageSize = New System.Drawing.Size(22, 22)
         Me.GunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.GunaAdvenceButton1.LineTop = 1
-        Me.GunaAdvenceButton1.Location = New System.Drawing.Point(564, 264)
+        Me.GunaAdvenceButton1.Location = New System.Drawing.Point(743, 264)
         Me.GunaAdvenceButton1.Name = "GunaAdvenceButton1"
         Me.GunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.GunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black
@@ -137,6 +126,7 @@ Partial Class FormMonitoringMyRequest
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.PictureBox1)
         Me.GroupBox3.Controls.Add(Me.cmbStatusRequest)
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Controls.Add(Me.cmbStatus)
@@ -148,9 +138,19 @@ Partial Class FormMonitoringMyRequest
         Me.GroupBox3.Controls.Add(Me.dtpAwal)
         Me.GroupBox3.Location = New System.Drawing.Point(6, 4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(662, 113)
+        Me.GroupBox3.Size = New System.Drawing.Size(844, 118)
         Me.GroupBox3.TabIndex = 40
         Me.GroupBox3.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.Network_Operation_Center_NOC
+        Me.PictureBox1.Location = New System.Drawing.Point(19, 5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(154, 108)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
         '
         'cmbStatusRequest
         '
@@ -163,18 +163,18 @@ Partial Class FormMonitoringMyRequest
         Me.cmbStatusRequest.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cmbStatusRequest.ForeColor = System.Drawing.Color.Black
         Me.cmbStatusRequest.FormattingEnabled = True
-        Me.cmbStatusRequest.Location = New System.Drawing.Point(162, 76)
+        Me.cmbStatusRequest.Location = New System.Drawing.Point(362, 76)
         Me.cmbStatusRequest.Name = "cmbStatusRequest"
         Me.cmbStatusRequest.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cmbStatusRequest.OnHoverItemForeColor = System.Drawing.Color.White
-        Me.cmbStatusRequest.Size = New System.Drawing.Size(350, 26)
+        Me.cmbStatusRequest.Size = New System.Drawing.Size(340, 26)
         Me.cmbStatusRequest.TabIndex = 44
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(19, 77)
+        Me.Label5.Location = New System.Drawing.Point(203, 77)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(135, 20)
         Me.Label5.TabIndex = 43
@@ -191,19 +191,19 @@ Partial Class FormMonitoringMyRequest
         Me.cmbStatus.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cmbStatus.ForeColor = System.Drawing.Color.Black
         Me.cmbStatus.FormattingEnabled = True
-        Me.cmbStatus.Items.AddRange(New Object() {"Belum DiApprove", "Kurang beberapa Approval", "Lengkap Disetujui"})
-        Me.cmbStatus.Location = New System.Drawing.Point(162, 46)
+        Me.cmbStatus.Items.AddRange(New Object() {"Disetujui SPV", "Belum Disetujui SPV"})
+        Me.cmbStatus.Location = New System.Drawing.Point(362, 44)
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cmbStatus.OnHoverItemForeColor = System.Drawing.Color.White
-        Me.cmbStatus.Size = New System.Drawing.Size(350, 26)
+        Me.cmbStatus.Size = New System.Drawing.Size(340, 26)
         Me.cmbStatus.TabIndex = 42
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(19, 46)
+        Me.Label4.Location = New System.Drawing.Point(201, 44)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(137, 20)
         Me.Label4.TabIndex = 41
@@ -213,7 +213,7 @@ Partial Class FormMonitoringMyRequest
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(316, 16)
+        Me.Label3.Location = New System.Drawing.Point(506, 12)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 20)
         Me.Label3.TabIndex = 40
@@ -223,7 +223,7 @@ Partial Class FormMonitoringMyRequest
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(19, 16)
+        Me.Label2.Location = New System.Drawing.Point(203, 12)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(73, 20)
         Me.Label2.TabIndex = 39
@@ -243,7 +243,7 @@ Partial Class FormMonitoringMyRequest
         Me.cmdCari.ForeColor = System.Drawing.Color.White
         Me.cmdCari.Image = Nothing
         Me.cmdCari.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdCari.Location = New System.Drawing.Point(520, 10)
+        Me.cmdCari.Location = New System.Drawing.Point(712, 15)
         Me.cmdCari.Name = "cmdCari"
         Me.cmdCari.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdCari.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -267,7 +267,7 @@ Partial Class FormMonitoringMyRequest
         Me.dtpAkhir.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.dtpAkhir.ForeColor = System.Drawing.Color.Black
         Me.dtpAkhir.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpAkhir.Location = New System.Drawing.Point(394, 10)
+        Me.dtpAkhir.Location = New System.Drawing.Point(584, 8)
         Me.dtpAkhir.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.dtpAkhir.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.dtpAkhir.Name = "dtpAkhir"
@@ -290,7 +290,7 @@ Partial Class FormMonitoringMyRequest
         Me.dtpAwal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.dtpAwal.ForeColor = System.Drawing.Color.Black
         Me.dtpAwal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpAwal.Location = New System.Drawing.Point(162, 10)
+        Me.dtpAwal.Location = New System.Drawing.Point(362, 8)
         Me.dtpAwal.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.dtpAwal.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.dtpAwal.Name = "dtpAwal"
@@ -317,7 +317,7 @@ Partial Class FormMonitoringMyRequest
         Me.cmdCetakForm.ForeColor = System.Drawing.Color.White
         Me.cmdCetakForm.Image = Nothing
         Me.cmdCetakForm.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdCetakForm.Location = New System.Drawing.Point(564, 210)
+        Me.cmdCetakForm.Location = New System.Drawing.Point(743, 211)
         Me.cmdCetakForm.Name = "cmdCetakForm"
         Me.cmdCetakForm.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdCetakForm.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -345,7 +345,7 @@ Partial Class FormMonitoringMyRequest
         Me.cmdLihatDetail.ForeColor = System.Drawing.Color.White
         Me.cmdLihatDetail.Image = Nothing
         Me.cmdLihatDetail.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdLihatDetail.Location = New System.Drawing.Point(564, 169)
+        Me.cmdLihatDetail.Location = New System.Drawing.Point(743, 169)
         Me.cmdLihatDetail.Name = "cmdLihatDetail"
         Me.cmdLihatDetail.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdLihatDetail.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -373,7 +373,7 @@ Partial Class FormMonitoringMyRequest
         Me.cmdRefresh.ForeColor = System.Drawing.Color.White
         Me.cmdRefresh.Image = Nothing
         Me.cmdRefresh.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdRefresh.Location = New System.Drawing.Point(564, 128)
+        Me.cmdRefresh.Location = New System.Drawing.Point(743, 128)
         Me.cmdRefresh.Name = "cmdRefresh"
         Me.cmdRefresh.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdRefresh.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -391,38 +391,38 @@ Partial Class FormMonitoringMyRequest
         '
         Me.dgRequestMonitoring.AllowUserToAddRows = False
         Me.dgRequestMonitoring.AllowUserToDeleteRows = False
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-        Me.dgRequestMonitoring.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgRequestMonitoring.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgRequestMonitoring.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgRequestMonitoring.BackgroundColor = System.Drawing.Color.DarkGray
         Me.dgRequestMonitoring.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgRequestMonitoring.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgRequestMonitoring.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgRequestMonitoring.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgRequestMonitoring.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgRequestMonitoring.ColumnHeadersHeight = 30
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgRequestMonitoring.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgRequestMonitoring.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgRequestMonitoring.EnableHeadersVisualStyles = False
         Me.dgRequestMonitoring.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgRequestMonitoring.Location = New System.Drawing.Point(225, 128)
+        Me.dgRequestMonitoring.Location = New System.Drawing.Point(-1, 128)
         Me.dgRequestMonitoring.Name = "dgRequestMonitoring"
         Me.dgRequestMonitoring.ReadOnly = True
         Me.dgRequestMonitoring.RowHeadersVisible = False
         Me.dgRequestMonitoring.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgRequestMonitoring.Size = New System.Drawing.Size(333, 175)
+        Me.dgRequestMonitoring.Size = New System.Drawing.Size(738, 175)
         Me.dgRequestMonitoring.TabIndex = 0
         Me.dgRequestMonitoring.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
         Me.dgRequestMonitoring.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -454,7 +454,7 @@ Partial Class FormMonitoringMyRequest
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(12, 9)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(674, 66)
+        Me.Panel1.Size = New System.Drawing.Size(857, 73)
         Me.Panel1.TabIndex = 2
         '
         'FormMonitoringMyRequest
@@ -462,7 +462,7 @@ Partial Class FormMonitoringMyRequest
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MediumTurquoise
-        Me.ClientSize = New System.Drawing.Size(699, 404)
+        Me.ClientSize = New System.Drawing.Size(884, 409)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -470,9 +470,9 @@ Partial Class FormMonitoringMyRequest
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormMonitoringStatusValidasi"
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgRequestMonitoring, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

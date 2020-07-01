@@ -25,12 +25,11 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.txtSendBroadcast = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.txtBroadcastMessage = New System.Windows.Forms.RichTextBox()
         Me.dgDaftarTugas = New System.Windows.Forms.DataGridView()
         Me.cmbListDB = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -45,6 +44,11 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.StatusServer = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.cmdSendRunningTRe = New System.Windows.Forms.Button()
+        Me.txtSendRunningText = New System.Windows.Forms.TextBox()
+        Me.cmdSendBroadcast = New System.Windows.Forms.Button()
         CType(Me.dgDaftarTugas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,21 +73,13 @@ Partial Class Form1
         Me.Button2.Text = "Stop"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtSendBroadcast
         '
-        Me.TextBox1.Location = New System.Drawing.Point(409, 357)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(176, 20)
-        Me.TextBox1.TabIndex = 4
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(591, 357)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Send"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.txtSendBroadcast.Location = New System.Drawing.Point(409, 144)
+        Me.txtSendBroadcast.Multiline = True
+        Me.txtSendBroadcast.Name = "txtSendBroadcast"
+        Me.txtSendBroadcast.Size = New System.Drawing.Size(176, 63)
+        Me.txtSendBroadcast.TabIndex = 4
         '
         'Timer1
         '
@@ -109,13 +105,13 @@ Partial Class Form1
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Monitoring"
         '
-        'RichTextBox1
+        'txtBroadcastMessage
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(409, 34)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(257, 317)
-        Me.RichTextBox1.TabIndex = 3
-        Me.RichTextBox1.Text = ""
+        Me.txtBroadcastMessage.Location = New System.Drawing.Point(409, 29)
+        Me.txtBroadcastMessage.Name = "txtBroadcastMessage"
+        Me.txtBroadcastMessage.Size = New System.Drawing.Size(257, 110)
+        Me.txtBroadcastMessage.TabIndex = 3
+        Me.txtBroadcastMessage.Text = ""
         '
         'dgDaftarTugas
         '
@@ -228,11 +224,11 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(478, 7)
+        Me.Label1.Location = New System.Drawing.Point(428, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(107, 25)
+        Me.Label1.Size = New System.Drawing.Size(220, 25)
         Me.Label1.TabIndex = 16
-        Me.Label1.Text = "Message"
+        Me.Label1.Text = "Broadcast Message"
         '
         'StatusStrip1
         '
@@ -250,11 +246,58 @@ Partial Class Form1
         Me.StatusServer.Size = New System.Drawing.Size(110, 21)
         Me.StatusServer.Text = "Server Status"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(408, 211)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(265, 25)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = "Broadcast Running Text"
+        '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.Location = New System.Drawing.Point(409, 239)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(257, 108)
+        Me.RichTextBox2.TabIndex = 19
+        Me.RichTextBox2.Text = ""
+        '
+        'cmdSendRunningTRe
+        '
+        Me.cmdSendRunningTRe.Location = New System.Drawing.Point(591, 353)
+        Me.cmdSendRunningTRe.Name = "cmdSendRunningTRe"
+        Me.cmdSendRunningTRe.Size = New System.Drawing.Size(75, 23)
+        Me.cmdSendRunningTRe.TabIndex = 21
+        Me.cmdSendRunningTRe.Text = "Send"
+        Me.cmdSendRunningTRe.UseVisualStyleBackColor = True
+        '
+        'txtSendRunningText
+        '
+        Me.txtSendRunningText.Location = New System.Drawing.Point(409, 355)
+        Me.txtSendRunningText.Name = "txtSendRunningText"
+        Me.txtSendRunningText.Size = New System.Drawing.Size(176, 20)
+        Me.txtSendRunningText.TabIndex = 20
+        '
+        'cmdSendBroadcast
+        '
+        Me.cmdSendBroadcast.Location = New System.Drawing.Point(591, 144)
+        Me.cmdSendBroadcast.Name = "cmdSendBroadcast"
+        Me.cmdSendBroadcast.Size = New System.Drawing.Size(75, 65)
+        Me.cmdSendBroadcast.TabIndex = 5
+        Me.cmdSendBroadcast.Text = "Send"
+        Me.cmdSendBroadcast.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(673, 414)
+        Me.Controls.Add(Me.cmdSendRunningTRe)
+        Me.Controls.Add(Me.txtSendRunningText)
+        Me.Controls.Add(Me.RichTextBox2)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtBebanLoad)
@@ -264,9 +307,9 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.cmdSendBroadcast)
+        Me.Controls.Add(Me.txtSendBroadcast)
+        Me.Controls.Add(Me.txtBroadcastMessage)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
@@ -286,13 +329,12 @@ Partial Class Form1
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents txtSendBroadcast As System.Windows.Forms.TextBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents txtBroadcastMessage As System.Windows.Forms.RichTextBox
     Friend WithEvents dgDaftarTugas As System.Windows.Forms.DataGridView
     Friend WithEvents cmbListDB As System.Windows.Forms.ComboBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
@@ -306,5 +348,10 @@ Partial Class Form1
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents StatusServer As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents RichTextBox2 As System.Windows.Forms.RichTextBox
+    Friend WithEvents cmdSendRunningTRe As System.Windows.Forms.Button
+    Friend WithEvents txtSendRunningText As System.Windows.Forms.TextBox
+    Friend WithEvents cmdSendBroadcast As System.Windows.Forms.Button
 
 End Class

@@ -24,8 +24,8 @@ Public Class FormValidasiPassword
                 If MstrJenisDokumen = "FORM VALIDASI" Then
                     MstrKodeUser = dr.GetString(0)
                     MstrPassword = dr.GetString(3)
-                    FormApprovalDetaiMyRequest.AUD_Approval()
-                    FormApprovalDetaiMyRequest.LoadDaftarUserValidasi()
+                    'FormApprovalDetaiMyRequest.AUD_Approval()
+                    'FormApprovalDetaiMyRequest.LoadDaftarUserValidasi()
                     FormMonitoringUserRequest.BelumDiproses()
 
                     Me.Dispose()
@@ -38,8 +38,8 @@ Public Class FormValidasiPassword
 
                     MstrKodeUser = dr.GetString(0)
                     MstrPassword = dr.GetString(3)
-                    FormApprovalDetaiMyRequestCloseCancelDocument.AUD_Approval()
-                    FormApprovalDetaiMyRequestCloseCancelDocument.LoadDaftarUserValidasi()
+                    'FormApprovalDetaiMyRequestCloseCancelDocument.AUD_Approval()
+                    'FormApprovalDetaiMyRequestCloseCancelDocument.LoadDaftarUserValidasi()
                     FormMonitoringUserRequest.BelumDiproses()
                     Me.Dispose()
                     dr.Close()
@@ -54,8 +54,8 @@ Public Class FormValidasiPassword
 
                     MstrKodeUser = dr.GetString(0)
                     MstrPassword = dr.GetString(3)
-                    FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.AUD_Approval()
-                    FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.LoadDaftarUserValidasi()
+                    'FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.AUD_Approval()
+                    'FormApprovalDetaiMyRequestCloseAndOpenPostingPeriode.LoadDaftarUserValidasi()
                     FormMonitoringUserRequest.BelumDiproses()
                     Me.Dispose()
                     dr.Close()

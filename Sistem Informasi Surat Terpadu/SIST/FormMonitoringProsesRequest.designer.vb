@@ -31,8 +31,6 @@ Partial Class FormMonitoringProsesRequest
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.cmbDocStatus = New System.Windows.Forms.ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.txtNamaUser = New Guna.UI.WinForms.GunaTextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtNoValidasi = New Guna.UI.WinForms.GunaTextBox()
@@ -47,6 +45,8 @@ Partial Class FormMonitoringProsesRequest
         Me.cmdRefresh = New Guna.UI.WinForms.GunaGradientButton()
         Me.dgRequestMonitoring = New Guna.UI.WinForms.GunaDataGridView()
         Me.GunaAdvenceButton1 = New Guna.UI.WinForms.GunaAdvenceButton()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.cmbStatusProses = New Guna.UI.WinForms.GunaComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -79,7 +79,7 @@ Partial Class FormMonitoringProsesRequest
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(167, 16)
+        Me.Label1.Location = New System.Drawing.Point(158, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(344, 25)
         Me.Label1.TabIndex = 0
@@ -96,13 +96,13 @@ Partial Class FormMonitoringProsesRequest
         Me.GroupBox2.Controls.Add(Me.dgRequestMonitoring)
         Me.GroupBox2.Location = New System.Drawing.Point(9, 76)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(678, 312)
+        Me.GroupBox2.Size = New System.Drawing.Size(678, 364)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.cmbDocStatus)
+        Me.GroupBox3.Controls.Add(Me.cmbStatusProses)
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Controls.Add(Me.txtNamaUser)
         Me.GroupBox3.Controls.Add(Me.Label5)
@@ -115,28 +115,9 @@ Partial Class FormMonitoringProsesRequest
         Me.GroupBox3.Controls.Add(Me.dtpAwal)
         Me.GroupBox3.Location = New System.Drawing.Point(16, 9)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(652, 123)
+        Me.GroupBox3.Size = New System.Drawing.Size(652, 144)
         Me.GroupBox3.TabIndex = 40
         Me.GroupBox3.TabStop = False
-        '
-        'cmbDocStatus
-        '
-        Me.cmbDocStatus.FormattingEnabled = True
-        Me.cmbDocStatus.Items.AddRange(New Object() {"CLOSE", "OPEN"})
-        Me.cmbDocStatus.Location = New System.Drawing.Point(441, 84)
-        Me.cmbDocStatus.Name = "cmbDocStatus"
-        Me.cmbDocStatus.Size = New System.Drawing.Size(68, 21)
-        Me.cmbDocStatus.TabIndex = 46
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(336, 85)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(99, 20)
-        Me.Label6.TabIndex = 45
-        Me.Label6.Text = "Doc Status"
         '
         'txtNamaUser
         '
@@ -147,17 +128,17 @@ Partial Class FormMonitoringProsesRequest
         Me.txtNamaUser.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNamaUser.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtNamaUser.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtNamaUser.Location = New System.Drawing.Point(120, 82)
+        Me.txtNamaUser.Location = New System.Drawing.Point(141, 80)
         Me.txtNamaUser.Name = "txtNamaUser"
         Me.txtNamaUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNamaUser.Size = New System.Drawing.Size(210, 26)
+        Me.txtNamaUser.Size = New System.Drawing.Size(368, 26)
         Me.txtNamaUser.TabIndex = 44
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 85)
+        Me.Label5.Location = New System.Drawing.Point(6, 84)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(98, 20)
         Me.Label5.TabIndex = 43
@@ -172,10 +153,10 @@ Partial Class FormMonitoringProsesRequest
         Me.txtNoValidasi.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNoValidasi.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtNoValidasi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtNoValidasi.Location = New System.Drawing.Point(120, 47)
+        Me.txtNoValidasi.Location = New System.Drawing.Point(141, 47)
         Me.txtNoValidasi.Name = "txtNoValidasi"
         Me.txtNoValidasi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNoValidasi.Size = New System.Drawing.Size(389, 26)
+        Me.txtNoValidasi.Size = New System.Drawing.Size(368, 26)
         Me.txtNoValidasi.TabIndex = 42
         '
         'Label4
@@ -192,7 +173,7 @@ Partial Class FormMonitoringProsesRequest
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(283, 16)
+        Me.Label3.Location = New System.Drawing.Point(300, 13)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 20)
         Me.Label3.TabIndex = 40
@@ -202,7 +183,7 @@ Partial Class FormMonitoringProsesRequest
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(32, 10)
+        Me.Label2.Location = New System.Drawing.Point(6, 10)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(73, 20)
         Me.Label2.TabIndex = 39
@@ -269,7 +250,7 @@ Partial Class FormMonitoringProsesRequest
         Me.dtpAwal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.dtpAwal.ForeColor = System.Drawing.Color.Black
         Me.dtpAwal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpAwal.Location = New System.Drawing.Point(120, 10)
+        Me.dtpAwal.Location = New System.Drawing.Point(141, 10)
         Me.dtpAwal.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.dtpAwal.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.dtpAwal.Name = "dtpAwal"
@@ -296,7 +277,7 @@ Partial Class FormMonitoringProsesRequest
         Me.cmdCetakForm.ForeColor = System.Drawing.Color.White
         Me.cmdCetakForm.Image = Nothing
         Me.cmdCetakForm.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdCetakForm.Location = New System.Drawing.Point(564, 217)
+        Me.cmdCetakForm.Location = New System.Drawing.Point(564, 238)
         Me.cmdCetakForm.Name = "cmdCetakForm"
         Me.cmdCetakForm.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdCetakForm.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -324,7 +305,7 @@ Partial Class FormMonitoringProsesRequest
         Me.cmdLihatDetail.ForeColor = System.Drawing.Color.White
         Me.cmdLihatDetail.Image = Nothing
         Me.cmdLihatDetail.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdLihatDetail.Location = New System.Drawing.Point(564, 178)
+        Me.cmdLihatDetail.Location = New System.Drawing.Point(564, 199)
         Me.cmdLihatDetail.Name = "cmdLihatDetail"
         Me.cmdLihatDetail.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdLihatDetail.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -352,7 +333,7 @@ Partial Class FormMonitoringProsesRequest
         Me.cmdRefresh.ForeColor = System.Drawing.Color.White
         Me.cmdRefresh.Image = Nothing
         Me.cmdRefresh.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdRefresh.Location = New System.Drawing.Point(564, 138)
+        Me.cmdRefresh.Location = New System.Drawing.Point(564, 159)
         Me.cmdRefresh.Name = "cmdRefresh"
         Me.cmdRefresh.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdRefresh.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -396,12 +377,12 @@ Partial Class FormMonitoringProsesRequest
         Me.dgRequestMonitoring.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgRequestMonitoring.EnableHeadersVisualStyles = False
         Me.dgRequestMonitoring.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgRequestMonitoring.Location = New System.Drawing.Point(16, 138)
+        Me.dgRequestMonitoring.Location = New System.Drawing.Point(16, 159)
         Me.dgRequestMonitoring.Name = "dgRequestMonitoring"
         Me.dgRequestMonitoring.ReadOnly = True
         Me.dgRequestMonitoring.RowHeadersVisible = False
         Me.dgRequestMonitoring.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgRequestMonitoring.Size = New System.Drawing.Size(542, 165)
+        Me.dgRequestMonitoring.Size = New System.Drawing.Size(542, 196)
         Me.dgRequestMonitoring.TabIndex = 0
         Me.dgRequestMonitoring.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
         Me.dgRequestMonitoring.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -448,7 +429,7 @@ Partial Class FormMonitoringProsesRequest
         Me.GunaAdvenceButton1.ImageSize = New System.Drawing.Size(22, 22)
         Me.GunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.GunaAdvenceButton1.LineTop = 1
-        Me.GunaAdvenceButton1.Location = New System.Drawing.Point(564, 264)
+        Me.GunaAdvenceButton1.Location = New System.Drawing.Point(564, 316)
         Me.GunaAdvenceButton1.Name = "GunaAdvenceButton1"
         Me.GunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.GunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black
@@ -461,12 +442,40 @@ Partial Class FormMonitoringProsesRequest
         Me.GunaAdvenceButton1.TabIndex = 42
         Me.GunaAdvenceButton1.TextOffsetX = 10
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(7, 116)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(122, 20)
+        Me.Label6.TabIndex = 45
+        Me.Label6.Text = "Status Proses"
+        '
+        'cmbStatusProses
+        '
+        Me.cmbStatusProses.BackColor = System.Drawing.Color.Transparent
+        Me.cmbStatusProses.BaseColor = System.Drawing.Color.White
+        Me.cmbStatusProses.BorderColor = System.Drawing.Color.Silver
+        Me.cmbStatusProses.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbStatusProses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbStatusProses.FocusedColor = System.Drawing.Color.Empty
+        Me.cmbStatusProses.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmbStatusProses.ForeColor = System.Drawing.Color.Black
+        Me.cmbStatusProses.FormattingEnabled = True
+        Me.cmbStatusProses.Location = New System.Drawing.Point(141, 112)
+        Me.cmbStatusProses.Name = "cmbStatusProses"
+        Me.cmbStatusProses.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbStatusProses.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.cmbStatusProses.Size = New System.Drawing.Size(368, 26)
+        Me.cmbStatusProses.TabIndex = 46
+        '
         'FormMonitoringProsesRequest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(699, 398)
+        Me.ClientSize = New System.Drawing.Size(693, 443)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -500,7 +509,7 @@ Partial Class FormMonitoringProsesRequest
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtNoValidasi As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents cmbDocStatus As System.Windows.Forms.ComboBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents GunaAdvenceButton1 As Guna.UI.WinForms.GunaAdvenceButton
+    Friend WithEvents cmbStatusProses As Guna.UI.WinForms.GunaComboBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

@@ -22,6 +22,7 @@ Partial Class FormDetailHakAkses
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormDetailHakAkses))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtCariHakAkses = New System.Windows.Forms.TextBox()
@@ -36,8 +37,7 @@ Partial Class FormDetailHakAkses
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cmdPerbaharui = New Guna.UI.WinForms.GunaGradientButton()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.cmbStatusAktif = New System.Windows.Forms.ComboBox()
+        Me.GunaGradientButton1 = New Guna.UI.WinForms.GunaGradientButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgHakAksesUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -55,8 +55,6 @@ Partial Class FormDetailHakAkses
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.cmbStatusAktif)
-        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.txtCariHakAkses)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.dgHakAksesUser)
@@ -78,17 +76,17 @@ Partial Class FormDetailHakAkses
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(13, 22)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(80, 13)
+        Me.Label5.Size = New System.Drawing.Size(79, 13)
         Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Cari Hak Akses"
+        Me.Label5.Text = "Cari Komponen"
         '
         'dgHakAksesUser
         '
         Me.dgHakAksesUser.AllowUserToAddRows = False
         Me.dgHakAksesUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgHakAksesUser.Location = New System.Drawing.Point(6, 79)
+        Me.dgHakAksesUser.Location = New System.Drawing.Point(6, 56)
         Me.dgHakAksesUser.Name = "dgHakAksesUser"
-        Me.dgHakAksesUser.Size = New System.Drawing.Size(455, 172)
+        Me.dgHakAksesUser.Size = New System.Drawing.Size(455, 195)
         Me.dgHakAksesUser.TabIndex = 0
         '
         'cmdSimpan
@@ -116,7 +114,7 @@ Partial Class FormDetailHakAkses
         Me.cmdSimpan.Radius = 2
         Me.cmdSimpan.Size = New System.Drawing.Size(128, 37)
         Me.cmdSimpan.TabIndex = 29
-        Me.cmdSimpan.Text = "Simpan"
+        Me.cmdSimpan.Text = "Simpan Konfigurasi"
         Me.cmdSimpan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'GroupBox2
@@ -179,7 +177,7 @@ Partial Class FormDetailHakAkses
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 21)
+        Me.Label2.Location = New System.Drawing.Point(11, 19)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(57, 13)
         Me.Label2.TabIndex = 0
@@ -199,7 +197,7 @@ Partial Class FormDetailHakAkses
         Me.cmdPerbaharui.ForeColor = System.Drawing.Color.White
         Me.cmdPerbaharui.Image = Nothing
         Me.cmdPerbaharui.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdPerbaharui.Location = New System.Drawing.Point(17, 367)
+        Me.cmdPerbaharui.Location = New System.Drawing.Point(217, 367)
         Me.cmdPerbaharui.Name = "cmdPerbaharui"
         Me.cmdPerbaharui.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdPerbaharui.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -213,35 +211,46 @@ Partial Class FormDetailHakAkses
         Me.cmdPerbaharui.Text = "Perbaharui"
         Me.cmdPerbaharui.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label6
+        'GunaGradientButton1
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(13, 50)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(61, 13)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Status Aktif"
-        '
-        'cmbStatusAktif
-        '
-        Me.cmbStatusAktif.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmbStatusAktif.FormattingEnabled = True
-        Me.cmbStatusAktif.Items.AddRange(New Object() {"Y", "N"})
-        Me.cmbStatusAktif.Location = New System.Drawing.Point(106, 45)
-        Me.cmbStatusAktif.Name = "cmbStatusAktif"
-        Me.cmbStatusAktif.Size = New System.Drawing.Size(67, 21)
-        Me.cmbStatusAktif.TabIndex = 6
+        Me.GunaGradientButton1.AnimationHoverSpeed = 0.07!
+        Me.GunaGradientButton1.AnimationSpeed = 0.03!
+        Me.GunaGradientButton1.BackColor = System.Drawing.Color.Transparent
+        Me.GunaGradientButton1.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
+        Me.GunaGradientButton1.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.GunaGradientButton1.BorderColor = System.Drawing.Color.Black
+        Me.GunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.GunaGradientButton1.FocusedColor = System.Drawing.Color.Empty
+        Me.GunaGradientButton1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.GunaGradientButton1.ForeColor = System.Drawing.Color.White
+        Me.GunaGradientButton1.Image = Nothing
+        Me.GunaGradientButton1.ImageSize = New System.Drawing.Size(20, 20)
+        Me.GunaGradientButton1.Location = New System.Drawing.Point(13, 367)
+        Me.GunaGradientButton1.Name = "GunaGradientButton1"
+        Me.GunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.GunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.GunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White
+        Me.GunaGradientButton1.OnHoverImage = Nothing
+        Me.GunaGradientButton1.OnPressedColor = System.Drawing.Color.Black
+        Me.GunaGradientButton1.Radius = 2
+        Me.GunaGradientButton1.Size = New System.Drawing.Size(180, 37)
+        Me.GunaGradientButton1.TabIndex = 32
+        Me.GunaGradientButton1.Text = "Terapkan Untuk Semua User"
+        Me.GunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'FormDetailHakAkses
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(487, 410)
+        Me.Controls.Add(Me.GunaGradientButton1)
         Me.Controls.Add(Me.cmdPerbaharui)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.cmdSimpan)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "FormDetailHakAkses"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -269,6 +278,5 @@ Partial Class FormDetailHakAkses
     Friend WithEvents cmdPerbaharui As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents txtCariHakAkses As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents cmbStatusAktif As System.Windows.Forms.ComboBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents GunaGradientButton1 As Guna.UI.WinForms.GunaGradientButton
 End Class

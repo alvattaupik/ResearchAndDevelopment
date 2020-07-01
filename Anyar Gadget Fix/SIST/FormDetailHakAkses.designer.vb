@@ -36,8 +36,6 @@ Partial Class FormDetailHakAkses
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cmdPerbaharui = New Guna.UI.WinForms.GunaGradientButton()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.cmbStatusAktif = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgHakAksesUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -55,8 +53,6 @@ Partial Class FormDetailHakAkses
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.cmbStatusAktif)
-        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.txtCariHakAkses)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.dgHakAksesUser)
@@ -68,7 +64,7 @@ Partial Class FormDetailHakAkses
         '
         'txtCariHakAkses
         '
-        Me.txtCariHakAkses.Location = New System.Drawing.Point(106, 19)
+        Me.txtCariHakAkses.Location = New System.Drawing.Point(106, 17)
         Me.txtCariHakAkses.Name = "txtCariHakAkses"
         Me.txtCariHakAkses.Size = New System.Drawing.Size(355, 20)
         Me.txtCariHakAkses.TabIndex = 4
@@ -76,7 +72,7 @@ Partial Class FormDetailHakAkses
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(13, 22)
+        Me.Label5.Location = New System.Drawing.Point(12, 20)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(80, 13)
         Me.Label5.TabIndex = 1
@@ -86,9 +82,9 @@ Partial Class FormDetailHakAkses
         '
         Me.dgHakAksesUser.AllowUserToAddRows = False
         Me.dgHakAksesUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgHakAksesUser.Location = New System.Drawing.Point(6, 79)
+        Me.dgHakAksesUser.Location = New System.Drawing.Point(6, 45)
         Me.dgHakAksesUser.Name = "dgHakAksesUser"
-        Me.dgHakAksesUser.Size = New System.Drawing.Size(455, 172)
+        Me.dgHakAksesUser.Size = New System.Drawing.Size(455, 206)
         Me.dgHakAksesUser.TabIndex = 0
         '
         'cmdSimpan
@@ -213,25 +209,6 @@ Partial Class FormDetailHakAkses
         Me.cmdPerbaharui.Text = "Perbaharui"
         Me.cmdPerbaharui.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(13, 50)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(61, 13)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Status Aktif"
-        '
-        'cmbStatusAktif
-        '
-        Me.cmbStatusAktif.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmbStatusAktif.FormattingEnabled = True
-        Me.cmbStatusAktif.Items.AddRange(New Object() {"Y", "N"})
-        Me.cmbStatusAktif.Location = New System.Drawing.Point(106, 45)
-        Me.cmbStatusAktif.Name = "cmbStatusAktif"
-        Me.cmbStatusAktif.Size = New System.Drawing.Size(67, 21)
-        Me.cmbStatusAktif.TabIndex = 6
-        '
         'FormDetailHakAkses
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -269,6 +246,4 @@ Partial Class FormDetailHakAkses
     Friend WithEvents cmdPerbaharui As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents txtCariHakAkses As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents cmbStatusAktif As System.Windows.Forms.ComboBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

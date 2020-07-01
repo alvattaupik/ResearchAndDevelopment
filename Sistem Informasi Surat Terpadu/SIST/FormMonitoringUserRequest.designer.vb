@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormMonitoringUserRequest
+Partial Class FormMonitoringApprovalUserRequest
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,12 +25,13 @@ Partial Class FormMonitoringUserRequest
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMonitoringUserRequest))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMonitoringApprovalUserRequest))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cmdClose = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.ChkAllReqAndApproval = New Guna.UI.WinForms.GunaCheckBox()
         Me.txtNamaUser = New Guna.UI.WinForms.GunaTextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtNoValidasi = New Guna.UI.WinForms.GunaTextBox()
@@ -58,7 +59,7 @@ Partial Class FormMonitoringUserRequest
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(8, 5)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(679, 65)
+        Me.GroupBox1.Size = New System.Drawing.Size(748, 65)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -66,7 +67,7 @@ Partial Class FormMonitoringUserRequest
         '
         Me.cmdClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.cmdClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdClose.Location = New System.Drawing.Point(636, 0)
+        Me.cmdClose.Location = New System.Drawing.Point(709, 0)
         Me.cmdClose.Name = "cmdClose"
         Me.cmdClose.Size = New System.Drawing.Size(39, 27)
         Me.cmdClose.TabIndex = 2
@@ -77,11 +78,11 @@ Partial Class FormMonitoringUserRequest
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(186, 16)
+        Me.Label1.Location = New System.Drawing.Point(159, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(285, 25)
+        Me.Label1.Size = New System.Drawing.Size(433, 25)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Monitoring Users Request"
+        Me.Label1.Text = "Monitoring Users Request And Approval"
         '
         'GroupBox2
         '
@@ -94,12 +95,13 @@ Partial Class FormMonitoringUserRequest
         Me.GroupBox2.Controls.Add(Me.dgRequestMonitoring)
         Me.GroupBox2.Location = New System.Drawing.Point(9, 76)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(678, 312)
+        Me.GroupBox2.Size = New System.Drawing.Size(747, 312)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.ChkAllReqAndApproval)
         Me.GroupBox3.Controls.Add(Me.txtNamaUser)
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Controls.Add(Me.txtNoValidasi)
@@ -111,9 +113,21 @@ Partial Class FormMonitoringUserRequest
         Me.GroupBox3.Controls.Add(Me.dtpAwal)
         Me.GroupBox3.Location = New System.Drawing.Point(16, 9)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(652, 123)
+        Me.GroupBox3.Size = New System.Drawing.Size(725, 123)
         Me.GroupBox3.TabIndex = 40
         Me.GroupBox3.TabStop = False
+        '
+        'ChkAllReqAndApproval
+        '
+        Me.ChkAllReqAndApproval.BaseColor = System.Drawing.Color.White
+        Me.ChkAllReqAndApproval.CheckedOffColor = System.Drawing.Color.Gray
+        Me.ChkAllReqAndApproval.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ChkAllReqAndApproval.FillColor = System.Drawing.Color.White
+        Me.ChkAllReqAndApproval.Location = New System.Drawing.Point(533, 83)
+        Me.ChkAllReqAndApproval.Name = "ChkAllReqAndApproval"
+        Me.ChkAllReqAndApproval.Size = New System.Drawing.Size(169, 20)
+        Me.ChkAllReqAndApproval.TabIndex = 45
+        Me.ChkAllReqAndApproval.Text = "Tampilkan Semua Approval"
         '
         'txtNamaUser
         '
@@ -124,17 +138,17 @@ Partial Class FormMonitoringUserRequest
         Me.txtNamaUser.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNamaUser.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtNamaUser.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtNamaUser.Location = New System.Drawing.Point(120, 82)
+        Me.txtNamaUser.Location = New System.Drawing.Point(120, 80)
         Me.txtNamaUser.Name = "txtNamaUser"
         Me.txtNamaUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNamaUser.Size = New System.Drawing.Size(373, 26)
+        Me.txtNamaUser.Size = New System.Drawing.Size(374, 26)
         Me.txtNamaUser.TabIndex = 44
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 85)
+        Me.Label5.Location = New System.Drawing.Point(6, 80)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(98, 20)
         Me.Label5.TabIndex = 43
@@ -152,7 +166,7 @@ Partial Class FormMonitoringUserRequest
         Me.txtNoValidasi.Location = New System.Drawing.Point(120, 47)
         Me.txtNoValidasi.Name = "txtNoValidasi"
         Me.txtNoValidasi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNoValidasi.Size = New System.Drawing.Size(373, 26)
+        Me.txtNoValidasi.Size = New System.Drawing.Size(374, 26)
         Me.txtNoValidasi.TabIndex = 42
         '
         'Label4
@@ -161,9 +175,9 @@ Partial Class FormMonitoringUserRequest
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(6, 48)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(99, 20)
+        Me.Label4.Size = New System.Drawing.Size(104, 20)
         Me.Label4.TabIndex = 41
-        Me.Label4.Text = "No Validasi"
+        Me.Label4.Text = "No Request"
         '
         'Label3
         '
@@ -179,7 +193,7 @@ Partial Class FormMonitoringUserRequest
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(32, 10)
+        Me.Label2.Location = New System.Drawing.Point(6, 10)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(73, 20)
         Me.Label2.TabIndex = 39
@@ -199,7 +213,7 @@ Partial Class FormMonitoringUserRequest
         Me.cmdCari.ForeColor = System.Drawing.Color.White
         Me.cmdCari.Image = Nothing
         Me.cmdCari.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdCari.Location = New System.Drawing.Point(509, 10)
+        Me.cmdCari.Location = New System.Drawing.Point(533, 10)
         Me.cmdCari.Name = "cmdCari"
         Me.cmdCari.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdCari.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -208,7 +222,7 @@ Partial Class FormMonitoringUserRequest
         Me.cmdCari.OnHoverImage = Nothing
         Me.cmdCari.OnPressedColor = System.Drawing.Color.Black
         Me.cmdCari.Radius = 2
-        Me.cmdCari.Size = New System.Drawing.Size(137, 30)
+        Me.cmdCari.Size = New System.Drawing.Size(186, 58)
         Me.cmdCari.TabIndex = 38
         Me.cmdCari.Text = "Tampilkan Periode"
         Me.cmdCari.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -273,7 +287,7 @@ Partial Class FormMonitoringUserRequest
         Me.cmdCetakForm.ForeColor = System.Drawing.Color.White
         Me.cmdCetakForm.Image = Nothing
         Me.cmdCetakForm.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdCetakForm.Location = New System.Drawing.Point(564, 217)
+        Me.cmdCetakForm.Location = New System.Drawing.Point(633, 225)
         Me.cmdCetakForm.Name = "cmdCetakForm"
         Me.cmdCetakForm.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdCetakForm.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -301,7 +315,7 @@ Partial Class FormMonitoringUserRequest
         Me.cmdLihatDetail.ForeColor = System.Drawing.Color.White
         Me.cmdLihatDetail.Image = Nothing
         Me.cmdLihatDetail.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdLihatDetail.Location = New System.Drawing.Point(564, 177)
+        Me.cmdLihatDetail.Location = New System.Drawing.Point(633, 185)
         Me.cmdLihatDetail.Name = "cmdLihatDetail"
         Me.cmdLihatDetail.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdLihatDetail.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -329,7 +343,7 @@ Partial Class FormMonitoringUserRequest
         Me.cmdRefresh.ForeColor = System.Drawing.Color.White
         Me.cmdRefresh.Image = Nothing
         Me.cmdRefresh.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdRefresh.Location = New System.Drawing.Point(564, 138)
+        Me.cmdRefresh.Location = New System.Drawing.Point(633, 146)
         Me.cmdRefresh.Name = "cmdRefresh"
         Me.cmdRefresh.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdRefresh.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -338,7 +352,7 @@ Partial Class FormMonitoringUserRequest
         Me.cmdRefresh.OnHoverImage = Nothing
         Me.cmdRefresh.OnPressedColor = System.Drawing.Color.Black
         Me.cmdRefresh.Radius = 2
-        Me.cmdRefresh.Size = New System.Drawing.Size(108, 33)
+        Me.cmdRefresh.Size = New System.Drawing.Size(110, 33)
         Me.cmdRefresh.TabIndex = 37
         Me.cmdRefresh.Text = "Refresh"
         Me.cmdRefresh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -378,7 +392,7 @@ Partial Class FormMonitoringUserRequest
         Me.dgRequestMonitoring.ReadOnly = True
         Me.dgRequestMonitoring.RowHeadersVisible = False
         Me.dgRequestMonitoring.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgRequestMonitoring.Size = New System.Drawing.Size(542, 165)
+        Me.dgRequestMonitoring.Size = New System.Drawing.Size(611, 165)
         Me.dgRequestMonitoring.TabIndex = 0
         Me.dgRequestMonitoring.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
         Me.dgRequestMonitoring.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -425,7 +439,7 @@ Partial Class FormMonitoringUserRequest
         Me.GunaAdvenceButton1.ImageSize = New System.Drawing.Size(22, 22)
         Me.GunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.GunaAdvenceButton1.LineTop = 1
-        Me.GunaAdvenceButton1.Location = New System.Drawing.Point(564, 264)
+        Me.GunaAdvenceButton1.Location = New System.Drawing.Point(633, 264)
         Me.GunaAdvenceButton1.Name = "GunaAdvenceButton1"
         Me.GunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.GunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black
@@ -434,20 +448,20 @@ Partial Class FormMonitoringUserRequest
         Me.GunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.GunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black
         Me.GunaAdvenceButton1.OnPressedDepth = 0
-        Me.GunaAdvenceButton1.Size = New System.Drawing.Size(104, 39)
+        Me.GunaAdvenceButton1.Size = New System.Drawing.Size(108, 39)
         Me.GunaAdvenceButton1.TabIndex = 42
         Me.GunaAdvenceButton1.TextOffsetX = 10
         '
-        'FormMonitoringUserRequest
+        'FormMonitoringApprovalUserRequest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(699, 398)
+        Me.ClientSize = New System.Drawing.Size(768, 398)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FormMonitoringUserRequest"
+        Me.Name = "FormMonitoringApprovalUserRequest"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormMonitoringStatusValidasi"
         Me.GroupBox1.ResumeLayout(False)
@@ -478,4 +492,5 @@ Partial Class FormMonitoringUserRequest
     Friend WithEvents txtNoValidasi As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents GunaAdvenceButton1 As Guna.UI.WinForms.GunaAdvenceButton
+    Friend WithEvents ChkAllReqAndApproval As Guna.UI.WinForms.GunaCheckBox
 End Class

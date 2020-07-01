@@ -30,6 +30,9 @@ Public Class MonitoringDelivery
         command.Parameters.AddWithValue("@Cabang", "003")
         command.Parameters.AddWithValue("@Menu", "Header Transaksi Form Load")
         command.Parameters.AddWithValue("@NoStruk", "")
+
+        command.Parameters.AddWithValue("@From", "")
+        
         Dim table As New DataTable
         adapter.Fill(table)
         Me.dgDaftarDelivery.DataSource = table
@@ -52,6 +55,12 @@ Public Class MonitoringDelivery
         command.Parameters.AddWithValue("@Cabang", "003")
         command.Parameters.AddWithValue("@Menu", "Header TR")
         command.Parameters.AddWithValue("@NoStruk", "")
+        If cmbFromTransfer.Text = "" Then
+            command.Parameters.AddWithValue("@From", "")
+        Else
+            command.Parameters.AddWithValue("@From", cmbFromTransfer.SelectedValue)
+        End If
+
         Dim table As New DataTable
         adapter.Fill(table)
         Me.dgDaftarTransfer.DataSource = table
@@ -84,6 +93,9 @@ Public Class MonitoringDelivery
         command.Parameters.AddWithValue("@Cabang", "003")
         command.Parameters.AddWithValue("@Menu", "Header Transaksi")
         command.Parameters.AddWithValue("@NoStruk", "")
+
+        command.Parameters.AddWithValue("@From", "")
+
         Dim table As New DataTable
         adapter.Fill(table)
         Me.dgDaftarDelivery.DataSource = table
@@ -106,6 +118,11 @@ Public Class MonitoringDelivery
         command.Parameters.AddWithValue("@Cabang", "003")
         command.Parameters.AddWithValue("@Menu", "Header TR")
         command.Parameters.AddWithValue("@NoStruk", "")
+        If cmbFromTransfer.Text = "" Then
+            command.Parameters.AddWithValue("@From", "")
+        Else
+            command.Parameters.AddWithValue("@From", cmbFromTransfer.SelectedValue)
+        End If
         Dim table As New DataTable
         adapter.Fill(table)
         Me.dgDaftarTransfer.DataSource = table
@@ -129,6 +146,7 @@ Public Class MonitoringDelivery
         command.Parameters.AddWithValue("@Cabang", "003")
         command.Parameters.AddWithValue("@Menu", "Detail Transaksi")
         command.Parameters.AddWithValue("@NoStruk", dgDaftarDelivery.Item(0, dgDaftarDelivery.CurrentRow.Index).Value)
+        command.Parameters.AddWithValue("@From", "")
         Dim table As New DataTable
         adapter.Fill(table)
         Me.dgItemDelivery.DataSource = table
@@ -151,6 +169,7 @@ Public Class MonitoringDelivery
         command.Parameters.AddWithValue("@Cabang", "003")
         command.Parameters.AddWithValue("@Menu", "Detail TR")
         command.Parameters.AddWithValue("@NoStruk", dgDaftarTransfer.Item(0, dgDaftarTransfer.CurrentRow.Index).Value)
+        command.Parameters.AddWithValue("@From", "")
         Dim table As New DataTable
         adapter.Fill(table)
         Me.dgItemDelivery.DataSource = table
@@ -161,14 +180,21 @@ Public Class MonitoringDelivery
     End Sub
 
     Private Sub MonitoringDelivery_Move(sender As Object, e As EventArgs) Handles Me.Move
-        Dim p As Point
-        p = Me.Location
-
-        MenuUtama.lblMousePosition.Text = "Form Position : " & "X : " & p.X & "  Y : " & p.Y
+        ShowLocation(Me)
 
     End Sub
 
     Private Sub MonitoringDelivery_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-        MenuUtama.lblFormSize.Text = " Form Size Width: " & Me.Width.ToString & " Height:" & Me.Height.ToString
+        ShowLocation(Me)
     End Sub
+
+
+    Private Sub cmbFromTransaksi_Click(sender As Object, e As EventArgs)
+        LoadComboBoxDBLive(cmbFromTransaksi, "SELECT WhsCode,WhsCode FROM dbo.OWHS", "WhsCode", "WhsCode")
+    End Sub
+
+    Private Sub cmbFromTransfer_Click(sender As Object, e As EventArgs) Handles cmbFromTransfer.Click
+        LoadComboBoxDBLive(cmbFromTransfer, "SELECT WhsCode,WhsCode FROM dbo.OWHS", "WhsCode", "WhsCode")
+    End Sub
+
 End Class

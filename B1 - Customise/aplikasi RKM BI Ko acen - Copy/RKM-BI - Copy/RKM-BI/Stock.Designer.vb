@@ -467,7 +467,7 @@ Partial Class Stock
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Image = Global.RKM_BI.My.Resources.Resources.loading__1_
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(399, 114)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(1031, 497)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -478,12 +478,12 @@ Partial Class Stock
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyTableToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(134, 26)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(133, 26)
         '
         'CopyTableToolStripMenuItem
         '
         Me.CopyTableToolStripMenuItem.Name = "CopyTableToolStripMenuItem"
-        Me.CopyTableToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CopyTableToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.CopyTableToolStripMenuItem.Text = "Copy Table"
         '
         'Stock

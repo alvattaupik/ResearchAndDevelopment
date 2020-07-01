@@ -22,7 +22,10 @@ Partial Class FormBuatRequestCloseAndCancel
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormBuatRequestCloseAndCancel))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.cmbCabang = New Guna.UI.WinForms.GunaComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.GunaGradientButton2 = New Guna.UI.WinForms.GunaGradientButton()
         Me.cmdBrowseAttatchment = New Guna.UI.WinForms.GunaGradientButton()
         Me.txtPathAttachments = New Guna.UI.WinForms.GunaTextBox()
@@ -43,6 +46,8 @@ Partial Class FormBuatRequestCloseAndCancel
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GunaGradientButton1 = New Guna.UI.WinForms.GunaGradientButton()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtJumlahDokumen = New Guna.UI.WinForms.GunaTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtKodeKomponen = New Guna.UI.WinForms.GunaTextBox()
@@ -59,6 +64,8 @@ Partial Class FormBuatRequestCloseAndCancel
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.White
+        Me.GroupBox2.Controls.Add(Me.cmbCabang)
+        Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.GunaGradientButton2)
         Me.GroupBox2.Controls.Add(Me.cmdBrowseAttatchment)
         Me.GroupBox2.Controls.Add(Me.txtPathAttachments)
@@ -75,9 +82,38 @@ Partial Class FormBuatRequestCloseAndCancel
         Me.GroupBox2.Controls.Add(Me.txtNamaLengkap)
         Me.GroupBox2.Location = New System.Drawing.Point(5, 72)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(350, 234)
+        Me.GroupBox2.Size = New System.Drawing.Size(350, 276)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
+        '
+        'cmbCabang
+        '
+        Me.cmbCabang.BackColor = System.Drawing.Color.Transparent
+        Me.cmbCabang.BaseColor = System.Drawing.Color.White
+        Me.cmbCabang.BorderColor = System.Drawing.Color.Silver
+        Me.cmbCabang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbCabang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbCabang.FocusedColor = System.Drawing.Color.Empty
+        Me.cmbCabang.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmbCabang.ForeColor = System.Drawing.Color.Black
+        Me.cmbCabang.FormattingEnabled = True
+        Me.cmbCabang.Items.AddRange(New Object() {"CLOSE DOCUMENT", "CANCEL DOCUMENT"})
+        Me.cmbCabang.Location = New System.Drawing.Point(148, 196)
+        Me.cmbCabang.Name = "cmbCabang"
+        Me.cmbCabang.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbCabang.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.cmbCabang.Size = New System.Drawing.Size(192, 26)
+        Me.cmbCabang.TabIndex = 40
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(1, 198)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(130, 18)
+        Me.Label6.TabIndex = 39
+        Me.Label6.Text = "Cabang / Lokasi"
         '
         'GunaGradientButton2
         '
@@ -93,7 +129,7 @@ Partial Class FormBuatRequestCloseAndCancel
         Me.GunaGradientButton2.ForeColor = System.Drawing.Color.White
         Me.GunaGradientButton2.Image = Nothing
         Me.GunaGradientButton2.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaGradientButton2.Location = New System.Drawing.Point(261, 192)
+        Me.GunaGradientButton2.Location = New System.Drawing.Point(264, 236)
         Me.GunaGradientButton2.Name = "GunaGradientButton2"
         Me.GunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.GunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -161,7 +197,7 @@ Partial Class FormBuatRequestCloseAndCancel
         Me.txtKomponen.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtKomponen.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtKomponen.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtKomponen.Location = New System.Drawing.Point(148, 195)
+        Me.txtKomponen.Location = New System.Drawing.Point(148, 236)
         Me.txtKomponen.Name = "txtKomponen"
         Me.txtKomponen.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtKomponen.Size = New System.Drawing.Size(107, 26)
@@ -223,7 +259,7 @@ Partial Class FormBuatRequestCloseAndCancel
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(2, 203)
+        Me.Label8.Location = New System.Drawing.Point(7, 236)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(89, 18)
         Me.Label8.TabIndex = 6
@@ -260,8 +296,8 @@ Partial Class FormBuatRequestCloseAndCancel
         Me.cmbJenisRequest.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cmbJenisRequest.ForeColor = System.Drawing.Color.Black
         Me.cmbJenisRequest.FormattingEnabled = True
-        Me.cmbJenisRequest.Items.AddRange(New Object() {"CLOSE DOCUMENT", "CANCEL DOCUMENT"})
-        Me.cmbJenisRequest.Location = New System.Drawing.Point(149, 160)
+        Me.cmbJenisRequest.Items.AddRange(New Object() {"CLOSE DOCUMENT", "CANCEL DOCUMENT", "APPROVE DOCUMENT"})
+        Me.cmbJenisRequest.Location = New System.Drawing.Point(148, 163)
         Me.cmbJenisRequest.Name = "cmbJenisRequest"
         Me.cmbJenisRequest.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cmbJenisRequest.OnHoverItemForeColor = System.Drawing.Color.White
@@ -297,7 +333,7 @@ Partial Class FormBuatRequestCloseAndCancel
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(117, 15)
+        Me.Label14.Location = New System.Drawing.Point(76, 78)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(247, 13)
         Me.Label14.TabIndex = 16
@@ -307,7 +343,7 @@ Partial Class FormBuatRequestCloseAndCancel
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(4, 18)
+        Me.Label12.Location = New System.Drawing.Point(135, 60)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(107, 18)
         Me.Label12.TabIndex = 13
@@ -315,22 +351,24 @@ Partial Class FormBuatRequestCloseAndCancel
         '
         'txtPesan
         '
-        Me.txtPesan.Location = New System.Drawing.Point(120, 32)
+        Me.txtPesan.Location = New System.Drawing.Point(13, 94)
         Me.txtPesan.Name = "txtPesan"
-        Me.txtPesan.Size = New System.Drawing.Size(253, 140)
+        Me.txtPesan.Size = New System.Drawing.Size(360, 122)
         Me.txtPesan.TabIndex = 12
         Me.txtPesan.Text = ""
         '
         'GroupBox4
         '
         Me.GroupBox4.BackColor = System.Drawing.Color.White
+        Me.GroupBox4.Controls.Add(Me.txtJumlahDokumen)
+        Me.GroupBox4.Controls.Add(Me.Label7)
         Me.GroupBox4.Controls.Add(Me.GunaGradientButton1)
         Me.GroupBox4.Controls.Add(Me.Label12)
         Me.GroupBox4.Controls.Add(Me.Label14)
         Me.GroupBox4.Controls.Add(Me.txtPesan)
         Me.GroupBox4.Location = New System.Drawing.Point(362, 72)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(381, 234)
+        Me.GroupBox4.Size = New System.Drawing.Size(381, 276)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
         '
@@ -348,7 +386,7 @@ Partial Class FormBuatRequestCloseAndCancel
         Me.GunaGradientButton1.ForeColor = System.Drawing.Color.White
         Me.GunaGradientButton1.Image = Nothing
         Me.GunaGradientButton1.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaGradientButton1.Location = New System.Drawing.Point(13, 185)
+        Me.GunaGradientButton1.Location = New System.Drawing.Point(13, 227)
         Me.GunaGradientButton1.Name = "GunaGradientButton1"
         Me.GunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.GunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -365,6 +403,31 @@ Partial Class FormBuatRequestCloseAndCancel
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(6, 16)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(139, 18)
+        Me.Label7.TabIndex = 37
+        Me.Label7.Text = "Jumlah Dokumen"
+        '
+        'txtJumlahDokumen
+        '
+        Me.txtJumlahDokumen.BaseColor = System.Drawing.Color.White
+        Me.txtJumlahDokumen.BorderColor = System.Drawing.Color.Silver
+        Me.txtJumlahDokumen.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtJumlahDokumen.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtJumlahDokumen.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtJumlahDokumen.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtJumlahDokumen.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtJumlahDokumen.Location = New System.Drawing.Point(151, 15)
+        Me.txtJumlahDokumen.Name = "txtJumlahDokumen"
+        Me.txtJumlahDokumen.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtJumlahDokumen.Size = New System.Drawing.Size(222, 30)
+        Me.txtJumlahDokumen.TabIndex = 38
         '
         'GroupBox1
         '
@@ -460,11 +523,12 @@ Partial Class FormBuatRequestCloseAndCancel
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Khaki
-        Me.ClientSize = New System.Drawing.Size(750, 316)
+        Me.ClientSize = New System.Drawing.Size(750, 360)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormBuatRequestCloseAndCancel"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormValidasi"
@@ -478,7 +542,7 @@ Partial Class FormBuatRequestCloseAndCancel
         Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
 
-End Sub
+    End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
@@ -507,4 +571,8 @@ End Sub
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents GunaGradientButton2 As Guna.UI.WinForms.GunaGradientButton
+    Friend WithEvents cmbCabang As Guna.UI.WinForms.GunaComboBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents txtJumlahDokumen As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
 End Class

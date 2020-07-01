@@ -22,23 +22,23 @@ Partial Class FormMonitoringPeminjamanAset
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cmdClose = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.cmdBeritahuUser = New Guna.UI.WinForms.GunaGradientButton()
+        Me.cmdPengembalian = New Guna.UI.WinForms.GunaGradientButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.cmdCetakForm = New Guna.UI.WinForms.GunaGradientButton()
         Me.cmdLihatDetail = New Guna.UI.WinForms.GunaGradientButton()
         Me.dgRequestMonitoring = New Guna.UI.WinForms.GunaDataGridView()
-        Me.cmdPengembalian = New Guna.UI.WinForms.GunaGradientButton()
-        Me.cmdBeritahuUser = New Guna.UI.WinForms.GunaGradientButton()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.dgRequestMonitoring, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgRequestMonitoring, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -87,6 +87,72 @@ Partial Class FormMonitoringPeminjamanAset
         Me.GroupBox2.Size = New System.Drawing.Size(678, 251)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
+        '
+        'cmdBeritahuUser
+        '
+        Me.cmdBeritahuUser.AnimationHoverSpeed = 0.07!
+        Me.cmdBeritahuUser.AnimationSpeed = 0.03!
+        Me.cmdBeritahuUser.BackColor = System.Drawing.Color.Transparent
+        Me.cmdBeritahuUser.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
+        Me.cmdBeritahuUser.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.cmdBeritahuUser.BorderColor = System.Drawing.Color.Black
+        Me.cmdBeritahuUser.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.cmdBeritahuUser.FocusedColor = System.Drawing.Color.Empty
+        Me.cmdBeritahuUser.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmdBeritahuUser.ForeColor = System.Drawing.Color.White
+        Me.cmdBeritahuUser.Image = Nothing
+        Me.cmdBeritahuUser.ImageSize = New System.Drawing.Size(20, 20)
+        Me.cmdBeritahuUser.Location = New System.Drawing.Point(564, 97)
+        Me.cmdBeritahuUser.Name = "cmdBeritahuUser"
+        Me.cmdBeritahuUser.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.cmdBeritahuUser.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmdBeritahuUser.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.cmdBeritahuUser.OnHoverForeColor = System.Drawing.Color.White
+        Me.cmdBeritahuUser.OnHoverImage = Nothing
+        Me.cmdBeritahuUser.OnPressedColor = System.Drawing.Color.Black
+        Me.cmdBeritahuUser.Radius = 2
+        Me.cmdBeritahuUser.Size = New System.Drawing.Size(104, 33)
+        Me.cmdBeritahuUser.TabIndex = 45
+        Me.cmdBeritahuUser.Text = "Beritahu User"
+        Me.cmdBeritahuUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'cmdPengembalian
+        '
+        Me.cmdPengembalian.AnimationHoverSpeed = 0.07!
+        Me.cmdPengembalian.AnimationSpeed = 0.03!
+        Me.cmdPengembalian.BackColor = System.Drawing.Color.Transparent
+        Me.cmdPengembalian.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
+        Me.cmdPengembalian.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.cmdPengembalian.BorderColor = System.Drawing.Color.Black
+        Me.cmdPengembalian.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.cmdPengembalian.FocusedColor = System.Drawing.Color.Empty
+        Me.cmdPengembalian.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmdPengembalian.ForeColor = System.Drawing.Color.White
+        Me.cmdPengembalian.Image = Nothing
+        Me.cmdPengembalian.ImageSize = New System.Drawing.Size(20, 20)
+        Me.cmdPengembalian.Location = New System.Drawing.Point(564, 58)
+        Me.cmdPengembalian.Name = "cmdPengembalian"
+        Me.cmdPengembalian.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.cmdPengembalian.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmdPengembalian.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.cmdPengembalian.OnHoverForeColor = System.Drawing.Color.White
+        Me.cmdPengembalian.OnHoverImage = Nothing
+        Me.cmdPengembalian.OnPressedColor = System.Drawing.Color.Black
+        Me.cmdPengembalian.Radius = 2
+        Me.cmdPengembalian.Size = New System.Drawing.Size(104, 33)
+        Me.cmdPengembalian.TabIndex = 44
+        Me.cmdPengembalian.Text = "Pengembalian"
+        Me.cmdPengembalian.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.Monitoring_2
+        Me.PictureBox1.Location = New System.Drawing.Point(8, 21)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(168, 215)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 43
+        Me.PictureBox1.TabStop = False
         '
         'cmdCetakForm
         '
@@ -148,30 +214,30 @@ Partial Class FormMonitoringPeminjamanAset
         '
         Me.dgRequestMonitoring.AllowUserToAddRows = False
         Me.dgRequestMonitoring.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.dgRequestMonitoring.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgRequestMonitoring.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgRequestMonitoring.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgRequestMonitoring.BackgroundColor = System.Drawing.Color.DarkGray
         Me.dgRequestMonitoring.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgRequestMonitoring.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgRequestMonitoring.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgRequestMonitoring.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgRequestMonitoring.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgRequestMonitoring.ColumnHeadersHeight = 30
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgRequestMonitoring.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgRequestMonitoring.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgRequestMonitoring.EnableHeadersVisualStyles = False
         Me.dgRequestMonitoring.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgRequestMonitoring.Location = New System.Drawing.Point(183, 19)
@@ -204,72 +270,6 @@ Partial Class FormMonitoringPeminjamanAset
         Me.dgRequestMonitoring.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgRequestMonitoring.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'cmdPengembalian
-        '
-        Me.cmdPengembalian.AnimationHoverSpeed = 0.07!
-        Me.cmdPengembalian.AnimationSpeed = 0.03!
-        Me.cmdPengembalian.BackColor = System.Drawing.Color.Transparent
-        Me.cmdPengembalian.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
-        Me.cmdPengembalian.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.cmdPengembalian.BorderColor = System.Drawing.Color.Black
-        Me.cmdPengembalian.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.cmdPengembalian.FocusedColor = System.Drawing.Color.Empty
-        Me.cmdPengembalian.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmdPengembalian.ForeColor = System.Drawing.Color.White
-        Me.cmdPengembalian.Image = Nothing
-        Me.cmdPengembalian.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdPengembalian.Location = New System.Drawing.Point(564, 58)
-        Me.cmdPengembalian.Name = "cmdPengembalian"
-        Me.cmdPengembalian.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.cmdPengembalian.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmdPengembalian.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.cmdPengembalian.OnHoverForeColor = System.Drawing.Color.White
-        Me.cmdPengembalian.OnHoverImage = Nothing
-        Me.cmdPengembalian.OnPressedColor = System.Drawing.Color.Black
-        Me.cmdPengembalian.Radius = 2
-        Me.cmdPengembalian.Size = New System.Drawing.Size(104, 33)
-        Me.cmdPengembalian.TabIndex = 44
-        Me.cmdPengembalian.Text = "Pengembalian"
-        Me.cmdPengembalian.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmdBeritahuUser
-        '
-        Me.cmdBeritahuUser.AnimationHoverSpeed = 0.07!
-        Me.cmdBeritahuUser.AnimationSpeed = 0.03!
-        Me.cmdBeritahuUser.BackColor = System.Drawing.Color.Transparent
-        Me.cmdBeritahuUser.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
-        Me.cmdBeritahuUser.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.cmdBeritahuUser.BorderColor = System.Drawing.Color.Black
-        Me.cmdBeritahuUser.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.cmdBeritahuUser.FocusedColor = System.Drawing.Color.Empty
-        Me.cmdBeritahuUser.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmdBeritahuUser.ForeColor = System.Drawing.Color.White
-        Me.cmdBeritahuUser.Image = Nothing
-        Me.cmdBeritahuUser.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdBeritahuUser.Location = New System.Drawing.Point(564, 97)
-        Me.cmdBeritahuUser.Name = "cmdBeritahuUser"
-        Me.cmdBeritahuUser.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.cmdBeritahuUser.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmdBeritahuUser.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.cmdBeritahuUser.OnHoverForeColor = System.Drawing.Color.White
-        Me.cmdBeritahuUser.OnHoverImage = Nothing
-        Me.cmdBeritahuUser.OnPressedColor = System.Drawing.Color.Black
-        Me.cmdBeritahuUser.Radius = 2
-        Me.cmdBeritahuUser.Size = New System.Drawing.Size(104, 33)
-        Me.cmdBeritahuUser.TabIndex = 45
-        Me.cmdBeritahuUser.Text = "Beritahu User"
-        Me.cmdBeritahuUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.Monitoring_2
-        Me.PictureBox1.Location = New System.Drawing.Point(8, 21)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(168, 215)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 43
-        Me.PictureBox1.TabStop = False
-        '
         'FormMonitoringPeminjamanAset
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -285,8 +285,8 @@ Partial Class FormMonitoringPeminjamanAset
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.dgRequestMonitoring, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgRequestMonitoring, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

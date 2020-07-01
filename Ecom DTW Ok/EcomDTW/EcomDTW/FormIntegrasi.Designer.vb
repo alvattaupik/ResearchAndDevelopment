@@ -36,10 +36,9 @@ Partial Class FormIntegrasi
         Me.lblJumlahItem2 = New System.Windows.Forms.Label()
         Me.lblDari = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.BgWorker = New System.ComponentModel.BackgroundWorker()
         Me.cmdStopProses = New System.Windows.Forms.Button()
-        Me.lblStatus = New System.Windows.Forms.Label()
+        Me.lblStatusProses = New System.Windows.Forms.Label()
         CType(Me.dgListUpload, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,7 +108,7 @@ Partial Class FormIntegrasi
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(111, 6)
+        Me.Label1.Location = New System.Drawing.Point(129, 6)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(314, 33)
         Me.Label1.TabIndex = 10
@@ -167,13 +166,6 @@ Partial Class FormIntegrasi
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "Mengintegrasikan:"
         '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Location = New System.Drawing.Point(117, 46)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(308, 27)
-        Me.ProgressBar1.TabIndex = 16
-        '
         'BgWorker
         '
         Me.BgWorker.WorkerReportsProgress = True
@@ -189,24 +181,24 @@ Partial Class FormIntegrasi
         Me.cmdStopProses.Text = "Stop Proses"
         Me.cmdStopProses.UseVisualStyleBackColor = True
         '
-        'lblStatus
+        'lblStatusProses
         '
-        Me.lblStatus.AutoSize = True
-        Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStatus.Location = New System.Drawing.Point(117, 80)
-        Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(115, 18)
-        Me.lblStatus.TabIndex = 18
-        Me.lblStatus.Text = "Status Proses"
+        Me.lblStatusProses.AutoSize = True
+        Me.lblStatusProses.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStatusProses.Location = New System.Drawing.Point(183, 45)
+        Me.lblStatusProses.Name = "lblStatusProses"
+        Me.lblStatusProses.Size = New System.Drawing.Size(167, 16)
+        Me.lblStatusProses.TabIndex = 18
+        Me.lblStatusProses.Text = "Status Proses : 0 dari 0"
+        Me.lblStatusProses.Visible = False
         '
         'FormIntegrasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(862, 430)
-        Me.Controls.Add(Me.lblStatus)
+        Me.Controls.Add(Me.lblStatusProses)
         Me.Controls.Add(Me.cmdStopProses)
-        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lblDari)
         Me.Controls.Add(Me.lblJumlahItem2)
@@ -243,9 +235,8 @@ Partial Class FormIntegrasi
     Friend WithEvents lblJumlahItem2 As System.Windows.Forms.Label
     Friend WithEvents lblDari As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
     Friend WithEvents BgWorker As System.ComponentModel.BackgroundWorker
     Friend WithEvents cmdStopProses As System.Windows.Forms.Button
-    Friend WithEvents lblStatus As System.Windows.Forms.Label
+    Friend WithEvents lblStatusProses As System.Windows.Forms.Label
 
 End Class

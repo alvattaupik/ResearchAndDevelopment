@@ -22,9 +22,10 @@ Partial Class FormBuatBeritaAcaraSerahTerima
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormBuatBeritaAcaraSerahTerima))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -63,13 +64,13 @@ Partial Class FormBuatBeritaAcaraSerahTerima
         Me.LblPengirim = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtSupervisor = New Guna.UI.WinForms.GunaTextBox()
+        Me.GunaGradientButton3 = New Guna.UI.WinForms.GunaGradientButton()
+        Me.GunaGradientButton4 = New Guna.UI.WinForms.GunaGradientButton()
         Me.cmbBuatBaru = New Guna.UI.WinForms.GunaGradientButton()
         Me.GunaGradientButton2 = New Guna.UI.WinForms.GunaGradientButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.GunaGradientButton3 = New Guna.UI.WinForms.GunaGradientButton()
-        Me.GunaGradientButton4 = New Guna.UI.WinForms.GunaGradientButton()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -490,31 +491,31 @@ Partial Class FormBuatBeritaAcaraSerahTerima
         'dgItem
         '
         Me.dgItem.AllowUserToAddRows = False
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-        Me.dgItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgItem.BackgroundColor = System.Drawing.Color.DarkGray
         Me.dgItem.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgItem.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgItem.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgItem.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgItem.ColumnHeadersHeight = 21
         Me.dgItem.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.KodeBarang, Me.Deskripsi, Me.Qty, Me.Keterangan})
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgItem.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgItem.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgItem.EnableHeadersVisualStyles = False
         Me.dgItem.GridColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.dgItem.Location = New System.Drawing.Point(13, 20)
@@ -621,6 +622,62 @@ Partial Class FormBuatBeritaAcaraSerahTerima
         Me.txtSupervisor.Size = New System.Drawing.Size(198, 29)
         Me.txtSupervisor.TabIndex = 50
         '
+        'GunaGradientButton3
+        '
+        Me.GunaGradientButton3.AnimationHoverSpeed = 0.07!
+        Me.GunaGradientButton3.AnimationSpeed = 0.03!
+        Me.GunaGradientButton3.BackColor = System.Drawing.Color.Transparent
+        Me.GunaGradientButton3.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
+        Me.GunaGradientButton3.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.GunaGradientButton3.BorderColor = System.Drawing.Color.Black
+        Me.GunaGradientButton3.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.GunaGradientButton3.FocusedColor = System.Drawing.Color.Empty
+        Me.GunaGradientButton3.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.GunaGradientButton3.ForeColor = System.Drawing.Color.White
+        Me.GunaGradientButton3.Image = Nothing
+        Me.GunaGradientButton3.ImageSize = New System.Drawing.Size(20, 20)
+        Me.GunaGradientButton3.Location = New System.Drawing.Point(487, 592)
+        Me.GunaGradientButton3.Name = "GunaGradientButton3"
+        Me.GunaGradientButton3.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.GunaGradientButton3.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaGradientButton3.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.GunaGradientButton3.OnHoverForeColor = System.Drawing.Color.White
+        Me.GunaGradientButton3.OnHoverImage = Nothing
+        Me.GunaGradientButton3.OnPressedColor = System.Drawing.Color.Black
+        Me.GunaGradientButton3.Radius = 2
+        Me.GunaGradientButton3.Size = New System.Drawing.Size(292, 37)
+        Me.GunaGradientButton3.TabIndex = 62
+        Me.GunaGradientButton3.Text = "Setting Template"
+        Me.GunaGradientButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'GunaGradientButton4
+        '
+        Me.GunaGradientButton4.AnimationHoverSpeed = 0.07!
+        Me.GunaGradientButton4.AnimationSpeed = 0.03!
+        Me.GunaGradientButton4.BackColor = System.Drawing.Color.Transparent
+        Me.GunaGradientButton4.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
+        Me.GunaGradientButton4.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.GunaGradientButton4.BorderColor = System.Drawing.Color.Black
+        Me.GunaGradientButton4.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.GunaGradientButton4.FocusedColor = System.Drawing.Color.Empty
+        Me.GunaGradientButton4.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.GunaGradientButton4.ForeColor = System.Drawing.Color.White
+        Me.GunaGradientButton4.Image = Nothing
+        Me.GunaGradientButton4.ImageSize = New System.Drawing.Size(20, 20)
+        Me.GunaGradientButton4.Location = New System.Drawing.Point(487, 552)
+        Me.GunaGradientButton4.Name = "GunaGradientButton4"
+        Me.GunaGradientButton4.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.GunaGradientButton4.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaGradientButton4.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.GunaGradientButton4.OnHoverForeColor = System.Drawing.Color.White
+        Me.GunaGradientButton4.OnHoverImage = Nothing
+        Me.GunaGradientButton4.OnPressedColor = System.Drawing.Color.Black
+        Me.GunaGradientButton4.Radius = 2
+        Me.GunaGradientButton4.Size = New System.Drawing.Size(292, 33)
+        Me.GunaGradientButton4.TabIndex = 61
+        Me.GunaGradientButton4.Text = "Cetak"
+        Me.GunaGradientButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'cmbBuatBaru
         '
         Me.cmbBuatBaru.AnimationHoverSpeed = 0.07!
@@ -707,62 +764,6 @@ Partial Class FormBuatBeritaAcaraSerahTerima
         Me.PictureBox3.TabIndex = 5
         Me.PictureBox3.TabStop = False
         '
-        'GunaGradientButton3
-        '
-        Me.GunaGradientButton3.AnimationHoverSpeed = 0.07!
-        Me.GunaGradientButton3.AnimationSpeed = 0.03!
-        Me.GunaGradientButton3.BackColor = System.Drawing.Color.Transparent
-        Me.GunaGradientButton3.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
-        Me.GunaGradientButton3.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.GunaGradientButton3.BorderColor = System.Drawing.Color.Black
-        Me.GunaGradientButton3.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.GunaGradientButton3.FocusedColor = System.Drawing.Color.Empty
-        Me.GunaGradientButton3.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.GunaGradientButton3.ForeColor = System.Drawing.Color.White
-        Me.GunaGradientButton3.Image = Nothing
-        Me.GunaGradientButton3.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaGradientButton3.Location = New System.Drawing.Point(487, 592)
-        Me.GunaGradientButton3.Name = "GunaGradientButton3"
-        Me.GunaGradientButton3.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.GunaGradientButton3.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaGradientButton3.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.GunaGradientButton3.OnHoverForeColor = System.Drawing.Color.White
-        Me.GunaGradientButton3.OnHoverImage = Nothing
-        Me.GunaGradientButton3.OnPressedColor = System.Drawing.Color.Black
-        Me.GunaGradientButton3.Radius = 2
-        Me.GunaGradientButton3.Size = New System.Drawing.Size(292, 37)
-        Me.GunaGradientButton3.TabIndex = 62
-        Me.GunaGradientButton3.Text = "Setting Template"
-        Me.GunaGradientButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'GunaGradientButton4
-        '
-        Me.GunaGradientButton4.AnimationHoverSpeed = 0.07!
-        Me.GunaGradientButton4.AnimationSpeed = 0.03!
-        Me.GunaGradientButton4.BackColor = System.Drawing.Color.Transparent
-        Me.GunaGradientButton4.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
-        Me.GunaGradientButton4.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.GunaGradientButton4.BorderColor = System.Drawing.Color.Black
-        Me.GunaGradientButton4.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.GunaGradientButton4.FocusedColor = System.Drawing.Color.Empty
-        Me.GunaGradientButton4.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.GunaGradientButton4.ForeColor = System.Drawing.Color.White
-        Me.GunaGradientButton4.Image = Nothing
-        Me.GunaGradientButton4.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaGradientButton4.Location = New System.Drawing.Point(487, 552)
-        Me.GunaGradientButton4.Name = "GunaGradientButton4"
-        Me.GunaGradientButton4.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.GunaGradientButton4.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaGradientButton4.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.GunaGradientButton4.OnHoverForeColor = System.Drawing.Color.White
-        Me.GunaGradientButton4.OnHoverImage = Nothing
-        Me.GunaGradientButton4.OnPressedColor = System.Drawing.Color.Black
-        Me.GunaGradientButton4.Radius = 2
-        Me.GunaGradientButton4.Size = New System.Drawing.Size(292, 33)
-        Me.GunaGradientButton4.TabIndex = 61
-        Me.GunaGradientButton4.Text = "Cetak"
-        Me.GunaGradientButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'FormBuatBeritaAcaraSerahTerima
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -781,6 +782,7 @@ Partial Class FormBuatBeritaAcaraSerahTerima
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "FormBuatBeritaAcaraSerahTerima"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

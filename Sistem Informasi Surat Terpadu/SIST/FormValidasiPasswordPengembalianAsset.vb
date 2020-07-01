@@ -59,9 +59,8 @@ Lanjut:
                 cmd.ExecuteNonQuery()
 
 
-                FormProsesDetailMonitoringPeminjaman.LoadDetailValidasi()
+                FormProsesPeminjamanAsset.LoadDetailValidasi()
                 MsgBox("Proses Pengembalian Sukses Disimpan", vbInformation, "Pengembalian")
-                FormProsesDetailMonitoringPeminjaman.LoadDetailValidasi()
                 FormMonitoringPeminjamanAset.BelumKembali()
                 Me.Dispose()
             Else

@@ -218,7 +218,7 @@ Partial Class FormLogin
         Me.GunaLabel5.AutoSize = True
         Me.GunaLabel5.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel5.ForeColor = System.Drawing.Color.White
-        Me.GunaLabel5.Location = New System.Drawing.Point(174, 9)
+        Me.GunaLabel5.Location = New System.Drawing.Point(200, 26)
         Me.GunaLabel5.Name = "GunaLabel5"
         Me.GunaLabel5.Size = New System.Drawing.Size(172, 32)
         Me.GunaLabel5.TabIndex = 40
@@ -229,7 +229,7 @@ Partial Class FormLogin
         Me.GunaLabel6.AutoSize = True
         Me.GunaLabel6.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GunaLabel6.ForeColor = System.Drawing.Color.White
-        Me.GunaLabel6.Location = New System.Drawing.Point(182, 43)
+        Me.GunaLabel6.Location = New System.Drawing.Point(201, 58)
         Me.GunaLabel6.Name = "GunaLabel6"
         Me.GunaLabel6.Size = New System.Drawing.Size(156, 20)
         Me.GunaLabel6.TabIndex = 41

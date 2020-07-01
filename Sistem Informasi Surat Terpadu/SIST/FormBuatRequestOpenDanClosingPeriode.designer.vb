@@ -23,25 +23,41 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.cmdInputPeriode = New Guna.UI.WinForms.GunaGradientButton()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.GunaLinePanel1 = New Guna.UI.WinForms.GunaLinePanel()
+        Me.cmbCabang = New Guna.UI.WinForms.GunaComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.GunaGradientButton2 = New Guna.UI.WinForms.GunaGradientButton()
+        Me.txtKomponen = New Guna.UI.WinForms.GunaTextBox()
+        Me.txtNamaSupervisor = New Guna.UI.WinForms.GunaTextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtDivisi = New Guna.UI.WinForms.GunaTextBox()
+        Me.cmbJenisRequest = New Guna.UI.WinForms.GunaComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtNamaLengkap = New Guna.UI.WinForms.GunaTextBox()
         Me.cmdBrowseAttatchment = New Guna.UI.WinForms.GunaGradientButton()
         Me.txtPathAttachments = New Guna.UI.WinForms.GunaTextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.txtNamaSupervisor = New Guna.UI.WinForms.GunaTextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtDivisi = New Guna.UI.WinForms.GunaTextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtNamaLengkap = New Guna.UI.WinForms.GunaTextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtPesan = New System.Windows.Forms.RichTextBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.JamAkhir = New System.Windows.Forms.DateTimePicker()
+        Me.JamAwal = New System.Windows.Forms.DateTimePicker()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.GunaGradientButton1 = New Guna.UI.WinForms.GunaGradientButton()
-        Me.txtKomponen = New Guna.UI.WinForms.GunaTextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.cmbJenisRequest = New Guna.UI.WinForms.GunaComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.dgDaftarPeriode = New System.Windows.Forms.DataGridView()
+        Me.AbsEntry = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Periode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cmdRemove = New System.Windows.Forms.Button()
+        Me.lblJumlahPeriode = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtKodeKomponen = New Guna.UI.WinForms.GunaTextBox()
@@ -49,9 +65,9 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.lblKdJenisSurat = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GunaGradientButton2 = New Guna.UI.WinForms.GunaGradientButton()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.dgDaftarPeriode, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
@@ -59,11 +75,13 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.White
+        Me.GroupBox2.Controls.Add(Me.cmdInputPeriode)
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.GunaLinePanel1)
+        Me.GroupBox2.Controls.Add(Me.cmbCabang)
+        Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.GunaGradientButton2)
-        Me.GroupBox2.Controls.Add(Me.cmdBrowseAttatchment)
-        Me.GroupBox2.Controls.Add(Me.txtPathAttachments)
         Me.GroupBox2.Controls.Add(Me.txtKomponen)
-        Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Controls.Add(Me.txtNamaSupervisor)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label8)
@@ -73,11 +91,249 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.txtNamaLengkap)
-        Me.GroupBox2.Location = New System.Drawing.Point(5, 74)
+        Me.GroupBox2.Location = New System.Drawing.Point(5, 72)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(373, 221)
+        Me.GroupBox2.Size = New System.Drawing.Size(373, 268)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
+        '
+        'cmdInputPeriode
+        '
+        Me.cmdInputPeriode.AnimationHoverSpeed = 0.07!
+        Me.cmdInputPeriode.AnimationSpeed = 0.03!
+        Me.cmdInputPeriode.BackColor = System.Drawing.Color.Transparent
+        Me.cmdInputPeriode.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
+        Me.cmdInputPeriode.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.cmdInputPeriode.BorderColor = System.Drawing.Color.Black
+        Me.cmdInputPeriode.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.cmdInputPeriode.FocusedColor = System.Drawing.Color.Empty
+        Me.cmdInputPeriode.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdInputPeriode.ForeColor = System.Drawing.Color.White
+        Me.cmdInputPeriode.Image = Nothing
+        Me.cmdInputPeriode.ImageSize = New System.Drawing.Size(20, 20)
+        Me.cmdInputPeriode.Location = New System.Drawing.Point(146, 236)
+        Me.cmdInputPeriode.Name = "cmdInputPeriode"
+        Me.cmdInputPeriode.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.cmdInputPeriode.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmdInputPeriode.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.cmdInputPeriode.OnHoverForeColor = System.Drawing.Color.White
+        Me.cmdInputPeriode.OnHoverImage = Nothing
+        Me.cmdInputPeriode.OnPressedColor = System.Drawing.Color.Black
+        Me.cmdInputPeriode.Radius = 2
+        Me.cmdInputPeriode.Size = New System.Drawing.Size(215, 30)
+        Me.cmdInputPeriode.TabIndex = 43
+        Me.cmdInputPeriode.Text = "Input Periode"
+        Me.cmdInputPeriode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(7, 241)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(66, 18)
+        Me.Label7.TabIndex = 42
+        Me.Label7.Text = "Periode"
+        '
+        'GunaLinePanel1
+        '
+        Me.GunaLinePanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaLinePanel1.LineColor = System.Drawing.Color.Black
+        Me.GunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None
+        Me.GunaLinePanel1.Location = New System.Drawing.Point(3, 122)
+        Me.GunaLinePanel1.Name = "GunaLinePanel1"
+        Me.GunaLinePanel1.Size = New System.Drawing.Size(369, 11)
+        Me.GunaLinePanel1.TabIndex = 41
+        '
+        'cmbCabang
+        '
+        Me.cmbCabang.BackColor = System.Drawing.Color.Transparent
+        Me.cmbCabang.BaseColor = System.Drawing.Color.White
+        Me.cmbCabang.BorderColor = System.Drawing.Color.Silver
+        Me.cmbCabang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbCabang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbCabang.FocusedColor = System.Drawing.Color.Empty
+        Me.cmbCabang.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmbCabang.ForeColor = System.Drawing.Color.Black
+        Me.cmbCabang.FormattingEnabled = True
+        Me.cmbCabang.Items.AddRange(New Object() {"OPEN PERIODE", "CLOSING PERIODE"})
+        Me.cmbCabang.Location = New System.Drawing.Point(146, 170)
+        Me.cmbCabang.Name = "cmbCabang"
+        Me.cmbCabang.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbCabang.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.cmbCabang.Size = New System.Drawing.Size(215, 26)
+        Me.cmbCabang.TabIndex = 40
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(5, 173)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(125, 18)
+        Me.Label6.TabIndex = 39
+        Me.Label6.Text = "Cabang/ Lokasi"
+        '
+        'GunaGradientButton2
+        '
+        Me.GunaGradientButton2.AnimationHoverSpeed = 0.07!
+        Me.GunaGradientButton2.AnimationSpeed = 0.03!
+        Me.GunaGradientButton2.BackColor = System.Drawing.Color.Transparent
+        Me.GunaGradientButton2.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
+        Me.GunaGradientButton2.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.GunaGradientButton2.BorderColor = System.Drawing.Color.Black
+        Me.GunaGradientButton2.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.GunaGradientButton2.FocusedColor = System.Drawing.Color.Empty
+        Me.GunaGradientButton2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaGradientButton2.ForeColor = System.Drawing.Color.White
+        Me.GunaGradientButton2.Image = Nothing
+        Me.GunaGradientButton2.ImageSize = New System.Drawing.Size(20, 20)
+        Me.GunaGradientButton2.Location = New System.Drawing.Point(261, 201)
+        Me.GunaGradientButton2.Name = "GunaGradientButton2"
+        Me.GunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.GunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaGradientButton2.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.GunaGradientButton2.OnHoverForeColor = System.Drawing.Color.White
+        Me.GunaGradientButton2.OnHoverImage = Nothing
+        Me.GunaGradientButton2.OnPressedColor = System.Drawing.Color.Black
+        Me.GunaGradientButton2.Radius = 2
+        Me.GunaGradientButton2.Size = New System.Drawing.Size(100, 30)
+        Me.GunaGradientButton2.TabIndex = 38
+        Me.GunaGradientButton2.Text = "Browse"
+        Me.GunaGradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtKomponen
+        '
+        Me.txtKomponen.BaseColor = System.Drawing.Color.White
+        Me.txtKomponen.BorderColor = System.Drawing.Color.Silver
+        Me.txtKomponen.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtKomponen.Enabled = False
+        Me.txtKomponen.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtKomponen.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtKomponen.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtKomponen.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtKomponen.Location = New System.Drawing.Point(146, 202)
+        Me.txtKomponen.Name = "txtKomponen"
+        Me.txtKomponen.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtKomponen.Size = New System.Drawing.Size(109, 26)
+        Me.txtKomponen.TabIndex = 16
+        '
+        'txtNamaSupervisor
+        '
+        Me.txtNamaSupervisor.BaseColor = System.Drawing.Color.White
+        Me.txtNamaSupervisor.BorderColor = System.Drawing.Color.Silver
+        Me.txtNamaSupervisor.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtNamaSupervisor.Enabled = False
+        Me.txtNamaSupervisor.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtNamaSupervisor.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtNamaSupervisor.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtNamaSupervisor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtNamaSupervisor.Location = New System.Drawing.Point(146, 84)
+        Me.txtNamaSupervisor.Name = "txtNamaSupervisor"
+        Me.txtNamaSupervisor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNamaSupervisor.Size = New System.Drawing.Size(215, 30)
+        Me.txtNamaSupervisor.TabIndex = 5
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(5, 84)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(138, 18)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Nama Supervisor"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(5, 210)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(89, 18)
+        Me.Label8.TabIndex = 6
+        Me.Label8.Text = "Komponen"
+        '
+        'txtDivisi
+        '
+        Me.txtDivisi.BaseColor = System.Drawing.Color.White
+        Me.txtDivisi.BorderColor = System.Drawing.Color.Silver
+        Me.txtDivisi.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtDivisi.Enabled = False
+        Me.txtDivisi.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtDivisi.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtDivisi.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtDivisi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtDivisi.Location = New System.Drawing.Point(146, 51)
+        Me.txtDivisi.Name = "txtDivisi"
+        Me.txtDivisi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtDivisi.Size = New System.Drawing.Size(215, 30)
+        Me.txtDivisi.TabIndex = 3
+        '
+        'cmbJenisRequest
+        '
+        Me.cmbJenisRequest.BackColor = System.Drawing.Color.Transparent
+        Me.cmbJenisRequest.BaseColor = System.Drawing.Color.White
+        Me.cmbJenisRequest.BorderColor = System.Drawing.Color.Silver
+        Me.cmbJenisRequest.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbJenisRequest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbJenisRequest.FocusedColor = System.Drawing.Color.Empty
+        Me.cmbJenisRequest.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmbJenisRequest.ForeColor = System.Drawing.Color.Black
+        Me.cmbJenisRequest.FormattingEnabled = True
+        Me.cmbJenisRequest.Items.AddRange(New Object() {"OPEN PERIODE", "CLOSING PERIODE"})
+        Me.cmbJenisRequest.Location = New System.Drawing.Point(146, 138)
+        Me.cmbJenisRequest.Name = "cmbJenisRequest"
+        Me.cmbJenisRequest.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbJenisRequest.OnHoverItemForeColor = System.Drawing.Color.White
+        Me.cmbJenisRequest.Size = New System.Drawing.Size(215, 26)
+        Me.cmbJenisRequest.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(5, 45)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(49, 18)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Divisi"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(6, 14)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(120, 18)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Nama Lengkap"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(2, 140)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(115, 18)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Jenis Request"
+        '
+        'txtNamaLengkap
+        '
+        Me.txtNamaLengkap.BaseColor = System.Drawing.Color.White
+        Me.txtNamaLengkap.BorderColor = System.Drawing.Color.Silver
+        Me.txtNamaLengkap.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtNamaLengkap.Enabled = False
+        Me.txtNamaLengkap.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtNamaLengkap.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtNamaLengkap.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtNamaLengkap.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtNamaLengkap.Location = New System.Drawing.Point(146, 15)
+        Me.txtNamaLengkap.Name = "txtNamaLengkap"
+        Me.txtNamaLengkap.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNamaLengkap.Size = New System.Drawing.Size(215, 30)
+        Me.txtNamaLengkap.TabIndex = 0
         '
         'cmdBrowseAttatchment
         '
@@ -93,7 +349,7 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
         Me.cmdBrowseAttatchment.ForeColor = System.Drawing.Color.White
         Me.cmdBrowseAttatchment.Image = Nothing
         Me.cmdBrowseAttatchment.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdBrowseAttatchment.Location = New System.Drawing.Point(261, 116)
+        Me.cmdBrowseAttatchment.Location = New System.Drawing.Point(269, 207)
         Me.cmdBrowseAttatchment.Name = "cmdBrowseAttatchment"
         Me.cmdBrowseAttatchment.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdBrowseAttatchment.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -117,99 +373,21 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
         Me.txtPathAttachments.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPathAttachments.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtPathAttachments.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtPathAttachments.Location = New System.Drawing.Point(149, 116)
+        Me.txtPathAttachments.Location = New System.Drawing.Point(125, 207)
         Me.txtPathAttachments.Name = "txtPathAttachments"
         Me.txtPathAttachments.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtPathAttachments.Size = New System.Drawing.Size(109, 30)
+        Me.txtPathAttachments.Size = New System.Drawing.Size(138, 30)
         Me.txtPathAttachments.TabIndex = 18
         '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(6, 116)
+        Me.Label15.Location = New System.Drawing.Point(6, 210)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(92, 18)
+        Me.Label15.Size = New System.Drawing.Size(77, 18)
         Me.Label15.TabIndex = 17
-        Me.Label15.Text = "Attachment"
-        '
-        'txtNamaSupervisor
-        '
-        Me.txtNamaSupervisor.BaseColor = System.Drawing.Color.White
-        Me.txtNamaSupervisor.BorderColor = System.Drawing.Color.Silver
-        Me.txtNamaSupervisor.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtNamaSupervisor.Enabled = False
-        Me.txtNamaSupervisor.FocusedBaseColor = System.Drawing.Color.White
-        Me.txtNamaSupervisor.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNamaSupervisor.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.txtNamaSupervisor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtNamaSupervisor.Location = New System.Drawing.Point(149, 84)
-        Me.txtNamaSupervisor.Name = "txtNamaSupervisor"
-        Me.txtNamaSupervisor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNamaSupervisor.Size = New System.Drawing.Size(212, 30)
-        Me.txtNamaSupervisor.TabIndex = 5
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(5, 84)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(138, 18)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Nama Supervisor"
-        '
-        'txtDivisi
-        '
-        Me.txtDivisi.BaseColor = System.Drawing.Color.White
-        Me.txtDivisi.BorderColor = System.Drawing.Color.Silver
-        Me.txtDivisi.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtDivisi.Enabled = False
-        Me.txtDivisi.FocusedBaseColor = System.Drawing.Color.White
-        Me.txtDivisi.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtDivisi.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.txtDivisi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtDivisi.Location = New System.Drawing.Point(149, 51)
-        Me.txtDivisi.Name = "txtDivisi"
-        Me.txtDivisi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtDivisi.Size = New System.Drawing.Size(212, 30)
-        Me.txtDivisi.TabIndex = 3
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(5, 45)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 18)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Divisi"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 14)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(120, 18)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Nama Lengkap"
-        '
-        'txtNamaLengkap
-        '
-        Me.txtNamaLengkap.BaseColor = System.Drawing.Color.White
-        Me.txtNamaLengkap.BorderColor = System.Drawing.Color.Silver
-        Me.txtNamaLengkap.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtNamaLengkap.Enabled = False
-        Me.txtNamaLengkap.FocusedBaseColor = System.Drawing.Color.White
-        Me.txtNamaLengkap.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNamaLengkap.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.txtNamaLengkap.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtNamaLengkap.Location = New System.Drawing.Point(149, 15)
-        Me.txtNamaLengkap.Name = "txtNamaLengkap"
-        Me.txtNamaLengkap.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNamaLengkap.Size = New System.Drawing.Size(212, 30)
-        Me.txtNamaLengkap.TabIndex = 0
+        Me.Label15.Text = "Lampiran"
         '
         'Label14
         '
@@ -232,24 +410,69 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
         '
         'txtPesan
         '
-        Me.txtPesan.Location = New System.Drawing.Point(125, 32)
+        Me.txtPesan.Location = New System.Drawing.Point(125, 44)
         Me.txtPesan.Name = "txtPesan"
-        Me.txtPesan.Size = New System.Drawing.Size(233, 139)
+        Me.txtPesan.Size = New System.Drawing.Size(244, 143)
         Me.txtPesan.TabIndex = 12
         Me.txtPesan.Text = ""
         '
         'GroupBox4
         '
         Me.GroupBox4.BackColor = System.Drawing.Color.White
+        Me.GroupBox4.Controls.Add(Me.JamAkhir)
+        Me.GroupBox4.Controls.Add(Me.JamAwal)
+        Me.GroupBox4.Controls.Add(Me.Label10)
+        Me.GroupBox4.Controls.Add(Me.Label9)
         Me.GroupBox4.Controls.Add(Me.GunaGradientButton1)
         Me.GroupBox4.Controls.Add(Me.Label12)
         Me.GroupBox4.Controls.Add(Me.Label14)
+        Me.GroupBox4.Controls.Add(Me.txtPathAttachments)
+        Me.GroupBox4.Controls.Add(Me.Label15)
+        Me.GroupBox4.Controls.Add(Me.cmdBrowseAttatchment)
         Me.GroupBox4.Controls.Add(Me.txtPesan)
         Me.GroupBox4.Location = New System.Drawing.Point(384, 75)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(377, 223)
+        Me.GroupBox4.Size = New System.Drawing.Size(377, 410)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
+        '
+        'JamAkhir
+        '
+        Me.JamAkhir.CustomFormat = "H:mm"
+        Me.JamAkhir.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.JamAkhir.Location = New System.Drawing.Point(235, 260)
+        Me.JamAkhir.Name = "JamAkhir"
+        Me.JamAkhir.Size = New System.Drawing.Size(134, 20)
+        Me.JamAkhir.TabIndex = 41
+        '
+        'JamAwal
+        '
+        Me.JamAwal.CustomFormat = ""
+        Me.JamAwal.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.JamAwal.Location = New System.Drawing.Point(73, 260)
+        Me.JamAwal.Name = "JamAwal"
+        Me.JamAwal.Size = New System.Drawing.Size(114, 20)
+        Me.JamAwal.TabIndex = 40
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(193, 262)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(36, 18)
+        Me.Label10.TabIndex = 39
+        Me.Label10.Text = "S/D"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(6, 259)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(57, 18)
+        Me.Label9.TabIndex = 38
+        Me.Label9.Text = "Durasi"
         '
         'GunaGradientButton1
         '
@@ -265,7 +488,7 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
         Me.GunaGradientButton1.ForeColor = System.Drawing.Color.White
         Me.GunaGradientButton1.Image = Nothing
         Me.GunaGradientButton1.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaGradientButton1.Location = New System.Drawing.Point(6, 177)
+        Me.GunaGradientButton1.Location = New System.Drawing.Point(6, 337)
         Me.GunaGradientButton1.Name = "GunaGradientButton1"
         Me.GunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.GunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -274,69 +497,62 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
         Me.GunaGradientButton1.OnHoverImage = Nothing
         Me.GunaGradientButton1.OnPressedColor = System.Drawing.Color.Black
         Me.GunaGradientButton1.Radius = 2
-        Me.GunaGradientButton1.Size = New System.Drawing.Size(363, 34)
+        Me.GunaGradientButton1.Size = New System.Drawing.Size(363, 67)
         Me.GunaGradientButton1.TabIndex = 36
         Me.GunaGradientButton1.Text = "Kirim Permintaan"
         Me.GunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'txtKomponen
-        '
-        Me.txtKomponen.BaseColor = System.Drawing.Color.White
-        Me.txtKomponen.BorderColor = System.Drawing.Color.Silver
-        Me.txtKomponen.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtKomponen.Enabled = False
-        Me.txtKomponen.FocusedBaseColor = System.Drawing.Color.White
-        Me.txtKomponen.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtKomponen.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.txtKomponen.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtKomponen.Location = New System.Drawing.Point(149, 187)
-        Me.txtKomponen.Name = "txtKomponen"
-        Me.txtKomponen.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtKomponen.Size = New System.Drawing.Size(109, 26)
-        Me.txtKomponen.TabIndex = 16
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(9, 195)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(89, 18)
-        Me.Label8.TabIndex = 6
-        Me.Label8.Text = "Komponen"
-        '
-        'cmbJenisRequest
-        '
-        Me.cmbJenisRequest.BackColor = System.Drawing.Color.Transparent
-        Me.cmbJenisRequest.BaseColor = System.Drawing.Color.White
-        Me.cmbJenisRequest.BorderColor = System.Drawing.Color.Silver
-        Me.cmbJenisRequest.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmbJenisRequest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbJenisRequest.FocusedColor = System.Drawing.Color.Empty
-        Me.cmbJenisRequest.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmbJenisRequest.ForeColor = System.Drawing.Color.Black
-        Me.cmbJenisRequest.FormattingEnabled = True
-        Me.cmbJenisRequest.Items.AddRange(New Object() {"OPEN PERIODE", "CLOSING PERIODE"})
-        Me.cmbJenisRequest.Location = New System.Drawing.Point(149, 153)
-        Me.cmbJenisRequest.Name = "cmbJenisRequest"
-        Me.cmbJenisRequest.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbJenisRequest.OnHoverItemForeColor = System.Drawing.Color.White
-        Me.cmbJenisRequest.Size = New System.Drawing.Size(212, 26)
-        Me.cmbJenisRequest.TabIndex = 6
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(2, 153)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(115, 18)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Jenis Request"
-        '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'dgDaftarPeriode
+        '
+        Me.dgDaftarPeriode.AllowUserToAddRows = False
+        Me.dgDaftarPeriode.AllowUserToDeleteRows = False
+        Me.dgDaftarPeriode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgDaftarPeriode.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.AbsEntry, Me.Periode, Me.Status})
+        Me.dgDaftarPeriode.Location = New System.Drawing.Point(5, 347)
+        Me.dgDaftarPeriode.Name = "dgDaftarPeriode"
+        Me.dgDaftarPeriode.ReadOnly = True
+        Me.dgDaftarPeriode.Size = New System.Drawing.Size(281, 122)
+        Me.dgDaftarPeriode.TabIndex = 4
+        '
+        'AbsEntry
+        '
+        Me.AbsEntry.HeaderText = "AbsEntry"
+        Me.AbsEntry.Name = "AbsEntry"
+        Me.AbsEntry.ReadOnly = True
+        '
+        'Periode
+        '
+        Me.Periode.HeaderText = "Periode"
+        Me.Periode.Name = "Periode"
+        Me.Periode.ReadOnly = True
+        '
+        'Status
+        '
+        Me.Status.HeaderText = "Status"
+        Me.Status.Name = "Status"
+        Me.Status.ReadOnly = True
+        '
+        'cmdRemove
+        '
+        Me.cmdRemove.Location = New System.Drawing.Point(294, 347)
+        Me.cmdRemove.Name = "cmdRemove"
+        Me.cmdRemove.Size = New System.Drawing.Size(83, 122)
+        Me.cmdRemove.TabIndex = 5
+        Me.cmdRemove.Text = "Hapus"
+        Me.cmdRemove.UseVisualStyleBackColor = True
+        '
+        'lblJumlahPeriode
+        '
+        Me.lblJumlahPeriode.AutoSize = True
+        Me.lblJumlahPeriode.Location = New System.Drawing.Point(5, 471)
+        Me.lblJumlahPeriode.Name = "lblJumlahPeriode"
+        Me.lblJumlahPeriode.Size = New System.Drawing.Size(94, 13)
+        Me.lblJumlahPeriode.TabIndex = 6
+        Me.lblJumlahPeriode.Text = "Jumlah Periode : 0"
         '
         'GroupBox1
         '
@@ -391,7 +607,7 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
         Me.txtNoValidasi.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNoValidasi.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtNoValidasi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtNoValidasi.Location = New System.Drawing.Point(283, 30)
+        Me.txtNoValidasi.Location = New System.Drawing.Point(224, 30)
         Me.txtNoValidasi.Name = "txtNoValidasi"
         Me.txtNoValidasi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtNoValidasi.Size = New System.Drawing.Size(254, 30)
@@ -427,40 +643,15 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "FORM REQUEST OPEN CLOSE POSTING PERIODE"
         '
-        'GunaGradientButton2
-        '
-        Me.GunaGradientButton2.AnimationHoverSpeed = 0.07!
-        Me.GunaGradientButton2.AnimationSpeed = 0.03!
-        Me.GunaGradientButton2.BackColor = System.Drawing.Color.Transparent
-        Me.GunaGradientButton2.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
-        Me.GunaGradientButton2.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.GunaGradientButton2.BorderColor = System.Drawing.Color.Black
-        Me.GunaGradientButton2.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.GunaGradientButton2.FocusedColor = System.Drawing.Color.Empty
-        Me.GunaGradientButton2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaGradientButton2.ForeColor = System.Drawing.Color.White
-        Me.GunaGradientButton2.Image = Nothing
-        Me.GunaGradientButton2.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaGradientButton2.Location = New System.Drawing.Point(261, 185)
-        Me.GunaGradientButton2.Name = "GunaGradientButton2"
-        Me.GunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.GunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaGradientButton2.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.GunaGradientButton2.OnHoverForeColor = System.Drawing.Color.White
-        Me.GunaGradientButton2.OnHoverImage = Nothing
-        Me.GunaGradientButton2.OnPressedColor = System.Drawing.Color.Black
-        Me.GunaGradientButton2.Radius = 2
-        Me.GunaGradientButton2.Size = New System.Drawing.Size(100, 30)
-        Me.GunaGradientButton2.TabIndex = 38
-        Me.GunaGradientButton2.Text = "Browse"
-        Me.GunaGradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'FormBuatRequestOpenDanClosingPeriode
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Moccasin
-        Me.ClientSize = New System.Drawing.Size(765, 303)
+        Me.ClientSize = New System.Drawing.Size(779, 487)
+        Me.Controls.Add(Me.lblJumlahPeriode)
+        Me.Controls.Add(Me.cmdRemove)
+        Me.Controls.Add(Me.dgDaftarPeriode)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -472,11 +663,13 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
         Me.GroupBox2.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.dgDaftarPeriode, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
@@ -507,4 +700,19 @@ Partial Class FormBuatRequestOpenDanClosingPeriode
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents GunaGradientButton2 As Guna.UI.WinForms.GunaGradientButton
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents cmbCabang As Guna.UI.WinForms.GunaComboBox
+    Friend WithEvents cmdInputPeriode As Guna.UI.WinForms.GunaGradientButton
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents GunaLinePanel1 As Guna.UI.WinForms.GunaLinePanel
+    Friend WithEvents dgDaftarPeriode As System.Windows.Forms.DataGridView
+    Friend WithEvents cmdRemove As System.Windows.Forms.Button
+    Friend WithEvents lblJumlahPeriode As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents JamAkhir As System.Windows.Forms.DateTimePicker
+    Friend WithEvents JamAwal As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents AbsEntry As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Periode As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Status As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

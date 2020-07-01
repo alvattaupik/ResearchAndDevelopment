@@ -29,10 +29,10 @@ Public Class omsetsale
         If MyConnection.State = ConnectionState.Closed Then
             MyConnection.Open()
         End If
-        MyConnection2 = New SqlConnection("Data Source=" + "10.1.0.4" + ";Initial Catalog=ProInt_ERP;User ID=sa;Password=stip3ndium")
-        If MyConnection2.State = ConnectionState.Closed Then
-            MyConnection2.Open()
-        End If
+        'MyConnection2 = New SqlConnection("Data Source=" + "10.1.0.4" + ";Initial Catalog=ProInt_ERP;User ID=sa;Password=stip3ndium")
+        'If MyConnection2.State = ConnectionState.Closed Then
+        '    MyConnection2.Open()
+        'End If
     End Sub
 
     Private Sub omsetsale_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

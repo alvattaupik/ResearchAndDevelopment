@@ -76,9 +76,9 @@ Module ModuleKoneksi
         strUserNameDB = "sa"
         strPasswordDB = "h0spit4lity#"
 
-        strKoneksi2 = "data source=" & strServer & ";user id=" & strUserNameDB & ";password=" & strPasswordDB & ";initial catalog=" & strNamaDatabase & ";MultipleActiveResultSets=True;Application Name=Anyar Local Print Services 1.1;  "
-        strKoneksi2 = String.Format(strKoneksi1, strServer, strUserNameDB, strPasswordDB, strNamaDatabase)
-        Koneksi2 = New SqlConnection(strKoneksi1)
+        strKoneksi2 = "data source=" & strServer & ";user id=" & strUserNameDB & ";password=" & strPasswordDB & ";initial catalog=" & strNamaDatabase & ";MultipleActiveResultSets=True;Application Name=SISTER V1.1;  "
+        strKoneksi2 = String.Format(strKoneksi2, strServer, strUserNameDB, strPasswordDB, strNamaDatabase)
+        Koneksi2 = New SqlConnection(strKoneksi2)
 
 
 

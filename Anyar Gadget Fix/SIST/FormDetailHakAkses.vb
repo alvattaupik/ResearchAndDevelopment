@@ -1,30 +1,58 @@
 ﻿Imports System.Data.SqlClient
 Public Class FormDetailHakAkses
-
+    Dim source1 As New BindingSource()
     Private Sub FormDetailHakAkses_Load(sender As Object, e As EventArgs) Handles Me.Load
-        txtKodeUser.Text = FormDataUser.txtKodeUser.Text
-        txtNamaPegawai.Text = FormDataUser.txtNamaLengkap.Text
-        txtLevelUser.Text = FormDataUser.cmbLevelUser.Text
-
+        txtKodeUser.Text = FormUserLoginDanHakAkses.txtKodeUser.Text
+        txtNamaPegawai.Text = FormUserLoginDanHakAkses.txtNamaLengkap.Text
+        txtLevelUser.Text = FormUserLoginDanHakAkses.cmbLevelUser.Text
         LoadDaftarHakAkses()
+        dgHakAksesUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgHakAksesUser.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+        dgHakAksesUser.AutoResizeColumns()
     End Sub
 
     Sub LoadDaftarHakAkses()
         On Error Resume Next
+
+
+        dgHakAksesUser.DataSource = Nothing
+        dgHakAksesUser.Rows.Clear()
+        dgHakAksesUser.Columns.Clear()
+
         Call KoneksiDatabase1()
-
-
-        Dim cmd As New SqlCommand("SELECT KodeObject,NamaKomponen,StatusEnabled FROM V_ObjectUserAplikasi  WHERE KodePegawai= '" & Trim(txtKodeUser.Text) & "' AND NamaKomponen Like '%" & txtCariHakAkses.Text & "%' Order By KodeObject ", Koneksi1)
+        Dim cmd As New SqlCommand("SELECT Distinct KodeObject,NamaKomponen,StatusEnabled FROM V_ObjectUserAnyarGadget  WHERE KodePegawai= '" & Trim(txtKodeUser.Text) & "' AND NamaKomponen Like '%" & txtCariHakAkses.Text & "%' Order By KodeObject ", Koneksi1)
 
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
         adapter.Fill(table)
 
-        dgHakAksesUser.DataSource = table
-        dgHakAksesUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-        dgHakAksesUser.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
-        dgHakAksesUser.AutoResizeColumns()
+
+        dgHakAksesUser.Columns.Add("KodeObject", "KodeObject")
+        dgHakAksesUser.Columns.Add("NamaKomponen", "NamaKomponen")
+        Dim chk As New DataGridViewCheckBoxColumn()
+        dgHakAksesUser.Columns.Add(chk)
+        chk.HeaderText = "Aktif"
+        chk.Name = "Aktif"
+
+        chk.TrueValue = "1"
+        chk.FalseValue = "0"
+
+
+        With table
+            For i = 0 To table.Rows.Count - 1
+                'If .Rows(i).Item(1).ToString() = "1" Then
+                '    Dim A As String = "True"
+                'Else
+                '    Dim B As String = "False"
+                dgHakAksesUser.Rows.Add(.Rows(i).Item(0).ToString(), .Rows(i).Item(1).ToString(), .Rows(i).Item(2).ToString())
+            Next
+
+
+        End With
+
+
+
 
     End Sub
 
@@ -39,6 +67,7 @@ Public Class FormDetailHakAkses
             cmd1.CommandType = CommandType.StoredProcedure
             cmd1.Parameters.AddWithValue("KodePegawai", txtKodeUser.Text)
             cmd1.Parameters.AddWithValue("KodeObject", dgHakAksesUser.Rows(i).Cells(0).Value)
+            cmd1.Parameters.AddWithValue("KodeAplikasi", "AG")
             cmd1.Parameters.AddWithValue("StatusEnabled", dgHakAksesUser.Rows(i).Cells(2).Value)
             If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
             cmd1.Connection = Koneksi1
@@ -58,35 +87,25 @@ Public Class FormDetailHakAkses
         cmd1.CommandText = "[Update_AksesUser]"
         cmd1.CommandType = CommandType.StoredProcedure
         cmd1.Parameters.AddWithValue("KodePegawai", txtKodeUser.Text)
+        cmd1.Parameters.AddWithValue("KodeAplikasi", "AG")
         If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
         cmd1.Connection = Koneksi1
         Koneksi1.Open()
         cmd1.ExecuteNonQuery()
         Koneksi1.Close()
+        MsgBox("Daftar Menu Berhasil Diperbaharui", vbInformation, "Informasi")
         LoadDaftarHakAkses()
 
 
     End Sub
-
     Private Sub txtCariHakAkses_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCariHakAkses.KeyPress
+
         LoadDaftarHakAkses()
-    End Sub
-
-    Private Sub cmbStatusAktif_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbStatusAktif.SelectedValueChanged
-        On Error Resume Next
-        Call KoneksiDatabase1()
-
-
-        Dim cmd As New SqlCommand("SELECT KodeObject,NamaKomponen,StatusEnabled FROM V_ObjectUserAplikasi  WHERE KodePegawai= '" & Trim(txtKodeUser.Text) & "' AND StatusEnabled Like '%" & cmbStatusAktif.Text & "%' Order By KodeObject ", Koneksi1)
-
-        cmd.CommandTimeout = 0
-        Dim adapter As New SqlDataAdapter(cmd)
-        Dim table As New DataTable
-        adapter.Fill(table)
-
-        dgHakAksesUser.DataSource = table
         dgHakAksesUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
         dgHakAksesUser.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
         dgHakAksesUser.AutoResizeColumns()
     End Sub
+
+  
+
 End Class

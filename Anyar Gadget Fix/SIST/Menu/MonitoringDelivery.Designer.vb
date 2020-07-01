@@ -39,6 +39,8 @@ Partial Class MonitoringDelivery
         Me.Label6 = New System.Windows.Forms.Label()
         Me.dgDaftarDelivery = New System.Windows.Forms.DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.cmbFromTransfer = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.dgDaftarTransfer = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
@@ -257,7 +259,7 @@ Partial Class MonitoringDelivery
         Me.dgDaftarDelivery.AllowUserToAddRows = False
         Me.dgDaftarDelivery.AllowUserToDeleteRows = False
         Me.dgDaftarDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgDaftarDelivery.Location = New System.Drawing.Point(7, 6)
+        Me.dgDaftarDelivery.Location = New System.Drawing.Point(6, 6)
         Me.dgDaftarDelivery.Name = "dgDaftarDelivery"
         Me.dgDaftarDelivery.ReadOnly = True
         Me.dgDaftarDelivery.Size = New System.Drawing.Size(474, 391)
@@ -265,21 +267,42 @@ Partial Class MonitoringDelivery
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.cmbFromTransfer)
+        Me.TabPage2.Controls.Add(Me.Label9)
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.dgDaftarTransfer)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(487, 282)
+        Me.TabPage2.Size = New System.Drawing.Size(487, 424)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Transfer"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'cmbFromTransfer
+        '
+        Me.cmbFromTransfer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbFromTransfer.FormattingEnabled = True
+        Me.cmbFromTransfer.Location = New System.Drawing.Point(85, 30)
+        Me.cmbFromTransfer.Name = "cmbFromTransfer"
+        Me.cmbFromTransfer.Size = New System.Drawing.Size(395, 24)
+        Me.cmbFromTransfer.TabIndex = 7
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(7, 31)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(48, 18)
+        Me.Label9.TabIndex = 6
+        Me.Label9.Text = "From"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(7, 259)
+        Me.Label7.Location = New System.Drawing.Point(2, 400)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(220, 20)
         Me.Label7.TabIndex = 5
@@ -290,10 +313,10 @@ Partial Class MonitoringDelivery
         Me.dgDaftarTransfer.AllowUserToAddRows = False
         Me.dgDaftarTransfer.AllowUserToDeleteRows = False
         Me.dgDaftarTransfer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgDaftarTransfer.Location = New System.Drawing.Point(6, 6)
+        Me.dgDaftarTransfer.Location = New System.Drawing.Point(6, 78)
         Me.dgDaftarTransfer.Name = "dgDaftarTransfer"
         Me.dgDaftarTransfer.ReadOnly = True
-        Me.dgDaftarTransfer.Size = New System.Drawing.Size(474, 249)
+        Me.dgDaftarTransfer.Size = New System.Drawing.Size(474, 319)
         Me.dgDaftarTransfer.TabIndex = 4
         '
         'MonitoringDelivery
@@ -345,4 +368,6 @@ Partial Class MonitoringDelivery
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents dgDaftarTransfer As System.Windows.Forms.DataGridView
+    Friend WithEvents cmbFromTransfer As System.Windows.Forms.ComboBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

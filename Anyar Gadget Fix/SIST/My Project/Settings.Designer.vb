@@ -65,6 +65,198 @@ Namespace My
                 Me("PathPhoto") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property GRPOPath() As String
+            Get
+                Return CType(Me("GRPOPath"),String)
+            End Get
+            Set
+                Me("GRPOPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property DeliveryPath() As String
+            Get
+                Return CType(Me("DeliveryPath"),String)
+            End Get
+            Set
+                Me("DeliveryPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property GoodsIssuePath() As String
+            Get
+                Return CType(Me("GoodsIssuePath"),String)
+            End Get
+            Set
+                Me("GoodsIssuePath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property InventoryTransferPath() As String
+            Get
+                Return CType(Me("InventoryTransferPath"),String)
+            End Get
+            Set
+                Me("InventoryTransferPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property InventoryRequestPath() As String
+            Get
+                Return CType(Me("InventoryRequestPath"),String)
+            End Get
+            Set
+                Me("InventoryRequestPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property OutgoingPaymentsPath() As String
+            Get
+                Return CType(Me("OutgoingPaymentsPath"),String)
+            End Get
+            Set
+                Me("OutgoingPaymentsPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property IncomingPaymentsPath() As String
+            Get
+                Return CType(Me("IncomingPaymentsPath"),String)
+            End Get
+            Set
+                Me("IncomingPaymentsPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property GoodsReceiptPath() As String
+            Get
+                Return CType(Me("GoodsReceiptPath"),String)
+            End Get
+            Set
+                Me("GoodsReceiptPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property PickListPath() As String
+            Get
+                Return CType(Me("PickListPath"),String)
+            End Get
+            Set
+                Me("PickListPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property GoodsReturnPath() As String
+            Get
+                Return CType(Me("GoodsReturnPath"),String)
+            End Get
+            Set
+                Me("GoodsReturnPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SalesOrderPath() As String
+            Get
+                Return CType(Me("SalesOrderPath"),String)
+            End Get
+            Set
+                Me("SalesOrderPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property ReturnPath() As String
+            Get
+                Return CType(Me("ReturnPath"),String)
+            End Get
+            Set
+                Me("ReturnPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property ServerNameDB() As String
+            Get
+                Return CType(Me("ServerNameDB"),String)
+            End Get
+            Set
+                Me("ServerNameDB") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property UsernameDB() As String
+            Get
+                Return CType(Me("UsernameDB"),String)
+            End Get
+            Set
+                Me("UsernameDB") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property PasswordDB() As String
+            Get
+                Return CType(Me("PasswordDB"),String)
+            End Get
+            Set
+                Me("PasswordDB") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property DatabaseName() As String
+            Get
+                Return CType(Me("DatabaseName"),String)
+            End Get
+            Set
+                Me("DatabaseName") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
@@ -75,7 +267,7 @@ Namespace My
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute()>  _
     Friend Module MySettingsProperty
         
-        <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")> _
+        <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
         Friend ReadOnly Property Settings() As Global.AnyarGadget.My.MySettings
             Get
                 Return Global.AnyarGadget.My.MySettings.Default

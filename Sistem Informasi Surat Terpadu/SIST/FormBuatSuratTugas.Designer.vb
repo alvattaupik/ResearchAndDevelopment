@@ -22,14 +22,21 @@ Partial Class FormBuatSuratTugas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormBuatSuratTugas))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtNoSurat = New System.Windows.Forms.TextBox()
         Me.LblkdJenisSurat = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtPerihal = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtLampiran = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.txtRingkasanTugas = New System.Windows.Forms.RichTextBox()
         Me.dtpTglSurat = New Guna.UI.WinForms.GunaDateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -48,21 +55,15 @@ Partial Class FormBuatSuratTugas
         Me.txtHRD = New Guna.UI.WinForms.GunaTextBox()
         Me.cmbBuatBaru = New Guna.UI.WinForms.GunaGradientButton()
         Me.GunaGradientButton2 = New Guna.UI.WinForms.GunaGradientButton()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtLampiran = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtPerihal = New System.Windows.Forms.TextBox()
         Me.GunaGradientButton3 = New Guna.UI.WinForms.GunaGradientButton()
         Me.GunaGradientButton4 = New Guna.UI.WinForms.GunaGradientButton()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgItem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -95,6 +96,16 @@ Partial Class FormBuatSuratTugas
         Me.LblkdJenisSurat.TabIndex = 2
         Me.LblkdJenisSurat.Text = "GA001"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.CHECKLIST
+        Me.PictureBox1.Location = New System.Drawing.Point(10, 8)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(95, 95)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -106,6 +117,15 @@ Partial Class FormBuatSuratTugas
         Me.Label1.Size = New System.Drawing.Size(219, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "SURAT TUGAS"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.SISTER.My.Resources.Resources.Vector_2
+        Me.PictureBox2.Location = New System.Drawing.Point(286, 3)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(508, 111)
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
         '
         'GroupBox1
         '
@@ -124,6 +144,38 @@ Partial Class FormBuatSuratTugas
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detail Tugas"
+        '
+        'txtPerihal
+        '
+        Me.txtPerihal.Location = New System.Drawing.Point(136, 46)
+        Me.txtPerihal.Name = "txtPerihal"
+        Me.txtPerihal.Size = New System.Drawing.Size(500, 22)
+        Me.txtPerihal.TabIndex = 39
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(73, 49)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(57, 16)
+        Me.Label5.TabIndex = 38
+        Me.Label5.Text = "Perihal"
+        '
+        'txtLampiran
+        '
+        Me.txtLampiran.Location = New System.Drawing.Point(136, 155)
+        Me.txtLampiran.Name = "txtLampiran"
+        Me.txtLampiran.Size = New System.Drawing.Size(500, 22)
+        Me.txtLampiran.TabIndex = 37
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(58, 158)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 16)
+        Me.Label3.TabIndex = 36
+        Me.Label3.Text = "Lampiran"
         '
         'txtRingkasanTugas
         '
@@ -275,31 +327,31 @@ Partial Class FormBuatSuratTugas
         'dgItem
         '
         Me.dgItem.AllowUserToAddRows = False
-        DataGridViewCellStyle25.BackColor = System.Drawing.Color.White
-        Me.dgItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgItem.BackgroundColor = System.Drawing.Color.DarkGray
         Me.dgItem.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgItem.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle26.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgItem.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgItem.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgItem.ColumnHeadersHeight = 21
         Me.dgItem.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NIP, Me.NamaPegawai, Me.Jabatan})
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle27.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgItem.DefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgItem.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgItem.EnableHeadersVisualStyles = False
         Me.dgItem.GridColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.dgItem.Location = New System.Drawing.Point(7, 20)
@@ -446,57 +498,6 @@ Partial Class FormBuatSuratTugas
         Me.GunaGradientButton2.Text = "Simpan"
         Me.GunaGradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.CHECKLIST
-        Me.PictureBox1.Location = New System.Drawing.Point(10, 8)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(95, 95)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.SISTER.My.Resources.Resources.Vector_2
-        Me.PictureBox2.Location = New System.Drawing.Point(286, 3)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(508, 111)
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(58, 158)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 16)
-        Me.Label3.TabIndex = 36
-        Me.Label3.Text = "Lampiran"
-        '
-        'txtLampiran
-        '
-        Me.txtLampiran.Location = New System.Drawing.Point(136, 155)
-        Me.txtLampiran.Name = "txtLampiran"
-        Me.txtLampiran.Size = New System.Drawing.Size(500, 22)
-        Me.txtLampiran.TabIndex = 37
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(73, 49)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(57, 16)
-        Me.Label5.TabIndex = 38
-        Me.Label5.Text = "Perihal"
-        '
-        'txtPerihal
-        '
-        Me.txtPerihal.Location = New System.Drawing.Point(136, 46)
-        Me.txtPerihal.Name = "txtPerihal"
-        Me.txtPerihal.Size = New System.Drawing.Size(500, 22)
-        Me.txtPerihal.TabIndex = 39
-        '
         'GunaGradientButton3
         '
         Me.GunaGradientButton3.AnimationHoverSpeed = 0.07!
@@ -569,19 +570,20 @@ Partial Class FormBuatSuratTugas
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "FormBuatSuratTugas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form Buat Surat Tugas"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         CType(Me.dgItem, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

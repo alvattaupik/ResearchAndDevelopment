@@ -59,11 +59,9 @@ Partial Class FormTemplate
         Me.GroupBox1.Controls.Add(Me.cmbJenisSurat)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.cmdbrowse)
-        Me.GroupBox1.Controls.Add(Me.txtpathtemplate)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(5, 55)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 55)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(586, 167)
+        Me.GroupBox1.Size = New System.Drawing.Size(550, 133)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Konfigurasi Template"
@@ -82,7 +80,7 @@ Partial Class FormTemplate
         Me.cmdHapus.ForeColor = System.Drawing.Color.White
         Me.cmdHapus.Image = Nothing
         Me.cmdHapus.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdHapus.Location = New System.Drawing.Point(477, 114)
+        Me.cmdHapus.Location = New System.Drawing.Point(204, 86)
         Me.cmdHapus.Name = "cmdHapus"
         Me.cmdHapus.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdHapus.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -91,7 +89,7 @@ Partial Class FormTemplate
         Me.cmdHapus.OnHoverImage = Nothing
         Me.cmdHapus.OnPressedColor = System.Drawing.Color.Black
         Me.cmdHapus.Radius = 2
-        Me.cmdHapus.Size = New System.Drawing.Size(91, 42)
+        Me.cmdHapus.Size = New System.Drawing.Size(73, 42)
         Me.cmdHapus.TabIndex = 54
         Me.cmdHapus.Text = "Hapus"
         Me.cmdHapus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -110,7 +108,7 @@ Partial Class FormTemplate
         Me.cmdSimpan.ForeColor = System.Drawing.Color.White
         Me.cmdSimpan.Image = Nothing
         Me.cmdSimpan.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdSimpan.Location = New System.Drawing.Point(208, 110)
+        Me.cmdSimpan.Location = New System.Drawing.Point(120, 86)
         Me.cmdSimpan.Name = "cmdSimpan"
         Me.cmdSimpan.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdSimpan.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -119,7 +117,7 @@ Partial Class FormTemplate
         Me.cmdSimpan.OnHoverImage = Nothing
         Me.cmdSimpan.OnPressedColor = System.Drawing.Color.Black
         Me.cmdSimpan.Radius = 2
-        Me.cmdSimpan.Size = New System.Drawing.Size(97, 42)
+        Me.cmdSimpan.Size = New System.Drawing.Size(76, 42)
         Me.cmdSimpan.TabIndex = 53
         Me.cmdSimpan.Text = "Simpan"
         Me.cmdSimpan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -138,7 +136,7 @@ Partial Class FormTemplate
         Me.cmdTambah.ForeColor = System.Drawing.Color.White
         Me.cmdTambah.Image = Nothing
         Me.cmdTambah.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdTambah.Location = New System.Drawing.Point(102, 110)
+        Me.cmdTambah.Location = New System.Drawing.Point(305, 86)
         Me.cmdTambah.Name = "cmdTambah"
         Me.cmdTambah.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdTambah.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -147,9 +145,9 @@ Partial Class FormTemplate
         Me.cmdTambah.OnHoverImage = Nothing
         Me.cmdTambah.OnPressedColor = System.Drawing.Color.Black
         Me.cmdTambah.Radius = 2
-        Me.cmdTambah.Size = New System.Drawing.Size(100, 42)
+        Me.cmdTambah.Size = New System.Drawing.Size(76, 42)
         Me.cmdTambah.TabIndex = 52
-        Me.cmdTambah.Text = "Tambah"
+        Me.cmdTambah.Text = "New"
         Me.cmdTambah.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'chkStatus
@@ -159,7 +157,7 @@ Partial Class FormTemplate
         Me.chkStatus.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.chkStatus.FillColor = System.Drawing.Color.White
         Me.chkStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkStatus.Location = New System.Drawing.Point(311, 83)
+        Me.chkStatus.Location = New System.Drawing.Point(387, 53)
         Me.chkStatus.Name = "chkStatus"
         Me.chkStatus.Size = New System.Drawing.Size(58, 20)
         Me.chkStatus.TabIndex = 9
@@ -168,35 +166,35 @@ Partial Class FormTemplate
         'txtKeterangan
         '
         Me.txtKeterangan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtKeterangan.Location = New System.Drawing.Point(102, 54)
+        Me.txtKeterangan.Location = New System.Drawing.Point(120, 26)
         Me.txtKeterangan.Name = "txtKeterangan"
-        Me.txtKeterangan.Size = New System.Drawing.Size(367, 21)
+        Me.txtKeterangan.Size = New System.Drawing.Size(325, 21)
         Me.txtKeterangan.TabIndex = 8
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(7, 56)
+        Me.Label4.Location = New System.Drawing.Point(6, 27)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 15)
+        Me.Label4.Size = New System.Drawing.Size(109, 15)
         Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Keterangan"
+        Me.Label4.Text = "Nama Template"
         '
         'cmbJenisSurat
         '
         Me.cmbJenisSurat.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbJenisSurat.FormattingEnabled = True
-        Me.cmbJenisSurat.Location = New System.Drawing.Point(102, 81)
+        Me.cmbJenisSurat.Location = New System.Drawing.Point(120, 53)
         Me.cmbJenisSurat.Name = "cmbJenisSurat"
-        Me.cmbJenisSurat.Size = New System.Drawing.Size(203, 23)
+        Me.cmbJenisSurat.Size = New System.Drawing.Size(261, 23)
         Me.cmbJenisSurat.TabIndex = 4
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(7, 84)
+        Me.Label2.Location = New System.Drawing.Point(6, 54)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 15)
         Me.Label2.TabIndex = 3
@@ -205,7 +203,7 @@ Partial Class FormTemplate
         'cmdbrowse
         '
         Me.cmdbrowse.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdbrowse.Location = New System.Drawing.Point(477, 29)
+        Me.cmdbrowse.Location = New System.Drawing.Point(451, 26)
         Me.cmdbrowse.Name = "cmdbrowse"
         Me.cmdbrowse.Size = New System.Drawing.Size(91, 50)
         Me.cmdbrowse.TabIndex = 2
@@ -216,26 +214,28 @@ Partial Class FormTemplate
         '
         Me.txtpathtemplate.Enabled = False
         Me.txtpathtemplate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtpathtemplate.Location = New System.Drawing.Point(102, 29)
+        Me.txtpathtemplate.Location = New System.Drawing.Point(131, 34)
         Me.txtpathtemplate.Name = "txtpathtemplate"
-        Me.txtpathtemplate.Size = New System.Drawing.Size(367, 21)
+        Me.txtpathtemplate.Size = New System.Drawing.Size(325, 21)
         Me.txtpathtemplate.TabIndex = 1
+        Me.txtpathtemplate.Visible = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 29)
+        Me.Label1.Location = New System.Drawing.Point(491, 40)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(100, 15)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Path Template"
+        Me.Label1.Visible = False
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(159, 12)
+        Me.Label3.Location = New System.Drawing.Point(146, 6)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(292, 25)
         Me.Label3.TabIndex = 1
@@ -247,17 +247,17 @@ Partial Class FormTemplate
         Me.GroupBox2.Controls.Add(Me.txtCariSettingTemplate)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.dgSettingTemplate)
-        Me.GroupBox2.Location = New System.Drawing.Point(5, 230)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 196)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(586, 196)
+        Me.GroupBox2.Size = New System.Drawing.Size(550, 193)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         '
         'txtCariSettingTemplate
         '
-        Me.txtCariSettingTemplate.Location = New System.Drawing.Point(204, 19)
+        Me.txtCariSettingTemplate.Location = New System.Drawing.Point(185, 19)
         Me.txtCariSettingTemplate.Name = "txtCariSettingTemplate"
-        Me.txtCariSettingTemplate.Size = New System.Drawing.Size(364, 20)
+        Me.txtCariSettingTemplate.Size = New System.Drawing.Size(357, 20)
         Me.txtCariSettingTemplate.TabIndex = 5
         '
         'Label5
@@ -274,9 +274,9 @@ Partial Class FormTemplate
         '
         Me.dgSettingTemplate.AllowUserToAddRows = False
         Me.dgSettingTemplate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgSettingTemplate.Location = New System.Drawing.Point(11, 60)
+        Me.dgSettingTemplate.Location = New System.Drawing.Point(7, 49)
         Me.dgSettingTemplate.Name = "dgSettingTemplate"
-        Me.dgSettingTemplate.Size = New System.Drawing.Size(571, 130)
+        Me.dgSettingTemplate.Size = New System.Drawing.Size(535, 136)
         Me.dgSettingTemplate.TabIndex = 0
         '
         'OpenFileDialog1
@@ -295,7 +295,7 @@ Partial Class FormTemplate
         '
         Me.Button2.BackColor = System.Drawing.Color.Red
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(548, 9)
+        Me.Button2.Location = New System.Drawing.Point(510, 5)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(43, 31)
         Me.Button2.TabIndex = 6
@@ -307,12 +307,14 @@ Partial Class FormTemplate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(601, 425)
+        Me.ClientSize = New System.Drawing.Size(557, 393)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.txtDocEntry)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtpathtemplate)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormTemplate"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

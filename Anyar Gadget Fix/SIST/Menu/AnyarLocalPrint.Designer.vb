@@ -108,7 +108,7 @@ Partial Class AnyarLocalPrint
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(12, 72)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1088, 493)
+        Me.GroupBox2.Size = New System.Drawing.Size(1021, 493)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "DAFTAR DOKUMEN"
@@ -131,7 +131,7 @@ Partial Class AnyarLocalPrint
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1076, 457)
+        Me.TabControl1.Size = New System.Drawing.Size(1008, 457)
         Me.TabControl1.TabIndex = 3
         '
         'TabPage1
@@ -143,7 +143,7 @@ Partial Class AnyarLocalPrint
         Me.TabPage1.Location = New System.Drawing.Point(4, 64)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1068, 389)
+        Me.TabPage1.Size = New System.Drawing.Size(1000, 389)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Delivery"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -156,12 +156,12 @@ Partial Class AnyarLocalPrint
         Me.CRVDelivery.Location = New System.Drawing.Point(6, 48)
         Me.CRVDelivery.Name = "CRVDelivery"
         Me.CRVDelivery.ShowParameterPanelButton = False
-        Me.CRVDelivery.Size = New System.Drawing.Size(1056, 335)
+        Me.CRVDelivery.Size = New System.Drawing.Size(988, 335)
         Me.CRVDelivery.TabIndex = 7
         '
         'cmdPreviewDelivery
         '
-        Me.cmdPreviewDelivery.Location = New System.Drawing.Point(388, 6)
+        Me.cmdPreviewDelivery.Location = New System.Drawing.Point(798, 7)
         Me.cmdPreviewDelivery.Name = "cmdPreviewDelivery"
         Me.cmdPreviewDelivery.Size = New System.Drawing.Size(196, 36)
         Me.cmdPreviewDelivery.TabIndex = 6
@@ -172,7 +172,7 @@ Partial Class AnyarLocalPrint
         '
         Me.txtNoDelivery.Location = New System.Drawing.Point(180, 11)
         Me.txtNoDelivery.Name = "txtNoDelivery"
-        Me.txtNoDelivery.Size = New System.Drawing.Size(202, 31)
+        Me.txtNoDelivery.Size = New System.Drawing.Size(591, 31)
         Me.txtNoDelivery.TabIndex = 2
         '
         'Label4
@@ -190,9 +190,9 @@ Partial Class AnyarLocalPrint
         Me.TabPage8.Controls.Add(Me.cmdPreviewGRPO)
         Me.TabPage8.Controls.Add(Me.txtNoGRPO)
         Me.TabPage8.Controls.Add(Me.Label3)
-        Me.TabPage8.Location = New System.Drawing.Point(4, 124)
+        Me.TabPage8.Location = New System.Drawing.Point(4, 64)
         Me.TabPage8.Name = "TabPage8"
-        Me.TabPage8.Size = New System.Drawing.Size(648, 249)
+        Me.TabPage8.Size = New System.Drawing.Size(1000, 389)
         Me.TabPage8.TabIndex = 7
         Me.TabPage8.Text = "GRPO"
         Me.TabPage8.UseVisualStyleBackColor = True
@@ -204,12 +204,12 @@ Partial Class AnyarLocalPrint
         Me.crvGRPO.Cursor = System.Windows.Forms.Cursors.Default
         Me.crvGRPO.Location = New System.Drawing.Point(6, 53)
         Me.crvGRPO.Name = "crvGRPO"
-        Me.crvGRPO.Size = New System.Drawing.Size(578, 346)
+        Me.crvGRPO.Size = New System.Drawing.Size(991, 333)
         Me.crvGRPO.TabIndex = 11
         '
         'cmdPreviewGRPO
         '
-        Me.cmdPreviewGRPO.Location = New System.Drawing.Point(388, 11)
+        Me.cmdPreviewGRPO.Location = New System.Drawing.Point(801, 12)
         Me.cmdPreviewGRPO.Name = "cmdPreviewGRPO"
         Me.cmdPreviewGRPO.Size = New System.Drawing.Size(196, 36)
         Me.cmdPreviewGRPO.TabIndex = 10
@@ -220,7 +220,7 @@ Partial Class AnyarLocalPrint
         '
         Me.txtNoGRPO.Location = New System.Drawing.Point(180, 13)
         Me.txtNoGRPO.Name = "txtNoGRPO"
-        Me.txtNoGRPO.Size = New System.Drawing.Size(202, 31)
+        Me.txtNoGRPO.Size = New System.Drawing.Size(615, 31)
         Me.txtNoGRPO.TabIndex = 9
         '
         'Label3
@@ -238,9 +238,9 @@ Partial Class AnyarLocalPrint
         Me.TabPage9.Controls.Add(Me.cmdPreviewInventoryTransfer)
         Me.TabPage9.Controls.Add(Me.txtNoInventoryTransfer)
         Me.TabPage9.Controls.Add(Me.Label5)
-        Me.TabPage9.Location = New System.Drawing.Point(4, 124)
+        Me.TabPage9.Location = New System.Drawing.Point(4, 64)
         Me.TabPage9.Name = "TabPage9"
-        Me.TabPage9.Size = New System.Drawing.Size(648, 249)
+        Me.TabPage9.Size = New System.Drawing.Size(1000, 389)
         Me.TabPage9.TabIndex = 8
         Me.TabPage9.Text = "Inventory Transfer"
         Me.TabPage9.UseVisualStyleBackColor = True
@@ -252,12 +252,12 @@ Partial Class AnyarLocalPrint
         Me.crvInventoryTransfer.Cursor = System.Windows.Forms.Cursors.Default
         Me.crvInventoryTransfer.Location = New System.Drawing.Point(6, 49)
         Me.crvInventoryTransfer.Name = "crvInventoryTransfer"
-        Me.crvInventoryTransfer.Size = New System.Drawing.Size(578, 338)
+        Me.crvInventoryTransfer.Size = New System.Drawing.Size(991, 337)
         Me.crvInventoryTransfer.TabIndex = 11
         '
         'cmdPreviewInventoryTransfer
         '
-        Me.cmdPreviewInventoryTransfer.Location = New System.Drawing.Point(388, 7)
+        Me.cmdPreviewInventoryTransfer.Location = New System.Drawing.Point(801, 8)
         Me.cmdPreviewInventoryTransfer.Name = "cmdPreviewInventoryTransfer"
         Me.cmdPreviewInventoryTransfer.Size = New System.Drawing.Size(196, 36)
         Me.cmdPreviewInventoryTransfer.TabIndex = 10
@@ -268,7 +268,7 @@ Partial Class AnyarLocalPrint
         '
         Me.txtNoInventoryTransfer.Location = New System.Drawing.Point(180, 10)
         Me.txtNoInventoryTransfer.Name = "txtNoInventoryTransfer"
-        Me.txtNoInventoryTransfer.Size = New System.Drawing.Size(202, 31)
+        Me.txtNoInventoryTransfer.Size = New System.Drawing.Size(615, 31)
         Me.txtNoInventoryTransfer.TabIndex = 9
         '
         'Label5
@@ -286,10 +286,10 @@ Partial Class AnyarLocalPrint
         Me.TabPage2.Controls.Add(Me.cmdPreviewInventoryRequest)
         Me.TabPage2.Controls.Add(Me.txtNoInventoryRequest)
         Me.TabPage2.Controls.Add(Me.Label6)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 124)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 64)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(648, 249)
+        Me.TabPage2.Size = New System.Drawing.Size(1000, 389)
         Me.TabPage2.TabIndex = 9
         Me.TabPage2.Text = "Inventory Request"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -301,12 +301,12 @@ Partial Class AnyarLocalPrint
         Me.crvInventoryRequest.Cursor = System.Windows.Forms.Cursors.Default
         Me.crvInventoryRequest.Location = New System.Drawing.Point(6, 43)
         Me.crvInventoryRequest.Name = "crvInventoryRequest"
-        Me.crvInventoryRequest.Size = New System.Drawing.Size(592, 341)
+        Me.crvInventoryRequest.Size = New System.Drawing.Size(988, 343)
         Me.crvInventoryRequest.TabIndex = 11
         '
         'cmdPreviewInventoryRequest
         '
-        Me.cmdPreviewInventoryRequest.Location = New System.Drawing.Point(384, 4)
+        Me.cmdPreviewInventoryRequest.Location = New System.Drawing.Point(798, 5)
         Me.cmdPreviewInventoryRequest.Name = "cmdPreviewInventoryRequest"
         Me.cmdPreviewInventoryRequest.Size = New System.Drawing.Size(196, 36)
         Me.cmdPreviewInventoryRequest.TabIndex = 10
@@ -317,7 +317,7 @@ Partial Class AnyarLocalPrint
         '
         Me.txtNoInventoryRequest.Location = New System.Drawing.Point(176, 6)
         Me.txtNoInventoryRequest.Name = "txtNoInventoryRequest"
-        Me.txtNoInventoryRequest.Size = New System.Drawing.Size(202, 31)
+        Me.txtNoInventoryRequest.Size = New System.Drawing.Size(616, 31)
         Me.txtNoInventoryRequest.TabIndex = 9
         '
         'Label6
@@ -335,10 +335,10 @@ Partial Class AnyarLocalPrint
         Me.TabPage3.Controls.Add(Me.cmdPreviewGoodsIssue)
         Me.TabPage3.Controls.Add(Me.txtNoGoodsIssue)
         Me.TabPage3.Controls.Add(Me.Label8)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 124)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 64)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(648, 249)
+        Me.TabPage3.Size = New System.Drawing.Size(1000, 389)
         Me.TabPage3.TabIndex = 10
         Me.TabPage3.Text = "Goods Issue"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -350,12 +350,12 @@ Partial Class AnyarLocalPrint
         Me.CRVGoodsIssue.Cursor = System.Windows.Forms.Cursors.Default
         Me.CRVGoodsIssue.Location = New System.Drawing.Point(6, 46)
         Me.CRVGoodsIssue.Name = "CRVGoodsIssue"
-        Me.CRVGoodsIssue.Size = New System.Drawing.Size(578, 350)
+        Me.CRVGoodsIssue.Size = New System.Drawing.Size(988, 337)
         Me.CRVGoodsIssue.TabIndex = 15
         '
         'cmdPreviewGoodsIssue
         '
-        Me.cmdPreviewGoodsIssue.Location = New System.Drawing.Point(387, 4)
+        Me.cmdPreviewGoodsIssue.Location = New System.Drawing.Point(798, 6)
         Me.cmdPreviewGoodsIssue.Name = "cmdPreviewGoodsIssue"
         Me.cmdPreviewGoodsIssue.Size = New System.Drawing.Size(196, 36)
         Me.cmdPreviewGoodsIssue.TabIndex = 14
@@ -366,7 +366,7 @@ Partial Class AnyarLocalPrint
         '
         Me.txtNoGoodsIssue.Location = New System.Drawing.Point(179, 6)
         Me.txtNoGoodsIssue.Name = "txtNoGoodsIssue"
-        Me.txtNoGoodsIssue.Size = New System.Drawing.Size(202, 31)
+        Me.txtNoGoodsIssue.Size = New System.Drawing.Size(613, 31)
         Me.txtNoGoodsIssue.TabIndex = 13
         '
         'Label8
@@ -384,10 +384,10 @@ Partial Class AnyarLocalPrint
         Me.TabPage4.Controls.Add(Me.cmdPreviewOutgoingPayments)
         Me.TabPage4.Controls.Add(Me.txtNoOutgoingPayments)
         Me.TabPage4.Controls.Add(Me.Label7)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 124)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 64)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(648, 249)
+        Me.TabPage4.Size = New System.Drawing.Size(1000, 389)
         Me.TabPage4.TabIndex = 11
         Me.TabPage4.Text = "Outgoing Payments"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -399,12 +399,12 @@ Partial Class AnyarLocalPrint
         Me.CRVOutgoingPayments.Cursor = System.Windows.Forms.Cursors.Default
         Me.CRVOutgoingPayments.Location = New System.Drawing.Point(13, 47)
         Me.CRVOutgoingPayments.Name = "CRVOutgoingPayments"
-        Me.CRVOutgoingPayments.Size = New System.Drawing.Size(578, 349)
+        Me.CRVOutgoingPayments.Size = New System.Drawing.Size(981, 336)
         Me.CRVOutgoingPayments.TabIndex = 19
         '
         'cmdPreviewOutgoingPayments
         '
-        Me.cmdPreviewOutgoingPayments.Location = New System.Drawing.Point(394, 5)
+        Me.cmdPreviewOutgoingPayments.Location = New System.Drawing.Point(798, 7)
         Me.cmdPreviewOutgoingPayments.Name = "cmdPreviewOutgoingPayments"
         Me.cmdPreviewOutgoingPayments.Size = New System.Drawing.Size(196, 36)
         Me.cmdPreviewOutgoingPayments.TabIndex = 18
@@ -415,7 +415,7 @@ Partial Class AnyarLocalPrint
         '
         Me.txtNoOutgoingPayments.Location = New System.Drawing.Point(186, 7)
         Me.txtNoOutgoingPayments.Name = "txtNoOutgoingPayments"
-        Me.txtNoOutgoingPayments.Size = New System.Drawing.Size(202, 31)
+        Me.txtNoOutgoingPayments.Size = New System.Drawing.Size(606, 31)
         Me.txtNoOutgoingPayments.TabIndex = 17
         '
         'Label7
@@ -433,10 +433,10 @@ Partial Class AnyarLocalPrint
         Me.TabPage5.Controls.Add(Me.cmdPreviewGoodsReceipt)
         Me.TabPage5.Controls.Add(Me.txtNoGoodsReceipt)
         Me.TabPage5.Controls.Add(Me.Label9)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 124)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 64)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(648, 249)
+        Me.TabPage5.Size = New System.Drawing.Size(1000, 389)
         Me.TabPage5.TabIndex = 12
         Me.TabPage5.Text = "Goods Receipt"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -448,12 +448,12 @@ Partial Class AnyarLocalPrint
         Me.CRVGoodsReceipt.Cursor = System.Windows.Forms.Cursors.Default
         Me.CRVGoodsReceipt.Location = New System.Drawing.Point(13, 47)
         Me.CRVGoodsReceipt.Name = "CRVGoodsReceipt"
-        Me.CRVGoodsReceipt.Size = New System.Drawing.Size(578, 337)
+        Me.CRVGoodsReceipt.Size = New System.Drawing.Size(981, 336)
         Me.CRVGoodsReceipt.TabIndex = 23
         '
         'cmdPreviewGoodsReceipt
         '
-        Me.cmdPreviewGoodsReceipt.Location = New System.Drawing.Point(394, 5)
+        Me.cmdPreviewGoodsReceipt.Location = New System.Drawing.Point(798, 7)
         Me.cmdPreviewGoodsReceipt.Name = "cmdPreviewGoodsReceipt"
         Me.cmdPreviewGoodsReceipt.Size = New System.Drawing.Size(196, 36)
         Me.cmdPreviewGoodsReceipt.TabIndex = 22
@@ -464,7 +464,7 @@ Partial Class AnyarLocalPrint
         '
         Me.txtNoGoodsReceipt.Location = New System.Drawing.Point(186, 7)
         Me.txtNoGoodsReceipt.Name = "txtNoGoodsReceipt"
-        Me.txtNoGoodsReceipt.Size = New System.Drawing.Size(202, 31)
+        Me.txtNoGoodsReceipt.Size = New System.Drawing.Size(606, 31)
         Me.txtNoGoodsReceipt.TabIndex = 21
         '
         'Label9
@@ -482,10 +482,10 @@ Partial Class AnyarLocalPrint
         Me.TabPage6.Controls.Add(Me.cmdPreviewIncomingPayment)
         Me.TabPage6.Controls.Add(Me.txtNoIncomingPayment)
         Me.TabPage6.Controls.Add(Me.Label10)
-        Me.TabPage6.Location = New System.Drawing.Point(4, 124)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 64)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(648, 249)
+        Me.TabPage6.Size = New System.Drawing.Size(1000, 389)
         Me.TabPage6.TabIndex = 13
         Me.TabPage6.Text = "Incoming Payment"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -497,12 +497,12 @@ Partial Class AnyarLocalPrint
         Me.CRVIncomingPayment.Cursor = System.Windows.Forms.Cursors.Default
         Me.CRVIncomingPayment.Location = New System.Drawing.Point(13, 47)
         Me.CRVIncomingPayment.Name = "CRVIncomingPayment"
-        Me.CRVIncomingPayment.Size = New System.Drawing.Size(578, 340)
+        Me.CRVIncomingPayment.Size = New System.Drawing.Size(981, 336)
         Me.CRVIncomingPayment.TabIndex = 27
         '
         'cmdPreviewIncomingPayment
         '
-        Me.cmdPreviewIncomingPayment.Location = New System.Drawing.Point(394, 5)
+        Me.cmdPreviewIncomingPayment.Location = New System.Drawing.Point(798, 6)
         Me.cmdPreviewIncomingPayment.Name = "cmdPreviewIncomingPayment"
         Me.cmdPreviewIncomingPayment.Size = New System.Drawing.Size(196, 36)
         Me.cmdPreviewIncomingPayment.TabIndex = 26
@@ -513,7 +513,7 @@ Partial Class AnyarLocalPrint
         '
         Me.txtNoIncomingPayment.Location = New System.Drawing.Point(186, 7)
         Me.txtNoIncomingPayment.Name = "txtNoIncomingPayment"
-        Me.txtNoIncomingPayment.Size = New System.Drawing.Size(202, 31)
+        Me.txtNoIncomingPayment.Size = New System.Drawing.Size(606, 31)
         Me.txtNoIncomingPayment.TabIndex = 25
         '
         'Label10
@@ -531,10 +531,10 @@ Partial Class AnyarLocalPrint
         Me.TabPage7.Controls.Add(Me.cmdPreviewNoPickList)
         Me.TabPage7.Controls.Add(Me.txtNoPickList)
         Me.TabPage7.Controls.Add(Me.Label11)
-        Me.TabPage7.Location = New System.Drawing.Point(4, 124)
+        Me.TabPage7.Location = New System.Drawing.Point(4, 64)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(648, 249)
+        Me.TabPage7.Size = New System.Drawing.Size(1000, 389)
         Me.TabPage7.TabIndex = 14
         Me.TabPage7.Text = "Pick List Form"
         Me.TabPage7.UseVisualStyleBackColor = True
@@ -546,12 +546,12 @@ Partial Class AnyarLocalPrint
         Me.CRVPickList.Cursor = System.Windows.Forms.Cursors.Default
         Me.CRVPickList.Location = New System.Drawing.Point(13, 51)
         Me.CRVPickList.Name = "CRVPickList"
-        Me.CRVPickList.Size = New System.Drawing.Size(578, 345)
+        Me.CRVPickList.Size = New System.Drawing.Size(981, 332)
         Me.CRVPickList.TabIndex = 31
         '
         'cmdPreviewNoPickList
         '
-        Me.cmdPreviewNoPickList.Location = New System.Drawing.Point(394, 9)
+        Me.cmdPreviewNoPickList.Location = New System.Drawing.Point(798, 9)
         Me.cmdPreviewNoPickList.Name = "cmdPreviewNoPickList"
         Me.cmdPreviewNoPickList.Size = New System.Drawing.Size(196, 36)
         Me.cmdPreviewNoPickList.TabIndex = 30
@@ -562,7 +562,7 @@ Partial Class AnyarLocalPrint
         '
         Me.txtNoPickList.Location = New System.Drawing.Point(186, 11)
         Me.txtNoPickList.Name = "txtNoPickList"
-        Me.txtNoPickList.Size = New System.Drawing.Size(202, 31)
+        Me.txtNoPickList.Size = New System.Drawing.Size(563, 31)
         Me.txtNoPickList.TabIndex = 29
         '
         'Label11
@@ -580,10 +580,10 @@ Partial Class AnyarLocalPrint
         Me.TabPage10.Controls.Add(Me.cmdPreviewGoodsReturn)
         Me.TabPage10.Controls.Add(Me.txtNoGoodsReturn)
         Me.TabPage10.Controls.Add(Me.Label12)
-        Me.TabPage10.Location = New System.Drawing.Point(4, 124)
+        Me.TabPage10.Location = New System.Drawing.Point(4, 64)
         Me.TabPage10.Name = "TabPage10"
         Me.TabPage10.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage10.Size = New System.Drawing.Size(648, 249)
+        Me.TabPage10.Size = New System.Drawing.Size(1000, 389)
         Me.TabPage10.TabIndex = 15
         Me.TabPage10.Text = "Goods Return"
         Me.TabPage10.UseVisualStyleBackColor = True
@@ -595,12 +595,12 @@ Partial Class AnyarLocalPrint
         Me.CRvGoodsReturn.Cursor = System.Windows.Forms.Cursors.Default
         Me.CRvGoodsReturn.Location = New System.Drawing.Point(6, 53)
         Me.CRvGoodsReturn.Name = "CRvGoodsReturn"
-        Me.CRvGoodsReturn.Size = New System.Drawing.Size(587, 343)
+        Me.CRvGoodsReturn.Size = New System.Drawing.Size(988, 330)
         Me.CRvGoodsReturn.TabIndex = 31
         '
         'cmdPreviewGoodsReturn
         '
-        Me.cmdPreviewGoodsReturn.Location = New System.Drawing.Point(396, 11)
+        Me.cmdPreviewGoodsReturn.Location = New System.Drawing.Point(798, 11)
         Me.cmdPreviewGoodsReturn.Name = "cmdPreviewGoodsReturn"
         Me.cmdPreviewGoodsReturn.Size = New System.Drawing.Size(196, 36)
         Me.cmdPreviewGoodsReturn.TabIndex = 30
@@ -611,7 +611,7 @@ Partial Class AnyarLocalPrint
         '
         Me.txtNoGoodsReturn.Location = New System.Drawing.Point(188, 13)
         Me.txtNoGoodsReturn.Name = "txtNoGoodsReturn"
-        Me.txtNoGoodsReturn.Size = New System.Drawing.Size(202, 31)
+        Me.txtNoGoodsReturn.Size = New System.Drawing.Size(604, 31)
         Me.txtNoGoodsReturn.TabIndex = 29
         '
         'Label12
@@ -629,10 +629,10 @@ Partial Class AnyarLocalPrint
         Me.TabPage11.Controls.Add(Me.cmdPreviewReturn)
         Me.TabPage11.Controls.Add(Me.txtNoReturn)
         Me.TabPage11.Controls.Add(Me.Label13)
-        Me.TabPage11.Location = New System.Drawing.Point(4, 124)
+        Me.TabPage11.Location = New System.Drawing.Point(4, 64)
         Me.TabPage11.Name = "TabPage11"
         Me.TabPage11.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage11.Size = New System.Drawing.Size(648, 249)
+        Me.TabPage11.Size = New System.Drawing.Size(1000, 389)
         Me.TabPage11.TabIndex = 16
         Me.TabPage11.Text = "Return"
         Me.TabPage11.UseVisualStyleBackColor = True
@@ -644,12 +644,12 @@ Partial Class AnyarLocalPrint
         Me.CRVReturn.Cursor = System.Windows.Forms.Cursors.Default
         Me.CRVReturn.Location = New System.Drawing.Point(9, 45)
         Me.CRVReturn.Name = "CRVReturn"
-        Me.CRVReturn.Size = New System.Drawing.Size(587, 351)
+        Me.CRVReturn.Size = New System.Drawing.Size(985, 338)
         Me.CRVReturn.TabIndex = 35
         '
         'cmdPreviewReturn
         '
-        Me.cmdPreviewReturn.Location = New System.Drawing.Point(399, 3)
+        Me.cmdPreviewReturn.Location = New System.Drawing.Point(798, 5)
         Me.cmdPreviewReturn.Name = "cmdPreviewReturn"
         Me.cmdPreviewReturn.Size = New System.Drawing.Size(196, 36)
         Me.cmdPreviewReturn.TabIndex = 34
@@ -660,7 +660,7 @@ Partial Class AnyarLocalPrint
         '
         Me.txtNoReturn.Location = New System.Drawing.Point(191, 5)
         Me.txtNoReturn.Name = "txtNoReturn"
-        Me.txtNoReturn.Size = New System.Drawing.Size(202, 31)
+        Me.txtNoReturn.Size = New System.Drawing.Size(601, 31)
         Me.txtNoReturn.TabIndex = 33
         '
         'Label13
@@ -678,10 +678,10 @@ Partial Class AnyarLocalPrint
         Me.TabPage12.Controls.Add(Me.cmdPreviewSO)
         Me.TabPage12.Controls.Add(Me.txtNoSO)
         Me.TabPage12.Controls.Add(Me.Label14)
-        Me.TabPage12.Location = New System.Drawing.Point(4, 124)
+        Me.TabPage12.Location = New System.Drawing.Point(4, 64)
         Me.TabPage12.Name = "TabPage12"
         Me.TabPage12.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage12.Size = New System.Drawing.Size(648, 249)
+        Me.TabPage12.Size = New System.Drawing.Size(1000, 389)
         Me.TabPage12.TabIndex = 17
         Me.TabPage12.Text = "Sales Order"
         Me.TabPage12.UseVisualStyleBackColor = True
@@ -693,12 +693,12 @@ Partial Class AnyarLocalPrint
         Me.CRVSO.Cursor = System.Windows.Forms.Cursors.Default
         Me.CRVSO.Location = New System.Drawing.Point(9, 47)
         Me.CRVSO.Name = "CRVSO"
-        Me.CRVSO.Size = New System.Drawing.Size(587, 349)
+        Me.CRVSO.Size = New System.Drawing.Size(985, 336)
         Me.CRVSO.TabIndex = 39
         '
         'cmdPreviewSO
         '
-        Me.cmdPreviewSO.Location = New System.Drawing.Point(399, 5)
+        Me.cmdPreviewSO.Location = New System.Drawing.Point(798, 7)
         Me.cmdPreviewSO.Name = "cmdPreviewSO"
         Me.cmdPreviewSO.Size = New System.Drawing.Size(196, 36)
         Me.cmdPreviewSO.TabIndex = 38
@@ -709,7 +709,7 @@ Partial Class AnyarLocalPrint
         '
         Me.txtNoSO.Location = New System.Drawing.Point(191, 7)
         Me.txtNoSO.Name = "txtNoSO"
-        Me.txtNoSO.Size = New System.Drawing.Size(202, 31)
+        Me.txtNoSO.Size = New System.Drawing.Size(601, 31)
         Me.txtNoSO.TabIndex = 37
         '
         'Label14
@@ -725,7 +725,7 @@ Partial Class AnyarLocalPrint
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(279, 9)
+        Me.Label1.Location = New System.Drawing.Point(327, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(426, 31)
         Me.Label1.TabIndex = 5
@@ -735,7 +735,7 @@ Partial Class AnyarLocalPrint
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(281, 40)
+        Me.Label2.Location = New System.Drawing.Point(329, 40)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(169, 24)
         Me.Label2.TabIndex = 6
@@ -745,13 +745,14 @@ Partial Class AnyarLocalPrint
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1112, 577)
+        Me.ClientSize = New System.Drawing.Size(1040, 577)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Location = New System.Drawing.Point(229, 3)
         Me.Name = "AnyarLocalPrint"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "AnyarLocalPrint"
         Me.GroupBox2.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)

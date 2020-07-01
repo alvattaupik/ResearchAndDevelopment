@@ -98,9 +98,9 @@ Public Class FormMonitoringPeminjamanAset
         If dgRequestMonitoring.RowCount = 0 Then Exit Sub
 
         MstrNoSurat = dgRequestMonitoring.Item(0, dgRequestMonitoring.CurrentRow.Index).Value
-        MstrJenisDokumen = dgRequestMonitoring.Item(2, dgRequestMonitoring.CurrentRow.Index).Value
+        MstrJenisDokumen = dgRequestMonitoring.Item(7, dgRequestMonitoring.CurrentRow.Index).Value
 
-        FormProsesDetailMonitoringPeminjaman.ShowDialog()
+        FormProsesPeminjamanAsset.ShowDialog()
 
     End Sub
 
@@ -112,25 +112,9 @@ Public Class FormMonitoringPeminjamanAset
         If dgRequestMonitoring.RowCount = 0 Then Exit Sub
 
         MstrNoSurat = dgRequestMonitoring.Item(0, dgRequestMonitoring.CurrentRow.Index).Value
-        Call KoneksiDatabase1()
-        Dim strSQlLogin As String
+        MstrJenisDokumen = dgRequestMonitoring.Item(7, dgRequestMonitoring.CurrentRow.Index).Value
 
-        strSQlLogin = "SELECT TOP 1 PathTemplate FROM dbo.MasterKonfigurasiTemplate WHERE KdUser='" & Trim(MstrKodeUser) & "' AND KdJenisSurat='IT006' AND StatusEnabled='Y'"
-        cmd = New SqlCommand(strSQlLogin, Koneksi1)
-        dr = cmd.ExecuteReader
-        dr.Read()
-        If dr.HasRows = True Then
-
-            MstrPathReport = dr.GetString(0)
-            FormTampilkanCetakan.Show()
-            dr.Close()
-
-        Else
-
-            MsgBox("Template Tidak Ada!!!", vbInformation, "Hubungi Administrator")
-            dr.Close()
-            Exit Sub
-        End If
+        LoadTemplateSurat()
 
         Exit Sub
 
@@ -196,7 +180,7 @@ ErrorLoad:
         If dgRequestMonitoring.RowCount = 0 Then Exit Sub
 
         MstrNoSurat = dgRequestMonitoring.Item(0, dgRequestMonitoring.CurrentRow.Index).Value
-        MstrJenisDokumen = dgRequestMonitoring.Item(2, dgRequestMonitoring.CurrentRow.Index).Value
+        MstrJenisDokumen = dgRequestMonitoring.Item(7, dgRequestMonitoring.CurrentRow.Index).Value
 
         strCek = "SELECT TOP 1 ISNULL(TanggalKembali,'') As TanggalKembali,PetugasPenerima From Peminjaman WHERE NomorSurat='" & Trim(MstrNoSurat) & "'"
         cmd = New SqlCommand(strCek, Koneksi1)
@@ -224,5 +208,14 @@ Lanjut:
         If dgRequestMonitoring.Rows.Count = 0 Then Exit Sub
 
 
+    End Sub
+
+    Private Sub dgRequestMonitoring_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgRequestMonitoring.CellContentDoubleClick
+        If dgRequestMonitoring.RowCount = 0 Then Exit Sub
+
+        MstrNoSurat = dgRequestMonitoring.Item(0, dgRequestMonitoring.CurrentRow.Index).Value
+        MstrJenisDokumen = dgRequestMonitoring.Item(7, dgRequestMonitoring.CurrentRow.Index).Value
+
+        FormProsesPeminjamanAsset.ShowDialog()
     End Sub
 End Class

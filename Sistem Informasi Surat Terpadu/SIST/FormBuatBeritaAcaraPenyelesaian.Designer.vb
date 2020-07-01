@@ -22,15 +22,14 @@ Partial Class FormBuatBeritaAcaraPenyelesaian
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormBuatBeritaAcaraPenyelesaian))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtNoSurat = New System.Windows.Forms.TextBox()
         Me.LblkdJenisSurat = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtStaffIT = New Guna.UI.WinForms.GunaTextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -54,25 +53,27 @@ Partial Class FormBuatBeritaAcaraPenyelesaian
         Me.cmdTambah = New Guna.UI.WinForms.GunaGradientButton()
         Me.cmdBrowse = New Guna.UI.WinForms.GunaGradientButton()
         Me.dgItem = New Guna.UI.WinForms.GunaDataGridView()
+        Me.KodeBarang = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Deskripsi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Keterangan = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.txtPenutup = New System.Windows.Forms.RichTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtSupervisor = New Guna.UI.WinForms.GunaTextBox()
-        Me.cmbBuatBaru = New Guna.UI.WinForms.GunaGradientButton()
-        Me.GunaGradientButton2 = New Guna.UI.WinForms.GunaGradientButton()
-        Me.KodeBarang = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Deskripsi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Keterangan = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GunaGradientButton3 = New Guna.UI.WinForms.GunaGradientButton()
         Me.GunaGradientButton4 = New Guna.UI.WinForms.GunaGradientButton()
+        Me.cmbBuatBaru = New Guna.UI.WinForms.GunaGradientButton()
+        Me.GunaGradientButton2 = New Guna.UI.WinForms.GunaGradientButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgItem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -105,16 +106,6 @@ Partial Class FormBuatBeritaAcaraPenyelesaian
         Me.LblkdJenisSurat.TabIndex = 2
         Me.LblkdJenisSurat.Text = "IT001"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.completed_stamp_1
-        Me.PictureBox1.Location = New System.Drawing.Point(10, 8)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(95, 95)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -125,16 +116,6 @@ Partial Class FormBuatBeritaAcaraPenyelesaian
         Me.Label1.Size = New System.Drawing.Size(453, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "BERITA ACARA PENYELESAIAN"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.SISTER.My.Resources.Resources.Vector_PNG_Pic
-        Me.PictureBox2.Location = New System.Drawing.Point(286, 3)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(508, 111)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
         '
         'GroupBox1
         '
@@ -479,31 +460,31 @@ Partial Class FormBuatBeritaAcaraPenyelesaian
         'dgItem
         '
         Me.dgItem.AllowUserToAddRows = False
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
-        Me.dgItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgItem.BackgroundColor = System.Drawing.Color.DarkGray
         Me.dgItem.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgItem.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgItem.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgItem.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgItem.ColumnHeadersHeight = 21
         Me.dgItem.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.KodeBarang, Me.Deskripsi, Me.Keterangan})
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgItem.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgItem.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgItem.EnableHeadersVisualStyles = False
         Me.dgItem.GridColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.dgItem.Location = New System.Drawing.Point(13, 20)
@@ -534,6 +515,21 @@ Partial Class FormBuatBeritaAcaraPenyelesaian
         Me.dgItem.ThemeStyle.RowsStyle.Height = 22
         Me.dgItem.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgItem.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'KodeBarang
+        '
+        Me.KodeBarang.HeaderText = "Kode"
+        Me.KodeBarang.Name = "KodeBarang"
+        '
+        'Deskripsi
+        '
+        Me.Deskripsi.HeaderText = "Deskripsi"
+        Me.Deskripsi.Name = "Deskripsi"
+        '
+        'Keterangan
+        '
+        Me.Keterangan.HeaderText = "Keterangan"
+        Me.Keterangan.Name = "Keterangan"
         '
         'GroupBox3
         '
@@ -578,77 +574,6 @@ Partial Class FormBuatBeritaAcaraPenyelesaian
         Me.txtSupervisor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSupervisor.Size = New System.Drawing.Size(248, 29)
         Me.txtSupervisor.TabIndex = 50
-        '
-        'cmbBuatBaru
-        '
-        Me.cmbBuatBaru.AnimationHoverSpeed = 0.07!
-        Me.cmbBuatBaru.AnimationSpeed = 0.03!
-        Me.cmbBuatBaru.BackColor = System.Drawing.Color.Transparent
-        Me.cmbBuatBaru.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
-        Me.cmbBuatBaru.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.cmbBuatBaru.BorderColor = System.Drawing.Color.Black
-        Me.cmbBuatBaru.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.cmbBuatBaru.FocusedColor = System.Drawing.Color.Empty
-        Me.cmbBuatBaru.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmbBuatBaru.ForeColor = System.Drawing.Color.White
-        Me.cmbBuatBaru.Image = Global.SISTER.My.Resources.Resources.download
-        Me.cmbBuatBaru.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmbBuatBaru.Location = New System.Drawing.Point(670, 120)
-        Me.cmbBuatBaru.Name = "cmbBuatBaru"
-        Me.cmbBuatBaru.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.cmbBuatBaru.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbBuatBaru.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.cmbBuatBaru.OnHoverForeColor = System.Drawing.Color.White
-        Me.cmbBuatBaru.OnHoverImage = Nothing
-        Me.cmbBuatBaru.OnPressedColor = System.Drawing.Color.Black
-        Me.cmbBuatBaru.Radius = 2
-        Me.cmbBuatBaru.Size = New System.Drawing.Size(126, 62)
-        Me.cmbBuatBaru.TabIndex = 52
-        Me.cmbBuatBaru.Text = "Buat Baru"
-        Me.cmbBuatBaru.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'GunaGradientButton2
-        '
-        Me.GunaGradientButton2.AnimationHoverSpeed = 0.07!
-        Me.GunaGradientButton2.AnimationSpeed = 0.03!
-        Me.GunaGradientButton2.BackColor = System.Drawing.Color.Transparent
-        Me.GunaGradientButton2.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
-        Me.GunaGradientButton2.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.GunaGradientButton2.BorderColor = System.Drawing.Color.Black
-        Me.GunaGradientButton2.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.GunaGradientButton2.FocusedColor = System.Drawing.Color.Empty
-        Me.GunaGradientButton2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.GunaGradientButton2.ForeColor = System.Drawing.Color.White
-        Me.GunaGradientButton2.Image = Global.SISTER.My.Resources.Resources.icon_save_png_1
-        Me.GunaGradientButton2.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaGradientButton2.Location = New System.Drawing.Point(670, 188)
-        Me.GunaGradientButton2.Name = "GunaGradientButton2"
-        Me.GunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.GunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GunaGradientButton2.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.GunaGradientButton2.OnHoverForeColor = System.Drawing.Color.White
-        Me.GunaGradientButton2.OnHoverImage = Nothing
-        Me.GunaGradientButton2.OnPressedColor = System.Drawing.Color.Black
-        Me.GunaGradientButton2.Radius = 2
-        Me.GunaGradientButton2.Size = New System.Drawing.Size(126, 63)
-        Me.GunaGradientButton2.TabIndex = 51
-        Me.GunaGradientButton2.Text = "Simpan"
-        Me.GunaGradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'KodeBarang
-        '
-        Me.KodeBarang.HeaderText = "Kode"
-        Me.KodeBarang.Name = "KodeBarang"
-        '
-        'Deskripsi
-        '
-        Me.Deskripsi.HeaderText = "Deskripsi"
-        Me.Deskripsi.Name = "Deskripsi"
-        '
-        'Keterangan
-        '
-        Me.Keterangan.HeaderText = "Keterangan"
-        Me.Keterangan.Name = "Keterangan"
         '
         'GunaGradientButton3
         '
@@ -706,6 +631,82 @@ Partial Class FormBuatBeritaAcaraPenyelesaian
         Me.GunaGradientButton4.Text = "Cetak"
         Me.GunaGradientButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'cmbBuatBaru
+        '
+        Me.cmbBuatBaru.AnimationHoverSpeed = 0.07!
+        Me.cmbBuatBaru.AnimationSpeed = 0.03!
+        Me.cmbBuatBaru.BackColor = System.Drawing.Color.Transparent
+        Me.cmbBuatBaru.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
+        Me.cmbBuatBaru.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.cmbBuatBaru.BorderColor = System.Drawing.Color.Black
+        Me.cmbBuatBaru.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.cmbBuatBaru.FocusedColor = System.Drawing.Color.Empty
+        Me.cmbBuatBaru.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmbBuatBaru.ForeColor = System.Drawing.Color.White
+        Me.cmbBuatBaru.Image = Global.SISTER.My.Resources.Resources.download
+        Me.cmbBuatBaru.ImageSize = New System.Drawing.Size(20, 20)
+        Me.cmbBuatBaru.Location = New System.Drawing.Point(670, 120)
+        Me.cmbBuatBaru.Name = "cmbBuatBaru"
+        Me.cmbBuatBaru.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.cmbBuatBaru.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbBuatBaru.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.cmbBuatBaru.OnHoverForeColor = System.Drawing.Color.White
+        Me.cmbBuatBaru.OnHoverImage = Nothing
+        Me.cmbBuatBaru.OnPressedColor = System.Drawing.Color.Black
+        Me.cmbBuatBaru.Radius = 2
+        Me.cmbBuatBaru.Size = New System.Drawing.Size(126, 62)
+        Me.cmbBuatBaru.TabIndex = 52
+        Me.cmbBuatBaru.Text = "Buat Baru"
+        Me.cmbBuatBaru.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'GunaGradientButton2
+        '
+        Me.GunaGradientButton2.AnimationHoverSpeed = 0.07!
+        Me.GunaGradientButton2.AnimationSpeed = 0.03!
+        Me.GunaGradientButton2.BackColor = System.Drawing.Color.Transparent
+        Me.GunaGradientButton2.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
+        Me.GunaGradientButton2.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.GunaGradientButton2.BorderColor = System.Drawing.Color.Black
+        Me.GunaGradientButton2.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.GunaGradientButton2.FocusedColor = System.Drawing.Color.Empty
+        Me.GunaGradientButton2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.GunaGradientButton2.ForeColor = System.Drawing.Color.White
+        Me.GunaGradientButton2.Image = Global.SISTER.My.Resources.Resources.icon_save_png_1
+        Me.GunaGradientButton2.ImageSize = New System.Drawing.Size(20, 20)
+        Me.GunaGradientButton2.Location = New System.Drawing.Point(670, 188)
+        Me.GunaGradientButton2.Name = "GunaGradientButton2"
+        Me.GunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.GunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GunaGradientButton2.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.GunaGradientButton2.OnHoverForeColor = System.Drawing.Color.White
+        Me.GunaGradientButton2.OnHoverImage = Nothing
+        Me.GunaGradientButton2.OnPressedColor = System.Drawing.Color.Black
+        Me.GunaGradientButton2.Radius = 2
+        Me.GunaGradientButton2.Size = New System.Drawing.Size(126, 63)
+        Me.GunaGradientButton2.TabIndex = 51
+        Me.GunaGradientButton2.Text = "Simpan"
+        Me.GunaGradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SISTER.My.Resources.Resources.completed_stamp_1
+        Me.PictureBox1.Location = New System.Drawing.Point(10, 8)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(95, 95)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.SISTER.My.Resources.Resources.Vector_PNG_Pic
+        Me.PictureBox2.Location = New System.Drawing.Point(286, 3)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(508, 111)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
+        '
         'FormBuatBeritaAcaraPenyelesaian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -723,20 +724,21 @@ Partial Class FormBuatBeritaAcaraPenyelesaian
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "FormBuatBeritaAcaraPenyelesaian"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form Berita Acara Penyelesaian"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         CType(Me.dgItem, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

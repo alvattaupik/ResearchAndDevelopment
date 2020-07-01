@@ -40,3 +40,13 @@ D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.exe.c
 D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.exe
 D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.xml
 D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.pdb
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.exe.manifest
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.application
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.exe
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.pdb
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\bin\Debug\IP Efisiensi.xml
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP_Efisiensi.Form1.resources
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP_Efisiensi.Resources.resources
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.vbproj.GenerateResource.Cache
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.exe.manifest
+D:\ResearchAndDevelopment\IP Efisiensi\IP Efisiensi\obj\Debug\IP Efisiensi.application

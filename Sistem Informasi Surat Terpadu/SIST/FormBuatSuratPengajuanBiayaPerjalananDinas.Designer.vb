@@ -22,9 +22,10 @@ Partial Class FormBuatSuratPengajuanBiayaPerjalananDinas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormBuatSuratPengajuanBiayaPerjalananDinas))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtNoSurat = New System.Windows.Forms.TextBox()
@@ -33,6 +34,8 @@ Partial Class FormBuatSuratPengajuanBiayaPerjalananDinas
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtPerihal = New Guna.UI.WinForms.GunaTextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.dtpTglBerangkat = New Guna.UI.WinForms.GunaDateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -65,8 +68,6 @@ Partial Class FormBuatSuratPengajuanBiayaPerjalananDinas
         Me.GunaGradientButton2 = New Guna.UI.WinForms.GunaGradientButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtTotal = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtPerihal = New Guna.UI.WinForms.GunaTextBox()
         Me.GunaGradientButton3 = New Guna.UI.WinForms.GunaGradientButton()
         Me.GunaGradientButton4 = New Guna.UI.WinForms.GunaGradientButton()
         Me.Panel1.SuspendLayout()
@@ -174,6 +175,30 @@ Partial Class FormBuatSuratPengajuanBiayaPerjalananDinas
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detail Tujuan Dinas"
+        '
+        'txtPerihal
+        '
+        Me.txtPerihal.BaseColor = System.Drawing.Color.White
+        Me.txtPerihal.BorderColor = System.Drawing.Color.Silver
+        Me.txtPerihal.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPerihal.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtPerihal.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPerihal.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtPerihal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtPerihal.Location = New System.Drawing.Point(96, 46)
+        Me.txtPerihal.Name = "txtPerihal"
+        Me.txtPerihal.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPerihal.Size = New System.Drawing.Size(214, 26)
+        Me.txtPerihal.TabIndex = 41
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(12, 51)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(57, 16)
+        Me.Label10.TabIndex = 40
+        Me.Label10.Text = "Perihal"
         '
         'Label9
         '
@@ -411,31 +436,31 @@ Partial Class FormBuatSuratPengajuanBiayaPerjalananDinas
         'dgItem
         '
         Me.dgItem.AllowUserToAddRows = False
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
-        Me.dgItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgItem.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgItem.BackgroundColor = System.Drawing.Color.DarkGray
         Me.dgItem.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgItem.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgItem.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgItem.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgItem.ColumnHeadersHeight = 35
         Me.dgItem.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DeskripsiKebutuhan, Me.BiayaSatuan, Me.Qty, Me.Total, Me.Keterangan})
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgItem.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgItem.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgItem.EnableHeadersVisualStyles = False
         Me.dgItem.GridColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.dgItem.Location = New System.Drawing.Point(13, 20)
@@ -643,30 +668,6 @@ Partial Class FormBuatSuratPengajuanBiayaPerjalananDinas
         Me.txtTotal.TabIndex = 54
         Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(12, 51)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(57, 16)
-        Me.Label10.TabIndex = 40
-        Me.Label10.Text = "Perihal"
-        '
-        'txtPerihal
-        '
-        Me.txtPerihal.BaseColor = System.Drawing.Color.White
-        Me.txtPerihal.BorderColor = System.Drawing.Color.Silver
-        Me.txtPerihal.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtPerihal.FocusedBaseColor = System.Drawing.Color.White
-        Me.txtPerihal.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPerihal.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.txtPerihal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtPerihal.Location = New System.Drawing.Point(96, 46)
-        Me.txtPerihal.Name = "txtPerihal"
-        Me.txtPerihal.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtPerihal.Size = New System.Drawing.Size(214, 26)
-        Me.txtPerihal.TabIndex = 41
-        '
         'GunaGradientButton3
         '
         Me.GunaGradientButton3.AnimationHoverSpeed = 0.07!
@@ -742,6 +743,7 @@ Partial Class FormBuatSuratPengajuanBiayaPerjalananDinas
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "FormBuatSuratPengajuanBiayaPerjalananDinas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
