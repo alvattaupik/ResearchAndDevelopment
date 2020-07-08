@@ -2,7 +2,7 @@
 Imports System.Data
 Imports System.Data.Sql
 Imports System.Data.SqlClient
-
+Imports System.Text.RegularExpressions
 
 Module ModuleUltility
 
@@ -15,9 +15,6 @@ Module ModuleUltility
         Next Control
 
     End Sub
-
-
-
     Public Sub ShowLocation(frm As Form)
 
         Dim p As Point
@@ -26,11 +23,6 @@ Module ModuleUltility
         MenuUtama.lblMousePosition.Text = "Form Position : " & "X : " & p.X & "  Y : " & p.Y
         MenuUtama.lblFormSize.Text = " Form Size Width: " & frm.Width.ToString & " Height:" & frm.Height.ToString
     End Sub
-
-
-
-
-
     Sub LoadComboBoxDBEMAIL(cmb As ComboBox, strSQL As String, strValue As String, strMember As String)
         Dim ds As New DataSet()
         Dim adapter As New SqlDataAdapter()
@@ -51,8 +43,6 @@ Module ModuleUltility
         End Try
 
     End Sub
-
-
     Sub LoadComboBoxDBLive(cmb As ComboBox, strSQL As String, strValue As String, strMember As String)
         Dim ds As New DataSet()
         Dim adapter As New SqlDataAdapter()
@@ -73,16 +63,9 @@ Module ModuleUltility
         End Try
 
     End Sub
-
-
-
-
-
     Sub MsubPesanError()
         MsgBox("Kesalahan :" & Err.Description, vbCritical, "Silahkan Hubungi IT - Department")
     End Sub
-
-
     Sub GetKontrolObjek()
         strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='File001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
         cmd = New SqlCommand(strSQL, Koneksi1)
@@ -603,52 +586,24 @@ ErrorLoad:
     End Sub
 
 
-   
 
-
-
-    Sub LoadDaftarSuratMenuUtama()
-
-        'Call KoneksiDatabase1()
-        'Dim cmd As New SqlCommand("SELECT DISTINCT NomorSurat,DibuatOleh,TanggalSurat,JenisSurat,Perihal,Penerima,Attachment,KdJenisSurat,KdUser FROM V_DaftarSuratUser Where KdDivisi='" & Trim(MstrKodeDivisi) & "' Order By TanggalSurat Desc", Koneksi1)
-        'cmd.CommandTimeout = 0
-        'Dim adapter As New SqlDataAdapter(cmd)
-        'Dim table As New DataTable
-        'adapter.Fill(table)
-        'MenuUtama.dgSuratSaya.DataSource = table
-        'MenuUtama.dgSuratSaya.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-        'MenuUtama.dgSuratSaya.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
-        'MenuUtama.dgSuratSaya.AutoResizeColumns()
-
-    End Sub
-
-
-    'Sub getPriceListNumber()
-    '    KoneksiDatabase2()
-    '    strSQlLogin = "SELECT Top 1 ListNum FROM dbo.CustomMessage WHERE KdAplikasi='AG' AND StatusEnabled='1'"
-    '    cmd = New SqlCommand(strSQlLogin, Koneksi1)
-    '    dr = cmd.ExecuteReader
-    '    dr.Read()
-    '    If dr.HasRows = True Then
-
-    '        MsgBox("Penting! " & vbCrLf & "Kategori :" & dr.GetString(2) & vbCrLf & "Pesan :" & dr.GetString(3), vbInformation)
-
-    '        Exit Sub
-    '    Else
-    '        'GoTo Lanjut
-    '    End If
+    'Sub LoadHover()
+    '    Dim tt As New ToolTip()
+    '    tt.SetToolTip(SideBar.cmdMonitoringRealStok, "Monitoring Real Stok")
+    '    tt.SetToolTip(SideBar.cmdMonitoringDelivery, "Monitoring Delivery")
+    '    tt.SetToolTip(SideBar.cmdAnyarLocalPrint, "Anyar Local Print")
+    '    tt.SetToolTip(SideBar.cmdExportHargaJual, "Export Harga Jual")
     'End Sub
-
 
 
     Sub LoadNotifPerubahanHarga()
         KoneksiDatabase2()
         Dim command As SqlCommand
-        command = New SqlCommand("_tmspPerubahanHargaJual", Koneksi2)
+        command = New SqlCommand("_tmspPerubahanHarga", Koneksi2)
 
         Dim adapter As New SqlDataAdapter(command)
         command.CommandType = CommandType.StoredProcedure
-        command.Parameters.AddWithValue("@HargaJual", MstrHargaJual)
+        command.Parameters.AddWithValue("@PriceList", MstrHargaJual)
         command.Parameters.AddWithValue("@NotifSelect", "Header")
 
 
@@ -657,17 +612,129 @@ ErrorLoad:
 
 
         If table.Rows.Count = 0 Then
+            FnTimerNotifikasi(MIntDurasi, MstrSatuanWaktu)
+            MdblDurasiDetikTimerNotifikasi = LongDurasi
+            MenuUtama.TimerNotifikasi.Start()
             Exit Sub
         Else
 
-            PerubahanHargaJual.dgListPerubahanHargaJual.DataSource = table
-            PerubahanHargaJual.dgListPerubahanHargaJual.DataSource = table
-            PerubahanHargaJual.dgListPerubahanHargaJual.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-            PerubahanHargaJual.dgListPerubahanHargaJual.AutoResizeColumns()
-            PerubahanHargaJual.dgListPerubahanHargaJual.RowHeadersVisible = False
+
+            
+
+            Dim frm As New PerubahanHargaJual
+            frm.MdiParent = MenuUtama
+            frm.TopMost = True
+            frm.dgListPerubahanHargaJual.DataSource = table
+            frm.dgListPerubahanHargaJual.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+            frm.dgListPerubahanHargaJual.AutoResizeColumns()
+            frm.dgListPerubahanHargaJual.RowHeadersVisible = False
+            frm.Show()
+            FnTimerNotifikasi(MIntDurasi, MstrSatuanWaktu)
+            MdblDurasiDetikTimerNotifikasi = LongDurasi
+            MenuUtama.TimerNotifikasi.Start()
         End If
 
     End Sub
+
+
+
+
+
+    Public Enum ValidationType
+        Only_Numbers = 1
+        Only_Characters = 2
+        Not_Null = 3
+        Only_Email = 4
+        Phone_Number = 5
+
+        Only_Digits
+
+        No_Blank
+
+    End Enum
+
+    Public Sub AssignValidation(ByRef CTRL As Windows.Forms.TextBox, ByVal Validation_Type As ValidationType)
+        Dim txt As Windows.Forms.TextBox = CTRL
+        Select Case Validation_Type
+            Case ValidationType.Only_Numbers
+                AddHandler txt.KeyPress, AddressOf number_Leave
+            Case ValidationType.Only_Characters
+                AddHandler txt.KeyPress, AddressOf OCHAR_Leave
+            Case ValidationType.Not_Null
+                AddHandler txt.Leave, AddressOf NotNull_Leave
+            Case ValidationType.Only_Email
+                AddHandler txt.Leave, AddressOf Email_Leave
+            Case ValidationType.Phone_Number
+                AddHandler txt.KeyPress, AddressOf Phonenumber_Leave
+        End Select
+    End Sub
+
+
+    Public Sub number_Leave(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        Dim numbers As Windows.Forms.TextBox = sender
+        If InStr("1234567890.", e.KeyChar) = 0 And Asc(e.KeyChar) <> 8 Or (e.KeyChar = "." And InStr(numbers.Text, ".") > 0) Then
+            e.KeyChar = Chr(0)
+            e.Handled = True
+        End If
+    End Sub
+
+
+    Public Sub Phonenumber_Leave(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        Dim numbers As Windows.Forms.TextBox = sender
+        If InStr("1234567890.()-+ ", e.KeyChar) = 0 And Asc(e.KeyChar) <> 8 Or (e.KeyChar = "." And InStr(numbers.Text, ".") > 0) Then
+            e.KeyChar = Chr(0)
+            e.Handled = True
+        End If
+    End Sub
+
+
+    Public Sub OCHAR_Leave(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        If InStr("1234567890!@#$%^&*()_+=-", e.KeyChar) > 0 Then
+            e.KeyChar = Chr(0)
+            e.Handled = True
+        End If
+    End Sub
+
+
+    Public Sub NotNull_Leave(ByVal sender As Object, ByVal e As System.EventArgs)
+        Dim No As Windows.Forms.TextBox = sender
+        If No.Text.Trim = "" Then
+            MsgBox("This field Must be filled!")
+            No.Focus()
+        End If
+    End Sub
+
+
+
+    Public Sub Email_Leave(ByVal sender As Object, ByVal e As System.EventArgs)
+        Dim Email As Windows.Forms.TextBox = sender
+        If Email.Text <> "" Then
+            Dim rex As Match = Regex.Match(Trim(Email.Text), "^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,3})$", RegexOptions.IgnoreCase)
+            If rex.Success = False Then
+                MessageBox.Show("Please Enter a valid Email Address", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Email.BackColor = Color.Red
+                Email.Focus()
+                Exit Sub
+            Else
+                Email.BackColor = Color.White
+            End If
+        End If
+    End Sub
+
+
+
+    Public Sub FnTimerNotifikasi(intDurasi As Integer, strSatuan As String)
+
+
+        If strSatuan = "H" Then
+            MdblDurasiDetikTimerNotifikasi = intDurasi * 3600
+            LongDurasi = MdblDurasiDetikTimerNotifikasi
+        Else
+            MdblDurasiDetikTimerNotifikasi = intDurasi * 60
+            LongDurasi = MdblDurasiDetikTimerNotifikasi
+        End If
+    End Sub
+
 
 
 

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormBuatRequestValidasi
+Partial Class FormBuatRequestBukaValidasi
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,6 +23,7 @@ Partial Class FormBuatRequestValidasi
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.cmdBrowseAttatchment = New Guna.UI.WinForms.GunaGradientButton()
         Me.txtPathAttachments = New Guna.UI.WinForms.GunaTextBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -36,8 +37,10 @@ Partial Class FormBuatRequestValidasi
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNamaLengkap = New Guna.UI.WinForms.GunaTextBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txtJenisValidasi = New System.Windows.Forms.TextBox()
+        Me.txtKomponen = New System.Windows.Forms.TextBox()
+        Me.cmdBrowseJenisValidasi = New System.Windows.Forms.Button()
         Me.cmdBrowse = New System.Windows.Forms.Button()
-        Me.txtKomponen = New Guna.UI.WinForms.GunaTextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.JamAkhir = New System.Windows.Forms.DateTimePicker()
         Me.JamAwal = New System.Windows.Forms.DateTimePicker()
@@ -46,7 +49,6 @@ Partial Class FormBuatRequestValidasi
         Me.txtError = New System.Windows.Forms.RichTextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.cmbJenisValidasi = New Guna.UI.WinForms.GunaComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cmbJenisRequest = New Guna.UI.WinForms.GunaComboBox()
@@ -54,12 +56,13 @@ Partial Class FormBuatRequestValidasi
         Me.GunaGradientButton1 = New Guna.UI.WinForms.GunaGradientButton()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.lblKdJenisSurat = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNoValidasi = New Guna.UI.WinForms.GunaTextBox()
         Me.txtKodeKomponen = New Guna.UI.WinForms.GunaTextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.cmbTujuan = New System.Windows.Forms.ComboBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -69,6 +72,7 @@ Partial Class FormBuatRequestValidasi
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Beige
+        Me.GroupBox2.Controls.Add(Me.Label16)
         Me.GroupBox2.Controls.Add(Me.cmdBrowseAttatchment)
         Me.GroupBox2.Controls.Add(Me.txtPathAttachments)
         Me.GroupBox2.Controls.Add(Me.Label15)
@@ -88,6 +92,15 @@ Partial Class FormBuatRequestValidasi
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Identitas Pembuat Surat"
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(146, 269)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(188, 13)
+        Me.Label16.TabIndex = 38
+        Me.Label16.Text = "Maksimal 1 Berupa Gambar/Dokumen"
+        '
         'cmdBrowseAttatchment
         '
         Me.cmdBrowseAttatchment.AnimationHoverSpeed = 0.07!
@@ -102,7 +115,7 @@ Partial Class FormBuatRequestValidasi
         Me.cmdBrowseAttatchment.ForeColor = System.Drawing.Color.White
         Me.cmdBrowseAttatchment.Image = Nothing
         Me.cmdBrowseAttatchment.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdBrowseAttatchment.Location = New System.Drawing.Point(271, 261)
+        Me.cmdBrowseAttatchment.Location = New System.Drawing.Point(284, 236)
         Me.cmdBrowseAttatchment.Name = "cmdBrowseAttatchment"
         Me.cmdBrowseAttatchment.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdBrowseAttatchment.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -126,7 +139,7 @@ Partial Class FormBuatRequestValidasi
         Me.txtPathAttachments.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPathAttachments.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtPathAttachments.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtPathAttachments.Location = New System.Drawing.Point(149, 261)
+        Me.txtPathAttachments.Location = New System.Drawing.Point(149, 236)
         Me.txtPathAttachments.Name = "txtPathAttachments"
         Me.txtPathAttachments.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPathAttachments.Size = New System.Drawing.Size(116, 30)
@@ -136,11 +149,11 @@ Partial Class FormBuatRequestValidasi
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(19, 261)
+        Me.Label15.Location = New System.Drawing.Point(19, 248)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(92, 18)
+        Me.Label15.Size = New System.Drawing.Size(77, 18)
         Me.Label15.TabIndex = 17
-        Me.Label15.Text = "Attachment"
+        Me.Label15.Text = "Lampiran"
         '
         'Label14
         '
@@ -165,7 +178,7 @@ Partial Class FormBuatRequestValidasi
         '
         Me.txtPesan.Location = New System.Drawing.Point(149, 155)
         Me.txtPesan.Name = "txtPesan"
-        Me.txtPesan.Size = New System.Drawing.Size(201, 102)
+        Me.txtPesan.Size = New System.Drawing.Size(201, 70)
         Me.txtPesan.TabIndex = 12
         Me.txtPesan.Text = ""
         '
@@ -215,11 +228,11 @@ Partial Class FormBuatRequestValidasi
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(90, 53)
+        Me.Label3.Location = New System.Drawing.Point(21, 56)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 18)
+        Me.Label3.Size = New System.Drawing.Size(104, 18)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Divisi"
+        Me.Label3.Text = "Divisi Lokasi"
         '
         'Label2
         '
@@ -250,8 +263,12 @@ Partial Class FormBuatRequestValidasi
         'GroupBox4
         '
         Me.GroupBox4.BackColor = System.Drawing.Color.Beige
-        Me.GroupBox4.Controls.Add(Me.cmdBrowse)
+        Me.GroupBox4.Controls.Add(Me.cmbTujuan)
+        Me.GroupBox4.Controls.Add(Me.Label17)
+        Me.GroupBox4.Controls.Add(Me.txtJenisValidasi)
         Me.GroupBox4.Controls.Add(Me.txtKomponen)
+        Me.GroupBox4.Controls.Add(Me.cmdBrowseJenisValidasi)
+        Me.GroupBox4.Controls.Add(Me.cmdBrowse)
         Me.GroupBox4.Controls.Add(Me.Label13)
         Me.GroupBox4.Controls.Add(Me.JamAkhir)
         Me.GroupBox4.Controls.Add(Me.JamAwal)
@@ -260,7 +277,6 @@ Partial Class FormBuatRequestValidasi
         Me.GroupBox4.Controls.Add(Me.txtError)
         Me.GroupBox4.Controls.Add(Me.Label7)
         Me.GroupBox4.Controls.Add(Me.Label9)
-        Me.GroupBox4.Controls.Add(Me.cmbJenisValidasi)
         Me.GroupBox4.Controls.Add(Me.Label6)
         Me.GroupBox4.Controls.Add(Me.Label8)
         Me.GroupBox4.Controls.Add(Me.cmbJenisRequest)
@@ -270,6 +286,32 @@ Partial Class FormBuatRequestValidasi
         Me.GroupBox4.Size = New System.Drawing.Size(373, 302)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
+        '
+        'txtJenisValidasi
+        '
+        Me.txtJenisValidasi.Location = New System.Drawing.Point(138, 118)
+        Me.txtJenisValidasi.Name = "txtJenisValidasi"
+        Me.txtJenisValidasi.ReadOnly = True
+        Me.txtJenisValidasi.Size = New System.Drawing.Size(139, 20)
+        Me.txtJenisValidasi.TabIndex = 21
+        '
+        'txtKomponen
+        '
+        Me.txtKomponen.Location = New System.Drawing.Point(138, 83)
+        Me.txtKomponen.Name = "txtKomponen"
+        Me.txtKomponen.ReadOnly = True
+        Me.txtKomponen.Size = New System.Drawing.Size(139, 20)
+        Me.txtKomponen.TabIndex = 20
+        '
+        'cmdBrowseJenisValidasi
+        '
+        Me.cmdBrowseJenisValidasi.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdBrowseJenisValidasi.Location = New System.Drawing.Point(283, 115)
+        Me.cmdBrowseJenisValidasi.Name = "cmdBrowseJenisValidasi"
+        Me.cmdBrowseJenisValidasi.Size = New System.Drawing.Size(80, 25)
+        Me.cmdBrowseJenisValidasi.TabIndex = 19
+        Me.cmdBrowseJenisValidasi.Text = "Browse"
+        Me.cmdBrowseJenisValidasi.UseVisualStyleBackColor = True
         '
         'cmdBrowse
         '
@@ -281,26 +323,10 @@ Partial Class FormBuatRequestValidasi
         Me.cmdBrowse.Text = "Browse"
         Me.cmdBrowse.UseVisualStyleBackColor = True
         '
-        'txtKomponen
-        '
-        Me.txtKomponen.BaseColor = System.Drawing.Color.White
-        Me.txtKomponen.BorderColor = System.Drawing.Color.Silver
-        Me.txtKomponen.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtKomponen.Enabled = False
-        Me.txtKomponen.FocusedBaseColor = System.Drawing.Color.White
-        Me.txtKomponen.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtKomponen.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.txtKomponen.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtKomponen.Location = New System.Drawing.Point(138, 81)
-        Me.txtKomponen.Name = "txtKomponen"
-        Me.txtKomponen.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtKomponen.Size = New System.Drawing.Size(141, 26)
-        Me.txtKomponen.TabIndex = 16
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(122, 158)
+        Me.Label13.Location = New System.Drawing.Point(124, 195)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(241, 13)
         Me.Label13.TabIndex = 15
@@ -310,7 +336,7 @@ Partial Class FormBuatRequestValidasi
         '
         Me.JamAkhir.CustomFormat = "H:mm"
         Me.JamAkhir.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.JamAkhir.Location = New System.Drawing.Point(261, 53)
+        Me.JamAkhir.Location = New System.Drawing.Point(260, 51)
         Me.JamAkhir.Name = "JamAkhir"
         Me.JamAkhir.Size = New System.Drawing.Size(102, 20)
         Me.JamAkhir.TabIndex = 14
@@ -321,14 +347,14 @@ Partial Class FormBuatRequestValidasi
         Me.JamAwal.Format = System.Windows.Forms.DateTimePickerFormat.Time
         Me.JamAwal.Location = New System.Drawing.Point(138, 51)
         Me.JamAwal.Name = "JamAwal"
-        Me.JamAwal.Size = New System.Drawing.Size(68, 20)
+        Me.JamAwal.Size = New System.Drawing.Size(90, 20)
         Me.JamAwal.TabIndex = 13
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(6, 186)
+        Me.Label11.Location = New System.Drawing.Point(6, 225)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(102, 18)
         Me.Label11.TabIndex = 12
@@ -338,7 +364,7 @@ Partial Class FormBuatRequestValidasi
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(6, 168)
+        Me.Label10.Location = New System.Drawing.Point(53, 207)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(55, 18)
         Me.Label10.TabIndex = 10
@@ -346,9 +372,9 @@ Partial Class FormBuatRequestValidasi
         '
         'txtError
         '
-        Me.txtError.Location = New System.Drawing.Point(125, 174)
+        Me.txtError.Location = New System.Drawing.Point(125, 211)
         Me.txtError.Name = "txtError"
-        Me.txtError.Size = New System.Drawing.Size(238, 122)
+        Me.txtError.Size = New System.Drawing.Size(238, 85)
         Me.txtError.TabIndex = 11
         Me.txtError.Text = ""
         '
@@ -356,7 +382,7 @@ Partial Class FormBuatRequestValidasi
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(219, 53)
+        Me.Label7.Location = New System.Drawing.Point(227, 53)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(36, 18)
         Me.Label7.TabIndex = 9
@@ -366,29 +392,11 @@ Partial Class FormBuatRequestValidasi
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(6, 116)
+        Me.Label9.Location = New System.Drawing.Point(6, 117)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(111, 18)
         Me.Label9.TabIndex = 8
         Me.Label9.Text = "Jenis Validasi"
-        '
-        'cmbJenisValidasi
-        '
-        Me.cmbJenisValidasi.BackColor = System.Drawing.Color.Transparent
-        Me.cmbJenisValidasi.BaseColor = System.Drawing.Color.White
-        Me.cmbJenisValidasi.BorderColor = System.Drawing.Color.Silver
-        Me.cmbJenisValidasi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmbJenisValidasi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbJenisValidasi.FocusedColor = System.Drawing.Color.Empty
-        Me.cmbJenisValidasi.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmbJenisValidasi.ForeColor = System.Drawing.Color.Black
-        Me.cmbJenisValidasi.FormattingEnabled = True
-        Me.cmbJenisValidasi.Location = New System.Drawing.Point(138, 114)
-        Me.cmbJenisValidasi.Name = "cmbJenisValidasi"
-        Me.cmbJenisValidasi.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbJenisValidasi.OnHoverItemForeColor = System.Drawing.Color.White
-        Me.cmbJenisValidasi.Size = New System.Drawing.Size(225, 26)
-        Me.cmbJenisValidasi.TabIndex = 9
         '
         'Label6
         '
@@ -475,7 +483,6 @@ Partial Class FormBuatRequestValidasi
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
         Me.GroupBox1.BackgroundImage = Global.AnyarGadget.My.Resources.Resources.Vector_2
-        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtNoValidasi)
@@ -485,17 +492,6 @@ Partial Class FormBuatRequestValidasi
         Me.GroupBox1.Size = New System.Drawing.Size(749, 66)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Red
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(713, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(36, 32)
-        Me.Button1.TabIndex = 39
-        Me.Button1.Text = "X"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'GroupBox3
         '
@@ -520,11 +516,11 @@ Partial Class FormBuatRequestValidasi
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(237, 18)
+        Me.Label1.Location = New System.Drawing.Point(213, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(301, 25)
+        Me.Label1.Size = New System.Drawing.Size(369, 25)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "FORM REQUEST VALIDASI"
+        Me.Label1.Text = "FORM REQUEST BUKA VALIDASI"
         '
         'txtNoValidasi
         '
@@ -536,10 +532,10 @@ Partial Class FormBuatRequestValidasi
         Me.txtNoValidasi.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNoValidasi.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtNoValidasi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtNoValidasi.Location = New System.Drawing.Point(242, 30)
+        Me.txtNoValidasi.Location = New System.Drawing.Point(82, 8)
         Me.txtNoValidasi.Name = "txtNoValidasi"
         Me.txtNoValidasi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNoValidasi.Size = New System.Drawing.Size(251, 30)
+        Me.txtNoValidasi.Size = New System.Drawing.Size(64, 30)
         Me.txtNoValidasi.TabIndex = 2
         Me.txtNoValidasi.Visible = False
         '
@@ -553,14 +549,32 @@ Partial Class FormBuatRequestValidasi
         Me.txtKodeKomponen.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtKodeKomponen.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtKodeKomponen.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtKodeKomponen.Location = New System.Drawing.Point(477, 30)
+        Me.txtKodeKomponen.Location = New System.Drawing.Point(636, 8)
         Me.txtKodeKomponen.Name = "txtKodeKomponen"
         Me.txtKodeKomponen.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtKodeKomponen.Size = New System.Drawing.Size(55, 30)
         Me.txtKodeKomponen.TabIndex = 17
         Me.txtKodeKomponen.Visible = False
         '
-        'FormBuatRequestValidasi
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(6, 154)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(58, 18)
+        Me.Label17.TabIndex = 22
+        Me.Label17.Text = "Tujuan"
+        '
+        'cmbTujuan
+        '
+        Me.cmbTujuan.FormattingEnabled = True
+        Me.cmbTujuan.Location = New System.Drawing.Point(138, 154)
+        Me.cmbTujuan.Name = "cmbTujuan"
+        Me.cmbTujuan.Size = New System.Drawing.Size(224, 21)
+        Me.cmbTujuan.TabIndex = 23
+        '
+        'FormBuatRequestBukaValidasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -570,8 +584,8 @@ Partial Class FormBuatRequestValidasi
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FormBuatRequestValidasi"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Name = "FormBuatRequestBukaValidasi"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormValidasi"
         Me.GroupBox2.ResumeLayout(False)
@@ -599,7 +613,6 @@ Partial Class FormBuatRequestValidasi
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtError As System.Windows.Forms.RichTextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents cmbJenisValidasi As Guna.UI.WinForms.GunaComboBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
@@ -616,11 +629,15 @@ Partial Class FormBuatRequestValidasi
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents cmdBrowse As System.Windows.Forms.Button
-    Friend WithEvents txtKomponen As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents txtKodeKomponen As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents cmdBrowseAttatchment As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents txtPathAttachments As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents cmdBrowseJenisValidasi As System.Windows.Forms.Button
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents txtJenisValidasi As System.Windows.Forms.TextBox
+    Friend WithEvents txtKomponen As System.Windows.Forms.TextBox
+    Friend WithEvents cmbTujuan As System.Windows.Forms.ComboBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
 End Class

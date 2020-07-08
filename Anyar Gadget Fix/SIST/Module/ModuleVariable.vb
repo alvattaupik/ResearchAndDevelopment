@@ -70,4 +70,12 @@
     Public MstrNoStruk As String
 
 
+    Public MdblDurasiDetikTimerNotifikasi As Long
+
+    Public MIntDurasi As Integer
+    Public MstrSatuanWaktu As String
+
+    Public LongDurasi As Long
+
+
 End Module

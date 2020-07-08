@@ -158,3 +158,4 @@ D:\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI -
 D:\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.FormAuditItems.resources
 D:\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\Guna.UI.dll
 D:\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\Guna.UI.pdb
+D:\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.FormMonitoringDelivery.resources

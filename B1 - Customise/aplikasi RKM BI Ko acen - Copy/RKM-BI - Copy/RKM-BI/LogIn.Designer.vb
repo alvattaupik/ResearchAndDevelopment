@@ -145,7 +145,7 @@ Partial Class LogIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(341, 212)
+        Me.ClientSize = New System.Drawing.Size(342, 218)
         Me.ControlBox = False
         Me.Controls.Add(Me.chkRememberMe)
         Me.Controls.Add(Me.Label3)

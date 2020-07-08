@@ -34,10 +34,7 @@ Public Class delivery
         If MyConnection.State = ConnectionState.Closed Then
             MyConnection.Open()
         End If
-        'MyConnection2 = New SqlConnection("Data Source=" + "10.1.0.4" + ";Initial Catalog=ProInt_ERP;User ID=sa;Password=stip3ndium")
-        'If MyConnection2.State = ConnectionState.Closed Then
-        '    MyConnection2.Open()
-        'End If
+
     End Sub
 
   
@@ -62,7 +59,12 @@ Public Class delivery
         DataGridViewCirebon.Rows.Clear()
         DataGridViewSumedang.DataSource = Nothing
         DataGridViewSumedang.Rows.Clear()
-
+        DataGridViewPAMANUKAN.DataSource = Nothing
+        DataGridViewPAMANUKAN.Rows.Clear()
+        DataGridViewSOEKARNOHATTA.DataSource = Nothing
+        DataGridViewSOEKARNOHATTA.Rows.Clear()
+        DataGridViewSUBANG.DataSource = Nothing
+        DataGridViewSUBANG.Rows.Clear()
 
 
         Dim cabang As String = ""
@@ -726,7 +728,129 @@ Public Class delivery
 
         Next
 
-        
+
+
+
+
+        'SOEKARNO HATTA
+        command = New SqlCommand("Lap_CutOff", MyConnection)
+        'If ComboBox1.Text <> "RKM Cirebon" And ComboBox1.Text <> "RKM Garut" And ComboBox1.Text <> "ABM (Anyar Building Material)" And ComboBox1.Text <> "RKM Ahmad Yani" Then
+        'command = New SqlCommand("rkm_sale_margin", MyConnection2)
+        'Else
+        'command = New SqlCommand("_TmSp_margin_rep", MyConnection)
+        'End If
+
+        adapter = New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        'command.Parameters.AddWithValue("@TanggalAwal", Format(awal))
+        'command.Parameters.AddWithValue("@TanggalAkhir", Format(akhir))
+        'command.Parameters.AddWithValue("@PrintByUserName", "xxx")
+        command.Parameters.AddWithValue("@Cabang", "014")
+        table = New DataTable
+        adapter.Fill(table)
+        Me.DataGridView1.DataSource = table
+
+        DataGridViewSOEKARNOHATTA.ColumnCount = 7
+        DataGridViewSOEKARNOHATTA.Columns(0).HeaderText = "No"
+        DataGridViewSOEKARNOHATTA.Columns(1).HeaderText = "Tanggal"
+        DataGridViewSOEKARNOHATTA.Columns(2).HeaderText = "No dokument"
+        DataGridViewSOEKARNOHATTA.Columns(3).HeaderText = "Alamat"
+        DataGridViewSOEKARNOHATTA.Columns(4).HeaderText = "Nama Customer"
+        DataGridViewSOEKARNOHATTA.Columns(5).HeaderText = "Keterangan"
+        DataGridViewSOEKARNOHATTA.Columns(6).HeaderText = "Sales"
+
+
+
+        DataGridViewSOEKARNOHATTA.Columns(0).Width = 50
+        DataGridViewSOEKARNOHATTA.Columns(1).Width = 70
+        DataGridViewSOEKARNOHATTA.Columns(2).Width = 80
+        DataGridViewSOEKARNOHATTA.Columns(3).Width = 350
+        DataGridViewSOEKARNOHATTA.Columns(4).Width = 100
+        DataGridViewSOEKARNOHATTA.Columns(5).Width = 350
+        DataGridViewSOEKARNOHATTA.Columns(6).Width = 150
+
+        'DataGridABM.Columns(14).Visible = False
+        For i = 0 To DataGridView1.RowCount - 1
+            DataGridViewSOEKARNOHATTA.RowCount = DataGridViewSOEKARNOHATTA.RowCount + 1
+            DataGridViewSOEKARNOHATTA.Rows(i).Cells(0).Value = DataGridView1.Rows(i).Cells(0).Value
+            DataGridViewSOEKARNOHATTA.Rows(i).Cells(1).Value = Format(DataGridView1.Rows(i).Cells(1).Value, "dd-MM-yyyy")
+            DataGridViewSOEKARNOHATTA.Rows(i).Cells(2).Value = DataGridView1.Rows(i).Cells(2).Value
+            DataGridViewSOEKARNOHATTA.Rows(i).Cells(3).Value = DataGridView1.Rows(i).Cells(3).Value
+            DataGridViewSOEKARNOHATTA.Rows(i).Cells(4).Value = DataGridView1.Rows(i).Cells(4).Value
+            DataGridViewSOEKARNOHATTA.Rows(i).Cells(5).Value = DataGridView1.Rows(i).Cells(5).Value 'stock
+            DataGridViewSOEKARNOHATTA.Rows(i).Cells(6).Value = DataGridView1.Rows(i).Cells(6).Value
+
+        Next
+
+
+
+
+
+
+
+
+
+        'SOEKARNO HATTA
+        command = New SqlCommand("Lap_CutOff", MyConnection)
+        'If ComboBox1.Text <> "RKM Cirebon" And ComboBox1.Text <> "RKM Garut" And ComboBox1.Text <> "ABM (Anyar Building Material)" And ComboBox1.Text <> "RKM Ahmad Yani" Then
+        'command = New SqlCommand("rkm_sale_margin", MyConnection2)
+        'Else
+        'command = New SqlCommand("_TmSp_margin_rep", MyConnection)
+        'End If
+
+        adapter = New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        'command.Parameters.AddWithValue("@TanggalAwal", Format(awal))
+        'command.Parameters.AddWithValue("@TanggalAkhir", Format(akhir))
+        'command.Parameters.AddWithValue("@PrintByUserName", "xxx")
+        command.Parameters.AddWithValue("@Cabang", "015")
+        table = New DataTable
+        adapter.Fill(table)
+        Me.DataGridView1.DataSource = table
+
+        DataGridViewSUBANG.ColumnCount = 7
+        DataGridViewSUBANG.Columns(0).HeaderText = "No"
+        DataGridViewSUBANG.Columns(1).HeaderText = "Tanggal"
+        DataGridViewSUBANG.Columns(2).HeaderText = "No dokument"
+        DataGridViewSUBANG.Columns(3).HeaderText = "Alamat"
+        DataGridViewSUBANG.Columns(4).HeaderText = "Nama Customer"
+        DataGridViewSUBANG.Columns(5).HeaderText = "Keterangan"
+        DataGridViewSUBANG.Columns(6).HeaderText = "Sales"
+
+
+
+        DataGridViewSUBANG.Columns(0).Width = 50
+        DataGridViewSUBANG.Columns(1).Width = 70
+        DataGridViewSUBANG.Columns(2).Width = 80
+        DataGridViewSUBANG.Columns(3).Width = 350
+        DataGridViewSUBANG.Columns(4).Width = 100
+        DataGridViewSUBANG.Columns(5).Width = 350
+        DataGridViewSUBANG.Columns(6).Width = 150
+
+        'DataGridABM.Columns(14).Visible = False
+        For i = 0 To DataGridView1.RowCount - 1
+            DataGridViewSUBANG.RowCount = DataGridViewSUBANG.RowCount + 1
+            DataGridViewSUBANG.Rows(i).Cells(0).Value = DataGridView1.Rows(i).Cells(0).Value
+            DataGridViewSUBANG.Rows(i).Cells(1).Value = Format(DataGridView1.Rows(i).Cells(1).Value, "dd-MM-yyyy")
+            DataGridViewSUBANG.Rows(i).Cells(2).Value = DataGridView1.Rows(i).Cells(2).Value
+            DataGridViewSUBANG.Rows(i).Cells(3).Value = DataGridView1.Rows(i).Cells(3).Value
+            DataGridViewSUBANG.Rows(i).Cells(4).Value = DataGridView1.Rows(i).Cells(4).Value
+            DataGridViewSUBANG.Rows(i).Cells(5).Value = DataGridView1.Rows(i).Cells(5).Value 'stock
+            DataGridViewSUBANG.Rows(i).Cells(6).Value = DataGridView1.Rows(i).Cells(6).Value
+
+        Next
+
+
+
+
+
+
+
+
+
+
+
+
 
         PictureBox1.Visible = False
         Button1.Enabled = True
@@ -968,4 +1092,22 @@ Public Class delivery
 
 
 
+    Private Sub DataGridViewSOEKARNOHATTA_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridViewSOEKARNOHATTA.CellFormatting
+        DataGridViewSOEKARNOHATTA.Rows(e.RowIndex).HeaderCell.Value = CStr(e.RowIndex + 1)
+    End Sub
+
+
+    Private Sub DataGridViewSOEKARNOHATTA_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridViewSOEKARNOHATTA.CellMouseClick
+        TextBox1.Text = DataGridViewSOEKARNOHATTA.Rows(e.RowIndex).Cells(2).Value 'DataGridViewAyani.Rows(i).Cells(2).Value
+        Button2.PerformClick()
+    End Sub
+
+    Private Sub DataGridViewSUBANG_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridViewSUBANG.CellFormatting
+        DataGridViewSUBANG.Rows(e.RowIndex).HeaderCell.Value = CStr(e.RowIndex + 1)
+    End Sub
+
+    Private Sub DataGridViewSUBANG_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridViewSUBANG.CellMouseClick
+        TextBox1.Text = DataGridViewSUBANG.Rows(e.RowIndex).Cells(2).Value 'DataGridViewAyani.Rows(i).Cells(2).Value
+        Button2.PerformClick()
+    End Sub
 End Class

@@ -23,41 +23,51 @@ Partial Class SideBar
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Me.TimerJam = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.PanelSideBar = New Guna.UI.WinForms.GunaElipsePanel()
         Me.lblJam = New Guna.UI.WinForms.GunaLabel()
         Me.lblHari = New Guna.UI.WinForms.GunaLabel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.GunaCirclePictureBox4 = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.txtSiteID = New Guna.UI.WinForms.GunaTextBox()
         Me.txtLocation = New Guna.UI.WinForms.GunaTextBox()
         Me.txtNamaUser = New Guna.UI.WinForms.GunaTextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.GunaCirclePictureBox3 = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.GunaLinePanel1 = New Guna.UI.WinForms.GunaLinePanel()
         Me.GunaGradientButton2 = New Guna.UI.WinForms.GunaGradientButton()
         Me.GunaGradientButton1 = New Guna.UI.WinForms.GunaGradientButton()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.cmdAnyarLocalPrint = New Guna.UI.WinForms.GunaAdvenceButton()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.cmdConnectNotif = New System.Windows.Forms.Button()
         Me.txtNotifikasi = New System.Windows.Forms.RichTextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TimerJam = New System.Windows.Forms.Timer(Me.components)
-        Me.GunaCirclePictureBox4 = New Guna.UI.WinForms.GunaCirclePictureBox()
-        Me.GunaCirclePictureBox3 = New Guna.UI.WinForms.GunaCirclePictureBox()
-        Me.cmdMonitoringRealstock = New Guna.UI.WinForms.GunaCirclePictureBox()
+        Me.cmdMonitoringDelivery = New Guna.UI.WinForms.GunaAdvenceButton()
+        Me.cmdMonitoringRealStok = New Guna.UI.WinForms.GunaAdvenceButton()
+        Me.cmdAnyarRepository = New Guna.UI.WinForms.GunaAdvenceButton()
+        Me.cmdExportHargaJual = New Guna.UI.WinForms.GunaAdvenceButton()
+        Me.cmdAIO = New Guna.UI.WinForms.GunaAdvenceButton()
+        Me.cmdAnyarNotifications = New Guna.UI.WinForms.GunaAdvenceButton()
         Me.PanelSideBar.SuspendLayout()
+        CType(Me.GunaCirclePictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.GunaCirclePictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GunaLinePanel1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.GunaCirclePictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GunaCirclePictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmdMonitoringRealstock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'TimerJam
+        '
+        Me.TimerJam.Interval = 1000
         '
         'PanelSideBar
         '
@@ -73,16 +83,16 @@ Partial Class SideBar
         Me.PanelSideBar.Controls.Add(Me.GunaCirclePictureBox4)
         Me.PanelSideBar.Controls.Add(Me.TabControl1)
         Me.PanelSideBar.Controls.Add(Me.Panel2)
-        Me.PanelSideBar.Location = New System.Drawing.Point(-8, 1)
+        Me.PanelSideBar.Location = New System.Drawing.Point(3, 3)
         Me.PanelSideBar.Name = "PanelSideBar"
-        Me.PanelSideBar.Size = New System.Drawing.Size(227, 603)
-        Me.PanelSideBar.TabIndex = 8
+        Me.PanelSideBar.Size = New System.Drawing.Size(225, 552)
+        Me.PanelSideBar.TabIndex = 10
         '
         'lblJam
         '
         Me.lblJam.AutoSize = True
         Me.lblJam.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJam.Location = New System.Drawing.Point(127, 95)
+        Me.lblJam.Location = New System.Drawing.Point(101, 104)
         Me.lblJam.Name = "lblJam"
         Me.lblJam.Size = New System.Drawing.Size(47, 25)
         Me.lblJam.TabIndex = 10
@@ -92,7 +102,7 @@ Partial Class SideBar
         '
         Me.lblHari.AutoSize = True
         Me.lblHari.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHari.Location = New System.Drawing.Point(126, 48)
+        Me.lblHari.Location = New System.Drawing.Point(101, 52)
         Me.lblHari.Name = "lblHari"
         Me.lblHari.Size = New System.Drawing.Size(50, 25)
         Me.lblHari.TabIndex = 9
@@ -102,7 +112,7 @@ Partial Class SideBar
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(41, 530)
+        Me.Label3.Location = New System.Drawing.Point(41, 524)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 18)
         Me.Label3.TabIndex = 8
@@ -112,11 +122,23 @@ Partial Class SideBar
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(18, 500)
+        Me.Label5.Location = New System.Drawing.Point(12, 500)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(185, 24)
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Anyar Gadget V1.1"
+        '
+        'GunaCirclePictureBox4
+        '
+        Me.GunaCirclePictureBox4.BaseColor = System.Drawing.Color.White
+        Me.GunaCirclePictureBox4.Image = Global.AnyarGadget.My.Resources.Resources.LOGO_ANYAR_BULAT
+        Me.GunaCirclePictureBox4.Location = New System.Drawing.Point(12, 48)
+        Me.GunaCirclePictureBox4.Name = "GunaCirclePictureBox4"
+        Me.GunaCirclePictureBox4.Size = New System.Drawing.Size(86, 84)
+        Me.GunaCirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaCirclePictureBox4.TabIndex = 5
+        Me.GunaCirclePictureBox4.TabStop = False
+        Me.GunaCirclePictureBox4.UseTransfarantBackground = False
         '
         'TabControl1
         '
@@ -203,6 +225,18 @@ Partial Class SideBar
         Me.Label2.TabIndex = 38
         Me.Label2.Text = "Halo, Selamat Datang"
         '
+        'GunaCirclePictureBox3
+        '
+        Me.GunaCirclePictureBox3.BackColor = System.Drawing.Color.LightGray
+        Me.GunaCirclePictureBox3.BaseColor = System.Drawing.Color.White
+        Me.GunaCirclePictureBox3.Location = New System.Drawing.Point(51, 39)
+        Me.GunaCirclePictureBox3.Name = "GunaCirclePictureBox3"
+        Me.GunaCirclePictureBox3.Size = New System.Drawing.Size(84, 82)
+        Me.GunaCirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaCirclePictureBox3.TabIndex = 0
+        Me.GunaCirclePictureBox3.TabStop = False
+        Me.GunaCirclePictureBox3.UseTransfarantBackground = False
+        '
         'GunaLinePanel1
         '
         Me.GunaLinePanel1.Controls.Add(Me.GunaGradientButton2)
@@ -272,7 +306,13 @@ Partial Class SideBar
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.cmdMonitoringRealstock)
+        Me.TabPage2.Controls.Add(Me.cmdAnyarNotifications)
+        Me.TabPage2.Controls.Add(Me.cmdAIO)
+        Me.TabPage2.Controls.Add(Me.cmdExportHargaJual)
+        Me.TabPage2.Controls.Add(Me.cmdAnyarRepository)
+        Me.TabPage2.Controls.Add(Me.cmdMonitoringRealStok)
+        Me.TabPage2.Controls.Add(Me.cmdMonitoringDelivery)
+        Me.TabPage2.Controls.Add(Me.cmdAnyarLocalPrint)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -280,6 +320,43 @@ Partial Class SideBar
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Menu"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'cmdAnyarLocalPrint
+        '
+        Me.cmdAnyarLocalPrint.AnimationHoverSpeed = 0.07!
+        Me.cmdAnyarLocalPrint.AnimationSpeed = 0.03!
+        Me.cmdAnyarLocalPrint.BackgroundImage = Global.AnyarGadget.My.Resources.Resources.anyar_local_Print
+        Me.cmdAnyarLocalPrint.BaseColor = System.Drawing.Color.Transparent
+        Me.cmdAnyarLocalPrint.BorderColor = System.Drawing.Color.Black
+        Me.cmdAnyarLocalPrint.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton
+        Me.cmdAnyarLocalPrint.CheckedBaseColor = System.Drawing.Color.Transparent
+        Me.cmdAnyarLocalPrint.CheckedBorderColor = System.Drawing.Color.Black
+        Me.cmdAnyarLocalPrint.CheckedForeColor = System.Drawing.Color.White
+        Me.cmdAnyarLocalPrint.CheckedImage = Global.AnyarGadget.My.Resources.Resources.anyar_local_Print
+        Me.cmdAnyarLocalPrint.CheckedLineColor = System.Drawing.Color.White
+        Me.cmdAnyarLocalPrint.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.cmdAnyarLocalPrint.FocusedColor = System.Drawing.Color.Empty
+        Me.cmdAnyarLocalPrint.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.cmdAnyarLocalPrint.ForeColor = System.Drawing.Color.Transparent
+        Me.cmdAnyarLocalPrint.Image = Global.AnyarGadget.My.Resources.Resources.anyar_local_Print
+        Me.cmdAnyarLocalPrint.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.cmdAnyarLocalPrint.ImageOffsetX = 20
+        Me.cmdAnyarLocalPrint.ImageSize = New System.Drawing.Size(50, 50)
+        Me.cmdAnyarLocalPrint.LineColor = System.Drawing.Color.White
+        Me.cmdAnyarLocalPrint.LineTop = 1
+        Me.cmdAnyarLocalPrint.Location = New System.Drawing.Point(131, 6)
+        Me.cmdAnyarLocalPrint.Name = "cmdAnyarLocalPrint"
+        Me.cmdAnyarLocalPrint.OnHoverBaseColor = System.Drawing.Color.Transparent
+        Me.cmdAnyarLocalPrint.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.cmdAnyarLocalPrint.OnHoverForeColor = System.Drawing.Color.White
+        Me.cmdAnyarLocalPrint.OnHoverImage = Global.AnyarGadget.My.Resources.Resources.anyar_local_Print
+        Me.cmdAnyarLocalPrint.OnHoverLineColor = System.Drawing.Color.White
+        Me.cmdAnyarLocalPrint.OnPressedColor = System.Drawing.Color.Black
+        Me.cmdAnyarLocalPrint.OnPressedDepth = 0
+        Me.cmdAnyarLocalPrint.Size = New System.Drawing.Size(50, 53)
+        Me.cmdAnyarLocalPrint.TabIndex = 42
+        Me.cmdAnyarLocalPrint.TextOffsetX = 10
+        Me.ToolTip1.SetToolTip(Me.cmdAnyarLocalPrint, "Anyar Local Print")
         '
         'TabPage3
         '
@@ -323,80 +400,270 @@ Partial Class SideBar
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(28, 7)
+        Me.Label1.Location = New System.Drawing.Point(29, 6)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(144, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "My Dashboard"
         '
-        'TimerJam
+        'cmdMonitoringDelivery
         '
-        Me.TimerJam.Interval = 1000
+        Me.cmdMonitoringDelivery.AnimationHoverSpeed = 0.07!
+        Me.cmdMonitoringDelivery.AnimationSpeed = 0.03!
+        Me.cmdMonitoringDelivery.BackgroundImage = Global.AnyarGadget.My.Resources.Resources.Circle_Delivery
+        Me.cmdMonitoringDelivery.BaseColor = System.Drawing.Color.Transparent
+        Me.cmdMonitoringDelivery.BorderColor = System.Drawing.Color.Black
+        Me.cmdMonitoringDelivery.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton
+        Me.cmdMonitoringDelivery.CheckedBaseColor = System.Drawing.Color.Transparent
+        Me.cmdMonitoringDelivery.CheckedBorderColor = System.Drawing.Color.Black
+        Me.cmdMonitoringDelivery.CheckedForeColor = System.Drawing.Color.White
+        Me.cmdMonitoringDelivery.CheckedImage = Global.AnyarGadget.My.Resources.Resources.Circle_Delivery
+        Me.cmdMonitoringDelivery.CheckedLineColor = System.Drawing.Color.White
+        Me.cmdMonitoringDelivery.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.cmdMonitoringDelivery.FocusedColor = System.Drawing.Color.Empty
+        Me.cmdMonitoringDelivery.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.cmdMonitoringDelivery.ForeColor = System.Drawing.Color.Transparent
+        Me.cmdMonitoringDelivery.Image = Global.AnyarGadget.My.Resources.Resources.Circle_Delivery
+        Me.cmdMonitoringDelivery.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.cmdMonitoringDelivery.ImageOffsetX = 20
+        Me.cmdMonitoringDelivery.ImageSize = New System.Drawing.Size(53, 53)
+        Me.cmdMonitoringDelivery.LineColor = System.Drawing.Color.White
+        Me.cmdMonitoringDelivery.LineTop = 1
+        Me.cmdMonitoringDelivery.Location = New System.Drawing.Point(63, 5)
+        Me.cmdMonitoringDelivery.Name = "cmdMonitoringDelivery"
+        Me.cmdMonitoringDelivery.OnHoverBaseColor = System.Drawing.Color.Transparent
+        Me.cmdMonitoringDelivery.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.cmdMonitoringDelivery.OnHoverForeColor = System.Drawing.Color.White
+        Me.cmdMonitoringDelivery.OnHoverImage = Global.AnyarGadget.My.Resources.Resources.Circle_Delivery
+        Me.cmdMonitoringDelivery.OnHoverLineColor = System.Drawing.Color.White
+        Me.cmdMonitoringDelivery.OnPressedColor = System.Drawing.Color.Black
+        Me.cmdMonitoringDelivery.OnPressedDepth = 0
+        Me.cmdMonitoringDelivery.Size = New System.Drawing.Size(57, 54)
+        Me.cmdMonitoringDelivery.TabIndex = 43
+        Me.cmdMonitoringDelivery.TextOffsetX = 10
+        Me.ToolTip1.SetToolTip(Me.cmdMonitoringDelivery, "Monitoring Delivery")
         '
-        'GunaCirclePictureBox4
+        'cmdMonitoringRealStok
         '
-        Me.GunaCirclePictureBox4.BaseColor = System.Drawing.Color.White
-        Me.GunaCirclePictureBox4.Image = Global.AnyarGadget.My.Resources.Resources.LOGO_ANYAR_BULAT
-        Me.GunaCirclePictureBox4.Location = New System.Drawing.Point(12, 48)
-        Me.GunaCirclePictureBox4.Name = "GunaCirclePictureBox4"
-        Me.GunaCirclePictureBox4.Size = New System.Drawing.Size(86, 84)
-        Me.GunaCirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaCirclePictureBox4.TabIndex = 5
-        Me.GunaCirclePictureBox4.TabStop = False
-        Me.GunaCirclePictureBox4.UseTransfarantBackground = False
+        Me.cmdMonitoringRealStok.AnimationHoverSpeed = 0.07!
+        Me.cmdMonitoringRealStok.AnimationSpeed = 0.03!
+        Me.cmdMonitoringRealStok.BackgroundImage = Global.AnyarGadget.My.Resources.Resources.marketing_monitoring
+        Me.cmdMonitoringRealStok.BaseColor = System.Drawing.Color.Transparent
+        Me.cmdMonitoringRealStok.BorderColor = System.Drawing.Color.Black
+        Me.cmdMonitoringRealStok.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton
+        Me.cmdMonitoringRealStok.CheckedBaseColor = System.Drawing.Color.Transparent
+        Me.cmdMonitoringRealStok.CheckedBorderColor = System.Drawing.Color.Black
+        Me.cmdMonitoringRealStok.CheckedForeColor = System.Drawing.Color.White
+        Me.cmdMonitoringRealStok.CheckedImage = Global.AnyarGadget.My.Resources.Resources.marketing_monitoring
+        Me.cmdMonitoringRealStok.CheckedLineColor = System.Drawing.Color.White
+        Me.cmdMonitoringRealStok.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.cmdMonitoringRealStok.FocusedColor = System.Drawing.Color.Empty
+        Me.cmdMonitoringRealStok.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.cmdMonitoringRealStok.ForeColor = System.Drawing.Color.Transparent
+        Me.cmdMonitoringRealStok.Image = Global.AnyarGadget.My.Resources.Resources.marketing_monitoring
+        Me.cmdMonitoringRealStok.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.cmdMonitoringRealStok.ImageOffsetX = 20
+        Me.cmdMonitoringRealStok.ImageSize = New System.Drawing.Size(50, 50)
+        Me.cmdMonitoringRealStok.LineColor = System.Drawing.Color.White
+        Me.cmdMonitoringRealStok.LineTop = 1
+        Me.cmdMonitoringRealStok.Location = New System.Drawing.Point(4, 6)
+        Me.cmdMonitoringRealStok.Name = "cmdMonitoringRealStok"
+        Me.cmdMonitoringRealStok.OnHoverBaseColor = System.Drawing.Color.Transparent
+        Me.cmdMonitoringRealStok.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.cmdMonitoringRealStok.OnHoverForeColor = System.Drawing.Color.White
+        Me.cmdMonitoringRealStok.OnHoverImage = Global.AnyarGadget.My.Resources.Resources.marketing_monitoring
+        Me.cmdMonitoringRealStok.OnHoverLineColor = System.Drawing.Color.White
+        Me.cmdMonitoringRealStok.OnPressedColor = System.Drawing.Color.Black
+        Me.cmdMonitoringRealStok.OnPressedDepth = 0
+        Me.cmdMonitoringRealStok.Size = New System.Drawing.Size(50, 53)
+        Me.cmdMonitoringRealStok.TabIndex = 44
+        Me.cmdMonitoringRealStok.TextOffsetX = 10
+        Me.ToolTip1.SetToolTip(Me.cmdMonitoringRealStok, "Monitoring Realstok")
         '
-        'GunaCirclePictureBox3
+        'cmdAnyarRepository
         '
-        Me.GunaCirclePictureBox3.BackColor = System.Drawing.Color.LightGray
-        Me.GunaCirclePictureBox3.BaseColor = System.Drawing.Color.White
-        Me.GunaCirclePictureBox3.Location = New System.Drawing.Point(51, 39)
-        Me.GunaCirclePictureBox3.Name = "GunaCirclePictureBox3"
-        Me.GunaCirclePictureBox3.Size = New System.Drawing.Size(84, 82)
-        Me.GunaCirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaCirclePictureBox3.TabIndex = 0
-        Me.GunaCirclePictureBox3.TabStop = False
-        Me.GunaCirclePictureBox3.UseTransfarantBackground = False
+        Me.cmdAnyarRepository.AnimationHoverSpeed = 0.07!
+        Me.cmdAnyarRepository.AnimationSpeed = 0.03!
+        Me.cmdAnyarRepository.BackgroundImage = Global.AnyarGadget.My.Resources.Resources.repository
+        Me.cmdAnyarRepository.BaseColor = System.Drawing.Color.Transparent
+        Me.cmdAnyarRepository.BorderColor = System.Drawing.Color.Black
+        Me.cmdAnyarRepository.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton
+        Me.cmdAnyarRepository.CheckedBaseColor = System.Drawing.Color.Transparent
+        Me.cmdAnyarRepository.CheckedBorderColor = System.Drawing.Color.Black
+        Me.cmdAnyarRepository.CheckedForeColor = System.Drawing.Color.White
+        Me.cmdAnyarRepository.CheckedImage = Global.AnyarGadget.My.Resources.Resources.repository
+        Me.cmdAnyarRepository.CheckedLineColor = System.Drawing.Color.White
+        Me.cmdAnyarRepository.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.cmdAnyarRepository.FocusedColor = System.Drawing.Color.Empty
+        Me.cmdAnyarRepository.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.cmdAnyarRepository.ForeColor = System.Drawing.Color.Transparent
+        Me.cmdAnyarRepository.Image = Global.AnyarGadget.My.Resources.Resources.repository
+        Me.cmdAnyarRepository.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.cmdAnyarRepository.ImageOffsetX = 20
+        Me.cmdAnyarRepository.ImageSize = New System.Drawing.Size(50, 50)
+        Me.cmdAnyarRepository.LineColor = System.Drawing.Color.White
+        Me.cmdAnyarRepository.LineTop = 1
+        Me.cmdAnyarRepository.Location = New System.Drawing.Point(67, 65)
+        Me.cmdAnyarRepository.Name = "cmdAnyarRepository"
+        Me.cmdAnyarRepository.OnHoverBaseColor = System.Drawing.Color.Transparent
+        Me.cmdAnyarRepository.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.cmdAnyarRepository.OnHoverForeColor = System.Drawing.Color.White
+        Me.cmdAnyarRepository.OnHoverImage = Global.AnyarGadget.My.Resources.Resources.repository
+        Me.cmdAnyarRepository.OnHoverLineColor = System.Drawing.Color.White
+        Me.cmdAnyarRepository.OnPressedColor = System.Drawing.Color.Black
+        Me.cmdAnyarRepository.OnPressedDepth = 0
+        Me.cmdAnyarRepository.Size = New System.Drawing.Size(50, 53)
+        Me.cmdAnyarRepository.TabIndex = 45
+        Me.cmdAnyarRepository.TextOffsetX = 10
+        Me.ToolTip1.SetToolTip(Me.cmdAnyarRepository, "Anyar Repository")
         '
-        'cmdMonitoringRealstock
+        'cmdExportHargaJual
         '
-        Me.cmdMonitoringRealstock.BaseColor = System.Drawing.Color.White
-        Me.cmdMonitoringRealstock.Image = Global.AnyarGadget.My.Resources.Resources.marketing_monitoring
-        Me.cmdMonitoringRealstock.Location = New System.Drawing.Point(4, 6)
-        Me.cmdMonitoringRealstock.Name = "cmdMonitoringRealstock"
-        Me.cmdMonitoringRealstock.Size = New System.Drawing.Size(52, 50)
-        Me.cmdMonitoringRealstock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.cmdMonitoringRealstock.TabIndex = 0
-        Me.cmdMonitoringRealstock.TabStop = False
-        Me.cmdMonitoringRealstock.UseTransfarantBackground = False
+        Me.cmdExportHargaJual.AnimationHoverSpeed = 0.07!
+        Me.cmdExportHargaJual.AnimationSpeed = 0.03!
+        Me.cmdExportHargaJual.BackgroundImage = Global.AnyarGadget.My.Resources.Resources.Price_Tag_PNG_Clipart
+        Me.cmdExportHargaJual.BaseColor = System.Drawing.Color.Transparent
+        Me.cmdExportHargaJual.BorderColor = System.Drawing.Color.Black
+        Me.cmdExportHargaJual.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton
+        Me.cmdExportHargaJual.CheckedBaseColor = System.Drawing.Color.Transparent
+        Me.cmdExportHargaJual.CheckedBorderColor = System.Drawing.Color.Black
+        Me.cmdExportHargaJual.CheckedForeColor = System.Drawing.Color.White
+        Me.cmdExportHargaJual.CheckedImage = Global.AnyarGadget.My.Resources.Resources.Price_Tag_PNG_Clipart
+        Me.cmdExportHargaJual.CheckedLineColor = System.Drawing.Color.White
+        Me.cmdExportHargaJual.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.cmdExportHargaJual.FocusedColor = System.Drawing.Color.Empty
+        Me.cmdExportHargaJual.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.cmdExportHargaJual.ForeColor = System.Drawing.Color.Transparent
+        Me.cmdExportHargaJual.Image = Global.AnyarGadget.My.Resources.Resources.Price_Tag_PNG_Clipart
+        Me.cmdExportHargaJual.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.cmdExportHargaJual.ImageOffsetX = 20
+        Me.cmdExportHargaJual.ImageSize = New System.Drawing.Size(50, 50)
+        Me.cmdExportHargaJual.LineColor = System.Drawing.Color.White
+        Me.cmdExportHargaJual.LineTop = 1
+        Me.cmdExportHargaJual.Location = New System.Drawing.Point(6, 65)
+        Me.cmdExportHargaJual.Name = "cmdExportHargaJual"
+        Me.cmdExportHargaJual.OnHoverBaseColor = System.Drawing.Color.Transparent
+        Me.cmdExportHargaJual.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.cmdExportHargaJual.OnHoverForeColor = System.Drawing.Color.White
+        Me.cmdExportHargaJual.OnHoverImage = Global.AnyarGadget.My.Resources.Resources.Price_Tag_PNG_Clipart
+        Me.cmdExportHargaJual.OnHoverLineColor = System.Drawing.Color.White
+        Me.cmdExportHargaJual.OnPressedColor = System.Drawing.Color.Black
+        Me.cmdExportHargaJual.OnPressedDepth = 0
+        Me.cmdExportHargaJual.Size = New System.Drawing.Size(50, 53)
+        Me.cmdExportHargaJual.TabIndex = 46
+        Me.cmdExportHargaJual.TextOffsetX = 10
+        Me.ToolTip1.SetToolTip(Me.cmdExportHargaJual, "Anyar Repository")
+        '
+        'cmdAIO
+        '
+        Me.cmdAIO.AnimationHoverSpeed = 0.07!
+        Me.cmdAIO.AnimationSpeed = 0.03!
+        Me.cmdAIO.BackgroundImage = Global.AnyarGadget.My.Resources.Resources.anyar_local_Print
+        Me.cmdAIO.BaseColor = System.Drawing.Color.Transparent
+        Me.cmdAIO.BorderColor = System.Drawing.Color.Black
+        Me.cmdAIO.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton
+        Me.cmdAIO.CheckedBaseColor = System.Drawing.Color.Transparent
+        Me.cmdAIO.CheckedBorderColor = System.Drawing.Color.Black
+        Me.cmdAIO.CheckedForeColor = System.Drawing.Color.White
+        Me.cmdAIO.CheckedImage = Global.AnyarGadget.My.Resources.Resources.api
+        Me.cmdAIO.CheckedLineColor = System.Drawing.Color.White
+        Me.cmdAIO.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.cmdAIO.FocusedColor = System.Drawing.Color.Empty
+        Me.cmdAIO.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.cmdAIO.ForeColor = System.Drawing.Color.Transparent
+        Me.cmdAIO.Image = Global.AnyarGadget.My.Resources.Resources.api
+        Me.cmdAIO.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.cmdAIO.ImageOffsetX = 20
+        Me.cmdAIO.ImageSize = New System.Drawing.Size(50, 50)
+        Me.cmdAIO.LineColor = System.Drawing.Color.White
+        Me.cmdAIO.LineTop = 1
+        Me.cmdAIO.Location = New System.Drawing.Point(131, 65)
+        Me.cmdAIO.Name = "cmdAIO"
+        Me.cmdAIO.OnHoverBaseColor = System.Drawing.Color.Transparent
+        Me.cmdAIO.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.cmdAIO.OnHoverForeColor = System.Drawing.Color.White
+        Me.cmdAIO.OnHoverImage = Global.AnyarGadget.My.Resources.Resources.api
+        Me.cmdAIO.OnHoverLineColor = System.Drawing.Color.White
+        Me.cmdAIO.OnPressedColor = System.Drawing.Color.Black
+        Me.cmdAIO.OnPressedDepth = 0
+        Me.cmdAIO.Size = New System.Drawing.Size(50, 53)
+        Me.cmdAIO.TabIndex = 47
+        Me.cmdAIO.TextOffsetX = 10
+        Me.ToolTip1.SetToolTip(Me.cmdAIO, "Anyar A.I.O")
+        '
+        'cmdAnyarNotifications
+        '
+        Me.cmdAnyarNotifications.AnimationHoverSpeed = 0.07!
+        Me.cmdAnyarNotifications.AnimationSpeed = 0.03!
+        Me.cmdAnyarNotifications.BackgroundImage = Global.AnyarGadget.My.Resources.Resources.giphy
+        Me.cmdAnyarNotifications.BaseColor = System.Drawing.Color.Transparent
+        Me.cmdAnyarNotifications.BorderColor = System.Drawing.Color.Black
+        Me.cmdAnyarNotifications.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton
+        Me.cmdAnyarNotifications.CheckedBaseColor = System.Drawing.Color.Transparent
+        Me.cmdAnyarNotifications.CheckedBorderColor = System.Drawing.Color.Black
+        Me.cmdAnyarNotifications.CheckedForeColor = System.Drawing.Color.White
+        Me.cmdAnyarNotifications.CheckedImage = Global.AnyarGadget.My.Resources.Resources.giphy
+        Me.cmdAnyarNotifications.CheckedLineColor = System.Drawing.Color.White
+        Me.cmdAnyarNotifications.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.cmdAnyarNotifications.FocusedColor = System.Drawing.Color.Empty
+        Me.cmdAnyarNotifications.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.cmdAnyarNotifications.ForeColor = System.Drawing.Color.Transparent
+        Me.cmdAnyarNotifications.Image = Global.AnyarGadget.My.Resources.Resources._772409_music_512x5121
+        Me.cmdAnyarNotifications.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.cmdAnyarNotifications.ImageOffsetX = 20
+        Me.cmdAnyarNotifications.ImageSize = New System.Drawing.Size(50, 50)
+        Me.cmdAnyarNotifications.LineColor = System.Drawing.Color.White
+        Me.cmdAnyarNotifications.LineTop = 1
+        Me.cmdAnyarNotifications.Location = New System.Drawing.Point(6, 134)
+        Me.cmdAnyarNotifications.Name = "cmdAnyarNotifications"
+        Me.cmdAnyarNotifications.OnHoverBaseColor = System.Drawing.Color.Transparent
+        Me.cmdAnyarNotifications.OnHoverBorderColor = System.Drawing.Color.Black
+        Me.cmdAnyarNotifications.OnHoverForeColor = System.Drawing.Color.White
+        Me.cmdAnyarNotifications.OnHoverImage = Global.AnyarGadget.My.Resources.Resources.giphy
+        Me.cmdAnyarNotifications.OnHoverLineColor = System.Drawing.Color.White
+        Me.cmdAnyarNotifications.OnPressedColor = System.Drawing.Color.Black
+        Me.cmdAnyarNotifications.OnPressedDepth = 0
+        Me.cmdAnyarNotifications.Size = New System.Drawing.Size(50, 53)
+        Me.cmdAnyarNotifications.TabIndex = 48
+        Me.cmdAnyarNotifications.TextOffsetX = 10
+        Me.ToolTip1.SetToolTip(Me.cmdAnyarNotifications, "Anyar Notifications")
         '
         'SideBar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(211, 564)
+        Me.ClientSize = New System.Drawing.Size(230, 558)
         Me.Controls.Add(Me.PanelSideBar)
         Me.Location = New System.Drawing.Point(7, 77)
         Me.Name = "SideBar"
         Me.Text = "SideBar"
         Me.PanelSideBar.ResumeLayout(False)
         Me.PanelSideBar.PerformLayout()
+        CType(Me.GunaCirclePictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.GunaCirclePictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GunaLinePanel1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.GunaCirclePictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaCirclePictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmdMonitoringRealstock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents TimerJam As System.Windows.Forms.Timer
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Public WithEvents PanelSideBar As Guna.UI.WinForms.GunaElipsePanel
+    Friend WithEvents lblJam As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents lblHari As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents GunaCirclePictureBox4 As Guna.UI.WinForms.GunaCirclePictureBox
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents txtSiteID As Guna.UI.WinForms.GunaTextBox
+    Friend WithEvents txtLocation As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents txtNamaUser As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents GunaCirclePictureBox3 As Guna.UI.WinForms.GunaCirclePictureBox
@@ -404,18 +671,16 @@ Partial Class SideBar
     Friend WithEvents GunaGradientButton2 As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents GunaGradientButton1 As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents cmdConnectNotif As System.Windows.Forms.Button
+    Friend WithEvents txtNotifikasi As System.Windows.Forms.RichTextBox
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
-    Friend WithEvents txtLocation As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents txtNotifikasi As System.Windows.Forms.RichTextBox
-    Friend WithEvents cmdConnectNotif As System.Windows.Forms.Button
-    Friend WithEvents txtSiteID As Guna.UI.WinForms.GunaTextBox
-    Friend WithEvents lblHari As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents GunaCirclePictureBox4 As Guna.UI.WinForms.GunaCirclePictureBox
-    Friend WithEvents lblJam As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents TimerJam As System.Windows.Forms.Timer
-    Friend WithEvents cmdMonitoringRealstock As Guna.UI.WinForms.GunaCirclePictureBox
+    Friend WithEvents cmdAnyarLocalPrint As Guna.UI.WinForms.GunaAdvenceButton
+    Friend WithEvents cmdMonitoringDelivery As Guna.UI.WinForms.GunaAdvenceButton
+    Friend WithEvents cmdMonitoringRealStok As Guna.UI.WinForms.GunaAdvenceButton
+    Friend WithEvents cmdAnyarRepository As Guna.UI.WinForms.GunaAdvenceButton
+    Friend WithEvents cmdExportHargaJual As Guna.UI.WinForms.GunaAdvenceButton
+    Friend WithEvents cmdAIO As Guna.UI.WinForms.GunaAdvenceButton
+    Friend WithEvents cmdAnyarNotifications As Guna.UI.WinForms.GunaAdvenceButton
 End Class

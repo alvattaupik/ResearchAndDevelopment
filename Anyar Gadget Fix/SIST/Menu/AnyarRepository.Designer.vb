@@ -64,6 +64,7 @@ Partial Class AnyarRepository
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(228, 20)
         Me.TextBox2.TabIndex = 5
+        Me.TextBox2.Visible = False
         '
         'Label3
         '
@@ -91,6 +92,7 @@ Partial Class AnyarRepository
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(353, 20)
         Me.TextBox1.TabIndex = 2
+        Me.TextBox1.Visible = False
         '
         'GunaCirclePictureBox2
         '
@@ -173,6 +175,7 @@ Partial Class AnyarRepository
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(457, 20)
         Me.TextBox3.TabIndex = 6
+        Me.TextBox3.Visible = False
         '
         'AnyarRepository
         '

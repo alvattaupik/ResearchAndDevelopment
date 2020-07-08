@@ -20,7 +20,7 @@
     <OldToolsVersion>2.0</OldToolsVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\IT-ALVAT\Pictures\BI Customise 11042020\</PublishUrl>
+    <PublishUrl>C:\Users\IT-ALVAT\Music\BI 02072020\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -30,7 +30,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationRevision>19</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -140,6 +140,12 @@
       <DependentUpon>FormAuditItems.vb</DependentUpon>
     </Compile>
     <Compile Include="FormAuditItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMonitoringDelivery.Designer.vb">
+      <DependentUpon>FormMonitoringDelivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMonitoringDelivery.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MarginBaru.designer.vb">
@@ -321,6 +327,9 @@
     <EmbeddedResource Include="FormAuditItems.resx">
       <DependentUpon>FormAuditItems.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMonitoringDelivery.resx">
+      <DependentUpon>FormMonitoringDelivery.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MarginBaru.resx">
       <DependentUpon>MarginBaru.vb</DependentUpon>
     </EmbeddedResource>
@@ -438,6 +447,7 @@
     <None Include="RKM-BI_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\144-1448711_delivery-truck4x-delivery-truck-pictures-png-transparent-png.png" />
     <Content Include="Resources\logo_pt_ari_pro %281%29.ico" />
     <None Include="Resources\stock.png" />
     <None Include="Resources\Gudang Keluar 1.png" />

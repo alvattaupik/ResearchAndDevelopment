@@ -892,15 +892,7 @@ Public Class Main
         delivery.Show()
     End Sub
 
-  
-    Private Sub t101_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles t101.Tick
-        ' b10.Top = b10.Top + 2
-        ' u10.Top = u10.Top + 2
-        ' If b10.Top >= ((g10 - 1) * 20) + 10 Then
-        '     t101.Enabled = False
-        ' End If
-
-    End Sub
+ 
 
     Private Sub t102_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles t102.Tick
         '  b10.Top = b10.Top - 2

@@ -135,6 +135,10 @@ Represents a strongly typed in-memory cache of data.
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:RKM_BI.My.Resources.Resources._144_1448711_delivery_truck4x_delivery_truck_pictures_png_transparent_png">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:RKM_BI.My.Resources.Resources._2_coin256_anwansoon">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

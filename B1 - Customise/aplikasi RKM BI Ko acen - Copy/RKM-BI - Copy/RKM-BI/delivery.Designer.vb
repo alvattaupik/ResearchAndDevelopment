@@ -56,6 +56,8 @@ Partial Class delivery
         Me.DataGridViewTasikmalaya = New System.Windows.Forms.DataGridView()
         Me.PAMANUKAN = New System.Windows.Forms.TabPage()
         Me.DataGridViewPAMANUKAN = New System.Windows.Forms.DataGridView()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.DataGridViewSOEKARNOHATTA = New System.Windows.Forms.DataGridView()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -64,12 +66,14 @@ Partial Class delivery
         Me.txtItemCode = New System.Windows.Forms.TextBox()
         Me.dgvWhs = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.viewDelivery = New System.Windows.Forms.DataGridView()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.viewDelivery = New System.Windows.Forms.DataGridView()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ABM1 = New System.Windows.Forms.Label()
         Me.Label87 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.SUBANG = New System.Windows.Forms.TabPage()
+        Me.DataGridViewSUBANG = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         Me.TabControl.SuspendLayout()
         Me.ABM.SuspendLayout()
@@ -97,11 +101,15 @@ Partial Class delivery
         CType(Me.DataGridViewTasikmalaya, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PAMANUKAN.SuspendLayout()
         CType(Me.DataGridViewPAMANUKAN, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.DataGridViewSOEKARNOHATTA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvWhs, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.viewDelivery, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.viewDelivery, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SUBANG.SuspendLayout()
+        CType(Me.DataGridViewSUBANG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -205,6 +213,8 @@ Partial Class delivery
         Me.TabControl.Controls.Add(Me.RANCAEKEK)
         Me.TabControl.Controls.Add(Me.TASIKMALAYA)
         Me.TabControl.Controls.Add(Me.PAMANUKAN)
+        Me.TabControl.Controls.Add(Me.TabPage1)
+        Me.TabControl.Controls.Add(Me.SUBANG)
         Me.TabControl.Location = New System.Drawing.Point(12, 63)
         Me.TabControl.Name = "TabControl"
         Me.TabControl.SelectedIndex = 0
@@ -527,6 +537,32 @@ Partial Class delivery
         Me.DataGridViewPAMANUKAN.Size = New System.Drawing.Size(1229, 246)
         Me.DataGridViewPAMANUKAN.TabIndex = 18
         '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.DataGridViewSOEKARNOHATTA)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(1243, 258)
+        Me.TabPage1.TabIndex = 12
+        Me.TabPage1.Text = "SOEKARNOHATTA"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'DataGridViewSOEKARNOHATTA
+        '
+        Me.DataGridViewSOEKARNOHATTA.AllowUserToAddRows = False
+        Me.DataGridViewSOEKARNOHATTA.AllowUserToDeleteRows = False
+        Me.DataGridViewSOEKARNOHATTA.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridViewSOEKARNOHATTA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewSOEKARNOHATTA.Location = New System.Drawing.Point(7, 6)
+        Me.DataGridViewSOEKARNOHATTA.Name = "DataGridViewSOEKARNOHATTA"
+        Me.DataGridViewSOEKARNOHATTA.ReadOnly = True
+        Me.DataGridViewSOEKARNOHATTA.RowHeadersWidth = 50
+        Me.DataGridViewSOEKARNOHATTA.Size = New System.Drawing.Size(1229, 246)
+        Me.DataGridViewSOEKARNOHATTA.TabIndex = 19
+        '
         'TextBox1
         '
         Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -602,7 +638,6 @@ Partial Class delivery
         Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.Controls.Add(Me.viewDelivery)
         Me.Panel2.Controls.Add(Me.DataGridView2)
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.TextBox1)
@@ -610,22 +645,6 @@ Partial Class delivery
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(720, 301)
         Me.Panel2.TabIndex = 28
-        '
-        'viewDelivery
-        '
-        Me.viewDelivery.AllowUserToAddRows = False
-        Me.viewDelivery.AllowUserToDeleteRows = False
-        Me.viewDelivery.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.viewDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.viewDelivery.Location = New System.Drawing.Point(9, 164)
-        Me.viewDelivery.Name = "viewDelivery"
-        Me.viewDelivery.ReadOnly = True
-        Me.viewDelivery.RowHeadersWidth = 10
-        Me.viewDelivery.Size = New System.Drawing.Size(695, 277)
-        Me.viewDelivery.TabIndex = 41
-        Me.viewDelivery.Visible = False
         '
         'DataGridView2
         '
@@ -641,6 +660,22 @@ Partial Class delivery
         Me.DataGridView2.RowHeadersWidth = 10
         Me.DataGridView2.Size = New System.Drawing.Size(695, 277)
         Me.DataGridView2.TabIndex = 40
+        '
+        'viewDelivery
+        '
+        Me.viewDelivery.AllowUserToAddRows = False
+        Me.viewDelivery.AllowUserToDeleteRows = False
+        Me.viewDelivery.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.viewDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.viewDelivery.Location = New System.Drawing.Point(39, 384)
+        Me.viewDelivery.Name = "viewDelivery"
+        Me.viewDelivery.ReadOnly = True
+        Me.viewDelivery.RowHeadersWidth = 10
+        Me.viewDelivery.Size = New System.Drawing.Size(406, 277)
+        Me.viewDelivery.TabIndex = 41
+        Me.viewDelivery.Visible = False
         '
         'Label5
         '
@@ -691,11 +726,38 @@ Partial Class delivery
         Me.PictureBox1.TabStop = False
         Me.PictureBox1.Visible = False
         '
+        'SUBANG
+        '
+        Me.SUBANG.Controls.Add(Me.DataGridViewSUBANG)
+        Me.SUBANG.Location = New System.Drawing.Point(4, 22)
+        Me.SUBANG.Name = "SUBANG"
+        Me.SUBANG.Padding = New System.Windows.Forms.Padding(3)
+        Me.SUBANG.Size = New System.Drawing.Size(1243, 258)
+        Me.SUBANG.TabIndex = 13
+        Me.SUBANG.Text = "SUBANG"
+        Me.SUBANG.UseVisualStyleBackColor = True
+        '
+        'DataGridViewSUBANG
+        '
+        Me.DataGridViewSUBANG.AllowUserToAddRows = False
+        Me.DataGridViewSUBANG.AllowUserToDeleteRows = False
+        Me.DataGridViewSUBANG.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridViewSUBANG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewSUBANG.Location = New System.Drawing.Point(7, 6)
+        Me.DataGridViewSUBANG.Name = "DataGridViewSUBANG"
+        Me.DataGridViewSUBANG.ReadOnly = True
+        Me.DataGridViewSUBANG.RowHeadersWidth = 50
+        Me.DataGridViewSUBANG.Size = New System.Drawing.Size(1229, 246)
+        Me.DataGridViewSUBANG.TabIndex = 20
+        '
         'delivery
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1275, 708)
+        Me.Controls.Add(Me.viewDelivery)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ABM1)
         Me.Controls.Add(Me.Label87)
@@ -741,12 +803,16 @@ Partial Class delivery
         CType(Me.DataGridViewTasikmalaya, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PAMANUKAN.ResumeLayout(False)
         CType(Me.DataGridViewPAMANUKAN, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.ResumeLayout(False)
+        CType(Me.DataGridViewSOEKARNOHATTA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvWhs, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.viewDelivery, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.viewDelivery, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SUBANG.ResumeLayout(False)
+        CType(Me.DataGridViewSUBANG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -799,4 +865,8 @@ Partial Class delivery
     Friend WithEvents PAMANUKAN As System.Windows.Forms.TabPage
     Friend WithEvents DataGridViewTasikmalaya As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewPAMANUKAN As System.Windows.Forms.DataGridView
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents DataGridViewSOEKARNOHATTA As System.Windows.Forms.DataGridView
+    Friend WithEvents SUBANG As System.Windows.Forms.TabPage
+    Friend WithEvents DataGridViewSUBANG As System.Windows.Forms.DataGridView
 End Class

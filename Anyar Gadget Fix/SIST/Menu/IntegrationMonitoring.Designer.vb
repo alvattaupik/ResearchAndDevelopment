@@ -31,10 +31,8 @@ Partial Class IntegrationMonitoring
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GunaCirclePictureBox2 = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.lblJumlahErrorIntegrasi = New System.Windows.Forms.Label()
@@ -45,6 +43,9 @@ Partial Class IntegrationMonitoring
         Me.chkTampilAll = New Guna.UI.WinForms.GunaCheckBox()
         Me.dgFailedIntegration = New Guna.UI.WinForms.GunaDataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.lblJumlahReplikasi = New Guna.UI.WinForms.GunaLabel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.dgMonitoringReplikasi = New System.Windows.Forms.DataGridView()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -71,8 +72,7 @@ Partial Class IntegrationMonitoring
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.cmdStopMonitoring = New Guna.UI.WinForms.GunaGradientButton()
         Me.cmbStartMonitoring = New Guna.UI.WinForms.GunaGradientButton()
-        Me.GunaPictureBox3 = New Guna.UI.WinForms.GunaPictureBox()
-        Me.Label19 = New System.Windows.Forms.Label()
+        Me.lblNamaDatabase = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.lblBebanKerja = New System.Windows.Forms.Label()
         Me.dgMonitoringDatabase = New System.Windows.Forms.DataGridView()
@@ -92,17 +92,17 @@ Partial Class IntegrationMonitoring
         Me.GunaCirclePictureBox1 = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.GunaPictureBox2 = New Guna.UI.WinForms.GunaPictureBox()
         Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
-        Me.dgMonitoringReplikasi = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.lblJumlahReplikasi = New Guna.UI.WinForms.GunaLabel()
+        Me.GunaPictureBox3 = New Guna.UI.WinForms.GunaPictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.GunaCirclePictureBox2 = New Guna.UI.WinForms.GunaCirclePictureBox()
+        Me.lblDatabase = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GunaCirclePictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.dgFailedIntegration, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        CType(Me.dgMonitoringReplikasi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         CType(Me.dgItemFullfillment, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,7 +110,6 @@ Partial Class IntegrationMonitoring
         Me.Panel3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.Panel7.SuspendLayout()
-        CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgMonitoringDatabase, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -119,7 +118,9 @@ Partial Class IntegrationMonitoring
         CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgMonitoringReplikasi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaCirclePictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -146,16 +147,6 @@ Partial Class IntegrationMonitoring
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "A.I.O"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.AnyarGadget.My.Resources.Resources._60ac66ae2cf6843b28687fc143861404
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 143)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(236, 360)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -177,18 +168,6 @@ Partial Class IntegrationMonitoring
         Me.Label1.Size = New System.Drawing.Size(113, 39)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Anyar"
-        '
-        'GunaCirclePictureBox2
-        '
-        Me.GunaCirclePictureBox2.BaseColor = System.Drawing.Color.White
-        Me.GunaCirclePictureBox2.Image = Global.AnyarGadget.My.Resources.Resources.LOGO_ANYAR_BULAT
-        Me.GunaCirclePictureBox2.Location = New System.Drawing.Point(7, 10)
-        Me.GunaCirclePictureBox2.Name = "GunaCirclePictureBox2"
-        Me.GunaCirclePictureBox2.Size = New System.Drawing.Size(85, 85)
-        Me.GunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaCirclePictureBox2.TabIndex = 2
-        Me.GunaCirclePictureBox2.TabStop = False
-        Me.GunaCirclePictureBox2.UseTransfarantBackground = False
         '
         'TabControl1
         '
@@ -291,9 +270,9 @@ Partial Class IntegrationMonitoring
         Me.chkTampilAll.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkTampilAll.Location = New System.Drawing.Point(358, 8)
         Me.chkTampilAll.Name = "chkTampilAll"
-        Me.chkTampilAll.Size = New System.Drawing.Size(176, 22)
+        Me.chkTampilAll.Size = New System.Drawing.Size(218, 22)
         Me.chkTampilAll.TabIndex = 1
-        Me.chkTampilAll.Text = "Display All Cabang"
+        Me.chkTampilAll.Text = "Display Error All Cabang"
         '
         'dgFailedIntegration
         '
@@ -368,6 +347,37 @@ Partial Class IntegrationMonitoring
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Replication Traffic"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'lblJumlahReplikasi
+        '
+        Me.lblJumlahReplikasi.AutoSize = True
+        Me.lblJumlahReplikasi.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJumlahReplikasi.Location = New System.Drawing.Point(2, 357)
+        Me.lblJumlahReplikasi.Name = "lblJumlahReplikasi"
+        Me.lblJumlahReplikasi.Size = New System.Drawing.Size(385, 30)
+        Me.lblJumlahReplikasi.TabIndex = 42
+        Me.lblJumlahReplikasi.Text = "Data Untuk Dikirim Ke Ivend Pusat : 0"
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(498, 356)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(122, 38)
+        Me.Button1.TabIndex = 41
+        Me.Button1.Text = "Refresh"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'dgMonitoringReplikasi
+        '
+        Me.dgMonitoringReplikasi.AllowUserToAddRows = False
+        Me.dgMonitoringReplikasi.AllowUserToDeleteRows = False
+        Me.dgMonitoringReplikasi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgMonitoringReplikasi.Location = New System.Drawing.Point(7, 48)
+        Me.dgMonitoringReplikasi.Name = "dgMonitoringReplikasi"
+        Me.dgMonitoringReplikasi.ReadOnly = True
+        Me.dgMonitoringReplikasi.Size = New System.Drawing.Size(613, 304)
+        Me.dgMonitoringReplikasi.TabIndex = 40
         '
         'Panel8
         '
@@ -626,10 +636,11 @@ Partial Class IntegrationMonitoring
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel7.Controls.Add(Me.lblDatabase)
         Me.Panel7.Controls.Add(Me.cmdStopMonitoring)
         Me.Panel7.Controls.Add(Me.cmbStartMonitoring)
         Me.Panel7.Controls.Add(Me.GunaPictureBox3)
-        Me.Panel7.Controls.Add(Me.Label19)
+        Me.Panel7.Controls.Add(Me.lblNamaDatabase)
         Me.Panel7.Controls.Add(Me.Label18)
         Me.Panel7.Controls.Add(Me.lblBebanKerja)
         Me.Panel7.Controls.Add(Me.dgMonitoringDatabase)
@@ -652,7 +663,7 @@ Partial Class IntegrationMonitoring
         Me.cmdStopMonitoring.ForeColor = System.Drawing.Color.White
         Me.cmdStopMonitoring.Image = Nothing
         Me.cmdStopMonitoring.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdStopMonitoring.Location = New System.Drawing.Point(27, 130)
+        Me.cmdStopMonitoring.Location = New System.Drawing.Point(27, 132)
         Me.cmdStopMonitoring.Name = "cmdStopMonitoring"
         Me.cmdStopMonitoring.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdStopMonitoring.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -680,7 +691,7 @@ Partial Class IntegrationMonitoring
         Me.cmbStartMonitoring.ForeColor = System.Drawing.Color.White
         Me.cmbStartMonitoring.Image = Nothing
         Me.cmbStartMonitoring.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmbStartMonitoring.Location = New System.Drawing.Point(27, 104)
+        Me.cmbStartMonitoring.Location = New System.Drawing.Point(27, 107)
         Me.cmbStartMonitoring.Name = "cmbStartMonitoring"
         Me.cmbStartMonitoring.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmbStartMonitoring.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -694,36 +705,25 @@ Partial Class IntegrationMonitoring
         Me.cmbStartMonitoring.Text = "Mulai Monitoring"
         Me.cmbStartMonitoring.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'GunaPictureBox3
+        'lblNamaDatabase
         '
-        Me.GunaPictureBox3.BaseColor = System.Drawing.Color.White
-        Me.GunaPictureBox3.Image = Global.AnyarGadget.My.Resources.Resources.performance_icon_png_6
-        Me.GunaPictureBox3.Location = New System.Drawing.Point(46, 49)
-        Me.GunaPictureBox3.Name = "GunaPictureBox3"
-        Me.GunaPictureBox3.Size = New System.Drawing.Size(99, 50)
-        Me.GunaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaPictureBox3.TabIndex = 50
-        Me.GunaPictureBox3.TabStop = False
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.Black
-        Me.Label19.Location = New System.Drawing.Point(7, 23)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(175, 25)
-        Me.Label19.TabIndex = 49
-        Me.Label19.Text = "Database Store"
+        Me.lblNamaDatabase.AutoSize = True
+        Me.lblNamaDatabase.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNamaDatabase.ForeColor = System.Drawing.Color.Black
+        Me.lblNamaDatabase.Location = New System.Drawing.Point(36, 18)
+        Me.lblNamaDatabase.Name = "lblNamaDatabase"
+        Me.lblNamaDatabase.Size = New System.Drawing.Size(117, 16)
+        Me.lblNamaDatabase.TabIndex = 49
+        Me.lblNamaDatabase.Text = "Database Store"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.Black
-        Me.Label18.Location = New System.Drawing.Point(41, 2)
+        Me.Label18.Location = New System.Drawing.Point(55, 1)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(107, 25)
+        Me.Label18.Size = New System.Drawing.Size(78, 18)
         Me.Label18.TabIndex = 48
         Me.Label18.Text = "Performa"
         '
@@ -742,10 +742,10 @@ Partial Class IntegrationMonitoring
         Me.dgMonitoringDatabase.AllowUserToAddRows = False
         Me.dgMonitoringDatabase.AllowUserToDeleteRows = False
         Me.dgMonitoringDatabase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgMonitoringDatabase.Location = New System.Drawing.Point(187, 5)
+        Me.dgMonitoringDatabase.Location = New System.Drawing.Point(188, 5)
         Me.dgMonitoringDatabase.Name = "dgMonitoringDatabase"
         Me.dgMonitoringDatabase.ReadOnly = True
-        Me.dgMonitoringDatabase.Size = New System.Drawing.Size(424, 129)
+        Me.dgMonitoringDatabase.Size = New System.Drawing.Size(423, 129)
         Me.dgMonitoringDatabase.TabIndex = 44
         '
         'Panel6
@@ -908,36 +908,49 @@ Partial Class IntegrationMonitoring
         Me.GunaPictureBox1.TabIndex = 4
         Me.GunaPictureBox1.TabStop = False
         '
-        'dgMonitoringReplikasi
+        'GunaPictureBox3
         '
-        Me.dgMonitoringReplikasi.AllowUserToAddRows = False
-        Me.dgMonitoringReplikasi.AllowUserToDeleteRows = False
-        Me.dgMonitoringReplikasi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgMonitoringReplikasi.Location = New System.Drawing.Point(7, 48)
-        Me.dgMonitoringReplikasi.Name = "dgMonitoringReplikasi"
-        Me.dgMonitoringReplikasi.ReadOnly = True
-        Me.dgMonitoringReplikasi.Size = New System.Drawing.Size(613, 304)
-        Me.dgMonitoringReplikasi.TabIndex = 40
+        Me.GunaPictureBox3.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox3.Image = Global.AnyarGadget.My.Resources.Resources.performance_icon_png_6
+        Me.GunaPictureBox3.Location = New System.Drawing.Point(46, 54)
+        Me.GunaPictureBox3.Name = "GunaPictureBox3"
+        Me.GunaPictureBox3.Size = New System.Drawing.Size(99, 50)
+        Me.GunaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaPictureBox3.TabIndex = 50
+        Me.GunaPictureBox3.TabStop = False
         '
-        'Button1
+        'PictureBox1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(498, 356)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(122, 38)
-        Me.Button1.TabIndex = 41
-        Me.Button1.Text = "Refresh"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.PictureBox1.Image = Global.AnyarGadget.My.Resources.Resources._60ac66ae2cf6843b28687fc143861404
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 143)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(236, 360)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
         '
-        'lblJumlahReplikasi
+        'GunaCirclePictureBox2
         '
-        Me.lblJumlahReplikasi.AutoSize = True
-        Me.lblJumlahReplikasi.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJumlahReplikasi.Location = New System.Drawing.Point(2, 357)
-        Me.lblJumlahReplikasi.Name = "lblJumlahReplikasi"
-        Me.lblJumlahReplikasi.Size = New System.Drawing.Size(385, 30)
-        Me.lblJumlahReplikasi.TabIndex = 42
-        Me.lblJumlahReplikasi.Text = "Data Untuk Dikirim Ke Ivend Pusat : 0"
+        Me.GunaCirclePictureBox2.BaseColor = System.Drawing.Color.White
+        Me.GunaCirclePictureBox2.Image = Global.AnyarGadget.My.Resources.Resources.LOGO_ANYAR_BULAT
+        Me.GunaCirclePictureBox2.Location = New System.Drawing.Point(7, 10)
+        Me.GunaCirclePictureBox2.Name = "GunaCirclePictureBox2"
+        Me.GunaCirclePictureBox2.Size = New System.Drawing.Size(85, 85)
+        Me.GunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaCirclePictureBox2.TabIndex = 2
+        Me.GunaCirclePictureBox2.TabStop = False
+        Me.GunaCirclePictureBox2.UseTransfarantBackground = False
+        '
+        'lblDatabase
+        '
+        Me.lblDatabase.AutoSize = True
+        Me.lblDatabase.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDatabase.ForeColor = System.Drawing.Color.Black
+        Me.lblDatabase.Location = New System.Drawing.Point(36, 35)
+        Me.lblDatabase.Name = "lblDatabase"
+        Me.lblDatabase.Size = New System.Drawing.Size(13, 16)
+        Me.lblDatabase.TabIndex = 53
+        Me.lblDatabase.Text = "-"
         '
         'IntegrationMonitoring
         '
@@ -956,8 +969,6 @@ Partial Class IntegrationMonitoring
         Me.Text = "IntegrationMonitoring"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaCirclePictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -966,6 +977,7 @@ Partial Class IntegrationMonitoring
         CType(Me.dgFailedIntegration, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.dgMonitoringReplikasi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
@@ -978,7 +990,6 @@ Partial Class IntegrationMonitoring
         Me.TabPage4.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
-        CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgMonitoringDatabase, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
@@ -990,7 +1001,9 @@ Partial Class IntegrationMonitoring
         CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgMonitoringReplikasi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaCirclePictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1050,7 +1063,7 @@ Partial Class IntegrationMonitoring
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents lblProsesAntrian As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents lblNamaDatabase As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents GunaPictureBox3 As Guna.UI.WinForms.GunaPictureBox
     Friend WithEvents lblJumlahErrorIntegrasi As System.Windows.Forms.Label
@@ -1061,4 +1074,5 @@ Partial Class IntegrationMonitoring
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents dgMonitoringReplikasi As System.Windows.Forms.DataGridView
     Friend WithEvents lblJumlahReplikasi As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents lblDatabase As System.Windows.Forms.Label
 End Class

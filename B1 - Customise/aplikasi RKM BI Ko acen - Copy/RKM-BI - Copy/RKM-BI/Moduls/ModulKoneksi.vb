@@ -26,6 +26,37 @@ Module ModulKoneksi
 
 
 
+
+    Public Sub KoneksiRKMLive2()
+        strServerName = "10.1.0.53"
+        strLoginName = "sa"
+        strPasswordLogin = "h0spit4lity#"
+        strNamaDB = "RKM_Live_2"
+
+        strKoneksi = "data source=" & strServerName & ";user id=" & strLoginName & ";password=" & strPasswordLogin & ";initial catalog=" & strNamaDB & ";Application Name=Business Inteligence ;MultipleActiveResultSets=True  "
+        strKoneksi = String.Format(strKoneksi, strServerName, strLoginName, strPasswordLogin, strNamaDB)
+
+        Koneksi = New SqlConnection(strKoneksi)
+
+        Try
+            If Koneksi.State = ConnectionState.Closed Then
+                Koneksi.Open()
+            End If
+        Catch ex As Exception
+            MsgBox(Err.Description, MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
+
+
+
+
+
+
+
+
+
+
     Sub KoneksiDatabaseLoginAplikasi()
 
 

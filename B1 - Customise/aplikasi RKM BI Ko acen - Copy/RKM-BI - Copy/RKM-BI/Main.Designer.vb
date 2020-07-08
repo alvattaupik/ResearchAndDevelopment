@@ -127,8 +127,6 @@ Partial Class Main
         Me.t112 = New System.Windows.Forms.Timer(Me.components)
         Me.t121 = New System.Windows.Forms.Timer(Me.components)
         Me.t122 = New System.Windows.Forms.Timer(Me.components)
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -151,7 +149,6 @@ Partial Class Main
         CType(Me.dgSidebar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewTotal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CekDeh, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -173,7 +170,6 @@ Partial Class Main
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.MenuStrip1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -187,7 +183,7 @@ Partial Class Main
         Me.PictureBox13.BackgroundImage = Global.RKM_BI.My.Resources.Resources.stock
         Me.PictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox13.Location = New System.Drawing.Point(422, 24)
+        Me.PictureBox13.Location = New System.Drawing.Point(422, 13)
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox13.TabIndex = 26
@@ -198,7 +194,7 @@ Partial Class Main
         Me.PictureBox14.BackgroundImage = Global.RKM_BI.My.Resources.Resources.box
         Me.PictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox14.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox14.Location = New System.Drawing.Point(381, 24)
+        Me.PictureBox14.Location = New System.Drawing.Point(381, 12)
         Me.PictureBox14.Name = "PictureBox14"
         Me.PictureBox14.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox14.TabIndex = 25
@@ -210,7 +206,7 @@ Partial Class Main
         Me.PictureBox12.BackgroundImage = Global.RKM_BI.My.Resources.Resources.fork
         Me.PictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox12.Location = New System.Drawing.Point(340, 25)
+        Me.PictureBox12.Location = New System.Drawing.Point(340, 12)
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox12.TabIndex = 23
@@ -222,7 +218,7 @@ Partial Class Main
         Me.PictureBox11.BackgroundImage = Global.RKM_BI.My.Resources.Resources._2_coin256_anwansoon
         Me.PictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox11.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox11.Location = New System.Drawing.Point(299, 25)
+        Me.PictureBox11.Location = New System.Drawing.Point(299, 12)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox11.TabIndex = 22
@@ -234,7 +230,7 @@ Partial Class Main
         Me.PictureBox10.BackgroundImage = Global.RKM_BI.My.Resources.Resources.charIcon_pay
         Me.PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox10.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox10.Location = New System.Drawing.Point(258, 27)
+        Me.PictureBox10.Location = New System.Drawing.Point(258, 12)
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox10.TabIndex = 21
@@ -246,7 +242,7 @@ Partial Class Main
         Me.PictureBox9.BackgroundImage = Global.RKM_BI.My.Resources.Resources.inventory_maintenance_256
         Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox9.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox9.Location = New System.Drawing.Point(217, 24)
+        Me.PictureBox9.Location = New System.Drawing.Point(217, 12)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox9.TabIndex = 20
@@ -258,7 +254,7 @@ Partial Class Main
         Me.PictureBox8.BackgroundImage = Global.RKM_BI.My.Resources.Resources.inventory
         Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox8.Location = New System.Drawing.Point(176, 25)
+        Me.PictureBox8.Location = New System.Drawing.Point(176, 12)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox8.TabIndex = 19
@@ -328,7 +324,7 @@ Partial Class Main
         Me.PictureBox5.BackgroundImage = Global.RKM_BI.My.Resources.Resources.stocks
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox5.Location = New System.Drawing.Point(135, 25)
+        Me.PictureBox5.Location = New System.Drawing.Point(135, 12)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox5.TabIndex = 13
@@ -340,7 +336,7 @@ Partial Class Main
         Me.PictureBox3.BackgroundImage = Global.RKM_BI.My.Resources.Resources.shop
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox3.Location = New System.Drawing.Point(94, 25)
+        Me.PictureBox3.Location = New System.Drawing.Point(94, 12)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox3.TabIndex = 12
@@ -352,7 +348,7 @@ Partial Class Main
         Me.PictureBox2.BackgroundImage = Global.RKM_BI.My.Resources.Resources.niBqey6iA
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Location = New System.Drawing.Point(53, 23)
+        Me.PictureBox2.Location = New System.Drawing.Point(53, 12)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox2.TabIndex = 11
@@ -364,7 +360,7 @@ Partial Class Main
         Me.PictureBox1.BackgroundImage = Global.RKM_BI.My.Resources.Resources.icon_100f
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 24)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 11)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox1.TabIndex = 10
@@ -1088,9 +1084,6 @@ Partial Class Main
         Me.n10.Text = "9"
         Me.n10.Visible = False
         '
-        't101
-        '
-        '
         't102
         '
         '
@@ -1113,21 +1106,6 @@ Partial Class Main
         Me.n11.TabIndex = 36
         Me.n11.Text = "9"
         Me.n11.Visible = False
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1008, 24)
-        Me.MenuStrip1.TabIndex = 27
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
         '
         'Main
         '
@@ -1158,12 +1136,10 @@ Partial Class Main
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Main"
         Me.Text = "Business Inteligence - AnyarGroup"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1187,8 +1163,6 @@ Partial Class Main
         CType(Me.dgSidebar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridViewTotal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CekDeh, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1296,7 +1270,5 @@ Partial Class Main
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

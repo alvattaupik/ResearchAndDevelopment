@@ -385,7 +385,7 @@ Partial Class Stock
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(573, 11)
+        Me.Button3.Location = New System.Drawing.Point(594, 11)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 34
@@ -467,7 +467,7 @@ Partial Class Stock
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Image = Global.RKM_BI.My.Resources.Resources.loading__1_
-        Me.PictureBox1.Location = New System.Drawing.Point(399, 114)
+        Me.PictureBox1.Location = New System.Drawing.Point(127, 114)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(1031, 497)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom

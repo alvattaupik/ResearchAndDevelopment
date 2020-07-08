@@ -5,8 +5,13 @@ Public Class PerubahanHargaJual
 
 
 
-    Private Sub PerubahanHargaJual_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+  
+    Private Sub dgListPerubahanHargaJual_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgListPerubahanHargaJual.CellContentClick
+        If dgListPerubahanHargaJual.RowCount = 0 Then Exit Sub
+        DetailPerubahanHargaJual.LblNamaPerubahanharga.Text = dgListPerubahanHargaJual.Rows(e.RowIndex).Cells(0).Value
+        DetailPerubahanHargaJual.lblTanggal.Text = "Tanggal : " & dgListPerubahanHargaJual.Rows(e.RowIndex).Cells(1).Value
+        DetailPerubahanHargaJual.ShowDialog()
     End Sub
 
 

@@ -1413,12 +1413,133 @@ Public Class MarginBaruV1_1
 
 
 
+
+
+
+
+
+        'SUBANG
+        command = New SqlCommand("Lap_Margin_Rep4", MyConnection)
+
+        adapter = New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        command.Parameters.AddWithValue("@TanggalAwal", Format(awal))
+        command.Parameters.AddWithValue("@TanggalAkhir", Format(akhir))
+        command.Parameters.AddWithValue("@PrintByUserName", "xxx")
+        command.Parameters.AddWithValue("@Cabang", "015")
+        table = New DataTable
+        adapter.Fill(table)
+        Me.DataGridViewSUBANG.DataSource = table
+
+        DataGridViewSUBANG.Columns(0).HeaderText = "No Struk"
+        DataGridViewSUBANG.Columns(1).HeaderText = "Tgl"
+        DataGridViewSUBANG.Columns(2).HeaderText = "Kode Barang"
+        DataGridViewSUBANG.Columns(3).HeaderText = "Nama Barang"
+        DataGridViewSUBANG.Columns(4).HeaderText = "Satuan"
+        DataGridViewSUBANG.Columns(5).HeaderText = "Stock"
+        DataGridViewSUBANG.Columns(6).HeaderText = "Qty"
+        DataGridViewSUBANG.Columns(7).HeaderText = "Harga Beli"
+        DataGridViewSUBANG.Columns(8).HeaderText = "Harga Jual"
+        DataGridViewSUBANG.Columns(9).HeaderText = "Margin"
+        DataGridViewSUBANG.Columns(10).HeaderText = "Total Beli"
+        DataGridViewSUBANG.Columns(11).HeaderText = "Total Jual"
+        DataGridViewSUBANG.Columns(12).HeaderText = "Total Margin"
+        DataGridViewSUBANG.Columns(13).HeaderText = "Status"
+        DataGridViewSUBANG.Columns(14).HeaderText = "Sales Person"
+
+        DataGridViewSUBANG.Columns(0).Width = 110
+        DataGridViewSUBANG.Columns(1).Width = 70
+        DataGridViewSUBANG.Columns(2).Width = 80
+        DataGridViewSUBANG.Columns(3).Width = 250
+        DataGridViewSUBANG.Columns(4).Width = 50
+        DataGridViewSUBANG.Columns(5).Width = 50
+        DataGridViewSUBANG.Columns(6).Width = 50
+        DataGridViewSUBANG.Columns(7).Width = 80
+        DataGridViewSUBANG.Columns(8).Width = 80
+        DataGridViewSUBANG.Columns(9).Width = 80
+        DataGridViewSUBANG.Columns(10).Width = 80
+        DataGridViewSUBANG.Columns(11).Width = 80
+        DataGridViewSUBANG.Columns(12).Width = 80
+        DataGridViewSUBANG.Columns(13).Width = 80
+        DataGridViewSUBANG.Columns(14).Width = 80
+
+
+        LongMargin = 0
+        LongTotalJual = 0
+        LongTotalBeli = 0
+        LongTotalMargin = 0
+
+
+        For i = 0 To DataGridViewSUBANG.RowCount - 1
+
+            DataGridViewSUBANG.Rows(i).Cells(0).Value = DataGridViewSUBANG.Rows(i).Cells(0).Value 'No struk
+            DataGridViewSUBANG.Rows(i).Cells(1).Value = Format(DataGridViewSUBANG.Rows(i).Cells(1).Value, "dd-MM-yyyy") 'Tanggal
+            DataGridViewSUBANG.Rows(i).Cells(2).Value = DataGridViewSUBANG.Rows(i).Cells(2).Value 'Kode barang
+            DataGridViewSUBANG.Rows(i).Cells(3).Value = DataGridViewSUBANG.Rows(i).Cells(3).Value 'nama baarang
+            DataGridViewSUBANG.Rows(i).Cells(4).Value = DataGridViewSUBANG.Rows(i).Cells(4).Value 'satuan
+            DataGridViewSUBANG.Rows(i).Cells(5).Value = DataGridViewSUBANG.Rows(i).Cells(5).Value 'stock
+            DataGridViewSUBANG.Rows(i).Cells(6).Value = DataGridViewSUBANG.Rows(i).Cells(6).Value 'Qty
+            DataGridViewSUBANG.Rows(i).Cells(7).Value = DataGridViewSUBANG.Rows(i).Cells(7).Value 'Harga beli
+            DataGridViewSUBANG.Rows(i).Cells(8).Value = DataGridViewSUBANG.Rows(i).Cells(8).Value 'Harga jual
+
+            DataGridViewSUBANG.Rows(i).Cells(9).Value = DataGridViewSUBANG.Rows(i).Cells(9).Value 'Margin
+            LongMargin = LongMargin + DataGridViewSUBANG.Rows(i).Cells(9).Value
+
+            DataGridViewSUBANG.Rows(i).Cells(10).Value = DataGridViewSUBANG.Rows(i).Cells(10).Value 'Total Beli
+            LongTotalBeli = LongTotalBeli + DataGridViewSUBANG.Rows(i).Cells(10).Value
+
+            DataGridViewSUBANG.Rows(i).Cells(11).Value = DataGridViewSUBANG.Rows(i).Cells(11).Value 'Total Jual
+            LongTotalJual = LongTotalJual + DataGridViewSUBANG.Rows(i).Cells(11).Value
+
+
+            DataGridViewSUBANG.Rows(i).Cells(12).Value = DataGridViewSUBANG.Rows(i).Cells(12).Value 'Total Margin
+            LongTotalMargin = LongTotalMargin + DataGridViewSUBANG.Rows(i).Cells(12).Value
+
+
+            DataGridViewSUBANG.Rows(i).Cells(13).Value = DataGridViewSUBANG.Rows(i).Cells(13).Value 'status
+            DataGridViewSUBANG.Rows(i).Cells(14).Value = DataGridViewSUBANG.Rows(i).Cells(14).Value 'persion
+
+
+        Next
+
+
+
+        txtTotalJualSubang.Text = Format(LongTotalJual, "N0")
+        txtTotalBeliSubang.Text = Format(LongTotalBeli, "N0")
+        txtTotalMarginSubang.Text = Format(LongTotalMargin, "N0")
+
+
+        DataGridViewSUBANG.Columns(4).DefaultCellStyle.Format = "N0"
+        DataGridViewSUBANG.Columns(5).DefaultCellStyle.Format = "N0"
+        DataGridViewSUBANG.Columns(7).DefaultCellStyle.Format = "N0"
+        DataGridViewSUBANG.Columns(8).DefaultCellStyle.Format = "N0"
+        DataGridViewSUBANG.Columns(9).DefaultCellStyle.Format = "N0"
+        DataGridViewSUBANG.Columns(10).DefaultCellStyle.Format = "N0"
+        DataGridViewSUBANG.Columns(11).DefaultCellStyle.Format = "N0"
+        DataGridViewSUBANG.Columns(12).DefaultCellStyle.Format = "N0"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     End Sub
   
 
-    Private Sub DataGridViewAyani_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewAyani.CellClick
-        strNamaGrid = "DataGridViewAyani"
-    End Sub
+
 
 
 
@@ -1442,19 +1563,44 @@ Public Class MarginBaruV1_1
     End Sub
 
     Private Sub DataGridViewCibabat_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCibabat.CellContentClick
-        On Error Resume Next
-        System.Threading.Thread.Sleep(DOUBLE_CLICK_SPEED)
-        System.Windows.Forms.Application.DoEvents()
+        If e.ColumnIndex = 0 Then
+            Koneksi()
+            Dim strSQL As String = "SELECT  TOP 1 * FROM dbo.OINV WHERE U_CXS_TRID='" & DataGridViewCibabat.Item(0, DataGridViewCibabat.CurrentRow.Index).Value & "' AND isIns='Y'"
+            cmd = New SqlCommand(strSQL, MyConnection)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
 
-        If isDoubleTriggered Then
-            isDoubleTriggered = False
-            Exit Sub
+                MstrNoStruk = DataGridViewCibabat.Item(0, DataGridViewCibabat.CurrentRow.Index).Value
+
+                FormMonitoringDelivery.ShowDialog()
+
+                Exit Sub
+            Else
+
+                MsgBox("Transaksi Cash And Carry, Tidak Ada Informasi Delivery", vbInformation, "Informasi")
+
+                Exit Sub
+            End If
+
         End If
 
-        GlobalstrKodeBarang = DataGridViewCibabat.Item(2, DataGridViewCibabat.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewCibabat.Item(3, DataGridViewCibabat.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewCibabat.Item(0, DataGridViewCibabat.CurrentRow.Index).Value
-        ViewStockWarehouse.ShowDialog()
+
+
+        If e.ColumnIndex = 2 Then
+
+            GlobalstrKodeBarang = DataGridViewCibabat.Item(2, DataGridViewCibabat.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewCibabat.Item(3, DataGridViewCibabat.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewCibabat.Item(0, DataGridViewCibabat.CurrentRow.Index).Value
+            FormAuditItems.ShowDialog()
+        Else
+
+            GlobalstrKodeBarang = DataGridViewCibabat.Item(2, DataGridViewCibabat.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewCibabat.Item(3, DataGridViewCibabat.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewCibabat.Item(0, DataGridViewCibabat.CurrentRow.Index).Value
+            ViewStockWarehouse.ShowDialog()
+
+        End If
     End Sub
 
     Private Sub DataGridViewCibabat_Click(sender As Object, e As EventArgs) Handles DataGridViewCibabat.Click
@@ -1477,21 +1623,47 @@ Public Class MarginBaruV1_1
     End Sub
 
     Private Sub DataGridViewCibiru_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCibiru.CellContentClick
-        strNamaGrid = "DataGridViewCibiru"
+        strNamaGrid = "006"
 
 
-        System.Threading.Thread.Sleep(DOUBLE_CLICK_SPEED)
-        System.Windows.Forms.Application.DoEvents()
+        If e.ColumnIndex = 0 Then
+            Koneksi()
+            Dim strSQL As String = "SELECT  TOP 1 * FROM dbo.OINV WHERE U_CXS_TRID='" & DataGridViewCibiru.Item(0, DataGridViewCibiru.CurrentRow.Index).Value & "' AND isIns='Y'"
+            cmd = New SqlCommand(strSQL, MyConnection)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
 
-        If isDoubleTriggered Then
-            isDoubleTriggered = False
-            Exit Sub
+                MstrNoStruk = DataGridViewCibiru.Item(0, DataGridViewCibiru.CurrentRow.Index).Value
+
+                FormMonitoringDelivery.ShowDialog()
+
+                Exit Sub
+            Else
+
+                MsgBox("Transaksi Cash And Carry, Tidak Ada Informasi Delivery", vbInformation, "Informasi")
+
+                Exit Sub
+            End If
+
         End If
 
-        GlobalstrKodeBarang = DataGridViewCibiru.Item(2, DataGridViewCibiru.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewCibiru.Item(3, DataGridViewCibiru.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewCibiru.Item(0, DataGridViewCibiru.CurrentRow.Index).Value
-        ViewStockWarehouse.ShowDialog()
+
+
+        If e.ColumnIndex = 2 Then
+
+            GlobalstrKodeBarang = DataGridViewCibiru.Item(2, DataGridViewCibiru.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewCibiru.Item(3, DataGridViewCibiru.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewCibiru.Item(0, DataGridViewCibiru.CurrentRow.Index).Value
+            FormAuditItems.ShowDialog()
+        Else
+
+            GlobalstrKodeBarang = DataGridViewCibiru.Item(2, DataGridViewCibiru.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewCibiru.Item(3, DataGridViewCibiru.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewCibiru.Item(0, DataGridViewCibiru.CurrentRow.Index).Value
+            ViewStockWarehouse.ShowDialog()
+
+        End If
     End Sub
 
     Private Sub DataGridViewCibiru_Click(sender As Object, e As EventArgs) Handles DataGridViewCibiru.Click
@@ -1500,15 +1672,7 @@ Public Class MarginBaruV1_1
 
     End Sub
 
-    Private Sub DataGridViewCibiru_DoubleClick(sender As Object, e As EventArgs) Handles DataGridViewCibiru.DoubleClick
-        On Error Resume Next
-        isDoubleTriggered = True
-        GlobalstrKodeBarang = DataGridViewCibiru.Item(2, DataGridViewCibiru.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewCibiru.Item(3, DataGridViewCibiru.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewCibiru.Item(0, DataGridViewCibiru.CurrentRow.Index).Value
-        FormAuditItems.ShowDialog()
-    End Sub
-
+ 
     Private Sub DataGridViewCibiru_SortCompare(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewSortCompareEventArgs) Handles DataGridViewCibiru.SortCompare
         If (e.RowIndex2 = DataGridViewCibiru.Rows.Count - 1) Then
             e.Handled = True
@@ -1516,34 +1680,50 @@ Public Class MarginBaruV1_1
     End Sub
 
     Private Sub DataGridViewCiparay_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCiparay.CellContentClick
-        strNamaGrid = "DataGridViewCiparay"
+        strNamaGrid = "010"
 
-        System.Threading.Thread.Sleep(DOUBLE_CLICK_SPEED)
-        System.Windows.Forms.Application.DoEvents()
+        If e.ColumnIndex = 0 Then
+            Koneksi()
+            Dim strSQL As String = "SELECT  TOP 1 * FROM dbo.OINV WHERE U_CXS_TRID='" & DataGridViewCiparay.Item(0, DataGridViewCiparay.CurrentRow.Index).Value & "' AND isIns='Y'"
+            cmd = New SqlCommand(strSQL, MyConnection)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
 
-        If isDoubleTriggered Then
-            isDoubleTriggered = False
-            Exit Sub
+                MstrNoStruk = DataGridViewCiparay.Item(0, DataGridViewCiparay.CurrentRow.Index).Value
+
+                FormMonitoringDelivery.ShowDialog()
+
+                Exit Sub
+            Else
+
+                MsgBox("Transaksi Cash And Carry, Tidak Ada Informasi Delivery", vbInformation, "Informasi")
+
+                Exit Sub
+            End If
+
         End If
 
-        GlobalstrKodeBarang = DataGridViewCiparay.Item(2, DataGridViewCiparay.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewCiparay.Item(3, DataGridViewCiparay.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewCiparay.Item(0, DataGridViewCiparay.CurrentRow.Index).Value
-        ViewStockWarehouse.ShowDialog()
+
+
+        If e.ColumnIndex = 2 Then
+
+            GlobalstrKodeBarang = DataGridViewCiparay.Item(2, DataGridViewCiparay.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewCiparay.Item(3, DataGridViewCiparay.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewCiparay.Item(0, DataGridViewCiparay.CurrentRow.Index).Value
+            FormAuditItems.ShowDialog()
+        Else
+
+            GlobalstrKodeBarang = DataGridViewCiparay.Item(2, DataGridViewCiparay.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewCiparay.Item(3, DataGridViewCiparay.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewCiparay.Item(0, DataGridViewCiparay.CurrentRow.Index).Value
+            ViewStockWarehouse.ShowDialog()
+
+        End If
     End Sub
 
-    Private Sub DataGridViewCiparay_Click(sender As Object, e As EventArgs) Handles DataGridViewCiparay.Click
-     
-    End Sub
 
-    Private Sub DataGridViewCiparay_DoubleClick(sender As Object, e As EventArgs) Handles DataGridViewCiparay.DoubleClick
-        On Error Resume Next
-        isDoubleTriggered = True
-        GlobalstrKodeBarang = DataGridViewCiparay.Item(2, DataGridViewCiparay.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewCiparay.Item(3, DataGridViewCiparay.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewCiparay.Item(0, DataGridViewCiparay.CurrentRow.Index).Value
-        FormAuditItems.ShowDialog()
-    End Sub
+
 
     Private Sub DataGridViewCiparay_SortCompare(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewSortCompareEventArgs) Handles DataGridViewCiparay.SortCompare
         If (e.RowIndex2 = DataGridViewCiparay.Rows.Count - 1) Then
@@ -1552,34 +1732,46 @@ Public Class MarginBaruV1_1
     End Sub
 
     Private Sub DataGridViewCirebon_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCirebon.CellContentClick
-        strNamaGrid = "DataGridViewCirebon"
+        strNamaGrid = "008"
 
-        System.Threading.Thread.Sleep(DOUBLE_CLICK_SPEED)
-        System.Windows.Forms.Application.DoEvents()
+        If e.ColumnIndex = 0 Then
+            Koneksi()
+            Dim strSQL As String = "SELECT  TOP 1 * FROM dbo.OINV WHERE U_CXS_TRID='" & DataGridViewCirebon.Item(0, DataGridViewCirebon.CurrentRow.Index).Value & "' AND isIns='Y'"
+            cmd = New SqlCommand(strSQL, MyConnection)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
 
-        If isDoubleTriggered Then
-            isDoubleTriggered = False
-            Exit Sub
+                MstrNoStruk = DataGridViewCirebon.Item(0, DataGridViewCirebon.CurrentRow.Index).Value
+
+                FormMonitoringDelivery.ShowDialog()
+
+                Exit Sub
+            Else
+
+                MsgBox("Transaksi Cash And Carry, Tidak Ada Informasi Delivery", vbInformation, "Informasi")
+
+                Exit Sub
+            End If
+
         End If
 
-        GlobalstrKodeBarang = DataGridViewCirebon.Item(2, DataGridViewCirebon.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewCirebon.Item(3, DataGridViewCirebon.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewCirebon.Item(0, DataGridViewCirebon.CurrentRow.Index).Value
-        ViewStockWarehouse.ShowDialog()
-    End Sub
 
-    Private Sub DataGridViewCirebon_Click(sender As Object, e As EventArgs) Handles DataGridViewCirebon.Click
-       
 
-    End Sub
+        If e.ColumnIndex = 2 Then
 
-    Private Sub DataGridViewCirebon_DoubleClick(sender As Object, e As EventArgs) Handles DataGridViewCirebon.DoubleClick
-        On Error Resume Next
-        isDoubleTriggered = True
-        GlobalstrKodeBarang = DataGridViewCirebon.Item(2, DataGridViewCirebon.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewCirebon.Item(3, DataGridViewCirebon.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewCirebon.Item(0, DataGridViewCirebon.CurrentRow.Index).Value
-        FormAuditItems.ShowDialog()
+            GlobalstrKodeBarang = DataGridViewCirebon.Item(2, DataGridViewCirebon.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewCirebon.Item(3, DataGridViewCirebon.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewCirebon.Item(0, DataGridViewCirebon.CurrentRow.Index).Value
+            FormAuditItems.ShowDialog()
+        Else
+
+            GlobalstrKodeBarang = DataGridViewCirebon.Item(2, DataGridViewCirebon.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewCirebon.Item(3, DataGridViewCirebon.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewCirebon.Item(0, DataGridViewCirebon.CurrentRow.Index).Value
+            ViewStockWarehouse.ShowDialog()
+
+        End If
     End Sub
 
     Private Sub DataGridViewCirebon_SortCompare(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewSortCompareEventArgs) Handles DataGridViewCirebon.SortCompare
@@ -1589,34 +1781,54 @@ Public Class MarginBaruV1_1
     End Sub
 
     Private Sub DataGridViewGarut_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewGarut.CellContentClick
-        strNamaGrid = "DataGridViewGarut"
+        strNamaGrid = "007"
 
-        System.Threading.Thread.Sleep(DOUBLE_CLICK_SPEED)
-        System.Windows.Forms.Application.DoEvents()
 
-        If isDoubleTriggered Then
-            isDoubleTriggered = False
-            Exit Sub
+        If e.ColumnIndex = 0 Then
+            Koneksi()
+            Dim strSQL As String = "SELECT  TOP 1 * FROM dbo.OINV WHERE U_CXS_TRID='" & DataGridViewGarut.Item(0, DataGridViewGarut.CurrentRow.Index).Value & "' AND isIns='Y'"
+            cmd = New SqlCommand(strSQL, MyConnection)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
+
+                MstrNoStruk = DataGridViewGarut.Item(0, DataGridViewGarut.CurrentRow.Index).Value
+
+                FormMonitoringDelivery.ShowDialog()
+
+                Exit Sub
+            Else
+
+                MsgBox("Transaksi Cash And Carry, Tidak Ada Informasi Delivery", vbInformation, "Informasi")
+
+                Exit Sub
+            End If
+
         End If
 
-        GlobalstrKodeBarang = DataGridViewGarut.Item(2, DataGridViewGarut.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewGarut.Item(3, DataGridViewGarut.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewGarut.Item(0, DataGridViewGarut.CurrentRow.Index).Value
-        ViewStockWarehouse.ShowDialog()
+
+
+        If e.ColumnIndex = 2 Then
+
+            GlobalstrKodeBarang = DataGridViewGarut.Item(2, DataGridViewGarut.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewGarut.Item(3, DataGridViewGarut.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewGarut.Item(0, DataGridViewGarut.CurrentRow.Index).Value
+            FormAuditItems.ShowDialog()
+        Else
+
+            GlobalstrKodeBarang = DataGridViewGarut.Item(2, DataGridViewGarut.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewGarut.Item(3, DataGridViewGarut.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewGarut.Item(0, DataGridViewGarut.CurrentRow.Index).Value
+            ViewStockWarehouse.ShowDialog()
+
+        End If
     End Sub
 
     Private Sub DataGridViewGarut_Click(sender As Object, e As EventArgs) Handles DataGridViewGarut.Click
      
     End Sub
 
-    Private Sub DataGridViewGarut_DoubleClick(sender As Object, e As EventArgs) Handles DataGridViewGarut.DoubleClick
-        On Error Resume Next
-        isDoubleTriggered = True
-        GlobalstrKodeBarang = DataGridViewGarut.Item(2, DataGridViewGarut.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewGarut.Item(3, DataGridViewGarut.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewGarut.Item(0, DataGridViewGarut.CurrentRow.Index).Value
-        FormAuditItems.ShowDialog()
-    End Sub
+
 
     Private Sub DataGridViewGarut_SortCompare(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewSortCompareEventArgs) Handles DataGridViewGarut.SortCompare
         If (e.RowIndex2 = DataGridViewGarut.Rows.Count - 1) Then
@@ -1625,33 +1837,47 @@ Public Class MarginBaruV1_1
     End Sub
 
     Private Sub DataGridViewKopo_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewKopo.CellContentClick
-        strNamaGrid = "DataGridViewKopo"
-
-        System.Threading.Thread.Sleep(DOUBLE_CLICK_SPEED)
-        System.Windows.Forms.Application.DoEvents()
+        strNamaGrid = "005"
 
 
-        If isDoubleTriggered Then
-            isDoubleTriggered = False
-            Exit Sub
+        If e.ColumnIndex = 0 Then
+            Koneksi()
+            Dim strSQL As String = "SELECT  TOP 1 * FROM dbo.OINV WHERE U_CXS_TRID='" & DataGridViewKopo.Item(0, DataGridViewKopo.CurrentRow.Index).Value & "' AND isIns='Y'"
+            cmd = New SqlCommand(strSQL, MyConnection)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
+
+                MstrNoStruk = DataGridViewKopo.Item(0, DataGridViewKopo.CurrentRow.Index).Value
+
+                FormMonitoringDelivery.ShowDialog()
+
+                Exit Sub
+            Else
+
+                MsgBox("Transaksi Cash And Carry, Tidak Ada Informasi Delivery", vbInformation, "Informasi")
+
+                Exit Sub
+            End If
+
         End If
 
-        GlobalstrKodeBarang = DataGridViewKopo.Item(2, DataGridViewKopo.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewKopo.Item(3, DataGridViewKopo.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewKopo.Item(0, DataGridViewKopo.CurrentRow.Index).Value
-        ViewStockWarehouse.ShowDialog()
-    End Sub
-    Private Sub DataGridViewKopo_Click(sender As Object, e As EventArgs) Handles DataGridViewKopo.Click
-      
-    End Sub
 
-    Private Sub DataGridViewKopo_DoubleClick(sender As Object, e As EventArgs) Handles DataGridViewKopo.DoubleClick
-        On Error Resume Next
-        isDoubleTriggered = True
-        GlobalstrKodeBarang = DataGridViewKopo.Item(2, DataGridViewKopo.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewKopo.Item(3, DataGridViewKopo.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewKopo.Item(0, DataGridViewKopo.CurrentRow.Index).Value
-        FormAuditItems.ShowDialog()
+
+        If e.ColumnIndex = 2 Then
+
+            GlobalstrKodeBarang = DataGridViewKopo.Item(2, DataGridViewKopo.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewKopo.Item(3, DataGridViewKopo.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewKopo.Item(0, DataGridViewKopo.CurrentRow.Index).Value
+            FormAuditItems.ShowDialog()
+        Else
+
+            GlobalstrKodeBarang = DataGridViewKopo.Item(2, DataGridViewKopo.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewKopo.Item(3, DataGridViewKopo.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewKopo.Item(0, DataGridViewKopo.CurrentRow.Index).Value
+            ViewStockWarehouse.ShowDialog()
+
+        End If
     End Sub
 
     Private Sub DataGridViewKopo_SortCompare(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewSortCompareEventArgs) Handles DataGridViewKopo.SortCompare
@@ -1661,35 +1887,49 @@ Public Class MarginBaruV1_1
     End Sub
 
     Private Sub DataGridViewPAMANUKAN_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewPAMANUKAN.CellContentClick
-        strNamaGrid = "DataGridViewPamanukan"
+        strNamaGrid = "013"
 
-        System.Threading.Thread.Sleep(DOUBLE_CLICK_SPEED)
-        System.Windows.Forms.Application.DoEvents()
+        If e.ColumnIndex = 0 Then
+            Koneksi()
+            Dim strSQL As String = "SELECT  TOP 1 * FROM dbo.OINV WHERE U_CXS_TRID='" & DataGridViewPAMANUKAN.Item(0, DataGridViewPAMANUKAN.CurrentRow.Index).Value & "' AND isIns='Y'"
+            cmd = New SqlCommand(strSQL, MyConnection)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
 
-        If isDoubleTriggered Then
-            isDoubleTriggered = False
-            Exit Sub
+                MstrNoStruk = DataGridViewPAMANUKAN.Item(0, DataGridViewPAMANUKAN.CurrentRow.Index).Value
+
+                FormMonitoringDelivery.ShowDialog()
+
+                Exit Sub
+            Else
+
+                MsgBox("Transaksi Cash And Carry, Tidak Ada Informasi Delivery", vbInformation, "Informasi")
+
+                Exit Sub
+            End If
+
         End If
 
-        GlobalstrKodeBarang = DataGridViewPAMANUKAN.Item(2, DataGridViewPAMANUKAN.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewPAMANUKAN.Item(3, DataGridViewPAMANUKAN.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewPAMANUKAN.Item(0, DataGridViewPAMANUKAN.CurrentRow.Index).Value
-        ViewStockWarehouse.ShowDialog()
-    End Sub
-    Private Sub DataGridViewPAMANUKAN_Click(sender As Object, e As EventArgs) Handles DataGridViewPAMANUKAN.Click
-      
 
 
-    End Sub
+        If e.ColumnIndex = 2 Then
 
-    Private Sub DataGridViewPAMANUKAN_DoubleClick(sender As Object, e As EventArgs) Handles DataGridViewPAMANUKAN.DoubleClick
-        On Error Resume Next
-        isDoubleTriggered = True
-        GlobalstrKodeBarang = DataGridViewPAMANUKAN.Item(2, DataGridViewPAMANUKAN.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewPAMANUKAN.Item(3, DataGridViewPAMANUKAN.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewPAMANUKAN.Item(0, DataGridViewPAMANUKAN.CurrentRow.Index).Value
-        FormAuditItems.ShowDialog()
+            GlobalstrKodeBarang = DataGridViewPAMANUKAN.Item(2, DataGridViewPAMANUKAN.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewPAMANUKAN.Item(3, DataGridViewPAMANUKAN.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewPAMANUKAN.Item(0, DataGridViewPAMANUKAN.CurrentRow.Index).Value
+            FormAuditItems.ShowDialog()
+        Else
+
+            GlobalstrKodeBarang = DataGridViewPAMANUKAN.Item(2, DataGridViewPAMANUKAN.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewPAMANUKAN.Item(3, DataGridViewPAMANUKAN.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewPAMANUKAN.Item(0, DataGridViewPAMANUKAN.CurrentRow.Index).Value
+            ViewStockWarehouse.ShowDialog()
+
+        End If
     End Sub
+ 
+
 
     Private Sub DataGridViewPAMANUKAN_SortCompare(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewSortCompareEventArgs) Handles DataGridViewPAMANUKAN.SortCompare
         If (e.RowIndex2 = DataGridViewPAMANUKAN.Rows.Count - 1) Then
@@ -1698,36 +1938,48 @@ Public Class MarginBaruV1_1
     End Sub
 
     Private Sub DataGridViewRancaekek_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewRancaekek.CellContentClick
-        strNamaGrid = "DataGridViewRancaekek"
+        strNamaGrid = "011"
 
-        System.Threading.Thread.Sleep(DOUBLE_CLICK_SPEED)
-        System.Windows.Forms.Application.DoEvents()
+        If e.ColumnIndex = 0 Then
+            Koneksi()
+            Dim strSQL As String = "SELECT  TOP 1 * FROM dbo.OINV WHERE U_CXS_TRID='" & DataGridViewRancaekek.Item(0, DataGridViewRancaekek.CurrentRow.Index).Value & "' AND isIns='Y'"
+            cmd = New SqlCommand(strSQL, MyConnection)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
 
+                MstrNoStruk = DataGridViewRancaekek.Item(0, DataGridViewRancaekek.CurrentRow.Index).Value
 
-        If isDoubleTriggered Then
-            isDoubleTriggered = False
-            Exit Sub
+                FormMonitoringDelivery.ShowDialog()
+
+                Exit Sub
+            Else
+
+                MsgBox("Transaksi Cash And Carry, Tidak Ada Informasi Delivery", vbInformation, "Informasi")
+
+                Exit Sub
+            End If
+
         End If
 
-        GlobalstrKodeBarang = DataGridViewRancaekek.Item(2, DataGridViewRancaekek.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewRancaekek.Item(3, DataGridViewRancaekek.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewRancaekek.Item(0, DataGridViewRancaekek.CurrentRow.Index).Value
-        ViewStockWarehouse.ShowDialog()
+
+
+        If e.ColumnIndex = 2 Then
+
+            GlobalstrKodeBarang = DataGridViewRancaekek.Item(2, DataGridViewRancaekek.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewRancaekek.Item(3, DataGridViewRancaekek.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewRancaekek.Item(0, DataGridViewRancaekek.CurrentRow.Index).Value
+            FormAuditItems.ShowDialog()
+        Else
+
+            GlobalstrKodeBarang = DataGridViewRancaekek.Item(2, DataGridViewRancaekek.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewRancaekek.Item(3, DataGridViewRancaekek.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewRancaekek.Item(0, DataGridViewRancaekek.CurrentRow.Index).Value
+            ViewStockWarehouse.ShowDialog()
+
+        End If
     End Sub
 
-    Private Sub DataGridViewRancaekek_Click(sender As Object, e As EventArgs) Handles DataGridViewRancaekek.Click
-       
-
-    End Sub
-
-    Private Sub DataGridViewRancaekek_DoubleClick(sender As Object, e As EventArgs) Handles DataGridViewRancaekek.DoubleClick
-        On Error Resume Next
-        isDoubleTriggered = True
-        GlobalstrKodeBarang = DataGridViewRancaekek.Item(2, DataGridViewRancaekek.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewRancaekek.Item(3, DataGridViewRancaekek.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewRancaekek.Item(0, DataGridViewRancaekek.CurrentRow.Index).Value
-        FormAuditItems.ShowDialog()
-    End Sub
 
     Private Sub DataGridViewRancaekek_SortCompare(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewSortCompareEventArgs) Handles DataGridViewRancaekek.SortCompare
         If (e.RowIndex2 = DataGridViewRancaekek.Rows.Count - 1) Then
@@ -1736,37 +1988,49 @@ Public Class MarginBaruV1_1
     End Sub
 
     Private Sub DataGridViewSumedang_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewSumedang.CellContentClick
-        strNamaGrid = "DataGridViewSumedang"
+        strNamaGrid = "009"
 
-        System.Threading.Thread.Sleep(DOUBLE_CLICK_SPEED)
-        System.Windows.Forms.Application.DoEvents()
+        If e.ColumnIndex = 0 Then
+            Koneksi()
+            Dim strSQL As String = "SELECT  TOP 1 * FROM dbo.OINV WHERE U_CXS_TRID='" & DataGridViewSumedang.Item(0, DataGridViewSumedang.CurrentRow.Index).Value & "' AND isIns='Y'"
+            cmd = New SqlCommand(strSQL, MyConnection)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
 
+                MstrNoStruk = DataGridViewSumedang.Item(0, DataGridViewSumedang.CurrentRow.Index).Value
 
-        If isDoubleTriggered Then
-            isDoubleTriggered = False
-            Exit Sub
+                FormMonitoringDelivery.ShowDialog()
+
+                Exit Sub
+            Else
+
+                MsgBox("Transaksi Cash And Carry, Tidak Ada Informasi Delivery", vbInformation, "Informasi")
+
+                Exit Sub
+            End If
+
         End If
 
-        GlobalstrKodeBarang = DataGridViewSumedang.Item(2, DataGridViewSumedang.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewSumedang.Item(3, DataGridViewSumedang.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewSumedang.Item(0, DataGridViewSumedang.CurrentRow.Index).Value
-        ViewStockWarehouse.ShowDialog()
+
+
+        If e.ColumnIndex = 2 Then
+
+            GlobalstrKodeBarang = DataGridViewSumedang.Item(2, DataGridViewSumedang.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewSumedang.Item(3, DataGridViewSumedang.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewSumedang.Item(0, DataGridViewSumedang.CurrentRow.Index).Value
+            FormAuditItems.ShowDialog()
+        Else
+
+            GlobalstrKodeBarang = DataGridViewSumedang.Item(2, DataGridViewSumedang.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewSumedang.Item(3, DataGridViewSumedang.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewSumedang.Item(0, DataGridViewSumedang.CurrentRow.Index).Value
+            ViewStockWarehouse.ShowDialog()
+
+        End If
 
     End Sub
-    Private Sub DataGridViewSumedang_Click(sender As Object, e As EventArgs) Handles DataGridViewSumedang.Click
-       
-
-    End Sub
-
-    Private Sub DataGridViewSumedang_DoubleClick(sender As Object, e As EventArgs) Handles DataGridViewSumedang.DoubleClick
-        On Error Resume Next
-        isDoubleTriggered = True
-        GlobalstrKodeBarang = DataGridViewSumedang.Item(2, DataGridViewSumedang.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewSumedang.Item(3, DataGridViewSumedang.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewSumedang.Item(0, DataGridViewSumedang.CurrentRow.Index).Value
-        FormAuditItems.ShowDialog()
-    End Sub
-
+  
     Private Sub DataGridViewSumedang_SortCompare(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewSortCompareEventArgs) Handles DataGridViewSumedang.SortCompare
         If (e.RowIndex2 = DataGridViewSumedang.Rows.Count - 1) Then
             e.Handled = True
@@ -1774,34 +2038,53 @@ Public Class MarginBaruV1_1
     End Sub
 
     Private Sub DataGridViewTASIKMALAYA_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewTASIKMALAYA.CellContentClick
-        strNamaGrid = "DataGridViewTasikmalaya"
+        strNamaGrid = "012"
 
-        System.Threading.Thread.Sleep(DOUBLE_CLICK_SPEED)
-        System.Windows.Forms.Application.DoEvents()
+        If e.ColumnIndex = 0 Then
+            Koneksi()
+            Dim strSQL As String = "SELECT  TOP 1 * FROM dbo.OINV WHERE U_CXS_TRID='" & DataGridViewTASIKMALAYA.Item(0, DataGridViewTASIKMALAYA.CurrentRow.Index).Value & "' AND isIns='Y'"
+            cmd = New SqlCommand(strSQL, MyConnection)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
 
+                MstrNoStruk = DataGridViewTASIKMALAYA.Item(0, DataGridViewTASIKMALAYA.CurrentRow.Index).Value
 
-        If isDoubleTriggered Then
-            isDoubleTriggered = False
-            Exit Sub
+                FormMonitoringDelivery.ShowDialog()
+
+                Exit Sub
+            Else
+
+                MsgBox("Transaksi Cash And Carry, Tidak Ada Informasi Delivery", vbInformation, "Informasi")
+
+                Exit Sub
+            End If
+
         End If
 
-        GlobalstrKodeBarang = DataGridViewTASIKMALAYA.Item(2, DataGridViewTASIKMALAYA.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewTASIKMALAYA.Item(3, DataGridViewTASIKMALAYA.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewTASIKMALAYA.Item(0, DataGridViewTASIKMALAYA.CurrentRow.Index).Value
-        ViewStockWarehouse.ShowDialog()
+
+
+        If e.ColumnIndex = 2 Then
+
+            GlobalstrKodeBarang = DataGridViewTASIKMALAYA.Item(2, DataGridViewTASIKMALAYA.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewTASIKMALAYA.Item(3, DataGridViewTASIKMALAYA.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewTASIKMALAYA.Item(0, DataGridViewTASIKMALAYA.CurrentRow.Index).Value
+            FormAuditItems.ShowDialog()
+        Else
+
+            GlobalstrKodeBarang = DataGridViewTASIKMALAYA.Item(2, DataGridViewTASIKMALAYA.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewTASIKMALAYA.Item(3, DataGridViewTASIKMALAYA.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewTASIKMALAYA.Item(0, DataGridViewTASIKMALAYA.CurrentRow.Index).Value
+            ViewStockWarehouse.ShowDialog()
+
+        End If
 
     End Sub
 
     Private Sub DataGridViewTASIKMALAYA_Click(sender As Object, e As EventArgs) Handles DataGridViewTASIKMALAYA.Click
      
     End Sub
-    Private Sub DataGridViewTASIKMALAYA_DoubleClick(sender As Object, e As EventArgs) Handles DataGridViewTASIKMALAYA.DoubleClick
-        On Error Resume Next
-        GlobalstrKodeBarang = DataGridViewTASIKMALAYA.Item(2, DataGridViewTASIKMALAYA.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewTASIKMALAYA.Item(3, DataGridViewTASIKMALAYA.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewTASIKMALAYA.Item(0, DataGridViewTASIKMALAYA.CurrentRow.Index).Value
-        FormAuditItems.ShowDialog()
-    End Sub
+
 
     Private Sub DataGridViewTASIKMALAYA_SortCompare(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewSortCompareEventArgs) Handles DataGridViewTASIKMALAYA.SortCompare
         If (e.RowIndex2 = DataGridViewTASIKMALAYA.Rows.Count - 1) Then
@@ -1902,106 +2185,146 @@ Public Class MarginBaruV1_1
 
     End Sub
 
-    Private Sub DataGridViewSOEKARNOHATTA_CellStyleChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewSOEKARNOHATTA.CellStyleChanged
-        strNamaGrid = "DataGridViewSoetta"
-
-        System.Threading.Thread.Sleep(DOUBLE_CLICK_SPEED)
-        System.Windows.Forms.Application.DoEvents()
-
-
-        If isDoubleTriggered Then
-            isDoubleTriggered = False
-            Exit Sub
-        End If
-
-        GlobalstrKodeBarang = DataGridViewSOEKARNOHATTA.Item(2, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewSOEKARNOHATTA.Item(3, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewSOEKARNOHATTA.Item(0, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value
-        ViewStockWarehouse.ShowDialog()
-    End Sub
-
-
-
-
-    Private Sub DataGridViewSOEKARNOHATTA_Click(sender As Object, e As EventArgs) Handles DataGridViewSOEKARNOHATTA.Click
-      
-    End Sub
 
     Private Sub DataGridABM_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridABM.CellContentClick
-        strNamaGrid = "DataGridViewABM"
+        strNamaGrid = "001"
 
-        System.Threading.Thread.Sleep(DOUBLE_CLICK_SPEED)
-        System.Windows.Forms.Application.DoEvents()
+        If e.ColumnIndex = 0 Then
+            Koneksi()
+            Dim strSQL As String = "SELECT  TOP 1 * FROM dbo.OINV WHERE U_CXS_TRID='" & DataGridABM.Item(0, DataGridABM.CurrentRow.Index).Value & "' AND isIns='Y'"
+            cmd = New SqlCommand(strSQL, MyConnection)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
 
-        If isDoubleTriggered Then
-            isDoubleTriggered = False
-            Exit Sub
+                MstrNoStruk = DataGridABM.Item(0, DataGridABM.CurrentRow.Index).Value
+
+                FormMonitoringDelivery.ShowDialog()
+
+                Exit Sub
+            Else
+
+                MsgBox("Transaksi Cash And Carry, Tidak Ada Informasi Delivery", vbInformation, "Informasi")
+
+                Exit Sub
+            End If
+
         End If
 
-        GlobalstrKodeBarang = DataGridABM.Item(2, DataGridABM.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridABM.Item(3, DataGridABM.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridABM.Item(0, DataGridABM.CurrentRow.Index).Value
-        ViewStockWarehouse.ShowDialog()
+
+
+        If e.ColumnIndex = 2 Then
+
+            GlobalstrKodeBarang = DataGridABM.Item(2, DataGridABM.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridABM.Item(3, DataGridABM.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridABM.Item(0, DataGridABM.CurrentRow.Index).Value
+            FormAuditItems.ShowDialog()
+        Else
+
+            GlobalstrKodeBarang = DataGridABM.Item(2, DataGridABM.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridABM.Item(3, DataGridABM.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridABM.Item(0, DataGridABM.CurrentRow.Index).Value
+            ViewStockWarehouse.ShowDialog()
+
+        End If
+
+
+
+
+
+
+
     End Sub
 
 
 
-    Private Sub DataGridABM_Click(sender As Object, e As EventArgs) Handles DataGridABM.Click
-
-        
-
-    End Sub
-
-
-    Private Sub DataGridABM_DoubleClick(sender As Object, e As EventArgs) Handles DataGridABM.DoubleClick
-        isDoubleTriggered = True                   'flag the DoubleClick event
-        GlobalstrKodeBarang = DataGridABM.Item(2, DataGridABM.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridABM.Item(3, DataGridABM.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridABM.Item(0, DataGridABM.CurrentRow.Index).Value
-        FormAuditItems.ShowDialog()
-    End Sub
 
 
 
-
-
-    Private Sub DataGridViewAyani_DoubleClick(sender As Object, e As EventArgs) Handles DataGridViewAyani.DoubleClick
-        On Error Resume Next
-        isDoubleTriggered = True
-        GlobalstrKodeBarang = DataGridViewAyani.Item(2, DataGridViewAyani.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewAyani.Item(3, DataGridViewAyani.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewAyani.Item(0, DataGridViewAyani.CurrentRow.Index).Value
-        FormAuditItems.ShowDialog()
-    End Sub
-
-    Private Sub DataGridViewSOEKARNOHATTA_DoubleClick(sender As Object, e As EventArgs) Handles DataGridViewSOEKARNOHATTA.DoubleClick
-        On Error Resume Next
-        isDoubleTriggered = True
-        GlobalstrKodeBarang = DataGridViewSOEKARNOHATTA.Item(2, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewSOEKARNOHATTA.Item(3, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewSOEKARNOHATTA.Item(0, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value
-        FormAuditItems.ShowDialog()
-    End Sub
-
-
-    Private Sub DataGridViewAyani_Click(sender As Object, e As EventArgs) Handles DataGridViewAyani.Click
-        
-    End Sub
 
     Private Sub DataGridViewAyani_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewAyani.CellContentClick
-        On Error Resume Next
+        strNamaGrid = "003"
+        If e.ColumnIndex = 0 Then
+            Koneksi()
+            Dim strSQL As String = "SELECT  TOP 1 * FROM dbo.OINV WHERE U_CXS_TRID='" & DataGridViewAyani.Item(0, DataGridViewAyani.CurrentRow.Index).Value & "' AND isIns='Y'"
+            cmd = New SqlCommand(strSQL, MyConnection)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
 
-        System.Threading.Thread.Sleep(DOUBLE_CLICK_SPEED)
-        System.Windows.Forms.Application.DoEvents()
+                MstrNoStruk = DataGridViewAyani.Item(0, DataGridViewAyani.CurrentRow.Index).Value
 
-        If isDoubleTriggered Then
-            isDoubleTriggered = False
-            Exit Sub
+                FormMonitoringDelivery.ShowDialog()
+
+                Exit Sub
+            Else
+
+                MsgBox("Transaksi Cash And Carry, Tidak Ada Informasi Delivery", vbInformation, "Informasi")
+
+                Exit Sub
+            End If
+
         End If
 
-        GlobalstrKodeBarang = DataGridViewAyani.Item(2, DataGridViewAyani.CurrentRow.Index).Value
-        GlobalStrNamaBarang = DataGridViewAyani.Item(3, DataGridViewAyani.CurrentRow.Index).Value
-        GlobalStrKodeCabang = DataGridViewAyani.Item(0, DataGridViewAyani.CurrentRow.Index).Value
-        ViewStockWarehouse.ShowDialog()
+
+
+        If e.ColumnIndex = 2 Then
+
+            GlobalstrKodeBarang = DataGridViewAyani.Item(2, DataGridViewAyani.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewAyani.Item(3, DataGridViewAyani.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewAyani.Item(0, DataGridViewAyani.CurrentRow.Index).Value
+            FormAuditItems.ShowDialog()
+        Else
+
+            GlobalstrKodeBarang = DataGridViewAyani.Item(2, DataGridViewAyani.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewAyani.Item(3, DataGridViewAyani.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewAyani.Item(0, DataGridViewAyani.CurrentRow.Index).Value
+            ViewStockWarehouse.ShowDialog()
+
+        End If
+    End Sub
+
+    Private Sub DataGridViewSOEKARNOHATTA_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewSOEKARNOHATTA.CellContentClick
+        strNamaGrid = "014"
+
+
+        If e.ColumnIndex = 0 Then
+            Koneksi()
+            Dim strSQL As String = "SELECT  TOP 1 * FROM dbo.OINV WHERE U_CXS_TRID='" & DataGridViewSOEKARNOHATTA.Item(0, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value & "' AND isIns='Y'"
+            cmd = New SqlCommand(strSQL, MyConnection)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
+
+                MstrNoStruk = DataGridViewSOEKARNOHATTA.Item(0, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value
+
+                FormMonitoringDelivery.ShowDialog()
+
+                Exit Sub
+            Else
+
+                MsgBox("Transaksi Cash And Carry, Tidak Ada Informasi Delivery", vbInformation, "Informasi")
+
+                Exit Sub
+            End If
+
+        End If
+
+
+
+        If e.ColumnIndex = 2 Then
+
+            GlobalstrKodeBarang = DataGridViewSOEKARNOHATTA.Item(2, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewSOEKARNOHATTA.Item(3, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewSOEKARNOHATTA.Item(0, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value
+            FormAuditItems.ShowDialog()
+        Else
+
+            GlobalstrKodeBarang = DataGridViewSOEKARNOHATTA.Item(2, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value
+            GlobalStrNamaBarang = DataGridViewSOEKARNOHATTA.Item(3, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value
+            GlobalStrKodeCabang = DataGridViewSOEKARNOHATTA.Item(0, DataGridViewSOEKARNOHATTA.CurrentRow.Index).Value
+            ViewStockWarehouse.ShowDialog()
+
+        End If
     End Sub
 End Class

@@ -112,59 +112,77 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="inventory" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inventory.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Keys" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Keys.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon4.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gudang Keluar 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Gudang Keluar 1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_image.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2_coin256_anwansoon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2_coin256_anwansoon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loading (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loading (1).gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="44ae2845c5a453b600b68b6e49e85326-forklift-logistic-icon-by-vexels" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\44ae2845c5a453b600b68b6e49e85326-forklift-logistic-icon-by-vexels.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="anyar group" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anyar group.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="purchase-guy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\purchase-guy.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stocks" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stocks.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon-100f" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-100f.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="inventory_maintenance_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inventory_maintenance_256.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mobil box" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mobil box.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logout_user_login_account-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logout_user_login_account-512.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Keys" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Keys.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng-warehouse-forklift-logistics-computer-icons-icon-png-forklift-free-5ab185ac1e1374.6662347315215835321232" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-warehouse-forklift-logistics-computer-icons-icon-png-forklift-free-5ab185ac1e1374.6662347315215835321232.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stock.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stocks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stocks.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_image.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="100245-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\100245-200.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout_user_login_account-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout_user_login_account-512.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-100f" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-100f.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2_coin256_anwansoon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2_coin256_anwansoon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="charIcon-pay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\charIcon-pay.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shop.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="niBqey6iA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\niBqey6iA.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-p-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-p-2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="box" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\box.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="purchase-guy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\purchase-guy.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="44ae2845c5a453b600b68b6e49e85326-forklift-logistic-icon-by-vexels" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\44ae2845c5a453b600b68b6e49e85326-forklift-logistic-icon-by-vexels.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loading (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loading (1).gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inventory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inventory.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="integration-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\integration-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="anyar group" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anyar group.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fork" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fork.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,28 +190,13 @@
   <data name="primary-logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\primary-logout.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="niBqey6iA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\niBqey6iA.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon4.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="charIcon-pay" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\charIcon-pay.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Gudang Keluar 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gudang Keluar 1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="box" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\box.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon-p-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-p-2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="inventory_maintenance_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inventory_maintenance_256.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="integration-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\integration-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kisspng-warehouse-forklift-logistics-computer-icons-icon-png-forklift-free-5ab185ac1e1374.6662347315215835321232" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-warehouse-forklift-logistics-computer-icons-icon-png-forklift-free-5ab185ac1e1374.6662347315215835321232.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stock.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="144-1448711_delivery-truck4x-delivery-truck-pictures-png-transparent-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\144-1448711_delivery-truck4x-delivery-truck-pictures-png-transparent-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

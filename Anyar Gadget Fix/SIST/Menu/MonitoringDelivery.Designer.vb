@@ -31,18 +31,14 @@ Partial Class MonitoringDelivery
         Me.dtpTgl1 = New Guna.UI.WinForms.GunaDateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblJumlahItemTransaksi = New System.Windows.Forms.Label()
         Me.dgItemDelivery = New System.Windows.Forms.DataGridView()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblJumlahTransaksi = New System.Windows.Forms.Label()
         Me.dgDaftarDelivery = New System.Windows.Forms.DataGridView()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.cmbFromTransfer = New System.Windows.Forms.ComboBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.dgDaftarTransfer = New System.Windows.Forms.DataGridView()
+        Me.chkAllDelivey = New Guna.UI.WinForms.GunaCheckBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -50,8 +46,6 @@ Partial Class MonitoringDelivery
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.dgDaftarDelivery, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.dgDaftarTransfer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -76,6 +70,7 @@ Partial Class MonitoringDelivery
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.chkAllDelivey)
         Me.Panel2.Controls.Add(Me.cmdShow)
         Me.Panel2.Controls.Add(Me.dtpTgl2)
         Me.Panel2.Controls.Add(Me.Label3)
@@ -83,7 +78,7 @@ Partial Class MonitoringDelivery
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(1, 70)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(493, 50)
+        Me.Panel2.Size = New System.Drawing.Size(493, 76)
         Me.Panel2.TabIndex = 1
         '
         'cmdShow
@@ -100,7 +95,7 @@ Partial Class MonitoringDelivery
         Me.cmdShow.ForeColor = System.Drawing.Color.White
         Me.cmdShow.Image = Nothing
         Me.cmdShow.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdShow.Location = New System.Drawing.Point(399, 6)
+        Me.cmdShow.Location = New System.Drawing.Point(398, 15)
         Me.cmdShow.Name = "cmdShow"
         Me.cmdShow.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdShow.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -124,7 +119,7 @@ Partial Class MonitoringDelivery
         Me.dtpTgl2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.dtpTgl2.ForeColor = System.Drawing.Color.Black
         Me.dtpTgl2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTgl2.Location = New System.Drawing.Point(272, 11)
+        Me.dtpTgl2.Location = New System.Drawing.Point(272, 17)
         Me.dtpTgl2.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.dtpTgl2.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.dtpTgl2.Name = "dtpTgl2"
@@ -141,7 +136,7 @@ Partial Class MonitoringDelivery
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(227, 16)
+        Me.Label3.Location = New System.Drawing.Point(227, 21)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 20)
         Me.Label3.TabIndex = 2
@@ -157,7 +152,7 @@ Partial Class MonitoringDelivery
         Me.dtpTgl1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.dtpTgl1.ForeColor = System.Drawing.Color.Black
         Me.dtpTgl1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTgl1.Location = New System.Drawing.Point(100, 11)
+        Me.dtpTgl1.Location = New System.Drawing.Point(100, 17)
         Me.dtpTgl1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.dtpTgl1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.dtpTgl1.Name = "dtpTgl1"
@@ -174,7 +169,7 @@ Partial Class MonitoringDelivery
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(2, 15)
+        Me.Label2.Location = New System.Drawing.Point(2, 21)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(92, 20)
         Me.Label2.TabIndex = 0
@@ -183,7 +178,7 @@ Partial Class MonitoringDelivery
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.Label5)
+        Me.Panel3.Controls.Add(Me.lblJumlahItemTransaksi)
         Me.Panel3.Controls.Add(Me.dgItemDelivery)
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Location = New System.Drawing.Point(502, 4)
@@ -191,15 +186,15 @@ Partial Class MonitoringDelivery
         Me.Panel3.Size = New System.Drawing.Size(607, 572)
         Me.Panel3.TabIndex = 3
         '
-        'Label5
+        'lblJumlahItemTransaksi
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(3, 548)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(107, 20)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Jumlah Item"
+        Me.lblJumlahItemTransaksi.AutoSize = True
+        Me.lblJumlahItemTransaksi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJumlahItemTransaksi.Location = New System.Drawing.Point(3, 548)
+        Me.lblJumlahItemTransaksi.Name = "lblJumlahItemTransaksi"
+        Me.lblJumlahItemTransaksi.Size = New System.Drawing.Size(107, 20)
+        Me.lblJumlahItemTransaksi.TabIndex = 3
+        Me.lblJumlahItemTransaksi.Text = "Jumlah Item"
         '
         'dgItemDelivery
         '
@@ -225,99 +220,56 @@ Partial Class MonitoringDelivery
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(1, 126)
+        Me.TabControl1.Location = New System.Drawing.Point(1, 160)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(495, 450)
+        Me.TabControl1.Size = New System.Drawing.Size(495, 413)
         Me.TabControl1.TabIndex = 4
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Label6)
+        Me.TabPage1.Controls.Add(Me.lblJumlahTransaksi)
         Me.TabPage1.Controls.Add(Me.dgDaftarDelivery)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(487, 424)
+        Me.TabPage1.Size = New System.Drawing.Size(487, 387)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Transaksi"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'Label6
+        'lblJumlahTransaksi
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(3, 400)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(230, 20)
-        Me.Label6.TabIndex = 4
-        Me.Label6.Text = "Jumlah Transaksi Customer"
+        Me.lblJumlahTransaksi.AutoSize = True
+        Me.lblJumlahTransaksi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJumlahTransaksi.Location = New System.Drawing.Point(3, 364)
+        Me.lblJumlahTransaksi.Name = "lblJumlahTransaksi"
+        Me.lblJumlahTransaksi.Size = New System.Drawing.Size(292, 20)
+        Me.lblJumlahTransaksi.TabIndex = 4
+        Me.lblJumlahTransaksi.Text = "Jumlah Transaksi Untuk Di Kirim : 0"
         '
         'dgDaftarDelivery
         '
         Me.dgDaftarDelivery.AllowUserToAddRows = False
         Me.dgDaftarDelivery.AllowUserToDeleteRows = False
         Me.dgDaftarDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgDaftarDelivery.Location = New System.Drawing.Point(6, 6)
+        Me.dgDaftarDelivery.Location = New System.Drawing.Point(7, 6)
         Me.dgDaftarDelivery.Name = "dgDaftarDelivery"
         Me.dgDaftarDelivery.ReadOnly = True
-        Me.dgDaftarDelivery.Size = New System.Drawing.Size(474, 391)
+        Me.dgDaftarDelivery.Size = New System.Drawing.Size(474, 355)
         Me.dgDaftarDelivery.TabIndex = 3
         '
-        'TabPage2
+        'chkAllDelivey
         '
-        Me.TabPage2.Controls.Add(Me.cmbFromTransfer)
-        Me.TabPage2.Controls.Add(Me.Label9)
-        Me.TabPage2.Controls.Add(Me.Label7)
-        Me.TabPage2.Controls.Add(Me.dgDaftarTransfer)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(487, 424)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Transfer"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'cmbFromTransfer
-        '
-        Me.cmbFromTransfer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbFromTransfer.FormattingEnabled = True
-        Me.cmbFromTransfer.Location = New System.Drawing.Point(85, 30)
-        Me.cmbFromTransfer.Name = "cmbFromTransfer"
-        Me.cmbFromTransfer.Size = New System.Drawing.Size(395, 24)
-        Me.cmbFromTransfer.TabIndex = 7
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(7, 31)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(48, 18)
-        Me.Label9.TabIndex = 6
-        Me.Label9.Text = "From"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(2, 400)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(220, 20)
-        Me.Label7.TabIndex = 5
-        Me.Label7.Text = "Jumlah Transaksi Transfer"
-        '
-        'dgDaftarTransfer
-        '
-        Me.dgDaftarTransfer.AllowUserToAddRows = False
-        Me.dgDaftarTransfer.AllowUserToDeleteRows = False
-        Me.dgDaftarTransfer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgDaftarTransfer.Location = New System.Drawing.Point(6, 78)
-        Me.dgDaftarTransfer.Name = "dgDaftarTransfer"
-        Me.dgDaftarTransfer.ReadOnly = True
-        Me.dgDaftarTransfer.Size = New System.Drawing.Size(474, 319)
-        Me.dgDaftarTransfer.TabIndex = 4
+        Me.chkAllDelivey.BaseColor = System.Drawing.Color.White
+        Me.chkAllDelivey.CheckedOffColor = System.Drawing.Color.Gray
+        Me.chkAllDelivey.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.chkAllDelivey.FillColor = System.Drawing.Color.White
+        Me.chkAllDelivey.Location = New System.Drawing.Point(100, 52)
+        Me.chkAllDelivey.Name = "chkAllDelivey"
+        Me.chkAllDelivey.Size = New System.Drawing.Size(232, 20)
+        Me.chkAllDelivey.TabIndex = 37
+        Me.chkAllDelivey.Text = "Tampilkan Delivery Dari Semua Cabang"
         '
         'MonitoringDelivery
         '
@@ -343,9 +295,6 @@ Partial Class MonitoringDelivery
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         CType(Me.dgDaftarDelivery, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        CType(Me.dgDaftarTransfer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -358,16 +307,12 @@ Partial Class MonitoringDelivery
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents cmdShow As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents lblJumlahItemTransaksi As System.Windows.Forms.Label
     Friend WithEvents dgItemDelivery As System.Windows.Forms.DataGridView
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents lblJumlahTransaksi As System.Windows.Forms.Label
     Friend WithEvents dgDaftarDelivery As System.Windows.Forms.DataGridView
-    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents dgDaftarTransfer As System.Windows.Forms.DataGridView
-    Friend WithEvents cmbFromTransfer As System.Windows.Forms.ComboBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents chkAllDelivey As Guna.UI.WinForms.GunaCheckBox
 End Class

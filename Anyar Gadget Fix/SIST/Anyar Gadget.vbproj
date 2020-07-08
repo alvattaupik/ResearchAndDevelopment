@@ -175,6 +175,12 @@
     <Compile Include="FormItemsSuratTerima.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormJenisValidasi.Designer.vb">
+      <DependentUpon>FormJenisValidasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormJenisValidasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMonitoringPeminjamanAset.designer.vb">
       <DependentUpon>FormMonitoringPeminjamanAset.vb</DependentUpon>
     </Compile>
@@ -229,10 +235,10 @@
     <Compile Include="FormBuatRequestCloseAndCancel.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBuatRequestValidasi.designer.vb">
-      <DependentUpon>FormBuatRequestValidasi.vb</DependentUpon>
+    <Compile Include="FormBuatRequestBukaValidasi.designer.vb">
+      <DependentUpon>FormBuatRequestBukaValidasi.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormBuatRequestValidasi.vb">
+    <Compile Include="FormBuatRequestBukaValidasi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormBuatSuratPengajuanBiayaPerjalananDinas.Designer.vb">
@@ -373,6 +379,12 @@
     <Compile Include="Menu\DetailFailedItegration.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Menu\DetailPerubahanHargaJual.Designer.vb">
+      <DependentUpon>DetailPerubahanHargaJual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\DetailPerubahanHargaJual.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Menu\IntegrationMonitoring.Designer.vb">
       <DependentUpon>IntegrationMonitoring.vb</DependentUpon>
     </Compile>
@@ -431,6 +443,12 @@
       <DependentUpon>PerubahanHargaJual.vb</DependentUpon>
     </Compile>
     <Compile Include="Menu\PerubahanHargaJual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Ping.Designer.vb">
+      <DependentUpon>Ping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Ping.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu\SideBar.Designer.vb">
@@ -510,6 +528,9 @@
     <EmbeddedResource Include="FormItemsSuratTerima.resx">
       <DependentUpon>FormItemsSuratTerima.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormJenisValidasi.resx">
+      <DependentUpon>FormJenisValidasi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMonitoringPeminjamanAset.resx">
       <DependentUpon>FormMonitoringPeminjamanAset.vb</DependentUpon>
     </EmbeddedResource>
@@ -537,8 +558,8 @@
     <EmbeddedResource Include="FormBuatRequestCloseAndCancel.resx">
       <DependentUpon>FormBuatRequestCloseAndCancel.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBuatRequestValidasi.resx">
-      <DependentUpon>FormBuatRequestValidasi.vb</DependentUpon>
+    <EmbeddedResource Include="FormBuatRequestBukaValidasi.resx">
+      <DependentUpon>FormBuatRequestBukaValidasi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuatSuratPengajuanBiayaPerjalananDinas.resx">
       <DependentUpon>FormBuatSuratPengajuanBiayaPerjalananDinas.vb</DependentUpon>
@@ -609,6 +630,9 @@
     <EmbeddedResource Include="Menu\DetailFailedItegration.resx">
       <DependentUpon>DetailFailedItegration.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\DetailPerubahanHargaJual.resx">
+      <DependentUpon>DetailPerubahanHargaJual.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\IntegrationMonitoring.resx">
       <DependentUpon>IntegrationMonitoring.vb</DependentUpon>
     </EmbeddedResource>
@@ -638,6 +662,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\PerubahanHargaJual.resx">
       <DependentUpon>PerubahanHargaJual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Ping.resx">
+      <DependentUpon>Ping.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\SideBar.resx">
       <DependentUpon>SideBar.vb</DependentUpon>
@@ -982,6 +1009,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Custom-Icon-Design-Flatastic-5-Message-already-read.ico" />
+    <None Include="Resources\anyar local Print.png" />
+    <None Include="Resources\Circle Delivery.png" />
+    <None Include="Resources\giphy.gif" />
+    <None Include="Resources\unnamed %282%29.png" />
     <None Include="Resources\marketing_monitoring.png" />
     <None Include="Resources\772409_music_512x5121.png" />
     <None Include="Resources\772409_music_512x512.png" />

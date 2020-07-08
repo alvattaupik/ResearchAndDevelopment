@@ -313,22 +313,28 @@ Public Class IntegrationMonitoring
 
     Sub StartMonitoring()
 
-        KoneksiMonitoringDatabase()
-        Dim cmd As New SqlCommand("SELECT session_id AS Sesi,[Blk by] AS BlockedBy,host_name AS NamaClient,cpu_time,status AS StatusSesi,wait_type AS WaitType,program_name AS NamaProgram ," & _
-        " [Wait M] AS DurasiTunggu,command_text AS Query," & _
-        " wait_resource ," & _
-        " logical_reads,reads,writes From dbo.V_MonitoringTraffic ORDER BY cpu_time DESC ", Koneksi2)
-        Dim adapter As New SqlDataAdapter(cmd)
-        Dim table As New DataTable
-        adapter.Fill(table)
-        dgMonitoringDatabase.DataSource = table
-        'aturDGSAP()
-        dgMonitoringDatabase.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-        dgMonitoringDatabase.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
-        dgMonitoringDatabase.AutoResizeColumns()
-        Koneksi2.Close()
-        lblBebanKerja.Text = "Antrian Proses : " & dgMonitoringDatabase.RowCount & " Proses"
+        Try
 
+            KoneksiMonitoringDatabase()
+            Dim cmd As New SqlCommand("SELECT session_id AS Sesi,[Blk by] AS BlockedBy,host_name AS NamaClient,cpu_time,status AS StatusSesi,wait_type AS WaitType,program_name AS NamaProgram ," & _
+            " [Wait M] AS DurasiTunggu,command_text AS Query," & _
+            " wait_resource ," & _
+            " logical_reads,reads,writes From dbo.V_MonitoringTraffic ORDER BY cpu_time DESC ", Koneksi2)
+            Dim adapter As New SqlDataAdapter(cmd)
+            Dim table As New DataTable
+            adapter.Fill(table)
+            dgMonitoringDatabase.DataSource = table
+            'aturDGSAP()
+            dgMonitoringDatabase.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+            dgMonitoringDatabase.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+            dgMonitoringDatabase.AutoResizeColumns()
+            Koneksi2.Close()
+            lblBebanKerja.Text = "Antrian Proses : " & dgMonitoringDatabase.RowCount & " Proses"
+
+        Catch ex As Exception
+            MsgBox(Err.Description, MsgBoxStyle.Critical, "Error")
+            Timer1.Stop()
+        End Try
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -392,12 +398,15 @@ Public Class IntegrationMonitoring
     End Sub
 
     Private Sub cmbStartMonitoring_Click_1(sender As Object, e As EventArgs) Handles cmbStartMonitoring.Click
+
+
         If My.Settings.ServerNameDB = "" Then
             MsgBox("Konfigurasi Database Belum Diatur" & vbCrLf & " Hubungi IT untuk Aktivasi!", vbInformation, "Informasi !")
             FormSettingMonitoringDatabase.ShowDialog()
             Exit Sub
         End If
 
+        lblDatabase.Text = My.Settings.DatabaseName
         Timer1.Enabled = True
 
     End Sub

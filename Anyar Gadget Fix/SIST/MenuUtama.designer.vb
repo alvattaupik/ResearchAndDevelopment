@@ -25,12 +25,14 @@ Partial Class MenuUtama
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuUtama))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblBergerak = New Guna.UI.WinForms.GunaLabel()
         Me.txtPesanBerjalan = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShutDownAppsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GadgetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SideBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MonitoringRealstokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.MonitoringDeliveryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -62,13 +64,14 @@ Partial Class MenuUtama
         Me.VersiSaatIniToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LaporkanMasalahToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.lblTimerTime = New Guna.UI.WinForms.GunaLabel()
         Me.lblFormSize = New System.Windows.Forms.Label()
         Me.lblMousePosition = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TimerRunningText = New System.Windows.Forms.Timer(Me.components)
-        Me.lblBergerak = New Guna.UI.WinForms.GunaLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.SideBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TimerNotifikasi = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.PerubahanHargaJualToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -87,6 +90,18 @@ Partial Class MenuUtama
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1370, 57)
         Me.Panel1.TabIndex = 3
+        '
+        'lblBergerak
+        '
+        Me.lblBergerak.AutoSize = True
+        Me.lblBergerak.BackColor = System.Drawing.Color.Gainsboro
+        Me.lblBergerak.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBergerak.ForeColor = System.Drawing.Color.Blue
+        Me.lblBergerak.Location = New System.Drawing.Point(5, 30)
+        Me.lblBergerak.Name = "lblBergerak"
+        Me.lblBergerak.Size = New System.Drawing.Size(124, 21)
+        Me.lblBergerak.TabIndex = 32
+        Me.lblBergerak.Text = "Selamat Datang"
         '
         'txtPesanBerjalan
         '
@@ -134,6 +149,12 @@ Partial Class MenuUtama
         Me.GadgetToolStripMenuItem.Name = "GadgetToolStripMenuItem"
         Me.GadgetToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
         Me.GadgetToolStripMenuItem.Text = "Gadget"
+        '
+        'SideBarToolStripMenuItem
+        '
+        Me.SideBarToolStripMenuItem.Name = "SideBarToolStripMenuItem"
+        Me.SideBarToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.SideBarToolStripMenuItem.Text = "Side Bar"
         '
         'MonitoringRealstokToolStripMenuItem
         '
@@ -323,6 +344,7 @@ Partial Class MenuUtama
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.lblTimerTime)
         Me.Panel3.Controls.Add(Me.lblFormSize)
         Me.Panel3.Controls.Add(Me.lblMousePosition)
         Me.Panel3.Controls.Add(Me.Label4)
@@ -331,6 +353,16 @@ Partial Class MenuUtama
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1370, 23)
         Me.Panel3.TabIndex = 5
+        '
+        'lblTimerTime
+        '
+        Me.lblTimerTime.AutoSize = True
+        Me.lblTimerTime.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.lblTimerTime.Location = New System.Drawing.Point(1134, 4)
+        Me.lblTimerTime.Name = "lblTimerTime"
+        Me.lblTimerTime.Size = New System.Drawing.Size(69, 15)
+        Me.lblTimerTime.TabIndex = 9
+        Me.lblTimerTime.Text = "GunaLabel1"
         '
         'lblFormSize
         '
@@ -365,27 +397,13 @@ Partial Class MenuUtama
         '
         Me.TimerRunningText.Interval = 1000
         '
-        'lblBergerak
-        '
-        Me.lblBergerak.AutoSize = True
-        Me.lblBergerak.BackColor = System.Drawing.Color.Gainsboro
-        Me.lblBergerak.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBergerak.ForeColor = System.Drawing.Color.Blue
-        Me.lblBergerak.Location = New System.Drawing.Point(5, 30)
-        Me.lblBergerak.Name = "lblBergerak"
-        Me.lblBergerak.Size = New System.Drawing.Size(124, 21)
-        Me.lblBergerak.TabIndex = 32
-        Me.lblBergerak.Text = "Selamat Datang"
-        '
         'Timer1
         '
         Me.Timer1.Interval = 1000
         '
-        'SideBarToolStripMenuItem
+        'TimerNotifikasi
         '
-        Me.SideBarToolStripMenuItem.Name = "SideBarToolStripMenuItem"
-        Me.SideBarToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
-        Me.SideBarToolStripMenuItem.Text = "Side Bar"
+        Me.TimerNotifikasi.Interval = 1000
         '
         'PerubahanHargaJualToolStripMenuItem
         '
@@ -461,6 +479,9 @@ Partial Class MenuUtama
     Friend WithEvents lblBergerak As Guna.UI.WinForms.GunaLabel
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents SideBarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents lblTimerTime As Guna.UI.WinForms.GunaLabel
+    Friend WithEvents TimerNotifikasi As System.Windows.Forms.Timer
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents PerubahanHargaJualToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

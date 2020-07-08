@@ -11,7 +11,7 @@ Imports System.Net.Sockets
 Public Class MenuUtama
 
   Dim Bergerak As Integer
-
+    Dim Jam, Menit, Detik As Integer
    
 
     'Dim MyCommand As SqlDataAdapter
@@ -44,7 +44,16 @@ Public Class MenuUtama
         Dim frm As New SideBar
         frm.MdiParent = Me
         frm.TopMost = True
+        frm.ObjectMenu()
         frm.Show()
+
+        If MstrSatuanWaktu = "" Or MIntDurasi = 0 Then
+            TimerNotifikasi.Stop()
+        Else
+            TimerNotifikasi.Start()
+        End If
+
+        'LoadHover()
 
 
     End Sub
@@ -241,6 +250,61 @@ Public Class MenuUtama
         Dim frm As New SideBar
         frm.MdiParent = Me
         frm.TopMost = True
+        frm.ObjectMenu()
+        frm.Show()
+    End Sub
+
+    Private Sub PushNotificationsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PushNotificationsToolStripMenuItem.Click
+        Dim frm As New AlertsSetup
+        frm.MdiParent = Me
+        frm.TopMost = True
+        frm.Location = New Point(440, 65)
+        frm.Show()
+
+
+    End Sub
+
+    Private Sub TimerNotifikasi_Tick(sender As Object, e As EventArgs) Handles TimerNotifikasi.Tick
+
+
+        MdblDurasiDetikTimerNotifikasi = MdblDurasiDetikTimerNotifikasi - 1
+
+        lblTimerTime.Text = MdblDurasiDetikTimerNotifikasi.ToString
+
+        If lblTimerTime.Text = "0" Then
+
+            TimerNotifikasi.Stop()
+            LoadNotifPerubahanHarga()
+
+        End If
+
+
+
+    End Sub
+
+    Private Sub PerubahanHargaJualToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PerubahanHargaJualToolStripMenuItem.Click
+        LoadNotifPerubahanHarga()
+    End Sub
+
+    Private Sub ShowMyIPToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowMyIPToolStripMenuItem.Click
+        Ping.ShowDialog()
+    End Sub
+
+    Private Sub FormBukaValidasiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FormBukaValidasiToolStripMenuItem.Click
+        Dim frm As New FormBuatRequestBukaValidasi
+
+        frm.MdiParent = Me
+        frm.TopMost = True
+        frm.Location = New Point(229, 3)
+        frm.Show()
+    End Sub
+
+    Private Sub MonitoringMyRequestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MonitoringMyRequestToolStripMenuItem.Click
+        Dim frm As New FormMonitoringMyRequest
+
+        frm.MdiParent = Me
+        frm.TopMost = True
+        frm.Location = New Point(229, 3)
         frm.Show()
     End Sub
 End Class

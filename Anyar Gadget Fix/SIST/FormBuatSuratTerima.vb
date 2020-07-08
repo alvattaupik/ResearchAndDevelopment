@@ -228,7 +228,7 @@ ErrorLoad:
             Koneksi1.Close()
 
             MsgBox("Surat Baru Berhasil Disimpan dengan Nomor Surat : " & Trim(txtNoSurat.Text), vbInformation, "Sukses!")
-            LoadDaftarSuratMenuUtama()
+            'LoadDaftarSuratMenuUtama()
 
             Exit Sub
 

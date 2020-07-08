@@ -1,10 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class FormCariKomponenSAP
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        Close()
-    End Sub
-
 
     Sub LoadDaftarKomponenSAP()
 
@@ -41,8 +37,8 @@ Public Class FormCariKomponenSAP
     Private Sub dgDaftarKomponenSAP_Click(sender As Object, e As EventArgs) Handles dgDaftarKomponenSAP.Click
         If MstrNamaForm = "Buat Request Validasi" Then
 
-            FormBuatRequestValidasi.txtKodeKomponen.Text = dgDaftarKomponenSAP.Item(0, dgDaftarKomponenSAP.CurrentRow.Index).Value
-            FormBuatRequestValidasi.txtKomponen.Text = dgDaftarKomponenSAP.Item(2, dgDaftarKomponenSAP.CurrentRow.Index).Value
+            FormBuatRequestBukaValidasi.txtKodeKomponen.Text = dgDaftarKomponenSAP.Item(0, dgDaftarKomponenSAP.CurrentRow.Index).Value
+            FormBuatRequestBukaValidasi.txtKomponen.Text = dgDaftarKomponenSAP.Item(2, dgDaftarKomponenSAP.CurrentRow.Index).Value
             dgDaftarKomponenSAP.DataSource = Nothing
             Me.Close()
         End If

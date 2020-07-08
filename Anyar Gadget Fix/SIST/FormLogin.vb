@@ -62,17 +62,33 @@ Lanjut2:
 
 
 
-            'KoneksiDatabase2()
-            'strSQlLogin = "SELECT Top 1 ListNum FROM dbo.V_ListHargadanCabang WHERE Cabang='" & MstrKodeDivisi & "' AND Ket='HJ'"
-            'cmd = New SqlCommand(strSQlLogin, Koneksi2)
-            'dr = cmd.ExecuteReader
-            'dr.Read()
-            'If dr.HasRows = True Then
-            '    MstrHargaJual = dr.GetString(0)
-            '    Exit Sub
-            'Else
-            '    MstrHargaJual = ""
-            'End If
+            KoneksiDatabase2()
+            strSQlLogin = "SELECT Top 1 Cast(ListNum as varchar(20)) FROM dbo.V_ListHargadanCabang WHERE Cabang='" & MstrKodeDivisi & "' AND Ket='HJ'"
+            cmd = New SqlCommand(strSQlLogin, Koneksi2)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
+                MstrHargaJual = dr.GetString(0)
+            Else
+                MstrHargaJual = ""
+            End If
+
+
+
+            KoneksiDatabase1()
+            strSQlLogin = "SELECT top 1 isnull(Satuan,''),isnull(Cast(Durasi As Int),0) FROM dbo.V_ObjectUserAnyarGadget WHERE KodePegawai='" & MstrKodeUser & "' AND KodeObject='Sett003'"
+            cmd = New SqlCommand(strSQlLogin, Koneksi1)
+            dr = cmd.ExecuteReader
+            dr.Read()
+            If dr.HasRows = True Then
+                MIntDurasi = dr.GetInt32(1)
+                MstrSatuanWaktu = dr.GetString(0)
+                Call FnTimerNotifikasi(dr.GetInt32(1), dr.GetString(0))
+            Else
+                MstrHargaJual = ""
+            End If
+
+
 
 
 

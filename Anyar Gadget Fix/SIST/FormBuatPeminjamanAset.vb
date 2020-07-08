@@ -150,7 +150,7 @@ Public Class FormBuatPeminjamanAset
             Koneksi1.Close()
 
             MsgBox("Surat Peminjaman  Berhasil Disimpan dengan Nomor Surat : " & Trim(txtNoSurat.Text) & " Silahkan Cek Status Request di Monitoring My Request", vbInformation, "Sukses!")
-            LoadDaftarSuratMenuUtama()
+            'LoadDaftarSuratMenuUtama()
             Exit Sub
 
         Else

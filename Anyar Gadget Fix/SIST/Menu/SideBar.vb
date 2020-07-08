@@ -19,7 +19,13 @@ Public Class SideBar
 
 
     Sub xLoad() Handles Me.Load
-        Me.Text &= " " & NIckFrefix
+        'Me.Text &= " " & NIckFrefix
+       
+
+
+
+     
+
     End Sub
 
 
@@ -29,7 +35,7 @@ Public Class SideBar
             Client.GetStream.BeginRead(New Byte() {0}, 0, 0, AddressOf read, Nothing)
 
         Catch ex As Exception
-            xUpdate("You have disconnecting from server")
+            xUpdate("Anda Telah Terputus dari Server")
             Exit Sub
         End Try
     End Sub
@@ -42,7 +48,7 @@ Public Class SideBar
             Client2.GetStream.BeginRead(New Byte() {0}, 0, 0, AddressOf readRunningText, Nothing)
 
         Catch ex As Exception
-            xUpdateRunning("You have disconnecting from server")
+            xUpdateRunning("Anda Telah Terputus dari Server")
             Exit Sub
         End Try
     End Sub
@@ -101,16 +107,70 @@ Public Class SideBar
         txtSiteID.Text = "Site ID: " & MstrSiteID
         lblHari.Text = Date.Today.ToString("dddd")
         TimerJam.Start()
+
+        cmdAnyarLocalPrint.Enabled = True
+        ObjectMenu()
+ 
+
+    End Sub
+
+
+    Sub ObjectMenu()
+        If MstrMenuAnyarLocalPrint = "1" Then
+            cmdAnyarLocalPrint.Visible = True
+
+        Else
+            cmdAnyarLocalPrint.Visible = False
+
+        End If
+
+        If MstrMenuMonitoringRealstok = "1" Then
+            cmdMonitoringRealStok.Visible = True
+
+        Else
+            cmdMonitoringRealStok.Visible = False
+
+        End If
+
+
+
+
+        If MstrMenuDelivery = "1" Then
+            cmdMonitoringDelivery.Visible = True
+        Else
+            cmdMonitoringDelivery.Visible = False
+        End If
+
+
+
+        If MstrMenuExportHargaJual = "1" Then
+            cmdExportHargaJual.Visible = True
+        Else
+            cmdExportHargaJual.Visible = False
+
+        End If
+
+
+
+        If MstrMenuAnyarDirectory = "1" Then
+            cmdAnyarRepository.Visible = True
+        Else
+            cmdAnyarRepository.Visible = False
+
+        End If
+
+
     End Sub
 
 
 
 
-   
 
+    Private Sub TimerJam_Tick(sender As Object, e As EventArgs) Handles TimerJam.Tick
+        lblJam.Text = TimeOfDay
+    End Sub
 
-
-    Private Sub GunaGradientButton2_Click(sender As Object, e As EventArgs) Handles GunaGradientButton2.Click
+    Private Sub GunaGradientButton2_Click_1(sender As Object, e As EventArgs) Handles GunaGradientButton2.Click
         If MsgBox("Apakah Anda Akan Logout dari Aplikasi Ini?", vbYesNo, "Konfirmasi") = vbYes Then
             Me.Close()
             MenuUtama.Close()
@@ -124,8 +184,6 @@ Public Class SideBar
     End Sub
 
     Private Sub cmdConnectNotif_Click(sender As Object, e As EventArgs) Handles cmdConnectNotif.Click
-
-
         If cmdConnectNotif.Text = "Connect" Then
             Try
                 Client = New TcpClient(MstrServerBroadCast, CInt("3818"))
@@ -134,8 +192,8 @@ Public Class SideBar
                 Client2.GetStream.BeginRead(New Byte() {0}, 0, 0, New AsyncCallback(AddressOf readRunningText), Nothing)
                 cmdConnectNotif.Text = "Disconnect"
             Catch ex As Exception
-                xUpdate("Can't connect to the server!")
-                xUpdateRunning("Can't connect to the server!")
+                xUpdate("Tidak Dapat Terhubung Ke Server!")
+                xUpdateRunning("Tidak Dapat Terhubung Ke Server!")
             End Try
         Else
             Client.Client.Close()
@@ -145,10 +203,65 @@ Public Class SideBar
             Client2 = Nothing
             cmdConnectNotif.Text = "Connect"
         End If
-
     End Sub
 
-    Private Sub TimerJam_Tick(sender As Object, e As EventArgs) Handles TimerJam.Tick
-        lblJam.Text = TimeOfDay
+
+
+   
+    Private Sub cmdExportHargaJual_Click_1(sender As Object, e As EventArgs)
+        Dim frm As New ExportHargaJual
+        frm.MdiParent = MenuUtama
+        frm.TopMost = True
+        frm.Location = New Point(395, 15)
+        frm.Show()
+    End Sub
+
+    
+
+    Private Sub cmdAnyarLocalPrint_Click(sender As Object, e As EventArgs) Handles cmdAnyarLocalPrint.Click
+        AnyarLocalPrint.Location = New Point(229, 3)
+        AnyarLocalPrint.Show()
+    End Sub
+
+    Private Sub cmdMonitoringDelivery_Click_1(sender As Object, e As EventArgs) Handles cmdMonitoringDelivery.Click
+        Dim frm As New MonitoringDelivery
+        frm.MdiParent = MenuUtama
+        frm.TopMost = True
+        frm.Location = New Point(229, 3)
+        frm.Show()
+    End Sub
+
+    Private Sub cmdMonitoringRealStok_Click_1(sender As Object, e As EventArgs) Handles cmdMonitoringRealStok.Click
+        Dim frm As New MonitoringRealStock
+        frm.MdiParent = MenuUtama
+        frm.TopMost = True
+        frm.Show()
+    End Sub
+
+    Private Sub cmdAnyarRepository_Click(sender As Object, e As EventArgs) Handles cmdAnyarRepository.Click
+        Dim frm As New AnyarRepository
+        frm.MdiParent = MenuUtama
+        frm.TopMost = True
+        frm.Show()
+    End Sub
+
+    Private Sub cmdExportHargaJual_Click(sender As Object, e As EventArgs) Handles cmdExportHargaJual.Click
+        Dim frm As New ExportHargaJual
+        frm.MdiParent = MenuUtama
+        frm.TopMost = True
+        frm.Location = New Point(395, 15)
+        frm.Show()
+    End Sub
+
+    Private Sub cmdAIO_Click(sender As Object, e As EventArgs) Handles cmdAIO.Click
+     
+        IntegrationMonitoring.MdiParent = MenuUtama
+        IntegrationMonitoring.TopMost = True
+        IntegrationMonitoring.Location = New Point(372, 60)
+        IntegrationMonitoring.Show()
+    End Sub
+
+    Private Sub cmdAnyarNotifications_Click(sender As Object, e As EventArgs) Handles cmdAnyarNotifications.Click
+        LoadNotifPerubahanHarga()
     End Sub
 End Class

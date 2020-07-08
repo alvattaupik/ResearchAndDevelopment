@@ -3,7 +3,7 @@ Imports System.Data
 Imports System.Data.Sql
 Imports System.Data.SqlClient
 
-Public Class FormBuatRequestValidasi
+Public Class FormBuatRequestBukaValidasi
 
     Dim strKodeKomponen As String
     Dim strKodeJenisValidasi As String
@@ -34,73 +34,22 @@ Public Class FormBuatRequestValidasi
 
 
 
-    Sub CariKodeJenisValidasi()
-        KoneksiDatabase1()
-        Dim strSQlLogin As String
-
-        strSQlLogin = "SELECT top 1 Cast(KdJenisValidasi As varchar(20)),NamaValidasi FROM dbo.JenisValidasi WHERE Namavalidasi='" & Trim(cmbJenisValidasi.Text) & "'"
-        cmd = New SqlCommand(strSQlLogin, Koneksi1)
-        dr = cmd.ExecuteReader
-        dr.Read()
-        If dr.HasRows = True Then
-
-            strKodeJenisValidasi = dr.GetString(0)
-            dr.Close()
-
-        Else
-
-            dr.Close()
-            strKodeJenisValidasi = "001"
-            Exit Sub
-        End If
-
-
-        Exit Sub
-
-ErrorLoad:
-        MsgBox(Err.Description)
-        Exit Sub
-
-    End Sub
+   
 
 
 
 
 
-    Sub LoadComboJenisValidasi()
-        Dim ds As New DataSet()
-        Dim adapter As New SqlDataAdapter()
-
-        Try
-            KoneksiDatabase1()
-            cmd = New SqlCommand("SELECT KdJenisValidasi,NamaValidasi FROM dbo.JenisValidasi WHERE StatusEnabled='Y'", Koneksi1)
-            adapter.SelectCommand = cmd
-            adapter.Fill(ds)
-            adapter.Dispose()
-            cmd.Dispose()
-            Koneksi1.Close()
-            cmbJenisValidasi.DataSource = ds.Tables(0)
-            cmbJenisValidasi.ValueMember = "KdJenisValidasi"
-            cmbJenisValidasi.DisplayMember = "NamaValidasi"
-        Catch ex As Exception
-            MessageBox.Show("Can not open connection ! ")
-        End Try
-    End Sub
     'Private Sub cmbKomponen_Click(sender As Object, e As EventArgs)
     '    LoadComboKomponenValidasi()
     'End Sub
 
-    Private Sub cmbJenisValidasi_Click(sender As Object, e As EventArgs) Handles cmbJenisValidasi.Click
-        LoadComboJenisValidasi()
-    End Sub
 
     Private Sub GunaGradientButton1_Click(sender As Object, e As EventArgs) Handles GunaGradientButton1.Click
         On Error GoTo ErrorLoad
         GetExtentionfile()
 
         Call CopyFileKeDirectoryAttachment()
-
-        CariKodeJenisValidasi()
         'CariKodeKomponen()
 
         If MsgBox("Apakah Data Yang Di Inputkan Sudah Benar?", vbYesNo, "Konfirmasi") = vbYes Then
@@ -108,12 +57,6 @@ ErrorLoad:
             If cmbJenisRequest.Text = "" Then
                 MsgBox("Jenis Request Harus Di Isi!", vbCritical, "Penting!")
                 cmbJenisRequest.BackColor = Color.Yellow
-                Exit Sub
-            End If
-
-            If cmbJenisValidasi.Text = "" Then
-                MsgBox("Jenis Validasi Harus Di Isi!", vbCritical, "Penting!")
-                cmbJenisValidasi.BackColor = Color.Yellow
                 Exit Sub
             End If
 
@@ -161,7 +104,7 @@ Lanjut:
             cmd.Parameters.AddWithValue("Durasi1", JamAwal.Value.ToString("HH:mm"))
             cmd.Parameters.AddWithValue("Durasi2", JamAkhir.Value.ToString("HH:mm"))
             cmd.Parameters.AddWithValue("KdKomponen", Trim(txtKodeKomponen.Text))
-            cmd.Parameters.AddWithValue("KdJenisValidasi", Trim(cmbJenisValidasi.Text))
+            cmd.Parameters.AddWithValue("KdJenisValidasi", Trim(txtJenisValidasi.Text))
             cmd.Parameters.AddWithValue("PesanError", Trim(txtError.Text))
             cmd.Parameters.AddWithValue("Catatan", Trim(""))
             cmd.Parameters.AddWithValue("Status", "")
@@ -245,7 +188,6 @@ ErrorLoad:
         txtNoValidasi.Text = ""
         txtPesan.Text = ""
         cmbJenisRequest.Items.Clear()
-        cmbJenisValidasi.DataSource = Nothing
         JamAwal.Value = Now
         JamAkhir.Value = Now
         txtKomponen.Text = ""
@@ -259,14 +201,6 @@ ErrorLoad:
         FormCariKomponenSAP.ShowDialog()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        Close()
-    End Sub
-
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        Close()
-    End Sub
-
     Private Sub cmdBrowseAttatchment_Click(sender As Object, e As EventArgs) Handles cmdBrowseAttatchment.Click
         Using O As New OpenFileDialog
             If O.ShowDialog = 1 Then
@@ -274,5 +208,15 @@ ErrorLoad:
             End If
         End Using
 
+    End Sub
+
+
+    Private Sub cmdBrowseJenisValidasi_Click(sender As Object, e As EventArgs) Handles cmdBrowseJenisValidasi.Click
+        FormJenisValidasi.ShowDialog()
+    End Sub
+
+ 
+    Private Sub cmbTujuan_Click(sender As Object, e As EventArgs) Handles cmbTujuan.Click
+        LoadComboBoxDBEMAIL(cmbTujuan, "SELECT KodeDivisi,NamaDivisi FROM dbo.V_Divisi WHERE KodeDivisi LIKE '1%'", "KodeDivisi", "NamaDivisi")
     End Sub
 End Class

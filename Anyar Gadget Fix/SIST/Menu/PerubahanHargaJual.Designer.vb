@@ -36,7 +36,7 @@ Partial Class PerubahanHargaJual
         'GunaCirclePictureBox1
         '
         Me.GunaCirclePictureBox1.BaseColor = System.Drawing.Color.White
-        Me.GunaCirclePictureBox1.Image = Global.AnyarGadget.My.Resources.Resources._772409_music_512x512
+        Me.GunaCirclePictureBox1.Image = Global.AnyarGadget.My.Resources.Resources.giphy
         Me.GunaCirclePictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.GunaCirclePictureBox1.Name = "GunaCirclePictureBox1"
         Me.GunaCirclePictureBox1.Size = New System.Drawing.Size(103, 99)
@@ -49,7 +49,7 @@ Partial Class PerubahanHargaJual
         '
         Me.GunaLabel1.AutoSize = True
         Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel1.Location = New System.Drawing.Point(114, 9)
+        Me.GunaLabel1.Location = New System.Drawing.Point(105, 15)
         Me.GunaLabel1.Name = "GunaLabel1"
         Me.GunaLabel1.Size = New System.Drawing.Size(238, 32)
         Me.GunaLabel1.TabIndex = 1
@@ -59,7 +59,7 @@ Partial Class PerubahanHargaJual
         '
         Me.GunaLabel2.AutoSize = True
         Me.GunaLabel2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GunaLabel2.Location = New System.Drawing.Point(127, 45)
+        Me.GunaLabel2.Location = New System.Drawing.Point(114, 49)
         Me.GunaLabel2.Name = "GunaLabel2"
         Me.GunaLabel2.Size = New System.Drawing.Size(211, 25)
         Me.GunaLabel2.TabIndex = 2
@@ -84,7 +84,7 @@ Partial Class PerubahanHargaJual
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgListPerubahanHargaJual.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgListPerubahanHargaJual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgListPerubahanHargaJual.ColumnHeadersHeight = 30
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -114,8 +114,8 @@ Partial Class PerubahanHargaJual
         Me.dgListPerubahanHargaJual.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgListPerubahanHargaJual.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
         Me.dgListPerubahanHargaJual.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.dgListPerubahanHargaJual.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgListPerubahanHargaJual.ThemeStyle.HeaderStyle.Height = 4
+        Me.dgListPerubahanHargaJual.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgListPerubahanHargaJual.ThemeStyle.HeaderStyle.Height = 30
         Me.dgListPerubahanHargaJual.ThemeStyle.ReadOnly = True
         Me.dgListPerubahanHargaJual.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
         Me.dgListPerubahanHargaJual.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -135,6 +135,7 @@ Partial Class PerubahanHargaJual
         Me.Controls.Add(Me.GunaLabel1)
         Me.Controls.Add(Me.GunaCirclePictureBox1)
         Me.Name = "PerubahanHargaJual"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PerubahanHargaJual"
         CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgListPerubahanHargaJual, System.ComponentModel.ISupportInitialize).EndInit()

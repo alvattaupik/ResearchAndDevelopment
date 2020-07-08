@@ -30,6 +30,8 @@ Module ModulVariable
     Public GlobalStrKodeCabang As String
     Public GlobalStrNoStruk As String
 
+    Public MstrNoStruk As String
+
 
 
 End Module

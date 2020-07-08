@@ -92,7 +92,7 @@ Public Class Form1
         AddHandler (pClient.getMessage), AddressOf MessageReceived
         AddHandler (pClient.clientLogout), AddressOf ClientExited
         clientList.Add(pClient)
-        UpdateList("New Client Joined!", True)
+        UpdateList("New Client Bergabung!", True)
         Listning.BeginAcceptTcpClient(New AsyncCallback(AddressOf AcceptClient), Listning)
     End Sub
 
@@ -102,7 +102,7 @@ Public Class Form1
         AddHandler (pClient2.getMessage), AddressOf MessageReceivedRunningText
         AddHandler (pClient2.clientLogout), AddressOf ClientExitedRunningText
         clientList2.Add(pClient2)
-        UpdateListRunningText("New Client Running Text Joined!", True)
+        UpdateListRunningText("New Client Running Text Bergabung!", True)
         Listning2.BeginAcceptTcpClient(New AsyncCallback(AddressOf AcceptClientRunningText), Listning2)
 
 
@@ -130,13 +130,13 @@ Public Class Form1
 
     Sub ClientExited(ByVal client As ClassforClient)
         clientList.Remove(client)
-        UpdateList("Client Broadcast Exited!", True)
+        UpdateList("Client Broadcast Terputus!", True)
     End Sub
 
 
     Sub ClientExitedRunningText(ByVal client2 As ClassForClientRunningText)
         clientList2.Remove(client2)
-        UpdateListRunningText("Client Running Text Exited!", True)
+        UpdateListRunningText("Client Running Text Terputus!", True)
     End Sub
 
 
