@@ -53,24 +53,6 @@ Public Class FormDetailHakAkses
 
         End With
 
-
-
-        'On Error Resume Next
-        'Call KoneksiDatabase1()
-
-
-        'Dim cmd As New SqlCommand("SELECT KodeObject,NamaKomponen,StatusEnabled FROM V_ObjectUserAplikasi  WHERE KodePegawai= '" & Trim(txtKodeUser.Text) & "' AND NamaKomponen Like '%" & txtCariHakAkses.Text & "%' Order By KodeObject ", Koneksi1)
-
-        'cmd.CommandTimeout = 0
-        'Dim adapter As New SqlDataAdapter(cmd)
-        'Dim table As New DataTable
-        'adapter.Fill(table)
-
-        'dgHakAksesUser.DataSource = table
-        'dgHakAksesUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-        'dgHakAksesUser.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
-        'dgHakAksesUser.AutoResizeColumns()
-
     End Sub
 
 

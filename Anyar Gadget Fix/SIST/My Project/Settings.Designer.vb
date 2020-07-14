@@ -257,6 +257,18 @@ Namespace My
                 Me("DatabaseName") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property PathAnyarRepository() As String
+            Get
+                Return CType(Me("PathAnyarRepository"),String)
+            End Get
+            Set
+                Me("PathAnyarRepository") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

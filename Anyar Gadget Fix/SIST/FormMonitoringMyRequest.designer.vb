@@ -22,14 +22,12 @@ Partial Class FormMonitoringMyRequest
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMonitoringMyRequest))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.GunaAdvenceButton1 = New Guna.UI.WinForms.GunaAdvenceButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cmbStatusRequest = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -38,9 +36,6 @@ Partial Class FormMonitoringMyRequest
         Me.cmdCari = New Guna.UI.WinForms.GunaGradientButton()
         Me.dtpAkhir = New Guna.UI.WinForms.GunaDateTimePicker()
         Me.dtpAwal = New Guna.UI.WinForms.GunaDateTimePicker()
-        Me.cmdCetakForm = New Guna.UI.WinForms.GunaGradientButton()
-        Me.cmdLihatDetail = New Guna.UI.WinForms.GunaGradientButton()
-        Me.cmdRefresh = New Guna.UI.WinForms.GunaGradientButton()
         Me.dgRequestMonitoring = New Guna.UI.WinForms.GunaDataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2.SuspendLayout()
@@ -64,11 +59,7 @@ Partial Class FormMonitoringMyRequest
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.White
         Me.GroupBox2.Controls.Add(Me.PictureBox1)
-        Me.GroupBox2.Controls.Add(Me.GunaAdvenceButton1)
         Me.GroupBox2.Controls.Add(Me.GroupBox3)
-        Me.GroupBox2.Controls.Add(Me.cmdCetakForm)
-        Me.GroupBox2.Controls.Add(Me.cmdLihatDetail)
-        Me.GroupBox2.Controls.Add(Me.cmdRefresh)
         Me.GroupBox2.Controls.Add(Me.dgRequestMonitoring)
         Me.GroupBox2.Location = New System.Drawing.Point(13, 84)
         Me.GroupBox2.Name = "GroupBox2"
@@ -81,45 +72,10 @@ Partial Class FormMonitoringMyRequest
         Me.PictureBox1.Image = Global.AnyarGadget.My.Resources.Resources.Network_Operation_Center_NOC
         Me.PictureBox1.Location = New System.Drawing.Point(6, 128)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(154, 180)
+        Me.PictureBox1.Size = New System.Drawing.Size(117, 175)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
-        '
-        'GunaAdvenceButton1
-        '
-        Me.GunaAdvenceButton1.AnimationHoverSpeed = 0.07!
-        Me.GunaAdvenceButton1.AnimationSpeed = 0.03!
-        Me.GunaAdvenceButton1.BaseColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(210, Byte), Integer))
-        Me.GunaAdvenceButton1.BorderColor = System.Drawing.Color.Black
-        Me.GunaAdvenceButton1.ButtonType = Guna.UI.WinForms.AdvenceButtonType.RadioButton
-        Me.GunaAdvenceButton1.CheckedBaseColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(144, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.GunaAdvenceButton1.CheckedBorderColor = System.Drawing.Color.Black
-        Me.GunaAdvenceButton1.CheckedForeColor = System.Drawing.Color.White
-        Me.GunaAdvenceButton1.CheckedImage = CType(resources.GetObject("GunaAdvenceButton1.CheckedImage"), System.Drawing.Image)
-        Me.GunaAdvenceButton1.CheckedLineColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.GunaAdvenceButton1.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.GunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty
-        Me.GunaAdvenceButton1.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.GunaAdvenceButton1.ForeColor = System.Drawing.Color.White
-        Me.GunaAdvenceButton1.Image = CType(resources.GetObject("GunaAdvenceButton1.Image"), System.Drawing.Image)
-        Me.GunaAdvenceButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.GunaAdvenceButton1.ImageOffsetX = 20
-        Me.GunaAdvenceButton1.ImageSize = New System.Drawing.Size(22, 22)
-        Me.GunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.GunaAdvenceButton1.LineTop = 1
-        Me.GunaAdvenceButton1.Location = New System.Drawing.Point(564, 264)
-        Me.GunaAdvenceButton1.Name = "GunaAdvenceButton1"
-        Me.GunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(155, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.GunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.GunaAdvenceButton1.OnHoverForeColor = System.Drawing.Color.White
-        Me.GunaAdvenceButton1.OnHoverImage = Nothing
-        Me.GunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.GunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black
-        Me.GunaAdvenceButton1.OnPressedDepth = 0
-        Me.GunaAdvenceButton1.Size = New System.Drawing.Size(104, 39)
-        Me.GunaAdvenceButton1.TabIndex = 41
-        Me.GunaAdvenceButton1.TextOffsetX = 10
         '
         'GroupBox3
         '
@@ -138,17 +94,18 @@ Partial Class FormMonitoringMyRequest
         '
         'cmbStatusRequest
         '
+        Me.cmbStatusRequest.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbStatusRequest.FormattingEnabled = True
-        Me.cmbStatusRequest.Location = New System.Drawing.Point(162, 79)
+        Me.cmbStatusRequest.Location = New System.Drawing.Point(162, 64)
         Me.cmbStatusRequest.Name = "cmbStatusRequest"
-        Me.cmbStatusRequest.Size = New System.Drawing.Size(391, 21)
+        Me.cmbStatusRequest.Size = New System.Drawing.Size(391, 28)
         Me.cmbStatusRequest.TabIndex = 46
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 77)
+        Me.Label5.Location = New System.Drawing.Point(6, 72)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(135, 20)
         Me.Label5.TabIndex = 43
@@ -158,7 +115,7 @@ Partial Class FormMonitoringMyRequest
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(339, 16)
+        Me.Label3.Location = New System.Drawing.Point(338, 29)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 20)
         Me.Label3.TabIndex = 40
@@ -168,7 +125,7 @@ Partial Class FormMonitoringMyRequest
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(19, 16)
+        Me.Label2.Location = New System.Drawing.Point(6, 19)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(73, 20)
         Me.Label2.TabIndex = 39
@@ -188,7 +145,7 @@ Partial Class FormMonitoringMyRequest
         Me.cmdCari.ForeColor = System.Drawing.Color.White
         Me.cmdCari.Image = Nothing
         Me.cmdCari.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdCari.Location = New System.Drawing.Point(558, 15)
+        Me.cmdCari.Location = New System.Drawing.Point(558, 10)
         Me.cmdCari.Name = "cmdCari"
         Me.cmdCari.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdCari.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -212,7 +169,7 @@ Partial Class FormMonitoringMyRequest
         Me.dtpAkhir.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.dtpAkhir.ForeColor = System.Drawing.Color.Black
         Me.dtpAkhir.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpAkhir.Location = New System.Drawing.Point(434, 10)
+        Me.dtpAkhir.Location = New System.Drawing.Point(435, 19)
         Me.dtpAkhir.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.dtpAkhir.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.dtpAkhir.Name = "dtpAkhir"
@@ -235,7 +192,7 @@ Partial Class FormMonitoringMyRequest
         Me.dtpAwal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.dtpAwal.ForeColor = System.Drawing.Color.Black
         Me.dtpAwal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpAwal.Location = New System.Drawing.Point(162, 10)
+        Me.dtpAwal.Location = New System.Drawing.Point(162, 19)
         Me.dtpAwal.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.dtpAwal.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.dtpAwal.Name = "dtpAwal"
@@ -247,90 +204,6 @@ Partial Class FormMonitoringMyRequest
         Me.dtpAwal.TabIndex = 0
         Me.dtpAwal.Text = "01/04/2020"
         Me.dtpAwal.Value = New Date(2020, 4, 1, 15, 7, 7, 565)
-        '
-        'cmdCetakForm
-        '
-        Me.cmdCetakForm.AnimationHoverSpeed = 0.07!
-        Me.cmdCetakForm.AnimationSpeed = 0.03!
-        Me.cmdCetakForm.BackColor = System.Drawing.Color.Transparent
-        Me.cmdCetakForm.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
-        Me.cmdCetakForm.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.cmdCetakForm.BorderColor = System.Drawing.Color.Black
-        Me.cmdCetakForm.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.cmdCetakForm.FocusedColor = System.Drawing.Color.Empty
-        Me.cmdCetakForm.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmdCetakForm.ForeColor = System.Drawing.Color.White
-        Me.cmdCetakForm.Image = Nothing
-        Me.cmdCetakForm.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdCetakForm.Location = New System.Drawing.Point(564, 210)
-        Me.cmdCetakForm.Name = "cmdCetakForm"
-        Me.cmdCetakForm.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.cmdCetakForm.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmdCetakForm.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.cmdCetakForm.OnHoverForeColor = System.Drawing.Color.White
-        Me.cmdCetakForm.OnHoverImage = Nothing
-        Me.cmdCetakForm.OnPressedColor = System.Drawing.Color.Black
-        Me.cmdCetakForm.Radius = 2
-        Me.cmdCetakForm.Size = New System.Drawing.Size(104, 37)
-        Me.cmdCetakForm.TabIndex = 39
-        Me.cmdCetakForm.Text = "Cetak Form"
-        Me.cmdCetakForm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmdLihatDetail
-        '
-        Me.cmdLihatDetail.AnimationHoverSpeed = 0.07!
-        Me.cmdLihatDetail.AnimationSpeed = 0.03!
-        Me.cmdLihatDetail.BackColor = System.Drawing.Color.Transparent
-        Me.cmdLihatDetail.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
-        Me.cmdLihatDetail.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.cmdLihatDetail.BorderColor = System.Drawing.Color.Black
-        Me.cmdLihatDetail.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.cmdLihatDetail.FocusedColor = System.Drawing.Color.Empty
-        Me.cmdLihatDetail.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmdLihatDetail.ForeColor = System.Drawing.Color.White
-        Me.cmdLihatDetail.Image = Nothing
-        Me.cmdLihatDetail.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdLihatDetail.Location = New System.Drawing.Point(564, 169)
-        Me.cmdLihatDetail.Name = "cmdLihatDetail"
-        Me.cmdLihatDetail.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.cmdLihatDetail.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmdLihatDetail.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.cmdLihatDetail.OnHoverForeColor = System.Drawing.Color.White
-        Me.cmdLihatDetail.OnHoverImage = Nothing
-        Me.cmdLihatDetail.OnPressedColor = System.Drawing.Color.Black
-        Me.cmdLihatDetail.Radius = 2
-        Me.cmdLihatDetail.Size = New System.Drawing.Size(104, 35)
-        Me.cmdLihatDetail.TabIndex = 38
-        Me.cmdLihatDetail.Text = "Lihat Detail"
-        Me.cmdLihatDetail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmdRefresh
-        '
-        Me.cmdRefresh.AnimationHoverSpeed = 0.07!
-        Me.cmdRefresh.AnimationSpeed = 0.03!
-        Me.cmdRefresh.BackColor = System.Drawing.Color.Transparent
-        Me.cmdRefresh.BaseColor1 = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(177, Byte), Integer))
-        Me.cmdRefresh.BaseColor2 = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.cmdRefresh.BorderColor = System.Drawing.Color.Black
-        Me.cmdRefresh.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.cmdRefresh.FocusedColor = System.Drawing.Color.Empty
-        Me.cmdRefresh.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmdRefresh.ForeColor = System.Drawing.Color.White
-        Me.cmdRefresh.Image = Nothing
-        Me.cmdRefresh.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdRefresh.Location = New System.Drawing.Point(564, 128)
-        Me.cmdRefresh.Name = "cmdRefresh"
-        Me.cmdRefresh.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.cmdRefresh.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmdRefresh.OnHoverBorderColor = System.Drawing.Color.Black
-        Me.cmdRefresh.OnHoverForeColor = System.Drawing.Color.White
-        Me.cmdRefresh.OnHoverImage = Nothing
-        Me.cmdRefresh.OnPressedColor = System.Drawing.Color.Black
-        Me.cmdRefresh.Radius = 2
-        Me.cmdRefresh.Size = New System.Drawing.Size(104, 35)
-        Me.cmdRefresh.TabIndex = 37
-        Me.cmdRefresh.Text = "Refresh"
-        Me.cmdRefresh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'dgRequestMonitoring
         '
@@ -362,12 +235,12 @@ Partial Class FormMonitoringMyRequest
         Me.dgRequestMonitoring.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgRequestMonitoring.EnableHeadersVisualStyles = False
         Me.dgRequestMonitoring.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgRequestMonitoring.Location = New System.Drawing.Point(167, 128)
+        Me.dgRequestMonitoring.Location = New System.Drawing.Point(129, 128)
         Me.dgRequestMonitoring.Name = "dgRequestMonitoring"
         Me.dgRequestMonitoring.ReadOnly = True
         Me.dgRequestMonitoring.RowHeadersVisible = False
         Me.dgRequestMonitoring.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgRequestMonitoring.Size = New System.Drawing.Size(391, 175)
+        Me.dgRequestMonitoring.Size = New System.Drawing.Size(539, 175)
         Me.dgRequestMonitoring.TabIndex = 0
         Me.dgRequestMonitoring.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
         Me.dgRequestMonitoring.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -426,9 +299,6 @@ Partial Class FormMonitoringMyRequest
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents dgRequestMonitoring As Guna.UI.WinForms.GunaDataGridView
-    Friend WithEvents cmdCetakForm As Guna.UI.WinForms.GunaGradientButton
-    Friend WithEvents cmdLihatDetail As Guna.UI.WinForms.GunaGradientButton
-    Friend WithEvents cmdRefresh As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -436,7 +306,6 @@ Partial Class FormMonitoringMyRequest
     Friend WithEvents dtpAkhir As Guna.UI.WinForms.GunaDateTimePicker
     Friend WithEvents dtpAwal As Guna.UI.WinForms.GunaDateTimePicker
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents GunaAdvenceButton1 As Guna.UI.WinForms.GunaAdvenceButton
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents cmbStatusRequest As System.Windows.Forms.ComboBox

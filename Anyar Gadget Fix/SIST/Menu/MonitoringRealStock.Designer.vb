@@ -40,15 +40,15 @@ Partial Class MonitoringRealStock
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.GunaCirclePictureBox1 = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AvailableToPromiseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GunaCirclePictureBox1 = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.dgInventoryData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbItem.SuspendLayout()
         CType(Me.dgItemList, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
+        CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -64,17 +64,17 @@ Partial Class MonitoringRealStock
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(46, 16)
+        Me.Label1.Location = New System.Drawing.Point(48, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(299, 25)
+        Me.Label1.Size = New System.Drawing.Size(306, 25)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "MONITORING REALSTOCK"
+        Me.Label1.Text = "MONITORING REAL STOCK"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(1, 71)
+        Me.Label2.Location = New System.Drawing.Point(4, 72)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(113, 20)
         Me.Label2.TabIndex = 1
@@ -99,7 +99,7 @@ Partial Class MonitoringRealStock
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(1, 103)
+        Me.Label3.Location = New System.Drawing.Point(4, 103)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(118, 20)
         Me.Label3.TabIndex = 3
@@ -201,7 +201,7 @@ Partial Class MonitoringRealStock
         Me.gbItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.gbItem.Controls.Add(Me.cmdTutup)
         Me.gbItem.Controls.Add(Me.dgItemList)
-        Me.gbItem.Location = New System.Drawing.Point(7, 135)
+        Me.gbItem.Location = New System.Drawing.Point(6, 135)
         Me.gbItem.Name = "gbItem"
         Me.gbItem.Size = New System.Drawing.Size(393, 197)
         Me.gbItem.TabIndex = 8
@@ -258,6 +258,18 @@ Partial Class MonitoringRealStock
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "V1.1 Build XX.XX.XXXX"
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AvailableToPromiseToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(184, 26)
+        '
+        'AvailableToPromiseToolStripMenuItem
+        '
+        Me.AvailableToPromiseToolStripMenuItem.Name = "AvailableToPromiseToolStripMenuItem"
+        Me.AvailableToPromiseToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.AvailableToPromiseToolStripMenuItem.Text = "Available To Promise"
+        '
         'GunaCirclePictureBox1
         '
         Me.GunaCirclePictureBox1.BaseColor = System.Drawing.Color.White
@@ -269,18 +281,6 @@ Partial Class MonitoringRealStock
         Me.GunaCirclePictureBox1.TabIndex = 10
         Me.GunaCirclePictureBox1.TabStop = False
         Me.GunaCirclePictureBox1.UseTransfarantBackground = False
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AvailableToPromiseToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(184, 48)
-        '
-        'AvailableToPromiseToolStripMenuItem
-        '
-        Me.AvailableToPromiseToolStripMenuItem.Name = "AvailableToPromiseToolStripMenuItem"
-        Me.AvailableToPromiseToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
-        Me.AvailableToPromiseToolStripMenuItem.Text = "Available To Promise"
         '
         'MonitoringRealStock
         '
@@ -309,8 +309,8 @@ Partial Class MonitoringRealStock
         CType(Me.dgInventoryData, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbItem.ResumeLayout(False)
         CType(Me.dgItemList, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
+        CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -327,9 +327,9 @@ Partial Class MonitoringRealStock
     Friend WithEvents cmdTutup As System.Windows.Forms.Button
     Friend WithEvents dgItemList As System.Windows.Forms.DataGridView
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents GunaCirclePictureBox1 As Guna.UI.WinForms.GunaCirclePictureBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents AvailableToPromiseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GunaCirclePictureBox1 As Guna.UI.WinForms.GunaCirclePictureBox
 End Class

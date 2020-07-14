@@ -248,16 +248,16 @@ Module ModuleUltility
         If dr.HasRows = True Then
             MstrMenuFormPeminjamanAsset = dr.GetString(0)
 
-            If MstrMenuFormPeminjamanAsset = "1" Then
-                MenuUtama.FormPeminjamanAssetToolStripMenuItem.Visible = True
-            Else
-                MenuUtama.FormPeminjamanAssetToolStripMenuItem.Visible = False
-            End If
+            'If MstrMenuFormPeminjamanAsset = "1" Then
+            '    MenuUtama.FormPeminjamanAssetToolStripMenuItem.Visible = True
+            'Else
+            '    MenuUtama.FormPeminjamanAssetToolStripMenuItem.Visible = False
+            'End If
 
 
             dr.Close()
         Else
-            MenuUtama.FormPeminjamanAssetToolStripMenuItem.Visible = False
+            'MenuUtama.FormPeminjamanAssetToolStripMenuItem.Visible = False
             dr.Close()
             Exit Sub
         End If
@@ -321,15 +321,15 @@ Module ModuleUltility
             MstrMenuFormRequestUmum = dr.GetString(0)
 
 
-            If MstrMenuFormRequestUmum = "1" Then
-                MenuUtama.FormRequestUmumToolStripMenuItem.Visible = True
-            Else
-                MenuUtama.FormRequestUmumToolStripMenuItem.Visible = False
-            End If
+            'If MstrMenuFormRequestUmum = "1" Then
+            '    MenuUtama.FormRequestUmumToolStripMenuItem.Visible = True
+            'Else
+            '    MenuUtama.FormRequestUmumToolStripMenuItem.Visible = False
+            'End If
 
             dr.Close()
         Else
-            MenuUtama.FormRequestUmumToolStripMenuItem.Visible = False
+            'MenuUtama.FormRequestUmumToolStripMenuItem.Visible = False
             dr.Close()
             Exit Sub
         End If
@@ -586,14 +586,6 @@ ErrorLoad:
     End Sub
 
 
-
-    'Sub LoadHover()
-    '    Dim tt As New ToolTip()
-    '    tt.SetToolTip(SideBar.cmdMonitoringRealStok, "Monitoring Real Stok")
-    '    tt.SetToolTip(SideBar.cmdMonitoringDelivery, "Monitoring Delivery")
-    '    tt.SetToolTip(SideBar.cmdAnyarLocalPrint, "Anyar Local Print")
-    '    tt.SetToolTip(SideBar.cmdExportHargaJual, "Export Harga Jual")
-    'End Sub
 
 
     Sub LoadNotifPerubahanHarga()

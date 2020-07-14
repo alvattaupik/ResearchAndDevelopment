@@ -5,7 +5,7 @@ Public Class FormMonitoringMyRequest
 
         Call KoneksiDatabase1()
 
-        Dim cmd As New SqlCommand("SELECT CreateDate,NoValidasi AS Nomor,JenisRequest,StatusApproval,StatusRequest,Komponen,KdJenisSurat FROM V_HeaderRequestUsers Where KdUser='" & Trim(MstrKodeUser) & "' AND  Cast(CreateDate As Date) between '" & dtpAwal.Value.ToString("yyyy-MM-dd") & "' AND '" & dtpAkhir.Value.ToString("yyyy-MM-dd") & "'", Koneksi1)
+        Dim cmd As New SqlCommand("SELECT CreateDate,NoValidasi AS Nomor,JenisRequest,StatusApproval,StatusRequest,Komponen,KdJenisSurat FROM V_HeaderRequestUsers Where KdUser='" & Trim(MstrKodeUser) & "' AND  Cast(CreateDate As Date) between '" & dtpAwal.Value.ToString("yyyy-MM-dd") & "' AND '" & dtpAkhir.Value.ToString("yyyy-MM-dd") & "' AND StatusRequest Like '%" & cmbStatusRequest.Text & "%'", Koneksi1)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -30,7 +30,7 @@ Public Class FormMonitoringMyRequest
         Call KoneksiDatabase1()
 
 
-        Dim cmd As New SqlCommand("SELECT CreateDate,NoValidasi AS Nomor,JenisRequest,StatusApproval,StatusRequest,Komponen,KdJenisSurat FROM V_HeaderRequestUsers Where KdUser='" & Trim(MstrKodeUser) & "' AND StatusRequest='Belum Di Proses IT'", Koneksi1)
+        Dim cmd As New SqlCommand("SELECT CreateDate,NoValidasi AS Nomor,JenisRequest,StatusApproval,StatusRequest,Komponen,KdJenisSurat FROM V_HeaderRequestUsers Where KdUser='" & Trim(MstrKodeUser) & "' AND StatusRequest Like '%" & cmbStatusRequest.Text & "%'", Koneksi1)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -52,39 +52,32 @@ Public Class FormMonitoringMyRequest
         dtpAkhir.Value = Now
     End Sub
 
-    Private Sub cmdRefresh_Click(sender As Object, e As EventArgs) Handles cmdRefresh.Click
+    Private Sub cmdRefresh_Click(sender As Object, e As EventArgs)
         LoadDaftarRequesActive()
         cmbStatusRequest.DataSource = Nothing
     End Sub
 
-    Private Sub cmdLihatDetail_Click(sender As Object, e As EventArgs) Handles cmdLihatDetail.Click
-        If dgRequestMonitoring.RowCount = 0 Then Exit Sub
-        MstrNoSurat = dgRequestMonitoring.Item(1, dgRequestMonitoring.CurrentRow.Index).Value
-        MstrJenisDokumen = dgRequestMonitoring.Item(6, dgRequestMonitoring.CurrentRow.Index).Value
-        LoadFormDetailMyRequest()
-
-    End Sub
 
     Sub LoadFormDetailMyRequest()
         If MstrJenisDokumen = "IT003" Then
-            'FormDetaiMyRequestValidasi.ShowDialog()
+            ViewBukaValidasi.ShowDialog()
         End If
 
-        If MstrJenisDokumen = "IT004" Then
-            FormDetaiMyRequestCloseCancelDocument.ShowDialog()
-        End If
+        'If MstrJenisDokumen = "IT004" Then
+        '    FormDetaiMyRequestCloseCancelDocument.ShowDialog()
+        'End If
 
         If MstrJenisDokumen = "IT005" Then
             FormDetaiMyRequestCloseAndOpenPostingPeriode.ShowDialog()
         End If
 
-        If MstrJenisDokumen = "IT006" Then
-            FormDetailPeminjamanSaya.ShowDialog()
-        End If
+        'If MstrJenisDokumen = "IT006" Then
+        '    FormDetailPeminjamanSaya.ShowDialog()
+        'End If
 
     End Sub
 
-    Private Sub cmdCetakForm_Click(sender As Object, e As EventArgs) Handles cmdCetakForm.Click
+    Private Sub cmdCetakForm_Click(sender As Object, e As EventArgs)
         If dgRequestMonitoring.RowCount = 0 Then Exit Sub
 
         MstrNoSurat = dgRequestMonitoring.Item(1, dgRequestMonitoring.CurrentRow.Index).Value
@@ -159,7 +152,7 @@ ErrorLoad:
         dgRequestMonitoring.AutoResizeColumns()
     End Sub
 
-    Private Sub GunaAdvenceButton1_Click(sender As Object, e As EventArgs) Handles GunaAdvenceButton1.Click
+    Private Sub GunaAdvenceButton1_Click(sender As Object, e As EventArgs)
         FormTemplate.ShowDialog()
     End Sub
 

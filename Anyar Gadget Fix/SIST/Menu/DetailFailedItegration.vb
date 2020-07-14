@@ -21,6 +21,67 @@ Public Class DetailFailedItegration
 
 
     Private Sub DetailFailedItegration_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Dim Target As String = ""
+
+        If Microsoft.VisualBasic.Left(txtNotifError.Text, 12) = "Error(DL001)" Then
+
+            Target = "Alamat Fullfill Tidak Sama dengan Alamat Customer!"
+            txtNotifError.SelectionStart = txtNotifError.Text.IndexOf(Target)
+            txtNotifError.SelectionLength = Target.Length
+            txtNotifError.SelectionFont = New Font(txtNotifError.Font, FontStyle.Bold Or FontStyle.Underline)
+
+
+            Target = "Alamat Fullfill Tidak Sama dengan Alamat Customer!"
+            txtNotifError.SelectionStart = txtNotifError.Text.IndexOf(Target)
+            txtNotifError.SelectionLength = Target.Length
+            txtNotifError.SelectionFont = New Font("Times New Roman", 14)
+            txtNotifError.SelectionColor = Color.Blue
+
+            txtNotifError.SelectionStart = 0
+            txtNotifError.SelectionLength = 0
+
+        End If
+
+
+
+        If Microsoft.VisualBasic.Left(txtNotifError.Text, 12) = "Error(CUS001)" Then
+
+            Target = "Nama Customer Berisi karakter unik Lainnya seperti tanda kurung, Pastikan Hanya Alphabet Ya "
+            txtNotifError.SelectionStart = txtNotifError.Text.IndexOf(Target)
+            txtNotifError.SelectionLength = Target.Length
+            txtNotifError.SelectionFont = New Font(txtNotifError.Font, FontStyle.Bold Or FontStyle.Underline)
+
+
+            Target = "Nama Customer Berisi karakter unik Lainnya seperti tanda kurung, Pastikan Hanya Alphabet Ya "
+            txtNotifError.SelectionStart = txtNotifError.Text.IndexOf(Target)
+            txtNotifError.SelectionLength = Target.Length
+            txtNotifError.SelectionFont = New Font("Times New Roman", 14)
+            txtNotifError.SelectionColor = Color.Blue
+
+            txtNotifError.SelectionStart = 0
+            txtNotifError.SelectionLength = 0
+        End If
+
+
+        If Microsoft.VisualBasic.Left(txtNotifError.Text, 12) = "Error(IV001)" Then
+
+            Target = "Kesalahan Pada Query, Hubungi Vendor !!!"
+            txtNotifError.SelectionStart = txtNotifError.Text.IndexOf(Target)
+            txtNotifError.SelectionLength = Target.Length
+            txtNotifError.SelectionFont = New Font(txtNotifError.Font, FontStyle.Bold Or FontStyle.Underline)
+
+
+            Target = "Kesalahan Pada Query, Hubungi Vendor !!!"
+            txtNotifError.SelectionStart = txtNotifError.Text.IndexOf(Target)
+            txtNotifError.SelectionLength = Target.Length
+            txtNotifError.SelectionFont = New Font("Times New Roman", 14)
+            txtNotifError.SelectionColor = Color.Red
+
+            txtNotifError.SelectionStart = 0
+            txtNotifError.SelectionLength = 0
+        End If
+
+
         LoadDaftarItemGagalIntegrasi()
         hitung()
 
@@ -48,4 +109,7 @@ Public Class DetailFailedItegration
 
     End Sub
 
+    Private Sub cmdSolusi_Click(sender As Object, e As EventArgs) Handles cmdSolusi.Click
+        FormDaftarSolusi.ShowDialog()
+    End Sub
 End Class

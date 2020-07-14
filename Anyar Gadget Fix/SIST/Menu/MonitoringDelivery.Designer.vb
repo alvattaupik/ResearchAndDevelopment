@@ -22,14 +22,16 @@ Partial Class MonitoringDelivery
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.chkAllDelivey = New Guna.UI.WinForms.GunaCheckBox()
         Me.cmdShow = New Guna.UI.WinForms.GunaGradientButton()
         Me.dtpTgl2 = New Guna.UI.WinForms.GunaDateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtpTgl1 = New Guna.UI.WinForms.GunaDateTimePicker()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.lblJumlahItemTransaksi = New System.Windows.Forms.Label()
         Me.dgItemDelivery = New System.Windows.Forms.DataGridView()
@@ -38,14 +40,17 @@ Partial Class MonitoringDelivery
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.lblJumlahTransaksi = New System.Windows.Forms.Label()
         Me.dgDaftarDelivery = New System.Windows.Forms.DataGridView()
-        Me.chkAllDelivey = New Guna.UI.WinForms.GunaCheckBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.AvailableToPromiseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.dgItemDelivery, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.dgDaftarDelivery, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -61,7 +66,7 @@ Partial Class MonitoringDelivery
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(102, 17)
+        Me.Label1.Location = New System.Drawing.Point(129, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(216, 25)
         Me.Label1.TabIndex = 0
@@ -70,16 +75,39 @@ Partial Class MonitoringDelivery
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.chkAllDelivey)
         Me.Panel2.Controls.Add(Me.cmdShow)
         Me.Panel2.Controls.Add(Me.dtpTgl2)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.dtpTgl1)
-        Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(1, 70)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(493, 76)
+        Me.Panel2.Size = New System.Drawing.Size(493, 126)
         Me.Panel2.TabIndex = 1
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.AnyarGadget.My.Resources.Resources.Inventory_PNG_HD
+        Me.PictureBox1.Location = New System.Drawing.Point(11, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(126, 119)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 38
+        Me.PictureBox1.TabStop = False
+        '
+        'chkAllDelivey
+        '
+        Me.chkAllDelivey.BaseColor = System.Drawing.Color.White
+        Me.chkAllDelivey.CheckedOffColor = System.Drawing.Color.Gray
+        Me.chkAllDelivey.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.chkAllDelivey.FillColor = System.Drawing.Color.White
+        Me.chkAllDelivey.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkAllDelivey.Location = New System.Drawing.Point(168, 91)
+        Me.chkAllDelivey.Name = "chkAllDelivey"
+        Me.chkAllDelivey.Size = New System.Drawing.Size(316, 21)
+        Me.chkAllDelivey.TabIndex = 37
+        Me.chkAllDelivey.Text = "Tampilkan Delivery Dari Semua Cabang"
         '
         'cmdShow
         '
@@ -95,7 +123,7 @@ Partial Class MonitoringDelivery
         Me.cmdShow.ForeColor = System.Drawing.Color.White
         Me.cmdShow.Image = Nothing
         Me.cmdShow.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdShow.Location = New System.Drawing.Point(398, 15)
+        Me.cmdShow.Location = New System.Drawing.Point(398, 4)
         Me.cmdShow.Name = "cmdShow"
         Me.cmdShow.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdShow.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -104,7 +132,7 @@ Partial Class MonitoringDelivery
         Me.cmdShow.OnHoverImage = Nothing
         Me.cmdShow.OnPressedColor = System.Drawing.Color.Black
         Me.cmdShow.Radius = 2
-        Me.cmdShow.Size = New System.Drawing.Size(91, 37)
+        Me.cmdShow.Size = New System.Drawing.Size(91, 81)
         Me.cmdShow.TabIndex = 36
         Me.cmdShow.Text = "Show"
         Me.cmdShow.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -119,7 +147,7 @@ Partial Class MonitoringDelivery
         Me.dtpTgl2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.dtpTgl2.ForeColor = System.Drawing.Color.Black
         Me.dtpTgl2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTgl2.Location = New System.Drawing.Point(272, 17)
+        Me.dtpTgl2.Location = New System.Drawing.Point(168, 56)
         Me.dtpTgl2.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.dtpTgl2.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.dtpTgl2.Name = "dtpTgl2"
@@ -127,7 +155,7 @@ Partial Class MonitoringDelivery
         Me.dtpTgl2.OnHoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dtpTgl2.OnHoverForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dtpTgl2.OnPressedColor = System.Drawing.Color.Black
-        Me.dtpTgl2.Size = New System.Drawing.Size(121, 29)
+        Me.dtpTgl2.Size = New System.Drawing.Size(224, 29)
         Me.dtpTgl2.TabIndex = 3
         Me.dtpTgl2.Text = "26/05/2020"
         Me.dtpTgl2.Value = New Date(2020, 5, 26, 15, 12, 12, 673)
@@ -136,7 +164,7 @@ Partial Class MonitoringDelivery
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(227, 21)
+        Me.Label3.Location = New System.Drawing.Point(267, 33)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 20)
         Me.Label3.TabIndex = 2
@@ -152,7 +180,7 @@ Partial Class MonitoringDelivery
         Me.dtpTgl1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.dtpTgl1.ForeColor = System.Drawing.Color.Black
         Me.dtpTgl1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTgl1.Location = New System.Drawing.Point(100, 17)
+        Me.dtpTgl1.Location = New System.Drawing.Point(168, 3)
         Me.dtpTgl1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.dtpTgl1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.dtpTgl1.Name = "dtpTgl1"
@@ -160,20 +188,10 @@ Partial Class MonitoringDelivery
         Me.dtpTgl1.OnHoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dtpTgl1.OnHoverForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dtpTgl1.OnPressedColor = System.Drawing.Color.Black
-        Me.dtpTgl1.Size = New System.Drawing.Size(121, 29)
+        Me.dtpTgl1.Size = New System.Drawing.Size(224, 29)
         Me.dtpTgl1.TabIndex = 1
         Me.dtpTgl1.Text = "26/05/2020"
         Me.dtpTgl1.Value = New Date(2020, 5, 26, 15, 12, 12, 673)
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(2, 21)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(92, 20)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Parameter"
         '
         'Panel3
         '
@@ -183,7 +201,7 @@ Partial Class MonitoringDelivery
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Location = New System.Drawing.Point(502, 4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(607, 572)
+        Me.Panel3.Size = New System.Drawing.Size(582, 572)
         Me.Panel3.TabIndex = 3
         '
         'lblJumlahItemTransaksi
@@ -201,10 +219,11 @@ Partial Class MonitoringDelivery
         Me.dgItemDelivery.AllowUserToAddRows = False
         Me.dgItemDelivery.AllowUserToDeleteRows = False
         Me.dgItemDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgItemDelivery.ContextMenuStrip = Me.ContextMenuStrip1
         Me.dgItemDelivery.Location = New System.Drawing.Point(3, 28)
         Me.dgItemDelivery.Name = "dgItemDelivery"
         Me.dgItemDelivery.ReadOnly = True
-        Me.dgItemDelivery.Size = New System.Drawing.Size(595, 517)
+        Me.dgItemDelivery.Size = New System.Drawing.Size(573, 517)
         Me.dgItemDelivery.TabIndex = 2
         '
         'Label4
@@ -220,10 +239,10 @@ Partial Class MonitoringDelivery
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Location = New System.Drawing.Point(1, 160)
+        Me.TabControl1.Location = New System.Drawing.Point(1, 202)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(495, 413)
+        Me.TabControl1.Size = New System.Drawing.Size(495, 371)
         Me.TabControl1.TabIndex = 4
         '
         'TabPage1
@@ -233,16 +252,16 @@ Partial Class MonitoringDelivery
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(487, 387)
+        Me.TabPage1.Size = New System.Drawing.Size(487, 345)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Transaksi"
+        Me.TabPage1.Text = "Delivery"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'lblJumlahTransaksi
         '
         Me.lblJumlahTransaksi.AutoSize = True
         Me.lblJumlahTransaksi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJumlahTransaksi.Location = New System.Drawing.Point(3, 364)
+        Me.lblJumlahTransaksi.Location = New System.Drawing.Point(2, 317)
         Me.lblJumlahTransaksi.Name = "lblJumlahTransaksi"
         Me.lblJumlahTransaksi.Size = New System.Drawing.Size(292, 20)
         Me.lblJumlahTransaksi.TabIndex = 4
@@ -253,29 +272,29 @@ Partial Class MonitoringDelivery
         Me.dgDaftarDelivery.AllowUserToAddRows = False
         Me.dgDaftarDelivery.AllowUserToDeleteRows = False
         Me.dgDaftarDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgDaftarDelivery.Location = New System.Drawing.Point(7, 6)
+        Me.dgDaftarDelivery.Location = New System.Drawing.Point(6, 6)
         Me.dgDaftarDelivery.Name = "dgDaftarDelivery"
         Me.dgDaftarDelivery.ReadOnly = True
-        Me.dgDaftarDelivery.Size = New System.Drawing.Size(474, 355)
+        Me.dgDaftarDelivery.Size = New System.Drawing.Size(474, 308)
         Me.dgDaftarDelivery.TabIndex = 3
         '
-        'chkAllDelivey
+        'ContextMenuStrip1
         '
-        Me.chkAllDelivey.BaseColor = System.Drawing.Color.White
-        Me.chkAllDelivey.CheckedOffColor = System.Drawing.Color.Gray
-        Me.chkAllDelivey.CheckedOnColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.chkAllDelivey.FillColor = System.Drawing.Color.White
-        Me.chkAllDelivey.Location = New System.Drawing.Point(100, 52)
-        Me.chkAllDelivey.Name = "chkAllDelivey"
-        Me.chkAllDelivey.Size = New System.Drawing.Size(232, 20)
-        Me.chkAllDelivey.TabIndex = 37
-        Me.chkAllDelivey.Text = "Tampilkan Delivery Dari Semua Cabang"
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AvailableToPromiseToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(184, 26)
+        '
+        'AvailableToPromiseToolStripMenuItem
+        '
+        Me.AvailableToPromiseToolStripMenuItem.Name = "AvailableToPromiseToolStripMenuItem"
+        Me.AvailableToPromiseToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.AvailableToPromiseToolStripMenuItem.Text = "Available To Promise"
         '
         'MonitoringDelivery
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1112, 577)
+        Me.ClientSize = New System.Drawing.Size(1086, 577)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
@@ -283,11 +302,12 @@ Partial Class MonitoringDelivery
         Me.Location = New System.Drawing.Point(229, 3)
         Me.Name = "MonitoringDelivery"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.Text = "MonitoringDelivery"
+        Me.Text = "Monitoring Delivery"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.dgItemDelivery, System.ComponentModel.ISupportInitialize).EndInit()
@@ -295,6 +315,7 @@ Partial Class MonitoringDelivery
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         CType(Me.dgDaftarDelivery, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -304,7 +325,6 @@ Partial Class MonitoringDelivery
     Friend WithEvents dtpTgl2 As Guna.UI.WinForms.GunaDateTimePicker
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents dtpTgl1 As Guna.UI.WinForms.GunaDateTimePicker
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents cmdShow As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents lblJumlahItemTransaksi As System.Windows.Forms.Label
@@ -315,4 +335,7 @@ Partial Class MonitoringDelivery
     Friend WithEvents lblJumlahTransaksi As System.Windows.Forms.Label
     Friend WithEvents dgDaftarDelivery As System.Windows.Forms.DataGridView
     Friend WithEvents chkAllDelivey As Guna.UI.WinForms.GunaCheckBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents AvailableToPromiseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

@@ -103,14 +103,26 @@ Public Class SideBar
 
     Private Sub SideBar_Load(sender As Object, e As EventArgs) Handles Me.Load
         txtNamaUser.Text = MstrNamaUser
-        txtLocation.Text = "Location : " & MstrKodeDivisi
+        txtLocation.Text = "Kode Cabang : " & MstrKodeDivisi
         txtSiteID.Text = "Site ID: " & MstrSiteID
         lblHari.Text = Date.Today.ToString("dddd")
         TimerJam.Start()
 
         cmdAnyarLocalPrint.Enabled = True
         ObjectMenu()
- 
+        MstrNamaModul = "AG-Sidebar"
+
+
+        Dim strPathPhoto As String = My.Settings.PathPhoto
+
+        If strPathPhoto = "" Then
+            Dim A As String = "Wah"
+        Else
+            GunaCirclePictureBox3.Image = Image.FromFile(Trim(strPathPhoto))
+        End If
+
+
+        cmdConnectNotif.PerformClick()
 
     End Sub
 
@@ -157,6 +169,21 @@ Public Class SideBar
         Else
             cmdAnyarRepository.Visible = False
 
+        End If
+
+
+
+        If MstrMenuIntegrationMonitor = "1" Then
+            cmdAIO.Visible = True
+        Else
+            cmdAIO.Visible = False
+        End If
+
+
+        If MstrMenuIntegrationMonitor = "1" Then
+            cmdAIO.Visible = True
+        Else
+            cmdAIO.Visible = False
         End If
 
 
@@ -263,5 +290,9 @@ Public Class SideBar
 
     Private Sub cmdAnyarNotifications_Click(sender As Object, e As EventArgs) Handles cmdAnyarNotifications.Click
         LoadNotifPerubahanHarga()
+    End Sub
+
+    Private Sub cmdUbahPassword_Click(sender As Object, e As EventArgs) Handles cmdUbahPassword.Click
+        Profile.ShowDialog()
     End Sub
 End Class

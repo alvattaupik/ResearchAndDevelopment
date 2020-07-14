@@ -33,8 +33,13 @@ Public Class AnyarRepository
     Sub LoadMainDirectory()
         On Error Resume Next
         ListView1.Clear()
-        path = "\\10.1.0.51\test"
-        'path = "D:\"
+
+        If My.Settings.PathAnyarRepository = "" Then
+            path = "\\10.1.0.51\test"
+        Else
+
+            path = My.Settings.PathAnyarRepository
+        End If
 
         For Each i In My.Computer.FileSystem.GetDirectories(path)
             ListView1.Items.Add(i.Substring(i.LastIndexOf("\") + 1), ImageList1.Images.Count() - 2)
@@ -124,5 +129,18 @@ Public Class AnyarRepository
         'End Using
 
         'My.Computer.FileSystem.CopyFile(Trim(TextBox3.Text), TextBox2.Text, FileIO.UIOption.OnlyErrorDialogs, FileIO.UICancelOption.DoNothing)
+    End Sub
+
+    Private Sub GunaCirclePictureBox2_Click(sender As Object, e As EventArgs) Handles GunaCirclePictureBox2.Click
+        gbPathDirectory.Visible = True
+    End Sub
+
+    Private Sub cmdSimpan_Click(sender As Object, e As EventArgs) Handles cmdSimpan.Click
+        With My.Settings
+            .PathAnyarRepository = Trim(txtPathDirectory.Text)
+            .Save()
+        End With
+        gbPathDirectory.Visible = False
+
     End Sub
 End Class

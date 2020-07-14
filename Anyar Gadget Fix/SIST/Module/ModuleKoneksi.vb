@@ -173,9 +173,7 @@ Module ModuleKoneksi
     Public Function koneksiMenu() As Boolean
         Try
 
-            'server = "data source={0};user id={1};password={2};initial catalog={3}"
-
-            server = "data source=" & conn_server & ";user id=" & conn_user & ";password=" & conn_pass & ";initial catalog=" & conn_database & ";Application Name=Anyar Gadget 1.1;MultipleActiveResultSets=True  "
+            server = "data source=" & conn_server & ";user id=" & conn_user & ";password=" & conn_pass & ";initial catalog=" & conn_database & ";Application Name='" & MstrNamaModul & "';MultipleActiveResultSets=True  "
             server = String.Format(server, conn_server, conn_user, conn_pass, conn_database)
 
             conn = New SqlConnection(server)

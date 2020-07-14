@@ -16,7 +16,7 @@ Public Class FormBuatRequestBukaValidasi
         txtDivisi.Text = MstrNamaDivisi
         JamAwal.Value = Now
         JamAkhir.Value = Now
-        MstrNamaForm = "Buat Request Validasi"
+        MstrNamaForm = "IT003"
 
     End Sub
 
@@ -33,24 +33,9 @@ Public Class FormBuatRequestBukaValidasi
     End Sub
 
 
-
-   
-
-
-
-
-
-    'Private Sub cmbKomponen_Click(sender As Object, e As EventArgs)
-    '    LoadComboKomponenValidasi()
-    'End Sub
-
-
     Private Sub GunaGradientButton1_Click(sender As Object, e As EventArgs) Handles GunaGradientButton1.Click
         On Error GoTo ErrorLoad
-        GetExtentionfile()
-
-        Call CopyFileKeDirectoryAttachment()
-        'CariKodeKomponen()
+  
 
         If MsgBox("Apakah Data Yang Di Inputkan Sudah Benar?", vbYesNo, "Konfirmasi") = vbYes Then
 
@@ -60,6 +45,12 @@ Public Class FormBuatRequestBukaValidasi
                 Exit Sub
             End If
 
+
+            If cmbTujuan.Text = "" Then
+                MsgBox("Tujuan Validasi Harus Di Isi", vbInformation, "Penting!")
+                cmbTujuan.BackColor = Color.Yellow
+                Exit Sub
+            End If
 
             If txtKomponen.Text = "" Then
                 MsgBox("Komponen SAP Harus Di Isi!", vbCritical, "Penting!")
@@ -88,6 +79,9 @@ Public Class FormBuatRequestBukaValidasi
 
 Lanjut:
 
+            GetExtentionfile()
+
+            Call CopyFileKeDirectoryAttachment()
 
             Call KoneksiDatabase1()
             Dim cmd As New SqlCommand
@@ -103,8 +97,8 @@ Lanjut:
             cmd.Parameters.AddWithValue("JenisRequest", Trim(cmbJenisRequest.Text))
             cmd.Parameters.AddWithValue("Durasi1", JamAwal.Value.ToString("HH:mm"))
             cmd.Parameters.AddWithValue("Durasi2", JamAkhir.Value.ToString("HH:mm"))
-            cmd.Parameters.AddWithValue("KdKomponen", Trim(txtKodeKomponen.Text))
-            cmd.Parameters.AddWithValue("KdJenisValidasi", Trim(txtJenisValidasi.Text))
+            cmd.Parameters.AddWithValue("KdKomponen", Trim(txtKdKomponenSAP.Text))
+            cmd.Parameters.AddWithValue("KdJenisValidasi", Trim(txtKdJenisValidasi.Text))
             cmd.Parameters.AddWithValue("PesanError", Trim(txtError.Text))
             cmd.Parameters.AddWithValue("Catatan", Trim(""))
             cmd.Parameters.AddWithValue("Status", "")
@@ -212,6 +206,7 @@ ErrorLoad:
 
 
     Private Sub cmdBrowseJenisValidasi_Click(sender As Object, e As EventArgs) Handles cmdBrowseJenisValidasi.Click
+        On Error Resume Next
         FormJenisValidasi.ShowDialog()
     End Sub
 

@@ -36,20 +36,22 @@ Partial Class FormDetailHakAkses
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cmdPerbaharui = New Guna.UI.WinForms.GunaGradientButton()
+        Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgHakAksesUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(147, 5)
+        Me.Label1.Location = New System.Drawing.Point(143, 5)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(180, 25)
+        Me.Label1.Size = New System.Drawing.Size(250, 25)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Hak Akses User"
+        Me.Label1.Text = "Konfigurasi Hak Akses"
         '
         'GroupBox1
         '
@@ -58,13 +60,13 @@ Partial Class FormDetailHakAkses
         Me.GroupBox1.Controls.Add(Me.dgHakAksesUser)
         Me.GroupBox1.Location = New System.Drawing.Point(11, 99)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(468, 262)
+        Me.GroupBox1.Size = New System.Drawing.Size(523, 262)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
         'txtCariHakAkses
         '
-        Me.txtCariHakAkses.Location = New System.Drawing.Point(106, 17)
+        Me.txtCariHakAkses.Location = New System.Drawing.Point(162, 17)
         Me.txtCariHakAkses.Name = "txtCariHakAkses"
         Me.txtCariHakAkses.Size = New System.Drawing.Size(355, 20)
         Me.txtCariHakAkses.TabIndex = 4
@@ -72,7 +74,7 @@ Partial Class FormDetailHakAkses
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 20)
+        Me.Label5.Location = New System.Drawing.Point(13, 20)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(80, 13)
         Me.Label5.TabIndex = 1
@@ -84,7 +86,8 @@ Partial Class FormDetailHakAkses
         Me.dgHakAksesUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgHakAksesUser.Location = New System.Drawing.Point(6, 45)
         Me.dgHakAksesUser.Name = "dgHakAksesUser"
-        Me.dgHakAksesUser.Size = New System.Drawing.Size(455, 206)
+        Me.dgHakAksesUser.RowHeadersVisible = False
+        Me.dgHakAksesUser.Size = New System.Drawing.Size(511, 206)
         Me.dgHakAksesUser.TabIndex = 0
         '
         'cmdSimpan
@@ -123,7 +126,7 @@ Partial Class FormDetailHakAkses
         Me.GroupBox2.Controls.Add(Me.txtKodeUser)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Location = New System.Drawing.Point(13, 33)
+        Me.GroupBox2.Location = New System.Drawing.Point(69, 33)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(465, 67)
         Me.GroupBox2.TabIndex = 30
@@ -209,11 +212,23 @@ Partial Class FormDetailHakAkses
         Me.cmdPerbaharui.Text = "Perbaharui"
         Me.cmdPerbaharui.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'GunaPictureBox1
+        '
+        Me.GunaPictureBox1.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox1.Image = Global.AnyarGadget.My.Resources.Resources.Users__Akses
+        Me.GunaPictureBox1.Location = New System.Drawing.Point(11, 38)
+        Me.GunaPictureBox1.Name = "GunaPictureBox1"
+        Me.GunaPictureBox1.Size = New System.Drawing.Size(63, 61)
+        Me.GunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.GunaPictureBox1.TabIndex = 32
+        Me.GunaPictureBox1.TabStop = False
+        '
         'FormDetailHakAkses
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(487, 410)
+        Me.ClientSize = New System.Drawing.Size(540, 410)
+        Me.Controls.Add(Me.GunaPictureBox1)
         Me.Controls.Add(Me.cmdPerbaharui)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.cmdSimpan)
@@ -228,6 +243,7 @@ Partial Class FormDetailHakAkses
         CType(Me.dgHakAksesUser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -246,4 +262,5 @@ Partial Class FormDetailHakAkses
     Friend WithEvents cmdPerbaharui As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents txtCariHakAkses As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents GunaPictureBox1 As Guna.UI.WinForms.GunaPictureBox
 End Class

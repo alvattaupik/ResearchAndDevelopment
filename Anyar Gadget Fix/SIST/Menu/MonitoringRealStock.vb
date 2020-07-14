@@ -37,6 +37,7 @@ Public Class MonitoringRealStock
             dgItemList.DataSource = table
             dgItemList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
             dgItemList.AutoResizeColumns()
+            dgItemList.RowHeadersVisible = False
         Else
             Exit Sub
         End If
@@ -55,6 +56,7 @@ Errorhandler:
         conn_database = "RKM_LIVE_2"
         conn_pass = "h0spit4lity#"
         conn_user = "sa"
+        MstrNamaModul = "AG-Monitoring RealStock"
 
     End Sub
 
@@ -107,6 +109,8 @@ ErrorHandler:
             dgItemList.DataSource = table
             dgItemList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
             dgItemList.AutoResizeColumns()
+            dgItemList.RowHeadersVisible = False
+
         Else
             Exit Sub
         End If
@@ -137,9 +141,13 @@ Errorhandler:
             adapter.Fill(table)
             dgInventoryData.DataSource = table
             dgInventoryData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-            dgInventoryData.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
-            dgInventoryData.AutoResizeColumns()
+            'dgInventoryData.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
 
+            dgInventoryData.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopCenter
+            dgInventoryData.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopCenter
+            dgInventoryData.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopCenter
+            dgInventoryData.AutoResizeColumns()
+            dgInventoryData.RowHeadersVisible = False
 
         End If
     End Sub
@@ -164,4 +172,6 @@ Errorhandler:
         frm.Show()
 
     End Sub
+
+
 End Class

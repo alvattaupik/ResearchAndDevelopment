@@ -22,20 +22,17 @@ Partial Class FormDetaiMyRequestCloseAndOpenPostingPeriode
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtJenisForm = New Guna.UI.WinForms.GunaTextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtPathAttachment = New Guna.UI.WinForms.GunaTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.cmdLihatAttchment = New System.Windows.Forms.Button()
         Me.txtPesanUser = New Guna.UI.WinForms.GunaTextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtStatus = New Guna.UI.WinForms.GunaTextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.txtNoDokumen = New Guna.UI.WinForms.GunaTextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtErrorvalidasi = New System.Windows.Forms.RichTextBox()
@@ -48,13 +45,15 @@ Partial Class FormDetaiMyRequestCloseAndOpenPostingPeriode
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtKomponen = New Guna.UI.WinForms.GunaTextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtStatus = New Guna.UI.WinForms.GunaTextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.cmdSimpan = New Guna.UI.WinForms.GunaGradientButton()
         Me.GunaGradientButton1 = New Guna.UI.WinForms.GunaGradientButton()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtPesanAdmin = New System.Windows.Forms.RichTextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.txtStatusRequest = New Guna.UI.WinForms.GunaTextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblJumlahUserApproved = New System.Windows.Forms.Label()
         Me.dgDaftarUserApproval = New Guna.UI.WinForms.GunaDataGridView()
@@ -108,17 +107,6 @@ Partial Class FormDetaiMyRequestCloseAndOpenPostingPeriode
         Me.txtPathAttachment.Size = New System.Drawing.Size(30, 26)
         Me.txtPathAttachment.TabIndex = 4
         Me.txtPathAttachment.Visible = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Red
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(514, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(38, 35)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "X"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -189,33 +177,6 @@ Partial Class FormDetaiMyRequestCloseAndOpenPostingPeriode
         Me.Label9.Size = New System.Drawing.Size(97, 18)
         Me.Label9.TabIndex = 14
         Me.Label9.Text = "Pesan Saya"
-        '
-        'txtStatus
-        '
-        Me.txtStatus.BackColor = System.Drawing.Color.Orchid
-        Me.txtStatus.BaseColor = System.Drawing.Color.Pink
-        Me.txtStatus.BorderColor = System.Drawing.Color.Silver
-        Me.txtStatus.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtStatus.Enabled = False
-        Me.txtStatus.FocusedBaseColor = System.Drawing.Color.White
-        Me.txtStatus.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtStatus.FocusedForeColor = System.Drawing.SystemColors.ControlText
-        Me.txtStatus.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtStatus.Location = New System.Drawing.Point(141, 10)
-        Me.txtStatus.Name = "txtStatus"
-        Me.txtStatus.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtStatus.Size = New System.Drawing.Size(187, 26)
-        Me.txtStatus.TabIndex = 13
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(12, 10)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(123, 18)
-        Me.Label8.TabIndex = 12
-        Me.Label8.Text = "Status Aprroval"
         '
         'txtNoDokumen
         '
@@ -370,6 +331,33 @@ Partial Class FormDetaiMyRequestCloseAndOpenPostingPeriode
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Komponen"
         '
+        'txtStatus
+        '
+        Me.txtStatus.BackColor = System.Drawing.Color.Orchid
+        Me.txtStatus.BaseColor = System.Drawing.Color.Pink
+        Me.txtStatus.BorderColor = System.Drawing.Color.Silver
+        Me.txtStatus.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtStatus.Enabled = False
+        Me.txtStatus.FocusedBaseColor = System.Drawing.Color.White
+        Me.txtStatus.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtStatus.FocusedForeColor = System.Drawing.SystemColors.ControlText
+        Me.txtStatus.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtStatus.Location = New System.Drawing.Point(141, 10)
+        Me.txtStatus.Name = "txtStatus"
+        Me.txtStatus.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtStatus.Size = New System.Drawing.Size(187, 26)
+        Me.txtStatus.TabIndex = 13
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(12, 10)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(123, 18)
+        Me.Label8.TabIndex = 12
+        Me.Label8.Text = "Status Aprroval"
+        '
         'cmdSimpan
         '
         Me.cmdSimpan.AnimationHoverSpeed = 0.07!
@@ -451,24 +439,13 @@ Partial Class FormDetaiMyRequestCloseAndOpenPostingPeriode
         Me.Panel1.Controls.Add(Me.txtStatusRequest)
         Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Controls.Add(Me.txtJenisForm)
-        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.txtPathAttachment)
         Me.Panel1.Location = New System.Drawing.Point(11, 7)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(551, 89)
+        Me.Panel1.Size = New System.Drawing.Size(552, 89)
         Me.Panel1.TabIndex = 44
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(3, 62)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(123, 18)
-        Me.Label13.TabIndex = 7
-        Me.Label13.Text = "Status Request"
         '
         'txtStatusRequest
         '
@@ -485,6 +462,16 @@ Partial Class FormDetaiMyRequestCloseAndOpenPostingPeriode
         Me.txtStatusRequest.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtStatusRequest.Size = New System.Drawing.Size(305, 26)
         Me.txtStatusRequest.TabIndex = 8
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(3, 62)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(123, 18)
+        Me.Label13.TabIndex = 7
+        Me.Label13.Text = "Status Request"
         '
         'Panel2
         '
@@ -513,30 +500,30 @@ Partial Class FormDetaiMyRequestCloseAndOpenPostingPeriode
         '
         Me.dgDaftarUserApproval.AllowUserToAddRows = False
         Me.dgDaftarUserApproval.AllowUserToDeleteRows = False
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
-        Me.dgDaftarUserApproval.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgDaftarUserApproval.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgDaftarUserApproval.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgDaftarUserApproval.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.dgDaftarUserApproval.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgDaftarUserApproval.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgDaftarUserApproval.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgDaftarUserApproval.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgDaftarUserApproval.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgDaftarUserApproval.ColumnHeadersHeight = 30
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgDaftarUserApproval.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgDaftarUserApproval.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgDaftarUserApproval.EnableHeadersVisualStyles = False
         Me.dgDaftarUserApproval.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgDaftarUserApproval.Location = New System.Drawing.Point(6, 70)
@@ -592,7 +579,7 @@ Partial Class FormDetaiMyRequestCloseAndOpenPostingPeriode
         Me.Controls.Add(Me.GunaGradientButton1)
         Me.Controls.Add(Me.cmdSimpan)
         Me.Controls.Add(Me.GroupBox2)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "FormDetaiMyRequestCloseAndOpenPostingPeriode"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormDetailValidasi"
@@ -629,7 +616,6 @@ Partial Class FormDetaiMyRequestCloseAndOpenPostingPeriode
     Friend WithEvents txtPesanAdmin As System.Windows.Forms.RichTextBox
     Friend WithEvents txtJenisValidasi As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents cmdLihatAttchment As System.Windows.Forms.Button
     Friend WithEvents txtPathAttachment As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents txtJenisForm As Guna.UI.WinForms.GunaTextBox

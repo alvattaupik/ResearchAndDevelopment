@@ -46,12 +46,11 @@ Partial Class MenuUtama
         Me.RequestFullfillmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MonitoringMyRequestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuatRequestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FormPeminjamanAssetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FormBukaValidasiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FormBukaPostingPeriodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FormRequestUmumToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AnyarDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IntegrationMonitoringToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PerubahanHargaJualToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AnyarLocalPrintServicesTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -72,7 +71,6 @@ Partial Class MenuUtama
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TimerNotifikasi = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.PerubahanHargaJualToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -230,16 +228,10 @@ Partial Class MenuUtama
         '
         'BuatRequestToolStripMenuItem
         '
-        Me.BuatRequestToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FormPeminjamanAssetToolStripMenuItem, Me.FormBukaValidasiToolStripMenuItem, Me.FormBukaPostingPeriodeToolStripMenuItem, Me.FormRequestUmumToolStripMenuItem})
+        Me.BuatRequestToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FormBukaValidasiToolStripMenuItem, Me.FormBukaPostingPeriodeToolStripMenuItem})
         Me.BuatRequestToolStripMenuItem.Name = "BuatRequestToolStripMenuItem"
         Me.BuatRequestToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
         Me.BuatRequestToolStripMenuItem.Text = "Buat Request"
-        '
-        'FormPeminjamanAssetToolStripMenuItem
-        '
-        Me.FormPeminjamanAssetToolStripMenuItem.Name = "FormPeminjamanAssetToolStripMenuItem"
-        Me.FormPeminjamanAssetToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
-        Me.FormPeminjamanAssetToolStripMenuItem.Text = "Form Peminjaman Asset"
         '
         'FormBukaValidasiToolStripMenuItem
         '
@@ -253,23 +245,23 @@ Partial Class MenuUtama
         Me.FormBukaPostingPeriodeToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
         Me.FormBukaPostingPeriodeToolStripMenuItem.Text = "Form Buka Posting Periode"
         '
-        'FormRequestUmumToolStripMenuItem
-        '
-        Me.FormRequestUmumToolStripMenuItem.Name = "FormRequestUmumToolStripMenuItem"
-        Me.FormRequestUmumToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
-        Me.FormRequestUmumToolStripMenuItem.Text = "Form Request umum"
-        '
         'AnyarDirectoryToolStripMenuItem
         '
         Me.AnyarDirectoryToolStripMenuItem.Name = "AnyarDirectoryToolStripMenuItem"
         Me.AnyarDirectoryToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
-        Me.AnyarDirectoryToolStripMenuItem.Text = "Anyar Directory"
+        Me.AnyarDirectoryToolStripMenuItem.Text = "Anyar Reposrectory"
         '
         'IntegrationMonitoringToolStripMenuItem
         '
         Me.IntegrationMonitoringToolStripMenuItem.Name = "IntegrationMonitoringToolStripMenuItem"
         Me.IntegrationMonitoringToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
         Me.IntegrationMonitoringToolStripMenuItem.Text = "Integration Monitoring"
+        '
+        'PerubahanHargaJualToolStripMenuItem
+        '
+        Me.PerubahanHargaJualToolStripMenuItem.Name = "PerubahanHargaJualToolStripMenuItem"
+        Me.PerubahanHargaJualToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.PerubahanHargaJualToolStripMenuItem.Text = "Perubahan Harga Jual"
         '
         'SettingToolStripMenuItem
         '
@@ -295,7 +287,7 @@ Partial Class MenuUtama
         '
         Me.FotoProfileToolStripMenuItem.Name = "FotoProfileToolStripMenuItem"
         Me.FotoProfileToolStripMenuItem.Size = New System.Drawing.Size(210, 22)
-        Me.FotoProfileToolStripMenuItem.Text = "Foto Profile"
+        Me.FotoProfileToolStripMenuItem.Text = "Ubah Password"
         '
         'PushNotificationsToolStripMenuItem
         '
@@ -326,8 +318,8 @@ Partial Class MenuUtama
         '
         Me.ChangeLogToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VersiSaatIniToolStripMenuItem, Me.LaporkanMasalahToolStripMenuItem})
         Me.ChangeLogToolStripMenuItem.Name = "ChangeLogToolStripMenuItem"
-        Me.ChangeLogToolStripMenuItem.Size = New System.Drawing.Size(83, 20)
-        Me.ChangeLogToolStripMenuItem.Text = "Change Log"
+        Me.ChangeLogToolStripMenuItem.Size = New System.Drawing.Size(88, 20)
+        Me.ChangeLogToolStripMenuItem.Text = "Change Logs"
         '
         'VersiSaatIniToolStripMenuItem
         '
@@ -405,12 +397,6 @@ Partial Class MenuUtama
         '
         Me.TimerNotifikasi.Interval = 1000
         '
-        'PerubahanHargaJualToolStripMenuItem
-        '
-        Me.PerubahanHargaJualToolStripMenuItem.Name = "PerubahanHargaJualToolStripMenuItem"
-        Me.PerubahanHargaJualToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
-        Me.PerubahanHargaJualToolStripMenuItem.Text = "Perubahan Harga Jual"
-        '
         'MenuUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -459,10 +445,8 @@ Partial Class MenuUtama
     Friend WithEvents RequestFullfillmentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MonitoringMyRequestToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BuatRequestToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents FormPeminjamanAssetToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FormBukaValidasiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FormBukaPostingPeriodeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents FormRequestUmumToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AnyarDirectoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents IntegrationMonitoringToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SettingToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

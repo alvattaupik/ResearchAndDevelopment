@@ -77,5 +77,6 @@
 
     Public LongDurasi As Long
 
+    Public MstrNamaModul As String
 
 End Module

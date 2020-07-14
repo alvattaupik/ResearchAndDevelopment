@@ -43,7 +43,7 @@ Partial Class FormJenisValidasi
         '
         Me.GunaLabel1.AutoSize = True
         Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GunaLabel1.Location = New System.Drawing.Point(2, 21)
+        Me.GunaLabel1.Location = New System.Drawing.Point(-2, 14)
         Me.GunaLabel1.Name = "GunaLabel1"
         Me.GunaLabel1.Size = New System.Drawing.Size(70, 15)
         Me.GunaLabel1.TabIndex = 1
@@ -51,7 +51,7 @@ Partial Class FormJenisValidasi
         '
         'txtCariValidasi
         '
-        Me.txtCariValidasi.Location = New System.Drawing.Point(95, 20)
+        Me.txtCariValidasi.Location = New System.Drawing.Point(95, 12)
         Me.txtCariValidasi.Name = "txtCariValidasi"
         Me.txtCariValidasi.Size = New System.Drawing.Size(349, 20)
         Me.txtCariValidasi.TabIndex = 2

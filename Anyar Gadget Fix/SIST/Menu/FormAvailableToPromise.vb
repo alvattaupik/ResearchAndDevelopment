@@ -60,7 +60,7 @@ Public Class FormAvailableToPromise
 
 
     Private Sub FormAvailableToPromise_Load(sender As Object, e As EventArgs) Handles Me.Load
-
+        MstrNamaModul = "AG- Available To Promise"
         LoadAvailableToPromise()
         HitungOrder()
         HitungCommited()

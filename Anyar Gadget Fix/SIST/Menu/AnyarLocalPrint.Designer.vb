@@ -86,6 +86,7 @@ Partial Class AnyarLocalPrint
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -100,6 +101,7 @@ Partial Class AnyarLocalPrint
         Me.TabPage10.SuspendLayout()
         Me.TabPage11.SuspendLayout()
         Me.TabPage12.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -725,7 +727,7 @@ Partial Class AnyarLocalPrint
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(327, 9)
+        Me.Label1.Location = New System.Drawing.Point(327, 5)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(426, 31)
         Me.Label1.TabIndex = 5
@@ -735,17 +737,28 @@ Partial Class AnyarLocalPrint
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(329, 40)
+        Me.Label2.Location = New System.Drawing.Point(329, 39)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(169, 24)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = " Build xx.xx.xxxx"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.AnyarGadget.My.Resources.Resources.anyar_local_Print
+        Me.PictureBox1.Location = New System.Drawing.Point(18, 5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(105, 67)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
         '
         'AnyarLocalPrint
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1040, 577)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox2)
@@ -780,6 +793,7 @@ Partial Class AnyarLocalPrint
         Me.TabPage11.PerformLayout()
         Me.TabPage12.ResumeLayout(False)
         Me.TabPage12.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -848,4 +862,5 @@ Partial Class AnyarLocalPrint
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

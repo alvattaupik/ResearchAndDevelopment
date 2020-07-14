@@ -32,13 +32,16 @@ Partial Class Ping
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.dgListIP, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.GunaLabel1)
         Me.Panel1.Location = New System.Drawing.Point(4, 5)
         Me.Panel1.Name = "Panel1"
@@ -63,14 +66,15 @@ Partial Class Ping
         Me.dgListIP.Location = New System.Drawing.Point(4, 155)
         Me.dgListIP.Name = "dgListIP"
         Me.dgListIP.ReadOnly = True
-        Me.dgListIP.Size = New System.Drawing.Size(346, 188)
+        Me.dgListIP.RowHeadersVisible = False
+        Me.dgListIP.Size = New System.Drawing.Size(346, 212)
         Me.dgListIP.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(4, 108)
+        Me.Label1.Location = New System.Drawing.Point(4, 92)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(150, 16)
         Me.Label1.TabIndex = 2
@@ -78,7 +82,7 @@ Partial Class Ping
         '
         'txtCariNamaKomputer
         '
-        Me.txtCariNamaKomputer.Location = New System.Drawing.Point(157, 106)
+        Me.txtCariNamaKomputer.Location = New System.Drawing.Point(160, 88)
         Me.txtCariNamaKomputer.Name = "txtCariNamaKomputer"
         Me.txtCariNamaKomputer.Size = New System.Drawing.Size(190, 20)
         Me.txtCariNamaKomputer.TabIndex = 3
@@ -86,9 +90,10 @@ Partial Class Ping
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(79, 139)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(71, 139)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(179, 13)
+        Me.Label2.Size = New System.Drawing.Size(212, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Double Click Untuk Melakukan Ping"
         '
@@ -128,6 +133,16 @@ Partial Class Ping
         Me.Button1.Text = "Ping!!"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.AnyarGadget.My.Resources.Resources._438_4387212_ping_logo_ping_png_transparent_png
+        Me.PictureBox1.Location = New System.Drawing.Point(11, 5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(65, 66)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
         'Ping
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -149,6 +164,7 @@ Partial Class Ping
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.dgListIP, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -163,4 +179,5 @@ Partial Class Ping
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

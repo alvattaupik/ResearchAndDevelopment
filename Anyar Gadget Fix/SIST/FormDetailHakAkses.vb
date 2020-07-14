@@ -77,6 +77,7 @@ Public Class FormDetailHakAkses
         Next
         Koneksi1.Close()
         LoadDaftarHakAkses()
+        MsgBox("Hak Akses Berhasil diperbaharui", vbInformation, "Sukses!")
         Exit Sub
     End Sub
 

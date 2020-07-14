@@ -730,4 +730,8 @@ Public Class AnyarLocalPrint
 
         CRVSO.Refresh()
     End Sub
+
+    Private Sub AnyarLocalPrint_Load(sender As Object, e As EventArgs) Handles Me.Load
+        MstrNamaModul = "AG-Anyar Local Print Services"
+    End Sub
 End Class

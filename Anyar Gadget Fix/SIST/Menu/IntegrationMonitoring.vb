@@ -198,11 +198,47 @@ Public Class IntegrationMonitoring
 
 
 
+    Sub LoadAlamatCustomer(strNoStruk As String, strKodeCustomer As String)
+        Call KoneksiDatabaseIvend()
+
+        strSQL = "SELECT top 1 AlamatCustomer,AlamatDelivery FROM dbo.V_CekFullfilments WHERE NoStruk='" & strNoStruk & "' AND KodeCustomer='" & strKodeCustomer & "'"
+        cmd = New SqlCommand(strSQL, KoneksiIvend)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            DetailFailedItegration.txtAlamatCustomer.Text = dr.GetString(0)
+            DetailFailedItegration.txtAlamatCustomer.ReadOnly = True
+
+            DetailFailedItegration.txtAlamatFullfill.Text = dr.GetString(1)
+            DetailFailedItegration.txtAlamatFullfill.ReadOnly = True
+
+
+            dr.Close()
+        Else
+
+            dr.Close()
+            Exit Sub
+        End If
+
+
+    End Sub
+
+
+
+
+
+
+
+
+
 
 
     Private Sub dgFailedIntegration_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgFailedIntegration.CellContentDoubleClick
 
         If dgFailedIntegration.RowCount = 0 Then Exit Sub
+
+
 
         DetailFailedItegration.txtIntegrationKey.Text = dgFailedIntegration.Item(2, dgFailedIntegration.CurrentRow.Index).Value
         DetailFailedItegration.txtIntegrationKey.ReadOnly = True
@@ -214,8 +250,9 @@ Public Class IntegrationMonitoring
         DetailFailedItegration.txtCabang.Text = dgFailedIntegration.Item(4, dgFailedIntegration.CurrentRow.Index).Value
         DetailFailedItegration.txtNotifError.Text = dgFailedIntegration.Item(7, dgFailedIntegration.CurrentRow.Index).Value
         DetailFailedItegration.txtNotifError.ReadOnly = True
-
         MstrNoStruk = dgFailedIntegration.Item(3, dgFailedIntegration.CurrentRow.Index).Value
+
+        LoadAlamatCustomer(dgFailedIntegration.Item(3, dgFailedIntegration.CurrentRow.Index).Value, dgFailedIntegration.Item(5, dgFailedIntegration.CurrentRow.Index).Value)
 
 
         DetailFailedItegration.ShowDialog()

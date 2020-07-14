@@ -4,6 +4,8 @@ Public Class MonitoringDelivery
 
     Private Sub MonitoringDelivery_Load(sender As Object, e As EventArgs) Handles Me.Load
 
+        MstrNamaModul = "AG-Monitoring Delivery"
+
         conn_server = "10.1.0.53"
         conn_database = "RKM_LIVE_2"
         conn_pass = "h0spit4lity#"
@@ -12,7 +14,8 @@ Public Class MonitoringDelivery
         dtpTgl1.Value = Now
         dtpTgl2.Value = Now
 
-        LoadHeaderTransaksiCustomerFormLoad()
+        'LoadHeaderTransaksiCustomerFormLoad()
+        LoadHeaderTransaksiDefaultLoad()
         LoadControl()
         'LoadHeaderTransferFormLoad()
        
@@ -46,6 +49,39 @@ Public Class MonitoringDelivery
         lblJumlahTransaksi.Text = "Jumlah Transaksi Untuk Dikirim : " & dgDaftarDelivery.RowCount
 
     End Sub
+
+
+    Sub LoadHeaderTransaksiDefaultLoad()
+        koneksiMenu()
+        Dim command As SqlCommand
+        command = New SqlCommand("tmsp_LapStatusDelivery", conn)
+
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        command.Parameters.AddWithValue("@TanggalAwal", dtpTgl1.Value.ToString("yyyy-MM-dd"))
+        command.Parameters.AddWithValue("@TanggalAkhir", dtpTgl2.Value.ToString("yyyy-MM-dd"))
+        command.Parameters.AddWithValue("@Cabang", MstrKodeDivisi)
+        command.Parameters.AddWithValue("@Menu", "01Load")
+        command.Parameters.AddWithValue("@NoStruk", "")
+
+        command.Parameters.AddWithValue("@From", "")
+
+        Dim table As New DataTable
+        adapter.Fill(table)
+        Me.dgDaftarDelivery.DataSource = table
+        dgDaftarDelivery.DataSource = table
+        dgDaftarDelivery.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgDaftarDelivery.AutoResizeColumns()
+        dgDaftarDelivery.RowHeadersVisible = False
+
+
+        lblJumlahTransaksi.Text = "Jumlah Transaksi Untuk Dikirim : " & dgDaftarDelivery.RowCount
+
+    End Sub
+
+
+
+
 
 
     Sub LoadHeaderDeliveryALL()
@@ -242,6 +278,9 @@ Public Class MonitoringDelivery
         Me.dgItemDelivery.DataSource = table
         dgItemDelivery.DataSource = table
         dgItemDelivery.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgItemDelivery.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopCenter
+        dgItemDelivery.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopCenter
+        dgItemDelivery.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopCenter
         dgItemDelivery.AutoResizeColumns()
         dgItemDelivery.RowHeadersVisible = False
         lblJumlahItemTransaksi.Text = "Jumlah Item : " & dgItemDelivery.RowCount
@@ -290,5 +329,18 @@ Public Class MonitoringDelivery
 
     Private Sub cmdToTransfer_Click(sender As Object, e As EventArgs)
         LoadComboBoxDBLive(cmbFromTransfer, "SELECT WhsCode,WhsName FROM dbo.OWHS WHERE WhsCode NOT LIKE '%ds%'", "WhsCode", "WhsName")
+    End Sub
+
+    Private Sub AvailableToPromiseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AvailableToPromiseToolStripMenuItem.Click
+        Dim frm As New FormAvailableToPromise
+
+        frm.MdiParent = MenuUtama
+
+        frm.txtItemCode.Text = Me.dgItemDelivery.Item(2, dgItemDelivery.CurrentRow.Index).Value
+        frm.txtItemName.Text = Me.dgItemDelivery.Item(3, dgItemDelivery.CurrentRow.Index).Value
+        frm.Location = New Point(294, 39)
+
+        frm.TopMost = True
+        frm.Show()
     End Sub
 End Class

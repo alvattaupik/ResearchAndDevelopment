@@ -14,6 +14,7 @@ Public Class FormJenisValidasi
         dgDaftarValidasi.DataSource = table
         dgDaftarValidasi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
         dgDaftarValidasi.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+        dgDaftarValidasi.RowHeadersVisible = False
         dgDaftarValidasi.AutoResizeColumns()
 
     End Sub
@@ -25,9 +26,11 @@ Public Class FormJenisValidasi
     End Sub
 
     Private Sub dgDaftarValidasi_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgDaftarValidasi.CellContentClick
-        FormBuatRequestBukaValidasi.txtJenisValidasi.Text = dgDaftarValidasi.Item(2, dgDaftarValidasi.CurrentRow.Index).Value
-        FormBuatRequestBukaValidasi.txtError.Text = dgDaftarValidasi.Item(1, dgDaftarValidasi.CurrentRow.Index).Value
+        BukaValidasi.txtKodeKomponenValidasi.Text = dgDaftarValidasi.Item(2, dgDaftarValidasi.CurrentRow.Index).Value
+        BukaValidasi.txtKomponenValidasi.Text = dgDaftarValidasi.Item(0, dgDaftarValidasi.CurrentRow.Index).Value
+        BukaValidasi.txtNotifValidasi.Text = dgDaftarValidasi.Item(1, dgDaftarValidasi.CurrentRow.Index).Value
         Me.Close()
+
     End Sub
 
     Private Sub txtCariValidasi_TextChanged(sender As Object, e As EventArgs) Handles txtCariValidasi.TextChanged

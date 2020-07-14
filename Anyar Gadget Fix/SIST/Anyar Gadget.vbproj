@@ -14,7 +14,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\IT-ALVAT\Music\SISTER V1.1 BUILD 19052020  NEW\</PublishUrl>
+    <PublishUrl>C:\Users\IT-ALVAT\Music\Anyar Gadget Build 10072020\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -127,6 +127,12 @@
     <Compile Include="FormBuatPeminjamanAset.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormDaftarSolusi.Designer.vb">
+      <DependentUpon>FormDaftarSolusi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftarSolusi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormDataUserALL.designer.vb">
       <DependentUpon>FormDataUserALL.vb</DependentUpon>
     </Compile>
@@ -167,6 +173,12 @@
       <DependentUpon>FormItemsBAPSerahTerima.vb</DependentUpon>
     </Compile>
     <Compile Include="FormItemsBAPSerahTerima.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormItemsPostingPeriode.designer.vb">
+      <DependentUpon>FormItemsPostingPeriode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormItemsPostingPeriode.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormItemsSuratTerima.designer.vb">
@@ -221,12 +233,6 @@
       <DependentUpon>FormProsesDetaiMyRequest.vb</DependentUpon>
     </Compile>
     <Compile Include="FormProsesDetaiMyRequest.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormBuatRequestOpenDanClosingPeriode.designer.vb">
-      <DependentUpon>FormBuatRequestOpenDanClosingPeriode.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormBuatRequestOpenDanClosingPeriode.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormBuatRequestCloseAndCancel.designer.vb">
@@ -373,6 +379,24 @@
     <Compile Include="Menu\AlertsSetup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Menu\Profile.Designer.vb">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\ViewBukaValidasi.Designer.vb">
+      <DependentUpon>ViewBukaValidasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\ViewBukaValidasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\BukaValidasi.Designer.vb">
+      <DependentUpon>BukaValidasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\BukaValidasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Menu\DetailFailedItegration.Designer.vb">
       <DependentUpon>DetailFailedItegration.vb</DependentUpon>
     </Compile>
@@ -383,6 +407,12 @@
       <DependentUpon>DetailPerubahanHargaJual.vb</DependentUpon>
     </Compile>
     <Compile Include="Menu\DetailPerubahanHargaJual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\OpenDanClosingPeriode.designer.vb">
+      <DependentUpon>OpenDanClosingPeriode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\OpenDanClosingPeriode.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu\IntegrationMonitoring.Designer.vb">
@@ -504,6 +534,9 @@
     <EmbeddedResource Include="FormBuatPeminjamanAset.resx">
       <DependentUpon>FormBuatPeminjamanAset.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarSolusi.resx">
+      <DependentUpon>FormDaftarSolusi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDataUserALL.resx">
       <DependentUpon>FormDataUserALL.vb</DependentUpon>
     </EmbeddedResource>
@@ -524,6 +557,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormItemsBAPSerahTerima.resx">
       <DependentUpon>FormItemsBAPSerahTerima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormItemsPostingPeriode.resx">
+      <DependentUpon>FormItemsPostingPeriode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormItemsSuratTerima.resx">
       <DependentUpon>FormItemsSuratTerima.vb</DependentUpon>
@@ -551,9 +587,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProsesDetaiMyRequest.resx">
       <DependentUpon>FormProsesDetaiMyRequest.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormBuatRequestOpenDanClosingPeriode.resx">
-      <DependentUpon>FormBuatRequestOpenDanClosingPeriode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuatRequestCloseAndCancel.resx">
       <DependentUpon>FormBuatRequestCloseAndCancel.vb</DependentUpon>
@@ -627,11 +660,23 @@
     <EmbeddedResource Include="Menu\AlertsSetup.resx">
       <DependentUpon>AlertsSetup.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Profile.resx">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\ViewBukaValidasi.resx">
+      <DependentUpon>ViewBukaValidasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\BukaValidasi.resx">
+      <DependentUpon>BukaValidasi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\DetailFailedItegration.resx">
       <DependentUpon>DetailFailedItegration.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\DetailPerubahanHargaJual.resx">
       <DependentUpon>DetailPerubahanHargaJual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\OpenDanClosingPeriode.resx">
+      <DependentUpon>OpenDanClosingPeriode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\IntegrationMonitoring.resx">
       <DependentUpon>IntegrationMonitoring.vb</DependentUpon>
@@ -766,222 +811,222 @@
   <ItemGroup>
     <PublishFile Include="AxShockwaveFlashObjects">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.CrystalReports.Design">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportSource">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.Shared">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.Web">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.Windows.Forms">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="log4net">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="ShockwaveFlashObjects">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="stdole">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>
@@ -1009,6 +1054,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Custom-Icon-Design-Flatastic-5-Message-already-read.ico" />
+    <None Include="Resources\Users  Akses.jpg" />
+    <None Include="Resources\438-4387212_ping-logo-ping-png-transparent-png.png" />
+    <None Include="Resources\validation.png" />
+    <None Include="Resources\Incoming.png" />
+    <None Include="Resources\SO.png" />
+    <None Include="Resources\Pick.png" />
+    <None Include="Resources\Goods Receipt.png" />
+    <None Include="Resources\returns-icon.png" />
+    <None Include="Resources\icon_return_product-300x300.png" />
+    <None Include="Resources\payment.png" />
+    <None Include="Resources\issue-4-433271.png" />
+    <None Include="Resources\Inventory-PNG-HD.png" />
+    <None Include="Resources\Inventory-PNG-Pic.png" />
+    <None Include="Resources\Logistics_delivered_order_shipping_verify_goods_Receipt-512.png" />
     <None Include="Resources\anyar local Print.png" />
     <None Include="Resources\Circle Delivery.png" />
     <None Include="Resources\giphy.gif" />

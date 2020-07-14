@@ -38,10 +38,15 @@ Partial Class DetailFailedItegration
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblJumlahItem = New System.Windows.Forms.Label()
         Me.dgListItemFail = New System.Windows.Forms.DataGridView()
-        Me.txtTotal = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtAlamatCustomer = New System.Windows.Forms.RichTextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtAlamatFullfill = New System.Windows.Forms.RichTextBox()
+        Me.cmdSolusi = New System.Windows.Forms.Button()
         Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -61,6 +66,11 @@ Partial Class DetailFailedItegration
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.cmdSolusi)
+        Me.Panel1.Controls.Add(Me.txtAlamatFullfill)
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.txtAlamatCustomer)
+        Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.txtIntegrationKey)
         Me.Panel1.Controls.Add(Me.Label10)
@@ -75,14 +85,14 @@ Partial Class DetailFailedItegration
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Location = New System.Drawing.Point(13, 90)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(297, 360)
+        Me.Panel1.Size = New System.Drawing.Size(318, 450)
         Me.Panel1.TabIndex = 7
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(94, 154)
+        Me.Label11.Location = New System.Drawing.Point(95, 280)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(90, 16)
         Me.Label11.TabIndex = 13
@@ -91,7 +101,7 @@ Partial Class DetailFailedItegration
         'txtIntegrationKey
         '
         Me.txtIntegrationKey.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIntegrationKey.Location = New System.Drawing.Point(111, 33)
+        Me.txtIntegrationKey.Location = New System.Drawing.Point(130, 33)
         Me.txtIntegrationKey.Name = "txtIntegrationKey"
         Me.txtIntegrationKey.Size = New System.Drawing.Size(183, 22)
         Me.txtIntegrationKey.TabIndex = 12
@@ -109,16 +119,16 @@ Partial Class DetailFailedItegration
         'txtNotifError
         '
         Me.txtNotifError.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtNotifError.Location = New System.Drawing.Point(13, 173)
+        Me.txtNotifError.Location = New System.Drawing.Point(13, 299)
         Me.txtNotifError.Name = "txtNotifError"
-        Me.txtNotifError.Size = New System.Drawing.Size(275, 178)
+        Me.txtNotifError.Size = New System.Drawing.Size(299, 105)
         Me.txtNotifError.TabIndex = 10
         Me.txtNotifError.Text = ""
         '
         'txtCabang
         '
         Me.txtCabang.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCabang.Location = New System.Drawing.Point(111, 116)
+        Me.txtCabang.Location = New System.Drawing.Point(131, 117)
         Me.txtCabang.Name = "txtCabang"
         Me.txtCabang.Size = New System.Drawing.Size(183, 22)
         Me.txtCabang.TabIndex = 9
@@ -127,7 +137,7 @@ Partial Class DetailFailedItegration
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(19, 123)
+        Me.Label7.Location = New System.Drawing.Point(1, 122)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(62, 16)
         Me.Label7.TabIndex = 8
@@ -136,7 +146,7 @@ Partial Class DetailFailedItegration
         'txtNamaCust
         '
         Me.txtNamaCust.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNamaCust.Location = New System.Drawing.Point(111, 89)
+        Me.txtNamaCust.Location = New System.Drawing.Point(130, 90)
         Me.txtNamaCust.Name = "txtNamaCust"
         Me.txtNamaCust.Size = New System.Drawing.Size(183, 22)
         Me.txtNamaCust.TabIndex = 5
@@ -154,7 +164,7 @@ Partial Class DetailFailedItegration
         'txtKodeCust
         '
         Me.txtKodeCust.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtKodeCust.Location = New System.Drawing.Point(111, 61)
+        Me.txtKodeCust.Location = New System.Drawing.Point(129, 61)
         Me.txtKodeCust.Name = "txtKodeCust"
         Me.txtKodeCust.Size = New System.Drawing.Size(183, 22)
         Me.txtKodeCust.TabIndex = 3
@@ -172,7 +182,7 @@ Partial Class DetailFailedItegration
         'txtNoStruk
         '
         Me.txtNoStruk.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNoStruk.Location = New System.Drawing.Point(111, 8)
+        Me.txtNoStruk.Location = New System.Drawing.Point(129, 6)
         Me.txtNoStruk.Name = "txtNoStruk"
         Me.txtNoStruk.Size = New System.Drawing.Size(183, 22)
         Me.txtNoStruk.TabIndex = 1
@@ -204,16 +214,26 @@ Partial Class DetailFailedItegration
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.lblJumlahItem)
         Me.Panel2.Controls.Add(Me.dgListItemFail)
-        Me.Panel2.Location = New System.Drawing.Point(316, 90)
+        Me.Panel2.Location = New System.Drawing.Point(337, 90)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(413, 360)
+        Me.Panel2.Size = New System.Drawing.Size(413, 450)
         Me.Panel2.TabIndex = 9
+        '
+        'txtTotal
+        '
+        Me.txtTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotal.Location = New System.Drawing.Point(209, 425)
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.ReadOnly = True
+        Me.txtTotal.Size = New System.Drawing.Size(201, 22)
+        Me.txtTotal.TabIndex = 10
+        Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(146, 331)
+        Me.Label9.Location = New System.Drawing.Point(155, 425)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(56, 24)
         Me.Label9.TabIndex = 2
@@ -223,7 +243,7 @@ Partial Class DetailFailedItegration
         '
         Me.lblJumlahItem.AutoSize = True
         Me.lblJumlahItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJumlahItem.Location = New System.Drawing.Point(8, 332)
+        Me.lblJumlahItem.Location = New System.Drawing.Point(4, 429)
         Me.lblJumlahItem.Name = "lblJumlahItem"
         Me.lblJumlahItem.Size = New System.Drawing.Size(123, 18)
         Me.lblJumlahItem.TabIndex = 1
@@ -237,18 +257,56 @@ Partial Class DetailFailedItegration
         Me.dgListItemFail.Location = New System.Drawing.Point(5, 10)
         Me.dgListItemFail.Name = "dgListItemFail"
         Me.dgListItemFail.ReadOnly = True
-        Me.dgListItemFail.Size = New System.Drawing.Size(405, 314)
+        Me.dgListItemFail.Size = New System.Drawing.Size(405, 409)
         Me.dgListItemFail.TabIndex = 0
         '
-        'txtTotal
+        'Label6
         '
-        Me.txtTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotal.Location = New System.Drawing.Point(208, 331)
-        Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.ReadOnly = True
-        Me.txtTotal.Size = New System.Drawing.Size(201, 22)
-        Me.txtTotal.TabIndex = 10
-        Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(3, 145)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(125, 16)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "Alamat Customer"
+        '
+        'txtAlamatCustomer
+        '
+        Me.txtAlamatCustomer.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtAlamatCustomer.Location = New System.Drawing.Point(131, 145)
+        Me.txtAlamatCustomer.Name = "txtAlamatCustomer"
+        Me.txtAlamatCustomer.Size = New System.Drawing.Size(183, 51)
+        Me.txtAlamatCustomer.TabIndex = 15
+        Me.txtAlamatCustomer.Text = ""
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(11, 218)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(101, 16)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Alamat Fullfill"
+        '
+        'txtAlamatFullfill
+        '
+        Me.txtAlamatFullfill.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtAlamatFullfill.Location = New System.Drawing.Point(130, 202)
+        Me.txtAlamatFullfill.Name = "txtAlamatFullfill"
+        Me.txtAlamatFullfill.Size = New System.Drawing.Size(183, 67)
+        Me.txtAlamatFullfill.TabIndex = 17
+        Me.txtAlamatFullfill.Text = ""
+        '
+        'cmdSolusi
+        '
+        Me.cmdSolusi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdSolusi.Location = New System.Drawing.Point(13, 410)
+        Me.cmdSolusi.Name = "cmdSolusi"
+        Me.cmdSolusi.Size = New System.Drawing.Size(299, 35)
+        Me.cmdSolusi.TabIndex = 18
+        Me.cmdSolusi.Text = "Solusi"
+        Me.cmdSolusi.UseVisualStyleBackColor = True
         '
         'GunaPictureBox1
         '
@@ -265,7 +323,7 @@ Partial Class DetailFailedItegration
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(733, 453)
+        Me.ClientSize = New System.Drawing.Size(754, 542)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel1)
@@ -306,4 +364,9 @@ Partial Class DetailFailedItegration
     Friend WithEvents txtIntegrationKey As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents txtTotal As System.Windows.Forms.TextBox
+    Friend WithEvents txtAlamatFullfill As System.Windows.Forms.RichTextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtAlamatCustomer As System.Windows.Forms.RichTextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents cmdSolusi As System.Windows.Forms.Button
 End Class

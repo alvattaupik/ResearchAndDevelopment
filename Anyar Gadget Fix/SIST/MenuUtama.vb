@@ -287,16 +287,22 @@ Public Class MenuUtama
     End Sub
 
     Private Sub ShowMyIPToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowMyIPToolStripMenuItem.Click
-        Ping.ShowDialog()
-    End Sub
-
-    Private Sub FormBukaValidasiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FormBukaValidasiToolStripMenuItem.Click
-        Dim frm As New FormBuatRequestBukaValidasi
+        Dim frm As New Ping
 
         frm.MdiParent = Me
         frm.TopMost = True
         frm.Location = New Point(229, 3)
         frm.Show()
+    End Sub
+
+    Private Sub FormBukaValidasiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FormBukaValidasiToolStripMenuItem.Click
+        'Dim frm As New BukaValidasi
+        'frm.MdiParent = Me
+        'frm.TopMost = True
+        'frm.Location = New Point(442, 64)
+        'frm.Show()
+        BukaValidasi.Location = New Point(353, 166)
+        BukaValidasi.ShowDialog()
     End Sub
 
     Private Sub MonitoringMyRequestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MonitoringMyRequestToolStripMenuItem.Click
@@ -306,5 +312,18 @@ Public Class MenuUtama
         frm.TopMost = True
         frm.Location = New Point(229, 3)
         frm.Show()
+    End Sub
+
+    Private Sub FormBukaPostingPeriodeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FormBukaPostingPeriodeToolStripMenuItem.Click
+        OpenDanClosingPeriode.Location = New Point(353, 166)
+        OpenDanClosingPeriode.ShowDialog()
+    End Sub
+
+    Private Sub DaftarBantuanDanPermasalahanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DaftarBantuanDanPermasalahanToolStripMenuItem.Click
+        FormHelp.ShowDialog()
+    End Sub
+
+    Private Sub FotoProfileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FotoProfileToolStripMenuItem.Click
+        Profile.ShowDialog()
     End Sub
 End Class

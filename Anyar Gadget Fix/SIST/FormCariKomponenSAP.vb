@@ -17,6 +17,7 @@ Public Class FormCariKomponenSAP
         dgDaftarKomponenSAP.DataSource = table
         dgDaftarKomponenSAP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
         dgDaftarKomponenSAP.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+        dgDaftarKomponenSAP.RowHeadersVisible = False
         dgDaftarKomponenSAP.AutoResizeColumns()
 
     End Sub
@@ -35,29 +36,31 @@ Public Class FormCariKomponenSAP
 
 
     Private Sub dgDaftarKomponenSAP_Click(sender As Object, e As EventArgs) Handles dgDaftarKomponenSAP.Click
-        If MstrNamaForm = "Buat Request Validasi" Then
-
-            FormBuatRequestBukaValidasi.txtKodeKomponen.Text = dgDaftarKomponenSAP.Item(0, dgDaftarKomponenSAP.CurrentRow.Index).Value
-            FormBuatRequestBukaValidasi.txtKomponen.Text = dgDaftarKomponenSAP.Item(2, dgDaftarKomponenSAP.CurrentRow.Index).Value
-            dgDaftarKomponenSAP.DataSource = Nothing
+        If MstrNamaForm = "IT003" Then
+            BukaValidasi.txtKodeKomponenSAP.Text = dgDaftarKomponenSAP.Item(0, dgDaftarKomponenSAP.CurrentRow.Index).Value
+            BukaValidasi.txtKomponenSAP.Text = dgDaftarKomponenSAP.Item(2, dgDaftarKomponenSAP.CurrentRow.Index).Value
             Me.Close()
         End If
 
-        If MstrNamaForm = "Buat Request Cancel Dan Close" Then
 
-            FormBuatRequestCloseAndCancel.txtKodeKomponen.Text = dgDaftarKomponenSAP.Item(0, dgDaftarKomponenSAP.CurrentRow.Index).Value
-            FormBuatRequestCloseAndCancel.txtKomponen.Text = dgDaftarKomponenSAP.Item(2, dgDaftarKomponenSAP.CurrentRow.Index).Value
-            dgDaftarKomponenSAP.DataSource = Nothing
+        If MstrNamaForm = "IT005" Then
+            OpenDanClosingPeriode.txtKodeKomponen.Text = dgDaftarKomponenSAP.Item(0, dgDaftarKomponenSAP.CurrentRow.Index).Value
+            OpenDanClosingPeriode.txtKomponen.Text = dgDaftarKomponenSAP.Item(2, dgDaftarKomponenSAP.CurrentRow.Index).Value
             Me.Close()
         End If
 
-        If MstrNamaForm = "Buat Request Close Dan Open Periode" Then
-            FormBuatRequestOpenDanClosingPeriode.txtKodeKomponen.Text = dgDaftarKomponenSAP.Item(0, dgDaftarKomponenSAP.CurrentRow.Index).Value
-            FormBuatRequestOpenDanClosingPeriode.txtKomponen.Text = dgDaftarKomponenSAP.Item(2, dgDaftarKomponenSAP.CurrentRow.Index).Value
-            dgDaftarKomponenSAP.DataSource = Nothing
-            Me.Close()
-        End If
 
 
     End Sub
+
+   
+    'Private Sub dgDaftarKomponenSAP_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgDaftarKomponenSAP.CellContentClick
+    '    If MstrNamaForm = "IT003" Then
+
+    '        BukaValidasi.txtKodeKomponenSAP.Text = dgDaftarKomponenSAP.Item(0, dgDaftarKomponenSAP.CurrentRow.Index).Value
+    '        BukaValidasi.txtKomponenSAP.Text = dgDaftarKomponenSAP.Item(2, dgDaftarKomponenSAP.CurrentRow.Index).Value
+    '        'dgDaftarKomponenSAP.DataSource = Nothing
+    '        Me.Close()
+    '    End If
+    'End Sub
 End Class
