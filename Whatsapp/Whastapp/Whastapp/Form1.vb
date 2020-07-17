@@ -132,6 +132,10 @@ Public Class Form1
     End Sub
 
     Sub LoadManualDiscount()
+
+
+
+
         cryRpt = New WAManualDiscount
         Module_Konfigurasi_laporan()
         CrystalReportViewer1.ReportSource = strLokasiFile

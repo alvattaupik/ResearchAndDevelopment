@@ -133,9 +133,9 @@ Partial Class Form1
         'cmdKirim
         '
         Me.cmdKirim.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdKirim.Location = New System.Drawing.Point(12, 474)
+        Me.cmdKirim.Location = New System.Drawing.Point(334, 474)
         Me.cmdKirim.Name = "cmdKirim"
-        Me.cmdKirim.Size = New System.Drawing.Size(484, 40)
+        Me.cmdKirim.Size = New System.Drawing.Size(162, 40)
         Me.cmdKirim.TabIndex = 28
         Me.cmdKirim.Text = "Kirim"
         Me.cmdKirim.UseVisualStyleBackColor = True
