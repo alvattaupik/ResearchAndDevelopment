@@ -125,6 +125,42 @@ Namespace My
                 Me("LokasiFileReport") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property KalimatAutoReply() As String
+            Get
+                Return CType(Me("KalimatAutoReply"),String)
+            End Get
+            Set
+                Me("KalimatAutoReply") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property KodeCabang() As String
+            Get
+                Return CType(Me("KodeCabang"),String)
+            End Get
+            Set
+                Me("KodeCabang") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property NamaCabang() As String
+            Get
+                Return CType(Me("NamaCabang"),String)
+            End Get
+            Set
+                Me("NamaCabang") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

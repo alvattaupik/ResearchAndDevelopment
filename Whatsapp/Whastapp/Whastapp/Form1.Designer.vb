@@ -25,11 +25,8 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.rbNormalMode = New System.Windows.Forms.RadioButton()
+        Me.rbStealthMode = New System.Windows.Forms.RadioButton()
         Me.cmdKirim = New System.Windows.Forms.Button()
         Me.dglistkontak = New System.Windows.Forms.DataGridView()
         Me.btnStart = New System.Windows.Forms.Button()
@@ -44,21 +41,38 @@ Partial Class Form1
         Me.MasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KontakToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IsiPesanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerExecute = New System.Windows.Forms.Timer(Me.components)
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.lblnext = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.lblNextExecute = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.lblIntervalTimer = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.cmdGetContactList = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblStatusPengiriman = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.chkAktif = New System.Windows.Forms.CheckBox()
+        Me.lvDaftarPesan = New System.Windows.Forms.ListBox()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dglistkontak, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(130, 40)
+        Me.Label3.Location = New System.Drawing.Point(199, 27)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(297, 25)
         Me.Label3.TabIndex = 31
@@ -66,74 +80,43 @@ Partial Class Form1
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 87)
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.rbNormalMode)
+        Me.GroupBox1.Controls.Add(Me.rbStealthMode)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 87)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(304, 75)
+        Me.GroupBox1.Size = New System.Drawing.Size(192, 75)
         Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
         '
-        'Label2
+        'rbNormalMode
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(10, 40)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 24)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Services"
+        Me.rbNormalMode.AutoSize = True
+        Me.rbNormalMode.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbNormalMode.Location = New System.Drawing.Point(19, 40)
+        Me.rbNormalMode.Name = "rbNormalMode"
+        Me.rbNormalMode.Size = New System.Drawing.Size(169, 29)
+        Me.rbNormalMode.TabIndex = 37
+        Me.rbNormalMode.TabStop = True
+        Me.rbNormalMode.Text = "Normal Mode"
+        Me.rbNormalMode.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'rbStealthMode
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(142, 44)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(156, 24)
-        Me.RadioButton2.TabIndex = 2
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Send Broadcast"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(142, 14)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(146, 24)
-        Me.RadioButton1.TabIndex = 1
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Send Message"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(105, 24)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Command"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Whastapp.My.Resources.Resources.unnamed
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 27)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(67, 58)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 29
-        Me.PictureBox1.TabStop = False
+        Me.rbStealthMode.AutoSize = True
+        Me.rbStealthMode.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbStealthMode.Location = New System.Drawing.Point(19, 10)
+        Me.rbStealthMode.Name = "rbStealthMode"
+        Me.rbStealthMode.Size = New System.Drawing.Size(169, 29)
+        Me.rbStealthMode.TabIndex = 36
+        Me.rbStealthMode.TabStop = True
+        Me.rbStealthMode.Text = "Stealth Mode"
+        Me.rbStealthMode.UseVisualStyleBackColor = True
         '
         'cmdKirim
         '
         Me.cmdKirim.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdKirim.Location = New System.Drawing.Point(334, 474)
+        Me.cmdKirim.Location = New System.Drawing.Point(357, 474)
         Me.cmdKirim.Name = "cmdKirim"
         Me.cmdKirim.Size = New System.Drawing.Size(162, 40)
         Me.cmdKirim.TabIndex = 28
@@ -149,15 +132,15 @@ Partial Class Form1
         Me.dglistkontak.Name = "dglistkontak"
         Me.dglistkontak.ReadOnly = True
         Me.dglistkontak.RowHeadersVisible = False
-        Me.dglistkontak.Size = New System.Drawing.Size(484, 112)
+        Me.dglistkontak.Size = New System.Drawing.Size(508, 112)
         Me.dglistkontak.TabIndex = 27
         '
         'btnStart
         '
         Me.btnStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnStart.Location = New System.Drawing.Point(325, 94)
+        Me.btnStart.Location = New System.Drawing.Point(204, 94)
         Me.btnStart.Name = "btnStart"
-        Me.btnStart.Size = New System.Drawing.Size(163, 32)
+        Me.btnStart.Size = New System.Drawing.Size(315, 32)
         Me.btnStart.TabIndex = 25
         Me.btnStart.Text = "Start Service"
         Me.btnStart.UseVisualStyleBackColor = True
@@ -166,9 +149,9 @@ Partial Class Form1
         '
         Me.btnStop.Enabled = False
         Me.btnStop.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnStop.Location = New System.Drawing.Point(325, 132)
+        Me.btnStop.Location = New System.Drawing.Point(204, 133)
         Me.btnStop.Name = "btnStop"
-        Me.btnStop.Size = New System.Drawing.Size(163, 29)
+        Me.btnStop.Size = New System.Drawing.Size(315, 29)
         Me.btnStop.TabIndex = 26
         Me.btnStop.Text = "Stop Service"
         Me.btnStop.UseVisualStyleBackColor = True
@@ -180,14 +163,14 @@ Partial Class Form1
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(12, 320)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(484, 150)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(507, 150)
         Me.CrystalReportViewer1.TabIndex = 32
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(166, 174)
+        Me.Label4.Location = New System.Drawing.Point(12, 174)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(182, 25)
         Me.Label4.TabIndex = 33
@@ -195,10 +178,11 @@ Partial Class Form1
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.SettingToolStripMenuItem, Me.MasterToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(499, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(826, 24)
         Me.MenuStrip1.TabIndex = 34
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -212,7 +196,7 @@ Partial Class Form1
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(93, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'SettingToolStripMenuItem
@@ -247,26 +231,176 @@ Partial Class Form1
         Me.IsiPesanToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.IsiPesanToolStripMenuItem.Text = "Isi Pesan"
         '
+        'TimerExecute
+        '
+        Me.TimerExecute.Interval = 1000
+        '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblnext})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblNextExecute, Me.lblIntervalTimer})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 515)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(499, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(826, 22)
         Me.StatusStrip1.TabIndex = 35
         Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'lblnext
+        'lblNextExecute
         '
-        Me.lblnext.Name = "lblnext"
-        Me.lblnext.Size = New System.Drawing.Size(135, 17)
-        Me.lblnext.Text = "Next Execution Plan In 0"
+        Me.lblNextExecute.Name = "lblNextExecute"
+        Me.lblNextExecute.Size = New System.Drawing.Size(109, 17)
+        Me.lblNextExecute.Text = "Next Execution In 0"
+        '
+        'lblIntervalTimer
+        '
+        Me.lblIntervalTimer.Name = "lblIntervalTimer"
+        Me.lblIntervalTimer.Size = New System.Drawing.Size(88, 17)
+        Me.lblIntervalTimer.Text = "Interval Timer : "
+        '
+        'cmdGetContactList
+        '
+        Me.cmdGetContactList.Enabled = False
+        Me.cmdGetContactList.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdGetContactList.Location = New System.Drawing.Point(4, 8)
+        Me.cmdGetContactList.Name = "cmdGetContactList"
+        Me.cmdGetContactList.Size = New System.Drawing.Size(259, 40)
+        Me.cmdGetContactList.TabIndex = 36
+        Me.cmdGetContactList.Text = "Lihat Daftar Kontak"
+        Me.cmdGetContactList.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.lblStatusPengiriman)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Location = New System.Drawing.Point(539, 202)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(275, 112)
+        Me.Panel1.TabIndex = 37
+        '
+        'lblStatusPengiriman
+        '
+        Me.lblStatusPengiriman.AutoSize = True
+        Me.lblStatusPengiriman.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStatusPengiriman.Location = New System.Drawing.Point(0, 54)
+        Me.lblStatusPengiriman.Name = "lblStatusPengiriman"
+        Me.lblStatusPengiriman.Size = New System.Drawing.Size(220, 24)
+        Me.lblStatusPengiriman.TabIndex = 35
+        Me.lblStatusPengiriman.Text = "Telah Terkirim 0 dari 0"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(97, 10)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(79, 25)
+        Me.Label1.TabIndex = 34
+        Me.Label1.Text = "Status"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.chkAktif)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Location = New System.Drawing.Point(537, 322)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(276, 32)
+        Me.Panel2.TabIndex = 39
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(5, 10)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(92, 16)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Baca Pesan"
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.Controls.Add(Me.RadioButton2)
+        Me.Panel3.Controls.Add(Me.RadioButton1)
+        Me.Panel3.Controls.Add(Me.Label5)
+        Me.Panel3.Controls.Add(Me.cmdGetContactList)
+        Me.Panel3.Location = New System.Drawing.Point(539, 37)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(270, 124)
+        Me.Panel3.TabIndex = 40
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton2.Location = New System.Drawing.Point(166, 86)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(101, 24)
+        Me.RadioButton2.TabIndex = 39
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "Non Aktif"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton1.Location = New System.Drawing.Point(102, 85)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(64, 24)
+        Me.RadioButton1.TabIndex = 38
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Aktif"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(1, 85)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(102, 20)
+        Me.Label5.TabIndex = 37
+        Me.Label5.Text = "Auto Reply:"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Whastapp.My.Resources.Resources.unnamed
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 27)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(67, 58)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 29
+        Me.PictureBox1.TabStop = False
+        '
+        'chkAktif
+        '
+        Me.chkAktif.AutoSize = True
+        Me.chkAktif.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkAktif.Location = New System.Drawing.Point(104, 9)
+        Me.chkAktif.Name = "chkAktif"
+        Me.chkAktif.Size = New System.Drawing.Size(57, 20)
+        Me.chkAktif.TabIndex = 1
+        Me.chkAktif.Text = "Aktif"
+        Me.chkAktif.UseVisualStyleBackColor = True
+        '
+        'lvDaftarPesan
+        '
+        Me.lvDaftarPesan.FormattingEnabled = True
+        Me.lvDaftarPesan.Location = New System.Drawing.Point(537, 360)
+        Me.lvDaftarPesan.Name = "lvDaftarPesan"
+        Me.lvDaftarPesan.Size = New System.Drawing.Size(276, 147)
+        Me.lvDaftarPesan.TabIndex = 41
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(499, 537)
+        Me.ClientSize = New System.Drawing.Size(826, 537)
+        Me.Controls.Add(Me.lvDaftarPesan)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.CrystalReportViewer1)
@@ -284,22 +418,24 @@ Partial Class Form1
         Me.Text = "Whatsapp Automation"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dglistkontak, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents cmdKirim As System.Windows.Forms.Button
     Friend WithEvents dglistkontak As System.Windows.Forms.DataGridView
@@ -315,8 +451,23 @@ Partial Class Form1
     Friend WithEvents MasterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents KontakToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents IsiPesanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents TimerExecute As System.Windows.Forms.Timer
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
-    Friend WithEvents lblnext As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents lblNextExecute As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents rbStealthMode As System.Windows.Forms.RadioButton
+    Friend WithEvents rbNormalMode As System.Windows.Forms.RadioButton
+    Friend WithEvents cmdGetContactList As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents lblStatusPengiriman As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents lblIntervalTimer As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents chkAktif As System.Windows.Forms.CheckBox
+    Friend WithEvents lvDaftarPesan As System.Windows.Forms.ListBox
 
 End Class

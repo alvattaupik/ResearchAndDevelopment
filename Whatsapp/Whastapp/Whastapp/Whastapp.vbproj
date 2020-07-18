@@ -75,10 +75,6 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\AxShockwaveFlashObjects.dll</HintPath>
-    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
@@ -94,10 +90,15 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="WebDriver">
+    <Reference Include="WaitCursor">
+      <HintPath>..\..\..\WhatsAppNETClient\libs\WaitCursor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\WhatsAppNETClient\libs\net45\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WhatsAppNETAPI">
+    <Reference Include="WhatsAppNETAPI, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\WhatsAppNETClient\libs\net45\WhatsAppNETAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -128,6 +129,19 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DaftarKontak.Designer.vb">
+      <DependentUpon>DaftarKontak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DaftarKontak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterKontak.Designer.vb">
+      <DependentUpon>MasterKontak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterKontak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul\CrossThreadExtensions.vb" />
     <Compile Include="Modul\ModuleKoneksi.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -144,6 +158,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="QRCode.Designer.vb">
+      <DependentUpon>QRCode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="QRCode.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SettingAplikasi.Designer.vb">
       <DependentUpon>SettingAplikasi.vb</DependentUpon>
     </Compile>
@@ -159,11 +179,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DaftarKontak.resx">
+      <DependentUpon>DaftarKontak.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterKontak.resx">
+      <DependentUpon>MasterKontak.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QRCode.resx">
+      <DependentUpon>QRCode.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingAplikasi.resx">
       <DependentUpon>SettingAplikasi.vb</DependentUpon>
@@ -389,6 +418,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Driver\chromedriver.exe" />
+    <None Include="Resources\whatsapp_PNG7.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

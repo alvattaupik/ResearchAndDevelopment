@@ -1,7 +1,10 @@
-﻿Imports WhatsAppNETAPI
+﻿Imports System.Collections.Generic
+Imports System.Threading
+Imports WhatsAppNETAPI
 Imports System.Data.SqlClient
 Imports CrystalDecisions.Shared
 Imports CrystalDecisions.CrystalReports.Engine
+Imports ConceptCave.WaitCursor
 
 
 Public Class Form1
@@ -11,6 +14,7 @@ Public Class Form1
     Dim MdblDurasiDetikTimerNotifikasi As Double = 30
     Dim second As Integer
     Dim bolStatusTimer As Boolean = False
+    Dim bolStatusRecord As Boolean = False
 
 
     Dim intDelaySendMessageLampiran As Integer
@@ -24,6 +28,11 @@ Public Class Form1
 
     Dim strSatuanInterval As String
     Dim intDurasi As Integer
+
+    Dim strKalimatAutoReply As String
+
+    Dim DblTimer As Double
+    Dim dblTempTimer As Double
 
     Private _whatsAppApi As IWhatsAppNETAPI
 
@@ -59,18 +68,40 @@ Public Class Form1
 
         _whatsAppApi = New WhatsAppNETAPI.WhatsAppNETAPI()
         Dim url = "https://web.whatsapp.com"
+        Using New StCursor(Cursors.WaitCursor, New TimeSpan(0, 0, 0, 0))
+
+            If (_whatsAppApi.Connect(url, rbStealthMode.Checked)) Then
+                While (Not _whatsAppApi.OnReady())
+                    If rbStealthMode.Checked Then
+                        If _whatsAppApi.IsScanMe() Then
+                            Dim frmScanQRCode = New QRCode(_whatsAppApi)
+                            frmScanQRCode.ShowDialog()
+                        End If
+                    End If
+                    Thread.Sleep(1000)
+                End While
+
+                btnStart.Enabled = False
+                btnStop.Enabled = True
+                cmdGetContactList.Enabled = True
+                TimerExecute.Start()
 
 
-        If (_whatsAppApi.Connect(url)) Then
 
-            While (Not _whatsAppApi.OnReady())
-                Tunggu(1)
-            End While
 
-            btnStart.Enabled = False
-            btnStop.Enabled = True
+            Else
+                _whatsAppApi.Disconnect()
+            End If
 
-        End If
+        End Using
+
+
+
+
+
+
+
+
     End Sub
 
 
@@ -86,30 +117,57 @@ Public Class Form1
 
 
     Sub LoopDaftarPenerima()
-
-        LoadManualDiscount()
-        LoadKonfigurasi()
-        ExportDokumen()
+        CekStatusRow()
 
 
-        For i As Integer = 0 To dglistkontak.Rows.Count - 1
+        If bolStatusRecord = True Then
+            LoadManualDiscount()
+            LoadKonfigurasi()
+            ExportDokumen()
+        Else
+            Exit Sub
+        End If
 
 
-            If (Not String.IsNullOrEmpty(strPathExport)) Then
-                _whatsAppApi.SendMessage(New MsgArgs(dglistkontak.Rows(i).Cells("NoTelepon").Value, dglistkontak.Rows(i).Cells("CustomMessage").Value, strPathExport))
 
-                Tunggu(intDelaySendMessageLampiran)
+        If strPathExport <> "" Then
 
-
-            Else
+            For i As Integer = 0 To dglistkontak.Rows.Count - 1
                 _whatsAppApi.SendMessage(New MsgArgs(dglistkontak.Rows(i).Cells("NoTelepon").Value, dglistkontak.Rows(i).Cells("CustomMessage").Value))
 
                 Tunggu(intDelaySendMessageTanpaLampiran)
-            End If
+            Next
 
 
+            GoTo Lampiran
+
+        Else
+
+            For i As Integer = 0 To dglistkontak.Rows.Count - 1
+                _whatsAppApi.SendMessage(New MsgArgs(dglistkontak.Rows(i).Cells("NoTelepon").Value, dglistkontak.Rows(i).Cells("CustomMessage").Value))
+
+                Tunggu(intDelaySendMessageTanpaLampiran)
+            Next
+
+        End If
+
+        Exit Sub
+
+
+Lampiran:
+
+        For i As Integer = 0 To dglistkontak.Rows.Count - 1
+
+            _whatsAppApi.SendMessage(New MsgArgs(dglistkontak.Rows(i).Cells("NoTelepon").Value, "", strPathExport))
+
+            Tunggu(intDelaySendMessageLampiran)
+
+            lblStatusPengiriman.Text = "Telah Terkirim" & dglistkontak.Rows.Count - 1 & " Dari " & dglistkontak.Rows.Count & " Penerima"
 
         Next
+        LoadKonfigurasi()
+        TimerExecute.Start()
+
 
 
     End Sub
@@ -118,7 +176,7 @@ Public Class Form1
     Sub LoadDaftarKontak()
         On Error Resume Next
         Call KoneksiDatabase1()
-        Dim cmd As New SqlCommand("SELECT NoTelepon,NamaPenerima,CustomMessage FROM dbo.WaReceiver", Koneksi1)
+        Dim cmd As New SqlCommand("SELECT NoTelepon,NamaPenerima,CustomMessage FROM dbo.KontakWhatsapp", Koneksi1)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -180,6 +238,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadDaftarKontak()
+        lblIntervalTimer.Text = "Interval " & My.Settings.NilaiInterval & " " & My.Settings.SatuanInterval
     End Sub
 
     Private Sub AplikasiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AplikasiToolStripMenuItem.Click
@@ -201,11 +260,16 @@ Public Class Form1
             'txtBCLampiran.Text = .DelayBCLampiran
             'txtBCTanpaLampiran.Text = .DelayBCTanpaLampiran
 
+            strSatuanInterval = .SatuanInterval
+
             If strSatuanInterval = "H" Then
                 intDurasi = My.Settings.NilaiInterval * 3600
             Else
                 intDurasi = My.Settings.NilaiInterval * 60
             End If
+
+            strKalimatAutoReply = .KalimatAutoReply
+
 
         End With
     End Sub
@@ -218,4 +282,98 @@ Public Class Form1
         btnStart.Enabled = True
         btnStop.Enabled = False
     End Sub
+
+    Private Sub cmdGetContactList_Click(sender As Object, e As EventArgs) Handles cmdGetContactList.Click
+        Using New StCursor(Cursors.WaitCursor, New TimeSpan(0, 0, 0, 0))
+            Dim contacts = _whatsAppApi.GrabContacts()
+
+            Dim frmContact = New DaftarKontak(contacts)
+            frmContact.ShowDialog()
+        End Using
+    End Sub
+
+    Private Sub TimerExecute_Tick(sender As Object, e As EventArgs) Handles TimerExecute.Tick
+
+        intDurasi = intDurasi - 1
+
+        lblNextExecute.Text = "Next Execution In " & intDurasi.ToString
+
+        If lblNextExecute.Text = "Next Execution In 0" Then
+            TimerExecute.Stop()
+            cmdKirim.PerformClick()
+        End If
+
+
+    End Sub
+
+
+
+
+    Sub CekStatusRow()
+
+        KoneksiDatabase2()
+        Dim command As SqlCommand
+        command = New SqlCommand("tmspNotifikasiManualDiskonWA", Koneksi2)
+
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+
+
+
+        Dim table As New DataTable
+        adapter.Fill(table)
+
+
+        If table.Rows.Count = 0 Then
+            bolStatusRecord = False
+            
+            Exit Sub
+        Else
+            bolStatusRecord = True
+        End If
+    End Sub
+
+    Private Sub KontakToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KontakToolStripMenuItem.Click
+        MasterKontak.ShowDialog()
+    End Sub
+
+ 
+
+
+
+    Private Sub chkAktif_CheckedChanged(sender As Object, e As EventArgs) Handles chkAktif.CheckedChanged
+
+
+        If (chkAktif.Checked) Then
+            AddHandler _whatsAppApi.OnMessageRecieved, AddressOf OnMessageRecievedEventHandler
+            _whatsAppApi.MessageSubscribe()
+        Else
+            RemoveHandler _whatsAppApi.OnMessageRecieved, AddressOf OnMessageRecievedEventHandler
+            lvDaftarPesan.Items.Clear()
+        End If
+    End Sub
+
+
+
+
+
+
+    Private Sub OnMessageRecievedEventHandler(e As MsgArgs)
+        Dim msg = String.Format("[{0}] {1}: {2}",
+                e.TimeStamp.ToString("yyyy-MM-dd HH:mm:ss"), e.Sender, e.Msg)
+
+        ' karena pesan yang masuk beda thread, 
+        ' jadi harus menggunakan cara seperti ini untuk mengupdate UI
+        lvDaftarPesan.Invoke(
+            Sub()
+                lvDaftarPesan.Items.Add(msg)
+                lvDaftarPesan.SelectedIndex = lvDaftarPesan.Items.Count - 1
+            End Sub
+        )
+
+      
+    End Sub
+
+
+
 End Class

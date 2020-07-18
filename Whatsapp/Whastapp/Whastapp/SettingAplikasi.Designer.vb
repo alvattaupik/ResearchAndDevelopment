@@ -44,12 +44,21 @@ Partial Class SettingAplikasi
         Me.txtDelaySendMessageLampiran = New System.Windows.Forms.TextBox()
         Me.txtpathExportDocument = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.txtLokasiFile = New System.Windows.Forms.TextBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtAutoReply = New System.Windows.Forms.RichTextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.cmbLokasi = New System.Windows.Forms.ComboBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -65,10 +74,10 @@ Partial Class SettingAplikasi
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(166, 31)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(128, 23)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(166, 20)
+        Me.Label7.Size = New System.Drawing.Size(291, 33)
         Me.Label7.TabIndex = 24
         Me.Label7.Text = "Konfigurasi Aplikasi"
         '
@@ -85,9 +94,9 @@ Partial Class SettingAplikasi
         'cmdSimpan
         '
         Me.cmdSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdSimpan.Location = New System.Drawing.Point(6, 283)
+        Me.cmdSimpan.Location = New System.Drawing.Point(6, 467)
         Me.cmdSimpan.Name = "cmdSimpan"
-        Me.cmdSimpan.Size = New System.Drawing.Size(473, 58)
+        Me.cmdSimpan.Size = New System.Drawing.Size(474, 45)
         Me.cmdSimpan.TabIndex = 21
         Me.cmdSimpan.Text = "Simpan"
         Me.cmdSimpan.UseVisualStyleBackColor = True
@@ -101,9 +110,9 @@ Partial Class SettingAplikasi
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.txtDurasi)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Location = New System.Drawing.Point(296, 166)
+        Me.Panel1.Location = New System.Drawing.Point(296, 231)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(183, 110)
+        Me.Panel1.Size = New System.Drawing.Size(183, 107)
         Me.Panel1.TabIndex = 20
         '
         'cmbSatuanInterval
@@ -119,7 +128,7 @@ Partial Class SettingAplikasi
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(3, 32)
+        Me.Label12.Location = New System.Drawing.Point(3, 28)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(60, 18)
         Me.Label12.TabIndex = 27
@@ -129,7 +138,7 @@ Partial Class SettingAplikasi
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(6, 77)
+        Me.Label11.Location = New System.Drawing.Point(3, 72)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(57, 18)
         Me.Label11.TabIndex = 26
@@ -147,7 +156,7 @@ Partial Class SettingAplikasi
         '
         'txtDurasi
         '
-        Me.txtDurasi.Location = New System.Drawing.Point(76, 77)
+        Me.txtDurasi.Location = New System.Drawing.Point(70, 72)
         Me.txtDurasi.Name = "txtDurasi"
         Me.txtDurasi.Size = New System.Drawing.Size(44, 20)
         Me.txtDurasi.TabIndex = 22
@@ -171,9 +180,9 @@ Partial Class SettingAplikasi
         Me.GroupBox1.Controls.Add(Me.txtDelaySendMessageTanpaLampiran)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtDelaySendMessageLampiran)
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 163)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 228)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(281, 110)
+        Me.GroupBox1.Size = New System.Drawing.Size(281, 113)
         Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Send Message"
@@ -252,46 +261,130 @@ Partial Class SettingAplikasi
         '
         'txtpathExportDocument
         '
-        Me.txtpathExportDocument.Location = New System.Drawing.Point(182, 107)
+        Me.txtpathExportDocument.Location = New System.Drawing.Point(177, 124)
         Me.txtpathExportDocument.Name = "txtpathExportDocument"
-        Me.txtpathExportDocument.Size = New System.Drawing.Size(294, 20)
+        Me.txtpathExportDocument.Size = New System.Drawing.Size(303, 20)
         Me.txtpathExportDocument.TabIndex = 18
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(7, 105)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(7, 121)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(152, 20)
+        Me.Label3.Size = New System.Drawing.Size(102, 16)
         Me.Label3.TabIndex = 23
-        Me.Label3.Text = "Lokasi Export File"
+        Me.Label3.Text = "Lokasi Export"
+        '
+        'txtLokasiFile
+        '
+        Me.txtLokasiFile.Location = New System.Drawing.Point(177, 171)
+        Me.txtLokasiFile.Name = "txtLokasiFile"
+        Me.txtLokasiFile.Size = New System.Drawing.Size(299, 20)
+        Me.txtLokasiFile.TabIndex = 25
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.txtAutoReply)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(7, 340)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(472, 127)
+        Me.GroupBox2.TabIndex = 26
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Kalimat Auto Reply"
+        '
+        'txtAutoReply
+        '
+        Me.txtAutoReply.Location = New System.Drawing.Point(4, 20)
+        Me.txtAutoReply.Name = "txtAutoReply"
+        Me.txtAutoReply.Size = New System.Drawing.Size(462, 92)
+        Me.txtAutoReply.TabIndex = 0
+        Me.txtAutoReply.Text = ""
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(4, 95)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(106, 20)
+        Me.Label14.TabIndex = 27
+        Me.Label14.Text = "Lokasi Saya"
+        '
+        'cmbLokasi
+        '
+        Me.cmbLokasi.FormattingEnabled = True
+        Me.cmbLokasi.Location = New System.Drawing.Point(177, 97)
+        Me.cmbLokasi.Name = "cmbLokasi"
+        Me.cmbLokasi.Size = New System.Drawing.Size(302, 21)
+        Me.cmbLokasi.TabIndex = 28
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.ForeColor = System.Drawing.Color.Red
+        Me.Label15.Location = New System.Drawing.Point(174, 147)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(267, 13)
+        Me.Label15.TabIndex = 29
+        Me.Label15.Text = "* Wajib Di isi bila menggunakan lampiran Crystal Report"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.ForeColor = System.Drawing.Color.Red
+        Me.Label16.Location = New System.Drawing.Point(174, 194)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(267, 13)
+        Me.Label16.TabIndex = 30
+        Me.Label16.Text = "* Wajib Di isi bila menggunakan lampiran Crystal Report"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(6, 137)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(107, 16)
+        Me.Label17.TabIndex = 31
+        Me.Label17.Text = "Crystal Report"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(7, 133)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(6, 166)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(155, 20)
-        Me.Label13.TabIndex = 24
-        Me.Label13.Text = "Lokasi File Report"
+        Me.Label13.Size = New System.Drawing.Size(84, 16)
+        Me.Label13.TabIndex = 32
+        Me.Label13.Text = "Lokasi File"
         '
-        'txtLokasiFile
+        'Label18
         '
-        Me.txtLokasiFile.Location = New System.Drawing.Point(182, 135)
-        Me.txtLokasiFile.Name = "txtLokasiFile"
-        Me.txtLokasiFile.Size = New System.Drawing.Size(294, 20)
-        Me.txtLokasiFile.TabIndex = 25
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(6, 182)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(107, 16)
+        Me.Label18.TabIndex = 33
+        Me.Label18.Text = "Crystal Report"
         '
         'SettingAplikasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(482, 348)
-        Me.Controls.Add(Me.txtLokasiFile)
+        Me.ClientSize = New System.Drawing.Size(486, 516)
+        Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.cmbLokasi)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.txtLokasiFile)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.cmdSimpan)
@@ -309,6 +402,7 @@ Partial Class SettingAplikasi
         Me.Panel1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -335,6 +429,14 @@ Partial Class SettingAplikasi
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents txtLokasiFile As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents txtAutoReply As System.Windows.Forms.RichTextBox
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents cmbLokasi As System.Windows.Forms.ComboBox
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label18 As System.Windows.Forms.Label
 End Class
