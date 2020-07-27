@@ -278,9 +278,14 @@ Public Class MonitoringDelivery
         Me.dgItemDelivery.DataSource = table
         dgItemDelivery.DataSource = table
         dgItemDelivery.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-        dgItemDelivery.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopCenter
-        dgItemDelivery.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopCenter
-        dgItemDelivery.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopCenter
+        dgItemDelivery.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight
+        dgItemDelivery.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight
+        dgItemDelivery.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight
+        dgItemDelivery.Columns(4).DefaultCellStyle.Format = "N0"
+        dgItemDelivery.Columns(5).DefaultCellStyle.Format = "N0"
+        dgItemDelivery.Columns(6).DefaultCellStyle.Format = "N0"
+
+
         dgItemDelivery.AutoResizeColumns()
         dgItemDelivery.RowHeadersVisible = False
         lblJumlahItemTransaksi.Text = "Jumlah Item : " & dgItemDelivery.RowCount
@@ -332,6 +337,10 @@ Public Class MonitoringDelivery
     End Sub
 
     Private Sub AvailableToPromiseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AvailableToPromiseToolStripMenuItem.Click
+
+        If dgItemDelivery.Rows.Count = 0 Then Exit Sub
+
+
         Dim frm As New FormAvailableToPromise
 
         frm.MdiParent = MenuUtama

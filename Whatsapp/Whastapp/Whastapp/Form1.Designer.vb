@@ -52,12 +52,11 @@ Partial Class Form1
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.chkAktif = New System.Windows.Forms.CheckBox()
         Me.lvDaftarPesan = New System.Windows.Forms.ListBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.chkAutoReply = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dglistkontak, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -272,7 +271,7 @@ Partial Class Form1
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Panel1.Controls.Add(Me.lblStatusPengiriman)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(539, 202)
+        Me.Panel1.Location = New System.Drawing.Point(539, 207)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(275, 112)
         Me.Panel1.TabIndex = 37
@@ -281,7 +280,7 @@ Partial Class Form1
         '
         Me.lblStatusPengiriman.AutoSize = True
         Me.lblStatusPengiriman.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStatusPengiriman.Location = New System.Drawing.Point(0, 54)
+        Me.lblStatusPengiriman.Location = New System.Drawing.Point(12, 56)
         Me.lblStatusPengiriman.Name = "lblStatusPengiriman"
         Me.lblStatusPengiriman.Size = New System.Drawing.Size(220, 24)
         Me.lblStatusPengiriman.TabIndex = 35
@@ -300,68 +299,33 @@ Partial Class Form1
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.chkAutoReply)
+        Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.chkAktif)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(537, 322)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(276, 32)
+        Me.Panel2.Size = New System.Drawing.Size(276, 58)
         Me.Panel2.TabIndex = 39
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(5, 10)
+        Me.Label2.Location = New System.Drawing.Point(-1, 7)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(92, 16)
+        Me.Label2.Size = New System.Drawing.Size(153, 16)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Baca Pesan"
+        Me.Label2.Text = "Pesan Belum Dibaca"
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.Controls.Add(Me.RadioButton2)
-        Me.Panel3.Controls.Add(Me.RadioButton1)
-        Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.cmdGetContactList)
-        Me.Panel3.Location = New System.Drawing.Point(539, 37)
+        Me.Panel3.Location = New System.Drawing.Point(539, 95)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(270, 124)
+        Me.Panel3.Size = New System.Drawing.Size(270, 68)
         Me.Panel3.TabIndex = 40
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(166, 86)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(101, 24)
-        Me.RadioButton2.TabIndex = 39
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Non Aktif"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(102, 85)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(64, 24)
-        Me.RadioButton1.TabIndex = 38
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Aktif"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(1, 85)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(102, 20)
-        Me.Label5.TabIndex = 37
-        Me.Label5.Text = "Auto Reply:"
         '
         'PictureBox1
         '
@@ -377,7 +341,7 @@ Partial Class Form1
         '
         Me.chkAktif.AutoSize = True
         Me.chkAktif.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkAktif.Location = New System.Drawing.Point(104, 9)
+        Me.chkAktif.Location = New System.Drawing.Point(215, 6)
         Me.chkAktif.Name = "chkAktif"
         Me.chkAktif.Size = New System.Drawing.Size(57, 20)
         Me.chkAktif.TabIndex = 1
@@ -387,10 +351,31 @@ Partial Class Form1
         'lvDaftarPesan
         '
         Me.lvDaftarPesan.FormattingEnabled = True
-        Me.lvDaftarPesan.Location = New System.Drawing.Point(537, 360)
+        Me.lvDaftarPesan.Location = New System.Drawing.Point(537, 399)
         Me.lvDaftarPesan.Name = "lvDaftarPesan"
-        Me.lvDaftarPesan.Size = New System.Drawing.Size(276, 147)
+        Me.lvDaftarPesan.Size = New System.Drawing.Size(276, 108)
         Me.lvDaftarPesan.TabIndex = 41
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(3, 33)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(118, 16)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "Fitur Auto Reply"
+        '
+        'chkAutoReply
+        '
+        Me.chkAutoReply.AutoSize = True
+        Me.chkAutoReply.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkAutoReply.Location = New System.Drawing.Point(215, 32)
+        Me.chkAutoReply.Name = "chkAutoReply"
+        Me.chkAutoReply.Size = New System.Drawing.Size(57, 20)
+        Me.chkAutoReply.TabIndex = 3
+        Me.chkAutoReply.Text = "Aktif"
+        Me.chkAutoReply.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -428,7 +413,6 @@ Partial Class Form1
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -463,11 +447,10 @@ Partial Class Form1
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents lblIntervalTimer As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents chkAktif As System.Windows.Forms.CheckBox
     Friend WithEvents lvDaftarPesan As System.Windows.Forms.ListBox
+    Friend WithEvents chkAutoReply As System.Windows.Forms.CheckBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 
 End Class

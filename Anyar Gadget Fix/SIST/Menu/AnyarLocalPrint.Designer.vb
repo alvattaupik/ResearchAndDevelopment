@@ -23,63 +23,63 @@ Partial Class AnyarLocalPrint
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabDokumen = New System.Windows.Forms.TabControl()
+        Me.TabDelivery = New System.Windows.Forms.TabPage()
         Me.CRVDelivery = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cmdPreviewDelivery = New System.Windows.Forms.Button()
         Me.txtNoDelivery = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.TabGRPO = New System.Windows.Forms.TabPage()
         Me.crvGRPO = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cmdPreviewGRPO = New System.Windows.Forms.Button()
         Me.txtNoGRPO = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TabPage9 = New System.Windows.Forms.TabPage()
+        Me.TabInventoryTransferReq = New System.Windows.Forms.TabPage()
         Me.crvInventoryTransfer = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cmdPreviewInventoryTransfer = New System.Windows.Forms.Button()
         Me.txtNoInventoryTransfer = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TabInventoryTransfer = New System.Windows.Forms.TabPage()
         Me.crvInventoryRequest = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cmdPreviewInventoryRequest = New System.Windows.Forms.Button()
         Me.txtNoInventoryRequest = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TabGoodsIssue = New System.Windows.Forms.TabPage()
         Me.CRVGoodsIssue = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cmdPreviewGoodsIssue = New System.Windows.Forms.Button()
         Me.txtNoGoodsIssue = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.TabOutgoingPayments = New System.Windows.Forms.TabPage()
         Me.CRVOutgoingPayments = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cmdPreviewOutgoingPayments = New System.Windows.Forms.Button()
         Me.txtNoOutgoingPayments = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.TabGoodsReceipt = New System.Windows.Forms.TabPage()
         Me.CRVGoodsReceipt = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cmdPreviewGoodsReceipt = New System.Windows.Forms.Button()
         Me.txtNoGoodsReceipt = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.TabIncomingPayment = New System.Windows.Forms.TabPage()
         Me.CRVIncomingPayment = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cmdPreviewIncomingPayment = New System.Windows.Forms.Button()
         Me.txtNoIncomingPayment = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.TabPickList = New System.Windows.Forms.TabPage()
         Me.CRVPickList = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cmdPreviewNoPickList = New System.Windows.Forms.Button()
         Me.txtNoPickList = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TabPage10 = New System.Windows.Forms.TabPage()
+        Me.TabGoodsReturn = New System.Windows.Forms.TabPage()
         Me.CRvGoodsReturn = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cmdPreviewGoodsReturn = New System.Windows.Forms.Button()
         Me.txtNoGoodsReturn = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TabPage11 = New System.Windows.Forms.TabPage()
+        Me.TabReturn = New System.Windows.Forms.TabPage()
         Me.CRVReturn = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cmdPreviewReturn = New System.Windows.Forms.Button()
         Me.txtNoReturn = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TabPage12 = New System.Windows.Forms.TabPage()
+        Me.TabSalesOrder = New System.Windows.Forms.TabPage()
         Me.CRVSO = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.cmdPreviewSO = New System.Windows.Forms.Button()
         Me.txtNoSO = New System.Windows.Forms.TextBox()
@@ -88,25 +88,25 @@ Partial Class AnyarLocalPrint
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage8.SuspendLayout()
-        Me.TabPage9.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        Me.TabPage5.SuspendLayout()
-        Me.TabPage6.SuspendLayout()
-        Me.TabPage7.SuspendLayout()
-        Me.TabPage10.SuspendLayout()
-        Me.TabPage11.SuspendLayout()
-        Me.TabPage12.SuspendLayout()
+        Me.TabDokumen.SuspendLayout()
+        Me.TabDelivery.SuspendLayout()
+        Me.TabGRPO.SuspendLayout()
+        Me.TabInventoryTransferReq.SuspendLayout()
+        Me.TabInventoryTransfer.SuspendLayout()
+        Me.TabGoodsIssue.SuspendLayout()
+        Me.TabOutgoingPayments.SuspendLayout()
+        Me.TabGoodsReceipt.SuspendLayout()
+        Me.TabIncomingPayment.SuspendLayout()
+        Me.TabPickList.SuspendLayout()
+        Me.TabGoodsReturn.SuspendLayout()
+        Me.TabReturn.SuspendLayout()
+        Me.TabSalesOrder.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TabControl1)
+        Me.GroupBox2.Controls.Add(Me.TabDokumen)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(12, 72)
         Me.GroupBox2.Name = "GroupBox2"
@@ -115,40 +115,40 @@ Partial Class AnyarLocalPrint
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "DAFTAR DOKUMEN"
         '
-        'TabControl1
+        'TabDokumen
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage8)
-        Me.TabControl1.Controls.Add(Me.TabPage9)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Controls.Add(Me.TabPage5)
-        Me.TabControl1.Controls.Add(Me.TabPage6)
-        Me.TabControl1.Controls.Add(Me.TabPage7)
-        Me.TabControl1.Controls.Add(Me.TabPage10)
-        Me.TabControl1.Controls.Add(Me.TabPage11)
-        Me.TabControl1.Controls.Add(Me.TabPage12)
-        Me.TabControl1.Location = New System.Drawing.Point(6, 30)
-        Me.TabControl1.Multiline = True
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1008, 457)
-        Me.TabControl1.TabIndex = 3
+        Me.TabDokumen.Controls.Add(Me.TabDelivery)
+        Me.TabDokumen.Controls.Add(Me.TabGRPO)
+        Me.TabDokumen.Controls.Add(Me.TabInventoryTransferReq)
+        Me.TabDokumen.Controls.Add(Me.TabInventoryTransfer)
+        Me.TabDokumen.Controls.Add(Me.TabGoodsIssue)
+        Me.TabDokumen.Controls.Add(Me.TabOutgoingPayments)
+        Me.TabDokumen.Controls.Add(Me.TabGoodsReceipt)
+        Me.TabDokumen.Controls.Add(Me.TabIncomingPayment)
+        Me.TabDokumen.Controls.Add(Me.TabPickList)
+        Me.TabDokumen.Controls.Add(Me.TabGoodsReturn)
+        Me.TabDokumen.Controls.Add(Me.TabReturn)
+        Me.TabDokumen.Controls.Add(Me.TabSalesOrder)
+        Me.TabDokumen.Location = New System.Drawing.Point(6, 30)
+        Me.TabDokumen.Multiline = True
+        Me.TabDokumen.Name = "TabDokumen"
+        Me.TabDokumen.SelectedIndex = 0
+        Me.TabDokumen.Size = New System.Drawing.Size(1008, 457)
+        Me.TabDokumen.TabIndex = 3
         '
-        'TabPage1
+        'TabDelivery
         '
-        Me.TabPage1.Controls.Add(Me.CRVDelivery)
-        Me.TabPage1.Controls.Add(Me.cmdPreviewDelivery)
-        Me.TabPage1.Controls.Add(Me.txtNoDelivery)
-        Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 64)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1000, 389)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Delivery"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.TabDelivery.Controls.Add(Me.CRVDelivery)
+        Me.TabDelivery.Controls.Add(Me.cmdPreviewDelivery)
+        Me.TabDelivery.Controls.Add(Me.txtNoDelivery)
+        Me.TabDelivery.Controls.Add(Me.Label4)
+        Me.TabDelivery.Location = New System.Drawing.Point(4, 64)
+        Me.TabDelivery.Name = "TabDelivery"
+        Me.TabDelivery.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabDelivery.Size = New System.Drawing.Size(1000, 389)
+        Me.TabDelivery.TabIndex = 0
+        Me.TabDelivery.Text = "Delivery"
+        Me.TabDelivery.UseVisualStyleBackColor = True
         '
         'CRVDelivery
         '
@@ -186,18 +186,18 @@ Partial Class AnyarLocalPrint
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "No Document :"
         '
-        'TabPage8
+        'TabGRPO
         '
-        Me.TabPage8.Controls.Add(Me.crvGRPO)
-        Me.TabPage8.Controls.Add(Me.cmdPreviewGRPO)
-        Me.TabPage8.Controls.Add(Me.txtNoGRPO)
-        Me.TabPage8.Controls.Add(Me.Label3)
-        Me.TabPage8.Location = New System.Drawing.Point(4, 64)
-        Me.TabPage8.Name = "TabPage8"
-        Me.TabPage8.Size = New System.Drawing.Size(1000, 389)
-        Me.TabPage8.TabIndex = 7
-        Me.TabPage8.Text = "GRPO"
-        Me.TabPage8.UseVisualStyleBackColor = True
+        Me.TabGRPO.Controls.Add(Me.crvGRPO)
+        Me.TabGRPO.Controls.Add(Me.cmdPreviewGRPO)
+        Me.TabGRPO.Controls.Add(Me.txtNoGRPO)
+        Me.TabGRPO.Controls.Add(Me.Label3)
+        Me.TabGRPO.Location = New System.Drawing.Point(4, 64)
+        Me.TabGRPO.Name = "TabGRPO"
+        Me.TabGRPO.Size = New System.Drawing.Size(1000, 389)
+        Me.TabGRPO.TabIndex = 7
+        Me.TabGRPO.Text = "GRPO"
+        Me.TabGRPO.UseVisualStyleBackColor = True
         '
         'crvGRPO
         '
@@ -234,18 +234,18 @@ Partial Class AnyarLocalPrint
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "No Document :"
         '
-        'TabPage9
+        'TabInventoryTransferReq
         '
-        Me.TabPage9.Controls.Add(Me.crvInventoryTransfer)
-        Me.TabPage9.Controls.Add(Me.cmdPreviewInventoryTransfer)
-        Me.TabPage9.Controls.Add(Me.txtNoInventoryTransfer)
-        Me.TabPage9.Controls.Add(Me.Label5)
-        Me.TabPage9.Location = New System.Drawing.Point(4, 64)
-        Me.TabPage9.Name = "TabPage9"
-        Me.TabPage9.Size = New System.Drawing.Size(1000, 389)
-        Me.TabPage9.TabIndex = 8
-        Me.TabPage9.Text = "Inventory Transfer"
-        Me.TabPage9.UseVisualStyleBackColor = True
+        Me.TabInventoryTransferReq.Controls.Add(Me.crvInventoryTransfer)
+        Me.TabInventoryTransferReq.Controls.Add(Me.cmdPreviewInventoryTransfer)
+        Me.TabInventoryTransferReq.Controls.Add(Me.txtNoInventoryTransfer)
+        Me.TabInventoryTransferReq.Controls.Add(Me.Label5)
+        Me.TabInventoryTransferReq.Location = New System.Drawing.Point(4, 64)
+        Me.TabInventoryTransferReq.Name = "TabInventoryTransferReq"
+        Me.TabInventoryTransferReq.Size = New System.Drawing.Size(1000, 389)
+        Me.TabInventoryTransferReq.TabIndex = 8
+        Me.TabInventoryTransferReq.Text = "Inventory Transfer Req"
+        Me.TabInventoryTransferReq.UseVisualStyleBackColor = True
         '
         'crvInventoryTransfer
         '
@@ -282,19 +282,19 @@ Partial Class AnyarLocalPrint
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "No Document :"
         '
-        'TabPage2
+        'TabInventoryTransfer
         '
-        Me.TabPage2.Controls.Add(Me.crvInventoryRequest)
-        Me.TabPage2.Controls.Add(Me.cmdPreviewInventoryRequest)
-        Me.TabPage2.Controls.Add(Me.txtNoInventoryRequest)
-        Me.TabPage2.Controls.Add(Me.Label6)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 64)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1000, 389)
-        Me.TabPage2.TabIndex = 9
-        Me.TabPage2.Text = "Inventory Request"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.TabInventoryTransfer.Controls.Add(Me.crvInventoryRequest)
+        Me.TabInventoryTransfer.Controls.Add(Me.cmdPreviewInventoryRequest)
+        Me.TabInventoryTransfer.Controls.Add(Me.txtNoInventoryRequest)
+        Me.TabInventoryTransfer.Controls.Add(Me.Label6)
+        Me.TabInventoryTransfer.Location = New System.Drawing.Point(4, 64)
+        Me.TabInventoryTransfer.Name = "TabInventoryTransfer"
+        Me.TabInventoryTransfer.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabInventoryTransfer.Size = New System.Drawing.Size(1000, 389)
+        Me.TabInventoryTransfer.TabIndex = 9
+        Me.TabInventoryTransfer.Text = "Inventory Transfer"
+        Me.TabInventoryTransfer.UseVisualStyleBackColor = True
         '
         'crvInventoryRequest
         '
@@ -331,19 +331,19 @@ Partial Class AnyarLocalPrint
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "No Document :"
         '
-        'TabPage3
+        'TabGoodsIssue
         '
-        Me.TabPage3.Controls.Add(Me.CRVGoodsIssue)
-        Me.TabPage3.Controls.Add(Me.cmdPreviewGoodsIssue)
-        Me.TabPage3.Controls.Add(Me.txtNoGoodsIssue)
-        Me.TabPage3.Controls.Add(Me.Label8)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 64)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1000, 389)
-        Me.TabPage3.TabIndex = 10
-        Me.TabPage3.Text = "Goods Issue"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.TabGoodsIssue.Controls.Add(Me.CRVGoodsIssue)
+        Me.TabGoodsIssue.Controls.Add(Me.cmdPreviewGoodsIssue)
+        Me.TabGoodsIssue.Controls.Add(Me.txtNoGoodsIssue)
+        Me.TabGoodsIssue.Controls.Add(Me.Label8)
+        Me.TabGoodsIssue.Location = New System.Drawing.Point(4, 64)
+        Me.TabGoodsIssue.Name = "TabGoodsIssue"
+        Me.TabGoodsIssue.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabGoodsIssue.Size = New System.Drawing.Size(1000, 389)
+        Me.TabGoodsIssue.TabIndex = 10
+        Me.TabGoodsIssue.Text = "Goods Issue"
+        Me.TabGoodsIssue.UseVisualStyleBackColor = True
         '
         'CRVGoodsIssue
         '
@@ -380,19 +380,19 @@ Partial Class AnyarLocalPrint
         Me.Label8.TabIndex = 12
         Me.Label8.Text = "No Document :"
         '
-        'TabPage4
+        'TabOutgoingPayments
         '
-        Me.TabPage4.Controls.Add(Me.CRVOutgoingPayments)
-        Me.TabPage4.Controls.Add(Me.cmdPreviewOutgoingPayments)
-        Me.TabPage4.Controls.Add(Me.txtNoOutgoingPayments)
-        Me.TabPage4.Controls.Add(Me.Label7)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 64)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1000, 389)
-        Me.TabPage4.TabIndex = 11
-        Me.TabPage4.Text = "Outgoing Payments"
-        Me.TabPage4.UseVisualStyleBackColor = True
+        Me.TabOutgoingPayments.Controls.Add(Me.CRVOutgoingPayments)
+        Me.TabOutgoingPayments.Controls.Add(Me.cmdPreviewOutgoingPayments)
+        Me.TabOutgoingPayments.Controls.Add(Me.txtNoOutgoingPayments)
+        Me.TabOutgoingPayments.Controls.Add(Me.Label7)
+        Me.TabOutgoingPayments.Location = New System.Drawing.Point(4, 64)
+        Me.TabOutgoingPayments.Name = "TabOutgoingPayments"
+        Me.TabOutgoingPayments.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabOutgoingPayments.Size = New System.Drawing.Size(1000, 389)
+        Me.TabOutgoingPayments.TabIndex = 11
+        Me.TabOutgoingPayments.Text = "Outgoing Payments"
+        Me.TabOutgoingPayments.UseVisualStyleBackColor = True
         '
         'CRVOutgoingPayments
         '
@@ -429,19 +429,19 @@ Partial Class AnyarLocalPrint
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "No Document :"
         '
-        'TabPage5
+        'TabGoodsReceipt
         '
-        Me.TabPage5.Controls.Add(Me.CRVGoodsReceipt)
-        Me.TabPage5.Controls.Add(Me.cmdPreviewGoodsReceipt)
-        Me.TabPage5.Controls.Add(Me.txtNoGoodsReceipt)
-        Me.TabPage5.Controls.Add(Me.Label9)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 64)
-        Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1000, 389)
-        Me.TabPage5.TabIndex = 12
-        Me.TabPage5.Text = "Goods Receipt"
-        Me.TabPage5.UseVisualStyleBackColor = True
+        Me.TabGoodsReceipt.Controls.Add(Me.CRVGoodsReceipt)
+        Me.TabGoodsReceipt.Controls.Add(Me.cmdPreviewGoodsReceipt)
+        Me.TabGoodsReceipt.Controls.Add(Me.txtNoGoodsReceipt)
+        Me.TabGoodsReceipt.Controls.Add(Me.Label9)
+        Me.TabGoodsReceipt.Location = New System.Drawing.Point(4, 64)
+        Me.TabGoodsReceipt.Name = "TabGoodsReceipt"
+        Me.TabGoodsReceipt.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabGoodsReceipt.Size = New System.Drawing.Size(1000, 389)
+        Me.TabGoodsReceipt.TabIndex = 12
+        Me.TabGoodsReceipt.Text = "Goods Receipt"
+        Me.TabGoodsReceipt.UseVisualStyleBackColor = True
         '
         'CRVGoodsReceipt
         '
@@ -478,19 +478,19 @@ Partial Class AnyarLocalPrint
         Me.Label9.TabIndex = 20
         Me.Label9.Text = "No Document :"
         '
-        'TabPage6
+        'TabIncomingPayment
         '
-        Me.TabPage6.Controls.Add(Me.CRVIncomingPayment)
-        Me.TabPage6.Controls.Add(Me.cmdPreviewIncomingPayment)
-        Me.TabPage6.Controls.Add(Me.txtNoIncomingPayment)
-        Me.TabPage6.Controls.Add(Me.Label10)
-        Me.TabPage6.Location = New System.Drawing.Point(4, 64)
-        Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(1000, 389)
-        Me.TabPage6.TabIndex = 13
-        Me.TabPage6.Text = "Incoming Payment"
-        Me.TabPage6.UseVisualStyleBackColor = True
+        Me.TabIncomingPayment.Controls.Add(Me.CRVIncomingPayment)
+        Me.TabIncomingPayment.Controls.Add(Me.cmdPreviewIncomingPayment)
+        Me.TabIncomingPayment.Controls.Add(Me.txtNoIncomingPayment)
+        Me.TabIncomingPayment.Controls.Add(Me.Label10)
+        Me.TabIncomingPayment.Location = New System.Drawing.Point(4, 64)
+        Me.TabIncomingPayment.Name = "TabIncomingPayment"
+        Me.TabIncomingPayment.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabIncomingPayment.Size = New System.Drawing.Size(1000, 389)
+        Me.TabIncomingPayment.TabIndex = 13
+        Me.TabIncomingPayment.Text = "Incoming Payment"
+        Me.TabIncomingPayment.UseVisualStyleBackColor = True
         '
         'CRVIncomingPayment
         '
@@ -527,19 +527,19 @@ Partial Class AnyarLocalPrint
         Me.Label10.TabIndex = 24
         Me.Label10.Text = "No Document :"
         '
-        'TabPage7
+        'TabPickList
         '
-        Me.TabPage7.Controls.Add(Me.CRVPickList)
-        Me.TabPage7.Controls.Add(Me.cmdPreviewNoPickList)
-        Me.TabPage7.Controls.Add(Me.txtNoPickList)
-        Me.TabPage7.Controls.Add(Me.Label11)
-        Me.TabPage7.Location = New System.Drawing.Point(4, 64)
-        Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(1000, 389)
-        Me.TabPage7.TabIndex = 14
-        Me.TabPage7.Text = "Pick List Form"
-        Me.TabPage7.UseVisualStyleBackColor = True
+        Me.TabPickList.Controls.Add(Me.CRVPickList)
+        Me.TabPickList.Controls.Add(Me.cmdPreviewNoPickList)
+        Me.TabPickList.Controls.Add(Me.txtNoPickList)
+        Me.TabPickList.Controls.Add(Me.Label11)
+        Me.TabPickList.Location = New System.Drawing.Point(4, 64)
+        Me.TabPickList.Name = "TabPickList"
+        Me.TabPickList.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPickList.Size = New System.Drawing.Size(1000, 389)
+        Me.TabPickList.TabIndex = 14
+        Me.TabPickList.Text = "Pick List Form"
+        Me.TabPickList.UseVisualStyleBackColor = True
         '
         'CRVPickList
         '
@@ -576,19 +576,19 @@ Partial Class AnyarLocalPrint
         Me.Label11.TabIndex = 28
         Me.Label11.Text = "No PickList"
         '
-        'TabPage10
+        'TabGoodsReturn
         '
-        Me.TabPage10.Controls.Add(Me.CRvGoodsReturn)
-        Me.TabPage10.Controls.Add(Me.cmdPreviewGoodsReturn)
-        Me.TabPage10.Controls.Add(Me.txtNoGoodsReturn)
-        Me.TabPage10.Controls.Add(Me.Label12)
-        Me.TabPage10.Location = New System.Drawing.Point(4, 64)
-        Me.TabPage10.Name = "TabPage10"
-        Me.TabPage10.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage10.Size = New System.Drawing.Size(1000, 389)
-        Me.TabPage10.TabIndex = 15
-        Me.TabPage10.Text = "Goods Return"
-        Me.TabPage10.UseVisualStyleBackColor = True
+        Me.TabGoodsReturn.Controls.Add(Me.CRvGoodsReturn)
+        Me.TabGoodsReturn.Controls.Add(Me.cmdPreviewGoodsReturn)
+        Me.TabGoodsReturn.Controls.Add(Me.txtNoGoodsReturn)
+        Me.TabGoodsReturn.Controls.Add(Me.Label12)
+        Me.TabGoodsReturn.Location = New System.Drawing.Point(4, 64)
+        Me.TabGoodsReturn.Name = "TabGoodsReturn"
+        Me.TabGoodsReturn.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabGoodsReturn.Size = New System.Drawing.Size(1000, 389)
+        Me.TabGoodsReturn.TabIndex = 15
+        Me.TabGoodsReturn.Text = "Goods Return"
+        Me.TabGoodsReturn.UseVisualStyleBackColor = True
         '
         'CRvGoodsReturn
         '
@@ -625,19 +625,19 @@ Partial Class AnyarLocalPrint
         Me.Label12.TabIndex = 28
         Me.Label12.Text = "No Document :"
         '
-        'TabPage11
+        'TabReturn
         '
-        Me.TabPage11.Controls.Add(Me.CRVReturn)
-        Me.TabPage11.Controls.Add(Me.cmdPreviewReturn)
-        Me.TabPage11.Controls.Add(Me.txtNoReturn)
-        Me.TabPage11.Controls.Add(Me.Label13)
-        Me.TabPage11.Location = New System.Drawing.Point(4, 64)
-        Me.TabPage11.Name = "TabPage11"
-        Me.TabPage11.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage11.Size = New System.Drawing.Size(1000, 389)
-        Me.TabPage11.TabIndex = 16
-        Me.TabPage11.Text = "Return"
-        Me.TabPage11.UseVisualStyleBackColor = True
+        Me.TabReturn.Controls.Add(Me.CRVReturn)
+        Me.TabReturn.Controls.Add(Me.cmdPreviewReturn)
+        Me.TabReturn.Controls.Add(Me.txtNoReturn)
+        Me.TabReturn.Controls.Add(Me.Label13)
+        Me.TabReturn.Location = New System.Drawing.Point(4, 64)
+        Me.TabReturn.Name = "TabReturn"
+        Me.TabReturn.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabReturn.Size = New System.Drawing.Size(1000, 389)
+        Me.TabReturn.TabIndex = 16
+        Me.TabReturn.Text = "Return"
+        Me.TabReturn.UseVisualStyleBackColor = True
         '
         'CRVReturn
         '
@@ -674,19 +674,19 @@ Partial Class AnyarLocalPrint
         Me.Label13.TabIndex = 32
         Me.Label13.Text = "No Document :"
         '
-        'TabPage12
+        'TabSalesOrder
         '
-        Me.TabPage12.Controls.Add(Me.CRVSO)
-        Me.TabPage12.Controls.Add(Me.cmdPreviewSO)
-        Me.TabPage12.Controls.Add(Me.txtNoSO)
-        Me.TabPage12.Controls.Add(Me.Label14)
-        Me.TabPage12.Location = New System.Drawing.Point(4, 64)
-        Me.TabPage12.Name = "TabPage12"
-        Me.TabPage12.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage12.Size = New System.Drawing.Size(1000, 389)
-        Me.TabPage12.TabIndex = 17
-        Me.TabPage12.Text = "Sales Order"
-        Me.TabPage12.UseVisualStyleBackColor = True
+        Me.TabSalesOrder.Controls.Add(Me.CRVSO)
+        Me.TabSalesOrder.Controls.Add(Me.cmdPreviewSO)
+        Me.TabSalesOrder.Controls.Add(Me.txtNoSO)
+        Me.TabSalesOrder.Controls.Add(Me.Label14)
+        Me.TabSalesOrder.Location = New System.Drawing.Point(4, 64)
+        Me.TabSalesOrder.Name = "TabSalesOrder"
+        Me.TabSalesOrder.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabSalesOrder.Size = New System.Drawing.Size(1000, 389)
+        Me.TabSalesOrder.TabIndex = 17
+        Me.TabSalesOrder.Text = "Sales Order"
+        Me.TabSalesOrder.UseVisualStyleBackColor = True
         '
         'CRVSO
         '
@@ -768,94 +768,94 @@ Partial Class AnyarLocalPrint
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "AnyarLocalPrint"
         Me.GroupBox2.ResumeLayout(False)
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        Me.TabPage8.ResumeLayout(False)
-        Me.TabPage8.PerformLayout()
-        Me.TabPage9.ResumeLayout(False)
-        Me.TabPage9.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
-        Me.TabPage5.ResumeLayout(False)
-        Me.TabPage5.PerformLayout()
-        Me.TabPage6.ResumeLayout(False)
-        Me.TabPage6.PerformLayout()
-        Me.TabPage7.ResumeLayout(False)
-        Me.TabPage7.PerformLayout()
-        Me.TabPage10.ResumeLayout(False)
-        Me.TabPage10.PerformLayout()
-        Me.TabPage11.ResumeLayout(False)
-        Me.TabPage11.PerformLayout()
-        Me.TabPage12.ResumeLayout(False)
-        Me.TabPage12.PerformLayout()
+        Me.TabDokumen.ResumeLayout(False)
+        Me.TabDelivery.ResumeLayout(False)
+        Me.TabDelivery.PerformLayout()
+        Me.TabGRPO.ResumeLayout(False)
+        Me.TabGRPO.PerformLayout()
+        Me.TabInventoryTransferReq.ResumeLayout(False)
+        Me.TabInventoryTransferReq.PerformLayout()
+        Me.TabInventoryTransfer.ResumeLayout(False)
+        Me.TabInventoryTransfer.PerformLayout()
+        Me.TabGoodsIssue.ResumeLayout(False)
+        Me.TabGoodsIssue.PerformLayout()
+        Me.TabOutgoingPayments.ResumeLayout(False)
+        Me.TabOutgoingPayments.PerformLayout()
+        Me.TabGoodsReceipt.ResumeLayout(False)
+        Me.TabGoodsReceipt.PerformLayout()
+        Me.TabIncomingPayment.ResumeLayout(False)
+        Me.TabIncomingPayment.PerformLayout()
+        Me.TabPickList.ResumeLayout(False)
+        Me.TabPickList.PerformLayout()
+        Me.TabGoodsReturn.ResumeLayout(False)
+        Me.TabGoodsReturn.PerformLayout()
+        Me.TabReturn.ResumeLayout(False)
+        Me.TabReturn.PerformLayout()
+        Me.TabSalesOrder.ResumeLayout(False)
+        Me.TabSalesOrder.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
-    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents TabDokumen As System.Windows.Forms.TabControl
+    Friend WithEvents TabDelivery As System.Windows.Forms.TabPage
     Friend WithEvents CRVDelivery As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents cmdPreviewDelivery As System.Windows.Forms.Button
     Friend WithEvents txtNoDelivery As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TabPage8 As System.Windows.Forms.TabPage
+    Friend WithEvents TabGRPO As System.Windows.Forms.TabPage
     Friend WithEvents crvGRPO As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents cmdPreviewGRPO As System.Windows.Forms.Button
     Friend WithEvents txtNoGRPO As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TabPage9 As System.Windows.Forms.TabPage
+    Friend WithEvents TabInventoryTransferReq As System.Windows.Forms.TabPage
     Friend WithEvents crvInventoryTransfer As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents cmdPreviewInventoryTransfer As System.Windows.Forms.Button
     Friend WithEvents txtNoInventoryTransfer As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents TabInventoryTransfer As System.Windows.Forms.TabPage
     Friend WithEvents crvInventoryRequest As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents cmdPreviewInventoryRequest As System.Windows.Forms.Button
     Friend WithEvents txtNoInventoryRequest As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents TabGoodsIssue As System.Windows.Forms.TabPage
     Friend WithEvents CRVGoodsIssue As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents cmdPreviewGoodsIssue As System.Windows.Forms.Button
     Friend WithEvents txtNoGoodsIssue As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
+    Friend WithEvents TabOutgoingPayments As System.Windows.Forms.TabPage
     Friend WithEvents CRVOutgoingPayments As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents cmdPreviewOutgoingPayments As System.Windows.Forms.Button
     Friend WithEvents txtNoOutgoingPayments As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
+    Friend WithEvents TabGoodsReceipt As System.Windows.Forms.TabPage
     Friend WithEvents CRVGoodsReceipt As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents cmdPreviewGoodsReceipt As System.Windows.Forms.Button
     Friend WithEvents txtNoGoodsReceipt As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TabPage6 As System.Windows.Forms.TabPage
+    Friend WithEvents TabIncomingPayment As System.Windows.Forms.TabPage
     Friend WithEvents CRVIncomingPayment As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents cmdPreviewIncomingPayment As System.Windows.Forms.Button
     Friend WithEvents txtNoIncomingPayment As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents TabPage7 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPickList As System.Windows.Forms.TabPage
     Friend WithEvents CRVPickList As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents cmdPreviewNoPickList As System.Windows.Forms.Button
     Friend WithEvents txtNoPickList As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents TabPage10 As System.Windows.Forms.TabPage
+    Friend WithEvents TabGoodsReturn As System.Windows.Forms.TabPage
     Friend WithEvents CRvGoodsReturn As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents cmdPreviewGoodsReturn As System.Windows.Forms.Button
     Friend WithEvents txtNoGoodsReturn As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents TabPage11 As System.Windows.Forms.TabPage
+    Friend WithEvents TabReturn As System.Windows.Forms.TabPage
     Friend WithEvents CRVReturn As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents cmdPreviewReturn As System.Windows.Forms.Button
     Friend WithEvents txtNoReturn As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents TabPage12 As System.Windows.Forms.TabPage
+    Friend WithEvents TabSalesOrder As System.Windows.Forms.TabPage
     Friend WithEvents CRVSO As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents cmdPreviewSO As System.Windows.Forms.Button
     Friend WithEvents txtNoSO As System.Windows.Forms.TextBox

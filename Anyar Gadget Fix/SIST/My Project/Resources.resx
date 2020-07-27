@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="item-png-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\item-png-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="438-4387212_ping-logo-ping-png-transparent-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\438-4387212_ping-logo-ping-png-transparent-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -132,9 +135,6 @@
   </data>
   <data name="60ac66ae2cf6843b28687fc143861404" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\60ac66ae2cf6843b28687fc143861404.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Inventory-PNG-HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Inventory-PNG-HD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Price-Tag-PNG-Clipart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Price-Tag-PNG-Clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,20 +163,23 @@
   <data name="icon-save-png-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-save-png-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Vector 31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vector 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="api" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\api.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eye-digital-eye-11562985074yw2swmclxv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye-digital-eye-11562985074yw2swmclxv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SQl Server" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQl Server.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vector 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="performance-icon-png-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\performance-icon-png-6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="489203" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\489203.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LOGO ANYAR BULAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO ANYAR BULAT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,29 +196,32 @@
   <data name="Available-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Available-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ivend-retail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ivend-retail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Vector 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector 3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="unnamed (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unnamed (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="monitoring" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monitoring.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="validation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\validation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_return_product-300x300" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_return_product-300x300.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="expense-tracking" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expense-tracking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="844-8446064_message-clipart-envelope-letter-envelope-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\844-8446064_message-clipart-envelope-letter-envelope-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="unnamed (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\unnamed (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Users  Akses" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Users  Akses.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Network Operation Center NOC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Network Operation Center NOC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="returns-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\returns-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vector-PNG-Pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector-PNG-Pic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,20 +229,20 @@
   <data name="Goods Receipt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Goods Receipt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="send-mail-icon-png-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\send-mail-icon-png-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="repository" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\repository.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sap-B1-Logo-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sap-B1-Logo-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="489203" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\489203.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_return_product-300x300" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_return_product-300x300.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="issue-4-433271" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\issue-4-433271.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logistics_delivered_order_shipping_verify_goods_Receipt-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logistics_delivered_order_shipping_verify_goods_Receipt-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,11 +253,8 @@
   <data name="Circle Delivery" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circle Delivery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coming-soon-hd-png-download-coming-soon-png-images-transparent-gallery-advertisement-845" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coming-soon-hd-png-download-coming-soon-png-images-transparent-gallery-advertisement-845.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="monitoring" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\monitoring.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="returns-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\returns-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vector 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,46 +265,46 @@
   <data name="borrow-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\borrow-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Vector 31" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vector 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sap-B1-Logo-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sap-B1-Logo-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Monitoring 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Monitoring 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="eye-digital-eye-11562985074yw2swmclxv" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eye-digital-eye-11562985074yw2swmclxv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="844-8446064_message-clipart-envelope-letter-envelope-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\844-8446064_message-clipart-envelope-letter-envelope-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="772409_music_512x5121" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\772409_music_512x5121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="repository" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\repository.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Inventory-PNG-HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory-PNG-HD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SQl Server" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SQl Server.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="coming-soon-hd-png-download-coming-soon-png-images-transparent-gallery-advertisement-845" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coming-soon-hd-png-download-coming-soon-png-images-transparent-gallery-advertisement-845.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="anyar local Print" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\anyar local Print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Vector 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vector 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="send-mail-icon-png-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\send-mail-icon-png-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vector 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ivend-retail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ivend-retail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="60ac66ae2cf6843b28687fc1438614041" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\60ac66ae2cf6843b28687fc1438614041.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="issue-4-433271" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\issue-4-433271.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="unnamed (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unnamed (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="item-png-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\item-png-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Vector 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vector 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Users  Akses" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Users  Akses.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kop surat RKM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kop surat RKM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

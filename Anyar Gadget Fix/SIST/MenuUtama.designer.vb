@@ -249,7 +249,7 @@ Partial Class MenuUtama
         '
         Me.AnyarDirectoryToolStripMenuItem.Name = "AnyarDirectoryToolStripMenuItem"
         Me.AnyarDirectoryToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
-        Me.AnyarDirectoryToolStripMenuItem.Text = "Anyar Reposrectory"
+        Me.AnyarDirectoryToolStripMenuItem.Text = "Anyar Repository"
         '
         'IntegrationMonitoringToolStripMenuItem
         '
@@ -402,9 +402,12 @@ Partial Class MenuUtama
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.AnyarGadget.My.Resources.Resources.LOGO_ANYAR_BULAT
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1370, 729)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
+        Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1

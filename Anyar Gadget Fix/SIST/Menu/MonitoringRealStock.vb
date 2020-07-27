@@ -140,13 +140,29 @@ Errorhandler:
 
             adapter.Fill(table)
             dgInventoryData.DataSource = table
-            dgInventoryData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+            'dgInventoryData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
             'dgInventoryData.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
 
-            dgInventoryData.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopCenter
-            dgInventoryData.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopCenter
-            dgInventoryData.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopCenter
-            dgInventoryData.AutoResizeColumns()
+
+            dgInventoryData.Columns(0).Width = 450
+            dgInventoryData.Columns(1).Width = 100
+            dgInventoryData.Columns(2).Width = 150
+            dgInventoryData.Columns(3).Width = 100
+
+            dgInventoryData.Columns(1).DefaultCellStyle.Format = "N0"
+            dgInventoryData.Columns(2).DefaultCellStyle.Format = "N0"
+            dgInventoryData.Columns(3).DefaultCellStyle.Format = "N0"
+
+            dgInventoryData.Columns(1).HeaderCell.Style.Alignment = DataGridViewContentAlignment.TopCenter
+            dgInventoryData.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.TopCenter
+            dgInventoryData.Columns(3).HeaderCell.Style.Alignment = DataGridViewContentAlignment.TopCenter
+
+            dgInventoryData.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight
+            dgInventoryData.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight
+            dgInventoryData.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight
+
+
+            'dgInventoryData.AutoResizeColumns()
             dgInventoryData.RowHeadersVisible = False
 
         End If
@@ -154,7 +170,7 @@ Errorhandler:
 
 
 
-    Private Sub cmdTutup_Click(sender As Object, e As EventArgs) Handles cmdTutup.Click
+    Private Sub cmdTutup_Click(sender As Object, e As EventArgs)
         gbItem.Visible = False
     End Sub
 
@@ -166,7 +182,7 @@ Errorhandler:
 
         frm.txtItemCode.Text = Me.txtKodeBarang.Text
         frm.txtItemName.Text = Me.txtNamaBarang.Text
-        frm.Location = New Point(294, 39)
+
 
         frm.TopMost = True
         frm.Show()
@@ -174,4 +190,9 @@ Errorhandler:
     End Sub
 
 
+
+
+    Private Sub MonitoringRealStock_Move(sender As Object, e As EventArgs) Handles Me.Move
+        ShowLocation(Me)
+    End Sub
 End Class

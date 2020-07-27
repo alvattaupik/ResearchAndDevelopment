@@ -5,10 +5,11 @@ Public Class FormLogin
     Private Sub GunaGradientButton1_Click(sender As Object, e As EventArgs) Handles GunaGradientButton1.Click
 
 
-
-
-
-
+        If My.Settings.MysqlHost = "" Or My.Settings.SQLServer = "" Then
+            MsgBox("Konfigurasi Database Belum Diatur", vbCritical, "Gagal menghubungkan!")
+            SettingDatabase.ShowDialog()
+            Exit Sub
+        End If
 
 
 
@@ -26,7 +27,7 @@ Public Class FormLogin
             rdDB.Read()
             If rdDB.HasRows = True Then
                 Me.Hide()
-                FormUpload.Show()
+                FormMainMenu.ShowDialog()
                 MstrKdPegawai = rdDB!id.ToString.Trim
             Else
                 MsgBox("Username and or Password are not found", MsgBoxStyle.Exclamation, "Information")
@@ -133,6 +134,7 @@ ErrorHandler:
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        FormKonfigurasiIntegrasi.ShowDialog()
+        'FormKonfigurasiIntegrasi.ShowDialog()
+        SettingDatabase.ShowDialog()
     End Sub
 End Class

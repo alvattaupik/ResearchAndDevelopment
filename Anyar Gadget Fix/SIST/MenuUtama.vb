@@ -114,10 +114,10 @@ Public Class MenuUtama
 
     Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MonitoringDeliveryToolStripMenuItem.Click
         Dim frm As New MonitoringDelivery
-
         frm.MdiParent = Me
-        frm.TopMost = True
-        frm.Location = New Point(229, 3)
+        'frm.TopMost = True
+        'frm.Location = New Point(229, 3)
+        frm.WindowState = FormWindowState.Maximized
         frm.Show()
     End Sub
 
@@ -325,5 +325,14 @@ Public Class MenuUtama
 
     Private Sub FotoProfileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FotoProfileToolStripMenuItem.Click
         Profile.ShowDialog()
+    End Sub
+
+
+    Private Sub RKMDisplayTagToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RKMDisplayTagToolStripMenuItem.Click
+        Dim frm As New FormRKMDisplayTag
+
+        frm.MdiParent = Me
+        frm.TopMost = True
+        frm.Show()
     End Sub
 End Class

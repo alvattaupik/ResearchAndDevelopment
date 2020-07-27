@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Promo" msprop:Generator_TableClassName="PromoDataTable" msprop:Generator_TableVarName="tablePromo" msprop:Generator_RowChangedName="PromoRowChanged" msprop:Generator_TablePropName="Promo" msprop:Generator_RowDeletingName="PromoRowDeleting" msprop:Generator_RowChangingName="PromoRowChanging" msprop:Generator_RowEvHandlerName="PromoRowChangeEventHandler" msprop:Generator_RowDeletedName="PromoRowDeleted" msprop:Generator_RowClassName="PromoRow" msprop:Generator_UserTableName="Promo" msprop:Generator_RowEvArgName="PromoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="KodeBarang" msprop:Generator_ColumnVarNameInTable="columnKodeBarang" msprop:Generator_ColumnPropNameInRow="KodeBarang" msprop:Generator_ColumnPropNameInTable="KodeBarangColumn" msprop:Generator_UserColumnName="KodeBarang" type="xs:string" minOccurs="0" />
+              <xs:element name="NamaBarang" msprop:Generator_ColumnVarNameInTable="columnNamaBarang" msprop:Generator_ColumnPropNameInRow="NamaBarang" msprop:Generator_ColumnPropNameInTable="NamaBarangColumn" msprop:Generator_UserColumnName="NamaBarang" type="xs:string" minOccurs="0" />
+              <xs:element name="UOM" msprop:Generator_ColumnVarNameInTable="columnUOM" msprop:Generator_ColumnPropNameInRow="UOM" msprop:Generator_ColumnPropNameInTable="UOMColumn" msprop:Generator_UserColumnName="UOM" type="xs:string" minOccurs="0" />
+              <xs:element name="Brand" msprop:Generator_ColumnVarNameInTable="columnBrand" msprop:Generator_ColumnPropNameInRow="Brand" msprop:Generator_ColumnPropNameInTable="BrandColumn" msprop:Generator_UserColumnName="Brand" type="xs:string" minOccurs="0" />
+              <xs:element name="HargaJual" msprop:Generator_ColumnVarNameInTable="columnHargaJual" msprop:Generator_ColumnPropNameInRow="HargaJual" msprop:Generator_ColumnPropNameInTable="HargaJualColumn" msprop:Generator_UserColumnName="HargaJual" type="xs:long" minOccurs="0" />
+              <xs:element name="Discount" msprop:Generator_ColumnVarNameInTable="columnDiscount" msprop:Generator_ColumnPropNameInRow="Discount" msprop:Generator_ColumnPropNameInTable="DiscountColumn" msprop:Generator_UserColumnName="Discount" type="xs:string" minOccurs="0" />
+              <xs:element name="PriceAfterDisc" msprop:Generator_ColumnVarNameInTable="columnPriceAfterDisc" msprop:Generator_ColumnPropNameInRow="PriceAfterDisc" msprop:Generator_ColumnPropNameInTable="PriceAfterDiscColumn" msprop:Generator_UserColumnName="PriceAfterDisc" type="xs:long" minOccurs="0" />
+              <xs:element name="ValidFrom" msprop:Generator_ColumnVarNameInTable="columnValidFrom" msprop:Generator_ColumnPropNameInRow="ValidFrom" msprop:Generator_ColumnPropNameInTable="ValidFromColumn" msprop:Generator_UserColumnName="ValidFrom" type="xs:string" minOccurs="0" />
+              <xs:element name="ValidTo" msprop:Generator_ColumnVarNameInTable="columnValidTo" msprop:Generator_ColumnPropNameInRow="ValidTo" msprop:Generator_ColumnPropNameInTable="ValidToColumn" msprop:Generator_UserColumnName="ValidTo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

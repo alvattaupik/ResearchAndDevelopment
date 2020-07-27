@@ -394,6 +394,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property kop_surat_RKM() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("kop surat RKM", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Logistics_delivered_order_shipping_verify_goods_Receipt_512() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Logistics_delivered_order_shipping_verify_goods_Receipt-512", resourceCulture)

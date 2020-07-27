@@ -45,6 +45,9 @@ Module ModuleKoneksi
     Public SQL As String
     Public bolStatusKoneksi As Boolean
 
+    Public bolStatusKoneksiMySQL As Boolean
+    Public bolStatusKoneksiSQLServer As Boolean
+
     Public strServer As String
     Public strDbase As String
     Public strUser As String
@@ -63,6 +66,11 @@ Module ModuleKoneksi
     End Sub
 
 
+
+
+
+
+
     Public Sub TestconecDB()
         If connDB.State <> ConnectionState.Open Then
             connDB.ConnectionString = "server=" & strServer.Trim & ";database=" & strDbase.Trim & ";user=" & strUser.Trim & ";password=" & strPass
@@ -73,6 +81,50 @@ Module ModuleKoneksi
 
         If connDB.State <> ConnectionState.Open Then connDB.Open()
     End Sub
+
+
+
+
+    Public Sub TestconecDBMySQL()
+        Try
+
+            If connDB.State <> ConnectionState.Open Then
+                connDB.ConnectionString = "server=" & strServer.Trim & ";database=" & strDbase.Trim & ";user=" & strUser.Trim & ";password=" & strPass
+                connDB.Open()
+                bolStatusKoneksiMySQL = True
+            Else
+                bolStatusKoneksiMySQL = False
+            End If
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
+
+
+
+
+
+
+    End Sub
+
+
+
+
+
+    Public Sub KoneksiMySQL()
+
+        If connDB.State <> ConnectionState.Open Then
+            connDB.ConnectionString = "server=" & My.Settings.MysqlHost & ";database=" & My.Settings.DBmysql & ";user=" & My.Settings.UsernameMySQL & ";password=" & My.Settings.PasswordMySQL
+            connDB.Open()
+            bolStatusKoneksiMySQL = True
+        Else
+            bolStatusKoneksiMySQL = False
+        End If
+
+    End Sub
+
+
 
 
 
@@ -95,10 +147,83 @@ Module ModuleKoneksi
                 bolStatusKoneksi = True
             End If
         Catch ex As Exception
+            bolStatusKoneksi = False
             MsgBox(Err.Description, MsgBoxStyle.Critical, "Error")
         End Try
 
     End Sub
+
+
+
+
+
+    Public Sub testKoneksiSQLSERVER()
+
+        'strServerIntegration = My.Settings.ServerNameIntegrasi
+        'strUserIntegration = My.Settings.UsernameDBIntegrasi
+        'strPassIntegration = My.Settings.PasswordDBIntegrasi
+        'strDbaseIntegration = My.Settings.DatabasenameIntegrasi
+
+        strKoneksiSQLSRV = "data source=" & strServerIntegration & ";user id=" & strUserIntegration & ";password=" & strPassIntegration & ";initial catalog=" & strDbaseIntegration & ";MultipleActiveResultSets=True;Application Name=Anyar Local Print Services 1.1;  "
+        strKoneksiSQLSRV = String.Format(strKoneksiSQLSRV, strServerIntegration, strUserIntegration, strPassIntegration, strDbaseIntegration)
+        KoneksiSQLSRV = New SqlConnection(strKoneksiSQLSRV)
+
+
+
+        Try
+            If KoneksiSQLSRV.State = ConnectionState.Closed Then
+                KoneksiSQLSRV.Open()
+                bolStatusKoneksiSQLServer = True
+            End If
+        Catch ex As Exception
+            bolStatusKoneksi = False
+            MsgBox(Err.Description, MsgBoxStyle.Critical, "Error")
+        End Try
+
+    End Sub
+
+
+
+    Public Sub KoneksiDBSQLSRV()
+
+        strKoneksiSQLSRV = "data source=" & My.Settings.SQLServer & ";user id=" & My.Settings.UsernameSQLServer & ";password=" & My.Settings.PasswordSQLServer & ";initial catalog=" & My.Settings.DBSqlServer & ";MultipleActiveResultSets=True;Application Name=DTW V1.2;  "
+        strKoneksiSQLSRV = String.Format(strKoneksiSQLSRV, strServerIntegration, strUserIntegration, strPassIntegration, strDbaseIntegration)
+        KoneksiSQLSRV = New SqlConnection(strKoneksiSQLSRV)
+
+
+        Try
+            If KoneksiSQLSRV.State = ConnectionState.Closed Then
+                KoneksiSQLSRV.Open()
+                bolStatusKoneksiSQLServer = True
+            End If
+        Catch ex As Exception
+            bolStatusKoneksi = False
+            MsgBox(Err.Description, MsgBoxStyle.Critical, "Error")
+        End Try
+
+    End Sub
+
+
+    Public Sub FnTimerNotifikasi(intDurasi As Integer, strSatuan As String)
+
+
+        If strSatuan = "H" Then
+            MdblDurasiDetikTimerNotifikasi = intDurasi * 3600
+            LongDurasi = MdblDurasiDetikTimerNotifikasi
+        Else
+            MdblDurasiDetikTimerNotifikasi = intDurasi * 60
+            LongDurasi = MdblDurasiDetikTimerNotifikasi
+        End If
+    End Sub
+
+
+
+
+
+
+
+
+
 
 
 

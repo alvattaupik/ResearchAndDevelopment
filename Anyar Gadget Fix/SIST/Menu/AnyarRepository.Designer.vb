@@ -25,10 +25,16 @@ Partial Class AnyarRepository
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AnyarRepository))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.gbPathDirectory = New System.Windows.Forms.GroupBox()
+        Me.cmdSimpan = New System.Windows.Forms.Button()
+        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
+        Me.txtPathDirectory = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.GunaCirclePictureBox2 = New Guna.UI.WinForms.GunaCirclePictureBox()
+        Me.GunaCirclePictureBox1 = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ListView1 = New System.Windows.Forms.ListView()
@@ -37,16 +43,10 @@ Partial Class AnyarRepository
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.GunaCirclePictureBox2 = New Guna.UI.WinForms.GunaCirclePictureBox()
-        Me.GunaCirclePictureBox1 = New Guna.UI.WinForms.GunaCirclePictureBox()
-        Me.gbPathDirectory = New System.Windows.Forms.GroupBox()
-        Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
-        Me.txtPathDirectory = New System.Windows.Forms.TextBox()
-        Me.cmdSimpan = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
+        Me.gbPathDirectory.SuspendLayout()
         CType(Me.GunaCirclePictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.gbPathDirectory.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -63,6 +63,44 @@ Partial Class AnyarRepository
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(728, 153)
         Me.Panel1.TabIndex = 0
+        '
+        'gbPathDirectory
+        '
+        Me.gbPathDirectory.Controls.Add(Me.cmdSimpan)
+        Me.gbPathDirectory.Controls.Add(Me.GunaLabel1)
+        Me.gbPathDirectory.Controls.Add(Me.txtPathDirectory)
+        Me.gbPathDirectory.Location = New System.Drawing.Point(22, 94)
+        Me.gbPathDirectory.Name = "gbPathDirectory"
+        Me.gbPathDirectory.Size = New System.Drawing.Size(701, 56)
+        Me.gbPathDirectory.TabIndex = 6
+        Me.gbPathDirectory.TabStop = False
+        Me.gbPathDirectory.Visible = False
+        '
+        'cmdSimpan
+        '
+        Me.cmdSimpan.Location = New System.Drawing.Point(615, 16)
+        Me.cmdSimpan.Name = "cmdSimpan"
+        Me.cmdSimpan.Size = New System.Drawing.Size(82, 29)
+        Me.cmdSimpan.TabIndex = 10
+        Me.cmdSimpan.Text = "Simpan"
+        Me.cmdSimpan.UseVisualStyleBackColor = True
+        '
+        'GunaLabel1
+        '
+        Me.GunaLabel1.AutoSize = True
+        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GunaLabel1.Location = New System.Drawing.Point(6, 21)
+        Me.GunaLabel1.Name = "GunaLabel1"
+        Me.GunaLabel1.Size = New System.Drawing.Size(82, 15)
+        Me.GunaLabel1.TabIndex = 9
+        Me.GunaLabel1.Text = "Path Directory"
+        '
+        'txtPathDirectory
+        '
+        Me.txtPathDirectory.Location = New System.Drawing.Point(96, 21)
+        Me.txtPathDirectory.Name = "txtPathDirectory"
+        Me.txtPathDirectory.Size = New System.Drawing.Size(503, 20)
+        Me.txtPathDirectory.TabIndex = 8
         '
         'TextBox2
         '
@@ -99,6 +137,30 @@ Partial Class AnyarRepository
         Me.TextBox1.Size = New System.Drawing.Size(353, 20)
         Me.TextBox1.TabIndex = 2
         Me.TextBox1.Visible = False
+        '
+        'GunaCirclePictureBox2
+        '
+        Me.GunaCirclePictureBox2.BaseColor = System.Drawing.Color.White
+        Me.GunaCirclePictureBox2.Image = Global.AnyarGadget.My.Resources.Resources.repository
+        Me.GunaCirclePictureBox2.Location = New System.Drawing.Point(635, 7)
+        Me.GunaCirclePictureBox2.Name = "GunaCirclePictureBox2"
+        Me.GunaCirclePictureBox2.Size = New System.Drawing.Size(89, 87)
+        Me.GunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaCirclePictureBox2.TabIndex = 2
+        Me.GunaCirclePictureBox2.TabStop = False
+        Me.GunaCirclePictureBox2.UseTransfarantBackground = False
+        '
+        'GunaCirclePictureBox1
+        '
+        Me.GunaCirclePictureBox1.BaseColor = System.Drawing.Color.White
+        Me.GunaCirclePictureBox1.Image = Global.AnyarGadget.My.Resources.Resources.LOGO_ANYAR_BULAT
+        Me.GunaCirclePictureBox1.Location = New System.Drawing.Point(23, 7)
+        Me.GunaCirclePictureBox1.Name = "GunaCirclePictureBox1"
+        Me.GunaCirclePictureBox1.Size = New System.Drawing.Size(89, 87)
+        Me.GunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaCirclePictureBox1.TabIndex = 1
+        Me.GunaCirclePictureBox1.TabStop = False
+        Me.GunaCirclePictureBox1.UseTransfarantBackground = False
         '
         'Label1
         '
@@ -159,68 +221,6 @@ Partial Class AnyarRepository
         Me.TextBox3.TabIndex = 6
         Me.TextBox3.Visible = False
         '
-        'GunaCirclePictureBox2
-        '
-        Me.GunaCirclePictureBox2.BaseColor = System.Drawing.Color.White
-        Me.GunaCirclePictureBox2.Image = Global.AnyarGadget.My.Resources.Resources.repository
-        Me.GunaCirclePictureBox2.Location = New System.Drawing.Point(635, 7)
-        Me.GunaCirclePictureBox2.Name = "GunaCirclePictureBox2"
-        Me.GunaCirclePictureBox2.Size = New System.Drawing.Size(89, 87)
-        Me.GunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaCirclePictureBox2.TabIndex = 2
-        Me.GunaCirclePictureBox2.TabStop = False
-        Me.GunaCirclePictureBox2.UseTransfarantBackground = False
-        '
-        'GunaCirclePictureBox1
-        '
-        Me.GunaCirclePictureBox1.BaseColor = System.Drawing.Color.White
-        Me.GunaCirclePictureBox1.Image = Global.AnyarGadget.My.Resources.Resources.LOGO_ANYAR_BULAT
-        Me.GunaCirclePictureBox1.Location = New System.Drawing.Point(23, 7)
-        Me.GunaCirclePictureBox1.Name = "GunaCirclePictureBox1"
-        Me.GunaCirclePictureBox1.Size = New System.Drawing.Size(89, 87)
-        Me.GunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaCirclePictureBox1.TabIndex = 1
-        Me.GunaCirclePictureBox1.TabStop = False
-        Me.GunaCirclePictureBox1.UseTransfarantBackground = False
-        '
-        'gbPathDirectory
-        '
-        Me.gbPathDirectory.Controls.Add(Me.cmdSimpan)
-        Me.gbPathDirectory.Controls.Add(Me.GunaLabel1)
-        Me.gbPathDirectory.Controls.Add(Me.txtPathDirectory)
-        Me.gbPathDirectory.Location = New System.Drawing.Point(22, 94)
-        Me.gbPathDirectory.Name = "gbPathDirectory"
-        Me.gbPathDirectory.Size = New System.Drawing.Size(701, 56)
-        Me.gbPathDirectory.TabIndex = 6
-        Me.gbPathDirectory.TabStop = False
-        Me.gbPathDirectory.Visible = False
-        '
-        'GunaLabel1
-        '
-        Me.GunaLabel1.AutoSize = True
-        Me.GunaLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GunaLabel1.Location = New System.Drawing.Point(6, 21)
-        Me.GunaLabel1.Name = "GunaLabel1"
-        Me.GunaLabel1.Size = New System.Drawing.Size(82, 15)
-        Me.GunaLabel1.TabIndex = 9
-        Me.GunaLabel1.Text = "Path Directory"
-        '
-        'txtPathDirectory
-        '
-        Me.txtPathDirectory.Location = New System.Drawing.Point(96, 21)
-        Me.txtPathDirectory.Name = "txtPathDirectory"
-        Me.txtPathDirectory.Size = New System.Drawing.Size(503, 20)
-        Me.txtPathDirectory.TabIndex = 8
-        '
-        'cmdSimpan
-        '
-        Me.cmdSimpan.Location = New System.Drawing.Point(615, 16)
-        Me.cmdSimpan.Name = "cmdSimpan"
-        Me.cmdSimpan.Size = New System.Drawing.Size(82, 29)
-        Me.cmdSimpan.TabIndex = 10
-        Me.cmdSimpan.Text = "Simpan"
-        Me.cmdSimpan.UseVisualStyleBackColor = True
-        '
         'AnyarRepository
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -231,15 +231,17 @@ Partial Class AnyarRepository
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.MaximizeBox = False
         Me.Name = "AnyarRepository"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AnyarRepository"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.GunaCirclePictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbPathDirectory.ResumeLayout(False)
         Me.gbPathDirectory.PerformLayout()
+        CType(Me.GunaCirclePictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

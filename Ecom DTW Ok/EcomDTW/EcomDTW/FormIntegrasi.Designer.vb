@@ -29,29 +29,35 @@ Partial Class FormIntegrasi
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblJumlahItem = New System.Windows.Forms.ToolStripStatusLabel()
         Me.cmdUpload = New System.Windows.Forms.Button()
-        Me.lblJumlahUpload = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmdLogoff = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lblJumlahItem2 = New System.Windows.Forms.Label()
-        Me.lblDari = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.BgWorker = New System.ComponentModel.BackgroundWorker()
         Me.cmdStopProses = New System.Windows.Forms.Button()
-        Me.lblStatusProses = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.cmdCancelIntegrasi = New System.Windows.Forms.Button()
+        Me.PanelIntegrasi = New System.Windows.Forms.Panel()
+        Me.lblProsesIntegrasi = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.GunaWinCircleProgressIndicator1 = New Guna.UI.WinForms.GunaWinCircleProgressIndicator()
+        Me.PanelSinkronisasi = New System.Windows.Forms.Panel()
+        Me.lblSinkronisasi = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.GunaWinCircleProgressIndicator2 = New Guna.UI.WinForms.GunaWinCircleProgressIndicator()
+        Me.bgSinkronisasi = New System.ComponentModel.BackgroundWorker()
+        Me.bgIntegrasi = New System.ComponentModel.BackgroundWorker()
         CType(Me.dgListUpload, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelIntegrasi.SuspendLayout()
+        Me.PanelSinkronisasi.SuspendLayout()
         Me.SuspendLayout()
         '
         'cmdProses
         '
         Me.cmdProses.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdProses.Location = New System.Drawing.Point(460, 9)
+        Me.cmdProses.Location = New System.Drawing.Point(249, 52)
         Me.cmdProses.Name = "cmdProses"
-        Me.cmdProses.Size = New System.Drawing.Size(102, 89)
+        Me.cmdProses.Size = New System.Drawing.Size(238, 56)
         Me.cmdProses.TabIndex = 0
-        Me.cmdProses.Text = "Proses"
+        Me.cmdProses.Text = "Sinkronisasi MYSQL-SQL Server"
         Me.cmdProses.UseVisualStyleBackColor = True
         '
         'OpenFileDialog1
@@ -62,9 +68,9 @@ Partial Class FormIntegrasi
         '
         Me.dgListUpload.AllowUserToAddRows = False
         Me.dgListUpload.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgListUpload.Location = New System.Drawing.Point(13, 114)
+        Me.dgListUpload.Location = New System.Drawing.Point(13, 138)
         Me.dgListUpload.Name = "dgListUpload"
-        Me.dgListUpload.Size = New System.Drawing.Size(833, 287)
+        Me.dgListUpload.Size = New System.Drawing.Size(783, 263)
         Me.dgListUpload.TabIndex = 5
         '
         'StatusStrip1
@@ -72,7 +78,7 @@ Partial Class FormIntegrasi
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblJumlahItem})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 404)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(862, 26)
+        Me.StatusStrip1.Size = New System.Drawing.Size(801, 26)
         Me.StatusStrip1.TabIndex = 6
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -86,131 +92,165 @@ Partial Class FormIntegrasi
         'cmdUpload
         '
         Me.cmdUpload.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdUpload.Location = New System.Drawing.Point(705, 6)
+        Me.cmdUpload.Location = New System.Drawing.Point(685, 14)
         Me.cmdUpload.Name = "cmdUpload"
-        Me.cmdUpload.Size = New System.Drawing.Size(70, 92)
+        Me.cmdUpload.Size = New System.Drawing.Size(111, 56)
         Me.cmdUpload.TabIndex = 7
-        Me.cmdUpload.Text = "Upload"
+        Me.cmdUpload.Text = "Integrasikan"
         Me.cmdUpload.UseVisualStyleBackColor = True
-        '
-        'lblJumlahUpload
-        '
-        Me.lblJumlahUpload.AutoSize = True
-        Me.lblJumlahUpload.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJumlahUpload.Location = New System.Drawing.Point(651, 410)
-        Me.lblJumlahUpload.Name = "lblJumlahUpload"
-        Me.lblJumlahUpload.Size = New System.Drawing.Size(19, 20)
-        Me.lblJumlahUpload.TabIndex = 8
-        Me.lblJumlahUpload.Text = "0"
-        Me.lblJumlahUpload.Visible = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(129, 6)
+        Me.Label1.Location = New System.Drawing.Point(249, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(314, 33)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Integrasi Master Data"
         '
-        'cmdLogoff
+        'cmdStopProses
         '
-        Me.cmdLogoff.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdLogoff.Location = New System.Drawing.Point(781, 6)
-        Me.cmdLogoff.Name = "cmdLogoff"
-        Me.cmdLogoff.Size = New System.Drawing.Size(65, 92)
-        Me.cmdLogoff.TabIndex = 11
-        Me.cmdLogoff.Text = "Logoff"
-        Me.cmdLogoff.UseVisualStyleBackColor = True
+        Me.cmdStopProses.Enabled = False
+        Me.cmdStopProses.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdStopProses.Location = New System.Drawing.Point(493, 52)
+        Me.cmdStopProses.Name = "cmdStopProses"
+        Me.cmdStopProses.Size = New System.Drawing.Size(70, 56)
+        Me.cmdStopProses.TabIndex = 17
+        Me.cmdStopProses.Text = "Stop Proses"
+        Me.cmdStopProses.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.EcomDTW.My.Resources.Resources.unnamed
-        Me.PictureBox1.Location = New System.Drawing.Point(13, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(26, 14)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(98, 104)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
-        'lblJumlahItem2
+        'cmdCancelIntegrasi
         '
-        Me.lblJumlahItem2.AutoSize = True
-        Me.lblJumlahItem2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJumlahItem2.Location = New System.Drawing.Point(777, 410)
-        Me.lblJumlahItem2.Name = "lblJumlahItem2"
-        Me.lblJumlahItem2.Size = New System.Drawing.Size(19, 20)
-        Me.lblJumlahItem2.TabIndex = 13
-        Me.lblJumlahItem2.Text = "0"
-        Me.lblJumlahItem2.Visible = False
+        Me.cmdCancelIntegrasi.Enabled = False
+        Me.cmdCancelIntegrasi.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdCancelIntegrasi.Location = New System.Drawing.Point(685, 76)
+        Me.cmdCancelIntegrasi.Name = "cmdCancelIntegrasi"
+        Me.cmdCancelIntegrasi.Size = New System.Drawing.Size(111, 56)
+        Me.cmdCancelIntegrasi.TabIndex = 18
+        Me.cmdCancelIntegrasi.Text = "Cancel Integrasi"
+        Me.cmdCancelIntegrasi.UseVisualStyleBackColor = True
         '
-        'lblDari
+        'PanelIntegrasi
         '
-        Me.lblDari.AutoSize = True
-        Me.lblDari.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDari.Location = New System.Drawing.Point(701, 408)
-        Me.lblDari.Name = "lblDari"
-        Me.lblDari.Size = New System.Drawing.Size(42, 20)
-        Me.lblDari.TabIndex = 14
-        Me.lblDari.Text = "Dari"
-        Me.lblDari.Visible = False
+        Me.PanelIntegrasi.BackColor = System.Drawing.Color.SkyBlue
+        Me.PanelIntegrasi.Controls.Add(Me.lblProsesIntegrasi)
+        Me.PanelIntegrasi.Controls.Add(Me.Label2)
+        Me.PanelIntegrasi.Controls.Add(Me.GunaWinCircleProgressIndicator1)
+        Me.PanelIntegrasi.Location = New System.Drawing.Point(265, 156)
+        Me.PanelIntegrasi.Name = "PanelIntegrasi"
+        Me.PanelIntegrasi.Size = New System.Drawing.Size(264, 223)
+        Me.PanelIntegrasi.TabIndex = 19
+        Me.PanelIntegrasi.Visible = False
         '
-        'Label3
+        'lblProsesIntegrasi
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(514, 407)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(156, 20)
-        Me.Label3.TabIndex = 15
-        Me.Label3.Text = "Mengintegrasikan:"
+        Me.lblProsesIntegrasi.AutoSize = True
+        Me.lblProsesIntegrasi.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblProsesIntegrasi.Location = New System.Drawing.Point(3, 193)
+        Me.lblProsesIntegrasi.Name = "lblProsesIntegrasi"
+        Me.lblProsesIntegrasi.Size = New System.Drawing.Size(131, 16)
+        Me.lblProsesIntegrasi.TabIndex = 2
+        Me.lblProsesIntegrasi.Text = "Mengintegrasikan"
         '
-        'BgWorker
+        'Label2
         '
-        Me.BgWorker.WorkerReportsProgress = True
-        Me.BgWorker.WorkerSupportsCancellation = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(35, 15)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(200, 25)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Mohon Menunggu"
         '
-        'cmdStopProses
+        'GunaWinCircleProgressIndicator1
         '
-        Me.cmdStopProses.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdStopProses.Location = New System.Drawing.Point(568, 9)
-        Me.cmdStopProses.Name = "cmdStopProses"
-        Me.cmdStopProses.Size = New System.Drawing.Size(102, 89)
-        Me.cmdStopProses.TabIndex = 17
-        Me.cmdStopProses.Text = "Stop Proses"
-        Me.cmdStopProses.UseVisualStyleBackColor = True
+        Me.GunaWinCircleProgressIndicator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.GunaWinCircleProgressIndicator1.Location = New System.Drawing.Point(78, 55)
+        Me.GunaWinCircleProgressIndicator1.Name = "GunaWinCircleProgressIndicator1"
+        Me.GunaWinCircleProgressIndicator1.ProgressColor = System.Drawing.Color.DodgerBlue
+        Me.GunaWinCircleProgressIndicator1.Size = New System.Drawing.Size(110, 114)
+        Me.GunaWinCircleProgressIndicator1.TabIndex = 0
         '
-        'lblStatusProses
+        'PanelSinkronisasi
         '
-        Me.lblStatusProses.AutoSize = True
-        Me.lblStatusProses.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStatusProses.Location = New System.Drawing.Point(183, 45)
-        Me.lblStatusProses.Name = "lblStatusProses"
-        Me.lblStatusProses.Size = New System.Drawing.Size(167, 16)
-        Me.lblStatusProses.TabIndex = 18
-        Me.lblStatusProses.Text = "Status Proses : 0 dari 0"
-        Me.lblStatusProses.Visible = False
+        Me.PanelSinkronisasi.BackColor = System.Drawing.Color.YellowGreen
+        Me.PanelSinkronisasi.Controls.Add(Me.lblSinkronisasi)
+        Me.PanelSinkronisasi.Controls.Add(Me.Label4)
+        Me.PanelSinkronisasi.Controls.Add(Me.GunaWinCircleProgressIndicator2)
+        Me.PanelSinkronisasi.Location = New System.Drawing.Point(265, 157)
+        Me.PanelSinkronisasi.Name = "PanelSinkronisasi"
+        Me.PanelSinkronisasi.Size = New System.Drawing.Size(264, 223)
+        Me.PanelSinkronisasi.TabIndex = 20
+        Me.PanelSinkronisasi.Visible = False
+        '
+        'lblSinkronisasi
+        '
+        Me.lblSinkronisasi.AutoSize = True
+        Me.lblSinkronisasi.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSinkronisasi.Location = New System.Drawing.Point(3, 193)
+        Me.lblSinkronisasi.Name = "lblSinkronisasi"
+        Me.lblSinkronisasi.Size = New System.Drawing.Size(120, 16)
+        Me.lblSinkronisasi.TabIndex = 2
+        Me.lblSinkronisasi.Text = "Mensinkronisasi"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(35, 15)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(200, 25)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Mohon Menunggu"
+        '
+        'GunaWinCircleProgressIndicator2
+        '
+        Me.GunaWinCircleProgressIndicator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.GunaWinCircleProgressIndicator2.Location = New System.Drawing.Point(78, 55)
+        Me.GunaWinCircleProgressIndicator2.Name = "GunaWinCircleProgressIndicator2"
+        Me.GunaWinCircleProgressIndicator2.ProgressColor = System.Drawing.Color.DodgerBlue
+        Me.GunaWinCircleProgressIndicator2.Size = New System.Drawing.Size(110, 114)
+        Me.GunaWinCircleProgressIndicator2.TabIndex = 0
+        '
+        'bgSinkronisasi
+        '
+        Me.bgSinkronisasi.WorkerReportsProgress = True
+        Me.bgSinkronisasi.WorkerSupportsCancellation = True
+        '
+        'bgIntegrasi
+        '
+        Me.bgIntegrasi.WorkerReportsProgress = True
+        Me.bgIntegrasi.WorkerSupportsCancellation = True
         '
         'FormIntegrasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(862, 430)
-        Me.Controls.Add(Me.lblStatusProses)
+        Me.BackColor = System.Drawing.Color.DodgerBlue
+        Me.ClientSize = New System.Drawing.Size(801, 430)
+        Me.Controls.Add(Me.PanelSinkronisasi)
+        Me.Controls.Add(Me.PanelIntegrasi)
+        Me.Controls.Add(Me.cmdCancelIntegrasi)
         Me.Controls.Add(Me.cmdStopProses)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.lblDari)
-        Me.Controls.Add(Me.lblJumlahItem2)
-        Me.Controls.Add(Me.cmdLogoff)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.lblJumlahUpload)
         Me.Controls.Add(Me.cmdUpload)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.dgListUpload)
         Me.Controls.Add(Me.cmdProses)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MinimizeBox = False
         Me.Name = "FormIntegrasi"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Integrasi Master Data"
@@ -218,6 +258,10 @@ Partial Class FormIntegrasi
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelIntegrasi.ResumeLayout(False)
+        Me.PanelIntegrasi.PerformLayout()
+        Me.PanelSinkronisasi.ResumeLayout(False)
+        Me.PanelSinkronisasi.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -228,15 +272,19 @@ Partial Class FormIntegrasi
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents lblJumlahItem As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents cmdUpload As System.Windows.Forms.Button
-    Friend WithEvents lblJumlahUpload As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents cmdLogoff As System.Windows.Forms.Button
-    Friend WithEvents lblJumlahItem2 As System.Windows.Forms.Label
-    Friend WithEvents lblDari As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents BgWorker As System.ComponentModel.BackgroundWorker
     Friend WithEvents cmdStopProses As System.Windows.Forms.Button
-    Friend WithEvents lblStatusProses As System.Windows.Forms.Label
+    Friend WithEvents cmdCancelIntegrasi As System.Windows.Forms.Button
+    Friend WithEvents PanelIntegrasi As System.Windows.Forms.Panel
+    Friend WithEvents lblProsesIntegrasi As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents GunaWinCircleProgressIndicator1 As Guna.UI.WinForms.GunaWinCircleProgressIndicator
+    Friend WithEvents PanelSinkronisasi As System.Windows.Forms.Panel
+    Friend WithEvents lblSinkronisasi As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents GunaWinCircleProgressIndicator2 As Guna.UI.WinForms.GunaWinCircleProgressIndicator
+    Friend WithEvents bgSinkronisasi As System.ComponentModel.BackgroundWorker
+    Friend WithEvents bgIntegrasi As System.ComponentModel.BackgroundWorker
 
 End Class

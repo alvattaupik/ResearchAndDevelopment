@@ -31,8 +31,10 @@ Partial Class IntegrationMonitoring
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.GunaCirclePictureBox2 = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.lblJumlahErrorIntegrasi = New System.Windows.Forms.Label()
@@ -70,8 +72,10 @@ Partial Class IntegrationMonitoring
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.lblDatabase = New System.Windows.Forms.Label()
         Me.cmdStopMonitoring = New Guna.UI.WinForms.GunaGradientButton()
         Me.cmbStartMonitoring = New Guna.UI.WinForms.GunaGradientButton()
+        Me.GunaPictureBox3 = New Guna.UI.WinForms.GunaPictureBox()
         Me.lblNamaDatabase = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.lblBebanKerja = New System.Windows.Forms.Label()
@@ -92,11 +96,9 @@ Partial Class IntegrationMonitoring
         Me.GunaCirclePictureBox1 = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.GunaPictureBox2 = New Guna.UI.WinForms.GunaPictureBox()
         Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
-        Me.GunaPictureBox3 = New Guna.UI.WinForms.GunaPictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.GunaCirclePictureBox2 = New Guna.UI.WinForms.GunaCirclePictureBox()
-        Me.lblDatabase = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaCirclePictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -110,6 +112,7 @@ Partial Class IntegrationMonitoring
         Me.Panel3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.Panel7.SuspendLayout()
+        CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgMonitoringDatabase, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,9 +121,6 @@ Partial Class IntegrationMonitoring
         CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GunaCirclePictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -147,6 +147,16 @@ Partial Class IntegrationMonitoring
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "A.I.O"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.AnyarGadget.My.Resources.Resources._60ac66ae2cf6843b28687fc143861404
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 143)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(236, 360)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -168,6 +178,18 @@ Partial Class IntegrationMonitoring
         Me.Label1.Size = New System.Drawing.Size(113, 39)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Anyar"
+        '
+        'GunaCirclePictureBox2
+        '
+        Me.GunaCirclePictureBox2.BaseColor = System.Drawing.Color.White
+        Me.GunaCirclePictureBox2.Image = Global.AnyarGadget.My.Resources.Resources.LOGO_ANYAR_BULAT
+        Me.GunaCirclePictureBox2.Location = New System.Drawing.Point(7, 10)
+        Me.GunaCirclePictureBox2.Name = "GunaCirclePictureBox2"
+        Me.GunaCirclePictureBox2.Size = New System.Drawing.Size(85, 85)
+        Me.GunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaCirclePictureBox2.TabIndex = 2
+        Me.GunaCirclePictureBox2.TabStop = False
+        Me.GunaCirclePictureBox2.UseTransfarantBackground = False
         '
         'TabControl1
         '
@@ -649,6 +671,17 @@ Partial Class IntegrationMonitoring
         Me.Panel7.Size = New System.Drawing.Size(615, 158)
         Me.Panel7.TabIndex = 45
         '
+        'lblDatabase
+        '
+        Me.lblDatabase.AutoSize = True
+        Me.lblDatabase.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDatabase.ForeColor = System.Drawing.Color.Black
+        Me.lblDatabase.Location = New System.Drawing.Point(36, 35)
+        Me.lblDatabase.Name = "lblDatabase"
+        Me.lblDatabase.Size = New System.Drawing.Size(13, 16)
+        Me.lblDatabase.TabIndex = 53
+        Me.lblDatabase.Text = "-"
+        '
         'cmdStopMonitoring
         '
         Me.cmdStopMonitoring.AnimationHoverSpeed = 0.07!
@@ -704,6 +737,17 @@ Partial Class IntegrationMonitoring
         Me.cmbStartMonitoring.TabIndex = 51
         Me.cmbStartMonitoring.Text = "Mulai Monitoring"
         Me.cmbStartMonitoring.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'GunaPictureBox3
+        '
+        Me.GunaPictureBox3.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox3.Image = Global.AnyarGadget.My.Resources.Resources.performance_icon_png_6
+        Me.GunaPictureBox3.Location = New System.Drawing.Point(46, 54)
+        Me.GunaPictureBox3.Name = "GunaPictureBox3"
+        Me.GunaPictureBox3.Size = New System.Drawing.Size(99, 50)
+        Me.GunaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaPictureBox3.TabIndex = 50
+        Me.GunaPictureBox3.TabStop = False
         '
         'lblNamaDatabase
         '
@@ -908,50 +952,6 @@ Partial Class IntegrationMonitoring
         Me.GunaPictureBox1.TabIndex = 4
         Me.GunaPictureBox1.TabStop = False
         '
-        'GunaPictureBox3
-        '
-        Me.GunaPictureBox3.BaseColor = System.Drawing.Color.White
-        Me.GunaPictureBox3.Image = Global.AnyarGadget.My.Resources.Resources.performance_icon_png_6
-        Me.GunaPictureBox3.Location = New System.Drawing.Point(46, 54)
-        Me.GunaPictureBox3.Name = "GunaPictureBox3"
-        Me.GunaPictureBox3.Size = New System.Drawing.Size(99, 50)
-        Me.GunaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaPictureBox3.TabIndex = 50
-        Me.GunaPictureBox3.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.AnyarGadget.My.Resources.Resources._60ac66ae2cf6843b28687fc143861404
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 143)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(236, 360)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
-        '
-        'GunaCirclePictureBox2
-        '
-        Me.GunaCirclePictureBox2.BaseColor = System.Drawing.Color.White
-        Me.GunaCirclePictureBox2.Image = Global.AnyarGadget.My.Resources.Resources.LOGO_ANYAR_BULAT
-        Me.GunaCirclePictureBox2.Location = New System.Drawing.Point(7, 10)
-        Me.GunaCirclePictureBox2.Name = "GunaCirclePictureBox2"
-        Me.GunaCirclePictureBox2.Size = New System.Drawing.Size(85, 85)
-        Me.GunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaCirclePictureBox2.TabIndex = 2
-        Me.GunaCirclePictureBox2.TabStop = False
-        Me.GunaCirclePictureBox2.UseTransfarantBackground = False
-        '
-        'lblDatabase
-        '
-        Me.lblDatabase.AutoSize = True
-        Me.lblDatabase.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDatabase.ForeColor = System.Drawing.Color.Black
-        Me.lblDatabase.Location = New System.Drawing.Point(36, 35)
-        Me.lblDatabase.Name = "lblDatabase"
-        Me.lblDatabase.Size = New System.Drawing.Size(13, 16)
-        Me.lblDatabase.TabIndex = 53
-        Me.lblDatabase.Text = "-"
-        '
         'IntegrationMonitoring
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -963,12 +963,15 @@ Partial Class IntegrationMonitoring
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximizeBox = False
         Me.Name = "IntegrationMonitoring"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "IntegrationMonitoring"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaCirclePictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -990,6 +993,7 @@ Partial Class IntegrationMonitoring
         Me.TabPage4.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
+        CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgMonitoringDatabase, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
@@ -1001,9 +1005,6 @@ Partial Class IntegrationMonitoring
         CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaCirclePictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

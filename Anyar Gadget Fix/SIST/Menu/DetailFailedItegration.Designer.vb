@@ -24,6 +24,11 @@ Partial Class DetailFailedItegration
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cmdSolusi = New System.Windows.Forms.Button()
+        Me.txtAlamatFullfill = New System.Windows.Forms.RichTextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtAlamatCustomer = New System.Windows.Forms.RichTextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtIntegrationKey = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -42,11 +47,6 @@ Partial Class DetailFailedItegration
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblJumlahItem = New System.Windows.Forms.Label()
         Me.dgListItemFail = New System.Windows.Forms.DataGridView()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtAlamatCustomer = New System.Windows.Forms.RichTextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtAlamatFullfill = New System.Windows.Forms.RichTextBox()
-        Me.cmdSolusi = New System.Windows.Forms.Button()
         Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -87,6 +87,54 @@ Partial Class DetailFailedItegration
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(318, 450)
         Me.Panel1.TabIndex = 7
+        '
+        'cmdSolusi
+        '
+        Me.cmdSolusi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdSolusi.Location = New System.Drawing.Point(13, 410)
+        Me.cmdSolusi.Name = "cmdSolusi"
+        Me.cmdSolusi.Size = New System.Drawing.Size(299, 35)
+        Me.cmdSolusi.TabIndex = 18
+        Me.cmdSolusi.Text = "Solusi"
+        Me.cmdSolusi.UseVisualStyleBackColor = True
+        '
+        'txtAlamatFullfill
+        '
+        Me.txtAlamatFullfill.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtAlamatFullfill.Location = New System.Drawing.Point(130, 202)
+        Me.txtAlamatFullfill.Name = "txtAlamatFullfill"
+        Me.txtAlamatFullfill.Size = New System.Drawing.Size(183, 67)
+        Me.txtAlamatFullfill.TabIndex = 17
+        Me.txtAlamatFullfill.Text = ""
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(11, 218)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(101, 16)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Alamat Fullfill"
+        '
+        'txtAlamatCustomer
+        '
+        Me.txtAlamatCustomer.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtAlamatCustomer.Location = New System.Drawing.Point(131, 145)
+        Me.txtAlamatCustomer.Name = "txtAlamatCustomer"
+        Me.txtAlamatCustomer.Size = New System.Drawing.Size(183, 51)
+        Me.txtAlamatCustomer.TabIndex = 15
+        Me.txtAlamatCustomer.Text = ""
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(3, 145)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(125, 16)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "Alamat Customer"
         '
         'Label11
         '
@@ -260,54 +308,6 @@ Partial Class DetailFailedItegration
         Me.dgListItemFail.Size = New System.Drawing.Size(405, 409)
         Me.dgListItemFail.TabIndex = 0
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(3, 145)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(125, 16)
-        Me.Label6.TabIndex = 14
-        Me.Label6.Text = "Alamat Customer"
-        '
-        'txtAlamatCustomer
-        '
-        Me.txtAlamatCustomer.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtAlamatCustomer.Location = New System.Drawing.Point(131, 145)
-        Me.txtAlamatCustomer.Name = "txtAlamatCustomer"
-        Me.txtAlamatCustomer.Size = New System.Drawing.Size(183, 51)
-        Me.txtAlamatCustomer.TabIndex = 15
-        Me.txtAlamatCustomer.Text = ""
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(11, 218)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(101, 16)
-        Me.Label8.TabIndex = 16
-        Me.Label8.Text = "Alamat Fullfill"
-        '
-        'txtAlamatFullfill
-        '
-        Me.txtAlamatFullfill.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtAlamatFullfill.Location = New System.Drawing.Point(130, 202)
-        Me.txtAlamatFullfill.Name = "txtAlamatFullfill"
-        Me.txtAlamatFullfill.Size = New System.Drawing.Size(183, 67)
-        Me.txtAlamatFullfill.TabIndex = 17
-        Me.txtAlamatFullfill.Text = ""
-        '
-        'cmdSolusi
-        '
-        Me.cmdSolusi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdSolusi.Location = New System.Drawing.Point(13, 410)
-        Me.cmdSolusi.Name = "cmdSolusi"
-        Me.cmdSolusi.Size = New System.Drawing.Size(299, 35)
-        Me.cmdSolusi.TabIndex = 18
-        Me.cmdSolusi.Text = "Solusi"
-        Me.cmdSolusi.UseVisualStyleBackColor = True
-        '
         'GunaPictureBox1
         '
         Me.GunaPictureBox1.BaseColor = System.Drawing.Color.White
@@ -329,6 +329,7 @@ Partial Class DetailFailedItegration
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GunaPictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximizeBox = False
         Me.Name = "DetailFailedItegration"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

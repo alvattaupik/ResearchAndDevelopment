@@ -139,7 +139,7 @@ Public Class Form1
             Next
 
 
-            GoTo Lampiran
+            Call SendLampiran()
 
         Else
 
@@ -154,7 +154,14 @@ Public Class Form1
         Exit Sub
 
 
-Lampiran:
+
+    End Sub
+
+
+
+
+    Sub SendLampiran()
+
 
         For i As Integer = 0 To dglistkontak.Rows.Count - 1
 
@@ -169,8 +176,9 @@ Lampiran:
         TimerExecute.Start()
 
 
-
     End Sub
+
+
 
 
     Sub LoadDaftarKontak()
@@ -371,8 +379,20 @@ Lampiran:
             End Sub
         )
 
+
+        If (chkAutoReply.Checked) Then
+
+            Dim msgReplay = String.Format(My.Settings.KalimatAutoReply, e.Sender, e.Msg)
+
+            _whatsAppApi.SendMessage(New MsgArgs(e.Sender, msgReplay))
+
+        End If
+
+
+
       
     End Sub
+
 
 
 

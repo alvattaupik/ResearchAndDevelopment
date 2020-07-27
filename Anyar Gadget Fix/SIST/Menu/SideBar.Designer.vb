@@ -23,6 +23,7 @@ Partial Class SideBar
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SideBar))
         Me.TimerJam = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.cmdAnyarLocalPrint = New Guna.UI.WinForms.GunaAdvenceButton()
@@ -37,7 +38,6 @@ Partial Class SideBar
         Me.lblHari = New Guna.UI.WinForms.GunaLabel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.GunaCirclePictureBox4 = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.txtSiteID = New Guna.UI.WinForms.GunaTextBox()
@@ -52,17 +52,17 @@ Partial Class SideBar
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.cmdConnectNotif = New System.Windows.Forms.Button()
         Me.txtNotifikasi = New System.Windows.Forms.RichTextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.GunaCirclePictureBox4 = New Guna.UI.WinForms.GunaCirclePictureBox()
+        Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
         Me.PanelSideBar.SuspendLayout()
-        CType(Me.GunaCirclePictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.GunaCirclePictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GunaLinePanel1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        CType(Me.GunaCirclePictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TimerJam
@@ -334,24 +334,25 @@ Partial Class SideBar
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelSideBar.BackColor = System.Drawing.Color.Transparent
-        Me.PanelSideBar.BaseColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.PanelSideBar.BaseColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.PanelSideBar.Controls.Add(Me.lblJam)
         Me.PanelSideBar.Controls.Add(Me.lblHari)
         Me.PanelSideBar.Controls.Add(Me.Label3)
         Me.PanelSideBar.Controls.Add(Me.Label5)
         Me.PanelSideBar.Controls.Add(Me.GunaCirclePictureBox4)
         Me.PanelSideBar.Controls.Add(Me.TabControl1)
-        Me.PanelSideBar.Controls.Add(Me.Panel2)
+        Me.PanelSideBar.Controls.Add(Me.GunaPictureBox1)
         Me.PanelSideBar.Location = New System.Drawing.Point(3, 3)
         Me.PanelSideBar.Name = "PanelSideBar"
-        Me.PanelSideBar.Size = New System.Drawing.Size(232, 525)
+        Me.PanelSideBar.Size = New System.Drawing.Size(233, 521)
         Me.PanelSideBar.TabIndex = 10
         '
         'lblJam
         '
         Me.lblJam.AutoSize = True
         Me.lblJam.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJam.Location = New System.Drawing.Point(98, 92)
+        Me.lblJam.ForeColor = System.Drawing.Color.White
+        Me.lblJam.Location = New System.Drawing.Point(104, 64)
         Me.lblJam.Name = "lblJam"
         Me.lblJam.Size = New System.Drawing.Size(47, 25)
         Me.lblJam.TabIndex = 10
@@ -361,7 +362,8 @@ Partial Class SideBar
         '
         Me.lblHari.AutoSize = True
         Me.lblHari.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHari.Location = New System.Drawing.Point(98, 42)
+        Me.lblHari.ForeColor = System.Drawing.Color.White
+        Me.lblHari.Location = New System.Drawing.Point(104, 6)
         Me.lblHari.Name = "lblHari"
         Me.lblHari.Size = New System.Drawing.Size(50, 25)
         Me.lblHari.TabIndex = 9
@@ -371,7 +373,8 @@ Partial Class SideBar
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(47, 507)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(50, 474)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(104, 16)
         Me.Label3.TabIndex = 8
@@ -381,30 +384,19 @@ Partial Class SideBar
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(27, 490)
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(27, 454)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(162, 20)
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Anyar Gadget V1.1"
-        '
-        'GunaCirclePictureBox4
-        '
-        Me.GunaCirclePictureBox4.BaseColor = System.Drawing.Color.White
-        Me.GunaCirclePictureBox4.Image = Global.AnyarGadget.My.Resources.Resources.LOGO_ANYAR_BULAT
-        Me.GunaCirclePictureBox4.Location = New System.Drawing.Point(12, 42)
-        Me.GunaCirclePictureBox4.Name = "GunaCirclePictureBox4"
-        Me.GunaCirclePictureBox4.Size = New System.Drawing.Size(86, 84)
-        Me.GunaCirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaCirclePictureBox4.TabIndex = 5
-        Me.GunaCirclePictureBox4.TabStop = False
-        Me.GunaCirclePictureBox4.UseTransfarantBackground = False
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 130)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 93)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(195, 358)
@@ -452,7 +444,7 @@ Partial Class SideBar
         Me.txtLocation.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtLocation.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtLocation.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtLocation.Location = New System.Drawing.Point(7, 161)
+        Me.txtLocation.Location = New System.Drawing.Point(6, 148)
         Me.txtLocation.Name = "txtLocation"
         Me.txtLocation.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtLocation.ReadOnly = True
@@ -469,7 +461,7 @@ Partial Class SideBar
         Me.txtNamaUser.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNamaUser.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtNamaUser.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtNamaUser.Location = New System.Drawing.Point(7, 126)
+        Me.txtNamaUser.Location = New System.Drawing.Point(6, 112)
         Me.txtNamaUser.Name = "txtNamaUser"
         Me.txtNamaUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtNamaUser.ReadOnly = True
@@ -480,10 +472,10 @@ Partial Class SideBar
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(2, 13)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(12, 3)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(186, 20)
+        Me.Label2.Size = New System.Drawing.Size(172, 18)
         Me.Label2.TabIndex = 38
         Me.Label2.Text = "Halo, Selamat Datang"
         '
@@ -491,7 +483,7 @@ Partial Class SideBar
         '
         Me.GunaCirclePictureBox3.BackColor = System.Drawing.Color.LightGray
         Me.GunaCirclePictureBox3.BaseColor = System.Drawing.Color.White
-        Me.GunaCirclePictureBox3.Location = New System.Drawing.Point(51, 39)
+        Me.GunaCirclePictureBox3.Location = New System.Drawing.Point(51, 24)
         Me.GunaCirclePictureBox3.Name = "GunaCirclePictureBox3"
         Me.GunaCirclePictureBox3.Size = New System.Drawing.Size(84, 82)
         Me.GunaCirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -501,6 +493,7 @@ Partial Class SideBar
         '
         'GunaLinePanel1
         '
+        Me.GunaLinePanel1.BackColor = System.Drawing.Color.White
         Me.GunaLinePanel1.Controls.Add(Me.GunaGradientButton2)
         Me.GunaLinePanel1.Controls.Add(Me.cmdUbahPassword)
         Me.GunaLinePanel1.LineColor = System.Drawing.Color.Black
@@ -612,37 +605,42 @@ Partial Class SideBar
         Me.txtNotifikasi.TabIndex = 0
         Me.txtNotifikasi.Text = ""
         '
-        'Panel2
+        'GunaCirclePictureBox4
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Location = New System.Drawing.Point(12, 2)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(201, 37)
-        Me.Panel2.TabIndex = 0
+        Me.GunaCirclePictureBox4.BaseColor = System.Drawing.Color.White
+        Me.GunaCirclePictureBox4.Image = Global.AnyarGadget.My.Resources.Resources.LOGO_ANYAR_BULAT
+        Me.GunaCirclePictureBox4.Location = New System.Drawing.Point(12, 5)
+        Me.GunaCirclePictureBox4.Name = "GunaCirclePictureBox4"
+        Me.GunaCirclePictureBox4.Size = New System.Drawing.Size(86, 84)
+        Me.GunaCirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaCirclePictureBox4.TabIndex = 5
+        Me.GunaCirclePictureBox4.TabStop = False
+        Me.GunaCirclePictureBox4.UseTransfarantBackground = False
         '
-        'Label1
+        'GunaPictureBox1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(29, 6)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 24)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "My Dashboard"
+        Me.GunaPictureBox1.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.GunaPictureBox1.Image = CType(resources.GetObject("GunaPictureBox1.Image"), System.Drawing.Image)
+        Me.GunaPictureBox1.Location = New System.Drawing.Point(0, 441)
+        Me.GunaPictureBox1.Name = "GunaPictureBox1"
+        Me.GunaPictureBox1.Size = New System.Drawing.Size(233, 80)
+        Me.GunaPictureBox1.TabIndex = 38
+        Me.GunaPictureBox1.TabStop = False
         '
         'SideBar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(237, 528)
+        Me.ClientSize = New System.Drawing.Size(238, 524)
         Me.Controls.Add(Me.PanelSideBar)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Location = New System.Drawing.Point(7, 77)
+        Me.MaximizeBox = False
         Me.Name = "SideBar"
         Me.Text = "SideBar"
         Me.PanelSideBar.ResumeLayout(False)
         Me.PanelSideBar.PerformLayout()
-        CType(Me.GunaCirclePictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -650,8 +648,8 @@ Partial Class SideBar
         Me.GunaLinePanel1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        CType(Me.GunaCirclePictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -662,7 +660,6 @@ Partial Class SideBar
     Friend WithEvents lblHari As Guna.UI.WinForms.GunaLabel
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents GunaCirclePictureBox4 As Guna.UI.WinForms.GunaCirclePictureBox
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents txtSiteID As Guna.UI.WinForms.GunaTextBox
@@ -677,8 +674,6 @@ Partial Class SideBar
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents cmdConnectNotif As System.Windows.Forms.Button
     Friend WithEvents txtNotifikasi As System.Windows.Forms.RichTextBox
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents cmdAnyarLocalPrint As Guna.UI.WinForms.GunaAdvenceButton
     Friend WithEvents cmdMonitoringDelivery As Guna.UI.WinForms.GunaAdvenceButton
     Friend WithEvents cmdMonitoringRealStok As Guna.UI.WinForms.GunaAdvenceButton
@@ -686,4 +681,6 @@ Partial Class SideBar
     Friend WithEvents cmdExportHargaJual As Guna.UI.WinForms.GunaAdvenceButton
     Friend WithEvents cmdAIO As Guna.UI.WinForms.GunaAdvenceButton
     Friend WithEvents cmdAnyarNotifications As Guna.UI.WinForms.GunaAdvenceButton
+    Friend WithEvents GunaCirclePictureBox4 As Guna.UI.WinForms.GunaCirclePictureBox
+    Friend WithEvents GunaPictureBox1 As Guna.UI.WinForms.GunaPictureBox
 End Class

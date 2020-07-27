@@ -149,6 +149,138 @@ Namespace My
                 Me("PasswordDBIntegrasi") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property StatusIntegrasi() As String
+            Get
+                Return CType(Me("StatusIntegrasi"),String)
+            End Get
+            Set
+                Me("StatusIntegrasi") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SatuanDurasi() As String
+            Get
+                Return CType(Me("SatuanDurasi"),String)
+            End Get
+            Set
+                Me("SatuanDurasi") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property NilaiDurasi() As String
+            Get
+                Return CType(Me("NilaiDurasi"),String)
+            End Get
+            Set
+                Me("NilaiDurasi") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property MysqlHost() As String
+            Get
+                Return CType(Me("MysqlHost"),String)
+            End Get
+            Set
+                Me("MysqlHost") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SQLServer() As String
+            Get
+                Return CType(Me("SQLServer"),String)
+            End Get
+            Set
+                Me("SQLServer") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property DBmysql() As String
+            Get
+                Return CType(Me("DBmysql"),String)
+            End Get
+            Set
+                Me("DBmysql") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property DBSqlServer() As String
+            Get
+                Return CType(Me("DBSqlServer"),String)
+            End Get
+            Set
+                Me("DBSqlServer") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property UsernameMySQL() As String
+            Get
+                Return CType(Me("UsernameMySQL"),String)
+            End Get
+            Set
+                Me("UsernameMySQL") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property UsernameSQLServer() As String
+            Get
+                Return CType(Me("UsernameSQLServer"),String)
+            End Get
+            Set
+                Me("UsernameSQLServer") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property PasswordMySQL() As String
+            Get
+                Return CType(Me("PasswordMySQL"),String)
+            End Get
+            Set
+                Me("PasswordMySQL") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property PasswordSQLServer() As String
+            Get
+                Return CType(Me("PasswordSQLServer"),String)
+            End Get
+            Set
+                Me("PasswordSQLServer") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

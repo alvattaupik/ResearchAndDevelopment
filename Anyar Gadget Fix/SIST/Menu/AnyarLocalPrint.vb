@@ -4,6 +4,9 @@ Imports System.Data.Sql
 Imports System.Data.SqlClient
 Public Class AnyarLocalPrint
 
+
+
+
     Private Sub cmdPreviewDelivery_Click(sender As Object, e As EventArgs) Handles cmdPreviewDelivery.Click
         Dim strPathReport As String
         Dim strStatusPath As String
@@ -733,5 +736,192 @@ Public Class AnyarLocalPrint
 
     Private Sub AnyarLocalPrint_Load(sender As Object, e As EventArgs) Handles Me.Load
         MstrNamaModul = "AG-Anyar Local Print Services"
+        LoadObjectMenuAnyarLocalPrint()
     End Sub
+
+
+
+    Sub LoadObjectMenuAnyarLocalPrint()
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Tab001' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            If dr.GetString(0) <> "1" Then
+                TabDokumen.TabPages.Remove(TabDelivery)
+            End If
+        Else
+            Exit Sub
+        End If
+
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Tab002' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            If dr.GetString(0) <> "1" Then
+                TabDokumen.TabPages.Remove(TabGRPO)
+            End If
+        Else
+            Exit Sub
+        End If
+
+
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Tab003' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            If dr.GetString(0) <> "1" Then
+                TabDokumen.TabPages.Remove(TabGoodsReceipt)
+            End If
+        Else
+            Exit Sub
+        End If
+
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Tab004' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            If dr.GetString(0) <> "1" Then
+                TabDokumen.TabPages.Remove(TabIncomingPayment)
+            End If
+        Else
+            Exit Sub
+        End If
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Tab005' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            If dr.GetString(0) <> "1" Then
+                TabDokumen.TabPages.Remove(TabPickList)
+            End If
+        Else
+            Exit Sub
+        End If
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Tab006' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            If dr.GetString(0) <> "1" Then
+                TabDokumen.TabPages.Remove(TabGoodsReturn)
+            End If
+        Else
+            Exit Sub
+        End If
+
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Tab007' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            If dr.GetString(0) <> "1" Then
+                TabDokumen.TabPages.Remove(TabInventoryTransferReq)
+            End If
+        Else
+            Exit Sub
+        End If
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Tab008' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            If dr.GetString(0) <> "1" Then
+                TabDokumen.TabPages.Remove(TabInventoryTransfer)
+            End If
+        Else
+            Exit Sub
+        End If
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Tab009' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            If dr.GetString(0) <> "1" Then
+                TabDokumen.TabPages.Remove(TabOutgoingPayments)
+            End If
+        Else
+            Exit Sub
+        End If
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Tab010' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            If dr.GetString(0) <> "1" Then
+                TabDokumen.TabPages.Remove(TabSalesOrder)
+            End If
+        Else
+            Exit Sub
+        End If
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Tab011' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            If dr.GetString(0) <> "1" Then
+                TabDokumen.TabPages.Remove(TabGoodsIssue)
+            End If
+        Else
+            Exit Sub
+        End If
+
+
+        strSQL = "Select top 1 StatusEnabled From V_ObjectUserAnyarGadget WHERE KodeObject='Tab012' AND KodePegawai ='" & Trim(MstrKodeUser) & "'"
+        cmd = New SqlCommand(strSQL, Koneksi1)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            If dr.GetString(0) <> "1" Then
+                TabDokumen.TabPages.Remove(TabReturn)
+            End If
+        Else
+            Exit Sub
+        End If
+
+
+
+
+
+
+    End Sub
+
+
+
+
 End Class
