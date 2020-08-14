@@ -86,9 +86,11 @@ Partial Class Stock
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(15, 114)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 10
         Me.DataGridView1.Size = New System.Drawing.Size(992, 323)
         Me.DataGridView1.TabIndex = 3
@@ -467,9 +469,9 @@ Partial Class Stock
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Image = Global.RKM_BI.My.Resources.Resources.loading__1_
-        Me.PictureBox1.Location = New System.Drawing.Point(127, 114)
+        Me.PictureBox1.Location = New System.Drawing.Point(1, -1)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1031, 497)
+        Me.PictureBox1.Size = New System.Drawing.Size(1013, 497)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 42
         Me.PictureBox1.TabStop = False

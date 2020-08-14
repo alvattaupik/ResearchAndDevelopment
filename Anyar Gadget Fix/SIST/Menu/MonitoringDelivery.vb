@@ -51,6 +51,72 @@ Public Class MonitoringDelivery
     End Sub
 
 
+
+
+    Sub LoadHeaderTransaksiSudahDikirim()
+        koneksiMenu()
+        Dim command As SqlCommand
+        command = New SqlCommand("tmsp_LapStatusDelivery", conn)
+
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        command.Parameters.AddWithValue("@TanggalAwal", dtpTgl1.Value.ToString("yyyy-MM-dd"))
+        command.Parameters.AddWithValue("@TanggalAkhir", dtpTgl2.Value.ToString("yyyy-MM-dd"))
+        command.Parameters.AddWithValue("@Cabang", MstrKodeDivisi)
+        command.Parameters.AddWithValue("@Menu", "SudahKirim")
+        command.Parameters.AddWithValue("@NoStruk", "")
+
+        command.Parameters.AddWithValue("@From", "")
+
+        Dim table As New DataTable
+        adapter.Fill(table)
+        Me.dgDeliverySudahDikirim.DataSource = table
+        dgDeliverySudahDikirim.DataSource = table
+        dgDeliverySudahDikirim.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgDeliverySudahDikirim.AutoResizeColumns()
+        dgDeliverySudahDikirim.RowHeadersVisible = False
+
+
+        lblDeliverySudahDikirim.Text = "Jumlah Delivery Sudah Dikirim : " & dgDeliverySudahDikirim.RowCount
+
+    End Sub
+
+
+
+
+
+    Sub LoadHeaderTransaksiBelumDikirim()
+        koneksiMenu()
+        Dim command As SqlCommand
+        command = New SqlCommand("tmsp_LapStatusDelivery", conn)
+
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        command.Parameters.AddWithValue("@TanggalAwal", dtpTgl1.Value.ToString("yyyy-MM-dd"))
+        command.Parameters.AddWithValue("@TanggalAkhir", dtpTgl2.Value.ToString("yyyy-MM-dd"))
+        command.Parameters.AddWithValue("@Cabang", MstrKodeDivisi)
+        command.Parameters.AddWithValue("@Menu", "BelumDikirim")
+        command.Parameters.AddWithValue("@NoStruk", "")
+
+        command.Parameters.AddWithValue("@From", "")
+
+        Dim table As New DataTable
+        adapter.Fill(table)
+        Me.dgDeliveryBelumDikirim.DataSource = table
+        dgDeliveryBelumDikirim.DataSource = table
+        dgDeliveryBelumDikirim.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgDeliveryBelumDikirim.AutoResizeColumns()
+        dgDeliveryBelumDikirim.RowHeadersVisible = False
+
+
+        lblDeliverySudahDikirim.Text = "Jumlah Delivery Belum Dikirim : " & dgDeliverySudahDikirim.RowCount
+
+    End Sub
+
+
+
+
+
     Sub LoadHeaderTransaksiDefaultLoad()
         koneksiMenu()
         Dim command As SqlCommand
@@ -180,33 +246,6 @@ Public Class MonitoringDelivery
 
 
     Sub LoadHeaderTransferCustom()
-        'KoneksiDatabase2()
-        'Dim command2 As SqlCommand
-        'command2 = New SqlCommand("tmsp_LapStatusDelivery", Koneksi2)
-        'Dim adapter As New SqlDataAdapter(command2)
-        'command2.CommandType = CommandType.StoredProcedure
-        'command2.Parameters.AddWithValue("@TanggalAwal", dtpTgl1.Value)
-        'command2.Parameters.AddWithValue("@TanggalAkhir", dtpTgl2.Value)
-        'command2.Parameters.AddWithValue("@Cabang", cmbFromTransfer.SelectedValue)
-        'command2.Parameters.AddWithValue("@Menu", "203")
-        'command2.Parameters.AddWithValue("@NoStruk", "")
-
-        'If cmbFromTransfer.Text = "" Then
-        '    command2.Parameters.AddWithValue("@From", "")
-        'Else
-        '    command2.Parameters.AddWithValue("@From", cmdToTransfer.SelectedValue)
-        'End If
-
-
-        'Dim table2 As New DataTable
-        'adapter.Fill(table2)
-
-        'dgDaftarTransfer.DataSource = table2
-        'dgDaftarTransfer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-        'dgDaftarTransfer.AutoResizeColumns()
-        'dgDaftarTransfer.RowHeadersVisible = False
-
-        'lblJumlahTransfer.Text = "Jumlah Transfer : " & dgDaftarTransfer.RowCount
 
     End Sub
 
@@ -248,6 +287,8 @@ Public Class MonitoringDelivery
         Else
             LoadHeaderTransferCustom()
             LoadHeaderTransaksiCustomerFormLoad()
+            LoadHeaderTransaksiSudahDikirim()
+            LoadHeaderTransaksiBelumDikirim()
         End If
 
 
@@ -351,5 +392,69 @@ Public Class MonitoringDelivery
 
         frm.TopMost = True
         frm.Show()
+    End Sub
+
+    Private Sub dgDeliveryBelumDikirim_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgDeliveryBelumDikirim.CellContentClick
+        koneksiMenu()
+        Dim command As SqlCommand
+        command = New SqlCommand("tmsp_LapStatusDelivery", conn)
+
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+
+        command.Parameters.AddWithValue("@TanggalAwal", dtpTgl1.Value)
+        command.Parameters.AddWithValue("@TanggalAkhir", dtpTgl2.Value)
+        command.Parameters.AddWithValue("@Cabang", MstrKodeDivisi)
+        command.Parameters.AddWithValue("@Menu", "02")
+        command.Parameters.AddWithValue("@NoStruk", dgDeliveryBelumDikirim.Item(0, dgDeliveryBelumDikirim.CurrentRow.Index).Value)
+        command.Parameters.AddWithValue("@From", "")
+        Dim table As New DataTable
+        adapter.Fill(table)
+        Me.dgItemDelivery.DataSource = table
+        dgItemDelivery.DataSource = table
+        dgItemDelivery.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgItemDelivery.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight
+        dgItemDelivery.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight
+        dgItemDelivery.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight
+        dgItemDelivery.Columns(4).DefaultCellStyle.Format = "N0"
+        dgItemDelivery.Columns(5).DefaultCellStyle.Format = "N0"
+        dgItemDelivery.Columns(6).DefaultCellStyle.Format = "N0"
+
+
+        dgItemDelivery.AutoResizeColumns()
+        dgItemDelivery.RowHeadersVisible = False
+        lblJumlahItemTransaksi.Text = "Jumlah Item : " & dgItemDelivery.RowCount
+    End Sub
+
+    Private Sub dgDeliverySudahDikirim_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgDeliverySudahDikirim.CellContentClick
+        koneksiMenu()
+        Dim command As SqlCommand
+        command = New SqlCommand("tmsp_LapStatusDelivery", conn)
+
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+
+        command.Parameters.AddWithValue("@TanggalAwal", dtpTgl1.Value)
+        command.Parameters.AddWithValue("@TanggalAkhir", dtpTgl2.Value)
+        command.Parameters.AddWithValue("@Cabang", MstrKodeDivisi)
+        command.Parameters.AddWithValue("@Menu", "DetailSudahDikirim")
+        command.Parameters.AddWithValue("@NoStruk", dgDeliverySudahDikirim.Item(0, dgDeliverySudahDikirim.CurrentRow.Index).Value)
+        command.Parameters.AddWithValue("@From", "")
+        Dim table As New DataTable
+        adapter.Fill(table)
+        Me.dgItemDelivery.DataSource = table
+        dgItemDelivery.DataSource = table
+        dgItemDelivery.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgItemDelivery.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight
+        dgItemDelivery.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight
+        dgItemDelivery.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight
+        dgItemDelivery.Columns(4).DefaultCellStyle.Format = "N0"
+        dgItemDelivery.Columns(5).DefaultCellStyle.Format = "N0"
+        dgItemDelivery.Columns(6).DefaultCellStyle.Format = "N0"
+
+
+        dgItemDelivery.AutoResizeColumns()
+        dgItemDelivery.RowHeadersVisible = False
+        lblJumlahItemTransaksi.Text = "Jumlah Item : " & dgItemDelivery.RowCount
     End Sub
 End Class

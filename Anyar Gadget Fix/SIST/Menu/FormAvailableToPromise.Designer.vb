@@ -116,10 +116,12 @@ Partial Class FormAvailableToPromise
         '
         Me.dgATP.AllowUserToAddRows = False
         Me.dgATP.AllowUserToDeleteRows = False
+        Me.dgATP.AllowUserToResizeRows = False
         Me.dgATP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgATP.Location = New System.Drawing.Point(12, 14)
         Me.dgATP.Name = "dgATP"
         Me.dgATP.ReadOnly = True
+        Me.dgATP.RowHeadersVisible = False
         Me.dgATP.Size = New System.Drawing.Size(1332, 501)
         Me.dgATP.TabIndex = 0
         '

@@ -105,6 +105,7 @@ Partial Class FormAuditItems
         Me.dgAuditItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgAuditItems.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders
         Me.dgAuditItems.BackgroundColor = System.Drawing.Color.Gray
+        Me.dgAuditItems.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgAuditItems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgAuditItems.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -131,7 +132,7 @@ Partial Class FormAuditItems
         Me.dgAuditItems.ReadOnly = True
         Me.dgAuditItems.RowHeadersVisible = False
         Me.dgAuditItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgAuditItems.Size = New System.Drawing.Size(255, 406)
+        Me.dgAuditItems.Size = New System.Drawing.Size(267, 406)
         Me.dgAuditItems.TabIndex = 5
         Me.dgAuditItems.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
         Me.dgAuditItems.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -167,7 +168,7 @@ Partial Class FormAuditItems
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "FormAuditItems"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "FormAuditItems"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

@@ -20,7 +20,7 @@
     <OldToolsVersion>2.0</OldToolsVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\IT-ALVAT\Music\BI 02072020\</PublishUrl>
+    <PublishUrl>C:\Users\IT-ALVAT\Music\BI\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -30,7 +30,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationRevision>23</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -152,6 +152,12 @@
       <DependentUpon>MarginBaru.vb</DependentUpon>
     </Compile>
     <Compile Include="MarginBaru.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarginBaruV1_2.designer.vb">
+      <DependentUpon>MarginBaruV1_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MarginBaruV1_2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MarginBaruV1_1.designer.vb">
@@ -332,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MarginBaru.resx">
       <DependentUpon>MarginBaru.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarginBaruV1_2.resx">
+      <DependentUpon>MarginBaruV1_2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MarginBaruV1_1.resx">
       <DependentUpon>MarginBaruV1_1.vb</DependentUpon>

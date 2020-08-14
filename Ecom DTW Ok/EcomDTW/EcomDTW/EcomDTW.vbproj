@@ -13,7 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\IT-ALVAT\Music\ECommDTW Build 27052020 01\</PublishUrl>
+    <PublishUrl>C:\Users\IT-ALVAT\Music\ECommDTW Build 20200730\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -109,6 +109,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CekStok.Designer.vb">
+      <DependentUpon>CekStok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CekStok.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormKonfigurasiIntegrasi.Designer.vb">
       <DependentUpon>FormKonfigurasiIntegrasi.vb</DependentUpon>
     </Compile>
@@ -181,8 +187,17 @@
     <Compile Include="SplashScreenDTW.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TokopediaStockCompare.Designer.vb">
+      <DependentUpon>TokopediaStockCompare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TokopediaStockCompare.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CekStok.resx">
+      <DependentUpon>CekStok.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormKonfigurasiIntegrasi.resx">
       <DependentUpon>FormKonfigurasiIntegrasi.vb</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreenDTW.resx">
       <DependentUpon>SplashScreenDTW.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TokopediaStockCompare.resx">
+      <DependentUpon>TokopediaStockCompare.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +268,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon fix.ico" />
+    <None Include="Resources\RKM Shop.png" />
+    <None Include="Resources\bukalapak-apa-itu-startup-pengertian-cara-memulai-dan-0.png" />
+    <None Include="Resources\tokopedia-apa-itu-startup-pengertian-cara-memulai-dan-1.png" />
     <None Include="Resources\dbase.png" />
     <None Include="Resources\sql-server-logo-png-8.png" />
   </ItemGroup>

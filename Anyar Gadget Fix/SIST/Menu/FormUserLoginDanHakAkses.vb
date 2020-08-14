@@ -217,50 +217,34 @@ ErrorLoad:
 
 
         If bolStatusUpdate = True Then
-            Call KoneksiDatabase1()
-            strSQL = "SELECT * FROM dbo.V_DataUser WHERE UserNameLogin='" & Trim(txtusername.Text) & "'"
-            cmd = New SqlCommand(strSQL, Koneksi1)
-            dr = cmd.ExecuteReader
-            dr.Read()
+            'Call KoneksiDatabase1()
+            'strSQL = "SELECT * FROM dbo.V_DataUser WHERE UserNameLogin='" & Trim(txtusername.Text) & "'"
+            'cmd = New SqlCommand(strSQL, Koneksi1)
+            'dr = cmd.ExecuteReader
+            'dr.Read()
 
-            If dr.HasRows = True Then
-                If (MsgBox("Password terlalu lemah, Lanjutkan?", vbYesNo, "Konfirmasi")) = vbYes Then
-                    AUD_UserLogin()
-                    Exit Sub
+            AUD_UserLogin("U")
 
-                End If
-            Else
-                AUD_UserLogin()
-                Exit Sub
-            End If
+            MsgBox("Data user Berhasil Di Update", vbInformation, "Sukses ")
+            Exit Sub
+        End If
 
-        Else
+
+
+        If bolStatusUpdate = False Then
             CekKodePegawai()
 
-            Call KoneksiDatabase1()
-            strSQL = "SELECT * FROM dbo.V_DataUser WHERE UserNameLogin='" & Trim(txtusername.Text) & "' "
-            cmd = New SqlCommand(strSQL, Koneksi1)
-            dr = cmd.ExecuteReader
-            dr.Read()
-
-            If dr.HasRows = True Then
-                If (MsgBox("Password terlalu lemah, Lanjutkan?", vbYesNo, "Konfirmasi")) = vbYes Then
-                    AUD_UserLogin()
-                    Exit Sub
-
-                End If
-            Else
-
-                If bolRecordExist = True Then
-                    Exit Sub
-                Else
-                    AUD_UserLogin()
-                End If
+            If bolRecordExist = True Then
                 Exit Sub
-
             End If
-
+            AUD_UserLogin("A")
+            MsgBox("Data user Berhasil Di Simpan", vbInformation, "Sukses ")
+            Exit Sub
         End If
+
+
+
+
 
         Exit Sub
 ErrorLoad:
@@ -271,7 +255,7 @@ ErrorLoad:
 
     Sub CekKodePegawai()
         Call KoneksiDatabase1()
-        strSQlLogin = "SELECT * FROM dbo.V_DataUser WHERE KodePegawai='" & Trim(txtKodeUser.Text) & "'"
+        strSQlLogin = "SELECT * FROM dbo.V_DataUser WHERE KodePegawai='" & Trim(txtKodeUser.Text) & "' AND KodeAplikasi='AG'"
         cmd = New SqlCommand(strSQlLogin, Koneksi1)
         dr = cmd.ExecuteReader
         dr.Read()
@@ -316,15 +300,15 @@ ErrorLoad:
     End Sub
 
 
-    Sub AUD_UserLogin()
+    Sub AUD_UserLogin(strSTatusSP As String)
 
-        Dim strStatusSp As String
+        'Dim strStatusSp As String
 
-        If bolStatusUpdate = True Then
-            strStatusSp = "U"
-        Else
-            strStatusSp = "A"
-        End If
+        'If bolStatusUpdate = True Then
+        '    strStatusSp = "U"
+        'Else
+        '    strStatusSp = "A"
+        'End If
 
         On Error GoTo ErrorLoad
         Call KoneksiDatabase1()
@@ -347,9 +331,6 @@ ErrorLoad:
         cmd.Connection = Koneksi1
         Koneksi1.Open()
         cmd.ExecuteNonQuery()
-
-
-        MsgBox("Data User Baru Berhasil Disimpan! !", vbInformation, "Sukses!")
         LoadDaftarUserSAP()
 
         Exit Sub
@@ -373,13 +354,20 @@ ErrorLoad:
     End Sub
 
     Private Sub FormUserLoginDanHakAkses_Move(sender As Object, e As EventArgs) Handles Me.Move
-        Dim p As Point
-        p = Me.Location
-
-        MenuUtama.lblMousePosition.Text = "Form Position : " & "X : " & p.X & "  Y : " & p.Y
+        ShowLocation(Me)
     End Sub
 
     Private Sub FormUserLoginDanHakAkses_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-        MenuUtama.lblFormSize.Text = " Form Size Width: " & Me.Width.ToString & " Height:" & Me.Height.ToString
+        ShowLocation(Me)
+    End Sub
+
+    Private Sub cmbLevelUser_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbLevelUser.SelectedIndexChanged
+        If cmbLevelUser.Text = "SPV" Then
+            txtKodeSPV.Text = "MAN"
+            txtNamaSPV.Text = "MANAGEMENT"
+        Else
+            txtKodeSPV.Text = ""
+            txtNamaSPV.Text = ""
+        End If
     End Sub
 End Class

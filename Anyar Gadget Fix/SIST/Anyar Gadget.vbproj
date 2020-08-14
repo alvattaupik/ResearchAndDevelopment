@@ -14,7 +14,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\IT-ALVAT\Music\Anyar Gadget Build 10072020\</PublishUrl>
+    <PublishUrl>C:\Users\IT-ALVAT\Music\Anyar Gadget Build 20200727\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -117,6 +117,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrowseSAPEmployee.Designer.vb">
+      <DependentUpon>BrowseSAPEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseSAPEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseEmployee.Designer.vb">
+      <DependentUpon>BrowseEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -386,6 +398,18 @@
     <Compile Include="Menu\AlertsSetup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Menu\FormEmployee.Designer.vb">
+      <DependentUpon>FormEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FormUsersSetup.Designer.vb">
+      <DependentUpon>FormUsersSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormUsersSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Menu\Profile.Designer.vb">
       <DependentUpon>Profile.vb</DependentUpon>
     </Compile>
@@ -541,6 +565,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BrowseSAPEmployee.resx">
+      <DependentUpon>BrowseSAPEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseEmployee.resx">
+      <DependentUpon>BrowseEmployee.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditUsernamePassword.resx">
       <DependentUpon>EditUsernamePassword.vb</DependentUpon>
     </EmbeddedResource>
@@ -673,8 +703,14 @@
     <EmbeddedResource Include="Menu\AlertsSetup.resx">
       <DependentUpon>AlertsSetup.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormEmployee.resx">
+      <DependentUpon>FormEmployee.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\FormRKMDisplayTag.resx">
       <DependentUpon>FormRKMDisplayTag.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormUsersSetup.resx">
+      <DependentUpon>FormUsersSetup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\Profile.resx">
       <DependentUpon>Profile.vb</DependentUpon>

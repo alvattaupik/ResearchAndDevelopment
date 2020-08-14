@@ -3,6 +3,7 @@ Imports System.Data
 Public Class FormLogin
 
     Private Sub GunaGradientButton1_Click(sender As Object, e As EventArgs) Handles GunaGradientButton1.Click
+        connDB.Close()
 
 
         If My.Settings.MysqlHost = "" Or My.Settings.SQLServer = "" Then
@@ -11,12 +12,11 @@ Public Class FormLogin
             Exit Sub
         End If
 
-
-
         conecDB()
 
         Try
-            SQL = "SELECT * from users WHERE username =  '" & txtUsername.Text & "' AND password ='" & txtPassword.Text & "'"
+
+            SQL = "SELECT Name from users WHERE username =  '" & txtUsername.Text & "' AND password ='" & txtPassword.Text & "'"
 
             initCMD()
             With comDB
@@ -28,7 +28,7 @@ Public Class FormLogin
             If rdDB.HasRows = True Then
                 Me.Hide()
                 FormMainMenu.ShowDialog()
-                MstrKdPegawai = rdDB!id.ToString.Trim
+                'MstrKdPegawai = rdDB!id.ToString.Trim
             Else
                 MsgBox("Username and or Password are not found", MsgBoxStyle.Exclamation, "Information")
                 txtUsername.Text = ""
@@ -45,57 +45,6 @@ Public Class FormLogin
 
 
 
-
-
-
-        'KoneksiDatabase1()
-        'Dim strSQlLogin As String
-
-        'Try
-        '    If Koneksi1.State = ConnectionState.Closed Then Koneksi1.Open()
-        '    strSQlLogin = "SELECT * From Users WHERE Username='" & Trim(txtUsername.Text) & "' AND password ='" & Trim(txtPassword.Text) & "'"
-        '    With cmd
-        '        .CommandText = strSQlLogin
-        '        .ExecuteNonQuery()
-        '    End With
-
-        '    dr = cmd.ExecuteReader
-        '    dr.Read()
-        '    If dr.HasRows = True Then
-        '        Me.Hide()
-        '        Form1.Show()
-        '        MstrKdPegawai = dr!username.ToString.Trim
-        '        MstrNamaPegawai = dr!name.ToString.Trim
-
-
-        '    Else
-        '        MsgBox("Username atau Password Salah!", MsgBoxStyle.Exclamation, "Information")
-        '        txtUsername.Text = ""
-        '        txtPassword.Text = ""
-        '        txtUsername.Select()
-        '    End If
-        '    dr.Close()
-        'Catch ex As Exception
-        '    MsgBox(ex.ToString)
-        'End Try
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     End Sub
 
     Private Sub GunaLabel1_Click(sender As Object, e As EventArgs) Handles GunaLabel1.Click
@@ -103,6 +52,7 @@ Public Class FormLogin
     End Sub
 
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
+        On Error Resume Next
         If strServer = "" Then
             MsgBox("Konfigurasi Database Belum Diatur", vbCritical, "Warning!")
             Me.Close()

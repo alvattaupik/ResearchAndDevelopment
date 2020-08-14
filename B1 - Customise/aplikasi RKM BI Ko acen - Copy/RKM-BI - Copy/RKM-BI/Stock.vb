@@ -51,6 +51,8 @@ Public Class Stock
         Dim hitung8 As Integer
         Dim hitung9 As Integer
         Dim hitung10 As Integer
+        Dim hitung11 As Integer
+
 
         For i As Integer = 0 To DataGridView1.RowCount - 1
             hitung1 = hitung1 + DataGridView1.Rows(i).Cells(2).Value
@@ -63,6 +65,7 @@ Public Class Stock
             hitung8 = hitung8 + DataGridView1.Rows(i).Cells(9).Value
             hitung9 = hitung9 + DataGridView1.Rows(i).Cells(10).Value
             hitung10 = hitung10 + DataGridView1.Rows(i).Cells(11).Value
+            hitung11 = hitung11 + DataGridView1.Rows(i).Cells(12).Value
 
 
         Next
@@ -131,6 +134,8 @@ Public Class Stock
         DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DataGridView1.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DataGridView1.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        DataGridView1.Columns(4).DefaultCellStyle.BackColor = Color.LightGreen
+        DataGridView1.Columns(4).HeaderCell.Style.BackColor = Color.LightGreen
         DataGridView1.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DataGridView1.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DataGridView1.Columns(7).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
@@ -172,10 +177,10 @@ Public Class Stock
         DataGridView1.Columns(21).DefaultCellStyle.Format = "N0"
         DataGridView1.Columns(22).DefaultCellStyle.Format = "N0"
         DataGridView1.Columns(23).DefaultCellStyle.Format = "N0"
+        DataGridView1.Columns(24).DefaultCellStyle.Format = "N0"
 
-
-        DataGridView1.Columns(24).Visible = False
         DataGridView1.Columns(25).Visible = False
+        DataGridView1.Columns(26).Visible = False
 
         Call hitungStock()
         'Dim hasil As Double = 0

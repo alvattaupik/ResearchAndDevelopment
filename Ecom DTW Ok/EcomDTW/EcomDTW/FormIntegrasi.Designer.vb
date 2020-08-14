@@ -25,7 +25,6 @@ Partial Class FormIntegrasi
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormIntegrasi))
         Me.cmdProses = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.dgListUpload = New System.Windows.Forms.DataGridView()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblJumlahItem = New System.Windows.Forms.ToolStripStatusLabel()
         Me.cmdUpload = New System.Windows.Forms.Button()
@@ -43,11 +42,12 @@ Partial Class FormIntegrasi
         Me.GunaWinCircleProgressIndicator2 = New Guna.UI.WinForms.GunaWinCircleProgressIndicator()
         Me.bgSinkronisasi = New System.ComponentModel.BackgroundWorker()
         Me.bgIntegrasi = New System.ComponentModel.BackgroundWorker()
-        CType(Me.dgListUpload, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dgListUpload = New System.Windows.Forms.DataGridView()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelIntegrasi.SuspendLayout()
         Me.PanelSinkronisasi.SuspendLayout()
+        CType(Me.dgListUpload, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdProses
@@ -63,15 +63,6 @@ Partial Class FormIntegrasi
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'dgListUpload
-        '
-        Me.dgListUpload.AllowUserToAddRows = False
-        Me.dgListUpload.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgListUpload.Location = New System.Drawing.Point(13, 138)
-        Me.dgListUpload.Name = "dgListUpload"
-        Me.dgListUpload.Size = New System.Drawing.Size(783, 263)
-        Me.dgListUpload.TabIndex = 5
         '
         'StatusStrip1
         '
@@ -144,6 +135,7 @@ Partial Class FormIntegrasi
         'PanelIntegrasi
         '
         Me.PanelIntegrasi.BackColor = System.Drawing.Color.SkyBlue
+        Me.PanelIntegrasi.Controls.Add(Me.PanelSinkronisasi)
         Me.PanelIntegrasi.Controls.Add(Me.lblProsesIntegrasi)
         Me.PanelIntegrasi.Controls.Add(Me.Label2)
         Me.PanelIntegrasi.Controls.Add(Me.GunaWinCircleProgressIndicator1)
@@ -188,7 +180,7 @@ Partial Class FormIntegrasi
         Me.PanelSinkronisasi.Controls.Add(Me.lblSinkronisasi)
         Me.PanelSinkronisasi.Controls.Add(Me.Label4)
         Me.PanelSinkronisasi.Controls.Add(Me.GunaWinCircleProgressIndicator2)
-        Me.PanelSinkronisasi.Location = New System.Drawing.Point(265, 157)
+        Me.PanelSinkronisasi.Location = New System.Drawing.Point(0, 0)
         Me.PanelSinkronisasi.Name = "PanelSinkronisasi"
         Me.PanelSinkronisasi.Size = New System.Drawing.Size(264, 223)
         Me.PanelSinkronisasi.TabIndex = 20
@@ -233,13 +225,23 @@ Partial Class FormIntegrasi
         Me.bgIntegrasi.WorkerReportsProgress = True
         Me.bgIntegrasi.WorkerSupportsCancellation = True
         '
+        'dgListUpload
+        '
+        Me.dgListUpload.AllowUserToAddRows = False
+        Me.dgListUpload.AllowUserToDeleteRows = False
+        Me.dgListUpload.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgListUpload.Location = New System.Drawing.Point(8, 144)
+        Me.dgListUpload.Name = "dgListUpload"
+        Me.dgListUpload.RowHeadersVisible = False
+        Me.dgListUpload.Size = New System.Drawing.Size(784, 251)
+        Me.dgListUpload.TabIndex = 20
+        '
         'FormIntegrasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(801, 430)
-        Me.Controls.Add(Me.PanelSinkronisasi)
         Me.Controls.Add(Me.PanelIntegrasi)
         Me.Controls.Add(Me.cmdCancelIntegrasi)
         Me.Controls.Add(Me.cmdStopProses)
@@ -247,14 +249,13 @@ Partial Class FormIntegrasi
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.cmdUpload)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.dgListUpload)
         Me.Controls.Add(Me.cmdProses)
+        Me.Controls.Add(Me.dgListUpload)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimizeBox = False
         Me.Name = "FormIntegrasi"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Integrasi Master Data"
-        CType(Me.dgListUpload, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -262,13 +263,13 @@ Partial Class FormIntegrasi
         Me.PanelIntegrasi.PerformLayout()
         Me.PanelSinkronisasi.ResumeLayout(False)
         Me.PanelSinkronisasi.PerformLayout()
+        CType(Me.dgListUpload, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents cmdProses As System.Windows.Forms.Button
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
-    Friend WithEvents dgListUpload As System.Windows.Forms.DataGridView
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents lblJumlahItem As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents cmdUpload As System.Windows.Forms.Button
@@ -286,5 +287,6 @@ Partial Class FormIntegrasi
     Friend WithEvents GunaWinCircleProgressIndicator2 As Guna.UI.WinForms.GunaWinCircleProgressIndicator
     Friend WithEvents bgSinkronisasi As System.ComponentModel.BackgroundWorker
     Friend WithEvents bgIntegrasi As System.ComponentModel.BackgroundWorker
+    Friend WithEvents dgListUpload As System.Windows.Forms.DataGridView
 
 End Class

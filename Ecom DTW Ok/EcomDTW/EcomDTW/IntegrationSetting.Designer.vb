@@ -23,13 +23,14 @@ Partial Class IntegrationSetting
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.rbNonAktif = New System.Windows.Forms.RadioButton()
         Me.rbAktif = New System.Windows.Forms.RadioButton()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.txtNilai = New System.Windows.Forms.TextBox()
         Me.cmbSatuan = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -37,7 +38,6 @@ Partial Class IntegrationSetting
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cmdSimpan = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -48,21 +48,21 @@ Partial Class IntegrationSetting
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Location = New System.Drawing.Point(13, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(474, 58)
+        Me.Panel1.Size = New System.Drawing.Size(443, 58)
         Me.Panel1.TabIndex = 0
         '
-        'Label1
+        'Label7
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(132, 15)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(222, 25)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Integration Services"
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(112, 13)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(222, 25)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "Integration Services"
         '
         'Panel2
         '
@@ -71,7 +71,7 @@ Partial Class IntegrationSetting
         Me.Panel2.Controls.Add(Me.rbAktif)
         Me.Panel2.Location = New System.Drawing.Point(13, 70)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(152, 133)
+        Me.Panel2.Size = New System.Drawing.Size(123, 133)
         Me.Panel2.TabIndex = 1
         '
         'Panel3
@@ -97,7 +97,7 @@ Partial Class IntegrationSetting
         '
         Me.rbNonAktif.AutoSize = True
         Me.rbNonAktif.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbNonAktif.Location = New System.Drawing.Point(35, 84)
+        Me.rbNonAktif.Location = New System.Drawing.Point(3, 81)
         Me.rbNonAktif.Name = "rbNonAktif"
         Me.rbNonAktif.Size = New System.Drawing.Size(112, 28)
         Me.rbNonAktif.TabIndex = 3
@@ -109,7 +109,7 @@ Partial Class IntegrationSetting
         '
         Me.rbAktif.AutoSize = True
         Me.rbAktif.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbAktif.Location = New System.Drawing.Point(35, 50)
+        Me.rbAktif.Location = New System.Drawing.Point(3, 47)
         Me.rbAktif.Name = "rbAktif"
         Me.rbAktif.Size = New System.Drawing.Size(67, 28)
         Me.rbAktif.TabIndex = 2
@@ -125,17 +125,27 @@ Partial Class IntegrationSetting
         Me.Panel4.Controls.Add(Me.Label5)
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.Panel5)
-        Me.Panel4.Location = New System.Drawing.Point(171, 72)
+        Me.Panel4.Location = New System.Drawing.Point(142, 70)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(315, 130)
         Me.Panel4.TabIndex = 2
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Location = New System.Drawing.Point(221, 34)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(90, 13)
+        Me.Label6.TabIndex = 10
+        Me.Label6.Text = "M= Menit, H: Jam"
+        '
         'txtNilai
         '
         Me.txtNilai.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNilai.Location = New System.Drawing.Point(96, 96)
+        Me.txtNilai.Location = New System.Drawing.Point(79, 45)
         Me.txtNilai.Name = "txtNilai"
-        Me.txtNilai.Size = New System.Drawing.Size(216, 29)
+        Me.txtNilai.Size = New System.Drawing.Size(57, 29)
         Me.txtNilai.TabIndex = 9
         '
         'cmbSatuan
@@ -143,26 +153,26 @@ Partial Class IntegrationSetting
         Me.cmbSatuan.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbSatuan.FormattingEnabled = True
         Me.cmbSatuan.Items.AddRange(New Object() {"M", "H"})
-        Me.cmbSatuan.Location = New System.Drawing.Point(96, 40)
+        Me.cmbSatuan.Location = New System.Drawing.Point(231, 48)
         Me.cmbSatuan.Name = "cmbSatuan"
-        Me.cmbSatuan.Size = New System.Drawing.Size(216, 32)
+        Me.cmbSatuan.Size = New System.Drawing.Size(69, 32)
         Me.cmbSatuan.TabIndex = 8
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(3, 99)
+        Me.Label5.Location = New System.Drawing.Point(3, 48)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(59, 25)
+        Me.Label5.Size = New System.Drawing.Size(80, 25)
         Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Nilai"
+        Me.Label5.Text = "Durasi"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 47)
+        Me.Label4.Location = New System.Drawing.Point(139, 47)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(86, 25)
         Me.Label4.TabIndex = 6
@@ -192,26 +202,16 @@ Partial Class IntegrationSetting
         Me.cmdSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdSimpan.Location = New System.Drawing.Point(13, 210)
         Me.cmdSimpan.Name = "cmdSimpan"
-        Me.cmdSimpan.Size = New System.Drawing.Size(474, 45)
+        Me.cmdSimpan.Size = New System.Drawing.Size(443, 45)
         Me.cmdSimpan.TabIndex = 3
         Me.cmdSimpan.Text = "Simpan"
         Me.cmdSimpan.UseVisualStyleBackColor = True
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(148, 75)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(90, 13)
-        Me.Label6.TabIndex = 10
-        Me.Label6.Text = "M= Menit, H: Jam"
         '
         'IntegrationSetting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(499, 257)
+        Me.ClientSize = New System.Drawing.Size(468, 257)
         Me.Controls.Add(Me.cmdSimpan)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
@@ -233,7 +233,6 @@ Partial Class IntegrationSetting
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -248,4 +247,5 @@ Partial Class IntegrationSetting
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents cmdSimpan As System.Windows.Forms.Button
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
 End Class

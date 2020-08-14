@@ -69,8 +69,9 @@ Public Class FormMainMenu
 
     Private Sub cmdLogoff_Click(sender As Object, e As EventArgs) Handles cmdLogoff.Click
         MsgBox("Logging Off")
-        Me.Close()
+        Me.Dispose()
         FormLogin.Show()
+        FormLogin.txtUsername.SetOnGotFocus()
         FormLogin.txtUsername.Text = ""
         FormLogin.txtPassword.Text = ""
     End Sub
@@ -126,13 +127,13 @@ ErrorLoad:
         Exit Sub
 
     End Sub
-
-
-
-
     Sub LoadDurasi()
         FnTimerNotifikasi(My.Settings.NilaiDurasi, My.Settings.SatuanDurasi)
     End Sub
+
+
+
+
 
     Private Sub TimerIntegrasi_Tick(sender As Object, e As EventArgs) Handles TimerIntegrasi.Tick
         LongDurasi = LongDurasi - 1
@@ -183,10 +184,12 @@ ErrorLoad:
 
     Private Sub cmbPause_Click(sender As Object, e As EventArgs) Handles cmbPause.Click
         TimerIntegrasi.Stop()
+        txtStatusIntegrasi.Text = "Paused"
     End Sub
 
     Private Sub cmbResume_Click(sender As Object, e As EventArgs) Handles cmbResume.Click
         TimerIntegrasi.Start()
+        txtStatusIntegrasi.Text = "Running"
     End Sub
 
 
@@ -197,4 +200,12 @@ ErrorLoad:
 
     
 
+    Private Sub TokopediaStockCompareToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TokopediaStockCompareToolStripMenuItem.Click
+        TokopediaStockCompare.ShowDialog()
+    End Sub
+
+
+    Private Sub CekStokToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CekStokToolStripMenuItem.Click
+        CekStok.ShowDialog()
+    End Sub
 End Class

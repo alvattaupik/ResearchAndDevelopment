@@ -36,4 +36,6 @@ Public Class DetailPerubahanHargaJual
 
 
     End Sub
+
+
 End Class

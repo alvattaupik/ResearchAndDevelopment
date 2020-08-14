@@ -113,7 +113,7 @@ Public Class ViewStockWarehouse
         Dim table As New DataTable
         adapter.Fill(table)
         Me.DataGridView1.DataSource = table
-        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        'DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
         DataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridView1.AutoResizeColumns()
 
@@ -151,4 +151,12 @@ Public Class ViewStockWarehouse
     End Sub
 
 
+    Private Sub DataGridView1_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView1.CellFormatting
+        For i As Integer = 0 To Me.DataGridView1.Rows.Count - 1
+            If Trim(Me.DataGridView1.Rows(i).Cells("WhsCode").Value) = "01003002" Then
+                Me.DataGridView1.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
+                Me.DataGridView1.Rows(i).DefaultCellStyle.ForeColor = Color.Black
+            End If
+        Next
+    End Sub
 End Class

@@ -20,11 +20,11 @@ Partial Class ViewStockWarehouse
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtKodebarang = New System.Windows.Forms.TextBox()
         Me.txtNamaBarang = New System.Windows.Forms.TextBox()
+        Me.txtKodebarang = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,23 +42,37 @@ Partial Class ViewStockWarehouse
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(599, 426)
+        Me.GroupBox1.Size = New System.Drawing.Size(727, 463)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detail Stok"
         '
-        'DataGridView1
+        'txtNamaBarang
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 81)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(587, 339)
-        Me.DataGridView1.TabIndex = 0
+        Me.txtNamaBarang.Enabled = False
+        Me.txtNamaBarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNamaBarang.Location = New System.Drawing.Point(95, 48)
+        Me.txtNamaBarang.Name = "txtNamaBarang"
+        Me.txtNamaBarang.Size = New System.Drawing.Size(626, 21)
+        Me.txtNamaBarang.TabIndex = 4
+        '
+        'txtKodebarang
+        '
+        Me.txtKodebarang.Enabled = False
+        Me.txtKodebarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtKodebarang.Location = New System.Drawing.Point(95, 19)
+        Me.txtKodebarang.Name = "txtKodebarang"
+        Me.txtKodebarang.Size = New System.Drawing.Size(626, 21)
+        Me.txtKodebarang.TabIndex = 3
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 51)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(83, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Nama Barang"
         '
         'Label1
         '
@@ -69,41 +83,30 @@ Partial Class ViewStockWarehouse
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Kode Barang"
         '
-        'Label2
+        'DataGridView1
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 48)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Nama Barang"
-        '
-        'txtKodebarang
-        '
-        Me.txtKodebarang.Enabled = False
-        Me.txtKodebarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtKodebarang.Location = New System.Drawing.Point(122, 21)
-        Me.txtKodebarang.Name = "txtKodebarang"
-        Me.txtKodebarang.Size = New System.Drawing.Size(471, 21)
-        Me.txtKodebarang.TabIndex = 3
-        '
-        'txtNamaBarang
-        '
-        Me.txtNamaBarang.Enabled = False
-        Me.txtNamaBarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNamaBarang.Location = New System.Drawing.Point(122, 48)
-        Me.txtNamaBarang.Name = "txtNamaBarang"
-        Me.txtNamaBarang.Size = New System.Drawing.Size(471, 21)
-        Me.txtNamaBarang.TabIndex = 4
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 81)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.DataGridView1.Size = New System.Drawing.Size(715, 376)
+        Me.DataGridView1.TabIndex = 0
         '
         'ViewStockWarehouse
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(623, 450)
+        Me.ClientSize = New System.Drawing.Size(751, 487)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "ViewStockWarehouse"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "View Stock Warehouse"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

@@ -25,7 +25,7 @@ Public Class FormIntegrasi
         Dim table As New DataTable
         adapter.Fill(table)
         Me.dgListUpload.DataSource = table
-        dgListUpload.RowHeadersVisible = False
+
         lblJumlahItem.Text = table.Rows.Count & " Records To Send"
 
         If (bgSinkronisasi.CancellationPending) Then
@@ -37,6 +37,32 @@ Public Class FormIntegrasi
         cmdStopProses.Enabled = False
 
     End Sub
+
+
+
+
+
+
+
+
+
+
+    Sub SinkronisasiMYSQLdanSQLSRV()
+        Call KoneksiDBSQLSRV()
+        Dim command As SqlCommand
+        command = New SqlCommand("_GetItemEcomdanSAP", KoneksiSQLSRV)
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        Dim table As New DataTable
+        adapter.Fill(table)
+        Me.dgListUpload.DataSource = table
+
+        lblJumlahItem.Text = table.Rows.Count & " Records To Send"
+        cmdProses.Enabled = True
+        cmdStopProses.Enabled = False
+    End Sub
+
+
 
     Private Sub cmdUpload_Click(sender As Object, e As EventArgs) Handles cmdUpload.Click
         If dgListUpload.RowCount = 0 Then
@@ -102,6 +128,8 @@ ErrorLoad:
     Private Sub cmdProses_Click(sender As Object, e As EventArgs) Handles cmdProses.Click
         cmdProses.Enabled = False
         cmdStopProses.Enabled = True
-        bgSinkronisasi.RunWorkerAsync()
+
+        Call SinkronisasiMYSQLdanSQLSRV()
+
     End Sub
 End Class

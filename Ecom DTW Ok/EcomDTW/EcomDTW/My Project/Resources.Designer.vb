@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property bukalapak_apa_itu_startup_pengertian_cara_memulai_dan_0() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("bukalapak-apa-itu-startup-pengertian-cara-memulai-dan-0", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property dbase() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("dbase", resourceCulture)
@@ -93,9 +103,29 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property RKM_Shop() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("RKM Shop", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property sql_server_logo_png_8() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("sql-server-logo-png-8", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property tokopedia_apa_itu_startup_pengertian_cara_memulai_dan_1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("tokopedia-apa-itu-startup-pengertian-cara-memulai-dan-1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

@@ -300,6 +300,7 @@ Partial Class IntegrationMonitoring
         '
         Me.dgFailedIntegration.AllowUserToAddRows = False
         Me.dgFailedIntegration.AllowUserToDeleteRows = False
+        Me.dgFailedIntegration.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         Me.dgFailedIntegration.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgFailedIntegration.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill

@@ -71,6 +71,7 @@ Partial Class MenuUtama
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TimerNotifikasi = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.MasterEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -265,7 +266,7 @@ Partial Class MenuUtama
         '
         'SettingToolStripMenuItem
         '
-        Me.SettingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TemplateToolStripMenuItem, Me.FotoProfileToolStripMenuItem, Me.PushNotificationsToolStripMenuItem, Me.UserLoginDanHakAksesToolStripMenuItem})
+        Me.SettingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TemplateToolStripMenuItem, Me.FotoProfileToolStripMenuItem, Me.PushNotificationsToolStripMenuItem, Me.UserLoginDanHakAksesToolStripMenuItem, Me.MasterEmployeeToolStripMenuItem})
         Me.SettingToolStripMenuItem.Name = "SettingToolStripMenuItem"
         Me.SettingToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
         Me.SettingToolStripMenuItem.Text = "Setting"
@@ -397,6 +398,12 @@ Partial Class MenuUtama
         '
         Me.TimerNotifikasi.Interval = 1000
         '
+        'MasterEmployeeToolStripMenuItem
+        '
+        Me.MasterEmployeeToolStripMenuItem.Name = "MasterEmployeeToolStripMenuItem"
+        Me.MasterEmployeeToolStripMenuItem.Size = New System.Drawing.Size(210, 22)
+        Me.MasterEmployeeToolStripMenuItem.Text = "Master Employee"
+        '
         'MenuUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -470,5 +477,6 @@ Partial Class MenuUtama
     Friend WithEvents TimerNotifikasi As System.Windows.Forms.Timer
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents PerubahanHargaJualToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MasterEmployeeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

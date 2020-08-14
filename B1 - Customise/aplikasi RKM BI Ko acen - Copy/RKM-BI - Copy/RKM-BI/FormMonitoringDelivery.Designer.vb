@@ -292,7 +292,7 @@ Partial Class FormMonitoringDelivery
         Me.Controls.Add(Me.Panel1)
         Me.MaximizeBox = False
         Me.Name = "FormMonitoringDelivery"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "FormMonitoringDelivery"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

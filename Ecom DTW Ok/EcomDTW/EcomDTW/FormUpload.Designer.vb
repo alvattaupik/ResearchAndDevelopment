@@ -73,12 +73,12 @@ Partial Class FormUpload
         Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.panelLoading = New System.Windows.Forms.Panel()
+        Me.lblProses = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GunaWinCircleProgressIndicator1 = New Guna.UI.WinForms.GunaWinCircleProgressIndicator()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.cmdCancel = New System.Windows.Forms.Button()
         Me.lblStatusUpload = New System.Windows.Forms.Label()
-        Me.lblProses = New System.Windows.Forms.Label()
         CType(Me.dgListUpload, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -427,11 +427,21 @@ Partial Class FormUpload
         Me.panelLoading.Controls.Add(Me.lblProses)
         Me.panelLoading.Controls.Add(Me.Label2)
         Me.panelLoading.Controls.Add(Me.GunaWinCircleProgressIndicator1)
-        Me.panelLoading.Location = New System.Drawing.Point(228, 137)
+        Me.panelLoading.Location = New System.Drawing.Point(228, 141)
         Me.panelLoading.Name = "panelLoading"
         Me.panelLoading.Size = New System.Drawing.Size(247, 222)
         Me.panelLoading.TabIndex = 19
         Me.panelLoading.Visible = False
+        '
+        'lblProses
+        '
+        Me.lblProses.AutoSize = True
+        Me.lblProses.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblProses.Location = New System.Drawing.Point(46, 192)
+        Me.lblProses.Name = "lblProses"
+        Me.lblProses.Size = New System.Drawing.Size(135, 16)
+        Me.lblProses.TabIndex = 3
+        Me.lblProses.Text = "Mengupload 0 to 0"
         '
         'Label2
         '
@@ -477,16 +487,6 @@ Partial Class FormUpload
         Me.lblStatusUpload.Size = New System.Drawing.Size(13, 16)
         Me.lblStatusUpload.TabIndex = 21
         Me.lblStatusUpload.Text = "-"
-        '
-        'lblProses
-        '
-        Me.lblProses.AutoSize = True
-        Me.lblProses.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblProses.Location = New System.Drawing.Point(46, 192)
-        Me.lblProses.Name = "lblProses"
-        Me.lblProses.Size = New System.Drawing.Size(135, 16)
-        Me.lblProses.TabIndex = 3
-        Me.lblProses.Text = "Mengupload 0 to 0"
         '
         'FormUpload
         '

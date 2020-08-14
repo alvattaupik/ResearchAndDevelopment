@@ -22,9 +22,9 @@ Partial Class FormUserLoginDanHakAkses
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -55,19 +55,21 @@ Partial Class FormUserLoginDanHakAkses
         Me.cmbDivisi = New System.Windows.Forms.ComboBox()
         Me.cmbLevelUser = New System.Windows.Forms.ComboBox()
         Me.GunaGradientButton2 = New Guna.UI.WinForms.GunaGradientButton()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgDaftarUserAplikasi, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Pink
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(10, 5)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 5)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(800, 50)
+        Me.GroupBox1.Size = New System.Drawing.Size(707, 50)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -75,7 +77,7 @@ Partial Class FormUserLoginDanHakAkses
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(261, 16)
+        Me.Label1.Location = New System.Drawing.Point(247, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(216, 25)
         Me.Label1.TabIndex = 0
@@ -85,7 +87,7 @@ Partial Class FormUserLoginDanHakAkses
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(9, 67)
+        Me.Label2.Location = New System.Drawing.Point(9, 22)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(81, 16)
         Me.Label2.TabIndex = 1
@@ -100,7 +102,7 @@ Partial Class FormUserLoginDanHakAkses
         Me.txtKodeUser.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtKodeUser.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtKodeUser.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtKodeUser.Location = New System.Drawing.Point(133, 61)
+        Me.txtKodeUser.Location = New System.Drawing.Point(118, 16)
         Me.txtKodeUser.Name = "txtKodeUser"
         Me.txtKodeUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtKodeUser.Size = New System.Drawing.Size(179, 28)
@@ -108,9 +110,9 @@ Partial Class FormUserLoginDanHakAkses
         '
         'cmdSource1
         '
-        Me.cmdSource1.Location = New System.Drawing.Point(318, 62)
+        Me.cmdSource1.Location = New System.Drawing.Point(303, 16)
         Me.cmdSource1.Name = "cmdSource1"
-        Me.cmdSource1.Size = New System.Drawing.Size(69, 56)
+        Me.cmdSource1.Size = New System.Drawing.Size(69, 62)
         Me.cmdSource1.TabIndex = 3
         Me.cmdSource1.Text = "Ambil Dari SAP"
         Me.cmdSource1.UseVisualStyleBackColor = True
@@ -119,7 +121,7 @@ Partial Class FormUserLoginDanHakAkses
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(8, 95)
+        Me.Label3.Location = New System.Drawing.Point(8, 50)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(113, 16)
         Me.Label3.TabIndex = 4
@@ -134,7 +136,7 @@ Partial Class FormUserLoginDanHakAkses
         Me.txtNamaLengkap.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNamaLengkap.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtNamaLengkap.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNamaLengkap.Location = New System.Drawing.Point(133, 95)
+        Me.txtNamaLengkap.Location = New System.Drawing.Point(119, 50)
         Me.txtNamaLengkap.Name = "txtNamaLengkap"
         Me.txtNamaLengkap.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtNamaLengkap.Size = New System.Drawing.Size(179, 28)
@@ -144,7 +146,7 @@ Partial Class FormUserLoginDanHakAkses
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(404, 66)
+        Me.Label4.Location = New System.Drawing.Point(9, 123)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(83, 16)
         Me.Label4.TabIndex = 6
@@ -154,7 +156,7 @@ Partial Class FormUserLoginDanHakAkses
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(9, 130)
+        Me.Label5.Location = New System.Drawing.Point(9, 85)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(106, 16)
         Me.Label5.TabIndex = 8
@@ -164,7 +166,7 @@ Partial Class FormUserLoginDanHakAkses
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(406, 90)
+        Me.Label6.Location = New System.Drawing.Point(12, 161)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(38, 16)
         Me.Label6.TabIndex = 10
@@ -179,10 +181,10 @@ Partial Class FormUserLoginDanHakAkses
         Me.txtNamaSPV.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNamaSPV.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtNamaSPV.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNamaSPV.Location = New System.Drawing.Point(534, 90)
+        Me.txtNamaSPV.Location = New System.Drawing.Point(180, 153)
         Me.txtNamaSPV.Name = "txtNamaSPV"
         Me.txtNamaSPV.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNamaSPV.Size = New System.Drawing.Size(178, 28)
+        Me.txtNamaSPV.Size = New System.Drawing.Size(106, 28)
         Me.txtNamaSPV.TabIndex = 11
         '
         'txtKodeSPV
@@ -194,19 +196,20 @@ Partial Class FormUserLoginDanHakAkses
         Me.txtKodeSPV.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtKodeSPV.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtKodeSPV.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtKodeSPV.Location = New System.Drawing.Point(450, 90)
+        Me.txtKodeSPV.Location = New System.Drawing.Point(118, 153)
         Me.txtKodeSPV.Name = "txtKodeSPV"
         Me.txtKodeSPV.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtKodeSPV.Size = New System.Drawing.Size(78, 28)
+        Me.txtKodeSPV.Size = New System.Drawing.Size(60, 28)
         Me.txtKodeSPV.TabIndex = 12
         '
         'cmdSource2
         '
-        Me.cmdSource2.Location = New System.Drawing.Point(736, 58)
+        Me.cmdSource2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdSource2.Location = New System.Drawing.Point(288, 153)
         Me.cmdSource2.Name = "cmdSource2"
-        Me.cmdSource2.Size = New System.Drawing.Size(71, 60)
+        Me.cmdSource2.Size = New System.Drawing.Size(86, 28)
         Me.cmdSource2.TabIndex = 13
-        Me.cmdSource2.Text = "Ambil Dari SAP"
+        Me.cmdSource2.Text = "Browse"
         Me.cmdSource2.UseVisualStyleBackColor = True
         '
         'GroupBox2
@@ -218,9 +221,9 @@ Partial Class FormUserLoginDanHakAkses
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.txtPassword)
         Me.GroupBox2.Controls.Add(Me.txtusername)
-        Me.GroupBox2.Location = New System.Drawing.Point(6, 168)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 263)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(381, 149)
+        Me.GroupBox2.Size = New System.Drawing.Size(381, 123)
         Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Username dan Password"
@@ -316,7 +319,7 @@ Partial Class FormUserLoginDanHakAkses
         Me.cmdNew.ForeColor = System.Drawing.Color.White
         Me.cmdNew.Image = Nothing
         Me.cmdNew.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdNew.Location = New System.Drawing.Point(6, 332)
+        Me.cmdNew.Location = New System.Drawing.Point(10, 393)
         Me.cmdNew.Name = "cmdNew"
         Me.cmdNew.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdNew.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -344,7 +347,7 @@ Partial Class FormUserLoginDanHakAkses
         Me.cmdSave.ForeColor = System.Drawing.Color.White
         Me.cmdSave.Image = Nothing
         Me.cmdSave.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdSave.Location = New System.Drawing.Point(100, 332)
+        Me.cmdSave.Location = New System.Drawing.Point(113, 393)
         Me.cmdSave.Name = "cmdSave"
         Me.cmdSave.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdSave.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -364,9 +367,9 @@ Partial Class FormUserLoginDanHakAkses
         Me.GroupBox3.Controls.Add(Me.txtCariUser)
         Me.GroupBox3.Controls.Add(Me.Label9)
         Me.GroupBox3.Controls.Add(Me.dgDaftarUserAplikasi)
-        Me.GroupBox3.Location = New System.Drawing.Point(407, 124)
+        Me.GroupBox3.Location = New System.Drawing.Point(398, 61)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(403, 254)
+        Me.GroupBox3.Size = New System.Drawing.Size(310, 376)
         Me.GroupBox3.TabIndex = 38
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Data User"
@@ -383,7 +386,7 @@ Partial Class FormUserLoginDanHakAkses
         Me.txtCariUser.Location = New System.Drawing.Point(86, 19)
         Me.txtCariUser.Name = "txtCariUser"
         Me.txtCariUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtCariUser.Size = New System.Drawing.Size(311, 28)
+        Me.txtCariUser.Size = New System.Drawing.Size(216, 28)
         Me.txtCariUser.TabIndex = 10
         '
         'Label9
@@ -400,30 +403,30 @@ Partial Class FormUserLoginDanHakAkses
         '
         Me.dgDaftarUserAplikasi.AllowUserToAddRows = False
         Me.dgDaftarUserAplikasi.AllowUserToDeleteRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        Me.dgDaftarUserAplikasi.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        Me.dgDaftarUserAplikasi.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
         Me.dgDaftarUserAplikasi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgDaftarUserAplikasi.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.dgDaftarUserAplikasi.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgDaftarUserAplikasi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgDaftarUserAplikasi.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgDaftarUserAplikasi.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgDaftarUserAplikasi.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.dgDaftarUserAplikasi.ColumnHeadersHeight = 30
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgDaftarUserAplikasi.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgDaftarUserAplikasi.DefaultCellStyle = DataGridViewCellStyle12
         Me.dgDaftarUserAplikasi.EnableHeadersVisualStyles = False
         Me.dgDaftarUserAplikasi.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgDaftarUserAplikasi.Location = New System.Drawing.Point(8, 53)
@@ -431,7 +434,7 @@ Partial Class FormUserLoginDanHakAkses
         Me.dgDaftarUserAplikasi.ReadOnly = True
         Me.dgDaftarUserAplikasi.RowHeadersVisible = False
         Me.dgDaftarUserAplikasi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgDaftarUserAplikasi.Size = New System.Drawing.Size(389, 195)
+        Me.dgDaftarUserAplikasi.Size = New System.Drawing.Size(294, 317)
         Me.dgDaftarUserAplikasi.TabIndex = 0
         Me.dgDaftarUserAplikasi.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
         Me.dgDaftarUserAplikasi.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -470,7 +473,7 @@ Partial Class FormUserLoginDanHakAkses
         Me.GunaGradientButton1.ForeColor = System.Drawing.Color.White
         Me.GunaGradientButton1.Image = Nothing
         Me.GunaGradientButton1.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaGradientButton1.Location = New System.Drawing.Point(188, 332)
+        Me.GunaGradientButton1.Location = New System.Drawing.Point(206, 393)
         Me.GunaGradientButton1.Name = "GunaGradientButton1"
         Me.GunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.Red
         Me.GunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -490,7 +493,7 @@ Partial Class FormUserLoginDanHakAkses
         Me.cmbDivisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cmbDivisi.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbDivisi.FormattingEnabled = True
-        Me.cmbDivisi.Location = New System.Drawing.Point(133, 126)
+        Me.cmbDivisi.Location = New System.Drawing.Point(119, 81)
         Me.cmbDivisi.Name = "cmbDivisi"
         Me.cmbDivisi.Size = New System.Drawing.Size(254, 26)
         Me.cmbDivisi.TabIndex = 40
@@ -502,9 +505,9 @@ Partial Class FormUserLoginDanHakAkses
         Me.cmbLevelUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbLevelUser.FormattingEnabled = True
         Me.cmbLevelUser.Items.AddRange(New Object() {"STAFF", "SPV", "MANAGEMENT", "OPERATIONAL"})
-        Me.cmbLevelUser.Location = New System.Drawing.Point(493, 61)
+        Me.cmbLevelUser.Location = New System.Drawing.Point(119, 113)
         Me.cmbLevelUser.Name = "cmbLevelUser"
-        Me.cmbLevelUser.Size = New System.Drawing.Size(219, 26)
+        Me.cmbLevelUser.Size = New System.Drawing.Size(255, 26)
         Me.cmbLevelUser.TabIndex = 41
         '
         'GunaGradientButton2
@@ -521,7 +524,7 @@ Partial Class FormUserLoginDanHakAkses
         Me.GunaGradientButton2.ForeColor = System.Drawing.Color.White
         Me.GunaGradientButton2.Image = Nothing
         Me.GunaGradientButton2.ImageSize = New System.Drawing.Size(20, 20)
-        Me.GunaGradientButton2.Location = New System.Drawing.Point(303, 332)
+        Me.GunaGradientButton2.Location = New System.Drawing.Point(305, 393)
         Me.GunaGradientButton2.Name = "GunaGradientButton2"
         Me.GunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.GunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -535,31 +538,41 @@ Partial Class FormUserLoginDanHakAkses
         Me.GunaGradientButton2.Text = "Hak Akses"
         Me.GunaGradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'GroupBox4
+        '
+        Me.GroupBox4.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.GroupBox4.Controls.Add(Me.cmbLevelUser)
+        Me.GroupBox4.Controls.Add(Me.cmbDivisi)
+        Me.GroupBox4.Controls.Add(Me.cmdSource2)
+        Me.GroupBox4.Controls.Add(Me.txtKodeSPV)
+        Me.GroupBox4.Controls.Add(Me.txtNamaSPV)
+        Me.GroupBox4.Controls.Add(Me.Label6)
+        Me.GroupBox4.Controls.Add(Me.Label5)
+        Me.GroupBox4.Controls.Add(Me.Label4)
+        Me.GroupBox4.Controls.Add(Me.txtNamaLengkap)
+        Me.GroupBox4.Controls.Add(Me.Label3)
+        Me.GroupBox4.Controls.Add(Me.cmdSource1)
+        Me.GroupBox4.Controls.Add(Me.txtKodeUser)
+        Me.GroupBox4.Controls.Add(Me.Label2)
+        Me.GroupBox4.Location = New System.Drawing.Point(6, 61)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(383, 196)
+        Me.GroupBox4.TabIndex = 45
+        Me.GroupBox4.TabStop = False
+        '
         'FormUserLoginDanHakAkses
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(819, 384)
+        Me.ClientSize = New System.Drawing.Size(718, 455)
+        Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GunaGradientButton2)
-        Me.Controls.Add(Me.cmbLevelUser)
-        Me.Controls.Add(Me.cmbDivisi)
         Me.Controls.Add(Me.GunaGradientButton1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.cmdSave)
         Me.Controls.Add(Me.cmdNew)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.cmdSource2)
-        Me.Controls.Add(Me.txtKodeSPV)
-        Me.Controls.Add(Me.txtNamaSPV)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtNamaLengkap)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.cmdSource1)
-        Me.Controls.Add(Me.txtKodeUser)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Location = New System.Drawing.Point(400, 89)
@@ -574,8 +587,9 @@ Partial Class FormUserLoginDanHakAkses
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         CType(Me.dgDaftarUserAplikasi, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
@@ -608,4 +622,5 @@ Partial Class FormUserLoginDanHakAkses
     Friend WithEvents txtNamaDivisi As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents chkAktif As System.Windows.Forms.CheckBox
     Friend WithEvents GunaGradientButton2 As Guna.UI.WinForms.GunaGradientButton
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
 End Class

@@ -34,6 +34,7 @@ Partial Class MonitoringDelivery
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtpTgl1 = New Guna.UI.WinForms.GunaDateTimePicker()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.GunaPictureBox2 = New Guna.UI.WinForms.GunaPictureBox()
         Me.lblJumlahItemTransaksi = New System.Windows.Forms.Label()
         Me.dgItemDelivery = New System.Windows.Forms.DataGridView()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -41,21 +42,34 @@ Partial Class MonitoringDelivery
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
         Me.lblJumlahTransaksi = New System.Windows.Forms.Label()
         Me.dgDaftarDelivery = New System.Windows.Forms.DataGridView()
-        Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
-        Me.GunaPictureBox2 = New Guna.UI.WinForms.GunaPictureBox()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.dgDeliverySudahDikirim = New System.Windows.Forms.DataGridView()
+        Me.dgDeliveryBelumDikirim = New System.Windows.Forms.DataGridView()
+        Me.GunaPictureBox3 = New Guna.UI.WinForms.GunaPictureBox()
+        Me.lblDeliverySudahDikirim = New System.Windows.Forms.Label()
+        Me.GunaPictureBox4 = New Guna.UI.WinForms.GunaPictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
+        CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgItemDelivery, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.dgDaftarDelivery, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgDaftarDelivery, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        CType(Me.dgDeliverySudahDikirim, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgDeliveryBelumDikirim, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaPictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -210,6 +224,17 @@ Partial Class MonitoringDelivery
         Me.Panel3.Size = New System.Drawing.Size(779, 742)
         Me.Panel3.TabIndex = 3
         '
+        'GunaPictureBox2
+        '
+        Me.GunaPictureBox2.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.GunaPictureBox2.Image = CType(resources.GetObject("GunaPictureBox2.Image"), System.Drawing.Image)
+        Me.GunaPictureBox2.Location = New System.Drawing.Point(0, 662)
+        Me.GunaPictureBox2.Name = "GunaPictureBox2"
+        Me.GunaPictureBox2.Size = New System.Drawing.Size(779, 80)
+        Me.GunaPictureBox2.TabIndex = 40
+        Me.GunaPictureBox2.TabStop = False
+        '
         'lblJumlahItemTransaksi
         '
         Me.lblJumlahItemTransaksi.AutoSize = True
@@ -259,6 +284,8 @@ Partial Class MonitoringDelivery
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Location = New System.Drawing.Point(1, 202)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -276,7 +303,18 @@ Partial Class MonitoringDelivery
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(576, 522)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Delivery"
+        Me.TabPage1.Text = "Semua Delivery"
+        '
+        'GunaPictureBox1
+        '
+        Me.GunaPictureBox1.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.GunaPictureBox1.Image = CType(resources.GetObject("GunaPictureBox1.Image"), System.Drawing.Image)
+        Me.GunaPictureBox1.Location = New System.Drawing.Point(3, 439)
+        Me.GunaPictureBox1.Name = "GunaPictureBox1"
+        Me.GunaPictureBox1.Size = New System.Drawing.Size(570, 80)
+        Me.GunaPictureBox1.TabIndex = 39
+        Me.GunaPictureBox1.TabStop = False
         '
         'lblJumlahTransaksi
         '
@@ -293,6 +331,7 @@ Partial Class MonitoringDelivery
         '
         Me.dgDaftarDelivery.AllowUserToAddRows = False
         Me.dgDaftarDelivery.AllowUserToDeleteRows = False
+        Me.dgDaftarDelivery.AllowUserToResizeRows = False
         Me.dgDaftarDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgDaftarDelivery.Location = New System.Drawing.Point(6, 6)
         Me.dgDaftarDelivery.Name = "dgDaftarDelivery"
@@ -300,27 +339,99 @@ Partial Class MonitoringDelivery
         Me.dgDaftarDelivery.Size = New System.Drawing.Size(564, 353)
         Me.dgDaftarDelivery.TabIndex = 3
         '
-        'GunaPictureBox1
+        'TabPage2
         '
-        Me.GunaPictureBox1.BaseColor = System.Drawing.Color.White
-        Me.GunaPictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GunaPictureBox1.Image = CType(resources.GetObject("GunaPictureBox1.Image"), System.Drawing.Image)
-        Me.GunaPictureBox1.Location = New System.Drawing.Point(3, 439)
-        Me.GunaPictureBox1.Name = "GunaPictureBox1"
-        Me.GunaPictureBox1.Size = New System.Drawing.Size(570, 80)
-        Me.GunaPictureBox1.TabIndex = 39
-        Me.GunaPictureBox1.TabStop = False
+        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.TabPage2.Controls.Add(Me.Label2)
+        Me.TabPage2.Controls.Add(Me.GunaPictureBox4)
+        Me.TabPage2.Controls.Add(Me.dgDeliveryBelumDikirim)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(576, 522)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Belum Dikirim"
         '
-        'GunaPictureBox2
+        'TabPage3
         '
-        Me.GunaPictureBox2.BaseColor = System.Drawing.Color.White
-        Me.GunaPictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GunaPictureBox2.Image = CType(resources.GetObject("GunaPictureBox2.Image"), System.Drawing.Image)
-        Me.GunaPictureBox2.Location = New System.Drawing.Point(0, 662)
-        Me.GunaPictureBox2.Name = "GunaPictureBox2"
-        Me.GunaPictureBox2.Size = New System.Drawing.Size(779, 80)
-        Me.GunaPictureBox2.TabIndex = 40
-        Me.GunaPictureBox2.TabStop = False
+        Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.TabPage3.Controls.Add(Me.lblDeliverySudahDikirim)
+        Me.TabPage3.Controls.Add(Me.GunaPictureBox3)
+        Me.TabPage3.Controls.Add(Me.dgDeliverySudahDikirim)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(576, 522)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Sudah Dikirim"
+        '
+        'dgDeliverySudahDikirim
+        '
+        Me.dgDeliverySudahDikirim.AllowUserToAddRows = False
+        Me.dgDeliverySudahDikirim.AllowUserToDeleteRows = False
+        Me.dgDeliverySudahDikirim.AllowUserToResizeRows = False
+        Me.dgDeliverySudahDikirim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgDeliverySudahDikirim.Location = New System.Drawing.Point(3, 6)
+        Me.dgDeliverySudahDikirim.Name = "dgDeliverySudahDikirim"
+        Me.dgDeliverySudahDikirim.ReadOnly = True
+        Me.dgDeliverySudahDikirim.Size = New System.Drawing.Size(564, 353)
+        Me.dgDeliverySudahDikirim.TabIndex = 5
+        '
+        'dgDeliveryBelumDikirim
+        '
+        Me.dgDeliveryBelumDikirim.AllowUserToAddRows = False
+        Me.dgDeliveryBelumDikirim.AllowUserToDeleteRows = False
+        Me.dgDeliveryBelumDikirim.AllowUserToResizeRows = False
+        Me.dgDeliveryBelumDikirim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgDeliveryBelumDikirim.Location = New System.Drawing.Point(6, 6)
+        Me.dgDeliveryBelumDikirim.Name = "dgDeliveryBelumDikirim"
+        Me.dgDeliveryBelumDikirim.ReadOnly = True
+        Me.dgDeliveryBelumDikirim.Size = New System.Drawing.Size(564, 353)
+        Me.dgDeliveryBelumDikirim.TabIndex = 6
+        '
+        'GunaPictureBox3
+        '
+        Me.GunaPictureBox3.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.GunaPictureBox3.Image = CType(resources.GetObject("GunaPictureBox3.Image"), System.Drawing.Image)
+        Me.GunaPictureBox3.Location = New System.Drawing.Point(3, 439)
+        Me.GunaPictureBox3.Name = "GunaPictureBox3"
+        Me.GunaPictureBox3.Size = New System.Drawing.Size(570, 80)
+        Me.GunaPictureBox3.TabIndex = 40
+        Me.GunaPictureBox3.TabStop = False
+        '
+        'lblDeliverySudahDikirim
+        '
+        Me.lblDeliverySudahDikirim.AutoSize = True
+        Me.lblDeliverySudahDikirim.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDeliverySudahDikirim.ForeColor = System.Drawing.Color.White
+        Me.lblDeliverySudahDikirim.Location = New System.Drawing.Point(3, 362)
+        Me.lblDeliverySudahDikirim.Name = "lblDeliverySudahDikirim"
+        Me.lblDeliverySudahDikirim.Size = New System.Drawing.Size(282, 20)
+        Me.lblDeliverySudahDikirim.TabIndex = 41
+        Me.lblDeliverySudahDikirim.Text = "Jumlah Delivery Sudah Di Kirim : 0"
+        '
+        'GunaPictureBox4
+        '
+        Me.GunaPictureBox4.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox4.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.GunaPictureBox4.Image = CType(resources.GetObject("GunaPictureBox4.Image"), System.Drawing.Image)
+        Me.GunaPictureBox4.Location = New System.Drawing.Point(3, 439)
+        Me.GunaPictureBox4.Name = "GunaPictureBox4"
+        Me.GunaPictureBox4.Size = New System.Drawing.Size(570, 80)
+        Me.GunaPictureBox4.TabIndex = 41
+        Me.GunaPictureBox4.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(6, 362)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(280, 20)
+        Me.Label2.TabIndex = 42
+        Me.Label2.Text = "Jumlah Delivery Belum Di Kirim : 0"
         '
         'MonitoringDelivery
         '
@@ -344,14 +455,22 @@ Partial Class MonitoringDelivery
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgItemDelivery, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.dgDaftarDelivery, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgDaftarDelivery, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
+        CType(Me.dgDeliverySudahDikirim, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgDeliveryBelumDikirim, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaPictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -376,4 +495,12 @@ Partial Class MonitoringDelivery
     Friend WithEvents AvailableToPromiseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GunaPictureBox1 As Guna.UI.WinForms.GunaPictureBox
     Friend WithEvents GunaPictureBox2 As Guna.UI.WinForms.GunaPictureBox
+    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents dgDeliveryBelumDikirim As System.Windows.Forms.DataGridView
+    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents dgDeliverySudahDikirim As System.Windows.Forms.DataGridView
+    Friend WithEvents lblDeliverySudahDikirim As System.Windows.Forms.Label
+    Friend WithEvents GunaPictureBox3 As Guna.UI.WinForms.GunaPictureBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents GunaPictureBox4 As Guna.UI.WinForms.GunaPictureBox
 End Class

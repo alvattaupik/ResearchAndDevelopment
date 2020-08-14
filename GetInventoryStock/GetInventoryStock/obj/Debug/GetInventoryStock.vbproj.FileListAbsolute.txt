@@ -39,3 +39,18 @@ D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\bin\Debug\Monitori
 D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.exe
 D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.xml
 D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.pdb
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.exe.manifest
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.application
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.exe
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.pdb
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\bin\Debug\Monitoring Real Stock.xml
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.FormChangeLog.resources
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.FormPing.resources
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.frmLogin.resources
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.frmSettingKoneksi.resources
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.ItemList.resources
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.MainWindows.resources
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\MonitoringRealStock.Resources.resources
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\GetInventoryStock.vbproj.GenerateResource.Cache
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.exe.manifest
+D:\ResearchAndDevelopment\GetInventoryStock\GetInventoryStock\obj\Debug\Monitoring Real Stock.application

@@ -13,7 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\DATA- Alvat\Music\UpdateSoftware\MonitoringRealstok1.1 Build 131119\</PublishUrl>
+    <PublishUrl>C:\Users\IT-ALVAT\Music\Monitoring Realstok Build 07082020\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -68,10 +68,11 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>5DE3DBEFF50D6C53E1E543E9E862850AEAE9284C</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>11B78A9BF6C7C93FEA015AA31F6B16C6BF60DDD1</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>GetInventoryStock_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>

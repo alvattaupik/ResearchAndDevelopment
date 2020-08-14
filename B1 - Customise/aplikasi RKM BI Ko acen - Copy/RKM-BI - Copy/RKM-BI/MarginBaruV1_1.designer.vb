@@ -169,17 +169,7 @@ Partial Class MarginBaruV1_1
         Me.Label58 = New System.Windows.Forms.Label()
         Me.Label67 = New System.Windows.Forms.Label()
         Me.DataGridViewSOEKARNOHATTA = New System.Windows.Forms.DataGridView()
-        Me.TxtCek = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Subang = New System.Windows.Forms.TabPage()
-        Me.DataGridViewSUBANG = New System.Windows.Forms.DataGridView()
         Me.txtTotalMarginSubang = New System.Windows.Forms.Label()
         Me.txtTotalJualSubang = New System.Windows.Forms.Label()
         Me.txtTotalBeliSubang = New System.Windows.Forms.Label()
@@ -187,6 +177,16 @@ Partial Class MarginBaruV1_1
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.DataGridViewSUBANG = New System.Windows.Forms.DataGridView()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.tab.SuspendLayout()
         Me.ABM.SuspendLayout()
         CType(Me.DataGridABM, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -215,17 +215,14 @@ Partial Class MarginBaruV1_1
         CType(Me.DataGridViewPAMANUKAN, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SOEKARNOHATTA.SuspendLayout()
         CType(Me.DataGridViewSOEKARNOHATTA, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        Me.StatusStrip1.SuspendLayout()
         Me.Subang.SuspendLayout()
         CType(Me.DataGridViewSUBANG, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.StatusStrip1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'tab
         '
-        Me.tab.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tab.Controls.Add(Me.ABM)
         Me.tab.Controls.Add(Me.AYANI)
         Me.tab.Controls.Add(Me.CIBABAT)
@@ -240,10 +237,10 @@ Partial Class MarginBaruV1_1
         Me.tab.Controls.Add(Me.PAMANUKAN)
         Me.tab.Controls.Add(Me.SOEKARNOHATTA)
         Me.tab.Controls.Add(Me.Subang)
-        Me.tab.Location = New System.Drawing.Point(12, 49)
+        Me.tab.Location = New System.Drawing.Point(0, 41)
         Me.tab.Name = "tab"
         Me.tab.SelectedIndex = 0
-        Me.tab.Size = New System.Drawing.Size(959, 378)
+        Me.tab.Size = New System.Drawing.Size(1006, 452)
         Me.tab.TabIndex = 18
         '
         'ABM
@@ -260,7 +257,7 @@ Partial Class MarginBaruV1_1
         Me.ABM.Location = New System.Drawing.Point(4, 22)
         Me.ABM.Name = "ABM"
         Me.ABM.Padding = New System.Windows.Forms.Padding(3)
-        Me.ABM.Size = New System.Drawing.Size(951, 352)
+        Me.ABM.Size = New System.Drawing.Size(998, 426)
         Me.ABM.TabIndex = 0
         Me.ABM.Text = "ABM"
         Me.ABM.UseVisualStyleBackColor = True
@@ -270,7 +267,7 @@ Partial Class MarginBaruV1_1
         Me.txtTotalMarginABM.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtTotalMarginABM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTotalMarginABM.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalMarginABM.Location = New System.Drawing.Point(841, 337)
+        Me.txtTotalMarginABM.Location = New System.Drawing.Point(888, 411)
         Me.txtTotalMarginABM.Name = "txtTotalMarginABM"
         Me.txtTotalMarginABM.Size = New System.Drawing.Size(102, 14)
         Me.txtTotalMarginABM.TabIndex = 41
@@ -282,7 +279,7 @@ Partial Class MarginBaruV1_1
         Me.txtTotalJualABM.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtTotalJualABM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTotalJualABM.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalJualABM.Location = New System.Drawing.Point(639, 337)
+        Me.txtTotalJualABM.Location = New System.Drawing.Point(686, 411)
         Me.txtTotalJualABM.Name = "txtTotalJualABM"
         Me.txtTotalJualABM.Size = New System.Drawing.Size(89, 14)
         Me.txtTotalJualABM.TabIndex = 40
@@ -294,7 +291,7 @@ Partial Class MarginBaruV1_1
         Me.txtTotalBeliABM.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtTotalBeliABM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTotalBeliABM.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalBeliABM.Location = New System.Drawing.Point(739, 337)
+        Me.txtTotalBeliABM.Location = New System.Drawing.Point(786, 411)
         Me.txtTotalBeliABM.Name = "txtTotalBeliABM"
         Me.txtTotalBeliABM.Size = New System.Drawing.Size(89, 14)
         Me.txtTotalBeliABM.TabIndex = 39
@@ -305,7 +302,7 @@ Partial Class MarginBaruV1_1
         '
         Me.Label82.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label82.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label82.Location = New System.Drawing.Point(838, 312)
+        Me.Label82.Location = New System.Drawing.Point(885, 386)
         Me.Label82.Name = "Label82"
         Me.Label82.Size = New System.Drawing.Size(105, 17)
         Me.Label82.TabIndex = 36
@@ -316,7 +313,7 @@ Partial Class MarginBaruV1_1
         '
         Me.Label83.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label83.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label83.Location = New System.Drawing.Point(639, 312)
+        Me.Label83.Location = New System.Drawing.Point(686, 386)
         Me.Label83.Name = "Label83"
         Me.Label83.Size = New System.Drawing.Size(89, 17)
         Me.Label83.TabIndex = 35
@@ -327,7 +324,7 @@ Partial Class MarginBaruV1_1
         '
         Me.Label84.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label84.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label84.Location = New System.Drawing.Point(739, 312)
+        Me.Label84.Location = New System.Drawing.Point(786, 386)
         Me.Label84.Name = "Label84"
         Me.Label84.Size = New System.Drawing.Size(89, 17)
         Me.Label84.TabIndex = 34
@@ -340,7 +337,7 @@ Partial Class MarginBaruV1_1
         Me.Label87.BackColor = System.Drawing.Color.PeachPuff
         Me.Label87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label87.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label87.Location = New System.Drawing.Point(545, 318)
+        Me.Label87.Location = New System.Drawing.Point(592, 382)
         Me.Label87.Name = "Label87"
         Me.Label87.Size = New System.Drawing.Size(88, 34)
         Me.Label87.TabIndex = 31
@@ -384,7 +381,7 @@ Partial Class MarginBaruV1_1
         DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridABM.RowHeadersDefaultCellStyle = DataGridViewCellStyle32
         Me.DataGridABM.RowHeadersWidth = 10
-        Me.DataGridABM.Size = New System.Drawing.Size(936, 277)
+        Me.DataGridABM.Size = New System.Drawing.Size(983, 351)
         Me.DataGridABM.TabIndex = 16
         '
         'ContextMenuStrip1
@@ -413,7 +410,7 @@ Partial Class MarginBaruV1_1
         Me.AYANI.Location = New System.Drawing.Point(4, 22)
         Me.AYANI.Name = "AYANI"
         Me.AYANI.Padding = New System.Windows.Forms.Padding(3)
-        Me.AYANI.Size = New System.Drawing.Size(951, 352)
+        Me.AYANI.Size = New System.Drawing.Size(998, 426)
         Me.AYANI.TabIndex = 1
         Me.AYANI.Text = "AYANI"
         Me.AYANI.UseVisualStyleBackColor = True
@@ -544,7 +541,7 @@ Partial Class MarginBaruV1_1
         Me.CIBABAT.Controls.Add(Me.DataGridViewCibabat)
         Me.CIBABAT.Location = New System.Drawing.Point(4, 22)
         Me.CIBABAT.Name = "CIBABAT"
-        Me.CIBABAT.Size = New System.Drawing.Size(951, 352)
+        Me.CIBABAT.Size = New System.Drawing.Size(998, 426)
         Me.CIBABAT.TabIndex = 6
         Me.CIBABAT.Text = "CIBABAT"
         Me.CIBABAT.UseVisualStyleBackColor = True
@@ -675,7 +672,7 @@ Partial Class MarginBaruV1_1
         Me.KOPO.Controls.Add(Me.DataGridViewKopo)
         Me.KOPO.Location = New System.Drawing.Point(4, 22)
         Me.KOPO.Name = "KOPO"
-        Me.KOPO.Size = New System.Drawing.Size(951, 352)
+        Me.KOPO.Size = New System.Drawing.Size(998, 426)
         Me.KOPO.TabIndex = 4
         Me.KOPO.Text = "KOPO"
         Me.KOPO.UseVisualStyleBackColor = True
@@ -806,7 +803,7 @@ Partial Class MarginBaruV1_1
         Me.CIBIRU.Controls.Add(Me.DataGridViewCibiru)
         Me.CIBIRU.Location = New System.Drawing.Point(4, 22)
         Me.CIBIRU.Name = "CIBIRU"
-        Me.CIBIRU.Size = New System.Drawing.Size(951, 352)
+        Me.CIBIRU.Size = New System.Drawing.Size(998, 426)
         Me.CIBIRU.TabIndex = 5
         Me.CIBIRU.Text = "CIBIRU"
         Me.CIBIRU.UseVisualStyleBackColor = True
@@ -937,7 +934,7 @@ Partial Class MarginBaruV1_1
         Me.GARUT.Controls.Add(Me.DataGridViewGarut)
         Me.GARUT.Location = New System.Drawing.Point(4, 22)
         Me.GARUT.Name = "GARUT"
-        Me.GARUT.Size = New System.Drawing.Size(951, 352)
+        Me.GARUT.Size = New System.Drawing.Size(998, 426)
         Me.GARUT.TabIndex = 2
         Me.GARUT.Text = "GARUT"
         Me.GARUT.UseVisualStyleBackColor = True
@@ -1068,7 +1065,7 @@ Partial Class MarginBaruV1_1
         Me.CIREBON.Controls.Add(Me.DataGridViewCirebon)
         Me.CIREBON.Location = New System.Drawing.Point(4, 22)
         Me.CIREBON.Name = "CIREBON"
-        Me.CIREBON.Size = New System.Drawing.Size(951, 352)
+        Me.CIREBON.Size = New System.Drawing.Size(998, 426)
         Me.CIREBON.TabIndex = 3
         Me.CIREBON.Text = "CIREBON"
         Me.CIREBON.UseVisualStyleBackColor = True
@@ -1199,7 +1196,7 @@ Partial Class MarginBaruV1_1
         Me.SUMEDANG.Controls.Add(Me.DataGridViewSumedang)
         Me.SUMEDANG.Location = New System.Drawing.Point(4, 22)
         Me.SUMEDANG.Name = "SUMEDANG"
-        Me.SUMEDANG.Size = New System.Drawing.Size(951, 352)
+        Me.SUMEDANG.Size = New System.Drawing.Size(998, 426)
         Me.SUMEDANG.TabIndex = 7
         Me.SUMEDANG.Text = "SUMEDANG"
         Me.SUMEDANG.UseVisualStyleBackColor = True
@@ -1330,7 +1327,7 @@ Partial Class MarginBaruV1_1
         Me.CIPARAY.Controls.Add(Me.DataGridViewCiparay)
         Me.CIPARAY.Location = New System.Drawing.Point(4, 22)
         Me.CIPARAY.Name = "CIPARAY"
-        Me.CIPARAY.Size = New System.Drawing.Size(951, 352)
+        Me.CIPARAY.Size = New System.Drawing.Size(998, 426)
         Me.CIPARAY.TabIndex = 8
         Me.CIPARAY.Text = "CIPARAY"
         Me.CIPARAY.UseVisualStyleBackColor = True
@@ -1461,7 +1458,7 @@ Partial Class MarginBaruV1_1
         Me.RANCAEKEK.Controls.Add(Me.DataGridViewRancaekek)
         Me.RANCAEKEK.Location = New System.Drawing.Point(4, 22)
         Me.RANCAEKEK.Name = "RANCAEKEK"
-        Me.RANCAEKEK.Size = New System.Drawing.Size(951, 352)
+        Me.RANCAEKEK.Size = New System.Drawing.Size(998, 426)
         Me.RANCAEKEK.TabIndex = 9
         Me.RANCAEKEK.Text = "RANCAEKEK"
         Me.RANCAEKEK.UseVisualStyleBackColor = True
@@ -1592,7 +1589,7 @@ Partial Class MarginBaruV1_1
         Me.TASIKMALAYA.Controls.Add(Me.DataGridViewTASIKMALAYA)
         Me.TASIKMALAYA.Location = New System.Drawing.Point(4, 22)
         Me.TASIKMALAYA.Name = "TASIKMALAYA"
-        Me.TASIKMALAYA.Size = New System.Drawing.Size(951, 352)
+        Me.TASIKMALAYA.Size = New System.Drawing.Size(998, 426)
         Me.TASIKMALAYA.TabIndex = 10
         Me.TASIKMALAYA.Text = "TASIKMALAYA"
         Me.TASIKMALAYA.UseVisualStyleBackColor = True
@@ -1723,7 +1720,7 @@ Partial Class MarginBaruV1_1
         Me.PAMANUKAN.Controls.Add(Me.DataGridViewPAMANUKAN)
         Me.PAMANUKAN.Location = New System.Drawing.Point(4, 22)
         Me.PAMANUKAN.Name = "PAMANUKAN"
-        Me.PAMANUKAN.Size = New System.Drawing.Size(951, 352)
+        Me.PAMANUKAN.Size = New System.Drawing.Size(998, 426)
         Me.PAMANUKAN.TabIndex = 11
         Me.PAMANUKAN.Text = "PAMANUKAN"
         Me.PAMANUKAN.UseVisualStyleBackColor = True
@@ -1855,7 +1852,7 @@ Partial Class MarginBaruV1_1
         Me.SOEKARNOHATTA.Location = New System.Drawing.Point(4, 22)
         Me.SOEKARNOHATTA.Name = "SOEKARNOHATTA"
         Me.SOEKARNOHATTA.Padding = New System.Windows.Forms.Padding(3)
-        Me.SOEKARNOHATTA.Size = New System.Drawing.Size(951, 352)
+        Me.SOEKARNOHATTA.Size = New System.Drawing.Size(998, 426)
         Me.SOEKARNOHATTA.TabIndex = 12
         Me.SOEKARNOHATTA.Text = "SOEKARNO HATTA"
         Me.SOEKARNOHATTA.UseVisualStyleBackColor = True
@@ -1974,87 +1971,6 @@ Partial Class MarginBaruV1_1
         Me.DataGridViewSOEKARNOHATTA.Size = New System.Drawing.Size(936, 271)
         Me.DataGridViewSOEKARNOHATTA.TabIndex = 55
         '
-        'TxtCek
-        '
-        Me.TxtCek.Location = New System.Drawing.Point(48, 17)
-        Me.TxtCek.Name = "TxtCek"
-        Me.TxtCek.Size = New System.Drawing.Size(100, 20)
-        Me.TxtCek.TabIndex = 20
-        '
-        'Panel1
-        '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.DateTimePicker2)
-        Me.Panel1.Controls.Add(Me.DateTimePicker1)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(414, 35)
-        Me.Panel1.TabIndex = 21
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(158, 7)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(26, 13)
-        Me.Label3.TabIndex = 10
-        Me.Label3.Text = "s/d"
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(188, 4)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(87, 20)
-        Me.DateTimePicker2.TabIndex = 9
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(65, 4)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(87, 20)
-        Me.DateTimePicker1.TabIndex = 8
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(281, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(127, 21)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Preview"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 7)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 13)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Periode :"
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 430)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1006, 22)
-        Me.StatusStrip1.TabIndex = 22
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(185, 17)
-        Me.ToolStripStatusLabel1.Text = "RKM Margin V1.1 Build 02.07.2020"
-        '
         'Subang
         '
         Me.Subang.Controls.Add(Me.txtTotalMarginSubang)
@@ -2068,42 +1984,10 @@ Partial Class MarginBaruV1_1
         Me.Subang.Location = New System.Drawing.Point(4, 22)
         Me.Subang.Name = "Subang"
         Me.Subang.Padding = New System.Windows.Forms.Padding(3)
-        Me.Subang.Size = New System.Drawing.Size(951, 352)
+        Me.Subang.Size = New System.Drawing.Size(998, 426)
         Me.Subang.TabIndex = 13
         Me.Subang.Text = "SUBANG"
         Me.Subang.UseVisualStyleBackColor = True
-        '
-        'DataGridViewSUBANG
-        '
-        Me.DataGridViewSUBANG.AllowUserToAddRows = False
-        Me.DataGridViewSUBANG.AllowUserToDeleteRows = False
-        Me.DataGridViewSUBANG.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewSUBANG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle25
-        Me.DataGridViewSUBANG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewSUBANG.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewSUBANG.DefaultCellStyle = DataGridViewCellStyle26
-        Me.DataGridViewSUBANG.Location = New System.Drawing.Point(7, 34)
-        Me.DataGridViewSUBANG.Name = "DataGridViewSUBANG"
-        Me.DataGridViewSUBANG.ReadOnly = True
-        Me.DataGridViewSUBANG.RowHeadersWidth = 10
-        Me.DataGridViewSUBANG.Size = New System.Drawing.Size(936, 276)
-        Me.DataGridViewSUBANG.TabIndex = 55
         '
         'txtTotalMarginSubang
         '
@@ -2187,14 +2071,128 @@ Partial Class MarginBaruV1_1
         Me.Label13.Text = "TOTAL"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'DataGridViewSUBANG
+        '
+        Me.DataGridViewSUBANG.AllowUserToAddRows = False
+        Me.DataGridViewSUBANG.AllowUserToDeleteRows = False
+        Me.DataGridViewSUBANG.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewSUBANG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle25
+        Me.DataGridViewSUBANG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewSUBANG.ContextMenuStrip = Me.ContextMenuStrip1
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewSUBANG.DefaultCellStyle = DataGridViewCellStyle26
+        Me.DataGridViewSUBANG.Location = New System.Drawing.Point(7, 34)
+        Me.DataGridViewSUBANG.Name = "DataGridViewSUBANG"
+        Me.DataGridViewSUBANG.ReadOnly = True
+        Me.DataGridViewSUBANG.RowHeadersWidth = 10
+        Me.DataGridViewSUBANG.Size = New System.Drawing.Size(936, 276)
+        Me.DataGridViewSUBANG.TabIndex = 55
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 640)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1006, 22)
+        Me.StatusStrip1.TabIndex = 22
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(185, 17)
+        Me.ToolStripStatusLabel1.Text = "RKM Margin V1.1 Build 02.07.2020"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(6, 7)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(58, 13)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "Periode :"
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(281, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(127, 21)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "Preview"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(65, 4)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(87, 20)
+        Me.DateTimePicker1.TabIndex = 8
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(188, 4)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(87, 20)
+        Me.DateTimePicker2.TabIndex = 9
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(158, 7)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(26, 13)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "s/d"
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.DateTimePicker2)
+        Me.Panel1.Controls.Add(Me.DateTimePicker1)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1006, 35)
+        Me.Panel1.TabIndex = 21
+        '
+        'Panel2
+        '
+        Me.Panel2.Location = New System.Drawing.Point(0, 537)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(200, 100)
+        Me.Panel2.TabIndex = 23
+        '
         'MarginBaruV1_1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1006, 452)
+        Me.ClientSize = New System.Drawing.Size(1006, 662)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.TxtCek)
         Me.Controls.Add(Me.tab)
         Me.Name = "MarginBaruV1_1"
         Me.ShowIcon = False
@@ -2228,12 +2226,12 @@ Partial Class MarginBaruV1_1
         CType(Me.DataGridViewPAMANUKAN, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SOEKARNOHATTA.ResumeLayout(False)
         CType(Me.DataGridViewSOEKARNOHATTA, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
         Me.Subang.ResumeLayout(False)
         CType(Me.DataGridViewSUBANG, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2346,13 +2344,6 @@ Partial Class MarginBaruV1_1
     Friend WithEvents Label77 As System.Windows.Forms.Label
     Friend WithEvents Label80 As System.Windows.Forms.Label
     Friend WithEvents DataGridViewPAMANUKAN As System.Windows.Forms.DataGridView
-    Friend WithEvents TxtCek As System.Windows.Forms.TextBox
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents SOEKARNOHATTA As System.Windows.Forms.TabPage
     Friend WithEvents DataGridViewSOEKARNOHATTA As System.Windows.Forms.DataGridView
     Friend WithEvents txtTotalMarginSoetta As System.Windows.Forms.Label
@@ -2376,4 +2367,11 @@ Partial Class MarginBaruV1_1
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents DataGridViewSUBANG As System.Windows.Forms.DataGridView
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
 End Class

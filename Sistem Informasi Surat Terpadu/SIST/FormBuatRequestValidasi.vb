@@ -94,7 +94,7 @@ ErrorLoad:
         Dim adapter As New SqlDataAdapter()
         Try
             KoneksiDatabase1()
-            cmd = New SqlCommand("SELECT KodeDivisi,NamaDivisi FROM dbo.V_Divisi WHERE KodeDivisi LIKE '%1%'", Koneksi1)
+            cmd = New SqlCommand("SELECT KodeDivisi,NamaDivisi FROM dbo.V_Divisi", Koneksi1)
             adapter.SelectCommand = cmd
             adapter.Fill(ds)
             adapter.Dispose()

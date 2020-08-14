@@ -26,6 +26,10 @@ Module ModuleKoneksi
     Public rdSQLRV As SqlDataReader
     Public KoneksiSQLSRV As SqlConnection
 
+
+    Public ConnSQLSRV As SqlConnection
+
+
     'Public strServer As String
     'Public strNamaDatabase As String
     'Public strUserNameDB As String
@@ -202,6 +206,27 @@ Module ModuleKoneksi
         End Try
 
     End Sub
+
+
+    Public Sub KoneksiDB_EMAIL()
+
+        strKoneksiSQLSRV = "data source=" & "10.1.0.53" & ";user id=" & "sa" & ";password=" & "h0spit4lity#" & ";initial catalog=" & "DB_EMAIL" & ";Min Pool Size=10; Max Pool Size=10000;MultipleActiveResultSets=True;Application Name=DTW V1.2;  "
+        'strKoneksiSQLSRV = String.Format(strKoneksiSQLSRV, strServerIntegration, strUserIntegration, strPassIntegration, strDbaseIntegration)
+        KoneksiSQLSRV = New SqlConnection(strKoneksiSQLSRV)
+
+
+        Try
+            If KoneksiSQLSRV.State = ConnectionState.Closed Then
+                KoneksiSQLSRV.Open()
+                bolStatusKoneksiSQLServer = True
+            End If
+        Catch ex As Exception
+            bolStatusKoneksi = False
+            MsgBox(Err.Description, MsgBoxStyle.Critical, "Error")
+        End Try
+
+    End Sub
+
 
 
     Public Sub FnTimerNotifikasi(intDurasi As Integer, strSatuan As String)

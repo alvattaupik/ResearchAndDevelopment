@@ -23,12 +23,13 @@ Partial Class FormMainMenu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMainMenu))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -74,6 +75,9 @@ Partial Class FormMainMenu
         Me.txtKodeCustomer = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.lblJumlahMemberPencarian = New System.Windows.Forms.Label()
+        Me.txtDisplayTop = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.txtNoMember = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgInformasiMember = New Guna.UI.WinForms.GunaDataGridView()
@@ -87,6 +91,10 @@ Partial Class FormMainMenu
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnExportToExcel = New System.Windows.Forms.Button()
+        Me.lblExport = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -145,7 +153,7 @@ Partial Class FormMainMenu
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.ItemSize = New System.Drawing.Size(100, 50)
-        Me.TabControl1.Location = New System.Drawing.Point(6, 136)
+        Me.TabControl1.Location = New System.Drawing.Point(4, 114)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(791, 528)
@@ -153,6 +161,7 @@ Partial Class FormMainMenu
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.btnExportToExcel)
         Me.TabPage1.Controls.Add(Me.GunaGroupBox2)
         Me.TabPage1.Controls.Add(Me.GunaGroupBox1)
         Me.TabPage1.Controls.Add(Me.lblJumlahMember)
@@ -405,31 +414,31 @@ Partial Class FormMainMenu
         'dgDaftarMember
         '
         Me.dgDaftarMember.AllowUserToAddRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dgDaftarMember.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.White
+        Me.dgDaftarMember.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle22
         Me.dgDaftarMember.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgDaftarMember.BackgroundColor = System.Drawing.Color.Gray
         Me.dgDaftarMember.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgDaftarMember.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgDaftarMember.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgDaftarMember.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgDaftarMember.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
         Me.dgDaftarMember.ColumnHeadersHeight = 30
         Me.dgDaftarMember.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgDaftarMember.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle24.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle24.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgDaftarMember.DefaultCellStyle = DataGridViewCellStyle24
         Me.dgDaftarMember.EnableHeadersVisualStyles = False
         Me.dgDaftarMember.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgDaftarMember.Location = New System.Drawing.Point(6, 118)
@@ -437,7 +446,7 @@ Partial Class FormMainMenu
         Me.dgDaftarMember.ReadOnly = True
         Me.dgDaftarMember.RowHeadersVisible = False
         Me.dgDaftarMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgDaftarMember.Size = New System.Drawing.Size(770, 318)
+        Me.dgDaftarMember.Size = New System.Drawing.Size(770, 314)
         Me.dgDaftarMember.TabIndex = 0
         Me.dgDaftarMember.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
         Me.dgDaftarMember.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -466,7 +475,7 @@ Partial Class FormMainMenu
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyTableToolStripMenuItem, Me.LihatRiwayatTransaksiToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(195, 70)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(195, 48)
         '
         'CopyTableToolStripMenuItem
         '
@@ -482,6 +491,7 @@ Partial Class FormMainMenu
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.GunaGradientButton2)
         Me.TabPage2.Controls.Add(Me.txtNoStruk)
         Me.TabPage2.Controls.Add(Me.Label12)
@@ -498,7 +508,7 @@ Partial Class FormMainMenu
         Me.TabPage2.Location = New System.Drawing.Point(4, 54)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(783, 471)
+        Me.TabPage2.Size = New System.Drawing.Size(783, 470)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Lihat Transaksi"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -724,6 +734,10 @@ Partial Class FormMainMenu
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.Button2)
+        Me.TabPage3.Controls.Add(Me.lblJumlahMemberPencarian)
+        Me.TabPage3.Controls.Add(Me.txtDisplayTop)
+        Me.TabPage3.Controls.Add(Me.Label17)
         Me.TabPage3.Controls.Add(Me.txtNoMember)
         Me.TabPage3.Controls.Add(Me.Label8)
         Me.TabPage3.Controls.Add(Me.dgInformasiMember)
@@ -732,10 +746,38 @@ Partial Class FormMainMenu
         Me.TabPage3.Location = New System.Drawing.Point(4, 54)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(783, 471)
+        Me.TabPage3.Size = New System.Drawing.Size(783, 470)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Informasi Member"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'lblJumlahMemberPencarian
+        '
+        Me.lblJumlahMemberPencarian.AutoSize = True
+        Me.lblJumlahMemberPencarian.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJumlahMemberPencarian.Location = New System.Drawing.Point(7, 433)
+        Me.lblJumlahMemberPencarian.Name = "lblJumlahMemberPencarian"
+        Me.lblJumlahMemberPencarian.Size = New System.Drawing.Size(145, 20)
+        Me.lblJumlahMemberPencarian.TabIndex = 9
+        Me.lblJumlahMemberPencarian.Text = "Jumlah Member :"
+        '
+        'txtDisplayTop
+        '
+        Me.txtDisplayTop.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDisplayTop.Location = New System.Drawing.Point(220, 87)
+        Me.txtDisplayTop.Name = "txtDisplayTop"
+        Me.txtDisplayTop.Size = New System.Drawing.Size(64, 29)
+        Me.txtDisplayTop.TabIndex = 8
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(22, 87)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(137, 25)
+        Me.Label17.TabIndex = 7
+        Me.Label17.Text = "Display Top"
         '
         'txtNoMember
         '
@@ -758,38 +800,38 @@ Partial Class FormMainMenu
         'dgInformasiMember
         '
         Me.dgInformasiMember.AllowUserToAddRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.dgInformasiMember.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.White
+        Me.dgInformasiMember.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle19
         Me.dgInformasiMember.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgInformasiMember.BackgroundColor = System.Drawing.Color.Silver
         Me.dgInformasiMember.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgInformasiMember.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgInformasiMember.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgInformasiMember.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgInformasiMember.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle20
         Me.dgInformasiMember.ColumnHeadersHeight = 30
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgInformasiMember.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle21.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgInformasiMember.DefaultCellStyle = DataGridViewCellStyle21
         Me.dgInformasiMember.EnableHeadersVisualStyles = False
         Me.dgInformasiMember.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgInformasiMember.Location = New System.Drawing.Point(12, 83)
+        Me.dgInformasiMember.Location = New System.Drawing.Point(12, 120)
         Me.dgInformasiMember.Name = "dgInformasiMember"
         Me.dgInformasiMember.ReadOnly = True
         Me.dgInformasiMember.RowHeadersVisible = False
         Me.dgInformasiMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgInformasiMember.Size = New System.Drawing.Size(751, 371)
+        Me.dgInformasiMember.Size = New System.Drawing.Size(751, 306)
         Me.dgInformasiMember.TabIndex = 4
         Me.dgInformasiMember.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna
         Me.dgInformasiMember.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -855,8 +897,8 @@ Partial Class FormMainMenu
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 682)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.lblExport})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 647)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(801, 22)
         Me.StatusStrip1.TabIndex = 3
@@ -879,7 +921,7 @@ Partial Class FormMainMenu
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(6, 31)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(791, 93)
+        Me.Panel1.Size = New System.Drawing.Size(791, 80)
         Me.Panel1.TabIndex = 4
         '
         'Label11
@@ -912,17 +954,55 @@ Partial Class FormMainMenu
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'btnExportToExcel
+        '
+        Me.btnExportToExcel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExportToExcel.Location = New System.Drawing.Point(644, 437)
+        Me.btnExportToExcel.Name = "btnExportToExcel"
+        Me.btnExportToExcel.Size = New System.Drawing.Size(130, 29)
+        Me.btnExportToExcel.TabIndex = 36
+        Me.btnExportToExcel.Text = "Export to Excel"
+        Me.btnExportToExcel.UseVisualStyleBackColor = True
+        '
+        'lblExport
+        '
+        Me.lblExport.BackColor = System.Drawing.Color.White
+        Me.lblExport.Name = "lblExport"
+        Me.lblExport.Size = New System.Drawing.Size(72, 17)
+        Me.lblExport.Text = "MengExport"
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(23, 441)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(192, 29)
+        Me.Button1.TabIndex = 40
+        Me.Button1.Text = "Export to Excel"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(585, 430)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(178, 34)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "Export To Excel"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'FormMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(801, 704)
+        Me.ClientSize = New System.Drawing.Size(801, 669)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.Name = "FormMainMenu"
@@ -1014,4 +1094,11 @@ Partial Class FormMainMenu
     Friend WithEvents dtp1 As Guna.UI.WinForms.GunaDateTimePicker
     Friend WithEvents GunaGradientButton3 As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents txtDisplayTop As System.Windows.Forms.TextBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents lblJumlahMemberPencarian As System.Windows.Forms.Label
+    Friend WithEvents btnExportToExcel As System.Windows.Forms.Button
+    Friend WithEvents lblExport As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

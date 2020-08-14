@@ -1546,9 +1546,9 @@ Public Class MarginBaruV1_1
     Private Sub DataGridViewAyani_Sorted(ByVal sender As Object, ByVal e As System.EventArgs) Handles DataGridViewAyani.Sorted
         DataGridViewAyani.ClearSelection()
         ViewStockWarehouse.Close()
-        TxtCek.Focus()
+        'TxtCek.Focus()
     End Sub
-    Private Sub TxtCek_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TxtCek.TextChanged
+    Private Sub TxtCek_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
         ViewStockWarehouse.ShowDialog()
     End Sub
 

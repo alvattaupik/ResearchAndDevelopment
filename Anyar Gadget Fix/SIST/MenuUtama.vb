@@ -335,4 +335,14 @@ Public Class MenuUtama
         frm.TopMost = True
         frm.Show()
     End Sub
+
+ 
+    Private Sub MasterEmployeeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MasterEmployeeToolStripMenuItem.Click
+        Dim frm As New FormEmployee
+
+        frm.MdiParent = Me
+        frm.Location = New Point(560, 69)
+        frm.TopMost = True
+        frm.Show()
+    End Sub
 End Class
