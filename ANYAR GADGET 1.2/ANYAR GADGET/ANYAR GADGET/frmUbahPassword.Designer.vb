@@ -514,7 +514,6 @@ Partial Class frmUbahPassword
         'btnRefreshHeaderMenu
         '
         Me.btnRefreshHeaderMenu.BaseColor = System.Drawing.Color.White
-        'Me.btnRefreshHeaderMenu.Image = Global.ANYAR_GADGET.My.Resources.Resources.refresh
         Me.btnRefreshHeaderMenu.Location = New System.Drawing.Point(404, 6)
         Me.btnRefreshHeaderMenu.Name = "btnRefreshHeaderMenu"
         Me.btnRefreshHeaderMenu.Size = New System.Drawing.Size(29, 29)
@@ -527,7 +526,6 @@ Partial Class frmUbahPassword
         '
         Me.picBrowsePegawai.BaseColor = System.Drawing.Color.White
         Me.picBrowsePegawai.Enabled = False
-        'Me.picBrowsePegawai.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
         Me.picBrowsePegawai.Location = New System.Drawing.Point(418, 41)
         Me.picBrowsePegawai.Name = "picBrowsePegawai"
         Me.picBrowsePegawai.Size = New System.Drawing.Size(19, 18)
@@ -539,7 +537,6 @@ Partial Class frmUbahPassword
         'picNew
         '
         Me.picNew.BaseColor = System.Drawing.Color.White
-        'Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.document_add_icon
         Me.picNew.Location = New System.Drawing.Point(236, 197)
         Me.picNew.Name = "picNew"
         Me.picNew.Size = New System.Drawing.Size(47, 47)
@@ -552,7 +549,6 @@ Partial Class frmUbahPassword
         'picFind
         '
         Me.picFind.BaseColor = System.Drawing.Color.White
-        'Me.picFind.Image = Global.ANYAR_GADGET.My.Resources.Resources.find_icon
         Me.picFind.Location = New System.Drawing.Point(289, 196)
         Me.picFind.Name = "picFind"
         Me.picFind.Size = New System.Drawing.Size(47, 47)
@@ -566,10 +562,10 @@ Partial Class frmUbahPassword
         '
         Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Komputer
+        Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Komputer
         Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(13, 19)
         Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
-        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(152, 140)
+        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(148, 140)
         Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.GunaTransfarantPictureBox1.TabIndex = 9
         Me.GunaTransfarantPictureBox1.TabStop = False

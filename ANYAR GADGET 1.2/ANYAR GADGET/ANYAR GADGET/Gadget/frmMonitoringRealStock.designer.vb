@@ -23,9 +23,9 @@ Partial Class frmMonitoringRealStock
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMonitoringRealStock))
         Me.dgInventoryData = New Guna.UI.WinForms.GunaDataGridView()
         Me.cmMonitoringRealStock = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -41,12 +41,12 @@ Partial Class frmMonitoringRealStock
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GunaLabel1 = New Guna.UI.WinForms.GunaLabel()
         Me.gbATP = New System.Windows.Forms.GroupBox()
+        Me.btnHide = New System.Windows.Forms.Button()
         Me.dgvATP = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.gbItem = New System.Windows.Forms.GroupBox()
         Me.cmdTutup = New System.Windows.Forms.Button()
         Me.dgItemList = New System.Windows.Forms.DataGridView()
-        Me.btnHide = New System.Windows.Forms.Button()
         Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
         Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         CType(Me.dgInventoryData, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,8 +66,8 @@ Partial Class frmMonitoringRealStock
         Me.dgInventoryData.AllowUserToAddRows = False
         Me.dgInventoryData.AllowUserToDeleteRows = False
         Me.dgInventoryData.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dgInventoryData.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        Me.dgInventoryData.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
         Me.dgInventoryData.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.dgInventoryData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
@@ -75,23 +75,23 @@ Partial Class frmMonitoringRealStock
         Me.dgInventoryData.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgInventoryData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgInventoryData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgInventoryData.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgInventoryData.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.dgInventoryData.ColumnHeadersHeight = 30
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgInventoryData.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgInventoryData.DefaultCellStyle = DataGridViewCellStyle12
         Me.dgInventoryData.EnableHeadersVisualStyles = False
         Me.dgInventoryData.GridColor = System.Drawing.Color.Blue
         Me.dgInventoryData.Location = New System.Drawing.Point(5, 192)
@@ -275,6 +275,18 @@ Partial Class frmMonitoringRealStock
         Me.gbATP.Text = "Available to Promise"
         Me.gbATP.Visible = False
         '
+        'btnHide
+        '
+        Me.btnHide.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnHide.BackColor = System.Drawing.Color.Red
+        Me.btnHide.Location = New System.Drawing.Point(537, 8)
+        Me.btnHide.Name = "btnHide"
+        Me.btnHide.Size = New System.Drawing.Size(75, 55)
+        Me.btnHide.TabIndex = 2
+        Me.btnHide.Text = "X"
+        Me.btnHide.UseVisualStyleBackColor = False
+        '
         'dgvATP
         '
         Me.dgvATP.AllowUserToAddRows = False
@@ -331,18 +343,6 @@ Partial Class frmMonitoringRealStock
         Me.dgItemList.Size = New System.Drawing.Size(543, 156)
         Me.dgItemList.TabIndex = 0
         '
-        'btnHide
-        '
-        Me.btnHide.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnHide.BackColor = System.Drawing.Color.Red
-        Me.btnHide.Location = New System.Drawing.Point(537, 8)
-        Me.btnHide.Name = "btnHide"
-        Me.btnHide.Size = New System.Drawing.Size(75, 55)
-        Me.btnHide.TabIndex = 2
-        Me.btnHide.Text = "X"
-        Me.btnHide.UseVisualStyleBackColor = False
-        '
         'GunaPictureBox1
         '
         Me.GunaPictureBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
@@ -363,10 +363,11 @@ Partial Class frmMonitoringRealStock
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Inventorry_4
+        Me.GunaTransfarantPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Inventory_GIF
         Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(642, 87)
         Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
-        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(547, 456)
+        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(528, 544)
         Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.GunaTransfarantPictureBox1.TabIndex = 41
         Me.GunaTransfarantPictureBox1.TabStop = False

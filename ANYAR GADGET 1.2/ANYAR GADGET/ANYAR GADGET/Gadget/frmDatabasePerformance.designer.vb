@@ -23,9 +23,9 @@ Partial Class frmDatabasePerformance
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -51,6 +51,7 @@ Partial Class frmDatabasePerformance
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cmbLocation = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txtIsiPesan = New System.Windows.Forms.RichTextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -60,7 +61,6 @@ Partial Class frmDatabasePerformance
         Me.ChartPerforma = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.txtIsiPesan = New System.Windows.Forms.RichTextBox()
         Me.Panel2.SuspendLayout()
         CType(Me.dgvListKontrolForm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
@@ -150,7 +150,7 @@ Partial Class frmDatabasePerformance
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(125, 16)
+        Me.Label1.Location = New System.Drawing.Point(130, 10)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(113, 39)
         Me.Label1.TabIndex = 3
@@ -343,6 +343,17 @@ Partial Class frmDatabasePerformance
         Me.GroupBox3.TabIndex = 7
         Me.GroupBox3.TabStop = False
         '
+        'txtIsiPesan
+        '
+        Me.txtIsiPesan.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtIsiPesan.Enabled = False
+        Me.txtIsiPesan.Location = New System.Drawing.Point(53, 56)
+        Me.txtIsiPesan.Name = "txtIsiPesan"
+        Me.txtIsiPesan.Size = New System.Drawing.Size(219, 89)
+        Me.txtIsiPesan.TabIndex = 22
+        Me.txtIsiPesan.Text = ""
+        '
         'Label13
         '
         Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -419,16 +430,16 @@ Partial Class frmDatabasePerformance
         '
         Me.ChartPerforma.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        ChartArea3.Name = "ChartArea1"
-        Me.ChartPerforma.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.ChartPerforma.Legends.Add(Legend3)
+        ChartArea1.Name = "ChartArea1"
+        Me.ChartPerforma.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.ChartPerforma.Legends.Add(Legend1)
         Me.ChartPerforma.Location = New System.Drawing.Point(397, 18)
         Me.ChartPerforma.Name = "ChartPerforma"
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series1"
-        Me.ChartPerforma.Series.Add(Series3)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.ChartPerforma.Series.Add(Series1)
         Me.ChartPerforma.Size = New System.Drawing.Size(353, 271)
         Me.ChartPerforma.TabIndex = 13
         Me.ChartPerforma.Text = "Chart1"
@@ -439,34 +450,23 @@ Partial Class frmDatabasePerformance
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Chat
+        Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Chat
         Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(15, 18)
         Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
-        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(311, 294)
+        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(299, 258)
         Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.GunaTransfarantPictureBox1.TabIndex = 21
         Me.GunaTransfarantPictureBox1.TabStop = False
         '
         'PictureBox1
         '
-        'Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Loading_8
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Loading_8
         Me.PictureBox1.Location = New System.Drawing.Point(4, 4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(125, 132)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
-        '
-        'txtIsiPesan
-        '
-        Me.txtIsiPesan.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtIsiPesan.Enabled = False
-        Me.txtIsiPesan.Location = New System.Drawing.Point(53, 56)
-        Me.txtIsiPesan.Name = "txtIsiPesan"
-        Me.txtIsiPesan.Size = New System.Drawing.Size(219, 89)
-        Me.txtIsiPesan.TabIndex = 22
-        Me.txtIsiPesan.Text = ""
         '
         'frmDatabasePerformance
         '

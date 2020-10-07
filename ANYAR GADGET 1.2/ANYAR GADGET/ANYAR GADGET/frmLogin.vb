@@ -41,8 +41,8 @@ ErrorHandler:
         If mBolFunction = True Then Exit Sub
 
 
-        CekLogin()
 
+        CekLogin()
         If MstrKodePegawai = "" And MstrNamaPegawai = "" Then
             MsgBox("Data Login Tidak Ditemukan", MsgBoxStyle.Critical, "Periksa Username dan Password")
             Exit Sub
@@ -57,7 +57,6 @@ ErrorHandler:
                 Me.Hide()
 
             End If
-
 
         End If
 
@@ -135,5 +134,9 @@ ErrorHandler:
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
         txtUsernameLogin.SetOnGotFocus()
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        End
     End Sub
 End Class

@@ -24,6 +24,7 @@ Partial Class frmFullfillmentChecker
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.dgvListKontrolForm = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -49,10 +50,9 @@ Partial Class frmFullfillmentChecker
         Me.picOkSAP = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.GunaTransfarantPictureBox3 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.GunaTransfarantPictureBox3 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
         CType(Me.dgvListKontrolForm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
@@ -69,9 +69,9 @@ Partial Class frmFullfillmentChecker
         CType(Me.picOkSAP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -90,6 +90,17 @@ Partial Class frmFullfillmentChecker
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(238, 588)
         Me.Panel2.TabIndex = 1
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label6.Location = New System.Drawing.Point(14, 163)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(213, 18)
+        Me.Label6.TabIndex = 17
+        Me.Label6.Text = "Engine Version 1.2.06.2020"
         '
         'dgvListKontrolForm
         '
@@ -281,7 +292,7 @@ Partial Class frmFullfillmentChecker
         'picFailIvend
         '
         Me.picFailIvend.BaseColor = System.Drawing.Color.White
-        'Me.picFailIvend.Image = Global.ANYAR_GADGET.My.Resources.Resources.fail_png_7
+        Me.picFailIvend.Image = Global.ANYAR_GADGET.My.Resources.Resources.Fail
         Me.picFailIvend.Location = New System.Drawing.Point(122, 50)
         Me.picFailIvend.Name = "picFailIvend"
         Me.picFailIvend.Size = New System.Drawing.Size(25, 23)
@@ -294,7 +305,7 @@ Partial Class frmFullfillmentChecker
         'picOkIvend
         '
         Me.picOkIvend.BaseColor = System.Drawing.Color.White
-        'Me.picOkIvend.Image = Global.ANYAR_GADGET.My.Resources.Resources.Ok
+        Me.picOkIvend.Image = Global.ANYAR_GADGET.My.Resources.Resources.Ok
         Me.picOkIvend.Location = New System.Drawing.Point(122, 23)
         Me.picOkIvend.Name = "picOkIvend"
         Me.picOkIvend.Size = New System.Drawing.Size(25, 23)
@@ -308,7 +319,7 @@ Partial Class frmFullfillmentChecker
         '
         Me.GunaTransfarantPictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox2.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.iVend
+        Me.GunaTransfarantPictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.ivend_retail
         Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(12, 25)
         Me.GunaTransfarantPictureBox2.Name = "GunaTransfarantPictureBox2"
         Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(95, 48)
@@ -319,7 +330,7 @@ Partial Class frmFullfillmentChecker
         'picFailSAP
         '
         Me.picFailSAP.BaseColor = System.Drawing.Color.White
-        'Me.picFailSAP.Image = Global.ANYAR_GADGET.My.Resources.Resources.fail_png_7
+        Me.picFailSAP.Image = Global.ANYAR_GADGET.My.Resources.Resources.Fail
         Me.picFailSAP.Location = New System.Drawing.Point(122, 50)
         Me.picFailSAP.Name = "picFailSAP"
         Me.picFailSAP.Size = New System.Drawing.Size(25, 23)
@@ -332,7 +343,7 @@ Partial Class frmFullfillmentChecker
         'picOkSAP
         '
         Me.picOkSAP.BaseColor = System.Drawing.Color.White
-        'Me.picOkSAP.Image = Global.ANYAR_GADGET.My.Resources.Resources.Ok
+        Me.picOkSAP.Image = Global.ANYAR_GADGET.My.Resources.Resources.Ok
         Me.picOkSAP.Location = New System.Drawing.Point(122, 23)
         Me.picOkSAP.Name = "picOkSAP"
         Me.picOkSAP.Size = New System.Drawing.Size(25, 23)
@@ -346,7 +357,7 @@ Partial Class frmFullfillmentChecker
         '
         Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.saplogo
+        Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.saplogo
         Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(12, 25)
         Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
         Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(95, 48)
@@ -357,7 +368,7 @@ Partial Class frmFullfillmentChecker
         'GunaPictureBox1
         '
         Me.GunaPictureBox1.BaseColor = System.Drawing.Color.White
-        'Me.GunaPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Receipt
+        Me.GunaPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Receipt_2
         Me.GunaPictureBox1.Location = New System.Drawing.Point(18, 19)
         Me.GunaPictureBox1.Name = "GunaPictureBox1"
         Me.GunaPictureBox1.Size = New System.Drawing.Size(46, 32)
@@ -365,26 +376,15 @@ Partial Class frmFullfillmentChecker
         Me.GunaPictureBox1.TabIndex = 1
         Me.GunaPictureBox1.TabStop = False
         '
-        'PictureBox1
+        'PictureBox6
         '
-        'Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Loading_7
-        Me.PictureBox1.Location = New System.Drawing.Point(13, 10)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(122, 128)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 8
-        Me.PictureBox1.TabStop = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label6.Location = New System.Drawing.Point(14, 163)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(213, 18)
-        Me.Label6.TabIndex = 17
-        Me.Label6.Text = "Engine Version 1.2.06.2020"
+        Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox6.Location = New System.Drawing.Point(598, 15)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(73, 46)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 46
+        Me.PictureBox6.TabStop = False
         '
         'GunaTransfarantPictureBox3
         '
@@ -392,24 +392,23 @@ Partial Class frmFullfillmentChecker
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GunaTransfarantPictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox3.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.batik1
-        Me.GunaTransfarantPictureBox3.Location = New System.Drawing.Point(-5, 430)
+        Me.GunaTransfarantPictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.Batik_3
+        Me.GunaTransfarantPictureBox3.Location = New System.Drawing.Point(0, 442)
         Me.GunaTransfarantPictureBox3.Name = "GunaTransfarantPictureBox3"
         Me.GunaTransfarantPictureBox3.Size = New System.Drawing.Size(243, 171)
         Me.GunaTransfarantPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.GunaTransfarantPictureBox3.TabIndex = 20
         Me.GunaTransfarantPictureBox3.TabStop = False
         '
-        'PictureBox6
+        'PictureBox1
         '
-        Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        'Me.PictureBox6.Image = Global.ANYAR_GADGET.My.Resources.Resources.Indonesia
-        Me.PictureBox6.Location = New System.Drawing.Point(598, 15)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(73, 46)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 46
-        Me.PictureBox6.TabStop = False
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Loading_7
+        Me.PictureBox1.Location = New System.Drawing.Point(13, 10)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(122, 128)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
         '
         'frmFullfillmentChecker
         '
@@ -449,9 +448,9 @@ Partial Class frmFullfillmentChecker
         CType(Me.picOkSAP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

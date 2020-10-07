@@ -94,7 +94,7 @@ Module ModuleUltility
                 frmMainMenu.H_Pegawai.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "OMASTER002" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_Menu.Visible = True
-            ElseIf dgv.Rows(i).Cells(0).Value = "OGAGDET001" And dgv.Rows(i).Cells(1).Value = "Y" Then
+            ElseIf dgv.Rows(i).Cells(0).Value = "OGADGET001" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_Sidebar.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "OGADGET002" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_Monitoring.Visible = True

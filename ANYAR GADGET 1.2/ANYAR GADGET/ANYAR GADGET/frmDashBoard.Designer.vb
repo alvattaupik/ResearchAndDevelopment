@@ -76,7 +76,7 @@ Partial Class frmDashBoard
         Me.lblNamaCabang.BackColor = System.Drawing.Color.Transparent
         Me.lblNamaCabang.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lblNamaCabang.ForeColor = System.Drawing.Color.White
-        Me.lblNamaCabang.Location = New System.Drawing.Point(31, 325)
+        Me.lblNamaCabang.Location = New System.Drawing.Point(31, 344)
         Me.lblNamaCabang.Name = "lblNamaCabang"
         Me.lblNamaCabang.Size = New System.Drawing.Size(69, 15)
         Me.lblNamaCabang.TabIndex = 11
@@ -88,7 +88,7 @@ Partial Class frmDashBoard
         Me.lblKodeCabang.BackColor = System.Drawing.Color.Transparent
         Me.lblKodeCabang.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lblKodeCabang.ForeColor = System.Drawing.Color.White
-        Me.lblKodeCabang.Location = New System.Drawing.Point(31, 383)
+        Me.lblKodeCabang.Location = New System.Drawing.Point(31, 402)
         Me.lblKodeCabang.Name = "lblKodeCabang"
         Me.lblKodeCabang.Size = New System.Drawing.Size(69, 15)
         Me.lblKodeCabang.TabIndex = 10
@@ -100,7 +100,7 @@ Partial Class frmDashBoard
         Me.lblSiteID.BackColor = System.Drawing.Color.Transparent
         Me.lblSiteID.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lblSiteID.ForeColor = System.Drawing.Color.White
-        Me.lblSiteID.Location = New System.Drawing.Point(31, 364)
+        Me.lblSiteID.Location = New System.Drawing.Point(31, 383)
         Me.lblSiteID.Name = "lblSiteID"
         Me.lblSiteID.Size = New System.Drawing.Size(69, 15)
         Me.lblSiteID.TabIndex = 9
@@ -112,7 +112,7 @@ Partial Class frmDashBoard
         Me.lblNamaUser.BackColor = System.Drawing.Color.Transparent
         Me.lblNamaUser.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lblNamaUser.ForeColor = System.Drawing.Color.White
-        Me.lblNamaUser.Location = New System.Drawing.Point(31, 344)
+        Me.lblNamaUser.Location = New System.Drawing.Point(31, 363)
         Me.lblNamaUser.Name = "lblNamaUser"
         Me.lblNamaUser.Size = New System.Drawing.Size(69, 15)
         Me.lblNamaUser.TabIndex = 8
@@ -122,16 +122,16 @@ Partial Class frmDashBoard
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel2.Controls.Add(Me.lblJamDigital)
-        Me.Panel2.Location = New System.Drawing.Point(8, 112)
+        Me.Panel2.Location = New System.Drawing.Point(8, 172)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(241, 89)
+        Me.Panel2.Size = New System.Drawing.Size(241, 45)
         Me.Panel2.TabIndex = 7
         '
         'lblJamDigital
         '
         Me.lblJamDigital.AutoSize = True
         Me.lblJamDigital.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJamDigital.Location = New System.Drawing.Point(66, 27)
+        Me.lblJamDigital.Location = New System.Drawing.Point(72, 8)
         Me.lblJamDigital.Name = "lblJamDigital"
         Me.lblJamDigital.Size = New System.Drawing.Size(71, 31)
         Me.lblJamDigital.TabIndex = 0
@@ -157,10 +157,10 @@ Partial Class frmDashBoard
         '
         Me.GunaTransfarantPictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox3.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources._62681_flat_icons_face_computer_design_avatar_icon
-        Me.GunaTransfarantPictureBox3.Location = New System.Drawing.Point(56, 238)
+        Me.GunaTransfarantPictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.Users_Dashboard
+        Me.GunaTransfarantPictureBox3.Location = New System.Drawing.Point(56, 249)
         Me.GunaTransfarantPictureBox3.Name = "GunaTransfarantPictureBox3"
-        Me.GunaTransfarantPictureBox3.Size = New System.Drawing.Size(75, 73)
+        Me.GunaTransfarantPictureBox3.Size = New System.Drawing.Size(73, 73)
         Me.GunaTransfarantPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.GunaTransfarantPictureBox3.TabIndex = 6
         Me.GunaTransfarantPictureBox3.TabStop = False
@@ -168,11 +168,11 @@ Partial Class frmDashBoard
         'picLogout
         '
         Me.picLogout.BaseColor = System.Drawing.Color.White
-        'Me.picLogout.Image = Global.ANYAR_GADGET.My.Resources.Resources._89754008_logout_isolated_on_elegant_brown_round_button_abstract_illustration
-        Me.picLogout.Location = New System.Drawing.Point(184, 211)
+        Me.picLogout.Image = Global.ANYAR_GADGET.My.Resources.Resources.Logout_Icon
+        Me.picLogout.Location = New System.Drawing.Point(184, 223)
         Me.picLogout.Name = "picLogout"
         Me.picLogout.Size = New System.Drawing.Size(65, 67)
-        Me.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picLogout.TabIndex = 3
         Me.picLogout.TabStop = False
         Me.picLogout.UseTransfarantBackground = False
@@ -180,11 +180,11 @@ Partial Class frmDashBoard
         'GunaCirclePictureBox3
         '
         Me.GunaCirclePictureBox3.BaseColor = System.Drawing.Color.White
-        'Me.GunaCirclePictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.download__1_
-        Me.GunaCirclePictureBox3.Location = New System.Drawing.Point(184, 291)
+        Me.GunaCirclePictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.Ubah_Password_logo
+        Me.GunaCirclePictureBox3.Location = New System.Drawing.Point(184, 311)
         Me.GunaCirclePictureBox3.Name = "GunaCirclePictureBox3"
         Me.GunaCirclePictureBox3.Size = New System.Drawing.Size(65, 68)
-        Me.GunaCirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaCirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.GunaCirclePictureBox3.TabIndex = 4
         Me.GunaCirclePictureBox3.TabStop = False
         Me.GunaCirclePictureBox3.UseTransfarantBackground = False
@@ -193,10 +193,10 @@ Partial Class frmDashBoard
         '
         Me.GunaTransfarantPictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox2.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.b0eca009f960c22eb55b3e3137af97e4
-        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(12, 211)
+        Me.GunaTransfarantPictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.Lembar_Kertas_Dashboard
+        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(12, 223)
         Me.GunaTransfarantPictureBox2.Name = "GunaTransfarantPictureBox2"
-        Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(166, 381)
+        Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(166, 349)
         Me.GunaTransfarantPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.GunaTransfarantPictureBox2.TabIndex = 5
         Me.GunaTransfarantPictureBox2.TabStop = False
@@ -205,17 +205,17 @@ Partial Class frmDashBoard
         '
         Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Hello__yellow_
-        Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(72, 72)
+        Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Hello_Logo2
+        Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(12, 72)
         Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
-        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(116, 38)
+        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(234, 94)
         Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.GunaTransfarantPictureBox1.TabIndex = 2
         Me.GunaTransfarantPictureBox1.TabStop = False
         '
         'PictureBox1
         '
-        'Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.unnamed__3_
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Batik_2
         Me.PictureBox1.Location = New System.Drawing.Point(0, -3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(259, 69)
@@ -252,7 +252,6 @@ Partial Class frmDashBoard
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents GunaTransfarantPictureBox1 As Guna.UI.WinForms.GunaTransfarantPictureBox
     Friend WithEvents picLogout As Guna.UI.WinForms.GunaCirclePictureBox
     Friend WithEvents GunaCirclePictureBox3 As Guna.UI.WinForms.GunaCirclePictureBox
     Friend WithEvents GunaTransfarantPictureBox2 As Guna.UI.WinForms.GunaTransfarantPictureBox
@@ -265,4 +264,5 @@ Partial Class frmDashBoard
     Friend WithEvents lblJamDigital As System.Windows.Forms.Label
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
     Friend WithEvents timerDashboard As System.Windows.Forms.Timer
+    Friend WithEvents GunaTransfarantPictureBox1 As Guna.UI.WinForms.GunaTransfarantPictureBox
 End Class

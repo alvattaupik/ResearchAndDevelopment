@@ -171,7 +171,7 @@ Partial Class frmAnyarLocalPrint
         '
         Me.picSettingTemplate.BackColor = System.Drawing.Color.Transparent
         Me.picSettingTemplate.BaseColor = System.Drawing.Color.Black
-        'Me.picSettingTemplate.Image = Global.ANYAR_GADGET.My.Resources.Resources.Settings_5_512
+        Me.picSettingTemplate.Image = Global.ANYAR_GADGET.My.Resources.Resources.Setting_Icon
         Me.picSettingTemplate.Location = New System.Drawing.Point(166, 90)
         Me.picSettingTemplate.Name = "picSettingTemplate"
         Me.picSettingTemplate.Size = New System.Drawing.Size(56, 55)
@@ -181,7 +181,7 @@ Partial Class frmAnyarLocalPrint
         '
         'PictureBox1
         '
-        'Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Printer
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Printer
         Me.PictureBox1.Location = New System.Drawing.Point(12, 9)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(132, 138)

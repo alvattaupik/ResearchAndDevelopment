@@ -201,17 +201,19 @@ Partial Class frmMainMenu
         '
         'H_Logout
         '
+        Me.H_Logout.Image = Global.ANYAR_GADGET.My.Resources.Resources.Logout_Icon
         Me.H_Logout.Name = "H_Logout"
         Me.H_Logout.Size = New System.Drawing.Size(172, 22)
         Me.H_Logout.Text = "Logout"
-        Me.H_Logout.Visible = false
+        Me.H_Logout.Visible = False
         '
         'H_Shutdown
         '
+        Me.H_Shutdown.Image = Global.ANYAR_GADGET.My.Resources.Resources.Shutdown
         Me.H_Shutdown.Name = "H_Shutdown"
         Me.H_Shutdown.Size = New System.Drawing.Size(172, 22)
         Me.H_Shutdown.Text = "Shutdown Aplikasi"
-        Me.H_Shutdown.Visible = false
+        Me.H_Shutdown.Visible = False
         '
         'GadgetToolStripMenuItem
         '
@@ -222,18 +224,21 @@ Partial Class frmMainMenu
         '
         'H_Sidebar
         '
+        Me.H_Sidebar.Image = Global.ANYAR_GADGET.My.Resources.Resources.Side_bar_logo
         Me.H_Sidebar.Name = "H_Sidebar"
         Me.H_Sidebar.Size = New System.Drawing.Size(196, 22)
         Me.H_Sidebar.Text = "Side Bar"
-        Me.H_Sidebar.Visible = false
+        Me.H_Sidebar.Visible = False
         '
         'H_Monitoring
         '
         Me.H_Monitoring.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_Realstock, Me.I_Delivery, Me.I_Request})
+        Me.H_Monitoring.Image = Global.ANYAR_GADGET.My.Resources.Resources.Monitoring_Icon1
+        Me.H_Monitoring.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.H_Monitoring.Name = "H_Monitoring"
         Me.H_Monitoring.Size = New System.Drawing.Size(196, 22)
         Me.H_Monitoring.Text = "Monitoring"
-        Me.H_Monitoring.Visible = false
+        Me.H_Monitoring.Visible = False
         '
         'I_Realstock
         '
@@ -259,6 +264,7 @@ Partial Class frmMainMenu
         'H_PrintServices
         '
         Me.H_PrintServices.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_AnyarLocalPrint, Me.I_RKMDisplayTag})
+        Me.H_PrintServices.Image = Global.ANYAR_GADGET.My.Resources.Resources.print
         Me.H_PrintServices.Name = "H_PrintServices"
         Me.H_PrintServices.Size = New System.Drawing.Size(196, 22)
         Me.H_PrintServices.Text = "Print Services"
@@ -280,6 +286,7 @@ Partial Class frmMainMenu
         '
         'H_Ping
         '
+        Me.H_Ping.Image = Global.ANYAR_GADGET.My.Resources.Resources.Ping_Icon
         Me.H_Ping.Name = "H_Ping"
         Me.H_Ping.Size = New System.Drawing.Size(196, 22)
         Me.H_Ping.Text = "Ping"
@@ -288,6 +295,7 @@ Partial Class frmMainMenu
         'H_Request
         '
         Me.H_Request.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_ReqFullfillment, Me.I_BukaValidasi, Me.I_BukaPostingPeriode, Me.I_BukaAuthorisasi})
+        Me.H_Request.Image = Global.ANYAR_GADGET.My.Resources.Resources.request_icon
         Me.H_Request.Name = "H_Request"
         Me.H_Request.Size = New System.Drawing.Size(196, 22)
         Me.H_Request.Text = "Request"
@@ -324,6 +332,7 @@ Partial Class frmMainMenu
         'H_Repository
         '
         Me.H_Repository.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_AnyarRepository})
+        Me.H_Repository.Image = Global.ANYAR_GADGET.My.Resources.Resources.Repository_Icon
         Me.H_Repository.Name = "H_Repository"
         Me.H_Repository.Size = New System.Drawing.Size(196, 22)
         Me.H_Repository.Text = "Repository"
@@ -339,6 +348,7 @@ Partial Class frmMainMenu
         'H_AIO
         '
         Me.H_AIO.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_IntegrationMonitor, Me.I_FullfilmentChecker, Me.I_ReplicationMonitor, Me.I_StoreDatabaseMonitor})
+        Me.H_AIO.Image = Global.ANYAR_GADGET.My.Resources.Resources.IT_Icon
         Me.H_AIO.Name = "H_AIO"
         Me.H_AIO.Size = New System.Drawing.Size(196, 22)
         Me.H_AIO.Text = "AIO"
@@ -375,6 +385,7 @@ Partial Class frmMainMenu
         'H_PricingAndPromotion
         '
         Me.H_PricingAndPromotion.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_ExportHargaJual, Me.I_PerubahanHarga, Me.I_Promo})
+        Me.H_PricingAndPromotion.Image = Global.ANYAR_GADGET.My.Resources.Resources.Dollar_logo
         Me.H_PricingAndPromotion.Name = "H_PricingAndPromotion"
         Me.H_PricingAndPromotion.Size = New System.Drawing.Size(196, 22)
         Me.H_PricingAndPromotion.Text = "Pricing And Promotion"
@@ -403,6 +414,7 @@ Partial Class frmMainMenu
         '
         'H_AnyarChat
         '
+        Me.H_AnyarChat.Image = Global.ANYAR_GADGET.My.Resources.Resources.Chat_logo
         Me.H_AnyarChat.Name = "H_AnyarChat"
         Me.H_AnyarChat.Size = New System.Drawing.Size(196, 22)
         Me.H_AnyarChat.Text = "Anyar Chat"
@@ -411,6 +423,7 @@ Partial Class frmMainMenu
         'H_LaporanLaporan
         '
         Me.H_LaporanLaporan.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_LapInventoryCheck, Me.I_MutasiStock})
+        Me.H_LaporanLaporan.Image = Global.ANYAR_GADGET.My.Resources.Resources.Report
         Me.H_LaporanLaporan.Name = "H_LaporanLaporan"
         Me.H_LaporanLaporan.Size = New System.Drawing.Size(196, 22)
         Me.H_LaporanLaporan.Text = "Laporan - Laporan"
@@ -439,6 +452,7 @@ Partial Class frmMainMenu
         '
         'H_Template
         '
+        Me.H_Template.Image = Global.ANYAR_GADGET.My.Resources.Resources.Paper_Icon
         Me.H_Template.Name = "H_Template"
         Me.H_Template.Size = New System.Drawing.Size(171, 22)
         Me.H_Template.Text = "Template"
@@ -446,6 +460,7 @@ Partial Class frmMainMenu
         '
         'H_UbahPassword
         '
+        Me.H_UbahPassword.Image = Global.ANYAR_GADGET.My.Resources.Resources.Key_Logo
         Me.H_UbahPassword.Name = "H_UbahPassword"
         Me.H_UbahPassword.Size = New System.Drawing.Size(171, 22)
         Me.H_UbahPassword.Text = "Ubah Password"
@@ -453,6 +468,7 @@ Partial Class frmMainMenu
         '
         'H_PushNotification
         '
+        Me.H_PushNotification.Image = Global.ANYAR_GADGET.My.Resources.Resources.Push_Notification
         Me.H_PushNotification.Name = "H_PushNotification"
         Me.H_PushNotification.Size = New System.Drawing.Size(171, 22)
         Me.H_PushNotification.Text = "Push Notifications"
@@ -460,6 +476,7 @@ Partial Class frmMainMenu
         '
         'H_User
         '
+        Me.H_User.Image = Global.ANYAR_GADGET.My.Resources.Resources.Users_logo
         Me.H_User.Name = "H_User"
         Me.H_User.Size = New System.Drawing.Size(171, 22)
         Me.H_User.Text = "Users"
@@ -474,32 +491,34 @@ Partial Class frmMainMenu
         '
         'H_Pegawai
         '
+        Me.H_Pegawai.Image = Global.ANYAR_GADGET.My.Resources.Resources.Employee_Logo
         Me.H_Pegawai.Name = "H_Pegawai"
-        Me.H_Pegawai.Size = New System.Drawing.Size(152, 22)
+        Me.H_Pegawai.Size = New System.Drawing.Size(118, 22)
         Me.H_Pegawai.Text = "Pegawai"
         Me.H_Pegawai.Visible = False
         '
         'H_Menu
         '
         Me.H_Menu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_HeaderMenu, Me.I_ItemsMenu, Me.H_ObjectForm})
+        Me.H_Menu.Image = Global.ANYAR_GADGET.My.Resources.Resources.Menu_logo
         Me.H_Menu.Name = "H_Menu"
-        Me.H_Menu.Size = New System.Drawing.Size(152, 22)
+        Me.H_Menu.Size = New System.Drawing.Size(118, 22)
         Me.H_Menu.Text = "Menu"
-        Me.H_Menu.Visible = false
+        Me.H_Menu.Visible = False
         '
         'I_HeaderMenu
         '
         Me.I_HeaderMenu.Name = "I_HeaderMenu"
         Me.I_HeaderMenu.Size = New System.Drawing.Size(140, 22)
         Me.I_HeaderMenu.Text = "Header"
-        Me.I_HeaderMenu.Visible = false
+        Me.I_HeaderMenu.Visible = False
         '
         'I_ItemsMenu
         '
         Me.I_ItemsMenu.Name = "I_ItemsMenu"
         Me.I_ItemsMenu.Size = New System.Drawing.Size(140, 22)
         Me.I_ItemsMenu.Text = "Detail"
-        Me.I_ItemsMenu.Visible = false
+        Me.I_ItemsMenu.Visible = False
         '
         'H_ObjectForm
         '
@@ -513,14 +532,14 @@ Partial Class frmMainMenu
         Me.I_HeaderForm.Name = "I_HeaderForm"
         Me.I_HeaderForm.Size = New System.Drawing.Size(112, 22)
         Me.I_HeaderForm.Text = "Header"
-        Me.I_HeaderForm.Visible = false
+        Me.I_HeaderForm.Visible = False
         '
         'I_ItemsForm
         '
         Me.I_ItemsForm.Name = "I_ItemsForm"
         Me.I_ItemsForm.Size = New System.Drawing.Size(112, 22)
         Me.I_ItemsForm.Text = "Items"
-        Me.I_ItemsForm.Visible = false
+        Me.I_ItemsForm.Visible = False
         '
         'HELPToolStripMenuItem
         '
@@ -531,66 +550,68 @@ Partial Class frmMainMenu
         '
         'H_LaporkanMasalah
         '
+        Me.H_LaporkanMasalah.Image = Global.ANYAR_GADGET.My.Resources.Resources.Idea_Logo
         Me.H_LaporkanMasalah.Name = "H_LaporkanMasalah"
         Me.H_LaporkanMasalah.Size = New System.Drawing.Size(170, 22)
         Me.H_LaporkanMasalah.Text = "Laporkan Masalah"
-        Me.H_LaporkanMasalah.Visible = false
+        Me.H_LaporkanMasalah.Visible = False
         '
         'H_CaraPenggunaan
         '
+        Me.H_CaraPenggunaan.Image = Global.ANYAR_GADGET.My.Resources.Resources.Manual_Book_Logo
         Me.H_CaraPenggunaan.Name = "H_CaraPenggunaan"
         Me.H_CaraPenggunaan.Size = New System.Drawing.Size(170, 22)
         Me.H_CaraPenggunaan.Text = "Cara Penggunaan"
-        Me.H_CaraPenggunaan.Visible = false
+        Me.H_CaraPenggunaan.Visible = False
         '
         'dgListMenu
         '
-        Me.dgListMenu.AllowUserToAddRows = false
-        Me.dgListMenu.AllowUserToDeleteRows = false
+        Me.dgListMenu.AllowUserToAddRows = False
+        Me.dgListMenu.AllowUserToDeleteRows = False
         Me.dgListMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgListMenu.Location = New System.Drawing.Point(281, 46)
         Me.dgListMenu.Name = "dgListMenu"
-        Me.dgListMenu.RowHeadersVisible = false
+        Me.dgListMenu.RowHeadersVisible = False
         Me.dgListMenu.Size = New System.Drawing.Size(226, 329)
         Me.dgListMenu.TabIndex = 8
-        Me.dgListMenu.Visible = false
+        Me.dgListMenu.Visible = False
         '
         'txtPesanError
         '
         Me.txtPesanError.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPesanError.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.txtPesanError.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPesanError.Location = New System.Drawing.Point(281, 3)
         Me.txtPesanError.Name = "txtPesanError"
-        Me.txtPesanError.ReadOnly = true
+        Me.txtPesanError.ReadOnly = True
         Me.txtPesanError.Size = New System.Drawing.Size(1047, 19)
         Me.txtPesanError.TabIndex = 10
-        Me.txtPesanError.Visible = false
+        Me.txtPesanError.Visible = False
         '
         'TimerPesanError
         '
         '
         'TimerJam
         '
-        Me.TimerJam.Enabled = true
+        Me.TimerJam.Enabled = True
         Me.TimerJam.Interval = 1000
         '
         'txtJamDanWaktu
         '
         Me.txtJamDanWaktu.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtJamDanWaktu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.txtJamDanWaktu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtJamDanWaktu.Location = New System.Drawing.Point(367, 3)
         Me.txtJamDanWaktu.Name = "txtJamDanWaktu"
-        Me.txtJamDanWaktu.ReadOnly = true
+        Me.txtJamDanWaktu.ReadOnly = True
         Me.txtJamDanWaktu.Size = New System.Drawing.Size(909, 19)
         Me.txtJamDanWaktu.TabIndex = 12
         Me.txtJamDanWaktu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'frmMainMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        'Me.BackgroundImage = Global.ANYAR_GADGET.My.Resources.Resources.Indonesia_Maps2
+        Me.BackgroundImage = Global.ANYAR_GADGET.My.Resources.Resources.Indonesia_Maps2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1370, 729)
         Me.Controls.Add(Me.txtJamDanWaktu)

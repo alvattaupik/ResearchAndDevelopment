@@ -116,7 +116,7 @@ Partial Class frmPing
         '
         'PictureBox1
         '
-        'Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Ping
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Ping
         Me.PictureBox1.Location = New System.Drawing.Point(11, 5)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(65, 66)

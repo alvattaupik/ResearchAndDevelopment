@@ -127,7 +127,7 @@ Partial Class frmUsers
         '
         Me.cmbLocation.Enabled = False
         Me.cmbLocation.FormattingEnabled = True
-        Me.cmbLocation.Location = New System.Drawing.Point(296, 91)
+        Me.cmbLocation.Location = New System.Drawing.Point(296, 95)
         Me.cmbLocation.Name = "cmbLocation"
         Me.cmbLocation.Size = New System.Drawing.Size(195, 21)
         Me.cmbLocation.TabIndex = 17
@@ -145,7 +145,7 @@ Partial Class frmUsers
         '
         Me.cmbManager.Enabled = False
         Me.cmbManager.FormattingEnabled = True
-        Me.cmbManager.Location = New System.Drawing.Point(296, 64)
+        Me.cmbManager.Location = New System.Drawing.Point(296, 70)
         Me.cmbManager.Name = "cmbManager"
         Me.cmbManager.Size = New System.Drawing.Size(194, 21)
         Me.cmbManager.TabIndex = 15
@@ -513,7 +513,6 @@ Partial Class frmUsers
         'btnRefreshHeaderMenu
         '
         Me.btnRefreshHeaderMenu.BaseColor = System.Drawing.Color.White
-        'Me.btnRefreshHeaderMenu.Image = Global.ANYAR_GADGET.My.Resources.Resources.refresh
         Me.btnRefreshHeaderMenu.Location = New System.Drawing.Point(454, 6)
         Me.btnRefreshHeaderMenu.Name = "btnRefreshHeaderMenu"
         Me.btnRefreshHeaderMenu.Size = New System.Drawing.Size(29, 29)
@@ -526,10 +525,10 @@ Partial Class frmUsers
         '
         Me.picBrowsePegawai.BaseColor = System.Drawing.Color.White
         Me.picBrowsePegawai.Enabled = False
-        'Me.picBrowsePegawai.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
-        Me.picBrowsePegawai.Location = New System.Drawing.Point(468, 40)
+        Me.picBrowsePegawai.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
+        Me.picBrowsePegawai.Location = New System.Drawing.Point(460, 37)
         Me.picBrowsePegawai.Name = "picBrowsePegawai"
-        Me.picBrowsePegawai.Size = New System.Drawing.Size(19, 18)
+        Me.picBrowsePegawai.Size = New System.Drawing.Size(27, 29)
         Me.picBrowsePegawai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picBrowsePegawai.TabIndex = 18
         Me.picBrowsePegawai.TabStop = False
@@ -538,7 +537,7 @@ Partial Class frmUsers
         'picNew
         '
         Me.picNew.BaseColor = System.Drawing.Color.White
-        'Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.document_add_icon
+        Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.Add_User
         Me.picNew.Location = New System.Drawing.Point(13, 196)
         Me.picNew.Name = "picNew"
         Me.picNew.Size = New System.Drawing.Size(47, 47)
@@ -550,7 +549,7 @@ Partial Class frmUsers
         'picFind
         '
         Me.picFind.BaseColor = System.Drawing.Color.White
-        'Me.picFind.Image = Global.ANYAR_GADGET.My.Resources.Resources.find_icon
+        Me.picFind.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
         Me.picFind.Location = New System.Drawing.Point(66, 196)
         Me.picFind.Name = "picFind"
         Me.picFind.Size = New System.Drawing.Size(47, 47)
@@ -563,10 +562,10 @@ Partial Class frmUsers
         '
         Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Komputer
+        Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Komputer
         Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(9, 19)
         Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
-        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(180, 172)
+        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(181, 171)
         Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.GunaTransfarantPictureBox1.TabIndex = 9
         Me.GunaTransfarantPictureBox1.TabStop = False

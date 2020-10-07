@@ -437,157 +437,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LOGO ANYAR BULAT.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\giphy.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\unnamed %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\png-transparent-male-portrait-avatar-computer-icons-icon-design-avatar-flat-face-icon-people-head-cartoon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\62681-flat-icons-face-computer-design-avatar-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Hello_%28yellow%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\89754008-logout-isolated-on-elegant-brown-round-button-abstract-illustration.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\89754008-logout-isolated-on-elegant-brown-round-button-abstract-illustration1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\20-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\download %281%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\104fdea6143589e042f1bd90812ebfe8.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\b0eca009f960c22eb55b3e3137af97e4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\487-4878449_transparent-warehouse-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\7170457_preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\find-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\refresh.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\document-add-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\browse.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Inventory.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Inventorry 4.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Delivery.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Printer.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Settings-5-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pRINT 3.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Goods Receipt New.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Incoming Pay.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\PickListForm.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Goods Return.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Return.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sales Order.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\DeliveryLogo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\GRPO.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\TransferReq.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Inventory Transfer.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Goods Issue.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Outgoing Payment.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ping.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Repository ALL.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Download.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\saplogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ok.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fail-png-7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iVend.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Receipt.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Loading.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Loading 2.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sync-icon-png-13.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Loading 5.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Store.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\batik1.png" />
+    <None Include="Resources\LOGO ANYAR BULAT.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Indonesia.png" />
@@ -596,25 +449,166 @@
     <None Include="Resources\Indonesia Maps2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Lembar Kertas Dashboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ubah Password logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hello text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Side bar logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monitoring Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monitoring Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ping Icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\request icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repository Icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IT Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dollar logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chat logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paper Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Push Notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Idea Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manual Book Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Batik 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Batik 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hello Logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users Dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory GIF.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setting Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ping.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download.gif" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Loading 6.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\detective.png" />
+    <None Include="Resources\Detective 2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\detective1.png" />
+    <None Include="Resources\ivend-retail.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Loading 7.gif" />
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sync.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saplogo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Loading 8.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Loading 7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Receipt 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Batik 11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Batik 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading 10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Store.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Chat.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Inventory-PNG-HD.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Komputer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\browse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search User.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

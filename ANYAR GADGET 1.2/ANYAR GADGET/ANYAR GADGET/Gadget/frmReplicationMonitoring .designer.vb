@@ -214,7 +214,7 @@ Partial Class frmReplicationMonitoring
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(267, 22)
+        Me.Label4.Location = New System.Drawing.Point(310, 22)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(286, 20)
         Me.Label4.TabIndex = 13
@@ -262,9 +262,9 @@ Partial Class frmReplicationMonitoring
         '
         Me.btnProsesReplikasiPusat.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.btnProsesReplikasiPusat.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProsesReplikasiPusat.Location = New System.Drawing.Point(568, 14)
+        Me.btnProsesReplikasiPusat.Location = New System.Drawing.Point(596, 14)
         Me.btnProsesReplikasiPusat.Name = "btnProsesReplikasiPusat"
-        Me.btnProsesReplikasiPusat.Size = New System.Drawing.Size(95, 33)
+        Me.btnProsesReplikasiPusat.Size = New System.Drawing.Size(67, 33)
         Me.btnProsesReplikasiPusat.TabIndex = 2
         Me.btnProsesReplikasiPusat.Text = "Proses"
         Me.btnProsesReplikasiPusat.UseVisualStyleBackColor = True
@@ -288,7 +288,7 @@ Partial Class frmReplicationMonitoring
         Me.cmbLocationReplication.FormattingEnabled = True
         Me.cmbLocationReplication.Location = New System.Drawing.Point(136, 16)
         Me.cmbLocationReplication.Name = "cmbLocationReplication"
-        Me.cmbLocationReplication.Size = New System.Drawing.Size(426, 28)
+        Me.cmbLocationReplication.Size = New System.Drawing.Size(454, 28)
         Me.cmbLocationReplication.TabIndex = 0
         '
         'TabPage2
@@ -312,7 +312,7 @@ Partial Class frmReplicationMonitoring
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(283, 26)
+        Me.Label7.Location = New System.Drawing.Point(265, 26)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(320, 20)
         Me.Label7.TabIndex = 14
@@ -388,7 +388,7 @@ Partial Class frmReplicationMonitoring
         'PictureBox6
         '
         Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        'Me.PictureBox6.Image = Global.ANYAR_GADGET.My.Resources.Resources.Indonesia
+        Me.PictureBox6.Image = Global.ANYAR_GADGET.My.Resources.Resources.Indonesia
         Me.PictureBox6.Location = New System.Drawing.Point(602, 11)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(73, 46)
@@ -400,27 +400,27 @@ Partial Class frmReplicationMonitoring
         '
         Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.sync_icon_png_13
+        Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Sync
         Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(104, 11)
         Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
-        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(43, 43)
+        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(43, 42)
         Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.GunaTransfarantPictureBox1.TabIndex = 12
         Me.GunaTransfarantPictureBox1.TabStop = False
         '
         'PictureBox2
         '
-        'Me.PictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.saplogo
+        Me.PictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.saplogo
         Me.PictureBox2.Location = New System.Drawing.Point(153, 3)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(108, 61)
+        Me.PictureBox2.Size = New System.Drawing.Size(151, 61)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 11
         Me.PictureBox2.TabStop = False
         '
         'PictureBox1
         '
-        'Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.iVend
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.ivend_retail
         Me.PictureBox1.Location = New System.Drawing.Point(6, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(92, 61)
@@ -431,8 +431,8 @@ Partial Class frmReplicationMonitoring
         'PictureBox7
         '
         Me.PictureBox7.Anchor = System.Windows.Forms.AnchorStyles.Right
-        'Me.PictureBox7.Image = Global.ANYAR_GADGET.My.Resources.Resources.Indonesia
-        Me.PictureBox7.Location = New System.Drawing.Point(604, 6)
+        Me.PictureBox7.Image = Global.ANYAR_GADGET.My.Resources.Resources.Indonesia
+        Me.PictureBox7.Location = New System.Drawing.Point(602, 13)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(73, 46)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -441,7 +441,7 @@ Partial Class frmReplicationMonitoring
         '
         'PictureBox5
         '
-        'Me.PictureBox5.Image = Global.ANYAR_GADGET.My.Resources.Resources.Store
+        Me.PictureBox5.Image = Global.ANYAR_GADGET.My.Resources.Resources.Store
         Me.PictureBox5.Location = New System.Drawing.Point(6, 6)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(92, 61)
@@ -452,8 +452,8 @@ Partial Class frmReplicationMonitoring
         'GunaTransfarantPictureBox2
         '
         Me.GunaTransfarantPictureBox2.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.sync_icon_png_13
-        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(109, 19)
+        Me.GunaTransfarantPictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.Sync
+        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(109, 16)
         Me.GunaTransfarantPictureBox2.Name = "GunaTransfarantPictureBox2"
         Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(43, 43)
         Me.GunaTransfarantPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -462,7 +462,7 @@ Partial Class frmReplicationMonitoring
         '
         'PictureBox4
         '
-        'Me.PictureBox4.Image = Global.ANYAR_GADGET.My.Resources.Resources.iVend
+        Me.PictureBox4.Image = Global.ANYAR_GADGET.My.Resources.Resources.ivend_retail
         Me.PictureBox4.Location = New System.Drawing.Point(167, 6)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(92, 61)
@@ -476,7 +476,7 @@ Partial Class frmReplicationMonitoring
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GunaTransfarantPictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox3.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.batik1
+        Me.GunaTransfarantPictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.Batik_3
         Me.GunaTransfarantPictureBox3.Location = New System.Drawing.Point(-41, 308)
         Me.GunaTransfarantPictureBox3.Name = "GunaTransfarantPictureBox3"
         Me.GunaTransfarantPictureBox3.Size = New System.Drawing.Size(304, 238)
@@ -486,7 +486,7 @@ Partial Class frmReplicationMonitoring
         '
         'PictureBox3
         '
-        'Me.PictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.Loading_5
+        Me.PictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.Loading_10
         Me.PictureBox3.Location = New System.Drawing.Point(3, 3)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(124, 116)

@@ -34,7 +34,7 @@ Partial Class frmFilterLaporanMutasiStok
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 23)
+        Me.Label1.Location = New System.Drawing.Point(141, 26)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(86, 24)
         Me.Label1.TabIndex = 0
@@ -44,7 +44,7 @@ Partial Class frmFilterLaporanMutasiStok
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 65)
+        Me.Label2.Location = New System.Drawing.Point(141, 68)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(139, 24)
         Me.Label2.TabIndex = 1
@@ -54,7 +54,7 @@ Partial Class frmFilterLaporanMutasiStok
         '
         Me.cmbKodeGudang.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbKodeGudang.FormattingEnabled = True
-        Me.cmbKodeGudang.Location = New System.Drawing.Point(152, 64)
+        Me.cmbKodeGudang.Location = New System.Drawing.Point(281, 67)
         Me.cmbKodeGudang.Name = "cmbKodeGudang"
         Me.cmbKodeGudang.Size = New System.Drawing.Size(306, 28)
         Me.cmbKodeGudang.TabIndex = 3
@@ -62,7 +62,7 @@ Partial Class frmFilterLaporanMutasiStok
         'btnOk
         '
         Me.btnOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOk.Location = New System.Drawing.Point(16, 107)
+        Me.btnOk.Location = New System.Drawing.Point(145, 110)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(130, 40)
         Me.btnOk.TabIndex = 4
@@ -72,7 +72,7 @@ Partial Class frmFilterLaporanMutasiStok
         'btnCancel
         '
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Location = New System.Drawing.Point(152, 107)
+        Me.btnCancel.Location = New System.Drawing.Point(281, 110)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(130, 40)
         Me.btnCancel.TabIndex = 5
@@ -83,7 +83,7 @@ Partial Class frmFilterLaporanMutasiStok
         '
         Me.dtpTgl.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpTgl.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpTgl.Location = New System.Drawing.Point(152, 22)
+        Me.dtpTgl.Location = New System.Drawing.Point(281, 25)
         Me.dtpTgl.Name = "dtpTgl"
         Me.dtpTgl.Size = New System.Drawing.Size(306, 29)
         Me.dtpTgl.TabIndex = 6
@@ -92,7 +92,7 @@ Partial Class frmFilterLaporanMutasiStok
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(472, 160)
+        Me.ClientSize = New System.Drawing.Size(600, 162)
         Me.Controls.Add(Me.dtpTgl)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOk)

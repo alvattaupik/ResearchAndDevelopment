@@ -28,13 +28,15 @@ Partial Class frmFilterLaporanInventoryCheck
         Me.cmbKodeGudang = New System.Windows.Forms.ComboBox()
         Me.btnOk = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 22)
+        Me.Label1.Location = New System.Drawing.Point(137, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(134, 24)
         Me.Label1.TabIndex = 0
@@ -44,7 +46,7 @@ Partial Class frmFilterLaporanInventoryCheck
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 65)
+        Me.Label2.Location = New System.Drawing.Point(137, 64)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(139, 24)
         Me.Label2.TabIndex = 1
@@ -54,7 +56,7 @@ Partial Class frmFilterLaporanInventoryCheck
         '
         Me.cmbKodeVendor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbKodeVendor.FormattingEnabled = True
-        Me.cmbKodeVendor.Location = New System.Drawing.Point(152, 25)
+        Me.cmbKodeVendor.Location = New System.Drawing.Point(277, 24)
         Me.cmbKodeVendor.Name = "cmbKodeVendor"
         Me.cmbKodeVendor.Size = New System.Drawing.Size(306, 28)
         Me.cmbKodeVendor.TabIndex = 2
@@ -63,7 +65,7 @@ Partial Class frmFilterLaporanInventoryCheck
         '
         Me.cmbKodeGudang.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbKodeGudang.FormattingEnabled = True
-        Me.cmbKodeGudang.Location = New System.Drawing.Point(152, 64)
+        Me.cmbKodeGudang.Location = New System.Drawing.Point(277, 63)
         Me.cmbKodeGudang.Name = "cmbKodeGudang"
         Me.cmbKodeGudang.Size = New System.Drawing.Size(306, 28)
         Me.cmbKodeGudang.TabIndex = 3
@@ -71,7 +73,7 @@ Partial Class frmFilterLaporanInventoryCheck
         'btnOk
         '
         Me.btnOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOk.Location = New System.Drawing.Point(16, 107)
+        Me.btnOk.Location = New System.Drawing.Point(141, 107)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(130, 40)
         Me.btnOk.TabIndex = 4
@@ -81,18 +83,29 @@ Partial Class frmFilterLaporanInventoryCheck
         'btnCancel
         '
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Location = New System.Drawing.Point(152, 107)
+        Me.btnCancel.Location = New System.Drawing.Point(277, 107)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(130, 40)
         Me.btnCancel.TabIndex = 5
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Inventory_PNG_HD
+        Me.PictureBox1.Location = New System.Drawing.Point(5, 11)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(126, 135)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
+        '
         'frmFilterLaporanInventoryCheck
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(472, 160)
+        Me.ClientSize = New System.Drawing.Size(590, 162)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.cmbKodeGudang)
@@ -104,6 +117,7 @@ Partial Class frmFilterLaporanInventoryCheck
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "LAPORAN INVENTORY CHECK"
         Me.TopMost = True
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -114,4 +128,5 @@ Partial Class frmFilterLaporanInventoryCheck
     Friend WithEvents cmbKodeGudang As System.Windows.Forms.ComboBox
     Friend WithEvents btnOk As System.Windows.Forms.Button
     Friend WithEvents btnCancel As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

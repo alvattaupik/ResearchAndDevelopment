@@ -25,8 +25,8 @@ Partial Class frmIntegrationMonitoring
         Me.components = New System.ComponentModel.Container()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.btnSubQueryErrorChecker = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.dgvListFormObject = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -97,17 +97,6 @@ Partial Class frmIntegrationMonitoring
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Special Actions"
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label6.Location = New System.Drawing.Point(7, 167)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(213, 18)
-        Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Engine Version 1.2.06.2020"
-        '
         'btnSubQueryErrorChecker
         '
         Me.btnSubQueryErrorChecker.Enabled = False
@@ -119,6 +108,17 @@ Partial Class frmIntegrationMonitoring
         Me.btnSubQueryErrorChecker.TabIndex = 14
         Me.btnSubQueryErrorChecker.Text = "Sub Query Error Checker"
         Me.btnSubQueryErrorChecker.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label6.Location = New System.Drawing.Point(7, 167)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(213, 18)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Engine Version 1.2.06.2020"
         '
         'dgvListFormObject
         '
@@ -260,7 +260,7 @@ Partial Class frmIntegrationMonitoring
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(251, 19)
+        Me.Label4.Location = New System.Drawing.Point(314, 19)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(190, 16)
         Me.Label4.TabIndex = 17
@@ -287,7 +287,7 @@ Partial Class frmIntegrationMonitoring
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(245, 37)
+        Me.Label7.Location = New System.Drawing.Point(309, 35)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(91, 18)
         Me.Label7.TabIndex = 18
@@ -296,7 +296,7 @@ Partial Class frmIntegrationMonitoring
         'PictureBox6
         '
         Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        'Me.PictureBox6.Image = Global.ANYAR_GADGET.My.Resources.Resources.Indonesia
+        Me.PictureBox6.Image = Global.ANYAR_GADGET.My.Resources.Resources.Indonesia
         Me.PictureBox6.Location = New System.Drawing.Point(548, 16)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(73, 46)
@@ -306,7 +306,7 @@ Partial Class frmIntegrationMonitoring
         '
         'PictureBox1
         '
-        'Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.iVend
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.ivend_retail
         Me.PictureBox1.Location = New System.Drawing.Point(8, 13)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(79, 54)
@@ -318,20 +318,20 @@ Partial Class frmIntegrationMonitoring
         '
         Me.GunaTransfarantPictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox2.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.sync_icon_png_13
-        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(93, 19)
+        Me.GunaTransfarantPictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.Sync
+        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(93, 16)
         Me.GunaTransfarantPictureBox2.Name = "GunaTransfarantPictureBox2"
-        Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(43, 43)
+        Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(54, 51)
         Me.GunaTransfarantPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.GunaTransfarantPictureBox2.TabIndex = 16
         Me.GunaTransfarantPictureBox2.TabStop = False
         '
         'PictureBox2
         '
-        'Me.PictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.saplogo
-        Me.PictureBox2.Location = New System.Drawing.Point(142, 12)
+        Me.PictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.saplogo
+        Me.PictureBox2.Location = New System.Drawing.Point(153, 12)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(103, 54)
+        Me.PictureBox2.Size = New System.Drawing.Size(155, 54)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 15
         Me.PictureBox2.TabStop = False
@@ -342,7 +342,6 @@ Partial Class frmIntegrationMonitoring
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GunaTransfarantPictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox3.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox3.Image = Global.ANYAR_GADGET
         Me.GunaTransfarantPictureBox3.Location = New System.Drawing.Point(0, 360)
         Me.GunaTransfarantPictureBox3.Name = "GunaTransfarantPictureBox3"
         Me.GunaTransfarantPictureBox3.Size = New System.Drawing.Size(243, 171)
@@ -353,7 +352,7 @@ Partial Class frmIntegrationMonitoring
         'GunaCirclePictureBox1
         '
         Me.GunaCirclePictureBox1.BaseColor = System.Drawing.Color.White
-        'Me.GunaCirclePictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.detective1
+        Me.GunaCirclePictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Detective_2
         Me.GunaCirclePictureBox1.Location = New System.Drawing.Point(6, 29)
         Me.GunaCirclePictureBox1.Name = "GunaCirclePictureBox1"
         Me.GunaCirclePictureBox1.Size = New System.Drawing.Size(55, 58)
@@ -366,7 +365,7 @@ Partial Class frmIntegrationMonitoring
         '
         Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Loading_6
+        Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Loading_6
         Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(10, 14)
         Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
         Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(120, 120)

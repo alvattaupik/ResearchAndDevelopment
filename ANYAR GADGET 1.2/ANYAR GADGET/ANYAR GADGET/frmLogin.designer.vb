@@ -190,7 +190,7 @@ Partial Class frmLogin
         '
         'PictureBox2
         '
-        'Me.PictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.Indonesia
+        Me.PictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.Indonesia
         Me.PictureBox2.Location = New System.Drawing.Point(12, 260)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(73, 46)
@@ -200,10 +200,10 @@ Partial Class frmLogin
         '
         'PictureBox1
         '
-        'Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.LOGO_ANYAR_BULAT
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.LOGO_ANYAR_BULAT
         Me.PictureBox1.Location = New System.Drawing.Point(12, 72)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(135, 171)
+        Me.PictureBox1.Size = New System.Drawing.Size(161, 168)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 39
         Me.PictureBox1.TabStop = False

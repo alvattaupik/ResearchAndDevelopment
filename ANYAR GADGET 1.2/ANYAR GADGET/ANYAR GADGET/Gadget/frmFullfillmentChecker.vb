@@ -93,4 +93,6 @@ ErrorHandler:
         DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
         Exit Sub
     End Sub
+
+   
 End Class
