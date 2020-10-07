@@ -33,16 +33,26 @@ Partial Class FormSetting
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnKoneksiDatabase = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txtDelay2 = New System.Windows.Forms.TextBox()
-        Me.txtDelay1 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.cmbSatuanInterval = New System.Windows.Forms.ComboBox()
-        Me.txtInterval = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.dtpStartWork = New System.Windows.Forms.DateTimePicker()
+        Me.dtpFinishWork = New System.Windows.Forms.DateTimePicker()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnSimpanSetting = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtInterval = New System.Windows.Forms.TextBox()
+        Me.cmbSatuanInterval = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtDelay1 = New System.Windows.Forms.TextBox()
+        Me.txtDelay2 = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,15 +68,15 @@ Partial Class FormSetting
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(9, 10)
+        Me.Panel1.Location = New System.Drawing.Point(5, 10)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(427, 151)
+        Me.Panel1.Size = New System.Drawing.Size(397, 151)
         Me.Panel1.TabIndex = 0
         '
         'txtPassword
         '
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(173, 119)
+        Me.txtPassword.Location = New System.Drawing.Point(149, 119)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(242, 24)
@@ -75,7 +85,7 @@ Partial Class FormSetting
         'txtUsername
         '
         Me.txtUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(173, 89)
+        Me.txtUsername.Location = New System.Drawing.Point(149, 89)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(242, 24)
         Me.txtUsername.TabIndex = 7
@@ -83,7 +93,7 @@ Partial Class FormSetting
         'txtDabataseName
         '
         Me.txtDabataseName.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDabataseName.Location = New System.Drawing.Point(173, 59)
+        Me.txtDabataseName.Location = New System.Drawing.Point(149, 59)
         Me.txtDabataseName.Name = "txtDabataseName"
         Me.txtDabataseName.Size = New System.Drawing.Size(242, 24)
         Me.txtDabataseName.TabIndex = 6
@@ -91,7 +101,7 @@ Partial Class FormSetting
         'txtServerName
         '
         Me.txtServerName.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtServerName.Location = New System.Drawing.Point(173, 29)
+        Me.txtServerName.Location = New System.Drawing.Point(149, 29)
         Me.txtServerName.Name = "txtServerName"
         Me.txtServerName.Size = New System.Drawing.Size(242, 24)
         Me.txtServerName.TabIndex = 5
@@ -140,90 +150,114 @@ Partial Class FormSetting
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 4)
+        Me.Label1.Location = New System.Drawing.Point(7, 4)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(96, 24)
+        Me.Label1.Size = New System.Drawing.Size(166, 24)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Database"
+        Me.Label1.Text = "Database Setting"
         '
         'btnKoneksiDatabase
         '
         Me.btnKoneksiDatabase.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnKoneksiDatabase.Location = New System.Drawing.Point(8, 167)
+        Me.btnKoneksiDatabase.Location = New System.Drawing.Point(5, 167)
         Me.btnKoneksiDatabase.Name = "btnKoneksiDatabase"
-        Me.btnKoneksiDatabase.Size = New System.Drawing.Size(428, 37)
+        Me.btnKoneksiDatabase.Size = New System.Drawing.Size(397, 37)
         Me.btnKoneksiDatabase.TabIndex = 1
         Me.btnKoneksiDatabase.Text = "Simpan Koneksi Database"
         Me.btnKoneksiDatabase.UseVisualStyleBackColor = True
         '
-        'Panel2
+        'Label13
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.txtDelay2)
-        Me.Panel2.Controls.Add(Me.txtDelay1)
-        Me.Panel2.Controls.Add(Me.Label8)
-        Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Controls.Add(Me.cmbSatuanInterval)
-        Me.Panel2.Controls.Add(Me.txtInterval)
-        Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Location = New System.Drawing.Point(9, 211)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(427, 107)
-        Me.Panel2.TabIndex = 2
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(3, 4)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(158, 24)
+        Me.Label13.TabIndex = 0
+        Me.Label13.Text = "Apps Behaviour"
         '
-        'txtDelay2
+        'Label11
         '
-        Me.txtDelay2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDelay2.Location = New System.Drawing.Point(173, 74)
-        Me.txtDelay2.Name = "txtDelay2"
-        Me.txtDelay2.Size = New System.Drawing.Size(54, 24)
-        Me.txtDelay2.TabIndex = 13
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(6, 29)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(0, 20)
+        Me.Label11.TabIndex = 2
         '
-        'txtDelay1
+        'GroupBox1
         '
-        Me.txtDelay1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDelay1.Location = New System.Drawing.Point(173, 44)
-        Me.txtDelay1.Name = "txtDelay1"
-        Me.txtDelay1.Size = New System.Drawing.Size(54, 24)
-        Me.txtDelay1.TabIndex = 12
+        Me.GroupBox1.Controls.Add(Me.dtpFinishWork)
+        Me.GroupBox1.Controls.Add(Me.dtpStartWork)
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 47)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(399, 84)
+        Me.GroupBox1.TabIndex = 3
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Working Hour"
         '
-        'Label8
+        'Label9
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(7, 76)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(69, 20)
-        Me.Label8.TabIndex = 11
-        Me.Label8.Text = "Delay 2"
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(7, 19)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(49, 20)
+        Me.Label9.TabIndex = 0
+        Me.Label9.Text = "Start"
         '
-        'Label7
+        'Label10
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(7, 42)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(69, 20)
-        Me.Label7.TabIndex = 10
-        Me.Label7.Text = "Delay 1"
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(200, 19)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(57, 20)
+        Me.Label10.TabIndex = 1
+        Me.Label10.Text = "Finish"
         '
-        'cmbSatuanInterval
+        'dtpStartWork
         '
-        Me.cmbSatuanInterval.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbSatuanInterval.FormattingEnabled = True
-        Me.cmbSatuanInterval.Items.AddRange(New Object() {"menit", "Jam"})
-        Me.cmbSatuanInterval.Location = New System.Drawing.Point(248, 8)
-        Me.cmbSatuanInterval.Name = "cmbSatuanInterval"
-        Me.cmbSatuanInterval.Size = New System.Drawing.Size(167, 26)
-        Me.cmbSatuanInterval.TabIndex = 9
+        Me.dtpStartWork.CustomFormat = ""
+        Me.dtpStartWork.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpStartWork.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtpStartWork.Location = New System.Drawing.Point(77, 14)
+        Me.dtpStartWork.Name = "dtpStartWork"
+        Me.dtpStartWork.Size = New System.Drawing.Size(104, 29)
+        Me.dtpStartWork.TabIndex = 2
         '
-        'txtInterval
+        'dtpFinishWork
         '
-        Me.txtInterval.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtInterval.Location = New System.Drawing.Point(173, 8)
-        Me.txtInterval.Name = "txtInterval"
-        Me.txtInterval.Size = New System.Drawing.Size(54, 24)
-        Me.txtInterval.TabIndex = 8
+        Me.dtpFinishWork.CustomFormat = ""
+        Me.dtpFinishWork.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpFinishWork.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtpFinishWork.Location = New System.Drawing.Point(276, 14)
+        Me.dtpFinishWork.Name = "dtpFinishWork"
+        Me.dtpFinishWork.Size = New System.Drawing.Size(104, 29)
+        Me.dtpFinishWork.TabIndex = 3
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.Silver
+        Me.Panel3.Controls.Add(Me.GroupBox1)
+        Me.Panel3.Controls.Add(Me.Label11)
+        Me.Panel3.Controls.Add(Me.Label13)
+        Me.Panel3.Location = New System.Drawing.Point(406, 10)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(427, 151)
+        Me.Panel3.TabIndex = 4
+        '
+        'btnSimpanSetting
+        '
+        Me.btnSimpanSetting.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSimpanSetting.Location = New System.Drawing.Point(7, 324)
+        Me.btnSimpanSetting.Name = "btnSimpanSetting"
+        Me.btnSimpanSetting.Size = New System.Drawing.Size(395, 50)
+        Me.btnSimpanSetting.TabIndex = 3
+        Me.btnSimpanSetting.Text = "Simpan Setting"
+        Me.btnSimpanSetting.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -235,21 +269,81 @@ Partial Class FormSetting
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Interval Setiap"
         '
-        'btnSimpanSetting
+        'txtInterval
         '
-        Me.btnSimpanSetting.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSimpanSetting.Location = New System.Drawing.Point(8, 324)
-        Me.btnSimpanSetting.Name = "btnSimpanSetting"
-        Me.btnSimpanSetting.Size = New System.Drawing.Size(428, 50)
-        Me.btnSimpanSetting.TabIndex = 3
-        Me.btnSimpanSetting.Text = "Simpan Setting"
-        Me.btnSimpanSetting.UseVisualStyleBackColor = True
+        Me.txtInterval.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtInterval.Location = New System.Drawing.Point(147, 8)
+        Me.txtInterval.Name = "txtInterval"
+        Me.txtInterval.Size = New System.Drawing.Size(54, 24)
+        Me.txtInterval.TabIndex = 8
+        '
+        'cmbSatuanInterval
+        '
+        Me.cmbSatuanInterval.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbSatuanInterval.FormattingEnabled = True
+        Me.cmbSatuanInterval.Items.AddRange(New Object() {"menit", "Jam"})
+        Me.cmbSatuanInterval.Location = New System.Drawing.Point(207, 8)
+        Me.cmbSatuanInterval.Name = "cmbSatuanInterval"
+        Me.cmbSatuanInterval.Size = New System.Drawing.Size(182, 26)
+        Me.cmbSatuanInterval.TabIndex = 9
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(5, 38)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(69, 20)
+        Me.Label7.TabIndex = 10
+        Me.Label7.Text = "Delay 1"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(7, 68)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(69, 20)
+        Me.Label8.TabIndex = 11
+        Me.Label8.Text = "Delay 2"
+        '
+        'txtDelay1
+        '
+        Me.txtDelay1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDelay1.Location = New System.Drawing.Point(147, 38)
+        Me.txtDelay1.Name = "txtDelay1"
+        Me.txtDelay1.Size = New System.Drawing.Size(54, 24)
+        Me.txtDelay1.TabIndex = 12
+        '
+        'txtDelay2
+        '
+        Me.txtDelay2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDelay2.Location = New System.Drawing.Point(147, 68)
+        Me.txtDelay2.Name = "txtDelay2"
+        Me.txtDelay2.Size = New System.Drawing.Size(54, 24)
+        Me.txtDelay2.TabIndex = 13
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.txtDelay2)
+        Me.Panel2.Controls.Add(Me.txtDelay1)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.cmbSatuanInterval)
+        Me.Panel2.Controls.Add(Me.txtInterval)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Location = New System.Drawing.Point(7, 211)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(395, 107)
+        Me.Panel2.TabIndex = 2
         '
         'FormSetting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(441, 377)
+        Me.ClientSize = New System.Drawing.Size(839, 379)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.btnSimpanSetting)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.btnKoneksiDatabase)
@@ -260,6 +354,10 @@ Partial Class FormSetting
         Me.Text = "FormSetting"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
@@ -276,13 +374,21 @@ Partial Class FormSetting
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnKoneksiDatabase As System.Windows.Forms.Button
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents txtDelay2 As System.Windows.Forms.TextBox
-    Friend WithEvents txtDelay1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents cmbSatuanInterval As System.Windows.Forms.ComboBox
-    Friend WithEvents txtInterval As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents dtpFinishWork As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpStartWork As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents btnSimpanSetting As System.Windows.Forms.Button
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents txtInterval As System.Windows.Forms.TextBox
+    Friend WithEvents cmbSatuanInterval As System.Windows.Forms.ComboBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtDelay1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtDelay2 As System.Windows.Forms.TextBox
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
 End Class

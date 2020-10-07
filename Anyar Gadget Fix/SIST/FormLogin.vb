@@ -1,8 +1,9 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Data.Sql
+Imports System.Data.SqlClient
 Public Class FormLogin
     Dim strSQlLogin As String
     Private Sub GunaGradientButton1_Click(sender As Object, e As EventArgs) Handles GunaGradientButton1.Click
-        On Error GoTo ErrorLoad
+        'On Error GoTo ErrorLoad
 
 
 
@@ -19,8 +20,6 @@ Public Class FormLogin
         Else
             GoTo Lanjut
         End If
-
-
 
 
 Lanjut:
@@ -107,9 +106,9 @@ Lanjut2:
 
         Exit Sub
 
-ErrorLoad:
-        MsgBox(Err.Description)
-        Exit Sub
+        'ErrorLoad:
+        '        MsgBox(Err.Description)
+        '        Exit Sub
     End Sub
 
     Private Sub cmdBatal_Click(sender As Object, e As EventArgs) Handles cmdBatal.Click

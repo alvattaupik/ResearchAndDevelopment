@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7424FB29-81F9-4A6A-A5ED-F16674D1FD7E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ANYAR_GADGET.My.MyApplication</StartupObject>
+    <RootNamespace>ANYAR_GADGET</RootNamespace>
+    <AssemblyName>ANYAR GADGET</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ANYAR GADGET.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ANYAR GADGET.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\Guna.UI-Framework-Lib\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrowseForm\frmBrowseListUserAplikasi.Designer.vb">
+      <DependentUpon>frmBrowseListUserAplikasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseListUserAplikasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowsePegawai.Designer.vb">
+      <DependentUpon>frmBrowsePegawai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowsePegawai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseUsers.Designer.vb">
+      <DependentUpon>frmBrowseUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReports\LaporanInventoryCheck.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanInventoryCheck.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\LaporanMutasiStockAG.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanMutasiStockAG.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmDashBoard.Designer.vb">
+      <DependentUpon>frmDashBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenu.designer.vb">
+      <DependentUpon>frmMainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUbahPassword.Designer.vb">
+      <DependentUpon>frmUbahPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUbahPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmDetailPerubahanHargaJual.designer.vb">
+      <DependentUpon>frmDetailPerubahanHargaJual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmDetailPerubahanHargaJual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmExportHargaJual.designer.vb">
+      <DependentUpon>frmExportHargaJual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmExportHargaJual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmAnyarRepository.designer.vb">
+      <DependentUpon>frmAnyarRepository.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmAnyarRepository.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmAnyarLocalPrint.designer.vb">
+      <DependentUpon>frmAnyarLocalPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmAnyarLocalPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmFilterLaporanMutasiStok.Designer.vb">
+      <DependentUpon>frmFilterLaporanMutasiStok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmFilterLaporanMutasiStok.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmFilterLaporanInventoryCheck.Designer.vb">
+      <DependentUpon>frmFilterLaporanInventoryCheck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmFilterLaporanInventoryCheck.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmFullfillmentChecker.designer.vb">
+      <DependentUpon>frmFullfillmentChecker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmFullfillmentChecker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmDatabasePerformance.designer.vb">
+      <DependentUpon>frmDatabasePerformance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmDatabasePerformance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmPromoPromo.Designer.vb">
+      <DependentUpon>frmPromoPromo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmPromoPromo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmReplicationMonitoring .designer.vb">
+      <DependentUpon>frmReplicationMonitoring .vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmReplicationMonitoring .vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmMonitoringRealStock.designer.vb">
+      <DependentUpon>frmMonitoringRealStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmMonitoringRealStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmMonitoringDelivery.designer.vb">
+      <DependentUpon>frmMonitoringDelivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmMonitoringDelivery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmPing.designer.vb">
+      <DependentUpon>frmPing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmPing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmIntegrationMonitoring.designer.vb">
+      <DependentUpon>frmIntegrationMonitoring.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmIntegrationMonitoring.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\frmLaporkanMasalah.Designer.vb">
+      <DependentUpon>frmLaporkanMasalah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Help\frmLaporkanMasalah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LainLain\frmSubQueryChecker.Designer.vb">
+      <DependentUpon>frmSubQueryChecker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LainLain\frmSubQueryChecker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LainLain\frmTampilkanLaporan.Designer.vb">
+      <DependentUpon>frmTampilkanLaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LainLain\frmTampilkanLaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmDetailForm.Designer.vb">
+      <DependentUpon>frmDetailForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmDetailForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmDetailMenu.Designer.vb">
+      <DependentUpon>frmDetailMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmDetailMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmHeaderForm.Designer.vb">
+      <DependentUpon>frmHeaderForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmHeaderForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmHeaderMenu.Designer.vb">
+      <DependentUpon>frmHeaderMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmHeaderMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmMasterPegawai.Designer.vb">
+      <DependentUpon>frmMasterPegawai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmMasterPegawai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul\Koneksi.vb" />
+    <Compile Include="Modul\ModuleUltility.vb" />
+    <Compile Include="Modul\Variable.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Setting\frmAutoExportDB.Designer.vb">
+      <DependentUpon>frmAutoExportDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\frmAutoExportDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\frmTemplate.Designer.vb">
+      <DependentUpon>frmTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\frmTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\frmUsers.Designer.vb">
+      <DependentUpon>frmUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\frmUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BrowseForm\frmBrowseListUserAplikasi.resx">
+      <DependentUpon>frmBrowseListUserAplikasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowsePegawai.resx">
+      <DependentUpon>frmBrowsePegawai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseUsers.resx">
+      <DependentUpon>frmBrowseUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\LaporanInventoryCheck.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanInventoryCheck.vb</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\LaporanMutasiStockAG.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanMutasiStockAG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashBoard.resx">
+      <DependentUpon>frmDashBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUbahPassword.resx">
+      <DependentUpon>frmUbahPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmDetailPerubahanHargaJual.resx">
+      <DependentUpon>frmDetailPerubahanHargaJual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmExportHargaJual.resx">
+      <DependentUpon>frmExportHargaJual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmAnyarRepository.resx">
+      <DependentUpon>frmAnyarRepository.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmAnyarLocalPrint.resx">
+      <DependentUpon>frmAnyarLocalPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmFilterLaporanMutasiStok.resx">
+      <DependentUpon>frmFilterLaporanMutasiStok.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmFilterLaporanInventoryCheck.resx">
+      <DependentUpon>frmFilterLaporanInventoryCheck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmFullfillmentChecker.resx">
+      <DependentUpon>frmFullfillmentChecker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmDatabasePerformance.resx">
+      <DependentUpon>frmDatabasePerformance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmPromoPromo.resx">
+      <DependentUpon>frmPromoPromo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmReplicationMonitoring .resx">
+      <DependentUpon>frmReplicationMonitoring .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmMonitoringRealStock.resx">
+      <DependentUpon>frmMonitoringRealStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmMonitoringDelivery.resx">
+      <DependentUpon>frmMonitoringDelivery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmPing.resx">
+      <DependentUpon>frmPing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmIntegrationMonitoring.resx">
+      <DependentUpon>frmIntegrationMonitoring.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\frmLaporkanMasalah.resx">
+      <DependentUpon>frmLaporkanMasalah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LainLain\frmSubQueryChecker.resx">
+      <DependentUpon>frmSubQueryChecker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LainLain\frmTampilkanLaporan.resx">
+      <DependentUpon>frmTampilkanLaporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmDetailForm.resx">
+      <DependentUpon>frmDetailForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmDetailMenu.resx">
+      <DependentUpon>frmDetailMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmHeaderForm.resx">
+      <DependentUpon>frmHeaderForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmHeaderMenu.resx">
+      <DependentUpon>frmHeaderMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmMasterPegawai.resx">
+      <DependentUpon>frmMasterPegawai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\frmAutoExportDB.resx">
+      <DependentUpon>frmAutoExportDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\frmTemplate.resx">
+      <DependentUpon>frmTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\frmUsers.resx">
+      <DependentUpon>frmUsers.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO ANYAR BULAT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-male-portrait-avatar-computer-icons-icon-design-avatar-flat-face-icon-people-head-cartoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62681-flat-icons-face-computer-design-avatar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hello_%28yellow%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\89754008-logout-isolated-on-elegant-brown-round-button-abstract-illustration.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\89754008-logout-isolated-on-elegant-brown-round-button-abstract-illustration1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\104fdea6143589e042f1bd90812ebfe8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b0eca009f960c22eb55b3e3137af97e4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\487-4878449_transparent-warehouse-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7170457_preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\browse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventorry 4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delivery.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-5-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pRINT 3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goods Receipt New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incoming Pay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PickListForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goods Return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sales Order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeliveryLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GRPO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransferReq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory Transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goods Issue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Outgoing Payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ping.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repository ALL.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saplogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fail-png-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iVend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Receipt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading 2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync-icon-png-13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading 5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Store.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batik1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Indonesia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Indonesia Maps2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading 6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detective.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detective1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading 7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading 8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Komputer.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

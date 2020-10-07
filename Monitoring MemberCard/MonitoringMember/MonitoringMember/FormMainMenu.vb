@@ -1,7 +1,10 @@
-﻿Imports System.IO
-Imports System.Data
-Imports System.Data.Sql
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
+Imports System.Drawing.Drawing2D
+Imports System.Drawing.Text
+Imports System.IO
+Imports System.Drawing.Imaging
+
+
 Public Class FormMainMenu
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
@@ -161,10 +164,13 @@ Public Class FormMainMenu
 
     Private Sub CopyTableToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyTableToolStripMenuItem.Click
         CopyDataGridViewToClipboard(dgDaftarMember)
+
+
+
     End Sub
 
     Private Sub txtNamaCustomer_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNamaCustomer.KeyPress
-       
+
 
         If (e.KeyChar = Chr(13)) Then
 
@@ -201,7 +207,7 @@ Public Class FormMainMenu
 
         If txtDisplayTop.Text = "" Then
             Call KoneksiDatabaseIvend()
-            Dim cmd As New SqlCommand("SELECT  * FROM V_MonitoringMember WHERE left(NoMember,9) ='" & Trim(txtNoMember.Text) & "'", Koneksi1)
+            Dim cmd As New SqlCommand("SELECT  * FROM V_MonitoringMember WHERE left(NoMember,9) ='" & Trim(txtNoMember.Text) & "' OR NoMember ='" & Trim(txtNoMember.Text) & "'", Koneksi1)
             cmd.CommandTimeout = 0
             Dim adapter As New SqlDataAdapter(cmd)
             Dim table As New DataTable
@@ -229,7 +235,7 @@ Public Class FormMainMenu
 
         End If
 
-       
+
     End Sub
 
 
@@ -477,7 +483,7 @@ ErrorLoad:
         End If
     End Sub
 
- 
+
 
     Private Sub txtDisplayTop_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDisplayTop.KeyPress
 
@@ -513,8 +519,42 @@ ErrorLoad:
 
 
 
-       
+
     End Sub
+
+
+    Sub LoadListGenerateVoucher()
+        Call KoneksiDatabaseDB_EMAIL()
+        Dim cmd As New SqlCommand("SELECT * FROM dbo.GenerateVoucher", Koneksi1)
+        cmd.CommandTimeout = 0
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable
+        adapter.Fill(table)
+        dgListNoGenerateVoucher.DataSource = table
+        lblJumlahGenerateNo.Text = "Jumlah Generate : " & dgListNoGenerateVoucher.RowCount
+
+        dgListNoGenerateVoucher.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgListNoGenerateVoucher.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+        dgListNoGenerateVoucher.AutoResizeColumns()
+    End Sub
+
+
+    Sub LoadDetailNoVoucher()
+        Call KoneksiDatabaseDB_EMAIL()
+        Dim cmd As New SqlCommand("SELECT  NoVoucher,DocEntryVoucher As Kode FROM    dbo.MasterNoVoucher WHERE GenerateNumber='" & dgListNoGenerateVoucher.Item(0, dgListNoGenerateVoucher.CurrentRow.Index).Value() & "' Order By Cast(DocEntryVoucher As Bigint) asc", Koneksi1)
+        cmd.CommandTimeout = 0
+        Dim adapter As New SqlDataAdapter(cmd)
+        Dim table As New DataTable
+        adapter.Fill(table)
+        dgDaftarNoVoucher.DataSource = table
+        lblJumlahNoVoucher.Text = "Jumlah Voucher : " & dgDaftarNoVoucher.RowCount
+
+        dgDaftarNoVoucher.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        dgDaftarNoVoucher.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+        dgDaftarNoVoucher.AutoResizeColumns()
+    End Sub
+
+
 
     Private Sub btnExportToExcel_Click(sender As Object, e As EventArgs) Handles btnExportToExcel.Click
         If dgDaftarMember.RowCount > 0 Then
@@ -529,6 +569,7 @@ ErrorLoad:
 
             'Membuat/menambah workbook baru
             ApExcel.Workbooks.Add()
+
 
             'Lebar Kolom
             ApExcel.Columns(1).ColumnWidth = 15
@@ -672,5 +713,628 @@ ErrorLoad:
             lblExport.Visible = False
 
         End If
+    End Sub
+
+
+    Private Sub CopyTableToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CopyTableToolStripMenuItem1.Click
+        CopyDataGridViewToClipboard(dgInformasiMember)
+    End Sub
+
+    Private Sub cmdGenerate_Click(sender As Object, e As EventArgs) Handles cmdGenerate.Click
+        If txtFrom.TextLength > 15 Or txtTo.TextLength > 15 Then
+            MsgBox("No Member TelahLebih dari 15 Digit yang diperbolehkan!, Silahkan periksa kembali", vbCritical, "Penting!")
+            Exit Sub
+        End If
+
+
+        If txtFrom.Text = "" Or txtTo.Text = "" Then
+            MsgBox("No Member From dan To Tidak Boleh Kosong!", vbCritical, "Penting!")
+            Exit Sub
+        End If
+
+
+
+        If txtDibuatOleh.Text = "" Then
+            MsgBox("Dibuat Oleh, Harus Di Isi", vbCritical, "Penting!")
+            Exit Sub
+        End If
+
+
+        If txtCatatan.Text = "" Then
+            MsgBox("Catatan Harus Di Isi!", vbCritical, "Penting COY!")
+            Exit Sub
+        End If
+
+        If MsgBox("Apakah yakin Anda Akan Membuat No Member dari " & txtFrom.Text & " Sampai No " & txtTo.Text, vbYesNo, "Konfirmasi") = vbYes Then
+            'Call GenerateNoMember()
+            AddGenerateNoMember()
+            ListNomorYangSUdahDibuat()
+
+        Else
+            Exit Sub
+        End If
+    End Sub
+
+
+
+    Sub GenerateNoMember()
+        Try
+            KoneksiDatabaseDB_EMAIL()
+            Dim command As SqlCommand
+            command = New SqlCommand("Fn_GenerateNoMember", Koneksi1)
+
+            Dim adapter As New SqlDataAdapter(command)
+            command.CommandType = CommandType.StoredProcedure
+            command.Parameters.AddWithValue("@startnum", Trim(txtFrom.Text))
+            command.Parameters.AddWithValue("@endnum", Trim(txtTo.Text))
+            command.Parameters.AddWithValue("@status", "R")
+
+            Dim table As New DataTable
+            adapter.Fill(table)
+            Me.dgNoMember.DataSource = table
+            dgNoMember.DataSource = table
+
+            lblJumlahNo.Text = "Jumlah No: " & dgNoMember.RowCount
+        Catch ex As Exception
+            MessageBox.Show(Err.Description)
+        End Try
+
+    End Sub
+
+
+    Sub TampilkanNoMember()
+        Try
+            KoneksiDatabaseDB_EMAIL()
+            Dim command As SqlCommand
+            command = New SqlCommand("Fn_GenerateNoMember", Koneksi1)
+
+            Dim adapter As New SqlDataAdapter(command)
+            command.CommandType = CommandType.StoredProcedure
+            command.Parameters.AddWithValue("@startnum", Trim(dgListNomor.Item(0, dgListNomor.CurrentRow.Index).Value()))
+            command.Parameters.AddWithValue("@endnum", Trim(dgListNomor.Item(1, dgListNomor.CurrentRow.Index).Value()))
+            command.Parameters.AddWithValue("@status", "R")
+
+            Dim table As New DataTable
+            adapter.Fill(table)
+            Me.dgNoMember.DataSource = table
+            dgNoMember.DataSource = table
+
+            lblJumlahNo.Text = "Jumlah No: " & dgNoMember.RowCount
+        Catch ex As Exception
+            MessageBox.Show(Err.Description)
+        End Try
+
+    End Sub
+
+
+    Sub RefreshStokNoMember()
+        Try
+            KoneksiDatabaseDB_EMAIL()
+            Dim command As SqlCommand
+            command = New SqlCommand("[AIO_MemberCard]", Koneksi1)
+
+            Dim adapter As New SqlDataAdapter(command)
+            command.CommandType = CommandType.StoredProcedure
+            command.Parameters.AddWithValue("@Function", "2")
+
+            Dim table As New DataTable
+            adapter.Fill(table)
+            Me.dgStokMember.DataSource = table
+            dgStokMember.DataSource = table
+
+        Catch ex As Exception
+            MessageBox.Show(Err.Description)
+        End Try
+
+    End Sub
+
+
+
+    Sub ListNomorYangSUdahDibuat()
+        Try
+            KoneksiDatabaseDB_EMAIL()
+            Dim command As SqlCommand
+            command = New SqlCommand("[AIO_MemberCard]", Koneksi1)
+
+            Dim adapter As New SqlDataAdapter(command)
+            command.CommandType = CommandType.StoredProcedure
+            command.Parameters.AddWithValue("@Function", "1")
+
+            Dim table As New DataTable
+            adapter.Fill(table)
+            Me.dgListNomor.DataSource = table
+            dgListNomor.DataSource = table
+
+        Catch ex As Exception
+            MessageBox.Show(Err.Description)
+        End Try
+
+    End Sub
+
+
+
+
+
+    Sub AddGenerateNoMember()
+
+        Try
+            KoneksiDatabaseDB_EMAIL()
+            Dim command As SqlCommand
+            command = New SqlCommand("dbo.Add_GenerateNoMember ", Koneksi1)
+
+            Dim adapter As New SqlDataAdapter(command)
+            command.CommandType = CommandType.StoredProcedure
+            command.Parameters.AddWithValue("@catatan", Trim(txtCatatan.Text))
+            command.Parameters.AddWithValue("@dibuatoleh", Trim(txtDibuatOleh.Text))
+            command.Parameters.AddWithValue("@start", Trim(txtFrom.Text))
+            command.Parameters.AddWithValue("@finish", Trim(txtTo.Text))
+            Dim table As New DataTable
+            adapter.Fill(table)
+            Me.dgNoMember.DataSource = table
+            dgNoMember.DataSource = table
+
+            lblJumlahNo.Text = "Jumlah No: " & dgNoMember.RowCount
+
+        Catch ex As Exception
+            MessageBox.Show(Err.Description)
+        End Try
+
+    End Sub
+
+
+    Private Sub CopyTableToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles CopyTableToolStripMenuItem2.Click
+        CopyDataGridViewToClipboard(dgNoMember)
+    End Sub
+
+    Private Sub FormMainMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
+        System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = False
+        ListNomorYangSUdahDibuat()
+        RefreshStokNoMember()
+        LoadListGenerateVoucher()
+    End Sub
+
+    Private Sub cmdRefresh_Click(sender As Object, e As EventArgs) Handles cmdRefresh.Click
+        RefreshStokNoMember()
+    End Sub
+
+    Private Sub cmdTampilkan_Click(sender As Object, e As EventArgs) Handles cmdTampilkan.Click
+        If dgListNomor.Rows.Count = 0 Then Exit Sub
+        TampilkanNoMember()
+    End Sub
+
+    Private Sub cmdExportMemberToExcel_Click(sender As Object, e As EventArgs) Handles cmdExportMemberToExcel.Click
+        If dgNoMember.RowCount > 0 Then
+            'Deklarasi Object
+            Dim ApExcel As Object
+
+            'Set sebagai excel  object
+            ApExcel = CreateObject("Excel.application")
+
+            'Menyembunyikan proses excel
+            ApExcel.Visible = False
+
+            'Membuat/menambah workbook baru
+            ApExcel.Workbooks.Add()
+
+
+            'Lebar Kolom
+            ApExcel.Columns(1).ColumnWidth = 15
+            ApExcel.Columns(2).ColumnWidth = 20
+
+            'Tulis nama kolom ke excel
+            For i As Integer = 1 To dgNoMember.Columns.Count
+                ApExcel.Cells(1, i).Value = dgNoMember.Columns(i - 1).Name
+            Next
+
+            lblExport.Visible = True
+
+            'Tulis data ke excel
+            For r = 0 To dgNoMember.RowCount - 1
+                For i As Integer = 1 To dgNoMember.Columns.Count
+                    ApExcel.Cells(r + 2, i).Value = dgNoMember.Rows(r).Cells(i - 1).Value
+
+                    lblExport.Text = "Mengexport : " & r & " Dari : " & dgNoMember.RowCount
+
+                Next
+            Next
+
+            'Membuat Font Bold
+            ApExcel.Range("A1:M1").Font.Bold = True
+
+            'Memberi warna backgound
+            ApExcel.Range("A1:M1").interior.colorindex = 36
+
+            'Agar nilai cell yang panjang menjadi beberapa baris
+            ApExcel.Range("A2:B" & dgNoMember.RowCount + 1).WrapText = True
+
+            'Membuat border hitam
+            'ApExcel.Range("A1:M" & dgDaftarMember.RowCount + 1).Borders.Color = RGB(0, 0, 0)
+            ApExcel.Visible = True
+            ApExcel = Nothing
+            lblExport.Visible = False
+        End If
+    End Sub
+
+
+
+
+
+
+
+    Sub PreviewGenerateNoVoucher()
+
+        Try
+            KoneksiDatabaseDB_EMAIL()
+            Dim command As SqlCommand
+            command = New SqlCommand("[tmsp_PreviewGenerateNoVoucher]", Koneksi1)
+
+            Dim adapter As New SqlDataAdapter(command)
+            command.CommandType = CommandType.StoredProcedure
+            command.Parameters.AddWithValue("Keterangan", Trim(txtKeterangan.Text))
+            command.Parameters.AddWithValue("Jumlah", Trim(dgDaftarNoVoucher.RowCount))
+            command.Parameters.AddWithValue("From", Trim(txtFromVoucher.Text))
+            command.Parameters.AddWithValue("To", Trim(txtToVoucher.Text))
+            command.Parameters.AddWithValue("GeneratedBy", Trim(txtDibuatOlehNovoucher.Text))
+            command.Parameters.Add("GenerateNumber", SqlDbType.VarChar, 50)
+            command.Parameters("GenerateNumber").Direction = ParameterDirection.Output
+            command.Parameters.Add("isDuplicate", SqlDbType.VarChar, 50)
+            command.Parameters("isDuplicate").Direction = ParameterDirection.Output
+
+
+            If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
+            command.Connection = Koneksi1
+            Koneksi1.Open()
+            command.ExecuteNonQuery()
+            txtGenerateNumber.Text = command.Parameters("GenerateNumber").Value.ToString()
+            txtisDuplicate.Text = command.Parameters("isDuplicate").Value.ToString()
+
+            lblPreview.Text = "Preview Nomor Voucher"
+
+            Dim table As New DataTable
+            adapter.Fill(table)
+            Me.dgDaftarNoVoucher.DataSource = table
+            dgDaftarNoVoucher.DataSource = table
+
+            lblJumlahNoVoucher.Text = "Jumlah Voucher :" & dgDaftarNoVoucher.RowCount
+
+        Catch ex As Exception
+            MessageBox.Show(Err.Description)
+        End Try
+
+    End Sub
+
+
+    Sub AddGenerateNoVoucher()
+
+        Try
+
+            KoneksiDatabaseDB_EMAIL()
+            Dim command As SqlCommand
+            command = New SqlCommand("tmsp_AddGenerateNoVoucher", Koneksi1)
+            Dim adapter As New SqlDataAdapter(command)
+            command.CommandType = CommandType.StoredProcedure
+            command.Parameters.AddWithValue("Keterangan", Trim(txtKeterangan.Text))
+            command.Parameters.AddWithValue("Jumlah", Trim(dgDaftarNoVoucher.RowCount))
+            command.Parameters.AddWithValue("From", Trim(txtFromVoucher.Text))
+            command.Parameters.AddWithValue("To", Trim(txtToVoucher.Text))
+            command.Parameters.AddWithValue("GeneratedBy", Trim(txtDibuatOlehNovoucher.Text))
+            command.Parameters.AddWithValue("GenerateNumber", Trim(txtGenerateNumber.Text))
+            command.Parameters.AddWithValue("DocEntry", Trim(""))
+            command.Parameters.AddWithValue("NoVoucher", Trim(""))
+            command.Parameters.AddWithValue("Status", Trim("H"))
+
+
+            lblPreview.Text = "Memproses"
+
+            If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
+            command.Connection = Koneksi1
+            Koneksi1.Open()
+            command.ExecuteNonQuery()
+
+            lblPreview.Text = "Sukses Disimpan"
+
+            lblJumlahNoVoucher.Text = "Jumlah Voucher :" & dgDaftarNoVoucher.RowCount
+
+        Catch ex As Exception
+            MessageBox.Show(Err.Description)
+        End Try
+
+    End Sub
+
+
+
+
+
+    Private Sub btnPreview_Click(sender As Object, e As EventArgs) Handles btnPreview.Click
+
+        btnProses.Enabled = False
+
+
+        If txtDibuatOlehNovoucher.Text = "" Then
+            MsgBox("Dibuat Oleh Harus Di Isi", vbCritical, "Penting !")
+            Exit Sub
+        End If
+
+        'If txtJumlah.Text = "" Then
+        '    MsgBox("Jumlah Harus Di Isi", vbCritical, "Penting !")
+        '    Exit Sub
+        'End If
+
+        If txtFromVoucher.Text = "" Then
+            MsgBox("From No Harus di Isi", vbCritical, "Penting !")
+            Exit Sub
+        End If
+
+        If txtToVoucher.Text = "" Then
+            MsgBox("To No Harus di Isi", vbCritical, "Penting !")
+            Exit Sub
+        End If
+
+        PreviewGenerateNoVoucher()
+
+        'If dgDaftarNoVoucher.RowCount > 1000 Then
+        '    MsgBox("Maaf maximal Generate Voucher adalah 100", vbCritical, "Warning !@")
+        '    dgDaftarNoVoucher.DataSource = Nothing
+        '    dgDaftarNoVoucher.Rows.Clear()
+        '    Exit Sub
+
+        'End If
+
+
+    End Sub
+
+    Private Sub btnSimpanGenerateVoucher_Click(sender As Object, e As EventArgs) Handles btnSimpanGenerateVoucher.Click
+        If txtGenerateNumber.Text = "" Or dgDaftarNoVoucher.RowCount = 0 Then
+            MsgBox("Tidak Ada No Voucher Yang Akan Disimpan Silahkan Klik Preview", vbInformation, "Informasi")
+            Exit Sub
+        End If
+
+        btnProses.Enabled = False
+
+
+
+        If MsgBox("Apakah Data Yang Di Inputkan Sudah Benar? Kode Voucher yang telah disimpan tidak dapat dibatalkan", vbYesNo, "Konfirmasi") = vbYes Then
+            AddGenerateNoVoucher()
+            AddListDetailNoVoucher()
+
+
+            LoadListGenerateVoucher()
+
+        Else
+            Exit Sub
+        End If
+
+
+    End Sub
+
+
+
+
+    Sub AddListDetailNoVoucher()
+
+
+        KoneksiDatabaseDB_EMAIL()
+        Dim command As SqlCommand
+        command = New SqlCommand("tmsp_AddGenerateNoVoucher", Koneksi1)
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        command.Parameters.AddWithValue("Keterangan", Trim(txtKeterangan.Text))
+        command.Parameters.AddWithValue("Jumlah", Trim(dgDaftarNoVoucher.RowCount))
+        command.Parameters.AddWithValue("From", Trim(txtFromVoucher.Text))
+        command.Parameters.AddWithValue("To", Trim(txtToVoucher.Text))
+        command.Parameters.AddWithValue("GeneratedBy", Trim(txtDibuatOlehNovoucher.Text))
+        command.Parameters.AddWithValue("GenerateNumber", Trim(txtGenerateNumber.Text))
+        command.Parameters.AddWithValue("DocEntry", (""))
+        command.Parameters.AddWithValue("NoVoucher", (""))
+        command.Parameters.AddWithValue("Status", Trim("L"))
+
+        If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
+        command.Connection = Koneksi1
+        Koneksi1.Open()
+        command.ExecuteNonQuery()
+        Koneksi1.Close()
+        dgDaftarNoVoucher.DataSource = Nothing
+        dgDaftarNoVoucher.Rows.Clear()
+
+        txtGenerateNumber.Text = ""
+        txtKeterangan.Text = ""
+        txtDibuatOlehNovoucher.Text = ""
+        txtFromVoucher.Text = ""
+        txtToVoucher.Text = ""
+        lblJumlahNoVoucher.Text = "Jumlah Voucher :" & 0
+
+
+    End Sub
+
+
+
+
+
+
+
+
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        On Error GoTo ErrorLoad
+
+        Call KoneksiDatabaseDB_EMAIL()
+        For i As Integer = 0 To dgDaftarNoVoucher.Rows.Count - 1
+            KoneksiDatabaseDB_EMAIL()
+            Dim command As SqlCommand
+            command = New SqlCommand("tmsp_AddGenerateNoVoucher", Koneksi1)
+            Dim adapter As New SqlDataAdapter(command)
+            command.CommandType = CommandType.StoredProcedure
+            command.Parameters.AddWithValue("Keterangan", Trim(txtKeterangan.Text))
+            command.Parameters.AddWithValue("Jumlah", Trim(dgDaftarNoVoucher.RowCount))
+            command.Parameters.AddWithValue("From", Trim(txtFromVoucher.Text))
+            command.Parameters.AddWithValue("To", Trim(txtToVoucher.Text))
+            command.Parameters.AddWithValue("GeneratedBy", Trim(txtDibuatOlehNovoucher.Text))
+            command.Parameters.AddWithValue("GenerateNumber", Trim(txtGenerateNumber.Text))
+            command.Parameters.AddWithValue("DocEntry", Trim(dgDaftarNoVoucher.Rows(i).Cells(0).Value))
+            command.Parameters.AddWithValue("NoVoucher", Trim(dgDaftarNoVoucher.Rows(i).Cells(1).Value))
+            command.Parameters.AddWithValue("Status", Trim("L"))
+
+            If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
+            command.CommandTimeout = 0
+            command.Connection = Koneksi1
+            Koneksi1.Open()
+            command.ExecuteNonQuery()
+
+
+        Next
+        Koneksi1.Close()
+
+
+        dgDaftarNoVoucher.DataSource = Nothing
+        dgDaftarNoVoucher.Rows.Clear()
+
+        Exit Sub
+
+ErrorLoad:
+        MsgBox(Err.Description)
+
+        Exit Sub
+    End Sub
+
+    Private Sub btnRefreshListGenerate_Click(sender As Object, e As EventArgs) Handles btnRefreshListGenerate.Click
+        LoadListGenerateVoucher()
+
+        dgDaftarNoVoucher.DataSource = Nothing
+        dgDaftarNoVoucher.Rows.Clear()
+        lblJumlahNoVoucher.Text = "Jumlah Voucher :" & 0
+        btnProses.Enabled = False
+    End Sub
+
+    Private Sub btnNewVoucher_Click(sender As Object, e As EventArgs) Handles btnNewVoucher.Click
+        If MsgBox("Apakah Anda Yakin akan Membatalkan dan membuat ulang nomor?", vbYesNo, "Konfirmasi") = vbYes Then
+
+            txtGenerateNumber.Text = ""
+            txtKeterangan.Text = ""
+            txtDibuatOlehNovoucher.Text = ""
+            txtFromVoucher.Text = ""
+            txtToVoucher.Text = ""
+            dgDaftarNoVoucher.DataSource = Nothing
+            dgDaftarNoVoucher.Rows.Clear()
+            lblJumlahNoVoucher.Text = "Jumlah Voucher :" & 0
+        Else
+            Exit Sub
+
+        End If
+
+    End Sub
+
+    Private Sub btnBrowseExportBarcode_Click_1(sender As Object, e As EventArgs) Handles btnBrowseExportBarcode.Click
+        If (FolderBrowserDialog1.ShowDialog() = DialogResult.OK) Then
+            txtpathExportbarcode.Text = FolderBrowserDialog1.SelectedPath
+        End If
+    End Sub
+
+    Private Sub btnProses_Click(sender As Object, e As EventArgs) Handles btnProses.Click
+        If txtpathExportbarcode.Text = "" Then
+            MsgBox("Silahkan Pilih Lokasi Export Barcode", vbInformation, "Penting !")
+            Exit Sub
+        End If
+
+        GenerateQRCode2()
+
+
+    End Sub
+
+
+
+
+    Sub GenerateQRCode2()
+        For i As Integer = 0 To dgDaftarNoVoucher.Rows.Count - 1
+
+            Dim gen As New QRCoder.QRCodeGenerator
+            Dim data = gen.CreateQrCode(dgDaftarNoVoucher.Rows(i).Cells(0).Value, QRCoder.QRCodeGenerator.ECCLevel.H)
+
+            'Dim data = gen.CreateQrCode(strKode, QRCoder.QRCodeGenerator.ECCLevel.Q)
+            Dim code As New QRCoder.QRCode(data)
+            Dim bitMap As Bitmap = code.GetGraphic(5)
+
+            Using ms As MemoryStream = New MemoryStream()
+                bitMap.Save(ms, System.Drawing.Imaging.ImageFormat.Png)
+                picBarcode.Image = bitMap
+                picBarcode.Height = bitMap.Height
+                picBarcode.Width = bitMap.Width
+            End Using
+
+            Dim x1 As Integer = 0
+            Dim x2 As Integer = Math.Max(picBarcode.Image.Width, picBarcode.Image.Width)
+            Dim y1 As Integer = 0
+            Dim y2 As Integer = Math.Max(picBarcode.Image.Height, PictureBox1.Image.Height)
+            Dim rect1 As Rectangle = New Rectangle(New Point(x1, y1), picBarcode.Image.Size)
+            Dim firstLocation As PointF = New PointF(17.0F, 145.0F)
+            'Dim firstLocation As PointF = New PointF(0.0F, 145.0F)
+            Dim secondLocation As PointF = New PointF(30.0F, 50.0F)
+
+
+
+            Using graphics As Graphics = graphics.FromImage(bitMap)
+
+                'Using arialFont As Font = New Font("Arial", 9)
+                '    graphics.DrawString(dgDaftarNoVoucher.Rows(i).Cells(0).Value, arialFont, Brushes.Black, firstLocation)
+                '    graphics.DrawImage(picBarcode.Image, rect1)
+                'End Using
+
+                'Dim g As Graphics = graphics.FromImage(bitMap)
+                'g.DrawString(dgDaftarNoVoucher.Rows(i).Cells(0).Value, New Font("Arial", 12, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Black, 18, 130)
+
+                bitMap.Save(txtpathExportbarcode.Text & "\" & dgDaftarNoVoucher.Rows(i).Cells(1).Value & ".png", ImageFormat.Png)
+            End Using
+
+        Next
+
+        Exit Sub
+    End Sub
+
+
+
+
+    Private Sub btnTampilkan_Click(sender As Object, e As EventArgs) Handles btnTampilkan.Click
+        If dgListNoGenerateVoucher.RowCount = 0 Then Exit Sub
+
+
+        txtGenerateNumber.Text = ""
+        txtKeterangan.Text = ""
+        txtDibuatOlehNovoucher.Text = ""
+        txtFromVoucher.Text = ""
+        txtToVoucher.Text = ""
+        dgDaftarNoVoucher.DataSource = Nothing
+        dgDaftarNoVoucher.Rows.Clear()
+        lblJumlahNoVoucher.Text = "Jumlah Voucher :" & 0
+
+
+        LoadDetailNoVoucher()
+        btnProses.Enabled = True
+
+
+
+
+
+    End Sub
+
+    Private Sub dgListNoGenerateVoucher_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgListNoGenerateVoucher.CellContentClick
+
+    End Sub
+
+    Private Sub dgListNoGenerateVoucher_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgListNoGenerateVoucher.CellContentDoubleClick
+
+    End Sub
+
+    Private Sub LihatNomorYangBelumTerpakaiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LihatNomorYangBelumTerpakaiToolStripMenuItem.Click
+        If dgStokMember.RowCount = 0 Then Exit Sub
+        MstrKodeCabang = dgStokMember.Item(0, dgStokMember.CurrentRow.Index).Value()
+        ListMemberYangBelumTerpakai.ShowDialog()
+    End Sub
+
+    Private Sub dgStokMember_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgStokMember.CellContentClick
+
+    End Sub
+
+    Private Sub dgStokMember_Click(sender As Object, e As EventArgs) Handles dgStokMember.Click
+        If dgStokMember.RowCount = 0 Then Exit Sub
+        MstrKodeCabang = dgStokMember.Item(0, dgStokMember.CurrentRow.Index).Value()
+        ListMemberYangBelumTerpakai.ShowDialog()
     End Sub
 End Class

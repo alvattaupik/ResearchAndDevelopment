@@ -19,7 +19,6 @@ Public Class Form1
 
         LoadDurasi()
 
-
         If btnStart.Text = "Start" Then
 
             Driver = New ChromeDriver
@@ -67,6 +66,23 @@ Public Class Form1
     End Sub
 
 
+    Sub LoadTransaksiBerhasil()
+
+        KoneksiDatabase()
+        Dim command As SqlCommand
+        command = New SqlCommand("[_tmspTransaksiBerhasil]", Koneksi)
+
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        command.Parameters.AddWithValue("@Tanggal", Now.ToString("yyyyMMdd"))
+        Dim table As New DataTable
+        adapter.Fill(table)
+        Me.dgPenerima.DataSource = table
+        dgPenerima.DataSource = table
+    End Sub
+
+
+
     Sub LoadPesan()
         KoneksiDatabase()
         Dim cmd As New SqlCommand("SELECT NoTelepon,CustomMessage FROM kontakWhatsapp", Koneksi)
@@ -90,7 +106,7 @@ Public Class Form1
     Sub LoadDaftarSendWhatsapp()
         KoneksiDatabase()
         Dim command As SqlCommand
-        command = New SqlCommand("_tmspSendWhatsappDelivery", Koneksi)
+        command = New SqlCommand("_tmspSendTransaksiBerhasil", Koneksi)
 
         Dim adapter As New SqlDataAdapter(command)
         command.CommandType = CommandType.StoredProcedure
@@ -113,7 +129,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         'LoadPesan()
-        LoadDaftarSendWhatsapp()
+        'LoadDaftarSendWhatsapp()
     End Sub
 
 
@@ -145,19 +161,19 @@ Public Class Form1
 
             Try
 
-                Dim Url As String = "https://web.whatsapp.com/send?phone=" & dgPenerima.Rows(i).Cells("NoHP").Value & "&text=" & dgPenerima.Rows(i).Cells("Pesan").Value & "&source&data&app_absent"
+                Dim Url As String = "https://web.whatsapp.com/send?phone=" & dgPenerima.Rows(i).Cells("Kontak").Value & "&text=" & dgPenerima.Rows(i).Cells("Pesan").Value & "&source&data&app_absent"
                 Driver.Navigate().GoToUrl(Url)
                 Threading.Thread.Sleep(11000)
                 Driver.FindElement(By.CssSelector("span[data-icon='send']")).Click()
                 Threading.Thread.Sleep(3000)
 
 
-                Call KoneksiDBEmail()
-                Dim str As String
-                str = "INSERT INTO dbo.DeliverySudahDikirim VALUES  ('" & dgPenerima.Rows(i).Cells("Docnum").Value & "','" & dgPenerima.Rows(i).Cells("NoStruk").Value & "','" & dgPenerima.Rows(i).Cells("CardCode").Value & "','" & Now.ToString("yyyyMMdd HH:mm") & "')"
-                cmd = New SqlCommand(str, Koneksi)
-                cmd.ExecuteNonQuery()
-                Threading.Thread.Sleep(1000)
+                'Call KoneksiDBEmail()
+                'Dim str As String
+                'str = "INSERT INTO dbo.TransaksiBerhasil VALUES  ('" & dgPenerima.Rows(i).Cells("Docnum").Value & "','" & dgPenerima.Rows(i).Cells("NoStruk").Value & "','" & Now.ToString("yyyyMMdd HH:mm") & "')"
+                'cmd = New SqlCommand(str, Koneksi)
+                'cmd.ExecuteNonQuery()
+                'Threading.Thread.Sleep(1000)
 
 
             Catch ex As Exception
@@ -228,8 +244,8 @@ trynext:
 
         If lblTimer.Text = "0" Then
             TimerMsg1.Stop()
-            LoadDaftarSendWhatsapp()
-
+            'LoadDaftarSendWhatsapp()
+            LoadTransaksiBerhasil()
             Threading.Thread.Sleep(1000)
 
             Broadcast()
@@ -242,4 +258,8 @@ trynext:
 
     End Sub
 
+    Private Sub cmdtest_Click(sender As Object, e As EventArgs) Handles cmdtest.Click
+        LoadDurasi()
+        TimerMsg1.Enabled = True
+    End Sub
 End Class

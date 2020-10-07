@@ -81,6 +81,7 @@ Public Class SalesMonitoringNew2
         ChartPenjualan.Series(0).Points.AddXY("TSK", FormatCurrency(Tabel1.Rows(10).Item(1)))
         ChartPenjualan.Series(0).Points.AddXY("PMNK", FormatCurrency(Tabel1.Rows(11).Item(1)))
         ChartPenjualan.Series(0).Points.AddXY("SOETTA", FormatCurrency(Tabel1.Rows(12).Item(1)))
+        ChartPenjualan.Series(0).Points.AddXY("SUBANG", FormatCurrency(Tabel1.Rows(13).Item(1)))
 
 
 
@@ -209,6 +210,7 @@ Public Class SalesMonitoringNew2
         ChartPenjualan.Series(0).Points.AddXY("RKM TASIKMALAYA", FormatCurrency(Tabel1.Rows(10).Item(1)))
         ChartPenjualan.Series(0).Points.AddXY("RKM PAMANUKAN", FormatCurrency(Tabel1.Rows(11).Item(1)))
         ChartPenjualan.Series(0).Points.AddXY("RKM SOEKARNO HATTA", FormatCurrency(Tabel1.Rows(12).Item(1)))
+        ChartPenjualan.Series(0).Points.AddXY("RKM SUBANG", FormatCurrency(Tabel1.Rows(13).Item(1)))
 
 
 

@@ -123,7 +123,6 @@ Public Class MenuUtama
 
     Private Sub AnyarDirectoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AnyarDirectoryToolStripMenuItem.Click
         Dim frm As New AnyarRepository
-
         frm.MdiParent = Me
         frm.TopMost = True
         frm.Show()

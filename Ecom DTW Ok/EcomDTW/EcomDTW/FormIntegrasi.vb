@@ -89,7 +89,7 @@ Public Class FormIntegrasi
 
             With comDB
 
-                .CommandText = "Call AU_MasterBarangIntegrasi('" & dgListUpload.Rows(i).Cells(0).Value & "','','','','" & dgListUpload.Rows(i).Cells(1).Value & "','','','" & dgListUpload.Rows(i).Cells(2).Value & "','" & dgListUpload.Rows(i).Cells(4).Value & "','" & dgListUpload.Rows(i).Cells(6).Value & "','" & dgListUpload.Rows(i).Cells(7).Value & "','" & dgListUpload.Rows(i).Cells(9).Value & "','" & dgListUpload.Rows(i).Cells(10).Value & "','','" & MstrKdPegawai & "','" & MstrKdPegawai & "','','','','')"
+                .CommandText = "Call AU_MasterBarangIntegrasi('" & dgListUpload.Rows(i).Cells(0).Value & "','','','','" & dgListUpload.Rows(i).Cells(1).Value & "','','','" & dgListUpload.Rows(i).Cells(2).Value & "','" & dgListUpload.Rows(i).Cells(4).Value & "','" & dgListUpload.Rows(i).Cells(6).Value & "','" & dgListUpload.Rows(i).Cells(7).Value & "','" & dgListUpload.Rows(i).Cells(9).Value & "','" & dgListUpload.Rows(i).Cells(10).Value & "','','" & MstrKdPegawai & "','" & MstrKdPegawai & "','" & dgListUpload.Rows(i).Cells(13).Value & "','','','')"
                 .ExecuteNonQuery()
             End With
 

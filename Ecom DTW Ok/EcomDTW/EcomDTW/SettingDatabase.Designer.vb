@@ -53,6 +53,8 @@ Partial Class SettingDatabase
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.cmdSimpan = New System.Windows.Forms.Button()
+        Me.chkShowPasswordMysql = New System.Windows.Forms.CheckBox()
+        Me.chkShowPasswordSQLServer = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
@@ -113,6 +115,7 @@ Partial Class SettingDatabase
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.LightGray
+        Me.Panel5.Controls.Add(Me.chkShowPasswordSQLServer)
         Me.Panel5.Controls.Add(Me.Button1)
         Me.Panel5.Controls.Add(Me.txtPasswordSQlServer)
         Me.Panel5.Controls.Add(Me.txtUsernameSQLServer)
@@ -141,7 +144,7 @@ Partial Class SettingDatabase
         'txtPasswordSQlServer
         '
         Me.txtPasswordSQlServer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPasswordSQlServer.Location = New System.Drawing.Point(92, 123)
+        Me.txtPasswordSQlServer.Location = New System.Drawing.Point(92, 101)
         Me.txtPasswordSQlServer.Name = "txtPasswordSQlServer"
         Me.txtPasswordSQlServer.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPasswordSQlServer.Size = New System.Drawing.Size(149, 22)
@@ -150,7 +153,7 @@ Partial Class SettingDatabase
         'txtUsernameSQLServer
         '
         Me.txtUsernameSQLServer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsernameSQLServer.Location = New System.Drawing.Point(92, 86)
+        Me.txtUsernameSQLServer.Location = New System.Drawing.Point(92, 71)
         Me.txtUsernameSQLServer.Name = "txtUsernameSQLServer"
         Me.txtUsernameSQLServer.Size = New System.Drawing.Size(149, 22)
         Me.txtUsernameSQLServer.TabIndex = 6
@@ -159,7 +162,7 @@ Partial Class SettingDatabase
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(4, 125)
+        Me.Label8.Location = New System.Drawing.Point(6, 105)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(83, 18)
         Me.Label8.TabIndex = 5
@@ -169,7 +172,7 @@ Partial Class SettingDatabase
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(4, 88)
+        Me.Label9.Location = New System.Drawing.Point(4, 76)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(85, 18)
         Me.Label9.TabIndex = 4
@@ -178,7 +181,7 @@ Partial Class SettingDatabase
         'txtDBNameSQLServer
         '
         Me.txtDBNameSQLServer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDBNameSQLServer.Location = New System.Drawing.Point(92, 50)
+        Me.txtDBNameSQLServer.Location = New System.Drawing.Point(92, 42)
         Me.txtDBNameSQLServer.Name = "txtDBNameSQLServer"
         Me.txtDBNameSQLServer.Size = New System.Drawing.Size(149, 22)
         Me.txtDBNameSQLServer.TabIndex = 3
@@ -195,7 +198,7 @@ Partial Class SettingDatabase
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(4, 50)
+        Me.Label10.Location = New System.Drawing.Point(7, 42)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(80, 18)
         Me.Label10.TabIndex = 1
@@ -244,6 +247,7 @@ Partial Class SettingDatabase
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.LightGray
+        Me.Panel3.Controls.Add(Me.chkShowPasswordMysql)
         Me.Panel3.Controls.Add(Me.cmdTestLinkMysql)
         Me.Panel3.Controls.Add(Me.txtPasswordMySQL)
         Me.Panel3.Controls.Add(Me.txtUsernameMysql)
@@ -272,7 +276,7 @@ Partial Class SettingDatabase
         'txtPasswordMySQL
         '
         Me.txtPasswordMySQL.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPasswordMySQL.Location = New System.Drawing.Point(92, 123)
+        Me.txtPasswordMySQL.Location = New System.Drawing.Point(93, 100)
         Me.txtPasswordMySQL.Name = "txtPasswordMySQL"
         Me.txtPasswordMySQL.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPasswordMySQL.Size = New System.Drawing.Size(149, 22)
@@ -281,7 +285,7 @@ Partial Class SettingDatabase
         'txtUsernameMysql
         '
         Me.txtUsernameMysql.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsernameMysql.Location = New System.Drawing.Point(92, 86)
+        Me.txtUsernameMysql.Location = New System.Drawing.Point(92, 72)
         Me.txtUsernameMysql.Name = "txtUsernameMysql"
         Me.txtUsernameMysql.Size = New System.Drawing.Size(149, 22)
         Me.txtUsernameMysql.TabIndex = 6
@@ -290,7 +294,7 @@ Partial Class SettingDatabase
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(4, 125)
+        Me.Label7.Location = New System.Drawing.Point(4, 101)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(83, 18)
         Me.Label7.TabIndex = 5
@@ -300,7 +304,7 @@ Partial Class SettingDatabase
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(4, 88)
+        Me.Label6.Location = New System.Drawing.Point(4, 72)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(85, 18)
         Me.Label6.TabIndex = 4
@@ -309,7 +313,7 @@ Partial Class SettingDatabase
         'txtDBNameMysql
         '
         Me.txtDBNameMysql.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDBNameMysql.Location = New System.Drawing.Point(92, 50)
+        Me.txtDBNameMysql.Location = New System.Drawing.Point(92, 42)
         Me.txtDBNameMysql.Name = "txtDBNameMysql"
         Me.txtDBNameMysql.Size = New System.Drawing.Size(149, 22)
         Me.txtDBNameMysql.TabIndex = 3
@@ -326,7 +330,7 @@ Partial Class SettingDatabase
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(4, 50)
+        Me.Label5.Location = New System.Drawing.Point(6, 42)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(80, 18)
         Me.Label5.TabIndex = 1
@@ -336,7 +340,7 @@ Partial Class SettingDatabase
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(4, 13)
+        Me.Label4.Location = New System.Drawing.Point(6, 13)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(44, 18)
         Me.Label4.TabIndex = 0
@@ -381,6 +385,26 @@ Partial Class SettingDatabase
         Me.cmdSimpan.TabIndex = 3
         Me.cmdSimpan.Text = "Simpan Konfigurasi"
         Me.cmdSimpan.UseVisualStyleBackColor = True
+        '
+        'chkShowPasswordMysql
+        '
+        Me.chkShowPasswordMysql.AutoSize = True
+        Me.chkShowPasswordMysql.Location = New System.Drawing.Point(92, 123)
+        Me.chkShowPasswordMysql.Name = "chkShowPasswordMysql"
+        Me.chkShowPasswordMysql.Size = New System.Drawing.Size(102, 17)
+        Me.chkShowPasswordMysql.TabIndex = 9
+        Me.chkShowPasswordMysql.Text = "Show Password"
+        Me.chkShowPasswordMysql.UseVisualStyleBackColor = True
+        '
+        'chkShowPasswordSQLServer
+        '
+        Me.chkShowPasswordSQLServer.AutoSize = True
+        Me.chkShowPasswordSQLServer.Location = New System.Drawing.Point(92, 126)
+        Me.chkShowPasswordSQLServer.Name = "chkShowPasswordSQLServer"
+        Me.chkShowPasswordSQLServer.Size = New System.Drawing.Size(102, 17)
+        Me.chkShowPasswordSQLServer.TabIndex = 10
+        Me.chkShowPasswordSQLServer.Text = "Show Password"
+        Me.chkShowPasswordSQLServer.UseVisualStyleBackColor = True
         '
         'SettingDatabase
         '
@@ -439,4 +463,6 @@ Partial Class SettingDatabase
     Friend WithEvents txtDBNameMysql As System.Windows.Forms.TextBox
     Friend WithEvents txtHostMysql As System.Windows.Forms.TextBox
     Friend WithEvents cmdSimpan As System.Windows.Forms.Button
+    Friend WithEvents chkShowPasswordMysql As System.Windows.Forms.CheckBox
+    Friend WithEvents chkShowPasswordSQLServer As System.Windows.Forms.CheckBox
 End Class

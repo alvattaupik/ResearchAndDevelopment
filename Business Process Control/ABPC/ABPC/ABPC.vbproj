@@ -24,7 +24,7 @@
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <MinimumRequiredVersion>1.0.0.2</MinimumRequiredVersion>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -115,6 +115,18 @@
     <Compile Include="FormCariKomponenSAP.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormListValidasi.Designer.vb">
+      <DependentUpon>FormListValidasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormListValidasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateControl - Copy.Designer.vb">
+      <DependentUpon>FormUpdateControl - Copy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateControl - Copy.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormUpdateControl.Designer.vb">
       <DependentUpon>FormUpdateControl.vb</DependentUpon>
     </Compile>
@@ -171,6 +183,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCariKomponenSAP.resx">
       <DependentUpon>FormCariKomponenSAP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListValidasi.resx">
+      <DependentUpon>FormListValidasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateControl - Copy.resx">
+      <DependentUpon>FormUpdateControl - Copy.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateControl.resx">
       <DependentUpon>FormUpdateControl.vb</DependentUpon>

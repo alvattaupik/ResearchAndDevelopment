@@ -109,4 +109,7 @@ Public Class FormDetailHakAkses
 
   
 
+    Private Sub txtCariHakAkses_TextChanged(sender As Object, e As EventArgs) Handles txtCariHakAkses.TextChanged
+
+    End Sub
 End Class

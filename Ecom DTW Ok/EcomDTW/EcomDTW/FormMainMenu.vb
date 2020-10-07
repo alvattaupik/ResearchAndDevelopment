@@ -95,7 +95,7 @@ Public Class FormMainMenu
 
             With comDB
 
-                .CommandText = "Call AU_MasterBarangIntegrasi('" & dgListIntegrasi.Rows(i).Cells(0).Value & "','','','','','','','" & dgListIntegrasi.Rows(i).Cells(1).Value & "','" & dgListIntegrasi.Rows(i).Cells(2).Value & "','" & dgListIntegrasi.Rows(i).Cells(3).Value & "','" & dgListIntegrasi.Rows(i).Cells(4).Value & "','" & dgListIntegrasi.Rows(i).Cells(5).Value & "','" & dgListIntegrasi.Rows(i).Cells(6).Value & "','','" & MstrKdPegawai & "','" & MstrKdPegawai & "','','','','')"
+                .CommandText = "Call AU_MasterBarangIntegrasi('" & dgListIntegrasi.Rows(i).Cells(0).Value & "','','','','','','','" & dgListIntegrasi.Rows(i).Cells(1).Value & "','" & dgListIntegrasi.Rows(i).Cells(2).Value & "','" & dgListIntegrasi.Rows(i).Cells(3).Value & "','" & dgListIntegrasi.Rows(i).Cells(4).Value & "','" & dgListIntegrasi.Rows(i).Cells(5).Value & "','" & dgListIntegrasi.Rows(i).Cells(6).Value & "','','" & MstrKdPegawai & "','" & MstrKdPegawai & "','" & dgListIntegrasi.Rows(i).Cells(7).Value & "','','','')"
                 .ExecuteNonQuery()
             End With
 

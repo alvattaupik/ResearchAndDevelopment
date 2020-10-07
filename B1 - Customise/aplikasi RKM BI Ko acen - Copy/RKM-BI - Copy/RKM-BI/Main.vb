@@ -187,6 +187,9 @@ Public Class Main
     End Sub
 
     Private Sub PictureBox3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.Click
+        MsgBox("Sorry This Feature Unavailable, Is Currently Under Development", vbInformation, "Informasi")
+        Exit Sub
+
         StorePerform.MdiParent = Me
         StorePerform.Show()
     End Sub
@@ -848,14 +851,18 @@ Public Class Main
         'MarginBaru.Show()
         'MarginBaruV1_1.MdiParent = Me
         'MarginBaruV1_1.Show()
-        MarginBaruV1_2.MdiParent = Me
-        MarginBaruV1_2.Show()
+        'MarginBaruV1_2.MdiParent = Me
+        'MarginBaruV1_2.Show()
 
+        MarginBaruV1_3.MdiParent = Me
+        MarginBaruV1_3.Show()
     End Sub
 
     Private Sub PictureBox12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox12.Click
-        Stock.MdiParent = Me
-        Stock.Show()
+        'Stock.MdiParent = Me
+        'Stock.Show()
+        StockV_1_1.MdiParent = Me
+        StockV_1_1.Show()
     End Sub
 
     Private Sub t81_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles t81.Tick

@@ -52,6 +52,10 @@ Public Class omsetsale
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+
+
+
         DataGridView1.Columns.Clear()
         Koneksi()
         Dim cabang As String = ""

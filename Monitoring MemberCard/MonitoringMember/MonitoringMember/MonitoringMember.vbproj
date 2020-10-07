@@ -24,7 +24,7 @@
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <MinimumRequiredVersion>1.0.0.5</MinimumRequiredVersion>
-    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationRevision>16</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -87,6 +87,12 @@
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\Guna.UI-Framework-Lib\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.3.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.9\lib\net40\QRCoder.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -97,6 +103,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -119,6 +126,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Koneksi\ModuleKoneksi.vb" />
+    <Compile Include="ListMemberYangBelumTerpakai.Designer.vb">
+      <DependentUpon>ListMemberYangBelumTerpakai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListMemberYangBelumTerpakai.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +165,9 @@
     <EmbeddedResource Include="FormRiwayatTransaksi.resx">
       <DependentUpon>FormRiwayatTransaksi.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListMemberYangBelumTerpakai.resx">
+      <DependentUpon>ListMemberYangBelumTerpakai.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +196,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\member-card-png-6.png" />
   </ItemGroup>
   <ItemGroup>

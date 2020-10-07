@@ -21,7 +21,9 @@ Public Class MainMenu
 
         Call KoneksiDatabase2()
 
-        Dim cmd As New SqlCommand("Select * from V_DaftarKontrolValidasi Where Notifikasi Like '%" & Trim(txtCariKontrol.Text) & "%' AND StatusEnabled='1'", Koneksi2)
+        'Dim cmd As New SqlCommand("Select * from V_DaftarKontrolValidasi Where Notifikasi Like '%" & Trim(txtCariKontrol.Text) & "%' AND StatusEnabled='1'", Koneksi2)
+
+        Dim cmd As New SqlCommand("SELECT DISTINCT CAST(NamaValidasi AS VARCHAR(150)) AS NamaValidasi,CAST(Notifikasi AS VARCHAR(150)) AS Notifikasi,CAST(Fungsi AS VARCHAR(150)) AS Fungsi,KodeValidasi from V_DaftarKontrolValidasi Where Notifikasi Like '%" & Trim(txtCariKontrol.Text) & "%'", Koneksi2)
 
         cmd.CommandTimeout = 0
 
@@ -69,21 +71,24 @@ Public Class MainMenu
     Private Sub dgDaftarKontrol_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgDaftarKontrol.CellContentDoubleClick
         If dgDaftarKontrol.RowCount = 0 Then Exit Sub
 
-        MstrDocNum = dgDaftarKontrol.Item(5, dgDaftarKontrol.CurrentRow.Index).Value
-        MstrKodeCabang = dgDaftarKontrol.Item(6, dgDaftarKontrol.CurrentRow.Index).Value
-        MstrNamaCabang = dgDaftarKontrol.Item(1, dgDaftarKontrol.CurrentRow.Index).Value
+        'MstrDocNum = dgDaftarKontrol.Item(5, dgDaftarKontrol.CurrentRow.Index).Value
+        'MstrKodeCabang = dgDaftarKontrol.Item(6, dgDaftarKontrol.CurrentRow.Index).Value
+        'MstrNamaCabang = dgDaftarKontrol.Item(1, dgDaftarKontrol.CurrentRow.Index).Value
 
-
-        MstrKodeValidasi = dgDaftarKontrol.Item(7, dgDaftarKontrol.CurrentRow.Index).Value
         MstrNamaValidasi = dgDaftarKontrol.Item(0, dgDaftarKontrol.CurrentRow.Index).Value
-
-        MstrFungsi = dgDaftarKontrol.Item(3, dgDaftarKontrol.CurrentRow.Index).Value
-        MstrNotifikasi = dgDaftarKontrol.Item(2, dgDaftarKontrol.CurrentRow.Index).Value
-        MstrStatusEnabled = dgDaftarKontrol.Item(4, dgDaftarKontrol.CurrentRow.Index).Value
-
+        MstrNotifikasi = dgDaftarKontrol.Item(1, dgDaftarKontrol.CurrentRow.Index).Value
+        MstrFungsi = dgDaftarKontrol.Item(2, dgDaftarKontrol.CurrentRow.Index).Value
+        MstrKodeValidasi = dgDaftarKontrol.Item(3, dgDaftarKontrol.CurrentRow.Index).Value
 
 
-        FormUpdateControl.ShowDialog()
+
+        'MstrNotifikasi = dgDaftarKontrol.Item(2, dgDaftarKontrol.CurrentRow.Index).Value
+        'MstrStatusEnabled = dgDaftarKontrol.Item(4, dgDaftarKontrol.CurrentRow.Index).Value
+
+
+
+        'FormUpdateControl.ShowDialog()
+        FormListValidasi.ShowDialog()
 
         Exit Sub
 
@@ -126,7 +131,7 @@ ErrorLoad:
         MstrNotifikasi = dgUnlocked.Item(2, dgUnlocked.CurrentRow.Index).Value
         MstrStatusEnabled = dgUnlocked.Item(4, dgUnlocked.CurrentRow.Index).Value
 
-        FormUpdateControl.ShowDialog()
+        FormUpdateControlValidasi.ShowDialog()
 
         Exit Sub
 
@@ -134,6 +139,8 @@ ErrorLoad:
         MsgBox(Err.Description)
         Exit Sub
     End Sub
+
+
 
 
 End Class

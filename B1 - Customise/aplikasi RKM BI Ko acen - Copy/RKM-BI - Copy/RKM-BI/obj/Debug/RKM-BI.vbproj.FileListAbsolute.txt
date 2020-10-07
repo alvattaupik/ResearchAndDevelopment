@@ -160,3 +160,5 @@ D:\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI -
 D:\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\bin\Debug\Guna.UI.pdb
 D:\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.FormMonitoringDelivery.resources
 D:\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginBaruV1_2.resources
+D:\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.MarginBaruV1_3.resources
+D:\ResearchAndDevelopment\B1 - Customise\aplikasi RKM BI Ko acen - Copy\RKM-BI - Copy\RKM-BI\obj\Debug\RKM_BI.StockV_1_1.resources

@@ -38,6 +38,7 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.lblTimer = New System.Windows.Forms.Label()
+        Me.cmdtest = New System.Windows.Forms.Button()
         CType(Me.dgPenerima, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -67,7 +68,7 @@ Partial Class Form1
         Me.dgPenerima.Location = New System.Drawing.Point(12, 193)
         Me.dgPenerima.Name = "dgPenerima"
         Me.dgPenerima.RowHeadersVisible = False
-        Me.dgPenerima.Size = New System.Drawing.Size(542, 200)
+        Me.dgPenerima.Size = New System.Drawing.Size(637, 200)
         Me.dgPenerima.TabIndex = 1
         '
         'btnKirim
@@ -84,7 +85,7 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(196, 165)
+        Me.Label1.Location = New System.Drawing.Point(245, 165)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(182, 25)
         Me.Label1.TabIndex = 3
@@ -114,7 +115,7 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(336, 34)
+        Me.Label2.Location = New System.Drawing.Point(457, 30)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(153, 33)
         Me.Label2.TabIndex = 31
@@ -124,7 +125,7 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(314, 76)
+        Me.Label3.Location = New System.Drawing.Point(436, 75)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(189, 24)
         Me.Label3.TabIndex = 32
@@ -141,7 +142,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.btnStart)
         Me.Panel1.Location = New System.Drawing.Point(12, 11)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(541, 137)
+        Me.Panel1.Size = New System.Drawing.Size(637, 137)
         Me.Panel1.TabIndex = 33
         '
         'Button2
@@ -163,11 +164,22 @@ Partial Class Form1
         Me.lblTimer.TabIndex = 34
         Me.lblTimer.Text = "0"
         '
+        'cmdtest
+        '
+        Me.cmdtest.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdtest.Location = New System.Drawing.Point(12, 154)
+        Me.cmdtest.Name = "cmdtest"
+        Me.cmdtest.Size = New System.Drawing.Size(128, 35)
+        Me.cmdtest.TabIndex = 35
+        Me.cmdtest.Text = "Test"
+        Me.cmdtest.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(566, 450)
+        Me.ClientSize = New System.Drawing.Size(661, 450)
+        Me.Controls.Add(Me.cmdtest)
         Me.Controls.Add(Me.lblTimer)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
@@ -199,5 +211,6 @@ Partial Class Form1
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents lblTimer As System.Windows.Forms.Label
+    Friend WithEvents cmdtest As System.Windows.Forms.Button
 
 End Class

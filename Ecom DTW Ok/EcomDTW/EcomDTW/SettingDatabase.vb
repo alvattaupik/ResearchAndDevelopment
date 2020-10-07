@@ -55,6 +55,7 @@
 
         MsgBox("Konfigurasi Database Berhasil Disimpan", vbInformation, "Sukses!")
         Me.Dispose()
+        FormLogin.Show()
         Exit Sub
 
 
@@ -124,5 +125,21 @@
         End If
 
 
+    End Sub
+
+    Private Sub chkShowPasswordMysql_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPasswordMysql.CheckedChanged
+        If chkShowPasswordMysql.Checked = True Then
+            txtPasswordMySQL.PasswordChar = ""
+        Else
+            txtPasswordMySQL.PasswordChar = "*"
+        End If
+    End Sub
+
+    Private Sub chkShowPasswordSQLServer_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPasswordSQLServer.CheckedChanged
+        If chkShowPasswordSQLServer.Checked = False Then
+            txtPasswordSQlServer.PasswordChar = ""
+        Else
+            txtPasswordSQlServer.PasswordChar = "*"
+        End If
     End Sub
 End Class

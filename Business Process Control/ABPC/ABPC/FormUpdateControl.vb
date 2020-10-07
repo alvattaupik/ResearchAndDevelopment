@@ -1,24 +1,18 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class FormUpdateControl
-    Dim strStatusEnabled As String
+Public Class FormUpdateControlValidasi
+
 
     Private Sub cmdUpdate_Click(sender As Object, e As EventArgs) Handles cmdUpdate.Click
-        If cmbStatusEnabled.Text = "" Then
-            MsgBox("Status Enabled Harus Di Pilih", vbInformation, "Penting!")
+        If txtDocNum.Text = "" Then Exit Sub
+
+        If MsgBox("Apakah Anda yakin akan Menutup validasi " & txtNotifikasi.Text & " Untuk Cabang : " & txtCabang.Text & txtNotifikasi.Text, vbYesNo, "Konfirmasi?!") = vbYes Then
+
+            Call AUD_Validasi("U")
+            Me.Dispose()
+        Else
             Exit Sub
         End If
-
-        If cmbStatusEnabled.Text = "ENABLED" Then
-            strStatusEnabled = "1"
-        Else
-            strStatusEnabled = "0"
-        End If
-
-
-        Call AUD_Validasi("U")
-
-
 
     End Sub
 
@@ -33,14 +27,16 @@ Public Class FormUpdateControl
         cmd.CommandText = "[_tmsp_AUD_MasterValidasi]"
         cmd.CommandType = CommandType.StoredProcedure
         cmd.Parameters.AddWithValue("Docnum", Trim(txtDocNum.Text))
-        cmd.Parameters.AddWithValue("KodeValidasi", Trim(txtKodeValidasi.Text))
+        cmd.Parameters.AddWithValue("KodeValidasi", Trim(MstrKodeValidasi))
         cmd.Parameters.AddWithValue("kdJnsValidasi", Trim(""))
-        cmd.Parameters.AddWithValue("KodeCabang", Trim(""))
-        cmd.Parameters.AddWithValue("NamaValidasi", Trim(txtNamaValidasi.Text))
+        cmd.Parameters.AddWithValue("KodeCabang", Trim(txtCabang.Text))
+        cmd.Parameters.AddWithValue("NamaValidasi", Trim(txtJenisvalidasi.Text))
         cmd.Parameters.AddWithValue("Operation", Trim(""))
-        cmd.Parameters.AddWithValue("Fungsi", Trim(txtFungsi.Text))
+        cmd.Parameters.AddWithValue("Fungsi", Trim(""))
         cmd.Parameters.AddWithValue("Notifikasi", Trim(txtNotifikasi.Text))
-        cmd.Parameters.AddWithValue("StatusEnabled", Trim(strStatusEnabled))
+        cmd.Parameters.AddWithValue("StatusEnabled", Trim("1"))
+        cmd.Parameters.AddWithValue("NamaUser", Trim(MstrNamaUser))
+        cmd.Parameters.AddWithValue("Catatan", Trim("Close Validation"))
         cmd.Parameters.AddWithValue("Status", strStatusSP)
 
         If (Koneksi2.State = ConnectionState.Open) Then Koneksi2.Close()
@@ -56,43 +52,16 @@ Public Class FormUpdateControl
 
     Private Sub FormUpdateControl_Load(sender As Object, e As EventArgs) Handles Me.Load
         txtDocNum.Text = MstrDocNum
-        txtKodeValidasi.Text = MstrKodeValidasi
-        txtNamaValidasi.Text = MstrNamaValidasi
+        'txtKodeValidasi.Text = MstrKodeValidasi
+        txtJenisvalidasi.Text = MstrNamaValidasi
 
         txtCabang.Text = MstrNamaCabang
-        txtFungsi.Text = MstrFungsi
+        'txtFungsi.Text = MstrFungsi
         txtNotifikasi.Text = MstrNotifikasi
 
 
-        If MstrStatusEnabled = "1" Then
-            cmbStatusEnabled.Text = "ENABLED"
-        Else
-            cmbStatusEnabled.Text = "DISABLED"
-        End If
-
-
-
-
+      
     End Sub
 
-    Private Sub cmdUpdateAllLocation_Click(sender As Object, e As EventArgs) Handles cmdUpdateAllLocation.Click
-        If cmbStatusEnabled.Text = "" Then
-            MsgBox("Status Enabled Harus Di Pilih", vbInformation, "Penting!")
-            Exit Sub
-        End If
 
-        If cmbStatusEnabled.Text = "ENABLED" Then
-            strStatusEnabled = "1"
-        Else
-            strStatusEnabled = "0"
-        End If
-
-        If MsgBox("Anda Akan Mengupdate Konfigurasi ini Untuk Seluruh Cabang", vbYesNo, "Konfirmasi") = vbYes Then
-
-            Call AUD_Validasi("Y")
-        Else
-            Exit Sub
-
-        End If
-    End Sub
 End Class

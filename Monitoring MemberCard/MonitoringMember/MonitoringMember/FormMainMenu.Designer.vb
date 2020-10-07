@@ -23,12 +23,12 @@ Partial Class FormMainMenu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMainMenu))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -37,6 +37,7 @@ Partial Class FormMainMenu
         Me.DaftarMemberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.btnExportToExcel = New System.Windows.Forms.Button()
         Me.GunaGroupBox2 = New Guna.UI.WinForms.GunaGroupBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.dtp2 = New Guna.UI.WinForms.GunaDateTimePicker()
@@ -57,6 +58,7 @@ Partial Class FormMainMenu
         Me.CopyTableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LihatRiwayatTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GunaGradientButton2 = New Guna.UI.WinForms.GunaGradientButton()
         Me.txtNoStruk = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -75,26 +77,87 @@ Partial Class FormMainMenu
         Me.txtKodeCustomer = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.lblJumlahMemberPencarian = New System.Windows.Forms.Label()
         Me.txtDisplayTop = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.txtNoMember = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgInformasiMember = New Guna.UI.WinForms.GunaDataGridView()
+        Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CopyTableToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.txtNamaCustomer = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.lblJumlahNo = New System.Windows.Forms.Label()
+        Me.cmdExportMemberToExcel = New System.Windows.Forms.Button()
+        Me.dgNoMember = New System.Windows.Forms.DataGridView()
+        Me.ContextMenuStrip3 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CopyTableToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.cmdRefresh = New System.Windows.Forms.Button()
+        Me.cmdTampilkan = New System.Windows.Forms.Button()
+        Me.dgStokMember = New System.Windows.Forms.DataGridView()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.dgListNomor = New System.Windows.Forms.DataGridView()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtDibuatOleh = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.cmdGenerate = New System.Windows.Forms.Button()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.txtCatatan = New System.Windows.Forms.RichTextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.txtTo = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.txtFrom = New System.Windows.Forms.TextBox()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.btnRefreshListGenerate = New System.Windows.Forms.Button()
+        Me.lblPreview = New System.Windows.Forms.Label()
+        Me.lblJumlahGenerateNo = New System.Windows.Forms.Label()
+        Me.btnTampilkan = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnProses = New System.Windows.Forms.Button()
+        Me.picBarcode = New System.Windows.Forms.PictureBox()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.btnBrowseExportBarcode = New System.Windows.Forms.Button()
+        Me.txtpathExportbarcode = New System.Windows.Forms.TextBox()
+        Me.lblJumlahNoVoucher = New System.Windows.Forms.Label()
+        Me.dgDaftarNoVoucher = New System.Windows.Forms.DataGridView()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.dgListNoGenerateVoucher = New System.Windows.Forms.DataGridView()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnNewVoucher = New System.Windows.Forms.Button()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.txtisDuplicate = New System.Windows.Forms.TextBox()
+        Me.btnSimpanGenerateVoucher = New System.Windows.Forms.Button()
+        Me.btnPreview = New System.Windows.Forms.Button()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.txtToVoucher = New System.Windows.Forms.TextBox()
+        Me.txtFromVoucher = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.txtDibuatOlehNovoucher = New System.Windows.Forms.TextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.txtKeterangan = New System.Windows.Forms.RichTextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.txtGenerateNumber = New System.Windows.Forms.TextBox()
         Me.cmbKota = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.lblExport = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnExportToExcel = New System.Windows.Forms.Button()
-        Me.lblExport = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.ContextMenuStrip4 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.LihatNomorYangBelumTerpakaiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -107,9 +170,28 @@ Partial Class FormMainMenu
         Me.GroupBox1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         CType(Me.dgInformasiMember, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip2.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        CType(Me.dgNoMember, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip3.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.dgStokMember, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgListNomor, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
+        Me.TabPage5.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        CType(Me.picBarcode, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox7.SuspendLayout()
+        CType(Me.dgDaftarNoVoucher, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgListNoGenerateVoucher, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox5.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip4.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -152,6 +234,8 @@ Partial Class FormMainMenu
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Controls.Add(Me.TabPage5)
         Me.TabControl1.ItemSize = New System.Drawing.Size(100, 50)
         Me.TabControl1.Location = New System.Drawing.Point(4, 114)
         Me.TabControl1.Name = "TabControl1"
@@ -173,6 +257,16 @@ Partial Class FormMainMenu
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Daftar Monitoring  Member"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'btnExportToExcel
+        '
+        Me.btnExportToExcel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExportToExcel.Location = New System.Drawing.Point(576, 437)
+        Me.btnExportToExcel.Name = "btnExportToExcel"
+        Me.btnExportToExcel.Size = New System.Drawing.Size(198, 29)
+        Me.btnExportToExcel.TabIndex = 36
+        Me.btnExportToExcel.Text = "Export to Excel"
+        Me.btnExportToExcel.UseVisualStyleBackColor = True
         '
         'GunaGroupBox2
         '
@@ -414,31 +508,31 @@ Partial Class FormMainMenu
         'dgDaftarMember
         '
         Me.dgDaftarMember.AllowUserToAddRows = False
-        DataGridViewCellStyle22.BackColor = System.Drawing.Color.White
-        Me.dgDaftarMember.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgDaftarMember.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgDaftarMember.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgDaftarMember.BackgroundColor = System.Drawing.Color.Gray
         Me.dgDaftarMember.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgDaftarMember.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgDaftarMember.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgDaftarMember.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgDaftarMember.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgDaftarMember.ColumnHeadersHeight = 30
         Me.dgDaftarMember.ContextMenuStrip = Me.ContextMenuStrip1
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle24.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle24.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgDaftarMember.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgDaftarMember.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgDaftarMember.EnableHeadersVisualStyles = False
         Me.dgDaftarMember.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgDaftarMember.Location = New System.Drawing.Point(6, 118)
@@ -512,6 +606,16 @@ Partial Class FormMainMenu
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Lihat Transaksi"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(23, 441)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(192, 29)
+        Me.Button1.TabIndex = 40
+        Me.Button1.Text = "Export to Excel"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'GunaGradientButton2
         '
@@ -751,6 +855,16 @@ Partial Class FormMainMenu
         Me.TabPage3.Text = "Informasi Member"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(585, 430)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(178, 34)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "Export To Excel"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'lblJumlahMemberPencarian
         '
         Me.lblJumlahMemberPencarian.AutoSize = True
@@ -800,30 +914,31 @@ Partial Class FormMainMenu
         'dgInformasiMember
         '
         Me.dgInformasiMember.AllowUserToAddRows = False
-        DataGridViewCellStyle19.BackColor = System.Drawing.Color.White
-        Me.dgInformasiMember.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        Me.dgInformasiMember.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgInformasiMember.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgInformasiMember.BackgroundColor = System.Drawing.Color.Silver
         Me.dgInformasiMember.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgInformasiMember.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgInformasiMember.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgInformasiMember.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgInformasiMember.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgInformasiMember.ColumnHeadersHeight = 30
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle21.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgInformasiMember.DefaultCellStyle = DataGridViewCellStyle21
+        Me.dgInformasiMember.ContextMenuStrip = Me.ContextMenuStrip2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgInformasiMember.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgInformasiMember.EnableHeadersVisualStyles = False
         Me.dgInformasiMember.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgInformasiMember.Location = New System.Drawing.Point(12, 120)
@@ -856,6 +971,18 @@ Partial Class FormMainMenu
         Me.dgInformasiMember.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgInformasiMember.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
+        'ContextMenuStrip2
+        '
+        Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyTableToolStripMenuItem1})
+        Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
+        Me.ContextMenuStrip2.Size = New System.Drawing.Size(133, 26)
+        '
+        'CopyTableToolStripMenuItem1
+        '
+        Me.CopyTableToolStripMenuItem1.Name = "CopyTableToolStripMenuItem1"
+        Me.CopyTableToolStripMenuItem1.Size = New System.Drawing.Size(132, 22)
+        Me.CopyTableToolStripMenuItem1.Text = "Copy Table"
+        '
         'txtNamaCustomer
         '
         Me.txtNamaCustomer.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -873,6 +1000,577 @@ Partial Class FormMainMenu
         Me.Label4.Size = New System.Drawing.Size(179, 25)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Nama Customer"
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.GroupBox4)
+        Me.TabPage4.Controls.Add(Me.GroupBox3)
+        Me.TabPage4.Controls.Add(Me.GroupBox2)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 54)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(783, 470)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "Member Card Generator"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.lblJumlahNo)
+        Me.GroupBox4.Controls.Add(Me.cmdExportMemberToExcel)
+        Me.GroupBox4.Controls.Add(Me.dgNoMember)
+        Me.GroupBox4.Controls.Add(Me.Label23)
+        Me.GroupBox4.Location = New System.Drawing.Point(567, 113)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(200, 342)
+        Me.GroupBox4.TabIndex = 2
+        Me.GroupBox4.TabStop = False
+        '
+        'lblJumlahNo
+        '
+        Me.lblJumlahNo.AutoSize = True
+        Me.lblJumlahNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJumlahNo.Location = New System.Drawing.Point(6, 287)
+        Me.lblJumlahNo.Name = "lblJumlahNo"
+        Me.lblJumlahNo.Size = New System.Drawing.Size(88, 16)
+        Me.lblJumlahNo.TabIndex = 8
+        Me.lblJumlahNo.Text = "Jumlah No : 0"
+        '
+        'cmdExportMemberToExcel
+        '
+        Me.cmdExportMemberToExcel.Location = New System.Drawing.Point(6, 306)
+        Me.cmdExportMemberToExcel.Name = "cmdExportMemberToExcel"
+        Me.cmdExportMemberToExcel.Size = New System.Drawing.Size(188, 30)
+        Me.cmdExportMemberToExcel.TabIndex = 7
+        Me.cmdExportMemberToExcel.Text = "Export To Excel"
+        Me.cmdExportMemberToExcel.UseVisualStyleBackColor = True
+        '
+        'dgNoMember
+        '
+        Me.dgNoMember.AllowUserToAddRows = False
+        Me.dgNoMember.AllowUserToDeleteRows = False
+        Me.dgNoMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgNoMember.ContextMenuStrip = Me.ContextMenuStrip3
+        Me.dgNoMember.Location = New System.Drawing.Point(6, 37)
+        Me.dgNoMember.Name = "dgNoMember"
+        Me.dgNoMember.RowHeadersVisible = False
+        Me.dgNoMember.Size = New System.Drawing.Size(188, 247)
+        Me.dgNoMember.TabIndex = 3
+        '
+        'ContextMenuStrip3
+        '
+        Me.ContextMenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyTableToolStripMenuItem2})
+        Me.ContextMenuStrip3.Name = "ContextMenuStrip3"
+        Me.ContextMenuStrip3.Size = New System.Drawing.Size(133, 26)
+        '
+        'CopyTableToolStripMenuItem2
+        '
+        Me.CopyTableToolStripMenuItem2.Name = "CopyTableToolStripMenuItem2"
+        Me.CopyTableToolStripMenuItem2.Size = New System.Drawing.Size(132, 22)
+        Me.CopyTableToolStripMenuItem2.Text = "Copy Table"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(26, 9)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(151, 25)
+        Me.Label23.TabIndex = 2
+        Me.Label23.Text = "Daftar Nomor"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.cmdRefresh)
+        Me.GroupBox3.Controls.Add(Me.cmdTampilkan)
+        Me.GroupBox3.Controls.Add(Me.dgStokMember)
+        Me.GroupBox3.Controls.Add(Me.Label22)
+        Me.GroupBox3.Controls.Add(Me.Label21)
+        Me.GroupBox3.Controls.Add(Me.dgListNomor)
+        Me.GroupBox3.Location = New System.Drawing.Point(7, 114)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(553, 341)
+        Me.GroupBox3.TabIndex = 1
+        Me.GroupBox3.TabStop = False
+        '
+        'cmdRefresh
+        '
+        Me.cmdRefresh.Location = New System.Drawing.Point(457, 186)
+        Me.cmdRefresh.Name = "cmdRefresh"
+        Me.cmdRefresh.Size = New System.Drawing.Size(90, 145)
+        Me.cmdRefresh.TabIndex = 8
+        Me.cmdRefresh.Text = "Refresh"
+        Me.cmdRefresh.UseVisualStyleBackColor = True
+        '
+        'cmdTampilkan
+        '
+        Me.cmdTampilkan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdTampilkan.Location = New System.Drawing.Point(457, 30)
+        Me.cmdTampilkan.Name = "cmdTampilkan"
+        Me.cmdTampilkan.Size = New System.Drawing.Size(90, 125)
+        Me.cmdTampilkan.TabIndex = 7
+        Me.cmdTampilkan.Text = "Tampilkan"
+        Me.cmdTampilkan.UseVisualStyleBackColor = True
+        '
+        'dgStokMember
+        '
+        Me.dgStokMember.AllowUserToAddRows = False
+        Me.dgStokMember.AllowUserToDeleteRows = False
+        Me.dgStokMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgStokMember.ContextMenuStrip = Me.ContextMenuStrip4
+        Me.dgStokMember.Location = New System.Drawing.Point(9, 186)
+        Me.dgStokMember.Name = "dgStokMember"
+        Me.dgStokMember.ReadOnly = True
+        Me.dgStokMember.RowHeadersVisible = False
+        Me.dgStokMember.Size = New System.Drawing.Size(445, 145)
+        Me.dgStokMember.TabIndex = 3
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(69, 5)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(291, 25)
+        Me.Label22.TabIndex = 2
+        Me.Label22.Text = "Nomor Yang Sudah Dibuat"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(69, 158)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(325, 25)
+        Me.Label21.TabIndex = 1
+        Me.Label21.Text = "Monitoring Stok Member Card"
+        '
+        'dgListNomor
+        '
+        Me.dgListNomor.AllowUserToAddRows = False
+        Me.dgListNomor.AllowUserToDeleteRows = False
+        Me.dgListNomor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgListNomor.Location = New System.Drawing.Point(9, 30)
+        Me.dgListNomor.Name = "dgListNomor"
+        Me.dgListNomor.RowHeadersVisible = False
+        Me.dgListNomor.Size = New System.Drawing.Size(445, 125)
+        Me.dgListNomor.TabIndex = 0
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.txtDibuatOleh)
+        Me.GroupBox2.Controls.Add(Me.Label24)
+        Me.GroupBox2.Controls.Add(Me.cmdGenerate)
+        Me.GroupBox2.Controls.Add(Me.Label20)
+        Me.GroupBox2.Controls.Add(Me.txtCatatan)
+        Me.GroupBox2.Controls.Add(Me.Label19)
+        Me.GroupBox2.Controls.Add(Me.txtTo)
+        Me.GroupBox2.Controls.Add(Me.Label18)
+        Me.GroupBox2.Controls.Add(Me.txtFrom)
+        Me.GroupBox2.Location = New System.Drawing.Point(7, 7)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(760, 100)
+        Me.GroupBox2.TabIndex = 0
+        Me.GroupBox2.TabStop = False
+        '
+        'txtDibuatOleh
+        '
+        Me.txtDibuatOleh.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDibuatOleh.Location = New System.Drawing.Point(376, 57)
+        Me.txtDibuatOleh.Name = "txtDibuatOleh"
+        Me.txtDibuatOleh.Size = New System.Drawing.Size(260, 29)
+        Me.txtDibuatOleh.TabIndex = 8
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(310, 69)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(63, 13)
+        Me.Label24.TabIndex = 7
+        Me.Label24.Text = "Dibuat Oleh"
+        '
+        'cmdGenerate
+        '
+        Me.cmdGenerate.Location = New System.Drawing.Point(642, 11)
+        Me.cmdGenerate.Name = "cmdGenerate"
+        Me.cmdGenerate.Size = New System.Drawing.Size(112, 74)
+        Me.cmdGenerate.TabIndex = 6
+        Me.cmdGenerate.Text = "Proses"
+        Me.cmdGenerate.UseVisualStyleBackColor = True
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(316, 17)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(44, 13)
+        Me.Label20.TabIndex = 5
+        Me.Label20.Text = "Catatan"
+        '
+        'txtCatatan
+        '
+        Me.txtCatatan.Location = New System.Drawing.Point(377, 9)
+        Me.txtCatatan.Name = "txtCatatan"
+        Me.txtCatatan.Size = New System.Drawing.Size(258, 42)
+        Me.txtCatatan.TabIndex = 4
+        Me.txtCatatan.Text = ""
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(6, 64)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(20, 13)
+        Me.Label19.TabIndex = 3
+        Me.Label19.Text = "To"
+        '
+        'txtTo
+        '
+        Me.txtTo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTo.Location = New System.Drawing.Point(42, 53)
+        Me.txtTo.Name = "txtTo"
+        Me.txtTo.Size = New System.Drawing.Size(260, 29)
+        Me.txtTo.TabIndex = 2
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(6, 20)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(30, 13)
+        Me.Label18.TabIndex = 1
+        Me.Label18.Text = "From"
+        '
+        'txtFrom
+        '
+        Me.txtFrom.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFrom.Location = New System.Drawing.Point(42, 17)
+        Me.txtFrom.Name = "txtFrom"
+        Me.txtFrom.Size = New System.Drawing.Size(260, 29)
+        Me.txtFrom.TabIndex = 0
+        '
+        'TabPage5
+        '
+        Me.TabPage5.Controls.Add(Me.btnRefreshListGenerate)
+        Me.TabPage5.Controls.Add(Me.lblPreview)
+        Me.TabPage5.Controls.Add(Me.lblJumlahGenerateNo)
+        Me.TabPage5.Controls.Add(Me.btnTampilkan)
+        Me.TabPage5.Controls.Add(Me.Panel2)
+        Me.TabPage5.Controls.Add(Me.Label31)
+        Me.TabPage5.Controls.Add(Me.dgListNoGenerateVoucher)
+        Me.TabPage5.Controls.Add(Me.GroupBox5)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 54)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(783, 470)
+        Me.TabPage5.TabIndex = 4
+        Me.TabPage5.Text = "GenerateVoucher"
+        Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'btnRefreshListGenerate
+        '
+        Me.btnRefreshListGenerate.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnRefreshListGenerate.Location = New System.Drawing.Point(276, 152)
+        Me.btnRefreshListGenerate.Name = "btnRefreshListGenerate"
+        Me.btnRefreshListGenerate.Size = New System.Drawing.Size(73, 73)
+        Me.btnRefreshListGenerate.TabIndex = 7
+        Me.btnRefreshListGenerate.Text = "Refresh"
+        Me.btnRefreshListGenerate.UseVisualStyleBackColor = False
+        '
+        'lblPreview
+        '
+        Me.lblPreview.AutoSize = True
+        Me.lblPreview.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPreview.Location = New System.Drawing.Point(290, 124)
+        Me.lblPreview.Name = "lblPreview"
+        Me.lblPreview.Size = New System.Drawing.Size(20, 25)
+        Me.lblPreview.TabIndex = 6
+        Me.lblPreview.Text = "-"
+        Me.lblPreview.Visible = False
+        '
+        'lblJumlahGenerateNo
+        '
+        Me.lblJumlahGenerateNo.AutoSize = True
+        Me.lblJumlahGenerateNo.Location = New System.Drawing.Point(6, 451)
+        Me.lblJumlahGenerateNo.Name = "lblJumlahGenerateNo"
+        Me.lblJumlahGenerateNo.Size = New System.Drawing.Size(87, 13)
+        Me.lblJumlahGenerateNo.TabIndex = 5
+        Me.lblJumlahGenerateNo.Text = "Jumlah Generate"
+        '
+        'btnTampilkan
+        '
+        Me.btnTampilkan.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnTampilkan.Location = New System.Drawing.Point(276, 231)
+        Me.btnTampilkan.Name = "btnTampilkan"
+        Me.btnTampilkan.Size = New System.Drawing.Size(73, 65)
+        Me.btnTampilkan.TabIndex = 4
+        Me.btnTampilkan.Text = "Tampilkan"
+        Me.btnTampilkan.UseVisualStyleBackColor = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.btnProses)
+        Me.Panel2.Controls.Add(Me.picBarcode)
+        Me.Panel2.Controls.Add(Me.GroupBox7)
+        Me.Panel2.Controls.Add(Me.lblJumlahNoVoucher)
+        Me.Panel2.Controls.Add(Me.dgDaftarNoVoucher)
+        Me.Panel2.Location = New System.Drawing.Point(355, 127)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(422, 337)
+        Me.Panel2.TabIndex = 3
+        '
+        'btnProses
+        '
+        Me.btnProses.Enabled = False
+        Me.btnProses.Location = New System.Drawing.Point(282, 193)
+        Me.btnProses.Name = "btnProses"
+        Me.btnProses.Size = New System.Drawing.Size(124, 51)
+        Me.btnProses.TabIndex = 19
+        Me.btnProses.Text = "Proses"
+        Me.btnProses.UseVisualStyleBackColor = True
+        '
+        'picBarcode
+        '
+        Me.picBarcode.BackColor = System.Drawing.Color.Gray
+        Me.picBarcode.Location = New System.Drawing.Point(282, 45)
+        Me.picBarcode.Name = "picBarcode"
+        Me.picBarcode.Size = New System.Drawing.Size(124, 124)
+        Me.picBarcode.TabIndex = 5
+        Me.picBarcode.TabStop = False
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Controls.Add(Me.btnBrowseExportBarcode)
+        Me.GroupBox7.Controls.Add(Me.txtpathExportbarcode)
+        Me.GroupBox7.Location = New System.Drawing.Point(4, 281)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(412, 48)
+        Me.GroupBox7.TabIndex = 4
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "Lokasi Export"
+        '
+        'btnBrowseExportBarcode
+        '
+        Me.btnBrowseExportBarcode.Location = New System.Drawing.Point(6, 19)
+        Me.btnBrowseExportBarcode.Name = "btnBrowseExportBarcode"
+        Me.btnBrowseExportBarcode.Size = New System.Drawing.Size(70, 24)
+        Me.btnBrowseExportBarcode.TabIndex = 18
+        Me.btnBrowseExportBarcode.Text = "Browse"
+        Me.btnBrowseExportBarcode.UseVisualStyleBackColor = True
+        '
+        'txtpathExportbarcode
+        '
+        Me.txtpathExportbarcode.Location = New System.Drawing.Point(94, 23)
+        Me.txtpathExportbarcode.Name = "txtpathExportbarcode"
+        Me.txtpathExportbarcode.ReadOnly = True
+        Me.txtpathExportbarcode.Size = New System.Drawing.Size(318, 20)
+        Me.txtpathExportbarcode.TabIndex = 17
+        '
+        'lblJumlahNoVoucher
+        '
+        Me.lblJumlahNoVoucher.AutoSize = True
+        Me.lblJumlahNoVoucher.Location = New System.Drawing.Point(3, 247)
+        Me.lblJumlahNoVoucher.Name = "lblJumlahNoVoucher"
+        Me.lblJumlahNoVoucher.Size = New System.Drawing.Size(106, 13)
+        Me.lblJumlahNoVoucher.TabIndex = 1
+        Me.lblJumlahNoVoucher.Text = "Jumlah No Voucher :"
+        '
+        'dgDaftarNoVoucher
+        '
+        Me.dgDaftarNoVoucher.AllowUserToAddRows = False
+        Me.dgDaftarNoVoucher.AllowUserToDeleteRows = False
+        Me.dgDaftarNoVoucher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgDaftarNoVoucher.Location = New System.Drawing.Point(3, 3)
+        Me.dgDaftarNoVoucher.Name = "dgDaftarNoVoucher"
+        Me.dgDaftarNoVoucher.ReadOnly = True
+        Me.dgDaftarNoVoucher.RowHeadersVisible = False
+        Me.dgDaftarNoVoucher.Size = New System.Drawing.Size(269, 241)
+        Me.dgDaftarNoVoucher.TabIndex = 0
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(8, 124)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(248, 25)
+        Me.Label31.TabIndex = 2
+        Me.Label31.Text = "List Generate Voucher"
+        '
+        'dgListNoGenerateVoucher
+        '
+        Me.dgListNoGenerateVoucher.AllowUserToAddRows = False
+        Me.dgListNoGenerateVoucher.AllowUserToDeleteRows = False
+        Me.dgListNoGenerateVoucher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgListNoGenerateVoucher.Location = New System.Drawing.Point(7, 152)
+        Me.dgListNoGenerateVoucher.Name = "dgListNoGenerateVoucher"
+        Me.dgListNoGenerateVoucher.ReadOnly = True
+        Me.dgListNoGenerateVoucher.RowHeadersVisible = False
+        Me.dgListNoGenerateVoucher.Size = New System.Drawing.Size(266, 288)
+        Me.dgListNoGenerateVoucher.TabIndex = 1
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.BackColor = System.Drawing.Color.Silver
+        Me.GroupBox5.Controls.Add(Me.Panel3)
+        Me.GroupBox5.Controls.Add(Me.GroupBox6)
+        Me.GroupBox5.Controls.Add(Me.txtDibuatOlehNovoucher)
+        Me.GroupBox5.Controls.Add(Me.Label27)
+        Me.GroupBox5.Controls.Add(Me.txtKeterangan)
+        Me.GroupBox5.Controls.Add(Me.Label26)
+        Me.GroupBox5.Controls.Add(Me.Label25)
+        Me.GroupBox5.Controls.Add(Me.txtGenerateNumber)
+        Me.GroupBox5.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(771, 115)
+        Me.GroupBox5.TabIndex = 0
+        Me.GroupBox5.TabStop = False
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.btnNewVoucher)
+        Me.Panel3.Location = New System.Drawing.Point(3, 15)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(84, 92)
+        Me.Panel3.TabIndex = 13
+        '
+        'btnNewVoucher
+        '
+        Me.btnNewVoucher.Location = New System.Drawing.Point(4, 4)
+        Me.btnNewVoucher.Name = "btnNewVoucher"
+        Me.btnNewVoucher.Size = New System.Drawing.Size(75, 82)
+        Me.btnNewVoucher.TabIndex = 7
+        Me.btnNewVoucher.Text = "New"
+        Me.btnNewVoucher.UseVisualStyleBackColor = True
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.GroupBox6.Controls.Add(Me.txtisDuplicate)
+        Me.GroupBox6.Controls.Add(Me.btnSimpanGenerateVoucher)
+        Me.GroupBox6.Controls.Add(Me.btnPreview)
+        Me.GroupBox6.Controls.Add(Me.Label29)
+        Me.GroupBox6.Controls.Add(Me.txtToVoucher)
+        Me.GroupBox6.Controls.Add(Me.txtFromVoucher)
+        Me.GroupBox6.Controls.Add(Me.Label28)
+        Me.GroupBox6.Location = New System.Drawing.Point(454, 7)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(311, 100)
+        Me.GroupBox6.TabIndex = 6
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Parameters"
+        '
+        'txtisDuplicate
+        '
+        Me.txtisDuplicate.Location = New System.Drawing.Point(227, 1)
+        Me.txtisDuplicate.Name = "txtisDuplicate"
+        Me.txtisDuplicate.Size = New System.Drawing.Size(67, 20)
+        Me.txtisDuplicate.TabIndex = 14
+        Me.txtisDuplicate.Visible = False
+        '
+        'btnSimpanGenerateVoucher
+        '
+        Me.btnSimpanGenerateVoucher.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.btnSimpanGenerateVoucher.Location = New System.Drawing.Point(162, 63)
+        Me.btnSimpanGenerateVoucher.Name = "btnSimpanGenerateVoucher"
+        Me.btnSimpanGenerateVoucher.Size = New System.Drawing.Size(139, 31)
+        Me.btnSimpanGenerateVoucher.TabIndex = 5
+        Me.btnSimpanGenerateVoucher.Text = "Simpan"
+        Me.btnSimpanGenerateVoucher.UseVisualStyleBackColor = False
+        '
+        'btnPreview
+        '
+        Me.btnPreview.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnPreview.Location = New System.Drawing.Point(9, 63)
+        Me.btnPreview.Name = "btnPreview"
+        Me.btnPreview.Size = New System.Drawing.Size(133, 31)
+        Me.btnPreview.TabIndex = 4
+        Me.btnPreview.Text = "Preview"
+        Me.btnPreview.UseVisualStyleBackColor = False
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(206, 29)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(20, 13)
+        Me.Label29.TabIndex = 3
+        Me.Label29.Text = "To"
+        '
+        'txtToVoucher
+        '
+        Me.txtToVoucher.Location = New System.Drawing.Point(227, 27)
+        Me.txtToVoucher.Name = "txtToVoucher"
+        Me.txtToVoucher.Size = New System.Drawing.Size(74, 20)
+        Me.txtToVoucher.TabIndex = 2
+        '
+        'txtFromVoucher
+        '
+        Me.txtFromVoucher.Location = New System.Drawing.Point(127, 26)
+        Me.txtFromVoucher.Name = "txtFromVoucher"
+        Me.txtFromVoucher.Size = New System.Drawing.Size(75, 20)
+        Me.txtFromVoucher.TabIndex = 1
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(6, 31)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(119, 13)
+        Me.Label28.TabIndex = 0
+        Me.Label28.Text = "Voucher Number From :"
+        '
+        'txtDibuatOlehNovoucher
+        '
+        Me.txtDibuatOlehNovoucher.Location = New System.Drawing.Point(212, 81)
+        Me.txtDibuatOlehNovoucher.Name = "txtDibuatOlehNovoucher"
+        Me.txtDibuatOlehNovoucher.Size = New System.Drawing.Size(234, 20)
+        Me.txtDibuatOlehNovoucher.TabIndex = 5
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(96, 86)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(63, 13)
+        Me.Label27.TabIndex = 4
+        Me.Label27.Text = "Dibuat Oleh"
+        '
+        'txtKeterangan
+        '
+        Me.txtKeterangan.Location = New System.Drawing.Point(212, 30)
+        Me.txtKeterangan.Name = "txtKeterangan"
+        Me.txtKeterangan.Size = New System.Drawing.Size(234, 47)
+        Me.txtKeterangan.TabIndex = 3
+        Me.txtKeterangan.Text = ""
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(96, 35)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(62, 13)
+        Me.Label26.TabIndex = 2
+        Me.Label26.Text = "Keterangan"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(95, 12)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(91, 13)
+        Me.Label25.TabIndex = 1
+        Me.Label25.Text = "Generate Number"
+        '
+        'txtGenerateNumber
+        '
+        Me.txtGenerateNumber.Location = New System.Drawing.Point(212, 8)
+        Me.txtGenerateNumber.Name = "txtGenerateNumber"
+        Me.txtGenerateNumber.ReadOnly = True
+        Me.txtGenerateNumber.Size = New System.Drawing.Size(234, 20)
+        Me.txtGenerateNumber.TabIndex = 0
         '
         'cmbKota
         '
@@ -910,6 +1608,13 @@ Partial Class FormMainMenu
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(140, 17)
         Me.ToolStripStatusLabel1.Text = "Member Monitoring V1.0"
+        '
+        'lblExport
+        '
+        Me.lblExport.BackColor = System.Drawing.Color.White
+        Me.lblExport.Name = "lblExport"
+        Me.lblExport.Size = New System.Drawing.Size(72, 17)
+        Me.lblExport.Text = "MengExport"
         '
         'Panel1
         '
@@ -954,42 +1659,20 @@ Partial Class FormMainMenu
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'btnExportToExcel
+        'BackgroundWorker1
         '
-        Me.btnExportToExcel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExportToExcel.Location = New System.Drawing.Point(644, 437)
-        Me.btnExportToExcel.Name = "btnExportToExcel"
-        Me.btnExportToExcel.Size = New System.Drawing.Size(130, 29)
-        Me.btnExportToExcel.TabIndex = 36
-        Me.btnExportToExcel.Text = "Export to Excel"
-        Me.btnExportToExcel.UseVisualStyleBackColor = True
         '
-        'lblExport
+        'ContextMenuStrip4
         '
-        Me.lblExport.BackColor = System.Drawing.Color.White
-        Me.lblExport.Name = "lblExport"
-        Me.lblExport.Size = New System.Drawing.Size(72, 17)
-        Me.lblExport.Text = "MengExport"
+        Me.ContextMenuStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LihatNomorYangBelumTerpakaiToolStripMenuItem})
+        Me.ContextMenuStrip4.Name = "ContextMenuStrip4"
+        Me.ContextMenuStrip4.Size = New System.Drawing.Size(254, 26)
         '
-        'Button1
+        'LihatNomorYangBelumTerpakaiToolStripMenuItem
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(23, 441)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(192, 29)
-        Me.Button1.TabIndex = 40
-        Me.Button1.Text = "Export to Excel"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(585, 430)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(178, 34)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Export To Excel"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.LihatNomorYangBelumTerpakaiToolStripMenuItem.Name = "LihatNomorYangBelumTerpakaiToolStripMenuItem"
+        Me.LihatNomorYangBelumTerpakaiToolStripMenuItem.Size = New System.Drawing.Size(253, 22)
+        Me.LihatNomorYangBelumTerpakaiToolStripMenuItem.Text = "Lihat Nomor Yang Belum Terpakai"
         '
         'FormMainMenu
         '
@@ -1027,11 +1710,38 @@ Partial Class FormMainMenu
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         CType(Me.dgInformasiMember, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip2.ResumeLayout(False)
+        Me.TabPage4.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        CType(Me.dgNoMember, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip3.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        CType(Me.dgStokMember, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgListNomor, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.TabPage5.ResumeLayout(False)
+        Me.TabPage5.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.picBarcode, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
+        CType(Me.dgDaftarNoVoucher, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgListNoGenerateVoucher, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip4.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1101,4 +1811,67 @@ Partial Class FormMainMenu
     Friend WithEvents lblExport As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents ContextMenuStrip2 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents CopyTableToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents cmdExportMemberToExcel As System.Windows.Forms.Button
+    Friend WithEvents dgNoMember As System.Windows.Forms.DataGridView
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents cmdRefresh As System.Windows.Forms.Button
+    Friend WithEvents cmdTampilkan As System.Windows.Forms.Button
+    Friend WithEvents dgStokMember As System.Windows.Forms.DataGridView
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents dgListNomor As System.Windows.Forms.DataGridView
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents cmdGenerate As System.Windows.Forms.Button
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents txtCatatan As System.Windows.Forms.RichTextBox
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents txtTo As System.Windows.Forms.TextBox
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents txtFrom As System.Windows.Forms.TextBox
+    Friend WithEvents lblJumlahNo As System.Windows.Forms.Label
+    Friend WithEvents ContextMenuStrip3 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents CopyTableToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents txtDibuatOleh As System.Windows.Forms.TextBox
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
+    Friend WithEvents btnTampilkan As System.Windows.Forms.Button
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents dgDaftarNoVoucher As System.Windows.Forms.DataGridView
+    Friend WithEvents Label31 As System.Windows.Forms.Label
+    Friend WithEvents dgListNoGenerateVoucher As System.Windows.Forms.DataGridView
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
+    Friend WithEvents btnSimpanGenerateVoucher As System.Windows.Forms.Button
+    Friend WithEvents btnPreview As System.Windows.Forms.Button
+    Friend WithEvents Label29 As System.Windows.Forms.Label
+    Friend WithEvents txtToVoucher As System.Windows.Forms.TextBox
+    Friend WithEvents txtFromVoucher As System.Windows.Forms.TextBox
+    Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents txtDibuatOlehNovoucher As System.Windows.Forms.TextBox
+    Friend WithEvents Label27 As System.Windows.Forms.Label
+    Friend WithEvents txtKeterangan As System.Windows.Forms.RichTextBox
+    Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents txtGenerateNumber As System.Windows.Forms.TextBox
+    Friend WithEvents lblJumlahGenerateNo As System.Windows.Forms.Label
+    Friend WithEvents lblJumlahNoVoucher As System.Windows.Forms.Label
+    Friend WithEvents FolderBrowserDialog1 As System.Windows.Forms.FolderBrowserDialog
+    Friend WithEvents lblPreview As System.Windows.Forms.Label
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents btnNewVoucher As System.Windows.Forms.Button
+    Friend WithEvents txtisDuplicate As System.Windows.Forms.TextBox
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents btnRefreshListGenerate As System.Windows.Forms.Button
+    Friend WithEvents GroupBox7 As System.Windows.Forms.GroupBox
+    Friend WithEvents btnProses As System.Windows.Forms.Button
+    Friend WithEvents btnBrowseExportBarcode As System.Windows.Forms.Button
+    Friend WithEvents txtpathExportbarcode As System.Windows.Forms.TextBox
+    Friend WithEvents picBarcode As System.Windows.Forms.PictureBox
+    Friend WithEvents ContextMenuStrip4 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents LihatNomorYangBelumTerpakaiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

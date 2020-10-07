@@ -30,7 +30,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>23</ApplicationRevision>
+    <ApplicationRevision>26</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -154,6 +154,12 @@
     <Compile Include="MarginBaru.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MarginBaruV1_3.designer.vb">
+      <DependentUpon>MarginBaruV1_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MarginBaruV1_3.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MarginBaruV1_2.designer.vb">
       <DependentUpon>MarginBaruV1_2.vb</DependentUpon>
     </Compile>
@@ -185,6 +191,12 @@
       <DependentUpon>SalesMonitoringNew2.vb</DependentUpon>
     </Compile>
     <Compile Include="SalesMonitoringNew2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockV1_1.Designer.vb">
+      <DependentUpon>StockV1_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StockV1_1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="stockView.Designer.vb">
@@ -339,6 +351,9 @@
     <EmbeddedResource Include="MarginBaru.resx">
       <DependentUpon>MarginBaru.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MarginBaruV1_3.resx">
+      <DependentUpon>MarginBaruV1_3.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MarginBaruV1_2.resx">
       <DependentUpon>MarginBaruV1_2.vb</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +368,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SalesMonitoringNew2.resx">
       <DependentUpon>SalesMonitoringNew2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockV1_1.resx">
+      <DependentUpon>StockV1_1.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="stockView.resx">
       <DependentUpon>stockView.vb</DependentUpon>
@@ -534,22 +553,22 @@
   <ItemGroup>
     <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="stdole">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

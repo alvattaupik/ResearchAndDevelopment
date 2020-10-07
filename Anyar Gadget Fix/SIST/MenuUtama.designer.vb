@@ -57,6 +57,7 @@ Partial Class MenuUtama
         Me.FotoProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PushNotificationsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UserLoginDanHakAksesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MasterEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DaftarBantuanDanPermasalahanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -71,7 +72,6 @@ Partial Class MenuUtama
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TimerNotifikasi = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.MasterEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -302,6 +302,12 @@ Partial Class MenuUtama
         Me.UserLoginDanHakAksesToolStripMenuItem.Size = New System.Drawing.Size(210, 22)
         Me.UserLoginDanHakAksesToolStripMenuItem.Text = "User Login dan Hak Akses"
         '
+        'MasterEmployeeToolStripMenuItem
+        '
+        Me.MasterEmployeeToolStripMenuItem.Name = "MasterEmployeeToolStripMenuItem"
+        Me.MasterEmployeeToolStripMenuItem.Size = New System.Drawing.Size(210, 22)
+        Me.MasterEmployeeToolStripMenuItem.Text = "Master Employee"
+        '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DaftarBantuanDanPermasalahanToolStripMenuItem})
@@ -397,12 +403,6 @@ Partial Class MenuUtama
         'TimerNotifikasi
         '
         Me.TimerNotifikasi.Interval = 1000
-        '
-        'MasterEmployeeToolStripMenuItem
-        '
-        Me.MasterEmployeeToolStripMenuItem.Name = "MasterEmployeeToolStripMenuItem"
-        Me.MasterEmployeeToolStripMenuItem.Size = New System.Drawing.Size(210, 22)
-        Me.MasterEmployeeToolStripMenuItem.Text = "Master Employee"
         '
         'MenuUtama
         '

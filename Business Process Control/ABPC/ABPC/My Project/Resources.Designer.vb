@@ -73,6 +73,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property icone_validation_png_8_Transparent_Images() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icone-validation-png-8-Transparent-Images", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property la_appointment_prospecting_112917_03() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("la-appointment-prospecting-112917-03", resourceCulture)

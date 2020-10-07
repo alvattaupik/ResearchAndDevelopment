@@ -4,9 +4,6 @@ Imports System.Data.Sql
 Imports System.Data.SqlClient
 Public Class AnyarLocalPrint
 
-
-
-
     Private Sub cmdPreviewDelivery_Click(sender As Object, e As EventArgs) Handles cmdPreviewDelivery.Click
         Dim strPathReport As String
         Dim strStatusPath As String
@@ -67,6 +64,8 @@ Public Class AnyarLocalPrint
 
             CRVDelivery.Refresh()
         End If
+
+
     End Sub
 
     Private Sub cmdPreviewGRPO_Click(sender As Object, e As EventArgs) Handles cmdPreviewGRPO.Click

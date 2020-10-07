@@ -1,0 +1,714 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class StockV_1_1
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.brand = New System.Windows.Forms.ComboBox()
+        Me.vendor = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.d1 = New System.Windows.Forms.Label()
+        Me.d2 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CopyTableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.r14 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.r12 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.r11 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.r10 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.r9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.r7 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.r8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.r2 = New System.Windows.Forms.Label()
+        Me.r3 = New System.Windows.Forms.Label()
+        Me.r4 = New System.Windows.Forms.Label()
+        Me.r5 = New System.Windows.Forms.Label()
+        Me.r6 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.r1 = New System.Windows.Forms.Label()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(12, 10)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(370, 24)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Refresh"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.EnableHeadersVisualStyles = False
+        Me.DataGridView1.Location = New System.Drawing.Point(1, 114)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.RowHeadersWidth = 10
+        Me.DataGridView1.Size = New System.Drawing.Size(1361, 390)
+        Me.DataGridView1.TabIndex = 3
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(93, 88)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(289, 20)
+        Me.TextBox1.TabIndex = 4
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(12, 91)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(77, 13)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Kata Kunci :"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(12, 43)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(48, 13)
+        Me.Label9.TabIndex = 22
+        Me.Label9.Text = "Brand :"
+        '
+        'brand
+        '
+        Me.brand.FormattingEnabled = True
+        Me.brand.Location = New System.Drawing.Point(93, 40)
+        Me.brand.Name = "brand"
+        Me.brand.Size = New System.Drawing.Size(289, 21)
+        Me.brand.TabIndex = 23
+        '
+        'vendor
+        '
+        Me.vendor.FormattingEnabled = True
+        Me.vendor.Location = New System.Drawing.Point(93, 64)
+        Me.vendor.Name = "vendor"
+        Me.vendor.Size = New System.Drawing.Size(289, 21)
+        Me.vendor.TabIndex = 25
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(12, 67)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(55, 13)
+        Me.Label10.TabIndex = 24
+        Me.Label10.Text = "Vendor :"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(450, 154)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(115, 98)
+        Me.DataGridView2.TabIndex = 26
+        Me.DataGridView2.Visible = False
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.Location = New System.Drawing.Point(1174, 23)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(172, 34)
+        Me.Button2.TabIndex = 27
+        Me.Button2.Text = "Export"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label11.Location = New System.Drawing.Point(736, 25)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(430, 31)
+        Me.Label11.TabIndex = 28
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label11.Visible = False
+        '
+        'SaveFileDialog1
+        '
+        Me.SaveFileDialog1.DefaultExt = "xls"
+        Me.SaveFileDialog1.Filter = "Excel files (*.xls)|*.xls|Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*"
+        '
+        'Label12
+        '
+        Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label12.Location = New System.Drawing.Point(1174, 77)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(90, 15)
+        Me.Label12.TabIndex = 29
+        Me.Label12.Text = "Date"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label13
+        '
+        Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label13.Location = New System.Drawing.Point(1254, 77)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(90, 15)
+        Me.Label13.TabIndex = 30
+        Me.Label13.Text = "Time"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'd1
+        '
+        Me.d1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.d1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.d1.Location = New System.Drawing.Point(1174, 96)
+        Me.d1.Name = "d1"
+        Me.d1.Size = New System.Drawing.Size(90, 15)
+        Me.d1.TabIndex = 31
+        Me.d1.Text = "Date"
+        Me.d1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'd2
+        '
+        Me.d2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.d2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.d2.Location = New System.Drawing.Point(1254, 96)
+        Me.d2.Name = "d2"
+        Me.d2.Size = New System.Drawing.Size(90, 15)
+        Me.d2.TabIndex = 32
+        Me.d2.Text = "Date"
+        Me.d2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(594, 11)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 34
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Image = Global.RKM_BI.My.Resources.Resources.loading__1_
+        Me.PictureBox1.Location = New System.Drawing.Point(1, -6)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(1371, 516)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 42
+        Me.PictureBox1.TabStop = False
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyTableToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(133, 26)
+        '
+        'CopyTableToolStripMenuItem
+        '
+        Me.CopyTableToolStripMenuItem.Name = "CopyTableToolStripMenuItem"
+        Me.CopyTableToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.CopyTableToolStripMenuItem.Text = "Copy Table"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Label20)
+        Me.GroupBox1.Controls.Add(Me.Label21)
+        Me.GroupBox1.Controls.Add(Me.Label18)
+        Me.GroupBox1.Controls.Add(Me.r14)
+        Me.GroupBox1.Controls.Add(Me.Label19)
+        Me.GroupBox1.Controls.Add(Me.r12)
+        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.r11)
+        Me.GroupBox1.Controls.Add(Me.Label16)
+        Me.GroupBox1.Controls.Add(Me.r10)
+        Me.GroupBox1.Controls.Add(Me.Label15)
+        Me.GroupBox1.Controls.Add(Me.r9)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.r7)
+        Me.GroupBox1.Controls.Add(Me.Label14)
+        Me.GroupBox1.Controls.Add(Me.r8)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.r2)
+        Me.GroupBox1.Controls.Add(Me.r3)
+        Me.GroupBox1.Controls.Add(Me.r4)
+        Me.GroupBox1.Controls.Add(Me.r5)
+        Me.GroupBox1.Controls.Add(Me.r6)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.r1)
+        Me.GroupBox1.Location = New System.Drawing.Point(1, 494)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(1361, 10)
+        Me.GroupBox1.TabIndex = 43
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "SUMMARY"
+        Me.GroupBox1.Visible = False
+        '
+        'Label20
+        '
+        Me.Label20.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label20.Location = New System.Drawing.Point(1195, -15)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(99, 13)
+        Me.Label20.TabIndex = 62
+        Me.Label20.Text = "PAMANUKAN"
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label21
+        '
+        Me.Label21.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label21.Location = New System.Drawing.Point(1195, 3)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(99, 13)
+        Me.Label21.TabIndex = 61
+        Me.Label21.Text = "0"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label18
+        '
+        Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label18.Location = New System.Drawing.Point(1090, -15)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(99, 13)
+        Me.Label18.TabIndex = 60
+        Me.Label18.Text = "PAMANUKAN"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'r14
+        '
+        Me.r14.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.r14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.r14.Location = New System.Drawing.Point(1090, 3)
+        Me.r14.Name = "r14"
+        Me.r14.Size = New System.Drawing.Size(99, 13)
+        Me.r14.TabIndex = 59
+        Me.r14.Text = "0"
+        Me.r14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label19
+        '
+        Me.Label19.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label19.Location = New System.Drawing.Point(987, -15)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(99, 13)
+        Me.Label19.TabIndex = 58
+        Me.Label19.Text = "TASIKMALAYA"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'r12
+        '
+        Me.r12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.r12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.r12.Location = New System.Drawing.Point(987, 3)
+        Me.r12.Name = "r12"
+        Me.r12.Size = New System.Drawing.Size(99, 13)
+        Me.r12.TabIndex = 57
+        Me.r12.Text = "0"
+        Me.r12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label17
+        '
+        Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label17.Location = New System.Drawing.Point(882, -15)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(99, 13)
+        Me.Label17.TabIndex = 56
+        Me.Label17.Text = "TASIKMALAYA"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'r11
+        '
+        Me.r11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.r11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.r11.Location = New System.Drawing.Point(882, 3)
+        Me.r11.Name = "r11"
+        Me.r11.Size = New System.Drawing.Size(99, 13)
+        Me.r11.TabIndex = 55
+        Me.r11.Text = "0"
+        Me.r11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label16
+        '
+        Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label16.Location = New System.Drawing.Point(789, -15)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(87, 13)
+        Me.Label16.TabIndex = 54
+        Me.Label16.Text = "RANCAEKEK"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'r10
+        '
+        Me.r10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.r10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.r10.Location = New System.Drawing.Point(789, 3)
+        Me.r10.Name = "r10"
+        Me.r10.Size = New System.Drawing.Size(87, 13)
+        Me.r10.TabIndex = 53
+        Me.r10.Text = "0"
+        Me.r10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label15
+        '
+        Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label15.Location = New System.Drawing.Point(703, -15)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(81, 13)
+        Me.Label15.TabIndex = 52
+        Me.Label15.Text = "CIPARAY"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'r9
+        '
+        Me.r9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.r9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.r9.Location = New System.Drawing.Point(703, 3)
+        Me.r9.Name = "r9"
+        Me.r9.Size = New System.Drawing.Size(81, 13)
+        Me.r9.TabIndex = 51
+        Me.r9.Text = "0"
+        Me.r9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label8.Location = New System.Drawing.Point(616, -15)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(81, 13)
+        Me.Label8.TabIndex = 50
+        Me.Label8.Text = "SUMEDANG"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'r7
+        '
+        Me.r7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.r7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.r7.Location = New System.Drawing.Point(616, 3)
+        Me.r7.Name = "r7"
+        Me.r7.Size = New System.Drawing.Size(81, 13)
+        Me.r7.TabIndex = 49
+        Me.r7.Text = "0"
+        Me.r7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label14
+        '
+        Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label14.Location = New System.Drawing.Point(354, -15)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(81, 13)
+        Me.Label14.TabIndex = 48
+        Me.Label14.Text = "CIBIRU"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'r8
+        '
+        Me.r8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.r8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.r8.Location = New System.Drawing.Point(354, 3)
+        Me.r8.Name = "r8"
+        Me.r8.Size = New System.Drawing.Size(81, 13)
+        Me.r8.TabIndex = 47
+        Me.r8.Text = "0"
+        Me.r8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label7.Location = New System.Drawing.Point(528, -15)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(81, 13)
+        Me.Label7.TabIndex = 46
+        Me.Label7.Text = "GARUT"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label6.Location = New System.Drawing.Point(441, -15)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(81, 13)
+        Me.Label6.TabIndex = 45
+        Me.Label6.Text = "CIREBON"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label5.Location = New System.Drawing.Point(267, -15)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(81, 13)
+        Me.Label5.TabIndex = 44
+        Me.Label5.Text = "KOPO"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label4.Location = New System.Drawing.Point(180, -15)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(81, 13)
+        Me.Label4.TabIndex = 43
+        Me.Label4.Text = "CIBABAT"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label3.Location = New System.Drawing.Point(93, -15)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(81, 13)
+        Me.Label3.TabIndex = 42
+        Me.Label3.Text = "AYANI"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'r2
+        '
+        Me.r2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.r2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.r2.Location = New System.Drawing.Point(93, 3)
+        Me.r2.Name = "r2"
+        Me.r2.Size = New System.Drawing.Size(81, 13)
+        Me.r2.TabIndex = 41
+        Me.r2.Text = "0"
+        Me.r2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'r3
+        '
+        Me.r3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.r3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.r3.Location = New System.Drawing.Point(180, 3)
+        Me.r3.Name = "r3"
+        Me.r3.Size = New System.Drawing.Size(81, 13)
+        Me.r3.TabIndex = 40
+        Me.r3.Text = "0"
+        Me.r3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'r4
+        '
+        Me.r4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.r4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.r4.Location = New System.Drawing.Point(267, 3)
+        Me.r4.Name = "r4"
+        Me.r4.Size = New System.Drawing.Size(81, 13)
+        Me.r4.TabIndex = 39
+        Me.r4.Text = "0"
+        Me.r4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'r5
+        '
+        Me.r5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.r5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.r5.Location = New System.Drawing.Point(441, 3)
+        Me.r5.Name = "r5"
+        Me.r5.Size = New System.Drawing.Size(81, 13)
+        Me.r5.TabIndex = 38
+        Me.r5.Text = "0"
+        Me.r5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'r6
+        '
+        Me.r6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.r6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.r6.Location = New System.Drawing.Point(528, 3)
+        Me.r6.Name = "r6"
+        Me.r6.Size = New System.Drawing.Size(81, 13)
+        Me.r6.TabIndex = 37
+        Me.r6.Text = "0"
+        Me.r6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label1.Location = New System.Drawing.Point(6, -15)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(81, 13)
+        Me.Label1.TabIndex = 17
+        Me.Label1.Text = "ABM"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'r1
+        '
+        Me.r1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.r1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.r1.Location = New System.Drawing.Point(6, 3)
+        Me.r1.Name = "r1"
+        Me.r1.Size = New System.Drawing.Size(81, 13)
+        Me.r1.TabIndex = 16
+        Me.r1.Text = "0"
+        Me.r1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'StockV_1_1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(1370, 504)
+        Me.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.d2)
+        Me.Controls.Add(Me.d1)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.vendor)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.brand)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Name = "StockV_1_1"
+        Me.ShowIcon = False
+        Me.Text = "Stock"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents brand As System.Windows.Forms.ComboBox
+    Friend WithEvents vendor As System.Windows.Forms.ComboBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents d1 As System.Windows.Forms.Label
+    Friend WithEvents d2 As System.Windows.Forms.Label
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents CopyTableToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents r10 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents r9 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents r7 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents r8 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents r2 As System.Windows.Forms.Label
+    Friend WithEvents r3 As System.Windows.Forms.Label
+    Friend WithEvents r4 As System.Windows.Forms.Label
+    Friend WithEvents r5 As System.Windows.Forms.Label
+    Friend WithEvents r6 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents r1 As System.Windows.Forms.Label
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents r14 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents r12 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents r11 As System.Windows.Forms.Label
+End Class

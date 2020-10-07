@@ -48,7 +48,7 @@ Public Class FormLogin
     End Sub
 
     Private Sub GunaLabel1_Click(sender As Object, e As EventArgs) Handles GunaLabel1.Click
-        FormKonfigurasiDatabase.Show()
+        SettingDatabase.Show()
     End Sub
 
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -56,7 +56,7 @@ Public Class FormLogin
         If strServer = "" Then
             MsgBox("Konfigurasi Database Belum Diatur", vbCritical, "Warning!")
             Me.Close()
-            FormKonfigurasiDatabase.Show()
+            SettingDatabase.Show()
             Exit Sub
         End If
     End Sub

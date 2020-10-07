@@ -98,8 +98,6 @@ Public Class FormBuatRequestCloseAndCancel
             End If
 
 
-
-
             Call KoneksiDatabase1()
             Dim cmd As New SqlCommand
 

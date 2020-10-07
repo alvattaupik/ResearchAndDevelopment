@@ -597,7 +597,7 @@ Partial Class Main
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Location = New System.Drawing.Point(767, 58)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(241, 382)
+        Me.Panel2.Size = New System.Drawing.Size(241, 425)
         Me.Panel2.TabIndex = 20
         Me.Panel2.Visible = False
         '
@@ -606,7 +606,7 @@ Partial Class Main
         Me.GroupBox1.Controls.Add(Me.lblNominal)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.lblTotalOmset)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 325)
+        Me.GroupBox1.Location = New System.Drawing.Point(22, 352)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(212, 31)
         Me.GroupBox1.TabIndex = 45
@@ -616,7 +616,7 @@ Partial Class Main
         '
         Me.lblNominal.AutoSize = True
         Me.lblNominal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNominal.Location = New System.Drawing.Point(127, 11)
+        Me.lblNominal.Location = New System.Drawing.Point(117, 12)
         Me.lblNominal.Name = "lblNominal"
         Me.lblNominal.Size = New System.Drawing.Size(52, 13)
         Me.lblNominal.TabIndex = 43
@@ -645,7 +645,7 @@ Partial Class Main
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(22, 359)
+        Me.Label3.Location = New System.Drawing.Point(22, 405)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(41, 16)
         Me.Label3.TabIndex = 25
@@ -656,7 +656,7 @@ Partial Class Main
         '
         Me.lblJmlhCabang.AutoSize = True
         Me.lblJmlhCabang.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJmlhCabang.Location = New System.Drawing.Point(150, 344)
+        Me.lblJmlhCabang.Location = New System.Drawing.Point(150, 395)
         Me.lblJmlhCabang.Name = "lblJmlhCabang"
         Me.lblJmlhCabang.Size = New System.Drawing.Size(75, 13)
         Me.lblJmlhCabang.TabIndex = 44
@@ -671,7 +671,7 @@ Partial Class Main
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(0, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(16, 380)
+        Me.Label5.Size = New System.Drawing.Size(19, 423)
         Me.Label5.TabIndex = 26
         Me.Label5.Text = "<<<"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -685,7 +685,7 @@ Partial Class Main
         Me.dgSidebar.Location = New System.Drawing.Point(22, 10)
         Me.dgSidebar.Name = "dgSidebar"
         Me.dgSidebar.RowHeadersVisible = False
-        Me.dgSidebar.Size = New System.Drawing.Size(212, 309)
+        Me.dgSidebar.Size = New System.Drawing.Size(212, 342)
         Me.dgSidebar.TabIndex = 38
         '
         'Label9
@@ -933,7 +933,7 @@ Partial Class Main
         '
         Me.lblJumlahCabang.AutoSize = True
         Me.lblJumlahCabang.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJumlahCabang.Location = New System.Drawing.Point(25, 344)
+        Me.lblJumlahCabang.Location = New System.Drawing.Point(25, 390)
         Me.lblJumlahCabang.Name = "lblJumlahCabang"
         Me.lblJumlahCabang.Size = New System.Drawing.Size(93, 13)
         Me.lblJumlahCabang.TabIndex = 39
@@ -944,7 +944,7 @@ Partial Class Main
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(132, 344)
+        Me.Label10.Location = New System.Drawing.Point(179, 392)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(12, 16)
         Me.Label10.TabIndex = 42
