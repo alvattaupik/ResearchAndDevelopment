@@ -35,16 +35,20 @@ Partial Class frmLaporkanMasalah
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox3 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GunaTransfarantPictureBox2 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.BackColor = System.Drawing.Color.DarkOrange
         Me.GroupBox1.Controls.Add(Me.GunaTransfarantPictureBox2)
         Me.GroupBox1.Controls.Add(Me.GunaTransfarantPictureBox1)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
@@ -59,9 +63,9 @@ Partial Class frmLaporkanMasalah
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(4, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1006, 188)
+        Me.GroupBox1.Size = New System.Drawing.Size(1033, 188)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -167,11 +171,35 @@ Partial Class frmLaporkanMasalah
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "User Name"
         '
+        'GunaTransfarantPictureBox3
+        '
+        Me.GunaTransfarantPictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox3.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.ITIL_Problem_management_LC
+        Me.GunaTransfarantPictureBox3.Location = New System.Drawing.Point(4, 206)
+        Me.GunaTransfarantPictureBox3.Name = "GunaTransfarantPictureBox3"
+        Me.GunaTransfarantPictureBox3.Size = New System.Drawing.Size(298, 281)
+        Me.GunaTransfarantPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox3.TabIndex = 1
+        Me.GunaTransfarantPictureBox3.TabStop = False
+        '
+        'GunaTransfarantPictureBox2
+        '
+        Me.GunaTransfarantPictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox2.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.Helpdesk_logo2
+        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(7, 18)
+        Me.GunaTransfarantPictureBox2.Name = "GunaTransfarantPictureBox2"
+        Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(291, 158)
+        Me.GunaTransfarantPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.GunaTransfarantPictureBox2.TabIndex = 13
+        Me.GunaTransfarantPictureBox2.TabStop = False
+        '
         'GunaTransfarantPictureBox1
         '
         Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.HelpDesk
+        Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Idea
         Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(303, 19)
         Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
         Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(161, 158)
@@ -179,30 +207,20 @@ Partial Class frmLaporkanMasalah
         Me.GunaTransfarantPictureBox1.TabIndex = 12
         Me.GunaTransfarantPictureBox1.TabStop = False
         '
-        'GunaTransfarantPictureBox2
-        '
-        Me.GunaTransfarantPictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox2.BaseColor = System.Drawing.Color.Black
-        'Me.GunaTransfarantPictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.HelpDesk
-        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(6, 19)
-        Me.GunaTransfarantPictureBox2.Name = "GunaTransfarantPictureBox2"
-        Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(291, 158)
-        Me.GunaTransfarantPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.GunaTransfarantPictureBox2.TabIndex = 13
-        Me.GunaTransfarantPictureBox2.TabStop = False
-        '
         'frmLaporkanMasalah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1049, 379)
+        Me.ClientSize = New System.Drawing.Size(1049, 641)
+        Me.Controls.Add(Me.GunaTransfarantPictureBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmLaporkanMasalah"
         Me.Text = "Laporkan Masalah"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -221,4 +239,5 @@ Partial Class frmLaporkanMasalah
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents GunaTransfarantPictureBox1 As Guna.UI.WinForms.GunaTransfarantPictureBox
     Friend WithEvents GunaTransfarantPictureBox2 As Guna.UI.WinForms.GunaTransfarantPictureBox
+    Friend WithEvents GunaTransfarantPictureBox3 As Guna.UI.WinForms.GunaTransfarantPictureBox
 End Class

@@ -133,9 +133,6 @@
   <data name="Shutdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Shutdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Hello Logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hello Logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,11 +160,17 @@
   <data name="Chat logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chat logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Idea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Idea.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Side bar logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Side bar logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Indonesia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Indonesia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inventory-PNG-HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory-PNG-HD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hello text" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hello text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,6 +241,12 @@
   <data name="Monitoring Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Monitoring Icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Search User" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Helpdesk logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Helpdesk logo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ivend-retail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ivend-retail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -259,8 +268,8 @@
   <data name="Indonesia Maps2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Indonesia Maps2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Inventory-PNG-HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Inventory-PNG-HD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Hello Logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hello Logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Paper Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Paper Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,7 +295,7 @@
   <data name="Detective 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Detective 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search User" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ITIL Problem management LC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ITIL Problem management LC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
