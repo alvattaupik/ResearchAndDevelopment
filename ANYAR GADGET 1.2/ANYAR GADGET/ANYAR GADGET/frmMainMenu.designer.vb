@@ -82,6 +82,13 @@ Partial Class frmMainMenu
         Me.H_ObjectForm = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_HeaderForm = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_ItemsForm = New System.Windows.Forms.ToolStripMenuItem()
+        Me.H_ITILV3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_IncidentManagement = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IncidentCategoriesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SubCategoriesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SpecificCategoriesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_ProblemManagement = New System.Windows.Forms.ToolStripMenuItem()
+        Me.H_Konten = New System.Windows.Forms.ToolStripMenuItem()
         Me.HELPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_LaporkanMasalah = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_CaraPenggunaan = New System.Windows.Forms.ToolStripMenuItem()
@@ -90,10 +97,11 @@ Partial Class frmMainMenu
         Me.TimerPesanError = New System.Windows.Forms.Timer(Me.components)
         Me.TimerJam = New System.Windows.Forms.Timer(Me.components)
         Me.txtJamDanWaktu = New System.Windows.Forms.TextBox()
-        Me.Panel3.SuspendLayout
-        Me.MenuStrip1.SuspendLayout
-        CType(Me.dgListMenu,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.SuspendLayout
+        Me.SISTERToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Panel3.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
+        CType(Me.dgListMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
         '
         'Panel3
         '
@@ -110,8 +118,8 @@ Partial Class frmMainMenu
         '
         'lblTimerTime
         '
-        Me.lblTimerTime.AutoSize = true
-        Me.lblTimerTime.Font = New System.Drawing.Font("Segoe UI", 9!)
+        Me.lblTimerTime.AutoSize = True
+        Me.lblTimerTime.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lblTimerTime.Location = New System.Drawing.Point(598, 3)
         Me.lblTimerTime.Name = "lblTimerTime"
         Me.lblTimerTime.Size = New System.Drawing.Size(69, 15)
@@ -120,7 +128,7 @@ Partial Class frmMainMenu
         '
         'lblFormSize
         '
-        Me.lblFormSize.AutoSize = true
+        Me.lblFormSize.AutoSize = True
         Me.lblFormSize.Location = New System.Drawing.Point(319, 4)
         Me.lblFormSize.Name = "lblFormSize"
         Me.lblFormSize.Size = New System.Drawing.Size(59, 13)
@@ -129,7 +137,7 @@ Partial Class frmMainMenu
         '
         'lblMousePosition
         '
-        Me.lblMousePosition.AutoSize = true
+        Me.lblMousePosition.AutoSize = True
         Me.lblMousePosition.Location = New System.Drawing.Point(5, 4)
         Me.lblMousePosition.Name = "lblMousePosition"
         Me.lblMousePosition.Size = New System.Drawing.Size(85, 13)
@@ -138,8 +146,8 @@ Partial Class frmMainMenu
         '
         'Label4
         '
-        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(945, 4)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(418, 13)
@@ -217,7 +225,7 @@ Partial Class frmMainMenu
         '
         'GadgetToolStripMenuItem
         '
-        Me.GadgetToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Sidebar, Me.H_Monitoring, Me.H_PrintServices, Me.H_Ping, Me.H_Request, Me.H_Repository, Me.H_AIO, Me.H_PricingAndPromotion, Me.H_AnyarChat, Me.H_LaporanLaporan})
+        Me.GadgetToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Sidebar, Me.H_Monitoring, Me.H_PrintServices, Me.H_Ping, Me.H_Request, Me.H_Repository, Me.H_AIO, Me.H_PricingAndPromotion, Me.H_AnyarChat, Me.H_LaporanLaporan, Me.SISTERToolStripMenuItem})
         Me.GadgetToolStripMenuItem.Name = "GadgetToolStripMenuItem"
         Me.GadgetToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
         Me.GadgetToolStripMenuItem.Text = "GADGET"
@@ -484,7 +492,7 @@ Partial Class frmMainMenu
         '
         'MasterToolStripMenuItem
         '
-        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Pegawai, Me.H_Menu})
+        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Pegawai, Me.H_Menu, Me.H_ITILV3, Me.H_Konten})
         Me.MasterToolStripMenuItem.Name = "MasterToolStripMenuItem"
         Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
         Me.MasterToolStripMenuItem.Text = "MASTER"
@@ -493,7 +501,7 @@ Partial Class frmMainMenu
         '
         Me.H_Pegawai.Image = Global.ANYAR_GADGET.My.Resources.Resources.Employee_Logo
         Me.H_Pegawai.Name = "H_Pegawai"
-        Me.H_Pegawai.Size = New System.Drawing.Size(118, 22)
+        Me.H_Pegawai.Size = New System.Drawing.Size(152, 22)
         Me.H_Pegawai.Text = "Pegawai"
         Me.H_Pegawai.Visible = False
         '
@@ -502,7 +510,7 @@ Partial Class frmMainMenu
         Me.H_Menu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_HeaderMenu, Me.I_ItemsMenu, Me.H_ObjectForm})
         Me.H_Menu.Image = Global.ANYAR_GADGET.My.Resources.Resources.Menu_logo
         Me.H_Menu.Name = "H_Menu"
-        Me.H_Menu.Size = New System.Drawing.Size(118, 22)
+        Me.H_Menu.Size = New System.Drawing.Size(152, 22)
         Me.H_Menu.Text = "Menu"
         Me.H_Menu.Visible = False
         '
@@ -541,6 +549,56 @@ Partial Class frmMainMenu
         Me.I_ItemsForm.Text = "Items"
         Me.I_ItemsForm.Visible = False
         '
+        'H_ITILV3
+        '
+        Me.H_ITILV3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_IncidentManagement, Me.I_ProblemManagement})
+        Me.H_ITILV3.Image = Global.ANYAR_GADGET.My.Resources.Resources.ITIL_v3
+        Me.H_ITILV3.Name = "H_ITILV3"
+        Me.H_ITILV3.Size = New System.Drawing.Size(152, 22)
+        Me.H_ITILV3.Text = "ITIL V3"
+        Me.H_ITILV3.Visible = False
+        '
+        'I_IncidentManagement
+        '
+        Me.I_IncidentManagement.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IncidentCategoriesToolStripMenuItem, Me.SubCategoriesToolStripMenuItem, Me.SpecificCategoriesToolStripMenuItem})
+        Me.I_IncidentManagement.Name = "I_IncidentManagement"
+        Me.I_IncidentManagement.Size = New System.Drawing.Size(193, 22)
+        Me.I_IncidentManagement.Text = "Incident Management"
+        Me.I_IncidentManagement.Visible = False
+        '
+        'IncidentCategoriesToolStripMenuItem
+        '
+        Me.IncidentCategoriesToolStripMenuItem.Name = "IncidentCategoriesToolStripMenuItem"
+        Me.IncidentCategoriesToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.IncidentCategoriesToolStripMenuItem.Text = "Incident Categories"
+        '
+        'SubCategoriesToolStripMenuItem
+        '
+        Me.SubCategoriesToolStripMenuItem.Name = "SubCategoriesToolStripMenuItem"
+        Me.SubCategoriesToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.SubCategoriesToolStripMenuItem.Text = "Sub Categories"
+        '
+        'SpecificCategoriesToolStripMenuItem
+        '
+        Me.SpecificCategoriesToolStripMenuItem.Name = "SpecificCategoriesToolStripMenuItem"
+        Me.SpecificCategoriesToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.SpecificCategoriesToolStripMenuItem.Text = "Specific Categories"
+        '
+        'I_ProblemManagement
+        '
+        Me.I_ProblemManagement.Name = "I_ProblemManagement"
+        Me.I_ProblemManagement.Size = New System.Drawing.Size(193, 22)
+        Me.I_ProblemManagement.Text = "Problem Management"
+        Me.I_ProblemManagement.Visible = False
+        '
+        'H_Konten
+        '
+        Me.H_Konten.Image = Global.ANYAR_GADGET.My.Resources.Resources.Manual_Book_Logo
+        Me.H_Konten.Name = "H_Konten"
+        Me.H_Konten.Size = New System.Drawing.Size(152, 22)
+        Me.H_Konten.Text = "Konten"
+        Me.H_Konten.Visible = False
+        '
         'HELPToolStripMenuItem
         '
         Me.HELPToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_LaporkanMasalah, Me.H_CaraPenggunaan})
@@ -561,7 +619,7 @@ Partial Class frmMainMenu
         Me.H_CaraPenggunaan.Image = Global.ANYAR_GADGET.My.Resources.Resources.Manual_Book_Logo
         Me.H_CaraPenggunaan.Name = "H_CaraPenggunaan"
         Me.H_CaraPenggunaan.Size = New System.Drawing.Size(170, 22)
-        Me.H_CaraPenggunaan.Text = "Cara Penggunaan"
+        Me.H_CaraPenggunaan.Text = "Konten Bantuan"
         Me.H_CaraPenggunaan.Visible = False
         '
         'dgListMenu
@@ -605,6 +663,12 @@ Partial Class frmMainMenu
         Me.txtJamDanWaktu.Size = New System.Drawing.Size(909, 19)
         Me.txtJamDanWaktu.TabIndex = 12
         Me.txtJamDanWaktu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'SISTERToolStripMenuItem
+        '
+        Me.SISTERToolStripMenuItem.Name = "SISTERToolStripMenuItem"
+        Me.SISTERToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.SISTERToolStripMenuItem.Text = "SISTER"
         '
         'frmMainMenu
         '
@@ -700,5 +764,13 @@ End Sub
     Friend WithEvents I_MutasiStock As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TimerJam As System.Windows.Forms.Timer
     Friend WithEvents txtJamDanWaktu As System.Windows.Forms.TextBox
+    Friend WithEvents H_ITILV3 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_IncidentManagement As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents IncidentCategoriesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SubCategoriesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SpecificCategoriesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_ProblemManagement As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents H_Konten As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SISTERToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

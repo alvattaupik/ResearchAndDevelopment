@@ -98,6 +98,18 @@
     <Compile Include="BrowseForm\frmBrowsePegawai.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BrowseForm\frmBrowseSpecificProblem.Designer.vb">
+      <DependentUpon>frmBrowseSpecificProblem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseSpecificProblem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseSubkategori.Designer.vb">
+      <DependentUpon>frmBrowseSubkategori.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseSubkategori.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BrowseForm\frmBrowseUsers.Designer.vb">
       <DependentUpon>frmBrowseUsers.vb</DependentUpon>
     </Compile>
@@ -225,6 +237,12 @@
     <Compile Include="Gadget\frmIntegrationMonitoring.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Help\frmBantuan.Designer.vb">
+      <DependentUpon>frmBantuan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Help\frmBantuan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Help\frmLaporkanMasalah.Designer.vb">
       <DependentUpon>frmLaporkanMasalah.vb</DependentUpon>
     </Compile>
@@ -249,6 +267,18 @@
     <Compile Include="Master\frmDetailForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Master\frmDetailSpecificCategories.Designer.vb">
+      <DependentUpon>frmDetailSpecificCategories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmDetailSpecificCategories.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmDetailSubCategories.Designer.vb">
+      <DependentUpon>frmDetailSubCategories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmDetailSubCategories.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Master\frmDetailMenu.Designer.vb">
       <DependentUpon>frmDetailMenu.vb</DependentUpon>
     </Compile>
@@ -261,10 +291,22 @@
     <Compile Include="Master\frmHeaderForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Master\frmHeaderCategories.Designer.vb">
+      <DependentUpon>frmHeaderCategories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmHeaderCategories.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Master\frmHeaderMenu.Designer.vb">
       <DependentUpon>frmHeaderMenu.vb</DependentUpon>
     </Compile>
     <Compile Include="Master\frmHeaderMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmKonten.Designer.vb">
+      <DependentUpon>frmKonten.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmKonten.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Master\frmMasterPegawai.Designer.vb">
@@ -316,6 +358,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowsePegawai.resx">
       <DependentUpon>frmBrowsePegawai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseSpecificProblem.resx">
+      <DependentUpon>frmBrowseSpecificProblem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseSubkategori.resx">
+      <DependentUpon>frmBrowseSubkategori.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseUsers.resx">
       <DependentUpon>frmBrowseUsers.vb</DependentUpon>
@@ -383,6 +431,9 @@
     <EmbeddedResource Include="Gadget\frmIntegrationMonitoring.resx">
       <DependentUpon>frmIntegrationMonitoring.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Help\frmBantuan.resx">
+      <DependentUpon>frmBantuan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Help\frmLaporkanMasalah.resx">
       <DependentUpon>frmLaporkanMasalah.vb</DependentUpon>
     </EmbeddedResource>
@@ -395,14 +446,26 @@
     <EmbeddedResource Include="Master\frmDetailForm.resx">
       <DependentUpon>frmDetailForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmDetailSpecificCategories.resx">
+      <DependentUpon>frmDetailSpecificCategories.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmDetailSubCategories.resx">
+      <DependentUpon>frmDetailSubCategories.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\frmDetailMenu.resx">
       <DependentUpon>frmDetailMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmHeaderForm.resx">
       <DependentUpon>frmHeaderForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmHeaderCategories.resx">
+      <DependentUpon>frmHeaderCategories.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\frmHeaderMenu.resx">
       <DependentUpon>frmHeaderMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmKonten.resx">
+      <DependentUpon>frmKonten.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmMasterPegawai.resx">
       <DependentUpon>frmMasterPegawai.vb</DependentUpon>
@@ -618,6 +681,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ITIL Problem management LC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incident Management.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ITIL v3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

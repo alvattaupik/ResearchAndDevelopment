@@ -3,6 +3,7 @@ Imports System.Data.SqlClient
 Imports Guna
 Imports CrystalDecisions.CrystalReports.Engine
 Imports CrystalDecisions.Shared
+Imports System.IO
 Module ModuleUltility
 
     Public mBolFunction As Boolean
@@ -94,6 +95,10 @@ Module ModuleUltility
                 frmMainMenu.H_Pegawai.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "OMASTER002" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_Menu.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "OMASTER003" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.H_ITILV3.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "OMASTER004" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.H_Konten.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "OGADGET001" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_Sidebar.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "OGADGET002" And dgv.Rows(i).Cells(1).Value = "Y" Then
@@ -174,6 +179,10 @@ Module ModuleUltility
                 frmMainMenu.I_HeaderForm.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "IMenu004" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_ItemsForm.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "ITIL001" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_IncidentManagement.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "ITIL002" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_ProblemManagement.Visible = True
 
             End If
 
@@ -267,6 +276,62 @@ Module ModuleUltility
         End Try
 
     End Sub
+
+
+
+    Sub AUD_MenuAplikasiSpecificITIL(strFunction As String, strDocEntry As String, strKode As String, strKodeDetail As String, strDeskripsi As String, strNamaExternal As String, strKodeAplikasi As String, strStatusEnabled As String)
+
+        Try
+            KoneksiDB_EMAIL()
+            Dim command As SqlCommand
+            command = New SqlCommand("[AUD_MenuAplikasi]", KoneksiDBEmail)
+
+            Dim adapter As New SqlDataAdapter(command)
+            command.CommandType = CommandType.StoredProcedure
+            command.Parameters.AddWithValue("DocEntry", Trim(strDocEntry))
+            command.Parameters.AddWithValue("Kode", Trim(strKode))
+            command.Parameters.AddWithValue("KodeDetail", Trim(strKodeDetail))
+            command.Parameters.AddWithValue("Deskripsi", Trim(strDeskripsi))
+            command.Parameters.AddWithValue("NamaExternal", Trim(strNamaExternal))
+            command.Parameters.AddWithValue("KodeAplikasi", Trim(strKodeAplikasi))
+            command.Parameters.AddWithValue("StatusEnabled", Trim(strStatusEnabled))
+
+            command.Parameters.Add("StatusRecordOUT", SqlDbType.VarChar, 100)
+            command.Parameters("StatusRecordOUT").Direction = ParameterDirection.Output
+
+
+            command.Parameters.AddWithValue("Function", Trim(strFunction))
+
+            If (KoneksiDBEmail.State = ConnectionState.Open) Then KoneksiDBEmail.Close()
+            command.Connection = KoneksiDBEmail
+            KoneksiDBEmail.Open()
+            command.ExecuteNonQuery()
+
+
+            If Microsoft.VisualBasic.Left(strFunction, 1) = "A" Then
+
+                If command.Parameters("StatusRecordOUT").Value.ToString() <> "0" Then
+                    DisplayPesanError("Kode Telah Digunakan !", frmMainMenu.txtPesanError, 1000)
+
+                    Exit Sub
+                Else
+                    DisplayPesanOK("Operation Success !", frmMainMenu.txtPesanError, 1000)
+
+                End If
+            Else
+                DisplayPesanOK("Operation Success !", frmMainMenu.txtPesanError, 1000)
+
+
+
+            End If
+
+
+        Catch ex As Exception
+            DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
+        End Try
+
+    End Sub
+
 
 
     Sub GetDocEntry(strQuery1 As String, strQuery2 As String)
@@ -468,5 +533,14 @@ Module ModuleUltility
     End Sub
 
 
+
+    Sub GetExtentionfile(strPath As String)
+        ' Get extension.
+        Dim extension As String = Path.GetExtension(strPath)
+
+        ' Display extension.
+        MstrExtentionFile = extension
+
+    End Sub
 
 End Module

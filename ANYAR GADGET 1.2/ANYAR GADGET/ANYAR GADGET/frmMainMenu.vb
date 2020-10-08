@@ -222,8 +222,39 @@ Public Class frmMainMenu
     End Sub
 
     Private Sub H_LaporkanMasalah_Click(sender As Object, e As EventArgs) Handles H_LaporkanMasalah.Click
-
+        Dim frm As New frmLaporkanMasalah
+        frm.MdiParent = Me
+        frm.Show()
     End Sub
 
 
+    Private Sub IncidentCategoriesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IncidentCategoriesToolStripMenuItem.Click
+        Dim frm As New frmHeaderCategories
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub SubCategoriesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubCategoriesToolStripMenuItem.Click
+        Dim frm As New frmDetailSubCategories
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub SpecificCategoriesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SpecificCategoriesToolStripMenuItem.Click
+        Dim frm As New frmDetailSpecificCategories
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub H_CaraPenggunaan_Click(sender As Object, e As EventArgs) Handles H_CaraPenggunaan.Click
+        Dim frm As New frmBantuan
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub H_Konten_Click(sender As Object, e As EventArgs) Handles H_Konten.Click
+        Dim frm As New frmKonten
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class

@@ -157,17 +157,20 @@
   <data name="Logout Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logout Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ITIL Problem management LC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ITIL Problem management LC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Chat logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chat logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Idea" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Idea.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Side bar logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Side bar logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Indonesia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Indonesia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Incident Management" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Incident Management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Inventory-PNG-HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inventory-PNG-HD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,8 +208,8 @@
   <data name="Monitoring Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Monitoring Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Loading 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Loading 7.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Idea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Idea.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="print" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,6 +289,9 @@
   <data name="Dollar logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dollar logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Loading 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Loading 7.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Fail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -295,7 +301,7 @@
   <data name="Detective 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Detective 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ITIL Problem management LC" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ITIL Problem management LC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ITIL v3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ITIL v3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
