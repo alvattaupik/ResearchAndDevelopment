@@ -86,6 +86,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrowseForm\frmBrowseItemMasterData.Designer.vb">
+      <DependentUpon>frmBrowseItemMasterData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseItemMasterData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseBusinessPartner.Designer.vb">
+      <DependentUpon>frmBrowseBusinessPartner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseBusinessPartner.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BrowseForm\frmBrowseListUserAplikasi.Designer.vb">
       <DependentUpon>frmBrowseListUserAplikasi.vb</DependentUpon>
     </Compile>
@@ -237,6 +249,12 @@
     <Compile Include="Gadget\frmIntegrationMonitoring.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Gadget\frmSuratJalan.Designer.vb">
+      <DependentUpon>frmSuratJalan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmSuratJalan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Help\frmBantuan.Designer.vb">
       <DependentUpon>frmBantuan.vb</DependentUpon>
     </Compile>
@@ -359,6 +377,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BrowseForm\frmBrowseItemMasterData.resx">
+      <DependentUpon>frmBrowseItemMasterData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseBusinessPartner.resx">
+      <DependentUpon>frmBrowseBusinessPartner.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseListUserAplikasi.resx">
       <DependentUpon>frmBrowseListUserAplikasi.vb</DependentUpon>
     </EmbeddedResource>
@@ -436,6 +460,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gadget\frmIntegrationMonitoring.resx">
       <DependentUpon>frmIntegrationMonitoring.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmSuratJalan.resx">
+      <DependentUpon>frmSuratJalan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Help\frmBantuan.resx">
       <DependentUpon>frmBantuan.vb</DependentUpon>
@@ -699,6 +726,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Dakirby309-Simply-Styled-AVG.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CCTV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Surat.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\See.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

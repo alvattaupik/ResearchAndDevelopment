@@ -1,7 +1,9 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
+Imports System.IO
 Public Class frmBantuan
-
+    Public Declare Function ShellExecute Lib "shell32.dll" Alias "ShellExecuteA" (ByVal hwnd As Long, ByVal lpOperation As String, ByVal lpFile As String, ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Long) As Long
+    Dim fileName As String
     Private myBindingSource As New BindingSource()
 
 
@@ -76,6 +78,71 @@ Public Class frmBantuan
 
         KoneksiDB_EMAIL()
         LoadDataGrid(dgvDaftarLampiran, "SELECT AttachID,NamaFile,LokasiFile FROM dbo.Help1 WHere ID='" & Trim(txtKodeKonten.Text) & "'", KoneksiDBEmail)
+
+    End Sub
+
+    Private Sub btnLihat_Click(sender As Object, e As EventArgs) Handles btnLihat.Click
+        On Error Resume Next
+        If dgvDaftarLampiran.Rows.Count = 0 Then Exit Sub
+
+        If dgvDaftarLampiran.Item(2, dgvDaftarLampiran.CurrentRow.Index).Value = "" Then
+            DisplayPesanError("No Attachment Included", frmMainMenu.txtPesanError, 1000)
+            Exit Sub
+        Else
+            Call ShellExecute(0, "Open", dgvDaftarLampiran.Item(2, dgvDaftarLampiran.CurrentRow.Index).Value, "", "", 1)
+        End If
+
+
+    End Sub
+
+    Private Sub btnDownload_Click(sender As Object, e As EventArgs) Handles btnDownload.Click
+
+        'On Error GoTo ErrorLoad
+        CopyFileKeLokasiLain(dgvDaftarLampiran.Item(2, dgvDaftarLampiran.CurrentRow.Index).Value, Path.GetFileName((dgvDaftarLampiran.Item(2, dgvDaftarLampiran.CurrentRow.Index).Value)))
+
+
+
+
+
+
+
+        'Try
+
+        '    Dim LocationSave As String
+
+        '    Dim mySaveFileDialog As New SaveFileDialog
+
+
+        '    MsgBox("Silahkan Memilih Lokasi Penyimpanan", vbInformation, "Informasi!")
+
+        '    mySaveFileDialog.Filter = "All files (*.*)|"
+        '    mySaveFileDialog.FileName = Path.GetFileName((dgvDaftarLampiran.Item(2, dgvDaftarLampiran.CurrentRow.Index).Value))
+        '    If mySaveFileDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+        '        LocationSave = IO.Path.GetDirectoryName(mySaveFileDialog.FileName)
+        '        My.Computer.FileSystem.CopyFile(Trim(dgvDaftarLampiran.Item(2, dgvDaftarLampiran.CurrentRow.Index).Value), LocationSave + "\" + fileName,
+        '        Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
+        '        Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
+
+        '    Else
+
+        '        Exit Sub
+        '    End If
+
+        '    Exit Sub
+
+        'Catch ex As Exception
+        '    DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
+        'End Try
+
+       
+
+
+
+
+    End Sub
+
+    Private Sub txtCari_TextChanged(sender As Object, e As EventArgs) Handles txtCari.TextChanged
 
     End Sub
 End Class

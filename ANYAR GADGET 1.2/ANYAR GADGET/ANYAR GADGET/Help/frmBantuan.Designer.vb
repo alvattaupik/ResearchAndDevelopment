@@ -29,7 +29,6 @@ Partial Class frmBantuan
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbKategori = New System.Windows.Forms.ComboBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.dgvKonten = New System.Windows.Forms.DataGridView()
         Me.gbField = New System.Windows.Forms.GroupBox()
         Me.txtSubKategori = New System.Windows.Forms.TextBox()
@@ -44,12 +43,14 @@ Partial Class frmBantuan
         Me.btnDownload = New System.Windows.Forms.Button()
         Me.btnLihat = New System.Windows.Forms.Button()
         Me.dgvDaftarLampiran = New System.Windows.Forms.DataGridView()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvKonten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbField.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvDaftarLampiran, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -122,14 +123,6 @@ Partial Class frmBantuan
         Me.cmbKategori.Name = "cmbKategori"
         Me.cmbKategori.Size = New System.Drawing.Size(479, 24)
         Me.cmbKategori.TabIndex = 4
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(7, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(85, 76)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'dgvKonten
         '
@@ -251,6 +244,7 @@ Partial Class frmBantuan
         '
         'btnLihat
         '
+        Me.btnLihat.Enabled = False
         Me.btnLihat.Location = New System.Drawing.Point(7, 188)
         Me.btnLihat.Name = "btnLihat"
         Me.btnLihat.Size = New System.Drawing.Size(96, 23)
@@ -270,6 +264,14 @@ Partial Class frmBantuan
         Me.dgvDaftarLampiran.Size = New System.Drawing.Size(224, 162)
         Me.dgvDaftarLampiran.TabIndex = 0
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(7, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(85, 76)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'frmBantuan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -283,12 +285,12 @@ Partial Class frmBantuan
         Me.Text = "frmBantuan"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvKonten, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbField.ResumeLayout(False)
         Me.gbField.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.dgvDaftarLampiran, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -314,4 +316,5 @@ Partial Class frmBantuan
     Friend WithEvents btnDownload As System.Windows.Forms.Button
     Friend WithEvents btnLihat As System.Windows.Forms.Button
     Friend WithEvents dgvDaftarLampiran As System.Windows.Forms.DataGridView
+    Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
 End Class

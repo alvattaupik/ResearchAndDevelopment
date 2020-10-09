@@ -257,4 +257,10 @@ Public Class frmMainMenu
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+    Private Sub I_SuratJalan_Click(sender As Object, e As EventArgs) Handles I_SuratJalan.Click
+        Dim frm As New frmSuratJalan
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class

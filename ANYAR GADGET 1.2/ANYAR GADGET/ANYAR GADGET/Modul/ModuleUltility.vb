@@ -120,6 +120,12 @@ Module ModuleUltility
 
             ElseIf dgv.Rows(i).Cells(0).Value = "OGADGET010" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_LaporanLaporan.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "OGADGET011" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.H_SISTER.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "OGADGET012" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.H_ABPC.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "OGADGET013" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.H_Controlling.Visible = True
 
             ElseIf dgv.Rows(i).Cells(0).Value = "OHELP001" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_LaporkanMasalah.Visible = True
@@ -170,6 +176,24 @@ Module ModuleUltility
 
             ElseIf dgv.Rows(i).Cells(0).Value = "IGadget019" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_MutasiStock.Visible = True
+
+            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget020" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_SuratJalan.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget021" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_SuratTerima.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget022" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_BAPSerahTerima.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget023" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_BAPPenyelesaian.Visible = True
+
+            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget024" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_ListKendaraan.Visible = True
+
+            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget025" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_ValidationControl.Visible = True
+
+            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget026" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_CCTVMonitor.Visible = True
 
             ElseIf dgv.Rows(i).Cells(0).Value = "IMenu001" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_HeaderMenu.Visible = True
@@ -553,6 +577,47 @@ Module ModuleUltility
 
 
     End Sub
+
+
+    Sub CopyFileKeLokasiLain(strLokasiAsal As String, strFileName As String)
+        Try
+
+            Dim LocationSave As String
+
+            Dim mySaveFileDialog As New SaveFileDialog
+
+
+            MsgBox("Silahkan Memilih Lokasi Penyimpanan", vbInformation, "Informasi!")
+
+            mySaveFileDialog.Filter = "All files (*.*)|"
+            mySaveFileDialog.FileName = strFileName
+            If mySaveFileDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+                LocationSave = IO.Path.GetDirectoryName(mySaveFileDialog.FileName)
+                My.Computer.FileSystem.CopyFile(Trim(strLokasiAsal), LocationSave + "\" + strFileName,
+                Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
+                Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
+
+                DisplayPesanOK("Download Successfully, Saved in : " & LocationSave + "\" + strFileName, frmMainMenu.txtPesanError, 1000)
+
+            Else
+
+                Exit Sub
+            End If
+
+            Exit Sub
+
+
+
+        Catch ex As Exception
+            DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
+        End Try
+
+
+    End Sub
+
+
+
 
 
 End Module
