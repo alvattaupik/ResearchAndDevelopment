@@ -543,4 +543,16 @@ Module ModuleUltility
 
     End Sub
 
+
+    Sub CopyFileKeDirectoryAttachment(strNamaAttachments As String, strLokasiAsal As String)
+
+
+        MstrpathAttatchments = "\\10.1.0.52\Attachments Surat\ITIL INCIDENT MANAGEMENT\" & Trim(strNamaAttachments) & MstrExtentionFile
+        My.Computer.FileSystem.CopyFile(Trim(strLokasiAsal), MstrpathAttatchments, FileIO.UIOption.OnlyErrorDialogs, FileIO.UICancelOption.DoNothing)
+        Exit Sub
+
+
+    End Sub
+
+
 End Module

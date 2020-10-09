@@ -69,6 +69,7 @@ Partial Class frmMainMenu
         Me.H_LaporanLaporan = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_LapInventoryCheck = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_MutasiStock = New System.Windows.Forms.ToolStripMenuItem()
+        Me.H_SISTER = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Template = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_UbahPassword = New System.Windows.Forms.ToolStripMenuItem()
@@ -97,7 +98,10 @@ Partial Class frmMainMenu
         Me.TimerPesanError = New System.Windows.Forms.Timer(Me.components)
         Me.TimerJam = New System.Windows.Forms.Timer(Me.components)
         Me.txtJamDanWaktu = New System.Windows.Forms.TextBox()
-        Me.SISTERToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_SuratJalan = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_SuratTerima = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_BAPSerahTerima = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_BAPPenyelesaian = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel3.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgListMenu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -225,7 +229,7 @@ Partial Class frmMainMenu
         '
         'GadgetToolStripMenuItem
         '
-        Me.GadgetToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Sidebar, Me.H_Monitoring, Me.H_PrintServices, Me.H_Ping, Me.H_Request, Me.H_Repository, Me.H_AIO, Me.H_PricingAndPromotion, Me.H_AnyarChat, Me.H_LaporanLaporan, Me.SISTERToolStripMenuItem})
+        Me.GadgetToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Sidebar, Me.H_Monitoring, Me.H_PrintServices, Me.H_Ping, Me.H_Request, Me.H_Repository, Me.H_AIO, Me.H_PricingAndPromotion, Me.H_AnyarChat, Me.H_LaporanLaporan, Me.H_SISTER})
         Me.GadgetToolStripMenuItem.Name = "GadgetToolStripMenuItem"
         Me.GadgetToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
         Me.GadgetToolStripMenuItem.Text = "GADGET"
@@ -251,21 +255,21 @@ Partial Class frmMainMenu
         'I_Realstock
         '
         Me.I_Realstock.Name = "I_Realstock"
-        Me.I_Realstock.Size = New System.Drawing.Size(128, 22)
+        Me.I_Realstock.Size = New System.Drawing.Size(152, 22)
         Me.I_Realstock.Text = "Real Stock"
         Me.I_Realstock.Visible = False
         '
         'I_Delivery
         '
         Me.I_Delivery.Name = "I_Delivery"
-        Me.I_Delivery.Size = New System.Drawing.Size(128, 22)
+        Me.I_Delivery.Size = New System.Drawing.Size(152, 22)
         Me.I_Delivery.Text = "Delivery"
         Me.I_Delivery.Visible = False
         '
         'I_Request
         '
         Me.I_Request.Name = "I_Request"
-        Me.I_Request.Size = New System.Drawing.Size(128, 22)
+        Me.I_Request.Size = New System.Drawing.Size(152, 22)
         Me.I_Request.Text = "Request"
         Me.I_Request.Visible = False
         '
@@ -451,6 +455,14 @@ Partial Class frmMainMenu
         Me.I_MutasiStock.Text = "Mutasi Stok"
         Me.I_MutasiStock.Visible = False
         '
+        'H_SISTER
+        '
+        Me.H_SISTER.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_SuratJalan, Me.I_SuratTerima, Me.I_BAPSerahTerima, Me.I_BAPPenyelesaian})
+        Me.H_SISTER.Image = Global.ANYAR_GADGET.My.Resources.Resources.Dakirby309_Simply_Styled_AVG
+        Me.H_SISTER.Name = "H_SISTER"
+        Me.H_SISTER.Size = New System.Drawing.Size(196, 22)
+        Me.H_SISTER.Text = "SISTER"
+        '
         'SettingToolStripMenuItem
         '
         Me.SettingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Template, Me.H_UbahPassword, Me.H_PushNotification, Me.H_User})
@@ -501,7 +513,7 @@ Partial Class frmMainMenu
         '
         Me.H_Pegawai.Image = Global.ANYAR_GADGET.My.Resources.Resources.Employee_Logo
         Me.H_Pegawai.Name = "H_Pegawai"
-        Me.H_Pegawai.Size = New System.Drawing.Size(152, 22)
+        Me.H_Pegawai.Size = New System.Drawing.Size(118, 22)
         Me.H_Pegawai.Text = "Pegawai"
         Me.H_Pegawai.Visible = False
         '
@@ -510,7 +522,7 @@ Partial Class frmMainMenu
         Me.H_Menu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_HeaderMenu, Me.I_ItemsMenu, Me.H_ObjectForm})
         Me.H_Menu.Image = Global.ANYAR_GADGET.My.Resources.Resources.Menu_logo
         Me.H_Menu.Name = "H_Menu"
-        Me.H_Menu.Size = New System.Drawing.Size(152, 22)
+        Me.H_Menu.Size = New System.Drawing.Size(118, 22)
         Me.H_Menu.Text = "Menu"
         Me.H_Menu.Visible = False
         '
@@ -554,7 +566,7 @@ Partial Class frmMainMenu
         Me.H_ITILV3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_IncidentManagement, Me.I_ProblemManagement})
         Me.H_ITILV3.Image = Global.ANYAR_GADGET.My.Resources.Resources.ITIL_v3
         Me.H_ITILV3.Name = "H_ITILV3"
-        Me.H_ITILV3.Size = New System.Drawing.Size(152, 22)
+        Me.H_ITILV3.Size = New System.Drawing.Size(118, 22)
         Me.H_ITILV3.Text = "ITIL V3"
         Me.H_ITILV3.Visible = False
         '
@@ -595,7 +607,7 @@ Partial Class frmMainMenu
         '
         Me.H_Konten.Image = Global.ANYAR_GADGET.My.Resources.Resources.Manual_Book_Logo
         Me.H_Konten.Name = "H_Konten"
-        Me.H_Konten.Size = New System.Drawing.Size(152, 22)
+        Me.H_Konten.Size = New System.Drawing.Size(118, 22)
         Me.H_Konten.Text = "Konten"
         Me.H_Konten.Visible = False
         '
@@ -664,11 +676,29 @@ Partial Class frmMainMenu
         Me.txtJamDanWaktu.TabIndex = 12
         Me.txtJamDanWaktu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'SISTERToolStripMenuItem
+        'I_SuratJalan
         '
-        Me.SISTERToolStripMenuItem.Name = "SISTERToolStripMenuItem"
-        Me.SISTERToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.SISTERToolStripMenuItem.Text = "SISTER"
+        Me.I_SuratJalan.Name = "I_SuratJalan"
+        Me.I_SuratJalan.Size = New System.Drawing.Size(167, 22)
+        Me.I_SuratJalan.Text = "Surat Jalan"
+        '
+        'I_SuratTerima
+        '
+        Me.I_SuratTerima.Name = "I_SuratTerima"
+        Me.I_SuratTerima.Size = New System.Drawing.Size(167, 22)
+        Me.I_SuratTerima.Text = "Surat Terima"
+        '
+        'I_BAPSerahTerima
+        '
+        Me.I_BAPSerahTerima.Name = "I_BAPSerahTerima"
+        Me.I_BAPSerahTerima.Size = New System.Drawing.Size(167, 22)
+        Me.I_BAPSerahTerima.Text = "BAP Serah Terima"
+        '
+        'I_BAPPenyelesaian
+        '
+        Me.I_BAPPenyelesaian.Name = "I_BAPPenyelesaian"
+        Me.I_BAPPenyelesaian.Size = New System.Drawing.Size(167, 22)
+        Me.I_BAPPenyelesaian.Text = "BAP Penyelesaian"
         '
         'frmMainMenu
         '
@@ -683,21 +713,21 @@ Partial Class frmMainMenu
         Me.Controls.Add(Me.dgListMenu)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.DoubleBuffered = true
-        Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
-        Me.IsMdiContainer = true
+        Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.IsMdiContainer = True
         Me.Name = "frmMainMenu"
         Me.Text = "Anyar Gadget - AnyarGroup"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.Panel3.ResumeLayout(false)
-        Me.Panel3.PerformLayout
-        Me.MenuStrip1.ResumeLayout(false)
-        Me.MenuStrip1.PerformLayout
-        CType(Me.dgListMenu,System.ComponentModel.ISupportInitialize).EndInit
-        Me.ResumeLayout(false)
-        Me.PerformLayout
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        CType(Me.dgListMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
 
-End Sub
+    End Sub
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents lblMousePosition As System.Windows.Forms.Label
@@ -771,6 +801,10 @@ End Sub
     Friend WithEvents SpecificCategoriesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_ProblemManagement As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_Konten As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SISTERToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents H_SISTER As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_SuratJalan As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_SuratTerima As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_BAPSerahTerima As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_BAPPenyelesaian As System.Windows.Forms.ToolStripMenuItem
 
 End Class

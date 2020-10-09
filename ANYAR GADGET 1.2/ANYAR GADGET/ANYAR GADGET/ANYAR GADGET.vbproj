@@ -261,6 +261,12 @@
     <Compile Include="LainLain\frmTampilkanLaporan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Master\frmMasterKontenBantuan.Designer.vb">
+      <DependentUpon>frmMasterKontenBantuan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmMasterKontenBantuan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Master\frmDetailForm.Designer.vb">
       <DependentUpon>frmDetailForm.vb</DependentUpon>
     </Compile>
@@ -442,6 +448,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LainLain\frmTampilkanLaporan.resx">
       <DependentUpon>frmTampilkanLaporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmMasterKontenBantuan.resx">
+      <DependentUpon>frmMasterKontenBantuan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmDetailForm.resx">
       <DependentUpon>frmDetailForm.vb</DependentUpon>
@@ -687,6 +696,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ITIL v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dakirby309-Simply-Styled-AVG.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

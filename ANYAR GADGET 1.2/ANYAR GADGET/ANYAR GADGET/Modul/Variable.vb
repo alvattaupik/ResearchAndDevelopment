@@ -50,5 +50,5 @@
 
 
     Public MstrExtentionFile As String
-
+    Public MstrpathAttatchments As String
 End Module

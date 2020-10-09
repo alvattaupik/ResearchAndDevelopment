@@ -37,7 +37,7 @@ Public Class frmBantuan
 
     Sub LoadDetailKonten()
         Call KoneksiDB_EMAIL()
-        Dim cmd As New SqlCommand("SELECT ID,NamaKonten,IDKategori,IDSubKategori FROM dbo.OHelp Where Cast(IDKategori AS varchar(100))='" & cmbKategori.SelectedValue & "' and IDSubKategori='" & cmbSubKategori.SelectedValue & "' AND StatusEnabled='Y'", KoneksiDBEmail)
+        Dim cmd As New SqlCommand("SELECT ID,NamaKonten FROM dbo.OHelp Where Cast(IDKategori AS varchar(100))='" & cmbKategori.SelectedValue & "' and IDSubKategori='" & cmbSubKategori.SelectedValue & "' AND StatusEnabled='Y'", KoneksiDBEmail)
 
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
@@ -66,5 +66,16 @@ Public Class frmBantuan
         Catch ex As Exception
             DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
         End Try
+    End Sub
+
+    Private Sub dgvKonten_Click(sender As Object, e As EventArgs) Handles dgvKonten.Click
+        txtKodeKonten.Text = dgvKonten.Item(0, dgvKonten.CurrentRow.Index).Value
+        txtDeskripsi.Text = dgvKonten.Item(1, dgvKonten.CurrentRow.Index).Value
+        txtKategori.Text = cmbKategori.Text
+        txtSubKategori.Text = cmbSubKategori.Text
+
+        KoneksiDB_EMAIL()
+        LoadDataGrid(dgvDaftarLampiran, "SELECT AttachID,NamaFile,LokasiFile FROM dbo.Help1 WHere ID='" & Trim(txtKodeKonten.Text) & "'", KoneksiDBEmail)
+
     End Sub
 End Class

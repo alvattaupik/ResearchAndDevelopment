@@ -32,18 +32,18 @@ Partial Class frmBantuan
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.dgvKonten = New System.Windows.Forms.DataGridView()
         Me.gbField = New System.Windows.Forms.GroupBox()
+        Me.txtSubKategori = New System.Windows.Forms.TextBox()
+        Me.txtKategori = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.txtDeskripsi = New System.Windows.Forms.RichTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtKodeKonten = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.dgvDaftarLampiran = New System.Windows.Forms.DataGridView()
-        Me.btnLihat = New System.Windows.Forms.Button()
         Me.btnDownload = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtKategori = New System.Windows.Forms.TextBox()
-        Me.txtSubKategori = New System.Windows.Forms.TextBox()
+        Me.btnLihat = New System.Windows.Forms.Button()
+        Me.dgvDaftarLampiran = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvKonten, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -160,18 +160,52 @@ Partial Class frmBantuan
         Me.gbField.TabStop = False
         Me.gbField.Text = "Field"
         '
+        'txtSubKategori
+        '
+        Me.txtSubKategori.Enabled = False
+        Me.txtSubKategori.Location = New System.Drawing.Point(154, 64)
+        Me.txtSubKategori.Name = "txtSubKategori"
+        Me.txtSubKategori.Size = New System.Drawing.Size(273, 20)
+        Me.txtSubKategori.TabIndex = 16
+        '
+        'txtKategori
+        '
+        Me.txtKategori.Enabled = False
+        Me.txtKategori.Location = New System.Drawing.Point(154, 38)
+        Me.txtKategori.Name = "txtKategori"
+        Me.txtKategori.Size = New System.Drawing.Size(273, 20)
+        Me.txtKategori.TabIndex = 15
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(6, 81)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(68, 13)
+        Me.Label5.TabIndex = 14
+        Me.Label5.Text = "Sub Kategori"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 41)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(46, 13)
+        Me.Label4.TabIndex = 13
+        Me.Label4.Text = "Kategori"
+        '
         'txtDeskripsi
         '
-        Me.txtDeskripsi.Location = New System.Drawing.Point(154, 134)
+        Me.txtDeskripsi.Location = New System.Drawing.Point(154, 90)
         Me.txtDeskripsi.Name = "txtDeskripsi"
-        Me.txtDeskripsi.Size = New System.Drawing.Size(273, 77)
+        Me.txtDeskripsi.Size = New System.Drawing.Size(273, 121)
         Me.txtDeskripsi.TabIndex = 12
         Me.txtDeskripsi.Text = ""
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 134)
+        Me.Label6.Location = New System.Drawing.Point(11, 134)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(50, 13)
         Me.Label6.TabIndex = 4
@@ -206,13 +240,14 @@ Partial Class frmBantuan
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Daftar File"
         '
-        'dgvDaftarLampiran
+        'btnDownload
         '
-        Me.dgvDaftarLampiran.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDaftarLampiran.Location = New System.Drawing.Point(7, 19)
-        Me.dgvDaftarLampiran.Name = "dgvDaftarLampiran"
-        Me.dgvDaftarLampiran.Size = New System.Drawing.Size(224, 162)
-        Me.dgvDaftarLampiran.TabIndex = 0
+        Me.btnDownload.Location = New System.Drawing.Point(135, 187)
+        Me.btnDownload.Name = "btnDownload"
+        Me.btnDownload.Size = New System.Drawing.Size(96, 23)
+        Me.btnDownload.TabIndex = 2
+        Me.btnDownload.Text = "Download"
+        Me.btnDownload.UseVisualStyleBackColor = True
         '
         'btnLihat
         '
@@ -223,48 +258,17 @@ Partial Class frmBantuan
         Me.btnLihat.Text = "Lihat"
         Me.btnLihat.UseVisualStyleBackColor = True
         '
-        'btnDownload
+        'dgvDaftarLampiran
         '
-        Me.btnDownload.Location = New System.Drawing.Point(135, 187)
-        Me.btnDownload.Name = "btnDownload"
-        Me.btnDownload.Size = New System.Drawing.Size(96, 23)
-        Me.btnDownload.TabIndex = 2
-        Me.btnDownload.Text = "Download"
-        Me.btnDownload.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 49)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(46, 13)
-        Me.Label4.TabIndex = 13
-        Me.Label4.Text = "Kategori"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(9, 84)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(68, 13)
-        Me.Label5.TabIndex = 14
-        Me.Label5.Text = "Sub Kategori"
-        '
-        'txtKategori
-        '
-        Me.txtKategori.Enabled = False
-        Me.txtKategori.Location = New System.Drawing.Point(154, 46)
-        Me.txtKategori.Name = "txtKategori"
-        Me.txtKategori.Size = New System.Drawing.Size(273, 20)
-        Me.txtKategori.TabIndex = 15
-        '
-        'txtSubKategori
-        '
-        Me.txtSubKategori.Enabled = False
-        Me.txtSubKategori.Location = New System.Drawing.Point(154, 84)
-        Me.txtSubKategori.Name = "txtSubKategori"
-        Me.txtSubKategori.Size = New System.Drawing.Size(273, 20)
-        Me.txtSubKategori.TabIndex = 16
+        Me.dgvDaftarLampiran.AllowUserToAddRows = False
+        Me.dgvDaftarLampiran.AllowUserToDeleteRows = False
+        Me.dgvDaftarLampiran.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDaftarLampiran.Location = New System.Drawing.Point(7, 19)
+        Me.dgvDaftarLampiran.Name = "dgvDaftarLampiran"
+        Me.dgvDaftarLampiran.ReadOnly = True
+        Me.dgvDaftarLampiran.RowHeadersVisible = False
+        Me.dgvDaftarLampiran.Size = New System.Drawing.Size(224, 162)
+        Me.dgvDaftarLampiran.TabIndex = 0
         '
         'frmBantuan
         '

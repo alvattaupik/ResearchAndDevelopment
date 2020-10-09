@@ -42,31 +42,37 @@ Public Class frmKonten
         LoadComboBox(cmbHeaders, "SELECT IDCategories,Deskripsi FROM dbo.OCategories WHERE  StatusEnabled='Y'", "IDCategories", "Deskripsi", KoneksiDBEmail)
     End Sub
 
-    Private Sub cmbSubCategories_Click(sender As Object, e As EventArgs) Handles cmbSubCategories.Click
-        Call KoneksiDB_EMAIL()
-        LoadComboBox(cmbSubCategories, "SELECT IDSub,Deskripsi FROM dbo.Categories1 WHERE  StatusEnabled='Y' AND Cast(IDCategories AS varchar(100))='" & cmbHeaders.SelectedValue & "'", "IDSub", "Deskripsi", KoneksiDBEmail)
-    End Sub
+    'Private Sub cmbSubCategories_Click(sender As Object, e As EventArgs) Handles cmbSubCategories.Click
+    '    Call KoneksiDB_EMAIL()
+    '    LoadComboBox(cmbSubCategories, "SELECT IDSub,Deskripsi FROM dbo.Categories1 WHERE  StatusEnabled='Y' AND Cast(IDCategories AS varchar(100))='" & cmbHeaders.SelectedValue.ToString & "'", "IDSub", "Deskripsi", KoneksiDBEmail)
+
+    'End Sub
+
+    'Private Sub cmbSubCategories_Click(sender As Object, e As EventArgs) Handles cmbSubCategories.Click
+    '    Call KoneksiDB_EMAIL()
+    '    'LoadComboBox(cmbSubCategories, "SELECT IDSub,Deskripsi FROM dbo.Categories1 WHERE  StatusEnabled='Y' AND Cast(IDCategories AS varchar(100))='" & cmbHeaders.SelectedValue.ToString & "'", "IDSub", "Deskripsi", KoneksiDBEmail)
+
+    '    LoadComboBox(cmbSubCategories, "SELECT IDSub,Deskripsi FROM dbo.Categories1 WHERE  StatusEnabled='Y'", "IDSub", "Deskripsi", KoneksiDBEmail)
+    'End Sub
 
     Private Sub cmbSubCategories_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbSubCategories.SelectedValueChanged
         txtSubKategori.Text = cmbSubCategories.Text
+        txtIDSub.Text = cmbSubCategories.SelectedValue
     End Sub
 
 
     Private Sub cmbSubCategories_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cmbSubCategories.SelectionChangeCommitted
-        dgvListKonten.DataSource = Nothing
-        dgvListKonten.Rows.Clear()
-        'Call KoneksiDB_EMAIL()
-        'LoadDataGrid(dgvKonten, "SELECT ID,NamaKonten,IDKategori,IDSubKategori FROM dbo.OHelp Where Cast(IDKategori AS varchar(100))='" & cmbKategori.SelectedValue & "' and IDSubKategori='" & cmbSubKategori.SelectedValue & "' AND StatusEnabled='Y'", KoneksiDBEmail)
-        LoadDetailKonten()
-
-
+        'dgvListKonten.DataSource = Nothing
+        'dgvListKonten.Rows.Clear()
+        ''Call KoneksiDB_EMAIL()
+        ''LoadDataGrid(dgvKonten, "SELECT ID,NamaKonten,IDKategori,IDSubKategori FROM dbo.OHelp Where Cast(IDKategori AS varchar(100))='" & cmbKategori.SelectedValue & "' and IDSubKategori='" & cmbSubKategori.SelectedValue & "' AND StatusEnabled='Y'", KoneksiDBEmail)
+        'LoadDetailKonten()
     End Sub
 
 
     Sub LoadDetailKonten()
         Call KoneksiDB_EMAIL()
-        Dim cmd As New SqlCommand("SELECT ID,NamaKonten,IDKategori,IDSubKategori FROM dbo.OHelp Where Cast(IDKategori AS varchar(100))='" & cmbHeaders.SelectedValue & "' and IDSubKategori='" & cmbSubCategories.SelectedValue & "' AND StatusEnabled='Y'", KoneksiDBEmail)
-
+        Dim cmd As New SqlCommand("SELECT Cast(ID as Varchar(100)) As ID,NamaKonten,IDKategori,IDSubKategori FROM dbo.OHelp Where Cast(IDKategori AS varchar(100))='" & cmbHeaders.SelectedValue & "' and IDSubKategori='" & cmbSubCategories.SelectedValue & "' AND StatusEnabled='Y'", KoneksiDBEmail)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -74,7 +80,6 @@ Public Class frmKonten
 
         myBindingSource.DataSource = table
         dgvListKonten.DataSource = myBindingSource
-
         dgvListKonten.DataSource = table
         dgvListKonten.Refresh()
         dgvListKonten.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
@@ -86,6 +91,7 @@ Public Class frmKonten
 
     Private Sub cmbHeaders_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cmbHeaders.SelectionChangeCommitted
         txtNamaKategori.Text = cmbHeaders.Text
+        txtID.Text = cmbHeaders.SelectedValue
     End Sub
 
     Private Sub btnHapusLampiran_Click(sender As Object, e As EventArgs) Handles btnHapusLampiran.Click
@@ -102,4 +108,21 @@ Public Class frmKonten
         row = row - 1
         lblJumlahLampiran.Text = "Jumlah Lampiran : " & dgvListLampiran.RowCount
     End Sub
+
+    Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
+        txtID.Text = cmbHeaders.SelectedValue
+        txtIDSub.Text = cmbSubCategories.SelectedValue
+        txtNamaKategori.Text = cmbHeaders.Text
+        txtSubKategori.Text = cmbSubCategories.Text
+        txtKode.Enabled = True
+        txtSolutions.Text = ""
+
+        dgvListKonten.DataSource = Nothing
+        dgvListKonten.Rows.Clear()
+
+        txtNamaFile.Text = ""
+        txtPathLampiran.Text = ""
+
+    End Sub
+
 End Class

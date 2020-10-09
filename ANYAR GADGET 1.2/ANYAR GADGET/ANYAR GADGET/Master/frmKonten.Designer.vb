@@ -54,11 +54,11 @@ Partial Class frmKonten
         Me.Path = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnAddLampiran = New System.Windows.Forms.Button()
         Me.txtPathLampiran = New System.Windows.Forms.TextBox()
-        Me.picCariLampiran = New System.Windows.Forms.PictureBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.txtNamaFile = New System.Windows.Forms.TextBox()
         Me.btnNew = New System.Windows.Forms.Button()
         Me.btnProses = New System.Windows.Forms.Button()
+        Me.picCariLampiran = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvListKonten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbField.SuspendLayout()
@@ -77,21 +77,21 @@ Partial Class frmKonten
         Me.GroupBox1.Controls.Add(Me.cmbHeaders)
         Me.GroupBox1.Location = New System.Drawing.Point(2, 1)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(960, 123)
+        Me.GroupBox1.Size = New System.Drawing.Size(848, 109)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'txtCari
         '
-        Me.txtCari.Location = New System.Drawing.Point(221, 77)
+        Me.txtCari.Location = New System.Drawing.Point(109, 74)
         Me.txtCari.Name = "txtCari"
-        Me.txtCari.Size = New System.Drawing.Size(604, 20)
+        Me.txtCari.Size = New System.Drawing.Size(733, 20)
         Me.txtCari.TabIndex = 13
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(136, 85)
+        Me.Label2.Location = New System.Drawing.Point(10, 80)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(25, 13)
         Me.Label2.TabIndex = 12
@@ -100,7 +100,7 @@ Partial Class frmKonten
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(136, 55)
+        Me.Label6.Location = New System.Drawing.Point(10, 55)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(79, 13)
         Me.Label6.TabIndex = 11
@@ -109,7 +109,7 @@ Partial Class frmKonten
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(136, 22)
+        Me.Label1.Location = New System.Drawing.Point(10, 24)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(57, 13)
         Me.Label1.TabIndex = 10
@@ -118,33 +118,33 @@ Partial Class frmKonten
         'cmbSubCategories
         '
         Me.cmbSubCategories.FormattingEnabled = True
-        Me.cmbSubCategories.Location = New System.Drawing.Point(221, 47)
+        Me.cmbSubCategories.Location = New System.Drawing.Point(109, 47)
         Me.cmbSubCategories.Name = "cmbSubCategories"
-        Me.cmbSubCategories.Size = New System.Drawing.Size(604, 21)
+        Me.cmbSubCategories.Size = New System.Drawing.Size(733, 21)
         Me.cmbSubCategories.TabIndex = 9
         '
         'cmbHeaders
         '
         Me.cmbHeaders.FormattingEnabled = True
-        Me.cmbHeaders.Location = New System.Drawing.Point(221, 19)
+        Me.cmbHeaders.Location = New System.Drawing.Point(109, 16)
         Me.cmbHeaders.Name = "cmbHeaders"
-        Me.cmbHeaders.Size = New System.Drawing.Size(604, 21)
+        Me.cmbHeaders.Size = New System.Drawing.Size(733, 21)
         Me.cmbHeaders.TabIndex = 8
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(132, 130)
+        Me.Label7.Location = New System.Drawing.Point(12, 130)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(82, 13)
+        Me.Label7.Size = New System.Drawing.Size(60, 13)
         Me.Label7.TabIndex = 10
-        Me.Label7.Text = "Specific Konten"
+        Me.Label7.Text = "List Konten"
         '
         'dgvListKonten
         '
         Me.dgvListKonten.AllowUserToAddRows = False
         Me.dgvListKonten.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvListKonten.Location = New System.Drawing.Point(223, 130)
+        Me.dgvListKonten.Location = New System.Drawing.Point(111, 116)
         Me.dgvListKonten.Name = "dgvListKonten"
         Me.dgvListKonten.ReadOnly = True
         Me.dgvListKonten.RowHeadersVisible = False
@@ -169,7 +169,7 @@ Partial Class frmKonten
         Me.gbField.Controls.Add(Me.Label4)
         Me.gbField.Controls.Add(Me.Label11)
         Me.gbField.Controls.Add(Me.txtKode)
-        Me.gbField.Location = New System.Drawing.Point(7, 302)
+        Me.gbField.Location = New System.Drawing.Point(7, 289)
         Me.gbField.Name = "gbField"
         Me.gbField.Size = New System.Drawing.Size(443, 241)
         Me.gbField.TabIndex = 11
@@ -246,6 +246,7 @@ Partial Class frmKonten
         '
         'txtSolutions
         '
+        Me.txtSolutions.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtSolutions.Location = New System.Drawing.Point(154, 129)
         Me.txtSolutions.Name = "txtSolutions"
         Me.txtSolutions.Size = New System.Drawing.Size(273, 77)
@@ -254,6 +255,7 @@ Partial Class frmKonten
         '
         'cboAktif
         '
+        Me.cboAktif.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.cboAktif.AutoSize = True
         Me.cboAktif.Location = New System.Drawing.Point(154, 215)
         Me.cboAktif.Name = "cboAktif"
@@ -282,7 +284,6 @@ Partial Class frmKonten
         '
         'txtKode
         '
-        Me.txtKode.Enabled = False
         Me.txtKode.Location = New System.Drawing.Point(154, 103)
         Me.txtKode.Name = "txtKode"
         Me.txtKode.Size = New System.Drawing.Size(273, 20)
@@ -306,7 +307,7 @@ Partial Class frmKonten
         Me.GroupBox4.Controls.Add(Me.lblJumlahLampiran)
         Me.GroupBox4.Controls.Add(Me.btnHapusLampiran)
         Me.GroupBox4.Controls.Add(Me.dgvListLampiran)
-        Me.GroupBox4.Location = New System.Drawing.Point(497, 357)
+        Me.GroupBox4.Location = New System.Drawing.Point(497, 342)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(347, 186)
         Me.GroupBox4.TabIndex = 23
@@ -336,7 +337,7 @@ Partial Class frmKonten
         Me.dgvListLampiran.Name = "dgvListLampiran"
         Me.dgvListLampiran.ReadOnly = True
         Me.dgvListLampiran.RowHeadersVisible = False
-        Me.dgvListLampiran.Size = New System.Drawing.Size(324, 140)
+        Me.dgvListLampiran.Size = New System.Drawing.Size(335, 140)
         Me.dgvListLampiran.TabIndex = 0
         '
         'KodeKonten
@@ -360,7 +361,7 @@ Partial Class frmKonten
         'btnAddLampiran
         '
         Me.btnAddLampiran.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAddLampiran.Location = New System.Drawing.Point(730, 314)
+        Me.btnAddLampiran.Location = New System.Drawing.Point(747, 296)
         Me.btnAddLampiran.Name = "btnAddLampiran"
         Me.btnAddLampiran.Size = New System.Drawing.Size(97, 21)
         Me.btnAddLampiran.TabIndex = 22
@@ -371,22 +372,11 @@ Partial Class frmKonten
         '
         Me.txtPathLampiran.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtPathLampiran.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPathLampiran.Location = New System.Drawing.Point(528, 340)
+        Me.txtPathLampiran.Location = New System.Drawing.Point(528, 320)
         Me.txtPathLampiran.Name = "txtPathLampiran"
         Me.txtPathLampiran.ReadOnly = True
-        Me.txtPathLampiran.Size = New System.Drawing.Size(322, 22)
+        Me.txtPathLampiran.Size = New System.Drawing.Size(316, 22)
         Me.txtPathLampiran.TabIndex = 21
-        '
-        'picCariLampiran
-        '
-        Me.picCariLampiran.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.picCariLampiran.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
-        Me.picCariLampiran.Location = New System.Drawing.Point(497, 312)
-        Me.picCariLampiran.Name = "picCariLampiran"
-        Me.picCariLampiran.Size = New System.Drawing.Size(25, 22)
-        Me.picCariLampiran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picCariLampiran.TabIndex = 20
-        Me.picCariLampiran.TabStop = False
         '
         'OpenFileDialog1
         '
@@ -396,15 +386,15 @@ Partial Class frmKonten
         '
         Me.txtNamaFile.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtNamaFile.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNamaFile.Location = New System.Drawing.Point(528, 312)
+        Me.txtNamaFile.Location = New System.Drawing.Point(528, 295)
         Me.txtNamaFile.Name = "txtNamaFile"
-        Me.txtNamaFile.Size = New System.Drawing.Size(196, 22)
+        Me.txtNamaFile.Size = New System.Drawing.Size(214, 22)
         Me.txtNamaFile.TabIndex = 24
         '
         'btnNew
         '
         Me.btnNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnNew.Location = New System.Drawing.Point(856, 357)
+        Me.btnNew.Location = New System.Drawing.Point(856, 315)
         Me.btnNew.Name = "btnNew"
         Me.btnNew.Size = New System.Drawing.Size(106, 61)
         Me.btnNew.TabIndex = 25
@@ -420,6 +410,17 @@ Partial Class frmKonten
         Me.btnProses.TabIndex = 26
         Me.btnProses.Text = "OK"
         Me.btnProses.UseVisualStyleBackColor = True
+        '
+        'picCariLampiran
+        '
+        Me.picCariLampiran.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.picCariLampiran.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
+        Me.picCariLampiran.Location = New System.Drawing.Point(497, 295)
+        Me.picCariLampiran.Name = "picCariLampiran"
+        Me.picCariLampiran.Size = New System.Drawing.Size(25, 22)
+        Me.picCariLampiran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picCariLampiran.TabIndex = 20
+        Me.picCariLampiran.TabStop = False
         '
         'frmKonten
         '

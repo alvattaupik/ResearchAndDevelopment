@@ -253,7 +253,7 @@ Public Class frmMainMenu
     End Sub
 
     Private Sub H_Konten_Click(sender As Object, e As EventArgs) Handles H_Konten.Click
-        Dim frm As New frmKonten
+        Dim frm As New frmMasterKontenBantuan
         frm.MdiParent = Me
         frm.Show()
     End Sub
