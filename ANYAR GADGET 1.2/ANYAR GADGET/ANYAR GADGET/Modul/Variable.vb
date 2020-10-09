@@ -16,6 +16,10 @@
     Public MstrStatusAktifUser As String
 
 
+    Public MstrErrorCode As String
+    Public MstrErrorMessage As String
+    Public MstrPesanOk As String = "Operation Success"
+
 
     Public MintNilaiTimer As Integer
     Public MintHitungTimer As Integer
