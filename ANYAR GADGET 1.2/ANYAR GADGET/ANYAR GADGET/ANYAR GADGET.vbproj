@@ -86,6 +86,42 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrowseForm\frmBrowseBusinessPartnerBAPPenyelesaian.Designer.vb">
+      <DependentUpon>frmBrowseBusinessPartnerBAPPenyelesaian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseBusinessPartnerBAPPenyelesaian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseBusinessPartnerBAPSerahTerima.Designer.vb">
+      <DependentUpon>frmBrowseBusinessPartnerBAPSerahTerima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseBusinessPartnerBAPSerahTerima.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseBusinessPartnerSuratTerima.Designer.vb">
+      <DependentUpon>frmBrowseBusinessPartnerSuratTerima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseBusinessPartnerSuratTerima.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseItemMasterDataBAPPenyelesaian.Designer.vb">
+      <DependentUpon>frmBrowseItemMasterDataBAPPenyelesaian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseItemMasterDataBAPPenyelesaian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseItemMasterDataBAPSerahTerima .Designer.vb">
+      <DependentUpon>frmBrowseItemMasterDataBAPSerahTerima .vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseItemMasterDataBAPSerahTerima .vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseItemMasterDataSuratTerima.Designer.vb">
+      <DependentUpon>frmBrowseItemMasterDataSuratTerima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseItemMasterDataSuratTerima.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BrowseForm\frmBrowseItemMasterData.Designer.vb">
       <DependentUpon>frmBrowseItemMasterData.vb</DependentUpon>
     </Compile>
@@ -128,6 +164,18 @@
     <Compile Include="BrowseForm\frmBrowseUsers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CrystalReports\BA Penyelesaian Anyar Gadget IT001-01.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BA Penyelesaian Anyar Gadget IT001-01.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReports\BA Serah Terima Anyar Gadget IT002-01.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BA Serah Terima Anyar Gadget IT002-01.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReports\LaporanInventoryCheck.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -139,6 +187,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LaporanMutasiStockAG.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReports\Surat Jalan Anyar Gadget G001-01.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Surat Jalan Anyar Gadget G001-01.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReports\Surat Terima Anyar Gadget G002-01.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Surat Terima Anyar Gadget G002-01.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="frmDashBoard.Designer.vb">
@@ -163,6 +223,12 @@
       <DependentUpon>frmUbahPassword.vb</DependentUpon>
     </Compile>
     <Compile Include="frmUbahPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmBAP Penyelesaian.Designer.vb">
+      <DependentUpon>frmBAP Penyelesaian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmBAP Penyelesaian.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gadget\frmDetailPerubahanHargaJual.designer.vb">
@@ -213,6 +279,12 @@
     <Compile Include="Gadget\frmDatabasePerformance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Gadget\frmListKendaraan.Designer.vb">
+      <DependentUpon>frmListKendaraan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmListKendaraan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Gadget\frmPromoPromo.Designer.vb">
       <DependentUpon>frmPromoPromo.vb</DependentUpon>
     </Compile>
@@ -249,10 +321,28 @@
     <Compile Include="Gadget\frmIntegrationMonitoring.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Gadget\frmBAP SerahTerima.Designer.vb">
+      <DependentUpon>frmBAP SerahTerima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmBAP SerahTerima.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmSuratTerima.Designer.vb">
+      <DependentUpon>frmSuratTerima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmSuratTerima.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Gadget\frmSuratJalan.Designer.vb">
       <DependentUpon>frmSuratJalan.vb</DependentUpon>
     </Compile>
     <Compile Include="Gadget\frmSuratJalan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmValidationControls.Designer.vb">
+      <DependentUpon>frmValidationControls.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmValidationControls.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Help\frmBantuan.Designer.vb">
@@ -277,6 +367,12 @@
       <DependentUpon>frmTampilkanLaporan.vb</DependentUpon>
     </Compile>
     <Compile Include="LainLain\frmTampilkanLaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LainLain\frmTampilkanSurat.Designer.vb">
+      <DependentUpon>frmTampilkanSurat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LainLain\frmTampilkanSurat.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Master\frmMasterKontenBantuan.Designer.vb">
@@ -377,6 +473,24 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BrowseForm\frmBrowseBusinessPartnerBAPPenyelesaian.resx">
+      <DependentUpon>frmBrowseBusinessPartnerBAPPenyelesaian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseBusinessPartnerBAPSerahTerima.resx">
+      <DependentUpon>frmBrowseBusinessPartnerBAPSerahTerima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseBusinessPartnerSuratTerima.resx">
+      <DependentUpon>frmBrowseBusinessPartnerSuratTerima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseItemMasterDataBAPPenyelesaian.resx">
+      <DependentUpon>frmBrowseItemMasterDataBAPPenyelesaian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseItemMasterDataBAPSerahTerima .resx">
+      <DependentUpon>frmBrowseItemMasterDataBAPSerahTerima .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseItemMasterDataSuratTerima.resx">
+      <DependentUpon>frmBrowseItemMasterDataSuratTerima.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseItemMasterData.resx">
       <DependentUpon>frmBrowseItemMasterData.vb</DependentUpon>
     </EmbeddedResource>
@@ -398,6 +512,14 @@
     <EmbeddedResource Include="BrowseForm\frmBrowseUsers.resx">
       <DependentUpon>frmBrowseUsers.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\BA Penyelesaian Anyar Gadget IT001-01.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BA Penyelesaian Anyar Gadget IT001-01.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\BA Serah Terima Anyar Gadget IT002-01.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BA Serah Terima Anyar Gadget IT002-01.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReports\LaporanInventoryCheck.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LaporanInventoryCheck.vb</LastGenOutput>
@@ -406,6 +528,14 @@
     <EmbeddedResource Include="CrystalReports\LaporanMutasiStockAG.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LaporanMutasiStockAG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\Surat Jalan Anyar Gadget G001-01.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Surat Jalan Anyar Gadget G001-01.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\Surat Terima Anyar Gadget G002-01.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Surat Terima Anyar Gadget G002-01.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashBoard.resx">
       <DependentUpon>frmDashBoard.vb</DependentUpon>
@@ -418,6 +548,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUbahPassword.resx">
       <DependentUpon>frmUbahPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmBAP Penyelesaian.resx">
+      <DependentUpon>frmBAP Penyelesaian.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gadget\frmDetailPerubahanHargaJual.resx">
       <DependentUpon>frmDetailPerubahanHargaJual.vb</DependentUpon>
@@ -443,6 +576,9 @@
     <EmbeddedResource Include="Gadget\frmDatabasePerformance.resx">
       <DependentUpon>frmDatabasePerformance.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmListKendaraan.resx">
+      <DependentUpon>frmListKendaraan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gadget\frmPromoPromo.resx">
       <DependentUpon>frmPromoPromo.vb</DependentUpon>
     </EmbeddedResource>
@@ -461,8 +597,17 @@
     <EmbeddedResource Include="Gadget\frmIntegrationMonitoring.resx">
       <DependentUpon>frmIntegrationMonitoring.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmBAP SerahTerima.resx">
+      <DependentUpon>frmBAP SerahTerima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmSuratTerima.resx">
+      <DependentUpon>frmSuratTerima.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gadget\frmSuratJalan.resx">
       <DependentUpon>frmSuratJalan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmValidationControls.resx">
+      <DependentUpon>frmValidationControls.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Help\frmBantuan.resx">
       <DependentUpon>frmBantuan.vb</DependentUpon>
@@ -475,6 +620,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LainLain\frmTampilkanLaporan.resx">
       <DependentUpon>frmTampilkanLaporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LainLain\frmTampilkanSurat.resx">
+      <DependentUpon>frmTampilkanSurat.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmMasterKontenBantuan.resx">
       <DependentUpon>frmMasterKontenBantuan.vb</DependentUpon>
@@ -744,6 +892,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Surat Terima.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finish.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Document.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

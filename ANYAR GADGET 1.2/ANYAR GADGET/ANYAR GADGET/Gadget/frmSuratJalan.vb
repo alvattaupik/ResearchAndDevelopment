@@ -1,11 +1,34 @@
-﻿Imports System.Data
+﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
+Imports Guna
+Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
 Public Class frmSuratJalan
 
+    Public cryRpt As New ReportDocument
+    Public crtableLogoninfos As New TableLogOnInfos
+    Public crtableLogoninfo As New TableLogOnInfo
+    Public crConnectionInfo As New ConnectionInfo
+    Public CrTables As Tables
+    Public CrTable As Table
+    Public RptDocument As New ReportDocument
+    Public reportDocument As New ReportDocument()
+    Public paramField As New ParameterField()
+    Public paramFields As New ParameterFields()
+    Public paramDiscreteValue As New ParameterDiscreteValue()
+    Public paramField2 As New ParameterField()
+    Public paramFields2 As New ParameterFields()
+    Public paramDiscreteValue2 As New ParameterDiscreteValue()
+
+    Public paramField3 As New ParameterField()
+    Public paramFields3 As New ParameterFields()
+    Public paramDiscreteValue3 As New ParameterDiscreteValue()
 
     Public selRow As New DataGridViewRow
 
     Dim intRow As Integer
+
+    Dim userMsg As String
 
     Private Sub picBrowsBusinessPartner_Click(sender As Object, e As EventArgs) Handles picBrowsBusinessPartner.Click
         frmBrowseBusinessPartner.ShowDialog()
@@ -14,6 +37,8 @@ Public Class frmSuratJalan
 
     Private Sub frmSuratJalan_Load(sender As Object, e As EventArgs) Handles Me.Load
         txtDibuatOleh.Text = MstrNamaPegawai
+        Call KoneksiDB_EMAIL()
+        LoadDataGrid(dgvDaftarSurat, "SELECT Top 15 NomorSurat,CAST(TanggalSurat AS DATE) AS TglSurat,EmpName AS DibuatOleh,Perihal,DitujukanKepada AS Penerima FROM dbo.KopSurat Where EmpLocation='" & MstrKodeDivisi & "' AND Canceled='N' AND KdJenisSurat='" & lblKodeSurat.Text & "' Order By CreateDate Desc", KoneksiDBEmail)
     End Sub
 
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
@@ -75,12 +100,11 @@ Public Class frmSuratJalan
 
                 AU_SISTER_DETAILSJ("ADD-DetailSJ", dgvListItem)
 
-
             Next
-
-
-
         End If
+
+        Call KoneksiDB_EMAIL()
+        LoadDataGrid(dgvDaftarSurat, "SELECT Top 15 NomorSurat,CAST(TanggalSurat AS DATE) AS TglSurat,EmpName AS DibuatOleh,Perihal,DitujukanKepada AS Penerima FROM dbo.KopSurat Where EmpLocation='" & MstrKodeDivisi & "' AND Canceled='N' AND KdJenisSurat='" & lblKodeSurat.Text & "' Order By CreateDate Desc", KoneksiDBEmail)
 
     End Sub
 
@@ -114,7 +138,7 @@ Public Class frmSuratJalan
             command.Parameters.AddWithValue("KalimatPenutup", Trim(txtKalimatPenutup.Text))
             command.Parameters.AddWithValue("Tembusan", Trim(txtTembusan.Text))
             command.Parameters.AddWithValue("Canceled", Trim(""))
-            command.Parameters.AddWithValue("Reasons", Trim(""))
+            command.Parameters.AddWithValue("Reasons", Trim(userMsg))
 
 
             command.Parameters.Add("ErrorCodeOUT", SqlDbType.VarChar, 100)
@@ -206,4 +230,72 @@ Public Class frmSuratJalan
 
 
 
+
+
+    Private Sub txtCariSurat_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCariSurat.KeyPress
+        Dim Tombol As Integer = Asc(e.KeyChar)
+        Try
+            If Tombol = 13 Then
+                Call KoneksiDB_EMAIL()
+                LoadDataGrid(dgvDaftarSurat, "SELECT  NomorSurat,CAST(TanggalSurat AS DATE) AS TglSurat,EmpName AS DibuatOleh,Perihal,DitujukanKepada AS Penerima,CANCELED FROM dbo.KopSurat Where EmpLocation='" & MstrKodeDivisi & "'  AND (Perihal Like '%" & Trim(txtCariSurat.Text) & "%' Or DitujukanKepada Like '%" & Trim(txtCariSurat.Text) & "%' OR NomorSurat Like '%" & Trim(txtCariSurat.Text) & "%' OR EmpName Like '%" & Trim(txtCariSurat.Text) & "%' OR FORMAT(TanggalSurat,'dd-mm-yyyy') Like '%" & Trim(txtCariSurat.Text) & "%' OR FORMAT(CreateDate,'dd-mm-yyyy') Like '%" & Trim(txtCariSurat.Text) & "%' ) AND KdJenisSurat='" & lblKodeSurat.Text & "' Order By CreateDate Desc", KoneksiDBEmail)
+
+            End If
+        Catch ex As Exception
+            DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
+        End Try
+    End Sub
+
+    Private Sub picPrint_Click(sender As Object, e As EventArgs) Handles picPrint.Click
+
+
+        paramField.Name = "NomorSurat@"
+        paramDiscreteValue.Value = (Trim(dgvDaftarSurat.Item(0, dgvDaftarSurat.CurrentRow.Index).Value))
+        paramField.CurrentValues.Add(paramDiscreteValue)
+        paramFields.Add(paramField)
+
+        paramField2.Name = "KodeJenisSurat@"
+        paramDiscreteValue2.Value = Trim(lblKodeSurat.Text)
+        paramField2.CurrentValues.Add(paramDiscreteValue2)
+
+        paramField3.Name = "EmpIDPrint@"
+        paramDiscreteValue3.Value = Trim(MstrKodePegawai)
+        paramField2.CurrentValues.Add(paramDiscreteValue3)
+
+
+
+        Dim frm As New frmTampilkanSurat
+        frm.crvTampilkanSurat.ParameterFieldInfo = paramFields
+        reportDocument = New Surat_Jalan_Anyar_Gadget_G001_01
+        reportDocument.SetDatabaseLogon("sa", "h0spit4lity#", "10.1.0.53", "RKM_LIVE_2")
+
+        frm.crvTampilkanSurat.ReportSource = reportDocument
+        frm.crvTampilkanSurat.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+        frm.crvTampilkanSurat.Refresh()
+        frm.WindowState = FormWindowState.Maximized
+        frm.Show()
+
+    End Sub
+
+    Private Sub picCancel_Click(sender As Object, e As EventArgs) Handles picCancel.Click
+        If dgvDaftarSurat.RowCount = 0 Then Exit Sub
+
+
+        If MsgBox("Apakah Yakin Anda Akan Membatalkan Surat Ini? Nomor Surat Tidak Dapat Digunakan Kembali", vbYesNo, "Konfirmasi?!") = vbYes Then
+
+            userMsg = Microsoft.VisualBasic.InputBox("AlasanPembatalan Surat?", "Masukan Alasan Pembatalan", "", 500, 300)
+
+            Call AU_SISTER_SJ("CANCEL-SJ")
+
+        Else
+            Exit Sub
+        End If
+
+        Call KoneksiDB_EMAIL()
+        LoadDataGrid(dgvDaftarSurat, "SELECT Top 15 NomorSurat,CAST(TanggalSurat AS DATE) AS TglSurat,EmpName AS DibuatOleh,Perihal,DitujukanKepada AS Penerima FROM dbo.KopSurat Where EmpLocation='" & MstrKodeDivisi & "' AND Canceled='N' AND KdJenisSurat='" & lblKodeSurat.Text & "' Order By CreateDate Desc", KoneksiDBEmail)
+
+    End Sub
+
+    Private Sub dgvDaftarSurat_Click(sender As Object, e As EventArgs) Handles dgvDaftarSurat.Click
+        txtNoSurat.Text = dgvDaftarSurat.Item(0, dgvDaftarSurat.CurrentRow.Index).Value
+    End Sub
 End Class

@@ -28,7 +28,6 @@ Partial Class frmSuratJalan
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtNoTelp = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.picBrowsBusinessPartner = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtDitujukanKepada = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -43,13 +42,12 @@ Partial Class frmSuratJalan
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNoSurat = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.lblKodeSurat = New System.Windows.Forms.Label()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
-        Me.picCancel = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.picPrint = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.txtCariSurat = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.dgvDaftarSurat = New System.Windows.Forms.DataGridView()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -72,7 +70,6 @@ Partial Class frmSuratJalan
         Me.Label19 = New System.Windows.Forms.Label()
         Me.lblJumlahItem = New System.Windows.Forms.Label()
         Me.btnHapus = New System.Windows.Forms.Button()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.dgvListItem = New System.Windows.Forms.DataGridView()
         Me.Kode = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -86,24 +83,29 @@ Partial Class frmSuratJalan
         Me.txtTembusan = New System.Windows.Forms.RichTextBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.btnProses = New System.Windows.Forms.Button()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.picCancel = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.picPrint = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.picBrowsBusinessPartner = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.picBrowsBusinessPartner, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
-        CType(Me.picCancel, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picPrint, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvDaftarSurat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvListItem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox9.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picCancel, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picPrint, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBrowsBusinessPartner, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -178,16 +180,6 @@ Partial Class frmSuratJalan
         Me.Label8.Size = New System.Drawing.Size(63, 18)
         Me.Label8.TabIndex = 10
         Me.Label8.Text = "No. Tel"
-        '
-        'picBrowsBusinessPartner
-        '
-        Me.picBrowsBusinessPartner.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
-        Me.picBrowsBusinessPartner.Location = New System.Drawing.Point(118, 41)
-        Me.picBrowsBusinessPartner.Name = "picBrowsBusinessPartner"
-        Me.picBrowsBusinessPartner.Size = New System.Drawing.Size(24, 24)
-        Me.picBrowsBusinessPartner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picBrowsBusinessPartner.TabIndex = 9
-        Me.picBrowsBusinessPartner.TabStop = False
         '
         'Label7
         '
@@ -316,17 +308,6 @@ Partial Class frmSuratJalan
         Me.txtNoSurat.Size = New System.Drawing.Size(283, 24)
         Me.txtNoSurat.TabIndex = 0
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Surat
-        Me.PictureBox1.Location = New System.Drawing.Point(18, 31)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(137, 122)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        Me.PictureBox1.Visible = False
-        '
         'GroupBox4
         '
         Me.GroupBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -356,9 +337,11 @@ Partial Class frmSuratJalan
         Me.GroupBox8.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox8.Controls.Add(Me.txtCariSurat)
+        Me.GroupBox8.Controls.Add(Me.Label20)
         Me.GroupBox8.Controls.Add(Me.picCancel)
         Me.GroupBox8.Controls.Add(Me.picPrint)
-        Me.GroupBox8.Controls.Add(Me.DataGridView2)
+        Me.GroupBox8.Controls.Add(Me.dgvDaftarSurat)
         Me.GroupBox8.Location = New System.Drawing.Point(13, 113)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(278, 441)
@@ -366,41 +349,35 @@ Partial Class frmSuratJalan
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Daftar Surat Saya"
         '
-        'picCancel
+        'txtCariSurat
         '
-        Me.picCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.picCancel.BackColor = System.Drawing.Color.Transparent
-        Me.picCancel.BaseColor = System.Drawing.Color.Black
-        Me.picCancel.Image = Global.ANYAR_GADGET.My.Resources.Resources.Cancel
-        Me.picCancel.Location = New System.Drawing.Point(65, 384)
-        Me.picCancel.Name = "picCancel"
-        Me.picCancel.Size = New System.Drawing.Size(51, 53)
-        Me.picCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picCancel.TabIndex = 2
-        Me.picCancel.TabStop = False
+        Me.txtCariSurat.Location = New System.Drawing.Point(39, 23)
+        Me.txtCariSurat.Name = "txtCariSurat"
+        Me.txtCariSurat.Size = New System.Drawing.Size(233, 20)
+        Me.txtCariSurat.TabIndex = 4
         '
-        'picPrint
+        'Label20
         '
-        Me.picPrint.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.picPrint.BackColor = System.Drawing.Color.Transparent
-        Me.picPrint.BaseColor = System.Drawing.Color.Black
-        Me.picPrint.Image = Global.ANYAR_GADGET.My.Resources.Resources.Print1
-        Me.picPrint.Location = New System.Drawing.Point(6, 384)
-        Me.picPrint.Name = "picPrint"
-        Me.picPrint.Size = New System.Drawing.Size(52, 53)
-        Me.picPrint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picPrint.TabIndex = 1
-        Me.picPrint.TabStop = False
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(8, 23)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(25, 13)
+        Me.Label20.TabIndex = 3
+        Me.Label20.Text = "Cari"
         '
-        'DataGridView2
+        'dgvDaftarSurat
         '
-        Me.DataGridView2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.dgvDaftarSurat.AllowUserToAddRows = False
+        Me.dgvDaftarSurat.AllowUserToDeleteRows = False
+        Me.dgvDaftarSurat.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(7, 19)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(265, 359)
-        Me.DataGridView2.TabIndex = 0
+        Me.dgvDaftarSurat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDaftarSurat.Location = New System.Drawing.Point(7, 52)
+        Me.dgvDaftarSurat.Name = "dgvDaftarSurat"
+        Me.dgvDaftarSurat.ReadOnly = True
+        Me.dgvDaftarSurat.RowHeadersVisible = False
+        Me.dgvDaftarSurat.Size = New System.Drawing.Size(265, 326)
+        Me.dgvDaftarSurat.TabIndex = 0
         '
         'Label12
         '
@@ -641,16 +618,6 @@ Partial Class frmSuratJalan
         Me.btnHapus.Text = "Hapus"
         Me.btnHapus.UseVisualStyleBackColor = True
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
-        Me.PictureBox3.Location = New System.Drawing.Point(15, 28)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(38, 32)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 2
-        Me.PictureBox3.TabStop = False
-        '
         'Label15
         '
         Me.Label15.AutoSize = True
@@ -767,6 +734,62 @@ Partial Class frmSuratJalan
         Me.btnProses.Text = "Proses"
         Me.btnProses.UseVisualStyleBackColor = True
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
+        Me.PictureBox3.Location = New System.Drawing.Point(15, 28)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(38, 32)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 2
+        Me.PictureBox3.TabStop = False
+        '
+        'picCancel
+        '
+        Me.picCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.picCancel.BackColor = System.Drawing.Color.Transparent
+        Me.picCancel.BaseColor = System.Drawing.Color.Black
+        Me.picCancel.Image = Global.ANYAR_GADGET.My.Resources.Resources.Cancel
+        Me.picCancel.Location = New System.Drawing.Point(65, 384)
+        Me.picCancel.Name = "picCancel"
+        Me.picCancel.Size = New System.Drawing.Size(51, 53)
+        Me.picCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picCancel.TabIndex = 2
+        Me.picCancel.TabStop = False
+        '
+        'picPrint
+        '
+        Me.picPrint.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.picPrint.BackColor = System.Drawing.Color.Transparent
+        Me.picPrint.BaseColor = System.Drawing.Color.Black
+        Me.picPrint.Image = Global.ANYAR_GADGET.My.Resources.Resources.Print1
+        Me.picPrint.Location = New System.Drawing.Point(6, 384)
+        Me.picPrint.Name = "picPrint"
+        Me.picPrint.Size = New System.Drawing.Size(52, 53)
+        Me.picPrint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picPrint.TabIndex = 1
+        Me.picPrint.TabStop = False
+        '
+        'picBrowsBusinessPartner
+        '
+        Me.picBrowsBusinessPartner.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
+        Me.picBrowsBusinessPartner.Location = New System.Drawing.Point(118, 41)
+        Me.picBrowsBusinessPartner.Name = "picBrowsBusinessPartner"
+        Me.picBrowsBusinessPartner.Size = New System.Drawing.Size(24, 24)
+        Me.picBrowsBusinessPartner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picBrowsBusinessPartner.TabIndex = 9
+        Me.picBrowsBusinessPartner.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Surat
+        Me.PictureBox1.Location = New System.Drawing.Point(18, 31)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(137, 122)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'frmSuratJalan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -785,16 +808,13 @@ Partial Class frmSuratJalan
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.picBrowsBusinessPartner, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.GroupBox8.ResumeLayout(False)
-        CType(Me.picCancel, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picPrint, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox8.PerformLayout()
+        CType(Me.dgvDaftarSurat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
@@ -803,12 +823,16 @@ Partial Class frmSuratJalan
         Me.GroupBox7.PerformLayout()
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvListItem, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox9.ResumeLayout(False)
         Me.GroupBox9.PerformLayout()
         Me.GroupBox10.ResumeLayout(False)
         Me.GroupBox10.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picCancel, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picPrint, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBrowsBusinessPartner, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -845,7 +869,7 @@ Partial Class frmSuratJalan
     Friend WithEvents txtKalimatPembuka As System.Windows.Forms.RichTextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents GroupBox8 As System.Windows.Forms.GroupBox
-    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvDaftarSurat As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox7 As System.Windows.Forms.GroupBox
     Friend WithEvents lblJumlahItem As System.Windows.Forms.Label
     Friend WithEvents btnHapus As System.Windows.Forms.Button
@@ -876,4 +900,6 @@ Partial Class frmSuratJalan
     Friend WithEvents Deskripsi As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Qty As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Keterangan As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents txtCariSurat As System.Windows.Forms.TextBox
+    Friend WithEvents Label20 As System.Windows.Forms.Label
 End Class

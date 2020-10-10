@@ -263,4 +263,26 @@ Public Class frmMainMenu
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+    Private Sub I_SuratTerima_Click(sender As Object, e As EventArgs) Handles I_SuratTerima.Click
+        Dim frm As New frmSuratTerima
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub I_BAPSerahTerima_Click(sender As Object, e As EventArgs) Handles I_BAPSerahTerima.Click
+        Dim frm As New frmBAPSerahTerima
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub I_BAPPenyelesaian_Click(sender As Object, e As EventArgs) Handles I_BAPPenyelesaian.Click
+        Dim frm As New frmBAPPenyelesaian
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub I_ListKendaraan_Click(sender As Object, e As EventArgs) Handles I_ListKendaraan.Click
+        frmListKendaraan.ShowDialog()
+    End Sub
 End Class
