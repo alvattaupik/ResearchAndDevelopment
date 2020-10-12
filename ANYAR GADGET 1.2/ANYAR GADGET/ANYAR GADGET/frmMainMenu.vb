@@ -285,4 +285,8 @@ Public Class frmMainMenu
     Private Sub I_ListKendaraan_Click(sender As Object, e As EventArgs) Handles I_ListKendaraan.Click
         frmListKendaraan.ShowDialog()
     End Sub
+
+    Private Sub I_ValidationControl_Click(sender As Object, e As EventArgs) Handles I_ValidationControl.Click
+        frmValidationControls.ShowDialog()
+    End Sub
 End Class

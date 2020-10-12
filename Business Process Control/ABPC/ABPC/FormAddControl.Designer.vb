@@ -23,6 +23,7 @@ Partial Class FormAddControl
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtDocNum = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -43,13 +44,12 @@ Partial Class FormAddControl
         Me.cmdNew = New Guna.UI.WinForms.GunaGradientButton()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtJenisOperasi = New System.Windows.Forms.TextBox()
-        Me.cmdSaveAll = New Guna.UI.WinForms.GunaGradientButton()
         Me.dgAllCabang = New System.Windows.Forms.DataGridView()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.cmdSaveAll = New Guna.UI.WinForms.GunaGradientButton()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.dgAllCabang, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -61,6 +61,16 @@ Partial Class FormAddControl
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(419, 42)
         Me.Panel1.TabIndex = 0
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ABPC.My.Resources.Resources.control_accesos
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(119, 39)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'txtDocNum
         '
@@ -303,6 +313,16 @@ Partial Class FormAddControl
         Me.txtJenisOperasi.Size = New System.Drawing.Size(69, 20)
         Me.txtJenisOperasi.TabIndex = 50
         '
+        'dgAllCabang
+        '
+        Me.dgAllCabang.AllowUserToAddRows = False
+        Me.dgAllCabang.AllowUserToDeleteRows = False
+        Me.dgAllCabang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgAllCabang.Location = New System.Drawing.Point(468, 6)
+        Me.dgAllCabang.Name = "dgAllCabang"
+        Me.dgAllCabang.Size = New System.Drawing.Size(247, 309)
+        Me.dgAllCabang.TabIndex = 52
+        '
         'cmdSaveAll
         '
         Me.cmdSaveAll.AnimationHoverSpeed = 0.07!
@@ -331,31 +351,11 @@ Partial Class FormAddControl
         Me.cmdSaveAll.Text = "Save For All Location"
         Me.cmdSaveAll.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'dgAllCabang
-        '
-        Me.dgAllCabang.AllowUserToAddRows = False
-        Me.dgAllCabang.AllowUserToDeleteRows = False
-        Me.dgAllCabang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgAllCabang.Location = New System.Drawing.Point(468, 6)
-        Me.dgAllCabang.Name = "dgAllCabang"
-        Me.dgAllCabang.Size = New System.Drawing.Size(247, 309)
-        Me.dgAllCabang.TabIndex = 52
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.ABPC.My.Resources.Resources.control_accesos
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(119, 39)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
         'FormAddControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(428, 319)
+        Me.ClientSize = New System.Drawing.Size(435, 319)
         Me.Controls.Add(Me.dgAllCabang)
         Me.Controls.Add(Me.cmdSaveAll)
         Me.Controls.Add(Me.txtJenisOperasi)
@@ -378,10 +378,10 @@ Partial Class FormAddControl
         Me.Text = "Form Add Control"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.dgAllCabang, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -407,7 +407,7 @@ Partial Class FormAddControl
     Friend WithEvents cmdNew As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtJenisOperasi As System.Windows.Forms.TextBox
-    Friend WithEvents cmdSaveAll As Guna.UI.WinForms.GunaGradientButton
     Friend WithEvents dgAllCabang As System.Windows.Forms.DataGridView
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents cmdSaveAll As Guna.UI.WinForms.GunaGradientButton
 End Class

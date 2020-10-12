@@ -18,6 +18,17 @@ Public Class frmAnyarLocalPrint
 
 
     Private Sub btnProses_Click(sender As Object, e As EventArgs) Handles btnProses.Click
+        If txtNoDokumen.Text = "" Then
+            DisplayPesanError("Nomor Dokumen Harus Di Isi", frmMainMenu.txtPesanError, 1000)
+            Exit Sub
+        End If
+
+
+        If cmbJenisDokumen.Text = "" Then
+            DisplayPesanError("Jenis Dokumen Harus Di Pilih", frmMainMenu.txtPesanError, 1000)
+            Exit Sub
+        End If
+
         If cmbJenisDokumen.SelectedValue = "ODLN001" Then
             Call DisplayAnyarLocalPrintCrystalReport("SELECT Top 1 Cast(DocEntry as VARCHAR(100)) AS DocEntry FROM dbo.ODLN WHERE DocNum='" & Trim(txtNoDokumen.Text) & "'", cmbJenisDokumen.SelectedValue, MstrKodePegawai, crvDokumen)
         End If

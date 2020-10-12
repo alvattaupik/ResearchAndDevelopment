@@ -39,12 +39,19 @@ Public Class frmListKendaraan
         txtTipeKendaraan.Enabled = True
         txtKodeNama.Enabled = True
         cmbCabang.Enabled = True
+        txtCari.Text = ""
+        txtCari.Enabled = False
+        txtCari.BackColor = Color.Gray
         btnProses.Text = "Add"
     End Sub
 
     Private Sub picSearch_Click(sender As Object, e As EventArgs) Handles picSearch.Click
         txtCari.ReadOnly = False
         txtCari.Enabled = True
+        txtCari.BackColor = Color.PeachPuff
+        txtNoKendaraan.Enabled = False
+        txtNoKendaraan.ReadOnly = True
+        btnProses.Text = "Update"
     End Sub
 
     Private Sub txtCari_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCari.KeyPress
@@ -66,6 +73,7 @@ Public Class frmListKendaraan
     End Sub
 
     Private Sub dgvListKendaraan_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListKendaraan.CellClick
+        On Error Resume Next
         txtKode.Text = dgvListKendaraan.Rows(e.RowIndex).Cells(0).Value()
         txtNoKendaraan.Text = dgvListKendaraan.Rows(e.RowIndex).Cells(1).Value()
         txtTipeKendaraan.Text = dgvListKendaraan.Rows(e.RowIndex).Cells(2).Value()

@@ -108,6 +108,8 @@ Partial Class frmMainMenu
         Me.TimerPesanError = New System.Windows.Forms.Timer(Me.components)
         Me.TimerJam = New System.Windows.Forms.Timer(Me.components)
         Me.txtJamDanWaktu = New System.Windows.Forms.TextBox()
+        Me.AssetsManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewAssetsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel3.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgListMenu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -585,7 +587,7 @@ Partial Class frmMainMenu
         '
         'MasterToolStripMenuItem
         '
-        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Pegawai, Me.H_Menu, Me.H_ITILV3, Me.H_Konten})
+        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Pegawai, Me.H_Menu, Me.H_ITILV3, Me.H_Konten, Me.AssetsManagementToolStripMenuItem})
         Me.MasterToolStripMenuItem.Name = "MasterToolStripMenuItem"
         Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
         Me.MasterToolStripMenuItem.Text = "MASTER"
@@ -594,7 +596,7 @@ Partial Class frmMainMenu
         '
         Me.H_Pegawai.Image = Global.ANYAR_GADGET.My.Resources.Resources.Employee_Logo
         Me.H_Pegawai.Name = "H_Pegawai"
-        Me.H_Pegawai.Size = New System.Drawing.Size(118, 22)
+        Me.H_Pegawai.Size = New System.Drawing.Size(181, 22)
         Me.H_Pegawai.Text = "Pegawai"
         Me.H_Pegawai.Visible = False
         '
@@ -603,21 +605,21 @@ Partial Class frmMainMenu
         Me.H_Menu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_HeaderMenu, Me.I_ItemsMenu, Me.H_ObjectForm})
         Me.H_Menu.Image = Global.ANYAR_GADGET.My.Resources.Resources.Menu_logo
         Me.H_Menu.Name = "H_Menu"
-        Me.H_Menu.Size = New System.Drawing.Size(118, 22)
+        Me.H_Menu.Size = New System.Drawing.Size(181, 22)
         Me.H_Menu.Text = "Menu"
         Me.H_Menu.Visible = False
         '
         'I_HeaderMenu
         '
         Me.I_HeaderMenu.Name = "I_HeaderMenu"
-        Me.I_HeaderMenu.Size = New System.Drawing.Size(140, 22)
+        Me.I_HeaderMenu.Size = New System.Drawing.Size(152, 22)
         Me.I_HeaderMenu.Text = "Header"
         Me.I_HeaderMenu.Visible = False
         '
         'I_ItemsMenu
         '
         Me.I_ItemsMenu.Name = "I_ItemsMenu"
-        Me.I_ItemsMenu.Size = New System.Drawing.Size(140, 22)
+        Me.I_ItemsMenu.Size = New System.Drawing.Size(152, 22)
         Me.I_ItemsMenu.Text = "Detail"
         Me.I_ItemsMenu.Visible = False
         '
@@ -625,7 +627,7 @@ Partial Class frmMainMenu
         '
         Me.H_ObjectForm.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_HeaderForm, Me.I_ItemsForm})
         Me.H_ObjectForm.Name = "H_ObjectForm"
-        Me.H_ObjectForm.Size = New System.Drawing.Size(140, 22)
+        Me.H_ObjectForm.Size = New System.Drawing.Size(152, 22)
         Me.H_ObjectForm.Text = "Object Form"
         '
         'I_HeaderForm
@@ -647,7 +649,7 @@ Partial Class frmMainMenu
         Me.H_ITILV3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_IncidentManagement, Me.I_ProblemManagement})
         Me.H_ITILV3.Image = Global.ANYAR_GADGET.My.Resources.Resources.ITIL_v3
         Me.H_ITILV3.Name = "H_ITILV3"
-        Me.H_ITILV3.Size = New System.Drawing.Size(118, 22)
+        Me.H_ITILV3.Size = New System.Drawing.Size(181, 22)
         Me.H_ITILV3.Text = "ITIL V3"
         Me.H_ITILV3.Visible = False
         '
@@ -688,7 +690,7 @@ Partial Class frmMainMenu
         '
         Me.H_Konten.Image = Global.ANYAR_GADGET.My.Resources.Resources.Manual_Book_Logo
         Me.H_Konten.Name = "H_Konten"
-        Me.H_Konten.Size = New System.Drawing.Size(118, 22)
+        Me.H_Konten.Size = New System.Drawing.Size(181, 22)
         Me.H_Konten.Text = "Konten"
         Me.H_Konten.Visible = False
         '
@@ -756,6 +758,19 @@ Partial Class frmMainMenu
         Me.txtJamDanWaktu.Size = New System.Drawing.Size(909, 19)
         Me.txtJamDanWaktu.TabIndex = 12
         Me.txtJamDanWaktu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'AssetsManagementToolStripMenuItem
+        '
+        Me.AssetsManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewAssetsToolStripMenuItem})
+        Me.AssetsManagementToolStripMenuItem.Name = "AssetsManagementToolStripMenuItem"
+        Me.AssetsManagementToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.AssetsManagementToolStripMenuItem.Text = "Assets Management"
+        '
+        'NewAssetsToolStripMenuItem
+        '
+        Me.NewAssetsToolStripMenuItem.Name = "NewAssetsToolStripMenuItem"
+        Me.NewAssetsToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.NewAssetsToolStripMenuItem.Text = "Register New Assets"
         '
         'frmMainMenu
         '
@@ -869,5 +884,7 @@ Partial Class frmMainMenu
     Friend WithEvents I_ValidationControl As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_Controlling As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_CCTVMonitor As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AssetsManagementToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NewAssetsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

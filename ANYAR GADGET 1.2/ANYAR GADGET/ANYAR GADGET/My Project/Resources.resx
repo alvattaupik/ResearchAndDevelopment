@@ -151,11 +151,11 @@
   <data name="Chat logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chat logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Add Document" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add Document.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Hello text" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hello text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Push Notification" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Push Notification.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,8 +175,8 @@
   <data name="Inventory-PNG-HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inventory-PNG-HD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ivend-retail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ivend-retail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Incident Management" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Incident Management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Users logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Users logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -198,6 +198,9 @@
   </data>
   <data name="saplogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saplogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Loading 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Loading 7.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Monitoring Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Monitoring Icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,6 +262,12 @@
   <data name="Search User" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Business Process" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Business Process.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Doc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Doc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Batik 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Batik 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -289,8 +298,8 @@
   <data name="Fail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Incident Management" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Incident Management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ivend-retail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ivend-retail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Printer.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -322,8 +331,8 @@
   <data name="Print1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Print1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Loading 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Loading 7.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -334,7 +343,7 @@
   <data name="ITIL v3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ITIL v3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add Document" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add Document.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Processor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Processor.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

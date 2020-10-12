@@ -23,8 +23,6 @@ Partial Class frmListKendaraan
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.picSearch = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.picNew = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -39,17 +37,19 @@ Partial Class frmListKendaraan
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtKode = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.gbListKendaraan = New System.Windows.Forms.GroupBox()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.dgvListKendaraan = New System.Windows.Forms.DataGridView()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.picSearch = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.picNew = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.picSearch, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picNew, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbListKendaraan.SuspendLayout()
         CType(Me.dgvListKendaraan, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picSearch, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picNew, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -66,33 +66,9 @@ Partial Class frmListKendaraan
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "List Kendaraan"
         '
-        'picSearch
-        '
-        Me.picSearch.BackColor = System.Drawing.Color.Transparent
-        Me.picSearch.BaseColor = System.Drawing.Color.Black
-        Me.picSearch.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
-        Me.picSearch.Location = New System.Drawing.Point(63, 15)
-        Me.picSearch.Name = "picSearch"
-        Me.picSearch.Size = New System.Drawing.Size(37, 38)
-        Me.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picSearch.TabIndex = 4
-        Me.picSearch.TabStop = False
-        '
-        'picNew
-        '
-        Me.picNew.BackColor = System.Drawing.Color.Transparent
-        Me.picNew.BaseColor = System.Drawing.Color.Black
-        Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.Add_Document
-        Me.picNew.Location = New System.Drawing.Point(19, 16)
-        Me.picNew.Name = "picNew"
-        Me.picNew.Size = New System.Drawing.Size(38, 37)
-        Me.picNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picNew.TabIndex = 3
-        Me.picNew.TabStop = False
-        '
         'txtCari
         '
-        Me.txtCari.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtCari.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.txtCari.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCari.Location = New System.Drawing.Point(316, 20)
         Me.txtCari.Name = "txtCari"
@@ -219,6 +195,7 @@ Partial Class frmListKendaraan
         '
         'txtKode
         '
+        Me.txtKode.Enabled = False
         Me.txtKode.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtKode.Location = New System.Drawing.Point(139, 14)
         Me.txtKode.Name = "txtKode"
@@ -236,22 +213,12 @@ Partial Class frmListKendaraan
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Kode"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Car
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 51)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(170, 171)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'gbListKendaraan
         '
         Me.gbListKendaraan.Controls.Add(Me.btnClose)
         Me.gbListKendaraan.Controls.Add(Me.dgvListKendaraan)
         Me.gbListKendaraan.Controls.Add(Me.PictureBox1)
-        Me.gbListKendaraan.Location = New System.Drawing.Point(1, 54)
+        Me.gbListKendaraan.Location = New System.Drawing.Point(0, 64)
         Me.gbListKendaraan.Name = "gbListKendaraan"
         Me.gbListKendaraan.Size = New System.Drawing.Size(714, 251)
         Me.gbListKendaraan.TabIndex = 2
@@ -280,6 +247,40 @@ Partial Class frmListKendaraan
         Me.dgvListKendaraan.Size = New System.Drawing.Size(701, 196)
         Me.dgvListKendaraan.TabIndex = 1
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Car
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 51)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(170, 171)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'picSearch
+        '
+        Me.picSearch.BackColor = System.Drawing.Color.Transparent
+        Me.picSearch.BaseColor = System.Drawing.Color.Black
+        Me.picSearch.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
+        Me.picSearch.Location = New System.Drawing.Point(63, 15)
+        Me.picSearch.Name = "picSearch"
+        Me.picSearch.Size = New System.Drawing.Size(37, 38)
+        Me.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picSearch.TabIndex = 4
+        Me.picSearch.TabStop = False
+        '
+        'picNew
+        '
+        Me.picNew.BackColor = System.Drawing.Color.Transparent
+        Me.picNew.BaseColor = System.Drawing.Color.Black
+        Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.Add_Document
+        Me.picNew.Location = New System.Drawing.Point(19, 16)
+        Me.picNew.Name = "picNew"
+        Me.picNew.Size = New System.Drawing.Size(38, 37)
+        Me.picNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picNew.TabIndex = 3
+        Me.picNew.TabStop = False
+        '
         'frmListKendaraan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -293,13 +294,13 @@ Partial Class frmListKendaraan
         Me.Text = "List Kendaraan"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.picSearch, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picNew, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbListKendaraan.ResumeLayout(False)
         CType(Me.dgvListKendaraan, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picSearch, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picNew, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

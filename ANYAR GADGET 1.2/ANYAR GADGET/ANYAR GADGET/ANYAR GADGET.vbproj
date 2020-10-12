@@ -134,6 +134,12 @@
     <Compile Include="BrowseForm\frmBrowseBusinessPartner.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BrowseForm\frmBrowseKomponenSAP.Designer.vb">
+      <DependentUpon>frmBrowseKomponenSAP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseKomponenSAP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BrowseForm\frmBrowseListUserAplikasi.Designer.vb">
       <DependentUpon>frmBrowseListUserAplikasi.vb</DependentUpon>
     </Compile>
@@ -357,6 +363,24 @@
     <Compile Include="Help\frmLaporkanMasalah.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LainLain\frmAddNewControl.Designer.vb">
+      <DependentUpon>frmAddNewControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LainLain\frmAddNewControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LainLain\frmListLokasiValidasi.designer.vb">
+      <DependentUpon>frmListLokasiValidasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LainLain\frmListLokasiValidasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LainLain\frmLockControlValidasi.Designer.vb">
+      <DependentUpon>frmLockControlValidasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LainLain\frmLockControlValidasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LainLain\frmSubQueryChecker.Designer.vb">
       <DependentUpon>frmSubQueryChecker.vb</DependentUpon>
     </Compile>
@@ -435,6 +459,12 @@
     <Compile Include="Master\frmMasterPegawai.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Master\frmRegisterNewAssets.Designer.vb">
+      <DependentUpon>frmRegisterNewAssets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmRegisterNewAssets.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modul\Koneksi.vb" />
     <Compile Include="Modul\ModuleUltility.vb" />
     <Compile Include="Modul\Variable.vb" />
@@ -496,6 +526,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseBusinessPartner.resx">
       <DependentUpon>frmBrowseBusinessPartner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseKomponenSAP.resx">
+      <DependentUpon>frmBrowseKomponenSAP.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseListUserAplikasi.resx">
       <DependentUpon>frmBrowseListUserAplikasi.vb</DependentUpon>
@@ -615,6 +648,15 @@
     <EmbeddedResource Include="Help\frmLaporkanMasalah.resx">
       <DependentUpon>frmLaporkanMasalah.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LainLain\frmAddNewControl.resx">
+      <DependentUpon>frmAddNewControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LainLain\frmListLokasiValidasi.resx">
+      <DependentUpon>frmListLokasiValidasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LainLain\frmLockControlValidasi.resx">
+      <DependentUpon>frmLockControlValidasi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LainLain\frmSubQueryChecker.resx">
       <DependentUpon>frmSubQueryChecker.vb</DependentUpon>
     </EmbeddedResource>
@@ -653,6 +695,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmMasterPegawai.resx">
       <DependentUpon>frmMasterPegawai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmRegisterNewAssets.resx">
+      <DependentUpon>frmRegisterNewAssets.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -904,6 +949,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Add Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Business Process.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Processor.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
