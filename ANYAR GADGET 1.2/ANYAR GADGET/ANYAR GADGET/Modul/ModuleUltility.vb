@@ -193,7 +193,7 @@ Module ModuleUltility
                 frmMainMenu.I_ValidationControl.Visible = True
 
             ElseIf dgv.Rows(i).Cells(0).Value = "IGadget026" And dgv.Rows(i).Cells(1).Value = "Y" Then
-                frmMainMenu.I_CCTVMonitor.Visible = True
+                frmMainMenu.I_BuatControlling.Visible = True
 
             ElseIf dgv.Rows(i).Cells(0).Value = "IMenu001" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_HeaderMenu.Visible = True
@@ -615,9 +615,6 @@ Module ModuleUltility
 
 
     End Sub
-
-
-
 
 
 End Module

@@ -79,7 +79,7 @@ Partial Class frmMainMenu
         Me.I_ListKendaraan = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_ValidationControl = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Controlling = New System.Windows.Forms.ToolStripMenuItem()
-        Me.I_CCTVMonitor = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_BuatControlling = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Template = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_UbahPassword = New System.Windows.Forms.ToolStripMenuItem()
@@ -100,6 +100,8 @@ Partial Class frmMainMenu
         Me.SpecificCategoriesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_ProblemManagement = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Konten = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AssetsManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewAssetsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HELPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_LaporkanMasalah = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_CaraPenggunaan = New System.Windows.Forms.ToolStripMenuItem()
@@ -108,8 +110,6 @@ Partial Class frmMainMenu
         Me.TimerPesanError = New System.Windows.Forms.Timer(Me.components)
         Me.TimerJam = New System.Windows.Forms.Timer(Me.components)
         Me.txtJamDanWaktu = New System.Windows.Forms.TextBox()
-        Me.AssetsManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewAssetsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel3.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgListMenu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -246,7 +246,7 @@ Partial Class frmMainMenu
         '
         Me.H_Sidebar.Image = Global.ANYAR_GADGET.My.Resources.Resources.Side_bar_logo
         Me.H_Sidebar.Name = "H_Sidebar"
-        Me.H_Sidebar.Size = New System.Drawing.Size(196, 22)
+        Me.H_Sidebar.Size = New System.Drawing.Size(222, 22)
         Me.H_Sidebar.Text = "Side Bar"
         Me.H_Sidebar.Visible = False
         '
@@ -256,7 +256,7 @@ Partial Class frmMainMenu
         Me.H_Monitoring.Image = Global.ANYAR_GADGET.My.Resources.Resources.Monitoring_Icon1
         Me.H_Monitoring.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.H_Monitoring.Name = "H_Monitoring"
-        Me.H_Monitoring.Size = New System.Drawing.Size(196, 22)
+        Me.H_Monitoring.Size = New System.Drawing.Size(222, 22)
         Me.H_Monitoring.Text = "Monitoring"
         Me.H_Monitoring.Visible = False
         '
@@ -286,7 +286,7 @@ Partial Class frmMainMenu
         Me.H_PrintServices.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_AnyarLocalPrint, Me.I_RKMDisplayTag})
         Me.H_PrintServices.Image = Global.ANYAR_GADGET.My.Resources.Resources.print
         Me.H_PrintServices.Name = "H_PrintServices"
-        Me.H_PrintServices.Size = New System.Drawing.Size(196, 22)
+        Me.H_PrintServices.Size = New System.Drawing.Size(222, 22)
         Me.H_PrintServices.Text = "Print Services"
         Me.H_PrintServices.Visible = False
         '
@@ -308,7 +308,7 @@ Partial Class frmMainMenu
         '
         Me.H_Ping.Image = Global.ANYAR_GADGET.My.Resources.Resources.Ping_Icon
         Me.H_Ping.Name = "H_Ping"
-        Me.H_Ping.Size = New System.Drawing.Size(196, 22)
+        Me.H_Ping.Size = New System.Drawing.Size(222, 22)
         Me.H_Ping.Text = "Ping"
         Me.H_Ping.Visible = False
         '
@@ -317,7 +317,7 @@ Partial Class frmMainMenu
         Me.H_Request.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_ReqFullfillment, Me.I_BukaValidasi, Me.I_BukaPostingPeriode, Me.I_BukaAuthorisasi})
         Me.H_Request.Image = Global.ANYAR_GADGET.My.Resources.Resources.request_icon
         Me.H_Request.Name = "H_Request"
-        Me.H_Request.Size = New System.Drawing.Size(196, 22)
+        Me.H_Request.Size = New System.Drawing.Size(222, 22)
         Me.H_Request.Text = "Request"
         Me.H_Request.Visible = False
         '
@@ -354,7 +354,7 @@ Partial Class frmMainMenu
         Me.H_Repository.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_AnyarRepository})
         Me.H_Repository.Image = Global.ANYAR_GADGET.My.Resources.Resources.Repository_Icon
         Me.H_Repository.Name = "H_Repository"
-        Me.H_Repository.Size = New System.Drawing.Size(196, 22)
+        Me.H_Repository.Size = New System.Drawing.Size(222, 22)
         Me.H_Repository.Text = "Repository"
         Me.H_Repository.Visible = False
         '
@@ -370,7 +370,7 @@ Partial Class frmMainMenu
         Me.H_AIO.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_IntegrationMonitor, Me.I_FullfilmentChecker, Me.I_ReplicationMonitor, Me.I_StoreDatabaseMonitor})
         Me.H_AIO.Image = Global.ANYAR_GADGET.My.Resources.Resources.IT_Icon
         Me.H_AIO.Name = "H_AIO"
-        Me.H_AIO.Size = New System.Drawing.Size(196, 22)
+        Me.H_AIO.Size = New System.Drawing.Size(222, 22)
         Me.H_AIO.Text = "AIO"
         Me.H_AIO.Visible = False
         '
@@ -407,7 +407,7 @@ Partial Class frmMainMenu
         Me.H_PricingAndPromotion.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_ExportHargaJual, Me.I_PerubahanHarga, Me.I_Promo})
         Me.H_PricingAndPromotion.Image = Global.ANYAR_GADGET.My.Resources.Resources.Dollar_logo
         Me.H_PricingAndPromotion.Name = "H_PricingAndPromotion"
-        Me.H_PricingAndPromotion.Size = New System.Drawing.Size(196, 22)
+        Me.H_PricingAndPromotion.Size = New System.Drawing.Size(222, 22)
         Me.H_PricingAndPromotion.Text = "Pricing And Promotion"
         Me.H_PricingAndPromotion.Visible = False
         '
@@ -436,7 +436,7 @@ Partial Class frmMainMenu
         '
         Me.H_AnyarChat.Image = Global.ANYAR_GADGET.My.Resources.Resources.Chat_logo
         Me.H_AnyarChat.Name = "H_AnyarChat"
-        Me.H_AnyarChat.Size = New System.Drawing.Size(196, 22)
+        Me.H_AnyarChat.Size = New System.Drawing.Size(222, 22)
         Me.H_AnyarChat.Text = "Anyar Chat"
         Me.H_AnyarChat.Visible = False
         '
@@ -445,7 +445,7 @@ Partial Class frmMainMenu
         Me.H_LaporanLaporan.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_LapInventoryCheck, Me.I_MutasiStock})
         Me.H_LaporanLaporan.Image = Global.ANYAR_GADGET.My.Resources.Resources.Report
         Me.H_LaporanLaporan.Name = "H_LaporanLaporan"
-        Me.H_LaporanLaporan.Size = New System.Drawing.Size(196, 22)
+        Me.H_LaporanLaporan.Size = New System.Drawing.Size(222, 22)
         Me.H_LaporanLaporan.Text = "Laporan - Laporan"
         Me.H_LaporanLaporan.Visible = False
         '
@@ -468,7 +468,7 @@ Partial Class frmMainMenu
         Me.H_SISTER.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_SuratJalan, Me.I_SuratTerima, Me.I_BAPSerahTerima, Me.I_BAPPenyelesaian, Me.I_DaftarSuratSurat})
         Me.H_SISTER.Image = Global.ANYAR_GADGET.My.Resources.Resources.Dakirby309_Simply_Styled_AVG
         Me.H_SISTER.Name = "H_SISTER"
-        Me.H_SISTER.Size = New System.Drawing.Size(196, 22)
+        Me.H_SISTER.Size = New System.Drawing.Size(222, 22)
         Me.H_SISTER.Text = "SISTER"
         Me.H_SISTER.Visible = False
         '
@@ -512,7 +512,7 @@ Partial Class frmMainMenu
         Me.H_ABPC.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_ListKendaraan, Me.I_ValidationControl})
         Me.H_ABPC.Image = Global.ANYAR_GADGET.My.Resources.Resources.LOGO_ANYAR_BULAT
         Me.H_ABPC.Name = "H_ABPC"
-        Me.H_ABPC.Size = New System.Drawing.Size(196, 22)
+        Me.H_ABPC.Size = New System.Drawing.Size(222, 22)
         Me.H_ABPC.Text = "A-B-P-C"
         Me.H_ABPC.Visible = False
         '
@@ -532,19 +532,19 @@ Partial Class frmMainMenu
         '
         'H_Controlling
         '
-        Me.H_Controlling.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_CCTVMonitor})
+        Me.H_Controlling.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_BuatControlling})
         Me.H_Controlling.Image = Global.ANYAR_GADGET.My.Resources.Resources.Control
         Me.H_Controlling.Name = "H_Controlling"
-        Me.H_Controlling.Size = New System.Drawing.Size(196, 22)
-        Me.H_Controlling.Text = "Controlling"
+        Me.H_Controlling.Size = New System.Drawing.Size(222, 22)
+        Me.H_Controlling.Text = "Monitoring And Controlling"
         Me.H_Controlling.Visible = False
         '
-        'I_CCTVMonitor
+        'I_BuatControlling
         '
-        Me.I_CCTVMonitor.Image = Global.ANYAR_GADGET.My.Resources.Resources.CCTV
-        Me.I_CCTVMonitor.Name = "I_CCTVMonitor"
-        Me.I_CCTVMonitor.Size = New System.Drawing.Size(166, 22)
-        Me.I_CCTVMonitor.Text = "CCTV Monitoring"
+        Me.I_BuatControlling.Image = Global.ANYAR_GADGET.My.Resources.Resources.Performance
+        Me.I_BuatControlling.Name = "I_BuatControlling"
+        Me.I_BuatControlling.Size = New System.Drawing.Size(161, 22)
+        Me.I_BuatControlling.Text = "Buat Controlling"
         '
         'SettingToolStripMenuItem
         '
@@ -612,14 +612,14 @@ Partial Class frmMainMenu
         'I_HeaderMenu
         '
         Me.I_HeaderMenu.Name = "I_HeaderMenu"
-        Me.I_HeaderMenu.Size = New System.Drawing.Size(152, 22)
+        Me.I_HeaderMenu.Size = New System.Drawing.Size(140, 22)
         Me.I_HeaderMenu.Text = "Header"
         Me.I_HeaderMenu.Visible = False
         '
         'I_ItemsMenu
         '
         Me.I_ItemsMenu.Name = "I_ItemsMenu"
-        Me.I_ItemsMenu.Size = New System.Drawing.Size(152, 22)
+        Me.I_ItemsMenu.Size = New System.Drawing.Size(140, 22)
         Me.I_ItemsMenu.Text = "Detail"
         Me.I_ItemsMenu.Visible = False
         '
@@ -627,7 +627,7 @@ Partial Class frmMainMenu
         '
         Me.H_ObjectForm.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_HeaderForm, Me.I_ItemsForm})
         Me.H_ObjectForm.Name = "H_ObjectForm"
-        Me.H_ObjectForm.Size = New System.Drawing.Size(152, 22)
+        Me.H_ObjectForm.Size = New System.Drawing.Size(140, 22)
         Me.H_ObjectForm.Text = "Object Form"
         '
         'I_HeaderForm
@@ -694,6 +694,19 @@ Partial Class frmMainMenu
         Me.H_Konten.Text = "Konten"
         Me.H_Konten.Visible = False
         '
+        'AssetsManagementToolStripMenuItem
+        '
+        Me.AssetsManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewAssetsToolStripMenuItem})
+        Me.AssetsManagementToolStripMenuItem.Name = "AssetsManagementToolStripMenuItem"
+        Me.AssetsManagementToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.AssetsManagementToolStripMenuItem.Text = "Assets Management"
+        '
+        'NewAssetsToolStripMenuItem
+        '
+        Me.NewAssetsToolStripMenuItem.Name = "NewAssetsToolStripMenuItem"
+        Me.NewAssetsToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.NewAssetsToolStripMenuItem.Text = "Register New Assets"
+        '
         'HELPToolStripMenuItem
         '
         Me.HELPToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_LaporkanMasalah, Me.H_CaraPenggunaan})
@@ -758,19 +771,6 @@ Partial Class frmMainMenu
         Me.txtJamDanWaktu.Size = New System.Drawing.Size(909, 19)
         Me.txtJamDanWaktu.TabIndex = 12
         Me.txtJamDanWaktu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'AssetsManagementToolStripMenuItem
-        '
-        Me.AssetsManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewAssetsToolStripMenuItem})
-        Me.AssetsManagementToolStripMenuItem.Name = "AssetsManagementToolStripMenuItem"
-        Me.AssetsManagementToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.AssetsManagementToolStripMenuItem.Text = "Assets Management"
-        '
-        'NewAssetsToolStripMenuItem
-        '
-        Me.NewAssetsToolStripMenuItem.Name = "NewAssetsToolStripMenuItem"
-        Me.NewAssetsToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
-        Me.NewAssetsToolStripMenuItem.Text = "Register New Assets"
         '
         'frmMainMenu
         '
@@ -883,7 +883,7 @@ Partial Class frmMainMenu
     Friend WithEvents I_ListKendaraan As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_ValidationControl As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_Controlling As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents I_CCTVMonitor As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_BuatControlling As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AssetsManagementToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewAssetsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
