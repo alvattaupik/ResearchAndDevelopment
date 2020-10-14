@@ -290,7 +290,7 @@ Public Class frmMainMenu
         frmValidationControls.ShowDialog()
     End Sub
 
-    Private Sub NewAssetsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewAssetsToolStripMenuItem.Click
+    Private Sub NewAssetsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles I_RegNewAsset.Click
         Dim frm As New frmMasterNewAssets
         frm.MdiParent = Me
         frm.Show()
@@ -300,5 +300,9 @@ Public Class frmMainMenu
         Dim frm As New frmMonitoringAndControlling
         frm.MdiParent = Me
         frm.Show()
+    End Sub
+
+    Private Sub I_ParameterUji_Click(sender As Object, e As EventArgs) Handles I_ParameterUji.Click
+
     End Sub
 End Class

@@ -34,14 +34,6 @@ Public Class frmFilterLaporanInventoryCheck
         paramField2.Name = "KodeGudang@"
         paramDiscreteValue2.Value = cmbKodeGudang.SelectedValue
         paramField2.CurrentValues.Add(paramDiscreteValue2)
-        'frmTampilkanLaporan.crvTampilkanLaporan.ParameterFieldInfo = paramFields
-        'reportDocument = New LaporanInventoryCheck
-        'reportDocument.SetDatabaseLogon("sa", "h0spit4lity#", "10.1.0.53", "RKM_LIVE_2")
-
-        'frmTampilkanLaporan.crvTampilkanLaporan.ReportSource = reportDocument
-        'frmTampilkanLaporan.crvTampilkanLaporan.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
-        'frmTampilkanLaporan.crvTampilkanLaporan.Refresh()
-
 
         Dim frm As New frmTampilkanLaporan
         frm.crvTampilkanLaporan.ParameterFieldInfo = paramFields

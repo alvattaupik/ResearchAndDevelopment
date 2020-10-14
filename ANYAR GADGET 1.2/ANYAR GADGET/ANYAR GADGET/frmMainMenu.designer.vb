@@ -100,8 +100,8 @@ Partial Class frmMainMenu
         Me.SpecificCategoriesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_ProblemManagement = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Konten = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AssetsManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewAssetsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.H_AssetManagement = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_RegNewAsset = New System.Windows.Forms.ToolStripMenuItem()
         Me.HELPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_LaporkanMasalah = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_CaraPenggunaan = New System.Windows.Forms.ToolStripMenuItem()
@@ -110,6 +110,7 @@ Partial Class frmMainMenu
         Me.TimerPesanError = New System.Windows.Forms.Timer(Me.components)
         Me.TimerJam = New System.Windows.Forms.Timer(Me.components)
         Me.txtJamDanWaktu = New System.Windows.Forms.TextBox()
+        Me.I_ParameterUji = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel3.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgListMenu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -587,7 +588,7 @@ Partial Class frmMainMenu
         '
         'MasterToolStripMenuItem
         '
-        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Pegawai, Me.H_Menu, Me.H_ITILV3, Me.H_Konten, Me.AssetsManagementToolStripMenuItem})
+        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Pegawai, Me.H_Menu, Me.H_ITILV3, Me.H_Konten, Me.H_AssetManagement})
         Me.MasterToolStripMenuItem.Name = "MasterToolStripMenuItem"
         Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
         Me.MasterToolStripMenuItem.Text = "MASTER"
@@ -694,18 +695,21 @@ Partial Class frmMainMenu
         Me.H_Konten.Text = "Konten"
         Me.H_Konten.Visible = False
         '
-        'AssetsManagementToolStripMenuItem
+        'H_AssetManagement
         '
-        Me.AssetsManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewAssetsToolStripMenuItem})
-        Me.AssetsManagementToolStripMenuItem.Name = "AssetsManagementToolStripMenuItem"
-        Me.AssetsManagementToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.AssetsManagementToolStripMenuItem.Text = "Assets Management"
+        Me.H_AssetManagement.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_RegNewAsset, Me.I_ParameterUji})
+        Me.H_AssetManagement.Image = Global.ANYAR_GADGET.My.Resources.Resources.ITIL_v3
+        Me.H_AssetManagement.Name = "H_AssetManagement"
+        Me.H_AssetManagement.Size = New System.Drawing.Size(181, 22)
+        Me.H_AssetManagement.Text = "Assets Management"
+        Me.H_AssetManagement.Visible = False
         '
-        'NewAssetsToolStripMenuItem
+        'I_RegNewAsset
         '
-        Me.NewAssetsToolStripMenuItem.Name = "NewAssetsToolStripMenuItem"
-        Me.NewAssetsToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
-        Me.NewAssetsToolStripMenuItem.Text = "Register New Assets"
+        Me.I_RegNewAsset.Name = "I_RegNewAsset"
+        Me.I_RegNewAsset.Size = New System.Drawing.Size(179, 22)
+        Me.I_RegNewAsset.Text = "Register New Assets"
+        Me.I_RegNewAsset.Visible = False
         '
         'HELPToolStripMenuItem
         '
@@ -771,6 +775,13 @@ Partial Class frmMainMenu
         Me.txtJamDanWaktu.Size = New System.Drawing.Size(909, 19)
         Me.txtJamDanWaktu.TabIndex = 12
         Me.txtJamDanWaktu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'I_ParameterUji
+        '
+        Me.I_ParameterUji.Name = "I_ParameterUji"
+        Me.I_ParameterUji.Size = New System.Drawing.Size(179, 22)
+        Me.I_ParameterUji.Text = "Parameter Uji"
+        Me.I_ParameterUji.Visible = False
         '
         'frmMainMenu
         '
@@ -884,7 +895,8 @@ Partial Class frmMainMenu
     Friend WithEvents I_ValidationControl As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_Controlling As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_BuatControlling As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AssetsManagementToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents NewAssetsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents H_AssetManagement As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_RegNewAsset As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_ParameterUji As System.Windows.Forms.ToolStripMenuItem
 
 End Class

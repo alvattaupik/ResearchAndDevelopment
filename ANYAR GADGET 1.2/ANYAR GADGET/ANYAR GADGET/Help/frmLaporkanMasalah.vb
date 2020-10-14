@@ -5,7 +5,7 @@ Imports System.Data.SqlClient
 
 Public Class frmLaporkanMasalah
     Public selRow As New DataGridViewRow
-
+    Dim intRow As Integer
 
     Private Sub picCariSubKategori_Click(sender As Object, e As EventArgs) Handles picCariSubKategori.Click
 
@@ -123,23 +123,14 @@ Public Class frmLaporkanMasalah
 
 
 
-        For i As Integer = 0 To dgvListLampiran.Rows.Count - 1
-            AU_ITILV3_INCLampiran("ADD-ATCH-USERS", dgvListLampiran, dgvListLampiran.Rows.Count - 1)
-        Next
+        'For intRow As Integer = 0 To dgvListLampiran.Rows.Count - 1
+        '    AU_ITILV3_INCLampiran("ADD-ATCH-USERS", dgvListLampiran, dgvListLampiran.Rows.Count - 1)
+        'Next
 
 
 
 
-        txtUniqueID.Text = ""
-        cmbKategori.Text = ""
-        txtKodeSubkategori.Text = ""
-        txtNamaSubkategori.Text = ""
-        txtKodeSpecificProblem.Text = ""
-        txtNamaSpecificProblems.Text = ""
-
-        txtDetailDeskripsi.Text = ""
-        txtPathLampiran.Text = ""
-        dgvListLampiran.Rows.Clear()
+      
 
     End Sub
 
@@ -342,7 +333,7 @@ Public Class frmLaporkanMasalah
             command.Parameters("SimptomsNameOUT").Direction = ParameterDirection.Output
 
 
-            command.Parameters.AddWithValue("CatatanIN", Trim(txtDetailDeskripsi.Text))
+            command.Parameters.AddWithValue("CatatanIN", Trim(""))
             command.Parameters.Add("CatatanOUT", SqlDbType.VarChar, 300)
             command.Parameters("CatatanOUT").Direction = ParameterDirection.Output
 
@@ -352,7 +343,11 @@ Public Class frmLaporkanMasalah
             command.Parameters.Add("ResStatusName", SqlDbType.VarChar, 300)
             command.Parameters("ResStatusName").Direction = ParameterDirection.Output
 
+            command.Parameters.Add("ErrorCodeOUT", SqlDbType.VarChar, 300)
+            command.Parameters("ErrorCodeOUT").Direction = ParameterDirection.Output
 
+            command.Parameters.Add("ErrorMessageOUT", SqlDbType.VarChar, 300)
+            command.Parameters("ErrorMessageOUT").Direction = ParameterDirection.Output
 
             command.Parameters.AddWithValue("Function", Trim(strFunction))
 
@@ -365,6 +360,33 @@ Public Class frmLaporkanMasalah
 
             DisplayPesanOK("Operation Success", frmMainMenu.txtPesanError, 1000)
             txtUniqueID.Text = command.Parameters("UniqueIDOUT").Value.ToString()
+
+            MstrErrorCode = command.Parameters("ErrorCodeOUT").Value.ToString()
+            MstrErrorMessage = command.Parameters("ErrorMessageOUT").Value.ToString()
+
+
+            If MstrErrorCode = "E-00" Then
+                DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
+            Else
+                DisplayPesanOK("Operation Success", frmMainMenu.txtPesanError, 1000)
+
+                For intRow As Integer = 0 To dgvListLampiran.Rows.Count - 1
+                    AU_ITILV3_INCLampiran("ADD-ATCH-USERS", dgvListLampiran, dgvListLampiran.Rows.Count - 1)
+                Next
+
+
+                txtUniqueID.Text = ""
+                cmbKategori.Text = ""
+                txtKodeSubkategori.Text = ""
+                txtNamaSubkategori.Text = ""
+                txtKodeSpecificProblem.Text = ""
+                txtNamaSpecificProblems.Text = ""
+
+                txtDetailDeskripsi.Text = ""
+                txtPathLampiran.Text = ""
+                dgvListLampiran.Rows.Clear()
+            End If
+
 
         Catch ex As Exception
             DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)

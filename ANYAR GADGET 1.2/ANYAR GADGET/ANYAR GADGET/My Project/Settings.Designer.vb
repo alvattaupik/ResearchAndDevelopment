@@ -210,14 +210,14 @@ Namespace My
             End Set
         End Property
         
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("")> _
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public Property P_ExportDatabase() As String
             Get
-                Return CType(Me("P_ExportDatabase"), String)
+                Return CType(Me("P_ExportDatabase"),String)
             End Get
-            Set(value As String)
+            Set
                 Me("P_ExportDatabase") = value
             End Set
         End Property

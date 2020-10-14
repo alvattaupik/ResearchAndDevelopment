@@ -26,7 +26,15 @@ Partial Class frmMonitoringAndControlling
         Me.txtKalimatPembuka = New System.Windows.Forms.RichTextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.txtSpesifikasi = New System.Windows.Forms.RichTextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.txtNamaBarang = New System.Windows.Forms.RichTextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.txtKodeBarang = New System.Windows.Forms.TextBox()
         Me.dgvDaftarAssesment = New System.Windows.Forms.DataGridView()
+        Me.lblJumlahItem = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.btnAssesment = New System.Windows.Forms.Button()
         Me.txtCari = New System.Windows.Forms.TextBox()
@@ -38,8 +46,6 @@ Partial Class frmMonitoringAndControlling
         Me.Label16 = New System.Windows.Forms.Label()
         Me.cmbCabangDaftarAsset = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.lblJumlahItem = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.txtCariSurat = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -79,14 +85,9 @@ Partial Class frmMonitoringAndControlling
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtSalamPembuka = New System.Windows.Forms.RichTextBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.lblKodeJenisSurat = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.txtKodeBarang = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.txtNamaBarang = New System.Windows.Forms.RichTextBox()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.txtSpesifikasi = New System.Windows.Forms.RichTextBox()
         Me.GroupBox7.SuspendLayout()
         CType(Me.dgvDaftarAssesment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox11.SuspendLayout()
@@ -119,9 +120,9 @@ Partial Class frmMonitoringAndControlling
         '
         'txtKalimatPembuka
         '
-        Me.txtKalimatPembuka.Location = New System.Drawing.Point(16, 43)
+        Me.txtKalimatPembuka.Location = New System.Drawing.Point(7, 43)
         Me.txtKalimatPembuka.Name = "txtKalimatPembuka"
-        Me.txtKalimatPembuka.Size = New System.Drawing.Size(323, 50)
+        Me.txtKalimatPembuka.Size = New System.Drawing.Size(349, 50)
         Me.txtKalimatPembuka.TabIndex = 1
         Me.txtKalimatPembuka.Text = ""
         '
@@ -131,14 +132,13 @@ Partial Class frmMonitoringAndControlling
         Me.Label14.ForeColor = System.Drawing.Color.Blue
         Me.Label14.Location = New System.Drawing.Point(4, 18)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(215, 16)
+        Me.Label14.Size = New System.Drawing.Size(227, 16)
         Me.Label14.TabIndex = 0
-        Me.Label14.Text = "Contoh : Telah diterima dari...."
+        Me.Label14.Text = "Contoh : Berdasarkan Agenda..."
         '
         'GroupBox7
         '
-        Me.GroupBox7.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.GroupBox7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox7.Controls.Add(Me.txtSpesifikasi)
         Me.GroupBox7.Controls.Add(Me.Label24)
@@ -149,12 +149,68 @@ Partial Class frmMonitoringAndControlling
         Me.GroupBox7.Controls.Add(Me.dgvDaftarAssesment)
         Me.GroupBox7.Controls.Add(Me.lblJumlahItem)
         Me.GroupBox7.Controls.Add(Me.Label15)
-        Me.GroupBox7.Location = New System.Drawing.Point(611, 287)
+        Me.GroupBox7.Location = New System.Drawing.Point(604, 287)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(748, 312)
+        Me.GroupBox7.Size = New System.Drawing.Size(755, 312)
         Me.GroupBox7.TabIndex = 12
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Daftar Assesment"
+        '
+        'txtSpesifikasi
+        '
+        Me.txtSpesifikasi.Location = New System.Drawing.Point(52, 120)
+        Me.txtSpesifikasi.Name = "txtSpesifikasi"
+        Me.txtSpesifikasi.ReadOnly = True
+        Me.txtSpesifikasi.Size = New System.Drawing.Size(141, 113)
+        Me.txtSpesifikasi.TabIndex = 22
+        Me.txtSpesifikasi.Text = ""
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(1, 168)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(39, 15)
+        Me.Label24.TabIndex = 21
+        Me.Label24.Text = "Spec"
+        '
+        'txtNamaBarang
+        '
+        Me.txtNamaBarang.Location = New System.Drawing.Point(52, 46)
+        Me.txtNamaBarang.Name = "txtNamaBarang"
+        Me.txtNamaBarang.ReadOnly = True
+        Me.txtNamaBarang.Size = New System.Drawing.Size(141, 68)
+        Me.txtNamaBarang.TabIndex = 20
+        Me.txtNamaBarang.Text = ""
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(1, 47)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(45, 15)
+        Me.Label23.TabIndex = 19
+        Me.Label23.Text = "Nama"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(1, 23)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(40, 15)
+        Me.Label19.TabIndex = 18
+        Me.Label19.Text = "Kode"
+        '
+        'txtKodeBarang
+        '
+        Me.txtKodeBarang.Location = New System.Drawing.Point(52, 20)
+        Me.txtKodeBarang.Name = "txtKodeBarang"
+        Me.txtKodeBarang.ReadOnly = True
+        Me.txtKodeBarang.Size = New System.Drawing.Size(141, 20)
+        Me.txtKodeBarang.TabIndex = 17
         '
         'dgvDaftarAssesment
         '
@@ -167,14 +223,31 @@ Partial Class frmMonitoringAndControlling
         Me.dgvDaftarAssesment.Location = New System.Drawing.Point(208, 20)
         Me.dgvDaftarAssesment.Name = "dgvDaftarAssesment"
         Me.dgvDaftarAssesment.RowHeadersVisible = False
-        Me.dgvDaftarAssesment.Size = New System.Drawing.Size(525, 284)
+        Me.dgvDaftarAssesment.Size = New System.Drawing.Size(532, 284)
         Me.dgvDaftarAssesment.TabIndex = 16
+        '
+        'lblJumlahItem
+        '
+        Me.lblJumlahItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblJumlahItem.AutoSize = True
+        Me.lblJumlahItem.Location = New System.Drawing.Point(662, 291)
+        Me.lblJumlahItem.Name = "lblJumlahItem"
+        Me.lblJumlahItem.Size = New System.Drawing.Size(78, 13)
+        Me.lblJumlahItem.TabIndex = 14
+        Me.lblJumlahItem.Text = "Jumlah Item : 0"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(9, 20)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(0, 13)
+        Me.Label15.TabIndex = 1
         '
         'GroupBox11
         '
-        Me.GroupBox11.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GroupBox11.Controls.Add(Me.btnAssesment)
         Me.GroupBox11.Controls.Add(Me.txtCari)
         Me.GroupBox11.Controls.Add(Me.Label18)
@@ -293,24 +366,6 @@ Partial Class frmMonitoringAndControlling
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "Kode Cabang"
         '
-        'lblJumlahItem
-        '
-        Me.lblJumlahItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblJumlahItem.AutoSize = True
-        Me.lblJumlahItem.Location = New System.Drawing.Point(655, 291)
-        Me.lblJumlahItem.Name = "lblJumlahItem"
-        Me.lblJumlahItem.Size = New System.Drawing.Size(78, 13)
-        Me.lblJumlahItem.TabIndex = 14
-        Me.lblJumlahItem.Text = "Jumlah Item : 0"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(9, 20)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(0, 13)
-        Me.Label15.TabIndex = 1
-        '
         'GroupBox8
         '
         Me.GroupBox8.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -387,9 +442,9 @@ Partial Class frmMonitoringAndControlling
         '
         Me.btnProses.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnProses.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProses.Location = New System.Drawing.Point(1201, 607)
+        Me.btnProses.Location = New System.Drawing.Point(1201, 615)
         Me.btnProses.Name = "btnProses"
-        Me.btnProses.Size = New System.Drawing.Size(157, 138)
+        Me.btnProses.Size = New System.Drawing.Size(157, 127)
         Me.btnProses.TabIndex = 15
         Me.btnProses.Text = "Proses"
         Me.btnProses.UseVisualStyleBackColor = True
@@ -450,9 +505,9 @@ Partial Class frmMonitoringAndControlling
         Me.GroupBox9.Controls.Add(Me.txtKalimatPenutup)
         Me.GroupBox9.Controls.Add(Me.Label21)
         Me.GroupBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox9.Location = New System.Drawing.Point(622, 605)
+        Me.GroupBox9.Location = New System.Drawing.Point(602, 605)
         Me.GroupBox9.Name = "GroupBox9"
-        Me.GroupBox9.Size = New System.Drawing.Size(280, 134)
+        Me.GroupBox9.Size = New System.Drawing.Size(300, 134)
         Me.GroupBox9.TabIndex = 13
         Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = "Resume/ Kesimpulan"
@@ -473,7 +528,7 @@ Partial Class frmMonitoringAndControlling
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(2, 16)
+        Me.Label10.Location = New System.Drawing.Point(20, 13)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(223, 25)
         Me.Label10.TabIndex = 0
@@ -712,6 +767,7 @@ Partial Class frmMonitoringAndControlling
         '
         Me.GroupBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox4.Controls.Add(Me.lblKodeJenisSurat)
         Me.GroupBox4.Controls.Add(Me.Label11)
         Me.GroupBox4.Controls.Add(Me.GroupBox8)
         Me.GroupBox4.Controls.Add(Me.Label10)
@@ -721,11 +777,20 @@ Partial Class frmMonitoringAndControlling
         Me.GroupBox4.TabIndex = 9
         Me.GroupBox4.TabStop = False
         '
+        'lblKodeJenisSurat
+        '
+        Me.lblKodeJenisSurat.AutoSize = True
+        Me.lblKodeJenisSurat.Location = New System.Drawing.Point(97, 67)
+        Me.lblKodeJenisSurat.Name = "lblKodeJenisSurat"
+        Me.lblKodeJenisSurat.Size = New System.Drawing.Size(35, 13)
+        Me.lblKodeJenisSurat.TabIndex = 5
+        Me.lblKodeJenisSurat.Text = "IT007"
+        '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(27, 53)
+        Me.Label11.Location = New System.Drawing.Point(41, 39)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(156, 25)
         Me.Label11.TabIndex = 4
@@ -742,59 +807,6 @@ Partial Class frmMonitoringAndControlling
         Me.GroupBox5.TabIndex = 10
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Salam Pembuka"
-        '
-        'txtKodeBarang
-        '
-        Me.txtKodeBarang.Location = New System.Drawing.Point(52, 20)
-        Me.txtKodeBarang.Name = "txtKodeBarang"
-        Me.txtKodeBarang.Size = New System.Drawing.Size(141, 20)
-        Me.txtKodeBarang.TabIndex = 17
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(6, 32)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(40, 15)
-        Me.Label19.TabIndex = 18
-        Me.Label19.Text = "Kode"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(6, 69)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(45, 15)
-        Me.Label23.TabIndex = 19
-        Me.Label23.Text = "Nama"
-        '
-        'txtNamaBarang
-        '
-        Me.txtNamaBarang.Location = New System.Drawing.Point(52, 46)
-        Me.txtNamaBarang.Name = "txtNamaBarang"
-        Me.txtNamaBarang.Size = New System.Drawing.Size(141, 64)
-        Me.txtNamaBarang.TabIndex = 20
-        Me.txtNamaBarang.Text = ""
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(0, 152)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(39, 15)
-        Me.Label24.TabIndex = 21
-        Me.Label24.Text = "Spec"
-        '
-        'txtSpesifikasi
-        '
-        Me.txtSpesifikasi.Location = New System.Drawing.Point(52, 116)
-        Me.txtSpesifikasi.Name = "txtSpesifikasi"
-        Me.txtSpesifikasi.Size = New System.Drawing.Size(141, 109)
-        Me.txtSpesifikasi.TabIndex = 22
-        Me.txtSpesifikasi.Text = ""
         '
         'frmMonitoringAndControlling
         '
@@ -908,4 +920,5 @@ Partial Class frmMonitoringAndControlling
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents txtKodeBarang As System.Windows.Forms.TextBox
+    Friend WithEvents lblKodeJenisSurat As System.Windows.Forms.Label
 End Class

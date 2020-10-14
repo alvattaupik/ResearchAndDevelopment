@@ -99,6 +99,8 @@ Module ModuleUltility
                 frmMainMenu.H_ITILV3.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "OMASTER004" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_Konten.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "OMASTER005" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.H_AssetManagement.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "OGADGET001" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_Sidebar.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "OGADGET002" And dgv.Rows(i).Cells(1).Value = "Y" Then
@@ -207,6 +209,10 @@ Module ModuleUltility
                 frmMainMenu.I_IncidentManagement.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "ITIL002" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_ProblemManagement.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "AM001" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_RegNewAsset.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "AM002" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_ParameterUji.Visible = True
 
             End If
 
@@ -614,6 +620,21 @@ Module ModuleUltility
         End Try
 
 
+    End Sub
+
+    Public Sub Module_Konfigurasi_laporan()
+        With crConnectionInfo
+            .ServerName = "10.1.0.53"
+            .UserID = "sa"
+            .Password = "h0spit4lity#"
+            .DatabaseName = "DB_EMAIL"
+        End With
+        CrTables = cryRpt.Database.Tables
+        For Each CrTable In CrTables
+            crtableLogoninfo = CrTable.LogOnInfo
+            crtableLogoninfo.ConnectionInfo = crConnectionInfo
+            CrTable.ApplyLogOnInfo(crtableLogoninfo)
+        Next
     End Sub
 
 

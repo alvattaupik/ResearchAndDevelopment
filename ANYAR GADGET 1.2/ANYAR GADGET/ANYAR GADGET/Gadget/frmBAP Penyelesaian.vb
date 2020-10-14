@@ -108,6 +108,20 @@ Public Class frmBAPPenyelesaian
         Call KoneksiDB_EMAIL()
         LoadDataGrid(dgvDaftarSurat, "SELECT Top 15 NomorSurat,CAST(TanggalSurat AS DATE) AS TglSurat,EmpName AS DibuatOleh,Perihal,DitujukanKepada AS Penerima FROM dbo.KopSurat Where EmpLocation='" & MstrKodeDivisi & "' AND Canceled='N' AND KdJenisSurat='" & lblKodeSurat.Text & "' Order By CreateDate Desc", KoneksiDBEmail)
 
+        dgvListItem.DataSource = Nothing
+        dgvListItem.Rows.Clear()
+        dgvListItem.Columns.Clear()
+
+        txtSalamPembuka.Text = ""
+        txtKalimatPembuka.Text = ""
+        txtKalimatPenutup.Text = ""
+        txtTembusan.Text = ""
+        txtDitujukanKepada.Text = ""
+        txtAlamat.Text = ""
+        txtNoTelp.Text = ""
+        txtNoSurat.Text = ""
+
+
     End Sub
 
 
@@ -268,7 +282,7 @@ Public Class frmBAPPenyelesaian
         Dim frm As New frmTampilkanSurat
         frm.crvTampilkanSurat.ParameterFieldInfo = paramFields
         reportDocument = New BA_Penyelesaian_Anyar_Gadget_IT001_01
-        reportDocument.SetDatabaseLogon("sa", "h0spit4lity#", "10.1.0.53", "RKM_LIVE_2")
+        reportDocument.SetDatabaseLogon("sa", "h0spit4lity#", "10.1.0.53", "DB_EMAIL")
 
         frm.crvTampilkanSurat.ReportSource = reportDocument
         frm.crvTampilkanSurat.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
