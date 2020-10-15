@@ -469,6 +469,12 @@
     <Compile Include="LainLain\frmUbahAsset.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Master\frmMasterParameterUji.Designer.vb">
+      <DependentUpon>frmMasterParameterUji.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmMasterParameterUji.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Master\frmMasterKontenBantuan.Designer.vb">
       <DependentUpon>frmMasterKontenBantuan.vb</DependentUpon>
     </Compile>
@@ -756,6 +762,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LainLain\frmUbahAsset.resx">
       <DependentUpon>frmUbahAsset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmMasterParameterUji.resx">
+      <DependentUpon>frmMasterParameterUji.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmMasterKontenBantuan.resx">
       <DependentUpon>frmMasterKontenBantuan.vb</DependentUpon>

@@ -148,14 +148,14 @@ Module ModuleUltility
                 frmMainMenu.I_AnyarLocalPrint.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "IGadget005" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_RKMDisplayTag.Visible = True
-            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget006" And dgv.Rows(i).Cells(1).Value = "Y" Then
-                frmMainMenu.I_ReqFullfillment.Visible = True
+                'ElseIf dgv.Rows(i).Cells(0).Value = "IGadget006" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                '    frmMainMenu.I_ReqFullfillment.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "IGadget007" And dgv.Rows(i).Cells(1).Value = "Y" Then
-                frmMainMenu.I_BukaValidasi.Visible = True
-            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget008" And dgv.Rows(i).Cells(1).Value = "Y" Then
-                frmMainMenu.I_BukaPostingPeriode.Visible = True
-            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget009" And dgv.Rows(i).Cells(1).Value = "Y" Then
-                frmMainMenu.I_BukaAuthorisasi.Visible = True
+                frmMainMenu.I_RequestFullfillments.Visible = True
+                'ElseIf dgv.Rows(i).Cells(0).Value = "IGadget008" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                '    frmMainMenu.I_BukaPostingPeriode.Visible = True
+                'ElseIf dgv.Rows(i).Cells(0).Value = "IGadget009" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                '    frmMainMenu.I_BukaAuthorisasi.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "IGadget010" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_IntegrationMonitor.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "IGadget011" And dgv.Rows(i).Cells(1).Value = "Y" Then

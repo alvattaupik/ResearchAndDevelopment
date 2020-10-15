@@ -50,10 +50,6 @@ Partial Class frmMainMenu
         Me.I_RKMDisplayTag = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Ping = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Request = New System.Windows.Forms.ToolStripMenuItem()
-        Me.I_ReqFullfillment = New System.Windows.Forms.ToolStripMenuItem()
-        Me.I_BukaValidasi = New System.Windows.Forms.ToolStripMenuItem()
-        Me.I_BukaPostingPeriode = New System.Windows.Forms.ToolStripMenuItem()
-        Me.I_BukaAuthorisasi = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Repository = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_AnyarRepository = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_AIO = New System.Windows.Forms.ToolStripMenuItem()
@@ -102,6 +98,7 @@ Partial Class frmMainMenu
         Me.H_Konten = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_AssetManagement = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_RegNewAsset = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_ParameterUji = New System.Windows.Forms.ToolStripMenuItem()
         Me.HELPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_LaporkanMasalah = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_CaraPenggunaan = New System.Windows.Forms.ToolStripMenuItem()
@@ -110,7 +107,10 @@ Partial Class frmMainMenu
         Me.TimerPesanError = New System.Windows.Forms.Timer(Me.components)
         Me.TimerJam = New System.Windows.Forms.Timer(Me.components)
         Me.txtJamDanWaktu = New System.Windows.Forms.TextBox()
-        Me.I_ParameterUji = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ApprovalTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewApprovalTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_RequestFullfillments = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_PeminjamanAsset = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel3.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgListMenu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -315,40 +315,12 @@ Partial Class frmMainMenu
         '
         'H_Request
         '
-        Me.H_Request.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_ReqFullfillment, Me.I_BukaValidasi, Me.I_BukaPostingPeriode, Me.I_BukaAuthorisasi})
+        Me.H_Request.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_RequestFullfillments, Me.I_PeminjamanAsset})
         Me.H_Request.Image = Global.ANYAR_GADGET.My.Resources.Resources.request_icon
         Me.H_Request.Name = "H_Request"
         Me.H_Request.Size = New System.Drawing.Size(222, 22)
         Me.H_Request.Text = "Request"
         Me.H_Request.Visible = False
-        '
-        'I_ReqFullfillment
-        '
-        Me.I_ReqFullfillment.Name = "I_ReqFullfillment"
-        Me.I_ReqFullfillment.Size = New System.Drawing.Size(186, 22)
-        Me.I_ReqFullfillment.Text = "Req Fullfilment"
-        Me.I_ReqFullfillment.Visible = False
-        '
-        'I_BukaValidasi
-        '
-        Me.I_BukaValidasi.Name = "I_BukaValidasi"
-        Me.I_BukaValidasi.Size = New System.Drawing.Size(186, 22)
-        Me.I_BukaValidasi.Text = "Buka Validasi"
-        Me.I_BukaValidasi.Visible = False
-        '
-        'I_BukaPostingPeriode
-        '
-        Me.I_BukaPostingPeriode.Name = "I_BukaPostingPeriode"
-        Me.I_BukaPostingPeriode.Size = New System.Drawing.Size(186, 22)
-        Me.I_BukaPostingPeriode.Text = "Buka Posting Periode"
-        Me.I_BukaPostingPeriode.Visible = False
-        '
-        'I_BukaAuthorisasi
-        '
-        Me.I_BukaAuthorisasi.Name = "I_BukaAuthorisasi"
-        Me.I_BukaAuthorisasi.Size = New System.Drawing.Size(186, 22)
-        Me.I_BukaAuthorisasi.Text = "Buka Authorisasi"
-        Me.I_BukaAuthorisasi.Visible = False
         '
         'H_Repository
         '
@@ -588,7 +560,7 @@ Partial Class frmMainMenu
         '
         'MasterToolStripMenuItem
         '
-        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Pegawai, Me.H_Menu, Me.H_ITILV3, Me.H_Konten, Me.H_AssetManagement})
+        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Pegawai, Me.H_Menu, Me.H_ITILV3, Me.H_Konten, Me.H_AssetManagement, Me.ApprovalTemplateToolStripMenuItem})
         Me.MasterToolStripMenuItem.Name = "MasterToolStripMenuItem"
         Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
         Me.MasterToolStripMenuItem.Text = "MASTER"
@@ -711,6 +683,13 @@ Partial Class frmMainMenu
         Me.I_RegNewAsset.Text = "Register New Assets"
         Me.I_RegNewAsset.Visible = False
         '
+        'I_ParameterUji
+        '
+        Me.I_ParameterUji.Name = "I_ParameterUji"
+        Me.I_ParameterUji.Size = New System.Drawing.Size(179, 22)
+        Me.I_ParameterUji.Text = "Parameter Uji"
+        Me.I_ParameterUji.Visible = False
+        '
         'HELPToolStripMenuItem
         '
         Me.HELPToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_LaporkanMasalah, Me.H_CaraPenggunaan})
@@ -776,12 +755,31 @@ Partial Class frmMainMenu
         Me.txtJamDanWaktu.TabIndex = 12
         Me.txtJamDanWaktu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'I_ParameterUji
+        'ApprovalTemplateToolStripMenuItem
         '
-        Me.I_ParameterUji.Name = "I_ParameterUji"
-        Me.I_ParameterUji.Size = New System.Drawing.Size(179, 22)
-        Me.I_ParameterUji.Text = "Parameter Uji"
-        Me.I_ParameterUji.Visible = False
+        Me.ApprovalTemplateToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewApprovalTemplateToolStripMenuItem})
+        Me.ApprovalTemplateToolStripMenuItem.Name = "ApprovalTemplateToolStripMenuItem"
+        Me.ApprovalTemplateToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.ApprovalTemplateToolStripMenuItem.Text = "Approval Template"
+        '
+        'NewApprovalTemplateToolStripMenuItem
+        '
+        Me.NewApprovalTemplateToolStripMenuItem.Name = "NewApprovalTemplateToolStripMenuItem"
+        Me.NewApprovalTemplateToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.NewApprovalTemplateToolStripMenuItem.Text = "New Approval Template"
+        '
+        'I_RequestFullfillments
+        '
+        Me.I_RequestFullfillments.Name = "I_RequestFullfillments"
+        Me.I_RequestFullfillments.Size = New System.Drawing.Size(184, 22)
+        Me.I_RequestFullfillments.Text = "Request Fullfillments"
+        Me.I_RequestFullfillments.Visible = False
+        '
+        'I_PeminjamanAsset
+        '
+        Me.I_PeminjamanAsset.Name = "I_PeminjamanAsset"
+        Me.I_PeminjamanAsset.Size = New System.Drawing.Size(184, 22)
+        Me.I_PeminjamanAsset.Text = "Peminjaman Asset"
         '
         'frmMainMenu
         '
@@ -837,10 +835,6 @@ Partial Class frmMainMenu
     Friend WithEvents I_RKMDisplayTag As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_Ping As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_Request As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents I_ReqFullfillment As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents I_BukaValidasi As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents I_BukaPostingPeriode As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents I_BukaAuthorisasi As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_Repository As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_AnyarRepository As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_AIO As System.Windows.Forms.ToolStripMenuItem
@@ -898,5 +892,9 @@ Partial Class frmMainMenu
     Friend WithEvents H_AssetManagement As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_RegNewAsset As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_ParameterUji As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_RequestFullfillments As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ApprovalTemplateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NewApprovalTemplateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_PeminjamanAsset As System.Windows.Forms.ToolStripMenuItem
 
 End Class

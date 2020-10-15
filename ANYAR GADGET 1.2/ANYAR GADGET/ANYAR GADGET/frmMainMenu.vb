@@ -303,6 +303,8 @@ Public Class frmMainMenu
     End Sub
 
     Private Sub I_ParameterUji_Click(sender As Object, e As EventArgs) Handles I_ParameterUji.Click
-
+        Dim frm As New frmMasterParameterUji
+        frm.MdiParent = Me
+        frm.Show()
     End Sub
 End Class
