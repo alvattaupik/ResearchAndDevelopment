@@ -50,6 +50,8 @@ Partial Class frmMainMenu
         Me.I_RKMDisplayTag = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Ping = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Request = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_RequestFullfillments = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_PeminjamanAsset = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Repository = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_AnyarRepository = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_AIO = New System.Windows.Forms.ToolStripMenuItem()
@@ -99,6 +101,8 @@ Partial Class frmMainMenu
         Me.H_AssetManagement = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_RegNewAsset = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_ParameterUji = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ApprovalTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewApprovalTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HELPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_LaporkanMasalah = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_CaraPenggunaan = New System.Windows.Forms.ToolStripMenuItem()
@@ -107,10 +111,6 @@ Partial Class frmMainMenu
         Me.TimerPesanError = New System.Windows.Forms.Timer(Me.components)
         Me.TimerJam = New System.Windows.Forms.Timer(Me.components)
         Me.txtJamDanWaktu = New System.Windows.Forms.TextBox()
-        Me.ApprovalTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewApprovalTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.I_RequestFullfillments = New System.Windows.Forms.ToolStripMenuItem()
-        Me.I_PeminjamanAsset = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel3.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgListMenu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -321,6 +321,20 @@ Partial Class frmMainMenu
         Me.H_Request.Size = New System.Drawing.Size(222, 22)
         Me.H_Request.Text = "Request"
         Me.H_Request.Visible = False
+        '
+        'I_RequestFullfillments
+        '
+        Me.I_RequestFullfillments.Name = "I_RequestFullfillments"
+        Me.I_RequestFullfillments.Size = New System.Drawing.Size(184, 22)
+        Me.I_RequestFullfillments.Text = "Request Fullfillments"
+        Me.I_RequestFullfillments.Visible = False
+        '
+        'I_PeminjamanAsset
+        '
+        Me.I_PeminjamanAsset.Name = "I_PeminjamanAsset"
+        Me.I_PeminjamanAsset.Size = New System.Drawing.Size(184, 22)
+        Me.I_PeminjamanAsset.Text = "Peminjaman Asset"
+        Me.I_PeminjamanAsset.Visible = False
         '
         'H_Repository
         '
@@ -690,6 +704,19 @@ Partial Class frmMainMenu
         Me.I_ParameterUji.Text = "Parameter Uji"
         Me.I_ParameterUji.Visible = False
         '
+        'ApprovalTemplateToolStripMenuItem
+        '
+        Me.ApprovalTemplateToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewApprovalTemplateToolStripMenuItem})
+        Me.ApprovalTemplateToolStripMenuItem.Name = "ApprovalTemplateToolStripMenuItem"
+        Me.ApprovalTemplateToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.ApprovalTemplateToolStripMenuItem.Text = "Approval Template"
+        '
+        'NewApprovalTemplateToolStripMenuItem
+        '
+        Me.NewApprovalTemplateToolStripMenuItem.Name = "NewApprovalTemplateToolStripMenuItem"
+        Me.NewApprovalTemplateToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.NewApprovalTemplateToolStripMenuItem.Text = "New Approval Template"
+        '
         'HELPToolStripMenuItem
         '
         Me.HELPToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_LaporkanMasalah, Me.H_CaraPenggunaan})
@@ -754,32 +781,6 @@ Partial Class frmMainMenu
         Me.txtJamDanWaktu.Size = New System.Drawing.Size(909, 19)
         Me.txtJamDanWaktu.TabIndex = 12
         Me.txtJamDanWaktu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'ApprovalTemplateToolStripMenuItem
-        '
-        Me.ApprovalTemplateToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewApprovalTemplateToolStripMenuItem})
-        Me.ApprovalTemplateToolStripMenuItem.Name = "ApprovalTemplateToolStripMenuItem"
-        Me.ApprovalTemplateToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.ApprovalTemplateToolStripMenuItem.Text = "Approval Template"
-        '
-        'NewApprovalTemplateToolStripMenuItem
-        '
-        Me.NewApprovalTemplateToolStripMenuItem.Name = "NewApprovalTemplateToolStripMenuItem"
-        Me.NewApprovalTemplateToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
-        Me.NewApprovalTemplateToolStripMenuItem.Text = "New Approval Template"
-        '
-        'I_RequestFullfillments
-        '
-        Me.I_RequestFullfillments.Name = "I_RequestFullfillments"
-        Me.I_RequestFullfillments.Size = New System.Drawing.Size(184, 22)
-        Me.I_RequestFullfillments.Text = "Request Fullfillments"
-        Me.I_RequestFullfillments.Visible = False
-        '
-        'I_PeminjamanAsset
-        '
-        Me.I_PeminjamanAsset.Name = "I_PeminjamanAsset"
-        Me.I_PeminjamanAsset.Size = New System.Drawing.Size(184, 22)
-        Me.I_PeminjamanAsset.Text = "Peminjaman Asset"
         '
         'frmMainMenu
         '

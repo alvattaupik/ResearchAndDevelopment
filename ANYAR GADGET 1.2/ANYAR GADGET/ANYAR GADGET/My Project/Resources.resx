@@ -127,8 +127,8 @@
   <data name="browse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\browse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Users Dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Users Dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CCTV PIGEON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CCTV PIGEON.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Lembar Kertas Dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lembar Kertas Dashboard.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,6 +151,9 @@
   <data name="Processor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Processor.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Users Dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Users Dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ubah Password logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ubah Password logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,9 +165,6 @@
   </data>
   <data name="Hello text" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hello text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Push Notification" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Push Notification.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,6 +187,9 @@
   <data name="Asset Management" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Asset Management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Performance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Performance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Users logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Users logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -207,6 +210,9 @@
   </data>
   <data name="saplogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saplogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Loading 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Loading 7.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Monitoring Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Monitoring Icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -258,9 +264,6 @@
   </data>
   <data name="Surat Terima" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Surat Terima.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CCTV PIGEON" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CCTV PIGEON.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Receipt 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Receipt 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,8 +346,8 @@
   <data name="Print1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Print1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Loading 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Loading 7.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -358,7 +361,7 @@
   <data name="ITIL v3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ITIL v3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Performance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Performance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cat is Typing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat is Typing.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

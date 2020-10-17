@@ -127,6 +127,12 @@
     <Compile Include="BrowseForm\frmBrowseAssetmanagement.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BrowseForm\frmBrowseConfigurationItems.Designer.vb">
+      <DependentUpon>frmBrowseConfigurationItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseConfigurationItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BrowseForm\frmBrowseBusinessPartnerMonitoring.Designer.vb">
       <DependentUpon>frmBrowseBusinessPartnerMonitoring.vb</DependentUpon>
     </Compile>
@@ -155,6 +161,12 @@
       <DependentUpon>frmBrowseItemMasterDataBAPPenyelesaian.vb</DependentUpon>
     </Compile>
     <Compile Include="BrowseForm\frmBrowseItemMasterDataBAPPenyelesaian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseItemMasterDataPeminjamanAsset.Designer.vb">
+      <DependentUpon>frmBrowseItemMasterDataPeminjamanAsset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseItemMasterDataPeminjamanAsset.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BrowseForm\frmBrowseItemMasterDataBAPSerahTerima .Designer.vb">
@@ -230,6 +242,12 @@
       <SubType>Component</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="CrystalReports\FormPeminjamanAsset Anyar Gadget IT006-01.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormPeminjamanAsset Anyar Gadget IT006-01.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReports\LaporanInventoryCheck.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -287,6 +305,12 @@
       <DependentUpon>frmUbahPassword.vb</DependentUpon>
     </Compile>
     <Compile Include="frmUbahPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmRequestFullfillment.Designer.vb">
+      <DependentUpon>frmRequestFullfillment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmRequestFullfillment.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gadget\frmBAP Penyelesaian.Designer.vb">
@@ -353,6 +377,12 @@
       <DependentUpon>frmListKendaraan.vb</DependentUpon>
     </Compile>
     <Compile Include="Gadget\frmListKendaraan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmPeminajamanAsset.Designer.vb">
+      <DependentUpon>frmPeminajamanAsset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmPeminajamanAsset.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gadget\frmPromoPromo.Designer.vb">
@@ -582,6 +612,9 @@
     <EmbeddedResource Include="BrowseForm\frmBrowseAssetmanagement.resx">
       <DependentUpon>frmBrowseAssetmanagement.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseConfigurationItems.resx">
+      <DependentUpon>frmBrowseConfigurationItems.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseBusinessPartnerMonitoring.resx">
       <DependentUpon>frmBrowseBusinessPartnerMonitoring.vb</DependentUpon>
     </EmbeddedResource>
@@ -596,6 +629,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseItemMasterDataBAPPenyelesaian.resx">
       <DependentUpon>frmBrowseItemMasterDataBAPPenyelesaian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseItemMasterDataPeminjamanAsset.resx">
+      <DependentUpon>frmBrowseItemMasterDataPeminjamanAsset.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseItemMasterDataBAPSerahTerima .resx">
       <DependentUpon>frmBrowseItemMasterDataBAPSerahTerima .vb</DependentUpon>
@@ -636,6 +672,10 @@
       <LastGenOutput>BA Serah Terima Anyar Gadget IT002-01.vb</LastGenOutput>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\FormPeminjamanAsset Anyar Gadget IT006-01.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FormPeminjamanAsset Anyar Gadget IT006-01.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReports\LaporanInventoryCheck.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LaporanInventoryCheck.vb</LastGenOutput>
@@ -673,6 +713,9 @@
     <EmbeddedResource Include="frmUbahPassword.resx">
       <DependentUpon>frmUbahPassword.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmRequestFullfillment.resx">
+      <DependentUpon>frmRequestFullfillment.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gadget\frmBAP Penyelesaian.resx">
       <DependentUpon>frmBAP Penyelesaian.vb</DependentUpon>
     </EmbeddedResource>
@@ -705,6 +748,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gadget\frmListKendaraan.resx">
       <DependentUpon>frmListKendaraan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmPeminajamanAsset.resx">
+      <DependentUpon>frmPeminajamanAsset.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gadget\frmPromoPromo.resx">
       <DependentUpon>frmPromoPromo.vb</DependentUpon>
@@ -1213,6 +1259,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat is Typing.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

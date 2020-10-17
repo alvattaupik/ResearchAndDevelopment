@@ -148,8 +148,8 @@ Module ModuleUltility
                 frmMainMenu.I_AnyarLocalPrint.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "IGadget005" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_RKMDisplayTag.Visible = True
-                'ElseIf dgv.Rows(i).Cells(0).Value = "IGadget006" And dgv.Rows(i).Cells(1).Value = "Y" Then
-                '    frmMainMenu.I_ReqFullfillment.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget006" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_RequestFullfillments.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "IGadget007" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_RequestFullfillments.Visible = True
                 'ElseIf dgv.Rows(i).Cells(0).Value = "IGadget008" And dgv.Rows(i).Cells(1).Value = "Y" Then
@@ -213,6 +213,8 @@ Module ModuleUltility
                 frmMainMenu.I_RegNewAsset.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "AM002" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_ParameterUji.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "IReq001" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_PeminjamanAsset.Visible = True
 
             End If
 
@@ -578,6 +580,17 @@ Module ModuleUltility
 
 
         MstrpathAttatchments = "\\10.1.0.52\Attachments Surat\ITIL INCIDENT MANAGEMENT\" & Trim(strNamaAttachments) & MstrExtentionFile
+        My.Computer.FileSystem.CopyFile(Trim(strLokasiAsal), MstrpathAttatchments, FileIO.UIOption.OnlyErrorDialogs, FileIO.UICancelOption.DoNothing)
+        Exit Sub
+
+
+    End Sub
+
+
+    Sub CopyFileKeDirectoryAttachmentReq(strNamaAttachments As String, strLokasiAsal As String)
+
+
+        MstrpathAttatchments = "\\10.1.0.52\Attachments Surat\ITIL REQ FULLFILLMENT\" & Trim(strNamaAttachments) & MstrExtentionFile
         My.Computer.FileSystem.CopyFile(Trim(strLokasiAsal), MstrpathAttatchments, FileIO.UIOption.OnlyErrorDialogs, FileIO.UICancelOption.DoNothing)
         Exit Sub
 

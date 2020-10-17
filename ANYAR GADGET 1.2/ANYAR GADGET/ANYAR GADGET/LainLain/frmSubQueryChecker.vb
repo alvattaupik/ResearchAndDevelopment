@@ -151,6 +151,8 @@ Public Class frmSubQueryChecker
 
 
     Private Sub dgvRootCause_Click(sender As Object, e As EventArgs) Handles dgvRootCause.Click
+        On Error Resume Next
+
         txtFullfillmentDetailkey.Text = dgvRootCause.Item(0, dgvRootCause.CurrentRow.Index).Value
         txtSourceDetailkey.Text = dgvRootCause.Item(1, dgvRootCause.CurrentRow.Index).Value
         txtProductKey.Text = dgvRootCause.Item(2, dgvRootCause.CurrentRow.Index).Value

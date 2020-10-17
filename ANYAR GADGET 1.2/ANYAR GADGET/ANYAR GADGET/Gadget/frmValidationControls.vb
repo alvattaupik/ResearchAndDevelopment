@@ -35,6 +35,7 @@ Public Class frmValidationControls
     End Sub
 
     Private Sub dgUnlocked_Click(sender As Object, e As EventArgs) Handles dgUnlocked.Click
+        On Error Resume Next
         If dgUnlocked.RowCount = 0 Then Exit Sub
         frmLockControlValidasi.txtDocNum.Text = dgUnlocked.Item(5, dgUnlocked.CurrentRow.Index).Value
         frmLockControlValidasi.txtJenisvalidasi.Text = dgUnlocked.Item(0, dgUnlocked.CurrentRow.Index).Value

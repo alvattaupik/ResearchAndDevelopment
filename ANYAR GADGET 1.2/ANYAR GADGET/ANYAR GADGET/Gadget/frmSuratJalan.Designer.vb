@@ -59,23 +59,9 @@ Partial Class frmSuratJalan
         Me.Label14 = New System.Windows.Forms.Label()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
-        Me.txtKeterangan = New System.Windows.Forms.TextBox()
-        Me.txtDeskripsi = New System.Windows.Forms.TextBox()
-        Me.btnTambah = New System.Windows.Forms.Button()
-        Me.txtQty = New System.Windows.Forms.TextBox()
-        Me.txtKode = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.lblJumlahItem = New System.Windows.Forms.Label()
         Me.btnHapus = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.dgvListItem = New System.Windows.Forms.DataGridView()
-        Me.Kode = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Deskripsi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Keterangan = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.txtKalimatPenutup = New System.Windows.Forms.RichTextBox()
         Me.Label21 = New System.Windows.Forms.Label()
@@ -88,6 +74,20 @@ Partial Class frmSuratJalan
         Me.picPrint = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.picBrowsBusinessPartner = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Keterangan = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Deskripsi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Kode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvListItem = New System.Windows.Forms.DataGridView()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.txtKode = New System.Windows.Forms.TextBox()
+        Me.txtQty = New System.Windows.Forms.TextBox()
+        Me.btnTambah = New System.Windows.Forms.Button()
+        Me.txtDeskripsi = New System.Windows.Forms.TextBox()
+        Me.txtKeterangan = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -98,7 +98,6 @@ Partial Class frmSuratJalan
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
-        CType(Me.dgvListItem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox9.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,6 +105,7 @@ Partial Class frmSuratJalan
         CType(Me.picPrint, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBrowsBusinessPartner, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvListItem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -507,97 +507,6 @@ Partial Class frmSuratJalan
         Me.GroupBox11.TabIndex = 15
         Me.GroupBox11.TabStop = False
         '
-        'txtKeterangan
-        '
-        Me.txtKeterangan.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtKeterangan.Location = New System.Drawing.Point(66, 98)
-        Me.txtKeterangan.Multiline = True
-        Me.txtKeterangan.Name = "txtKeterangan"
-        Me.txtKeterangan.Size = New System.Drawing.Size(294, 33)
-        Me.txtKeterangan.TabIndex = 17
-        '
-        'txtDeskripsi
-        '
-        Me.txtDeskripsi.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDeskripsi.Location = New System.Drawing.Point(66, 37)
-        Me.txtDeskripsi.Multiline = True
-        Me.txtDeskripsi.Name = "txtDeskripsi"
-        Me.txtDeskripsi.Size = New System.Drawing.Size(294, 33)
-        Me.txtDeskripsi.TabIndex = 16
-        '
-        'btnTambah
-        '
-        Me.btnTambah.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnTambah.Location = New System.Drawing.Point(66, 135)
-        Me.btnTambah.Name = "btnTambah"
-        Me.btnTambah.Size = New System.Drawing.Size(294, 29)
-        Me.btnTambah.TabIndex = 15
-        Me.btnTambah.Text = "Tambah"
-        Me.btnTambah.UseVisualStyleBackColor = True
-        '
-        'txtQty
-        '
-        Me.txtQty.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtQty.Location = New System.Drawing.Point(66, 73)
-        Me.txtQty.Name = "txtQty"
-        Me.txtQty.Size = New System.Drawing.Size(294, 20)
-        Me.txtQty.TabIndex = 13
-        '
-        'txtKode
-        '
-        Me.txtKode.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtKode.Location = New System.Drawing.Point(66, 12)
-        Me.txtKode.Name = "txtKode"
-        Me.txtKode.Size = New System.Drawing.Size(294, 20)
-        Me.txtKode.TabIndex = 11
-        '
-        'Label16
-        '
-        Me.Label16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(7, 17)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(32, 13)
-        Me.Label16.TabIndex = 4
-        Me.Label16.Text = "Kode"
-        '
-        'Label17
-        '
-        Me.Label17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(6, 42)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(50, 13)
-        Me.Label17.TabIndex = 6
-        Me.Label17.Text = "Deskripsi"
-        '
-        'Label18
-        '
-        Me.Label18.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(7, 74)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(23, 13)
-        Me.Label18.TabIndex = 8
-        Me.Label18.Text = "Qty"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(3, 102)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(62, 13)
-        Me.Label19.TabIndex = 10
-        Me.Label19.Text = "Keterangan"
-        '
         'lblJumlahItem
         '
         Me.lblJumlahItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -625,40 +534,6 @@ Partial Class frmSuratJalan
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(0, 13)
         Me.Label15.TabIndex = 1
-        '
-        'dgvListItem
-        '
-        Me.dgvListItem.AllowUserToAddRows = False
-        Me.dgvListItem.AllowUserToDeleteRows = False
-        Me.dgvListItem.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvListItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvListItem.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Kode, Me.Deskripsi, Me.Qty, Me.Keterangan})
-        Me.dgvListItem.Location = New System.Drawing.Point(439, 17)
-        Me.dgvListItem.Name = "dgvListItem"
-        Me.dgvListItem.RowHeadersVisible = False
-        Me.dgvListItem.Size = New System.Drawing.Size(380, 231)
-        Me.dgvListItem.TabIndex = 0
-        '
-        'Kode
-        '
-        Me.Kode.HeaderText = "Kode"
-        Me.Kode.Name = "Kode"
-        '
-        'Deskripsi
-        '
-        Me.Deskripsi.HeaderText = "Deskripsi"
-        Me.Deskripsi.Name = "Deskripsi"
-        '
-        'Qty
-        '
-        Me.Qty.HeaderText = "Qty"
-        Me.Qty.Name = "Qty"
-        '
-        'Keterangan
-        '
-        Me.Keterangan.HeaderText = "Keterangan"
-        Me.Keterangan.Name = "Keterangan"
         '
         'GroupBox9
         '
@@ -790,6 +665,131 @@ Partial Class frmSuratJalan
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'Keterangan
+        '
+        Me.Keterangan.HeaderText = "Keterangan"
+        Me.Keterangan.Name = "Keterangan"
+        '
+        'Qty
+        '
+        Me.Qty.HeaderText = "Qty"
+        Me.Qty.Name = "Qty"
+        '
+        'Deskripsi
+        '
+        Me.Deskripsi.HeaderText = "Deskripsi"
+        Me.Deskripsi.Name = "Deskripsi"
+        '
+        'Kode
+        '
+        Me.Kode.HeaderText = "Kode"
+        Me.Kode.Name = "Kode"
+        '
+        'dgvListItem
+        '
+        Me.dgvListItem.AllowUserToAddRows = False
+        Me.dgvListItem.AllowUserToDeleteRows = False
+        Me.dgvListItem.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvListItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvListItem.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Kode, Me.Deskripsi, Me.Qty, Me.Keterangan})
+        Me.dgvListItem.Location = New System.Drawing.Point(439, 17)
+        Me.dgvListItem.Name = "dgvListItem"
+        Me.dgvListItem.RowHeadersVisible = False
+        Me.dgvListItem.Size = New System.Drawing.Size(380, 231)
+        Me.dgvListItem.TabIndex = 0
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(3, 102)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(62, 13)
+        Me.Label19.TabIndex = 10
+        Me.Label19.Text = "Keterangan"
+        '
+        'Label18
+        '
+        Me.Label18.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(7, 74)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(23, 13)
+        Me.Label18.TabIndex = 8
+        Me.Label18.Text = "Qty"
+        '
+        'Label17
+        '
+        Me.Label17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(6, 42)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(50, 13)
+        Me.Label17.TabIndex = 6
+        Me.Label17.Text = "Deskripsi"
+        '
+        'Label16
+        '
+        Me.Label16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(7, 17)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(32, 13)
+        Me.Label16.TabIndex = 4
+        Me.Label16.Text = "Kode"
+        '
+        'txtKode
+        '
+        Me.txtKode.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtKode.Location = New System.Drawing.Point(66, 12)
+        Me.txtKode.Name = "txtKode"
+        Me.txtKode.Size = New System.Drawing.Size(294, 20)
+        Me.txtKode.TabIndex = 11
+        '
+        'txtQty
+        '
+        Me.txtQty.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtQty.Location = New System.Drawing.Point(66, 73)
+        Me.txtQty.Name = "txtQty"
+        Me.txtQty.Size = New System.Drawing.Size(294, 20)
+        Me.txtQty.TabIndex = 13
+        '
+        'btnTambah
+        '
+        Me.btnTambah.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnTambah.Location = New System.Drawing.Point(66, 135)
+        Me.btnTambah.Name = "btnTambah"
+        Me.btnTambah.Size = New System.Drawing.Size(294, 29)
+        Me.btnTambah.TabIndex = 15
+        Me.btnTambah.Text = "Tambah"
+        Me.btnTambah.UseVisualStyleBackColor = True
+        '
+        'txtDeskripsi
+        '
+        Me.txtDeskripsi.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtDeskripsi.Location = New System.Drawing.Point(66, 37)
+        Me.txtDeskripsi.Multiline = True
+        Me.txtDeskripsi.Name = "txtDeskripsi"
+        Me.txtDeskripsi.Size = New System.Drawing.Size(294, 33)
+        Me.txtDeskripsi.TabIndex = 16
+        '
+        'txtKeterangan
+        '
+        Me.txtKeterangan.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtKeterangan.Location = New System.Drawing.Point(66, 98)
+        Me.txtKeterangan.Multiline = True
+        Me.txtKeterangan.Name = "txtKeterangan"
+        Me.txtKeterangan.Size = New System.Drawing.Size(294, 33)
+        Me.txtKeterangan.TabIndex = 17
+        '
         'frmSuratJalan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -823,7 +823,6 @@ Partial Class frmSuratJalan
         Me.GroupBox7.PerformLayout()
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout()
-        CType(Me.dgvListItem, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox9.ResumeLayout(False)
         Me.GroupBox9.PerformLayout()
         Me.GroupBox10.ResumeLayout(False)
@@ -833,6 +832,7 @@ Partial Class frmSuratJalan
         CType(Me.picPrint, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBrowsBusinessPartner, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvListItem, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -873,12 +873,8 @@ Partial Class frmSuratJalan
     Friend WithEvents GroupBox7 As System.Windows.Forms.GroupBox
     Friend WithEvents lblJumlahItem As System.Windows.Forms.Label
     Friend WithEvents btnHapus As System.Windows.Forms.Button
-    Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents dgvListItem As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox9 As System.Windows.Forms.GroupBox
     Friend WithEvents txtKalimatPenutup As System.Windows.Forms.RichTextBox
     Friend WithEvents Label21 As System.Windows.Forms.Label
@@ -890,16 +886,20 @@ Partial Class frmSuratJalan
     Friend WithEvents picCancel As Guna.UI.WinForms.GunaTransfarantPictureBox
     Friend WithEvents lblKodeSurat As System.Windows.Forms.Label
     Friend WithEvents GroupBox11 As System.Windows.Forms.GroupBox
+    Friend WithEvents txtCariSurat As System.Windows.Forms.TextBox
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents txtKeterangan As System.Windows.Forms.TextBox
+    Friend WithEvents txtDeskripsi As System.Windows.Forms.TextBox
+    Friend WithEvents btnTambah As System.Windows.Forms.Button
     Friend WithEvents txtQty As System.Windows.Forms.TextBox
     Friend WithEvents txtKode As System.Windows.Forms.TextBox
-    Friend WithEvents btnTambah As System.Windows.Forms.Button
-    Friend WithEvents txtDeskripsi As System.Windows.Forms.TextBox
-    Friend WithEvents txtKeterangan As System.Windows.Forms.TextBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents dgvListItem As System.Windows.Forms.DataGridView
     Friend WithEvents Kode As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Deskripsi As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Qty As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Keterangan As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents txtCariSurat As System.Windows.Forms.TextBox
-    Friend WithEvents Label20 As System.Windows.Forms.Label
 End Class

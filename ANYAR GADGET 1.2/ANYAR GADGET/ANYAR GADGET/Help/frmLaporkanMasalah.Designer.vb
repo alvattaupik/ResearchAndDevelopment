@@ -24,6 +24,8 @@ Partial Class frmLaporkanMasalah
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.GunaTransfarantPictureBox2 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.txtNamaSupervisor = New System.Windows.Forms.TextBox()
         Me.txtLokasi = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -38,19 +40,24 @@ Partial Class frmLaporkanMasalah
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtUniqueID = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.lblJumlahLampiran = New System.Windows.Forms.Label()
+        Me.btnHapusLampiran = New System.Windows.Forms.Button()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.dgvListLampiran = New System.Windows.Forms.DataGridView()
+        Me.Path = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnAddLampiran = New System.Windows.Forms.Button()
         Me.txtPathLampiran = New System.Windows.Forms.TextBox()
+        Me.picCariLampiran = New System.Windows.Forms.PictureBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtDetailDeskripsi = New System.Windows.Forms.RichTextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtKodeSpecificProblem = New System.Windows.Forms.TextBox()
         Me.txtNamaSpecificProblems = New System.Windows.Forms.RichTextBox()
+        Me.picCariSpesificProblem = New System.Windows.Forms.PictureBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtKodeSubkategori = New System.Windows.Forms.TextBox()
         Me.txtNamaSubkategori = New System.Windows.Forms.TextBox()
+        Me.picCariSubKategori = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.cmbKategori = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -59,16 +66,11 @@ Partial Class frmLaporkanMasalah
         Me.btnKirim = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.picCariLampiran = New System.Windows.Forms.PictureBox()
-        Me.picCariSpesificProblem = New System.Windows.Forms.PictureBox()
-        Me.picCariSubKategori = New System.Windows.Forms.PictureBox()
         Me.GunaTransfarantPictureBox3 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.GunaTransfarantPictureBox2 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Path = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnHapusLampiran = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -77,8 +79,6 @@ Partial Class frmLaporkanMasalah
         CType(Me.picCariSpesificProblem, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picCariSubKategori, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -114,6 +114,30 @@ Partial Class frmLaporkanMasalah
         Me.Label7.Size = New System.Drawing.Size(209, 25)
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Help Desk Support"
+        '
+        'GunaTransfarantPictureBox2
+        '
+        Me.GunaTransfarantPictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox2.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.Helpdesk_logo2
+        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(19, 10)
+        Me.GunaTransfarantPictureBox2.Name = "GunaTransfarantPictureBox2"
+        Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(247, 145)
+        Me.GunaTransfarantPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.GunaTransfarantPictureBox2.TabIndex = 13
+        Me.GunaTransfarantPictureBox2.TabStop = False
+        '
+        'GunaTransfarantPictureBox1
+        '
+        Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Idea
+        Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(303, 12)
+        Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
+        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(161, 158)
+        Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox1.TabIndex = 12
+        Me.GunaTransfarantPictureBox1.TabStop = False
         '
         'txtNamaSupervisor
         '
@@ -272,6 +296,26 @@ Partial Class frmLaporkanMasalah
         Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         '
+        'lblJumlahLampiran
+        '
+        Me.lblJumlahLampiran.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblJumlahLampiran.AutoSize = True
+        Me.lblJumlahLampiran.Location = New System.Drawing.Point(606, 285)
+        Me.lblJumlahLampiran.Name = "lblJumlahLampiran"
+        Me.lblJumlahLampiran.Size = New System.Drawing.Size(101, 13)
+        Me.lblJumlahLampiran.TabIndex = 1
+        Me.lblJumlahLampiran.Text = "Jumlah Lampiran : 0"
+        '
+        'btnHapusLampiran
+        '
+        Me.btnHapusLampiran.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnHapusLampiran.Location = New System.Drawing.Point(610, 245)
+        Me.btnHapusLampiran.Name = "btnHapusLampiran"
+        Me.btnHapusLampiran.Size = New System.Drawing.Size(97, 23)
+        Me.btnHapusLampiran.TabIndex = 2
+        Me.btnHapusLampiran.Text = "Hapus Lampiran"
+        Me.btnHapusLampiran.UseVisualStyleBackColor = True
+        '
         'GroupBox4
         '
         Me.GroupBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -282,16 +326,6 @@ Partial Class frmLaporkanMasalah
         Me.GroupBox4.Size = New System.Drawing.Size(397, 151)
         Me.GroupBox4.TabIndex = 18
         Me.GroupBox4.TabStop = False
-        '
-        'lblJumlahLampiran
-        '
-        Me.lblJumlahLampiran.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblJumlahLampiran.AutoSize = True
-        Me.lblJumlahLampiran.Location = New System.Drawing.Point(606, 285)
-        Me.lblJumlahLampiran.Name = "lblJumlahLampiran"
-        Me.lblJumlahLampiran.Size = New System.Drawing.Size(101, 13)
-        Me.lblJumlahLampiran.TabIndex = 1
-        Me.lblJumlahLampiran.Text = "Jumlah Lampiran : 0"
         '
         'dgvListLampiran
         '
@@ -308,6 +342,12 @@ Partial Class frmLaporkanMasalah
         Me.dgvListLampiran.RowHeadersVisible = False
         Me.dgvListLampiran.Size = New System.Drawing.Size(378, 127)
         Me.dgvListLampiran.TabIndex = 0
+        '
+        'Path
+        '
+        Me.Path.HeaderText = "Path"
+        Me.Path.Name = "Path"
+        Me.Path.ReadOnly = True
         '
         'btnAddLampiran
         '
@@ -329,6 +369,17 @@ Partial Class frmLaporkanMasalah
         Me.txtPathLampiran.Size = New System.Drawing.Size(397, 22)
         Me.txtPathLampiran.TabIndex = 16
         '
+        'picCariLampiran
+        '
+        Me.picCariLampiran.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.picCariLampiran.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
+        Me.picCariLampiran.Location = New System.Drawing.Point(171, 212)
+        Me.picCariLampiran.Name = "picCariLampiran"
+        Me.picCariLampiran.Size = New System.Drawing.Size(25, 22)
+        Me.picCariLampiran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picCariLampiran.TabIndex = 15
+        Me.picCariLampiran.TabStop = False
+        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -346,7 +397,6 @@ Partial Class frmLaporkanMasalah
         Me.txtDetailDeskripsi.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDetailDeskripsi.Location = New System.Drawing.Point(202, 142)
         Me.txtDetailDeskripsi.Name = "txtDetailDeskripsi"
-        Me.txtDetailDeskripsi.ReadOnly = True
         Me.txtDetailDeskripsi.Size = New System.Drawing.Size(397, 63)
         Me.txtDetailDeskripsi.TabIndex = 13
         Me.txtDetailDeskripsi.Text = ""
@@ -381,6 +431,17 @@ Partial Class frmLaporkanMasalah
         Me.txtNamaSpecificProblems.TabIndex = 10
         Me.txtNamaSpecificProblems.Text = ""
         '
+        'picCariSpesificProblem
+        '
+        Me.picCariSpesificProblem.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.picCariSpesificProblem.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
+        Me.picCariSpesificProblem.Location = New System.Drawing.Point(171, 78)
+        Me.picCariSpesificProblem.Name = "picCariSpesificProblem"
+        Me.picCariSpesificProblem.Size = New System.Drawing.Size(25, 22)
+        Me.picCariSpesificProblem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picCariSpesificProblem.TabIndex = 9
+        Me.picCariSpesificProblem.TabStop = False
+        '
         'Label11
         '
         Me.Label11.AutoSize = True
@@ -409,6 +470,17 @@ Partial Class frmLaporkanMasalah
         Me.txtNamaSubkategori.Name = "txtNamaSubkategori"
         Me.txtNamaSubkategori.Size = New System.Drawing.Size(397, 24)
         Me.txtNamaSubkategori.TabIndex = 6
+        '
+        'picCariSubKategori
+        '
+        Me.picCariSubKategori.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.picCariSubKategori.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
+        Me.picCariSubKategori.Location = New System.Drawing.Point(171, 45)
+        Me.picCariSubKategori.Name = "picCariSubKategori"
+        Me.picCariSubKategori.Size = New System.Drawing.Size(25, 22)
+        Me.picCariSubKategori.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picCariSubKategori.TabIndex = 5
+        Me.picCariSubKategori.TabStop = False
         '
         'Label10
         '
@@ -491,39 +563,6 @@ Partial Class frmLaporkanMasalah
         Me.Label15.TabIndex = 23
         Me.Label15.Text = "Incident Management"
         '
-        'picCariLampiran
-        '
-        Me.picCariLampiran.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.picCariLampiran.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
-        Me.picCariLampiran.Location = New System.Drawing.Point(171, 212)
-        Me.picCariLampiran.Name = "picCariLampiran"
-        Me.picCariLampiran.Size = New System.Drawing.Size(25, 22)
-        Me.picCariLampiran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picCariLampiran.TabIndex = 15
-        Me.picCariLampiran.TabStop = False
-        '
-        'picCariSpesificProblem
-        '
-        Me.picCariSpesificProblem.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.picCariSpesificProblem.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
-        Me.picCariSpesificProblem.Location = New System.Drawing.Point(171, 78)
-        Me.picCariSpesificProblem.Name = "picCariSpesificProblem"
-        Me.picCariSpesificProblem.Size = New System.Drawing.Size(25, 22)
-        Me.picCariSpesificProblem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picCariSpesificProblem.TabIndex = 9
-        Me.picCariSpesificProblem.TabStop = False
-        '
-        'picCariSubKategori
-        '
-        Me.picCariSubKategori.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.picCariSubKategori.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
-        Me.picCariSubKategori.Location = New System.Drawing.Point(171, 45)
-        Me.picCariSubKategori.Name = "picCariSubKategori"
-        Me.picCariSubKategori.Size = New System.Drawing.Size(25, 22)
-        Me.picCariSubKategori.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picCariSubKategori.TabIndex = 5
-        Me.picCariSubKategori.TabStop = False
-        '
         'GunaTransfarantPictureBox3
         '
         Me.GunaTransfarantPictureBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -538,49 +577,9 @@ Partial Class frmLaporkanMasalah
         Me.GunaTransfarantPictureBox3.TabIndex = 1
         Me.GunaTransfarantPictureBox3.TabStop = False
         '
-        'GunaTransfarantPictureBox2
-        '
-        Me.GunaTransfarantPictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox2.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox2.Image = Global.ANYAR_GADGET.My.Resources.Resources.Helpdesk_logo2
-        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(19, 10)
-        Me.GunaTransfarantPictureBox2.Name = "GunaTransfarantPictureBox2"
-        Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(247, 145)
-        Me.GunaTransfarantPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.GunaTransfarantPictureBox2.TabIndex = 13
-        Me.GunaTransfarantPictureBox2.TabStop = False
-        '
-        'GunaTransfarantPictureBox1
-        '
-        Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Idea
-        Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(303, 12)
-        Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
-        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(161, 158)
-        Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox1.TabIndex = 12
-        Me.GunaTransfarantPictureBox1.TabStop = False
-        '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'Path
-        '
-        Me.Path.HeaderText = "Path"
-        Me.Path.Name = "Path"
-        Me.Path.ReadOnly = True
-        '
-        'btnHapusLampiran
-        '
-        Me.btnHapusLampiran.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnHapusLampiran.Location = New System.Drawing.Point(610, 245)
-        Me.btnHapusLampiran.Name = "btnHapusLampiran"
-        Me.btnHapusLampiran.Size = New System.Drawing.Size(97, 23)
-        Me.btnHapusLampiran.TabIndex = 2
-        Me.btnHapusLampiran.Text = "Hapus Lampiran"
-        Me.btnHapusLampiran.UseVisualStyleBackColor = True
         '
         'frmLaporkanMasalah
         '
@@ -600,6 +599,8 @@ Partial Class frmLaporkanMasalah
         Me.Text = "Laporkan Masalah"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -610,8 +611,6 @@ Partial Class frmLaporkanMasalah
         CType(Me.picCariSpesificProblem, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picCariSubKategori, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

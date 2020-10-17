@@ -307,4 +307,16 @@ Public Class frmMainMenu
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+    Private Sub I_PeminjamanAsset_Click(sender As Object, e As EventArgs) Handles I_PeminjamanAsset.Click
+        Dim frm As New frmPeminajamanAsset
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub I_RequestFullfillments_Click(sender As Object, e As EventArgs) Handles I_RequestFullfillments.Click
+        Dim frm As New frmRequestFullfillment
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class

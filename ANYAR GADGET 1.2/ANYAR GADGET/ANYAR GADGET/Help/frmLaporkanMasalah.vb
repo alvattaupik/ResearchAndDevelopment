@@ -142,6 +142,7 @@ Public Class frmLaporkanMasalah
 
 
         strpathAttatchments = "\\10.1.0.52\Attachments Surat\ITIL INCIDENT MANAGEMENT\" & Trim(strIDAttach) & MstrExtentionFile
+        MstrpathAttatchments = "\\10.1.0.52\Attachments Surat\ITIL INCIDENT MANAGEMENT\" & Trim(strIDAttach) & MstrExtentionFile
         My.Computer.FileSystem.CopyFile(Trim(strLokasiAsal), strpathAttatchments, FileIO.UIOption.OnlyErrorDialogs, FileIO.UICancelOption.DoNothing)
         Exit Sub
 
@@ -151,16 +152,16 @@ Public Class frmLaporkanMasalah
 
 
     Private Sub txtNamaSpecificProblems_TextChanged(sender As Object, e As EventArgs) Handles txtNamaSpecificProblems.TextChanged
-        If txtNamaSpecificProblems.Text = "Tidak Ada Dalam Daftar" Then
-            txtDetailDeskripsi.ReadOnly = False
-            txtDetailDeskripsi.Enabled = True
-            txtDetailDeskripsi.BackColor = Color.Yellow
-        Else
-            txtDetailDeskripsi.ReadOnly = True
-            txtDetailDeskripsi.Enabled = False
-            txtDetailDeskripsi.BackColor = Color.White
-            txtDetailDeskripsi.Text = ""
-        End If
+        'If txtNamaSpecificProblems.Text = "Tidak Ada Dalam Daftar" Then
+        '    txtDetailDeskripsi.ReadOnly = False
+        '    txtDetailDeskripsi.Enabled = True
+        '    txtDetailDeskripsi.BackColor = Color.Yellow
+        'Else
+        '    txtDetailDeskripsi.ReadOnly = True
+        '    txtDetailDeskripsi.Enabled = False
+        '    txtDetailDeskripsi.BackColor = Color.White
+        '    txtDetailDeskripsi.Text = ""
+        'End If
     End Sub
 
 
@@ -333,7 +334,7 @@ Public Class frmLaporkanMasalah
             command.Parameters("SimptomsNameOUT").Direction = ParameterDirection.Output
 
 
-            command.Parameters.AddWithValue("CatatanIN", Trim(""))
+            command.Parameters.AddWithValue("CatatanIN", Trim(txtDetailDeskripsi.Text))
             command.Parameters.Add("CatatanOUT", SqlDbType.VarChar, 300)
             command.Parameters("CatatanOUT").Direction = ParameterDirection.Output
 
@@ -366,7 +367,8 @@ Public Class frmLaporkanMasalah
 
 
             If MstrErrorCode = "E-00" Then
-                DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
+                DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 3000)
+                Exit Sub
             Else
                 DisplayPesanOK("Operation Success", frmMainMenu.txtPesanError, 1000)
 
@@ -389,7 +391,7 @@ Public Class frmLaporkanMasalah
 
 
         Catch ex As Exception
-            DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
+            DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 3000)
         End Try
 
     End Sub
@@ -577,6 +579,12 @@ Public Class frmLaporkanMasalah
             command.Parameters("ResStatusName").Direction = ParameterDirection.Output
 
 
+            command.Parameters.Add("ErrorCodeOUT", SqlDbType.VarChar, 100)
+            command.Parameters("ErrorCodeOUT").Direction = ParameterDirection.Output
+
+            command.Parameters.Add("ErrorMessageOUT", SqlDbType.VarChar, 300)
+            command.Parameters("ErrorMessageOUT").Direction = ParameterDirection.Output
+
 
             command.Parameters.AddWithValue("Function", Trim(strFunction))
 
@@ -591,8 +599,14 @@ Public Class frmLaporkanMasalah
             'txtUniqueID.Text = command.Parameters("UniqueIDOUT").Value.ToString()
 
             '@IDAttachmentsOUT
-            GetExtentionfile(Trim(dgv.Rows(intI).Cells(0).Value))
-            Call CopyFileKeDirectoryAttachment(dgv.Rows(intI).Cells(0).Value, command.Parameters("IDAttachmentsOUT").Value.ToString())
+            'GetExtentionfile(Trim(dgv.Rows(intI).Cells(0).Value))
+            'Call CopyFileKeDirectoryAttachment(dgv.Rows(intI).Cells(0).Value, command.Parameters("IDAttachmentsOUT").Value.ToString())
+
+            GetExtentionfile((dgv.Rows(intRow).Cells(0).Value))
+            CopyFileKeDirectoryAttachment(Trim(dgv.Rows(intI).Cells(0).Value), command.Parameters("IDAttachmentsOUT").Value.ToString())
+
+            UpdatePathLampiran(MstrpathAttatchments, command.Parameters("IDAttachmentsOUT").Value.ToString())
+
 
         Catch ex As Exception
             DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
@@ -601,8 +615,24 @@ Public Class frmLaporkanMasalah
     End Sub
 
 
+    Sub UpdatePathLampiran(strPathLampiran As String, strUniqueID As String)
+        Try
 
-   
+            Call KoneksiDB_EMAIL()
+            Dim str As String
+            str = "UPDATE dbo.INCAttachments" & _
+                  " SET Name='" & MstrpathAttatchments & "'" & _
+                  " WHERE ID='" & strUniqueID & "'"
+            cmd = New SqlCommand(str, KoneksiDBEmail)
+            cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+            DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
+
+        End Try
+
+    End Sub
+
 
 
 
