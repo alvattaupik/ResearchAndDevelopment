@@ -319,4 +319,9 @@ Public Class frmMainMenu
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+
+    Private Sub H_ApprovalReqFullfillment_Click(sender As Object, e As EventArgs) Handles H_ApprovalReqFullfillment.Click
+        frmAprovalReqFullfillments.ShowDialog()
+    End Sub
 End Class

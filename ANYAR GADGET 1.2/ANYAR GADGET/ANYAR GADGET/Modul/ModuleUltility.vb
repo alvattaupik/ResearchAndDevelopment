@@ -133,7 +133,10 @@ Module ModuleUltility
                 frmMainMenu.H_LaporkanMasalah.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "OHELP002" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_CaraPenggunaan.Visible = True
-
+            ElseIf dgv.Rows(i).Cells(0).Value = "APVR001" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.H_ApprovalReqFullfillment.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "APVR002" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.H_ApprovalPeminjaman.Visible = True
 
                 '-------SUB MENU
 

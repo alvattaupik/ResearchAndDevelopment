@@ -121,6 +121,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Approval\frmDialogueApprovalReq.Designer.vb">
+      <DependentUpon>frmDialogueApprovalReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Approval\frmDialogueApprovalReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approval\frmAprovalReqFullfillments.Designer.vb">
+      <DependentUpon>frmAprovalReqFullfillments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Approval\frmAprovalReqFullfillments.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BrowseForm\frmBrowseAssetmanagement.Designer.vb">
       <DependentUpon>frmBrowseAssetmanagement.vb</DependentUpon>
     </Compile>
@@ -268,6 +280,12 @@
       <DependentUpon>MaintenanceForm.rpt</DependentUpon>
       <SubType>Component</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\RequestFullfillment.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RequestFullfillment.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalReports\Surat Jalan Anyar Gadget G001-01.vb">
       <AutoGen>True</AutoGen>
@@ -609,6 +627,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Approval\frmDialogueApprovalReq.resx">
+      <DependentUpon>frmDialogueApprovalReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approval\frmAprovalReqFullfillments.resx">
+      <DependentUpon>frmAprovalReqFullfillments.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseAssetmanagement.resx">
       <DependentUpon>frmBrowseAssetmanagement.vb</DependentUpon>
     </EmbeddedResource>
@@ -690,6 +714,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>MaintenanceForm.vb</LastGenOutput>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\RequestFullfillment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RequestFullfillment.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReports\Surat Jalan Anyar Gadget G001-01.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

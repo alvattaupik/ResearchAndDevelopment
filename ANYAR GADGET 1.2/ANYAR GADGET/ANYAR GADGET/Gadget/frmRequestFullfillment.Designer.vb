@@ -58,7 +58,29 @@ Partial Class frmRequestFullfillment
         Me.txtKalimatPembuka = New System.Windows.Forms.RichTextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.lblJumlahItem = New System.Windows.Forms.Label()
+        Me.btnHapus = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.dgvListItem = New System.Windows.Forms.DataGridView()
+        Me.Kode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Deskripsi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Notifikasi = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cabang = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Dari = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Sampai = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Keterangan = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Lampiran = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Action = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.txtPathLampiran = New System.Windows.Forms.TextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.cmbAction = New System.Windows.Forms.ComboBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.dtpAkhir = New System.Windows.Forms.DateTimePicker()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.dtpAwal = New System.Windows.Forms.DateTimePicker()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.cmbCabang = New System.Windows.Forms.ComboBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -70,10 +92,6 @@ Partial Class frmRequestFullfillment
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.lblJumlahItem = New System.Windows.Forms.Label()
-        Me.btnHapus = New System.Windows.Forms.Button()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.dgvListItem = New System.Windows.Forms.DataGridView()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.txtKalimatPenutup = New System.Windows.Forms.RichTextBox()
         Me.Label21 = New System.Windows.Forms.Label()
@@ -81,30 +99,13 @@ Partial Class frmRequestFullfillment
         Me.txtTembusan = New System.Windows.Forms.RichTextBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.btnProses = New System.Windows.Forms.Button()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.dtpAwal = New System.Windows.Forms.DateTimePicker()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.dtpAkhir = New System.Windows.Forms.DateTimePicker()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.cmbAction = New System.Windows.Forms.ComboBox()
-        Me.Label27 = New System.Windows.Forms.Label()
+        Me.picCancelAttachment = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.picCancel = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.picPrint = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.picBrowsBusinessPartner = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.txtPathLampiran = New System.Windows.Forms.TextBox()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Kode = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Deskripsi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Notifikasi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cabang = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Dari = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Sampai = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Keterangan = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Lampiran = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Action = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -114,10 +115,11 @@ Partial Class frmRequestFullfillment
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
-        Me.GroupBox11.SuspendLayout()
         CType(Me.dgvListItem, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox11.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
+        CType(Me.picCancelAttachment, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picCancel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -508,11 +510,104 @@ Partial Class frmRequestFullfillment
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "IT Configuration Items"
         '
+        'lblJumlahItem
+        '
+        Me.lblJumlahItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblJumlahItem.AutoSize = True
+        Me.lblJumlahItem.Location = New System.Drawing.Point(231, 309)
+        Me.lblJumlahItem.Name = "lblJumlahItem"
+        Me.lblJumlahItem.Size = New System.Drawing.Size(78, 13)
+        Me.lblJumlahItem.TabIndex = 14
+        Me.lblJumlahItem.Text = "Jumlah Item : 0"
+        '
+        'btnHapus
+        '
+        Me.btnHapus.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnHapus.Location = New System.Drawing.Point(7, 297)
+        Me.btnHapus.Name = "btnHapus"
+        Me.btnHapus.Size = New System.Drawing.Size(209, 36)
+        Me.btnHapus.TabIndex = 13
+        Me.btnHapus.Text = "Hapus Dari Daftar"
+        Me.btnHapus.UseVisualStyleBackColor = True
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(9, 20)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(0, 13)
+        Me.Label15.TabIndex = 1
+        '
+        'dgvListItem
+        '
+        Me.dgvListItem.AllowUserToAddRows = False
+        Me.dgvListItem.AllowUserToDeleteRows = False
+        Me.dgvListItem.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvListItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvListItem.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Kode, Me.Deskripsi, Me.Notifikasi, Me.Cabang, Me.Dari, Me.Sampai, Me.Keterangan, Me.Lampiran, Me.Action})
+        Me.dgvListItem.Location = New System.Drawing.Point(7, 17)
+        Me.dgvListItem.Name = "dgvListItem"
+        Me.dgvListItem.RowHeadersVisible = False
+        Me.dgvListItem.Size = New System.Drawing.Size(380, 274)
+        Me.dgvListItem.TabIndex = 0
+        '
+        'Kode
+        '
+        Me.Kode.HeaderText = "Kode"
+        Me.Kode.Name = "Kode"
+        '
+        'Deskripsi
+        '
+        Me.Deskripsi.HeaderText = "Deskripsi"
+        Me.Deskripsi.Name = "Deskripsi"
+        '
+        'Notifikasi
+        '
+        Me.Notifikasi.HeaderText = "Notifikasi"
+        Me.Notifikasi.Name = "Notifikasi"
+        '
+        'Cabang
+        '
+        Me.Cabang.HeaderText = "Cabang"
+        Me.Cabang.Name = "Cabang"
+        Me.Cabang.ReadOnly = True
+        '
+        'Dari
+        '
+        Me.Dari.HeaderText = "Dari"
+        Me.Dari.Name = "Dari"
+        Me.Dari.ReadOnly = True
+        '
+        'Sampai
+        '
+        Me.Sampai.HeaderText = "Sampai"
+        Me.Sampai.Name = "Sampai"
+        Me.Sampai.ReadOnly = True
+        '
+        'Keterangan
+        '
+        Me.Keterangan.HeaderText = "Keterangan"
+        Me.Keterangan.Name = "Keterangan"
+        '
+        'Lampiran
+        '
+        Me.Lampiran.HeaderText = "Lampiran"
+        Me.Lampiran.Name = "Lampiran"
+        Me.Lampiran.ReadOnly = True
+        '
+        'Action
+        '
+        Me.Action.HeaderText = "Action"
+        Me.Action.Name = "Action"
+        Me.Action.ReadOnly = True
+        '
         'GroupBox11
         '
         Me.GroupBox11.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox11.Controls.Add(Me.picCancelAttachment)
         Me.GroupBox11.Controls.Add(Me.Label28)
         Me.GroupBox11.Controls.Add(Me.txtPathLampiran)
         Me.GroupBox11.Controls.Add(Me.PictureBox2)
@@ -540,6 +635,90 @@ Partial Class frmRequestFullfillment
         Me.GroupBox11.Size = New System.Drawing.Size(437, 441)
         Me.GroupBox11.TabIndex = 15
         Me.GroupBox11.TabStop = False
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(6, 184)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(50, 13)
+        Me.Label28.TabIndex = 31
+        Me.Label28.Text = "Lampiran"
+        '
+        'txtPathLampiran
+        '
+        Me.txtPathLampiran.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtPathLampiran.Location = New System.Drawing.Point(150, 177)
+        Me.txtPathLampiran.Name = "txtPathLampiran"
+        Me.txtPathLampiran.Size = New System.Drawing.Size(279, 20)
+        Me.txtPathLampiran.TabIndex = 30
+        '
+        'Label27
+        '
+        Me.Label27.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(8, 105)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(29, 13)
+        Me.Label27.TabIndex = 28
+        Me.Label27.Text = "Error"
+        '
+        'cmbAction
+        '
+        Me.cmbAction.FormattingEnabled = True
+        Me.cmbAction.Items.AddRange(New Object() {"Open", "Close", "Lainnya"})
+        Me.cmbAction.Location = New System.Drawing.Point(66, 19)
+        Me.cmbAction.Name = "cmbAction"
+        Me.cmbAction.Size = New System.Drawing.Size(113, 21)
+        Me.cmbAction.TabIndex = 27
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(6, 19)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(37, 13)
+        Me.Label26.TabIndex = 26
+        Me.Label26.Text = "Action"
+        '
+        'dtpAkhir
+        '
+        Me.dtpAkhir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtpAkhir.CustomFormat = "dd/MM/yyyy HH:mm"
+        Me.dtpAkhir.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpAkhir.Location = New System.Drawing.Point(280, 151)
+        Me.dtpAkhir.Name = "dtpAkhir"
+        Me.dtpAkhir.Size = New System.Drawing.Size(151, 20)
+        Me.dtpAkhir.TabIndex = 25
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(230, 151)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(27, 13)
+        Me.Label25.TabIndex = 24
+        Me.Label25.Text = "S/D"
+        '
+        'dtpAwal
+        '
+        Me.dtpAwal.CustomFormat = "dd/MM/yyyy HH:mm"
+        Me.dtpAwal.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpAwal.Location = New System.Drawing.Point(66, 151)
+        Me.dtpAwal.Name = "dtpAwal"
+        Me.dtpAwal.Size = New System.Drawing.Size(143, 20)
+        Me.dtpAwal.TabIndex = 23
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(8, 158)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(29, 13)
+        Me.Label24.TabIndex = 22
+        Me.Label24.Text = "Dari "
         '
         'cmbCabang
         '
@@ -653,48 +832,6 @@ Partial Class frmRequestFullfillment
         Me.Label19.TabIndex = 10
         Me.Label19.Text = "Keterangan"
         '
-        'lblJumlahItem
-        '
-        Me.lblJumlahItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblJumlahItem.AutoSize = True
-        Me.lblJumlahItem.Location = New System.Drawing.Point(309, 312)
-        Me.lblJumlahItem.Name = "lblJumlahItem"
-        Me.lblJumlahItem.Size = New System.Drawing.Size(78, 13)
-        Me.lblJumlahItem.TabIndex = 14
-        Me.lblJumlahItem.Text = "Jumlah Item : 0"
-        '
-        'btnHapus
-        '
-        Me.btnHapus.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnHapus.Location = New System.Drawing.Point(7, 297)
-        Me.btnHapus.Name = "btnHapus"
-        Me.btnHapus.Size = New System.Drawing.Size(213, 36)
-        Me.btnHapus.TabIndex = 13
-        Me.btnHapus.Text = "Hapus Dari Daftar"
-        Me.btnHapus.UseVisualStyleBackColor = True
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(9, 20)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(0, 13)
-        Me.Label15.TabIndex = 1
-        '
-        'dgvListItem
-        '
-        Me.dgvListItem.AllowUserToAddRows = False
-        Me.dgvListItem.AllowUserToDeleteRows = False
-        Me.dgvListItem.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvListItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvListItem.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Kode, Me.Deskripsi, Me.Notifikasi, Me.Cabang, Me.Dari, Me.Sampai, Me.Keterangan, Me.Lampiran, Me.Action})
-        Me.dgvListItem.Location = New System.Drawing.Point(7, 17)
-        Me.dgvListItem.Name = "dgvListItem"
-        Me.dgvListItem.RowHeadersVisible = False
-        Me.dgvListItem.Size = New System.Drawing.Size(380, 274)
-        Me.dgvListItem.TabIndex = 0
-        '
         'GroupBox9
         '
         Me.GroupBox9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
@@ -770,69 +907,15 @@ Partial Class frmRequestFullfillment
         Me.btnProses.Text = "Proses"
         Me.btnProses.UseVisualStyleBackColor = True
         '
-        'Label24
+        'picCancelAttachment
         '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(8, 158)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(29, 13)
-        Me.Label24.TabIndex = 22
-        Me.Label24.Text = "Dari "
-        '
-        'dtpAwal
-        '
-        Me.dtpAwal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpAwal.Location = New System.Drawing.Point(66, 151)
-        Me.dtpAwal.Name = "dtpAwal"
-        Me.dtpAwal.Size = New System.Drawing.Size(101, 20)
-        Me.dtpAwal.TabIndex = 23
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(203, 158)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(27, 13)
-        Me.Label25.TabIndex = 24
-        Me.Label25.Text = "S/D"
-        '
-        'dtpAkhir
-        '
-        Me.dtpAkhir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtpAkhir.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpAkhir.Location = New System.Drawing.Point(330, 151)
-        Me.dtpAkhir.Name = "dtpAkhir"
-        Me.dtpAkhir.Size = New System.Drawing.Size(101, 20)
-        Me.dtpAkhir.TabIndex = 25
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(6, 19)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(37, 13)
-        Me.Label26.TabIndex = 26
-        Me.Label26.Text = "Action"
-        '
-        'cmbAction
-        '
-        Me.cmbAction.FormattingEnabled = True
-        Me.cmbAction.Items.AddRange(New Object() {"Open", "Close", "Lainnya"})
-        Me.cmbAction.Location = New System.Drawing.Point(66, 19)
-        Me.cmbAction.Name = "cmbAction"
-        Me.cmbAction.Size = New System.Drawing.Size(113, 21)
-        Me.cmbAction.TabIndex = 27
-        '
-        'Label27
-        '
-        Me.Label27.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(8, 105)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(29, 13)
-        Me.Label27.TabIndex = 28
-        Me.Label27.Text = "Error"
+        Me.picCancelAttachment.Image = Global.ANYAR_GADGET.My.Resources.Resources.Cancel
+        Me.picCancelAttachment.Location = New System.Drawing.Point(103, 177)
+        Me.picCancelAttachment.Name = "picCancelAttachment"
+        Me.picCancelAttachment.Size = New System.Drawing.Size(31, 20)
+        Me.picCancelAttachment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picCancelAttachment.TabIndex = 32
+        Me.picCancelAttachment.TabStop = False
         '
         'PictureBox2
         '
@@ -900,74 +983,6 @@ Partial Class frmRequestFullfillment
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'txtPathLampiran
-        '
-        Me.txtPathLampiran.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtPathLampiran.Location = New System.Drawing.Point(114, 177)
-        Me.txtPathLampiran.Name = "txtPathLampiran"
-        Me.txtPathLampiran.Size = New System.Drawing.Size(315, 20)
-        Me.txtPathLampiran.TabIndex = 30
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(6, 184)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(50, 13)
-        Me.Label28.TabIndex = 31
-        Me.Label28.Text = "Lampiran"
-        '
-        'Kode
-        '
-        Me.Kode.HeaderText = "Kode"
-        Me.Kode.Name = "Kode"
-        '
-        'Deskripsi
-        '
-        Me.Deskripsi.HeaderText = "Deskripsi"
-        Me.Deskripsi.Name = "Deskripsi"
-        '
-        'Notifikasi
-        '
-        Me.Notifikasi.HeaderText = "Notifikasi"
-        Me.Notifikasi.Name = "Notifikasi"
-        '
-        'Cabang
-        '
-        Me.Cabang.HeaderText = "Cabang"
-        Me.Cabang.Name = "Cabang"
-        Me.Cabang.ReadOnly = True
-        '
-        'Dari
-        '
-        Me.Dari.HeaderText = "Dari"
-        Me.Dari.Name = "Dari"
-        Me.Dari.ReadOnly = True
-        '
-        'Sampai
-        '
-        Me.Sampai.HeaderText = "Sampai"
-        Me.Sampai.Name = "Sampai"
-        Me.Sampai.ReadOnly = True
-        '
-        'Keterangan
-        '
-        Me.Keterangan.HeaderText = "Keterangan"
-        Me.Keterangan.Name = "Keterangan"
-        '
-        'Lampiran
-        '
-        Me.Lampiran.HeaderText = "Lampiran"
-        Me.Lampiran.Name = "Lampiran"
-        Me.Lampiran.ReadOnly = True
-        '
-        'Action
-        '
-        Me.Action.HeaderText = "Action"
-        Me.Action.Name = "Action"
-        Me.Action.ReadOnly = True
-        '
         'frmRequestFullfillment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1000,13 +1015,14 @@ Partial Class frmRequestFullfillment
         Me.GroupBox6.PerformLayout()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
+        CType(Me.dgvListItem, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout()
-        CType(Me.dgvListItem, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox9.ResumeLayout(False)
         Me.GroupBox9.PerformLayout()
         Me.GroupBox10.ResumeLayout(False)
         Me.GroupBox10.PerformLayout()
+        CType(Me.picCancelAttachment, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picCancel, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1099,4 +1115,5 @@ Partial Class frmRequestFullfillment
     Friend WithEvents Keterangan As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Lampiran As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Action As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents picCancelAttachment As System.Windows.Forms.PictureBox
 End Class

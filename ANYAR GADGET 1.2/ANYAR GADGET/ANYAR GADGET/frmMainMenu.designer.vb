@@ -45,6 +45,7 @@ Partial Class frmMainMenu
         Me.I_Realstock = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_Delivery = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_Request = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_MonPeminjamanAsset = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_PrintServices = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_AnyarLocalPrint = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_RKMDisplayTag = New System.Windows.Forms.ToolStripMenuItem()
@@ -106,6 +107,9 @@ Partial Class frmMainMenu
         Me.HELPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_LaporkanMasalah = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_CaraPenggunaan = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ApprovalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.H_ApprovalReqFullfillment = New System.Windows.Forms.ToolStripMenuItem()
+        Me.H_ApprovalPeminjaman = New System.Windows.Forms.ToolStripMenuItem()
         Me.dgListMenu = New System.Windows.Forms.DataGridView()
         Me.txtPesanError = New System.Windows.Forms.TextBox()
         Me.TimerPesanError = New System.Windows.Forms.Timer(Me.components)
@@ -206,7 +210,7 @@ Partial Class frmMainMenu
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.GadgetToolStripMenuItem, Me.SettingToolStripMenuItem, Me.MasterToolStripMenuItem, Me.HELPToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.GadgetToolStripMenuItem, Me.SettingToolStripMenuItem, Me.MasterToolStripMenuItem, Me.HELPToolStripMenuItem, Me.ApprovalToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1370, 24)
@@ -253,7 +257,7 @@ Partial Class frmMainMenu
         '
         'H_Monitoring
         '
-        Me.H_Monitoring.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_Realstock, Me.I_Delivery, Me.I_Request})
+        Me.H_Monitoring.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_Realstock, Me.I_Delivery, Me.I_Request, Me.I_MonPeminjamanAsset})
         Me.H_Monitoring.Image = Global.ANYAR_GADGET.My.Resources.Resources.Monitoring_Icon1
         Me.H_Monitoring.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.H_Monitoring.Name = "H_Monitoring"
@@ -264,23 +268,29 @@ Partial Class frmMainMenu
         'I_Realstock
         '
         Me.I_Realstock.Name = "I_Realstock"
-        Me.I_Realstock.Size = New System.Drawing.Size(128, 22)
+        Me.I_Realstock.Size = New System.Drawing.Size(172, 22)
         Me.I_Realstock.Text = "Real Stock"
         Me.I_Realstock.Visible = False
         '
         'I_Delivery
         '
         Me.I_Delivery.Name = "I_Delivery"
-        Me.I_Delivery.Size = New System.Drawing.Size(128, 22)
+        Me.I_Delivery.Size = New System.Drawing.Size(172, 22)
         Me.I_Delivery.Text = "Delivery"
         Me.I_Delivery.Visible = False
         '
         'I_Request
         '
         Me.I_Request.Name = "I_Request"
-        Me.I_Request.Size = New System.Drawing.Size(128, 22)
+        Me.I_Request.Size = New System.Drawing.Size(172, 22)
         Me.I_Request.Text = "Request"
         Me.I_Request.Visible = False
+        '
+        'I_MonPeminjamanAsset
+        '
+        Me.I_MonPeminjamanAsset.Name = "I_MonPeminjamanAsset"
+        Me.I_MonPeminjamanAsset.Size = New System.Drawing.Size(172, 22)
+        Me.I_MonPeminjamanAsset.Text = "Peminjaman Asset"
         '
         'H_PrintServices
         '
@@ -740,6 +750,27 @@ Partial Class frmMainMenu
         Me.H_CaraPenggunaan.Text = "Konten Bantuan"
         Me.H_CaraPenggunaan.Visible = False
         '
+        'ApprovalToolStripMenuItem
+        '
+        Me.ApprovalToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_ApprovalReqFullfillment, Me.H_ApprovalPeminjaman})
+        Me.ApprovalToolStripMenuItem.Name = "ApprovalToolStripMenuItem"
+        Me.ApprovalToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
+        Me.ApprovalToolStripMenuItem.Text = "APPROVAL"
+        '
+        'H_ApprovalReqFullfillment
+        '
+        Me.H_ApprovalReqFullfillment.Name = "H_ApprovalReqFullfillment"
+        Me.H_ApprovalReqFullfillment.Size = New System.Drawing.Size(179, 22)
+        Me.H_ApprovalReqFullfillment.Text = "Request Fullfillment"
+        Me.H_ApprovalReqFullfillment.Visible = False
+        '
+        'H_ApprovalPeminjaman
+        '
+        Me.H_ApprovalPeminjaman.Name = "H_ApprovalPeminjaman"
+        Me.H_ApprovalPeminjaman.Size = New System.Drawing.Size(179, 22)
+        Me.H_ApprovalPeminjaman.Text = "Peminjaman Asset"
+        Me.H_ApprovalPeminjaman.Visible = False
+        '
         'dgListMenu
         '
         Me.dgListMenu.AllowUserToAddRows = False
@@ -756,10 +787,10 @@ Partial Class frmMainMenu
         '
         Me.txtPesanError.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPesanError.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPesanError.Location = New System.Drawing.Point(281, 3)
+        Me.txtPesanError.Location = New System.Drawing.Point(367, 3)
         Me.txtPesanError.Name = "txtPesanError"
         Me.txtPesanError.ReadOnly = True
-        Me.txtPesanError.Size = New System.Drawing.Size(1047, 19)
+        Me.txtPesanError.Size = New System.Drawing.Size(961, 19)
         Me.txtPesanError.TabIndex = 10
         Me.txtPesanError.Visible = False
         '
@@ -775,10 +806,10 @@ Partial Class frmMainMenu
         '
         Me.txtJamDanWaktu.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtJamDanWaktu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtJamDanWaktu.Location = New System.Drawing.Point(367, 3)
+        Me.txtJamDanWaktu.Location = New System.Drawing.Point(380, 3)
         Me.txtJamDanWaktu.Name = "txtJamDanWaktu"
         Me.txtJamDanWaktu.ReadOnly = True
-        Me.txtJamDanWaktu.Size = New System.Drawing.Size(909, 19)
+        Me.txtJamDanWaktu.Size = New System.Drawing.Size(896, 19)
         Me.txtJamDanWaktu.TabIndex = 12
         Me.txtJamDanWaktu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -897,5 +928,9 @@ Partial Class frmMainMenu
     Friend WithEvents ApprovalTemplateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewApprovalTemplateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_PeminjamanAsset As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_MonPeminjamanAsset As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ApprovalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents H_ApprovalReqFullfillment As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents H_ApprovalPeminjaman As System.Windows.Forms.ToolStripMenuItem
 
 End Class

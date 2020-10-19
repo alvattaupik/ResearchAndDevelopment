@@ -47,18 +47,25 @@ Public Class frmRequestFullfillment
             Exit Sub
         End If
 
+        If cmbAction.Text = "" Then
+            DisplayPesanError("Action Harus Di isi", frmMainMenu.txtPesanError, 1000)
+            Exit Sub
+        End If
+
 
         If cmbCabang.SelectedValue = "" Then
             DisplayPesanError("Cabang Harus Di isi!", frmMainMenu.txtPesanError, 1000)
             Exit Sub
         Else
             dgvListItem.Rows.Add(txtKode.Text, txtDeskripsi.Text, txtNotifikasi.Text, cmbCabang.SelectedValue, dtpAwal.Value, dtpAkhir.Value, txtKeterangan.Text, txtPathLampiran.Text, cmbAction.Text)
-            lblJumlahItem.Text = "Jumlah Lampiran : " & dgvListItem.RowCount
+
             dgvListItem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
             dgvListItem.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
             dgvListItem.AutoResizeColumns()
+            lblJumlahItem.Text = "Jumlah Item Yang Dipinjam : " & dgvListItem.RowCount
             txtKode.Text = ""
             txtDeskripsi.Text = ""
+            txtNotifikasi.Text = ""
             cmbCabang.Text = ""
             cmbAction.Text = ""
             txtKeterangan.Text = ""
@@ -78,13 +85,11 @@ Public Class frmRequestFullfillment
         On Error Resume Next
 
         If dgvListItem.RowCount = 0 Then Exit Sub
-
-
         index = dgvListItem.SelectedRows.Item(0).Index
         selRow = dgvListItem.Rows.Item(index)
         dgvListItem.Rows.Remove(selRow)
         row = row - 1
-        lblJumlahItem.Text = "Jumlah Item : " & dgvListItem.RowCount
+        lblJumlahItem.Text = "Jumlah Item Yang Dipinjam : " & dgvListItem.RowCount
 
     End Sub
 
@@ -280,22 +285,18 @@ Public Class frmRequestFullfillment
         paramDiscreteValue.Value = (Trim(dgvDaftarSurat.Item(0, dgvDaftarSurat.CurrentRow.Index).Value))
         paramField.CurrentValues.Add(paramDiscreteValue)
         paramFields.Add(paramField)
-
         paramField2.Name = "KodeJenisSurat@"
         paramDiscreteValue2.Value = Trim(lblKodeSurat.Text)
         paramField2.CurrentValues.Add(paramDiscreteValue2)
-
         paramField3.Name = "EmpIDPrint@"
         paramDiscreteValue3.Value = Trim(MstrKodePegawai)
         paramField2.CurrentValues.Add(paramDiscreteValue3)
 
 
-
         Dim frm As New frmTampilkanSurat
         frm.crvTampilkanSurat.ParameterFieldInfo = paramFields
-        reportDocument = New BA_Penyelesaian_Anyar_Gadget_IT001_01
+        reportDocument = New RequestFullfillment
         reportDocument.SetDatabaseLogon("sa", "h0spit4lity#", "10.1.0.53", "DB_EMAIL")
-
         frm.crvTampilkanSurat.ReportSource = reportDocument
         frm.crvTampilkanSurat.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         frm.crvTampilkanSurat.Refresh()
@@ -338,5 +339,9 @@ Public Class frmRequestFullfillment
                 txtPathLampiran.Text = O.FileName
             End If
         End Using
+    End Sub
+
+    Private Sub picCancelAttachment_Click(sender As Object, e As EventArgs) Handles picCancelAttachment.Click
+        txtPathLampiran.Text = ""
     End Sub
 End Class
