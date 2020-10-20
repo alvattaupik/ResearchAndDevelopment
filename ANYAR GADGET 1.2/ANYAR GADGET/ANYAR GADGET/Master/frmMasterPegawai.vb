@@ -46,6 +46,7 @@ Public Class frmMasterPegawai
                 cmbFungsional.Text = ""
                 cmbJabatan.Text = ""
                 btnAksi.Text = "OK"
+                txtNoTelp.Text = ""
 
                 Exit Sub
             End If
@@ -150,6 +151,12 @@ ErrorHandler:
             command.Parameters("StatusEnabledOUT").Direction = ParameterDirection.Output
             command.Parameters.Add("StatusRecord", SqlDbType.VarChar, 100)
             command.Parameters("StatusRecord").Direction = ParameterDirection.Output
+
+
+            command.Parameters.AddWithValue("NoTelpIN", Trim(txtNoTelp.Text))
+            command.Parameters.Add("NoTelpOut", SqlDbType.VarChar, 100)
+            command.Parameters("NoTelpOut").Direction = ParameterDirection.Output
+
             command.Parameters.AddWithValue("Function", Trim(strFunction))
 
 
@@ -177,7 +184,7 @@ ErrorHandler:
 
                 cmbFungsional.Text = command.Parameters("FungsionalOUT").Value.ToString()
                 cmbJabatan.Text = command.Parameters("JabatanOUT").Value.ToString()
-
+                txtNoTelp.Text = command.Parameters("NoTelpOut").Value.ToString()
 
                 If command.Parameters("StatusEnabledOUT").Value.ToString() = "Y" Then
                     cboAktif.CheckState = CheckState.Checked
@@ -185,27 +192,6 @@ ErrorHandler:
                     cboAktif.CheckState = CheckState.Unchecked
                 End If
             End If
-
-
-
-            'If strFunction = "CekUserNameLogin" Then
-            '    If command.Parameters("StatusRecord").Value.ToString() <> "0" Then
-            '        bolStatusSP = True
-            '    Else
-            '        bolStatusSP = False
-            '    End If
-            'End If
-
-
-            'If strFunction = "CekEmployee" Then
-            '    If command.Parameters("StatusRecord").Value.ToString() <> "0" Then
-            '        bolStatusSP = True
-            '    Else
-            '        bolStatusSP = False
-            '    End If
-            'End If
-
-
 
         Catch ex As Exception
             MessageBox.Show(Err.Description)

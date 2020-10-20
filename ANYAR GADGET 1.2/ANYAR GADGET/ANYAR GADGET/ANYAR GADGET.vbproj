@@ -101,6 +101,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
@@ -121,6 +122,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Approval\frmAprovalPeminjamanAsset.Designer.vb">
+      <DependentUpon>frmAprovalPeminjamanAsset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Approval\frmAprovalPeminjamanAsset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approval\frmDialoguePengembalianAsset.Designer.vb">
+      <DependentUpon>frmDialoguePengembalianAsset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Approval\frmDialoguePengembalianAsset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approval\frmDialogueApprovalPeminjaman.Designer.vb">
+      <DependentUpon>frmDialogueApprovalPeminjaman.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Approval\frmDialogueApprovalPeminjaman.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Approval\frmDialogueApprovalReq.Designer.vb">
       <DependentUpon>frmDialogueApprovalReq.vb</DependentUpon>
     </Compile>
@@ -217,6 +236,12 @@
     <Compile Include="BrowseForm\frmBrowseListUserAplikasi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BrowseForm\frmBrowseMasterStagging.Designer.vb">
+      <DependentUpon>frmBrowseMasterStagging.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseMasterStagging.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BrowseForm\frmBrowsePegawai.Designer.vb">
       <DependentUpon>frmBrowsePegawai.vb</DependentUpon>
     </Compile>
@@ -258,6 +283,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FormPeminjamanAsset Anyar Gadget IT006-01.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReports\FormPengembalian Asset Anyar Gadget IT006-01.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormPengembalian Asset Anyar Gadget IT006-01.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalReports\LaporanInventoryCheck.vb">
@@ -517,6 +548,12 @@
     <Compile Include="LainLain\frmUbahAsset.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Master\frmApprovalTemplate.Designer.vb">
+      <DependentUpon>frmApprovalTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmApprovalTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Master\frmMasterParameterUji.Designer.vb">
       <DependentUpon>frmMasterParameterUji.vb</DependentUpon>
     </Compile>
@@ -627,6 +664,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Approval\frmAprovalPeminjamanAsset.resx">
+      <DependentUpon>frmAprovalPeminjamanAsset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approval\frmDialoguePengembalianAsset.resx">
+      <DependentUpon>frmDialoguePengembalianAsset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approval\frmDialogueApprovalPeminjaman.resx">
+      <DependentUpon>frmDialogueApprovalPeminjaman.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Approval\frmDialogueApprovalReq.resx">
       <DependentUpon>frmDialogueApprovalReq.vb</DependentUpon>
     </EmbeddedResource>
@@ -675,6 +721,9 @@
     <EmbeddedResource Include="BrowseForm\frmBrowseListUserAplikasi.resx">
       <DependentUpon>frmBrowseListUserAplikasi.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseMasterStagging.resx">
+      <DependentUpon>frmBrowseMasterStagging.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowsePegawai.resx">
       <DependentUpon>frmBrowsePegawai.vb</DependentUpon>
     </EmbeddedResource>
@@ -699,6 +748,10 @@
     <EmbeddedResource Include="CrystalReports\FormPeminjamanAsset Anyar Gadget IT006-01.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>FormPeminjamanAsset Anyar Gadget IT006-01.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\FormPengembalian Asset Anyar Gadget IT006-01.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FormPengembalian Asset Anyar Gadget IT006-01.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReports\LaporanInventoryCheck.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -836,6 +889,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LainLain\frmUbahAsset.resx">
       <DependentUpon>frmUbahAsset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmApprovalTemplate.resx">
+      <DependentUpon>frmApprovalTemplate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmMasterParameterUji.resx">
       <DependentUpon>frmMasterParameterUji.vb</DependentUpon>

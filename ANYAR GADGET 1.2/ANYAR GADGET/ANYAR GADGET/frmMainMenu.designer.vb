@@ -103,7 +103,6 @@ Partial Class frmMainMenu
         Me.I_RegNewAsset = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_ParameterUji = New System.Windows.Forms.ToolStripMenuItem()
         Me.ApprovalTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewApprovalTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HELPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_LaporkanMasalah = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_CaraPenggunaan = New System.Windows.Forms.ToolStripMenuItem()
@@ -593,7 +592,7 @@ Partial Class frmMainMenu
         '
         Me.H_Pegawai.Image = Global.ANYAR_GADGET.My.Resources.Resources.Employee_Logo
         Me.H_Pegawai.Name = "H_Pegawai"
-        Me.H_Pegawai.Size = New System.Drawing.Size(181, 22)
+        Me.H_Pegawai.Size = New System.Drawing.Size(221, 22)
         Me.H_Pegawai.Text = "Pegawai"
         Me.H_Pegawai.Visible = False
         '
@@ -602,7 +601,7 @@ Partial Class frmMainMenu
         Me.H_Menu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_HeaderMenu, Me.I_ItemsMenu, Me.H_ObjectForm})
         Me.H_Menu.Image = Global.ANYAR_GADGET.My.Resources.Resources.Menu_logo
         Me.H_Menu.Name = "H_Menu"
-        Me.H_Menu.Size = New System.Drawing.Size(181, 22)
+        Me.H_Menu.Size = New System.Drawing.Size(221, 22)
         Me.H_Menu.Text = "Menu"
         Me.H_Menu.Visible = False
         '
@@ -646,7 +645,7 @@ Partial Class frmMainMenu
         Me.H_ITILV3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_IncidentManagement, Me.I_ProblemManagement})
         Me.H_ITILV3.Image = Global.ANYAR_GADGET.My.Resources.Resources.ITIL_v3
         Me.H_ITILV3.Name = "H_ITILV3"
-        Me.H_ITILV3.Size = New System.Drawing.Size(181, 22)
+        Me.H_ITILV3.Size = New System.Drawing.Size(221, 22)
         Me.H_ITILV3.Text = "ITIL V3"
         Me.H_ITILV3.Visible = False
         '
@@ -687,7 +686,7 @@ Partial Class frmMainMenu
         '
         Me.H_Konten.Image = Global.ANYAR_GADGET.My.Resources.Resources.Manual_Book_Logo
         Me.H_Konten.Name = "H_Konten"
-        Me.H_Konten.Size = New System.Drawing.Size(181, 22)
+        Me.H_Konten.Size = New System.Drawing.Size(221, 22)
         Me.H_Konten.Text = "Konten"
         Me.H_Konten.Visible = False
         '
@@ -696,7 +695,7 @@ Partial Class frmMainMenu
         Me.H_AssetManagement.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_RegNewAsset, Me.I_ParameterUji})
         Me.H_AssetManagement.Image = Global.ANYAR_GADGET.My.Resources.Resources.ITIL_v3
         Me.H_AssetManagement.Name = "H_AssetManagement"
-        Me.H_AssetManagement.Size = New System.Drawing.Size(181, 22)
+        Me.H_AssetManagement.Size = New System.Drawing.Size(221, 22)
         Me.H_AssetManagement.Text = "Assets Management"
         Me.H_AssetManagement.Visible = False
         '
@@ -716,16 +715,9 @@ Partial Class frmMainMenu
         '
         'ApprovalTemplateToolStripMenuItem
         '
-        Me.ApprovalTemplateToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewApprovalTemplateToolStripMenuItem})
         Me.ApprovalTemplateToolStripMenuItem.Name = "ApprovalTemplateToolStripMenuItem"
-        Me.ApprovalTemplateToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.ApprovalTemplateToolStripMenuItem.Text = "Approval Template"
-        '
-        'NewApprovalTemplateToolStripMenuItem
-        '
-        Me.NewApprovalTemplateToolStripMenuItem.Name = "NewApprovalTemplateToolStripMenuItem"
-        Me.NewApprovalTemplateToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
-        Me.NewApprovalTemplateToolStripMenuItem.Text = "New Approval Template"
+        Me.ApprovalTemplateToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ApprovalTemplateToolStripMenuItem.Text = "Approval Decision Template"
         '
         'HELPToolStripMenuItem
         '
@@ -926,7 +918,6 @@ Partial Class frmMainMenu
     Friend WithEvents I_ParameterUji As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_RequestFullfillments As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ApprovalTemplateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents NewApprovalTemplateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_PeminjamanAsset As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_MonPeminjamanAsset As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ApprovalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

@@ -324,4 +324,12 @@ Public Class frmMainMenu
     Private Sub H_ApprovalReqFullfillment_Click(sender As Object, e As EventArgs) Handles H_ApprovalReqFullfillment.Click
         frmAprovalReqFullfillments.ShowDialog()
     End Sub
+
+    Private Sub H_ApprovalPeminjaman_Click(sender As Object, e As EventArgs) Handles H_ApprovalPeminjaman.Click
+        frmAprovalPeminjamanAsset.ShowDialog()
+    End Sub
+
+    Private Sub ApprovalTemplateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApprovalTemplateToolStripMenuItem.Click
+        frmApprovalTemplate.ShowDialog()
+    End Sub
 End Class

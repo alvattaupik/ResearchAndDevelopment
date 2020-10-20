@@ -18,9 +18,9 @@ Public Class frmBrowsePegawai
     End Sub
 
     Private Sub dgvListPegawai_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListPegawai.CellClick
-
-        CType(frmMainMenu.ActiveMdiChild, frmUbahPassword).txtEmployee.Text = dgvListPegawai.Rows(e.RowIndex).Cells(0).Value()
-        CType(frmMainMenu.ActiveMdiChild, frmUbahPassword).txtNamaPegawai.Text = dgvListPegawai.Rows(e.RowIndex).Cells(1).Value()
+        On Error Resume Next
+        CType(frmMainMenu.ActiveMdiChild, frmUsers).txtEmployee.Text = dgvListPegawai.Rows(e.RowIndex).Cells(0).Value()
+        CType(frmMainMenu.ActiveMdiChild, frmUsers).txtNamaPegawai.Text = dgvListPegawai.Rows(e.RowIndex).Cells(1).Value()
         Me.Close()
 
 

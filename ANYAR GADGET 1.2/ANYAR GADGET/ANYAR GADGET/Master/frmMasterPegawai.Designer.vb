@@ -35,9 +35,11 @@ Partial Class frmMasterPegawai
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtAlamatEmail = New System.Windows.Forms.TextBox()
         Me.cboAktif = New System.Windows.Forms.CheckBox()
+        Me.btnAksi = New System.Windows.Forms.Button()
         Me.picNew = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.picFind = New Guna.UI.WinForms.GunaCirclePictureBox()
-        Me.btnAksi = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtNoTelp = New System.Windows.Forms.TextBox()
         CType(Me.picNew, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picFind, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -147,18 +149,27 @@ Partial Class frmMasterPegawai
         'cboAktif
         '
         Me.cboAktif.AutoSize = True
-        Me.cboAktif.Location = New System.Drawing.Point(117, 314)
+        Me.cboAktif.Location = New System.Drawing.Point(117, 348)
         Me.cboAktif.Name = "cboAktif"
         Me.cboAktif.Size = New System.Drawing.Size(53, 17)
         Me.cboAktif.TabIndex = 12
         Me.cboAktif.Text = "Aktif?"
         Me.cboAktif.UseVisualStyleBackColor = True
         '
+        'btnAksi
+        '
+        Me.btnAksi.Location = New System.Drawing.Point(281, 384)
+        Me.btnAksi.Name = "btnAksi"
+        Me.btnAksi.Size = New System.Drawing.Size(95, 47)
+        Me.btnAksi.TabIndex = 14
+        Me.btnAksi.Text = "Ok"
+        Me.btnAksi.UseVisualStyleBackColor = True
+        '
         'picNew
         '
         Me.picNew.BaseColor = System.Drawing.Color.White
-        'Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.document_add_icon
-        Me.picNew.Location = New System.Drawing.Point(169, 346)
+        Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.Add_User
+        Me.picNew.Location = New System.Drawing.Point(167, 384)
         Me.picNew.Name = "picNew"
         Me.picNew.Size = New System.Drawing.Size(47, 47)
         Me.picNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -169,8 +180,8 @@ Partial Class frmMasterPegawai
         'picFind
         '
         Me.picFind.BaseColor = System.Drawing.Color.White
-        'Me.picFind.Image = Global.ANYAR_GADGET.My.Resources.Resources.find_icon
-        Me.picFind.Location = New System.Drawing.Point(224, 346)
+        Me.picFind.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
+        Me.picFind.Location = New System.Drawing.Point(222, 384)
         Me.picFind.Name = "picFind"
         Me.picFind.Size = New System.Drawing.Size(47, 47)
         Me.picFind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -178,20 +189,29 @@ Partial Class frmMasterPegawai
         Me.picFind.TabStop = False
         Me.picFind.UseTransfarantBackground = False
         '
-        'btnAksi
+        'Label7
         '
-        Me.btnAksi.Location = New System.Drawing.Point(283, 346)
-        Me.btnAksi.Name = "btnAksi"
-        Me.btnAksi.Size = New System.Drawing.Size(95, 47)
-        Me.btnAksi.TabIndex = 14
-        Me.btnAksi.Text = "Ok"
-        Me.btnAksi.UseVisualStyleBackColor = True
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(12, 321)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(45, 13)
+        Me.Label7.TabIndex = 17
+        Me.Label7.Text = "No Telp"
+        '
+        'txtNoTelp
+        '
+        Me.txtNoTelp.Location = New System.Drawing.Point(117, 313)
+        Me.txtNoTelp.Name = "txtNoTelp"
+        Me.txtNoTelp.Size = New System.Drawing.Size(261, 20)
+        Me.txtNoTelp.TabIndex = 18
         '
         'frmMasterPegawai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(406, 396)
+        Me.ClientSize = New System.Drawing.Size(410, 443)
+        Me.Controls.Add(Me.txtNoTelp)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.picNew)
         Me.Controls.Add(Me.picFind)
         Me.Controls.Add(Me.btnAksi)
@@ -233,4 +253,6 @@ Partial Class frmMasterPegawai
     Friend WithEvents picNew As Guna.UI.WinForms.GunaCirclePictureBox
     Friend WithEvents picFind As Guna.UI.WinForms.GunaCirclePictureBox
     Friend WithEvents btnAksi As System.Windows.Forms.Button
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents txtNoTelp As System.Windows.Forms.TextBox
 End Class
