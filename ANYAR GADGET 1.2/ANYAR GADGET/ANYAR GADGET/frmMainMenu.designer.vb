@@ -44,7 +44,6 @@ Partial Class frmMainMenu
         Me.H_Monitoring = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_Realstock = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_Delivery = New System.Windows.Forms.ToolStripMenuItem()
-        Me.I_Request = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_MonPeminjamanAsset = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_PrintServices = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_AnyarLocalPrint = New System.Windows.Forms.ToolStripMenuItem()
@@ -82,7 +81,6 @@ Partial Class frmMainMenu
         Me.SettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Template = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_UbahPassword = New System.Windows.Forms.ToolStripMenuItem()
-        Me.H_PushNotification = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_User = New System.Windows.Forms.ToolStripMenuItem()
         Me.MasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Pegawai = New System.Windows.Forms.ToolStripMenuItem()
@@ -102,7 +100,7 @@ Partial Class frmMainMenu
         Me.H_AssetManagement = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_RegNewAsset = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_ParameterUji = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ApprovalTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.H_ApprovalDecisionTemplate = New System.Windows.Forms.ToolStripMenuItem()
         Me.HELPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_LaporkanMasalah = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_CaraPenggunaan = New System.Windows.Forms.ToolStripMenuItem()
@@ -256,7 +254,7 @@ Partial Class frmMainMenu
         '
         'H_Monitoring
         '
-        Me.H_Monitoring.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_Realstock, Me.I_Delivery, Me.I_Request, Me.I_MonPeminjamanAsset})
+        Me.H_Monitoring.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_Realstock, Me.I_Delivery, Me.I_MonPeminjamanAsset})
         Me.H_Monitoring.Image = Global.ANYAR_GADGET.My.Resources.Resources.Monitoring_Icon1
         Me.H_Monitoring.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.H_Monitoring.Name = "H_Monitoring"
@@ -277,13 +275,6 @@ Partial Class frmMainMenu
         Me.I_Delivery.Size = New System.Drawing.Size(172, 22)
         Me.I_Delivery.Text = "Delivery"
         Me.I_Delivery.Visible = False
-        '
-        'I_Request
-        '
-        Me.I_Request.Name = "I_Request"
-        Me.I_Request.Size = New System.Drawing.Size(172, 22)
-        Me.I_Request.Text = "Request"
-        Me.I_Request.Visible = False
         '
         'I_MonPeminjamanAsset
         '
@@ -544,7 +535,7 @@ Partial Class frmMainMenu
         '
         'SettingToolStripMenuItem
         '
-        Me.SettingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Template, Me.H_UbahPassword, Me.H_PushNotification, Me.H_User})
+        Me.SettingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Template, Me.H_UbahPassword, Me.H_User})
         Me.SettingToolStripMenuItem.Name = "SettingToolStripMenuItem"
         Me.SettingToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
         Me.SettingToolStripMenuItem.Text = "SETTING"
@@ -553,7 +544,7 @@ Partial Class frmMainMenu
         '
         Me.H_Template.Image = Global.ANYAR_GADGET.My.Resources.Resources.Paper_Icon
         Me.H_Template.Name = "H_Template"
-        Me.H_Template.Size = New System.Drawing.Size(171, 22)
+        Me.H_Template.Size = New System.Drawing.Size(155, 22)
         Me.H_Template.Text = "Template"
         Me.H_Template.Visible = False
         '
@@ -561,29 +552,21 @@ Partial Class frmMainMenu
         '
         Me.H_UbahPassword.Image = Global.ANYAR_GADGET.My.Resources.Resources.Key_Logo
         Me.H_UbahPassword.Name = "H_UbahPassword"
-        Me.H_UbahPassword.Size = New System.Drawing.Size(171, 22)
+        Me.H_UbahPassword.Size = New System.Drawing.Size(155, 22)
         Me.H_UbahPassword.Text = "Ubah Password"
         Me.H_UbahPassword.Visible = False
-        '
-        'H_PushNotification
-        '
-        Me.H_PushNotification.Image = Global.ANYAR_GADGET.My.Resources.Resources.Push_Notification
-        Me.H_PushNotification.Name = "H_PushNotification"
-        Me.H_PushNotification.Size = New System.Drawing.Size(171, 22)
-        Me.H_PushNotification.Text = "Push Notifications"
-        Me.H_PushNotification.Visible = False
         '
         'H_User
         '
         Me.H_User.Image = Global.ANYAR_GADGET.My.Resources.Resources.Users_logo
         Me.H_User.Name = "H_User"
-        Me.H_User.Size = New System.Drawing.Size(171, 22)
+        Me.H_User.Size = New System.Drawing.Size(155, 22)
         Me.H_User.Text = "Users"
         Me.H_User.Visible = False
         '
         'MasterToolStripMenuItem
         '
-        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Pegawai, Me.H_Menu, Me.H_ITILV3, Me.H_Konten, Me.H_AssetManagement, Me.ApprovalTemplateToolStripMenuItem})
+        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.H_Pegawai, Me.H_Menu, Me.H_ITILV3, Me.H_Konten, Me.H_AssetManagement, Me.H_ApprovalDecisionTemplate})
         Me.MasterToolStripMenuItem.Name = "MasterToolStripMenuItem"
         Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
         Me.MasterToolStripMenuItem.Text = "MASTER"
@@ -713,11 +696,12 @@ Partial Class frmMainMenu
         Me.I_ParameterUji.Text = "Parameter Uji"
         Me.I_ParameterUji.Visible = False
         '
-        'ApprovalTemplateToolStripMenuItem
+        'H_ApprovalDecisionTemplate
         '
-        Me.ApprovalTemplateToolStripMenuItem.Name = "ApprovalTemplateToolStripMenuItem"
-        Me.ApprovalTemplateToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
-        Me.ApprovalTemplateToolStripMenuItem.Text = "Approval Decision Template"
+        Me.H_ApprovalDecisionTemplate.Name = "H_ApprovalDecisionTemplate"
+        Me.H_ApprovalDecisionTemplate.Size = New System.Drawing.Size(221, 22)
+        Me.H_ApprovalDecisionTemplate.Text = "Approval Decision Template"
+        Me.H_ApprovalDecisionTemplate.Visible = False
         '
         'HELPToolStripMenuItem
         '
@@ -853,7 +837,6 @@ Partial Class frmMainMenu
     Friend WithEvents H_Monitoring As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_Realstock As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_Delivery As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents I_Request As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_PrintServices As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_AnyarLocalPrint As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_RKMDisplayTag As System.Windows.Forms.ToolStripMenuItem
@@ -874,7 +857,6 @@ Partial Class frmMainMenu
     Friend WithEvents SettingToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_Template As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_UbahPassword As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents H_PushNotification As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_User As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MasterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_Pegawai As System.Windows.Forms.ToolStripMenuItem
@@ -917,7 +899,7 @@ Partial Class frmMainMenu
     Friend WithEvents I_RegNewAsset As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_ParameterUji As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_RequestFullfillments As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ApprovalTemplateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents H_ApprovalDecisionTemplate As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_PeminjamanAsset As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_MonPeminjamanAsset As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ApprovalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

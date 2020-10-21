@@ -9,7 +9,7 @@ Public Class frmMasterPegawai
 
         If btnAksi.Text = "Update" Then
 
-            Call AUDR_Employee("CekEmployee")
+            'Call AUDR_Employee("CekEmployee")
 
             If bolStatusSP = True Then
                 DisplayPesanError("Kode Pegawai telah Digunakan", frmMainMenu.txtPesanError, 1000)
@@ -60,11 +60,21 @@ Public Class frmMasterPegawai
 
     Private Sub picNew_Click(sender As Object, e As EventArgs) Handles picNew.Click
         txtEmployeeID.Text = ""
+
         txtNamaPegawai.Text = ""
+        txtNamaPegawai.Enabled = True
         txtAlamat.Text = ""
+        txtAlamat.Enabled = True
         txtAlamatEmail.Text = ""
+        txtAlamatEmail.Enabled = True
+        cmbFungsional.Enabled = True
         cmbFungsional.Text = ""
         cmbJabatan.Text = ""
+        cmbJabatan.Enabled = True
+
+        txtNoTelp.Text = ""
+        txtNoTelp.Enabled = True
+
         btnAksi.Text = "Add"
     End Sub
 

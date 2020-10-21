@@ -47,7 +47,7 @@ Partial Class frmMasterPegawai
         'txtEmployeeID
         '
         Me.txtEmployeeID.Enabled = False
-        Me.txtEmployeeID.Location = New System.Drawing.Point(117, 45)
+        Me.txtEmployeeID.Location = New System.Drawing.Point(117, 64)
         Me.txtEmployeeID.Name = "txtEmployeeID"
         Me.txtEmployeeID.Size = New System.Drawing.Size(261, 20)
         Me.txtEmployeeID.TabIndex = 0
@@ -55,7 +55,7 @@ Partial Class frmMasterPegawai
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 48)
+        Me.Label1.Location = New System.Drawing.Point(13, 64)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 13)
         Me.Label1.TabIndex = 1
@@ -64,7 +64,7 @@ Partial Class frmMasterPegawai
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 74)
+        Me.Label2.Location = New System.Drawing.Point(12, 93)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 13)
         Me.Label2.TabIndex = 2
@@ -72,7 +72,8 @@ Partial Class frmMasterPegawai
         '
         'txtNamaPegawai
         '
-        Me.txtNamaPegawai.Location = New System.Drawing.Point(117, 74)
+        Me.txtNamaPegawai.Enabled = False
+        Me.txtNamaPegawai.Location = New System.Drawing.Point(117, 93)
         Me.txtNamaPegawai.Name = "txtNamaPegawai"
         Me.txtNamaPegawai.Size = New System.Drawing.Size(261, 20)
         Me.txtNamaPegawai.TabIndex = 3
@@ -80,7 +81,7 @@ Partial Class frmMasterPegawai
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(13, 103)
+        Me.Label3.Location = New System.Drawing.Point(13, 122)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 13)
         Me.Label3.TabIndex = 4
@@ -88,7 +89,8 @@ Partial Class frmMasterPegawai
         '
         'txtAlamat
         '
-        Me.txtAlamat.Location = New System.Drawing.Point(117, 100)
+        Me.txtAlamat.Enabled = False
+        Me.txtAlamat.Location = New System.Drawing.Point(117, 119)
         Me.txtAlamat.Name = "txtAlamat"
         Me.txtAlamat.Size = New System.Drawing.Size(261, 124)
         Me.txtAlamat.TabIndex = 5
@@ -96,9 +98,10 @@ Partial Class frmMasterPegawai
         '
         'cmbJabatan
         '
+        Me.cmbJabatan.Enabled = False
         Me.cmbJabatan.FormattingEnabled = True
-        Me.cmbJabatan.Items.AddRange(New Object() {"STAFF", "SPV", "RM", "MANAGER", "EXECUTIVE"})
-        Me.cmbJabatan.Location = New System.Drawing.Point(117, 231)
+        Me.cmbJabatan.Items.AddRange(New Object() {"STAFF", "SPV", "RM", "MANAGER", "EXECUTIVE", "SUPER USER"})
+        Me.cmbJabatan.Location = New System.Drawing.Point(117, 250)
         Me.cmbJabatan.Name = "cmbJabatan"
         Me.cmbJabatan.Size = New System.Drawing.Size(261, 21)
         Me.cmbJabatan.TabIndex = 6
@@ -106,7 +109,7 @@ Partial Class frmMasterPegawai
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(13, 231)
+        Me.Label4.Location = New System.Drawing.Point(13, 250)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(45, 13)
         Me.Label4.TabIndex = 7
@@ -114,9 +117,10 @@ Partial Class frmMasterPegawai
         '
         'cmbFungsional
         '
+        Me.cmbFungsional.Enabled = False
         Me.cmbFungsional.FormattingEnabled = True
-        Me.cmbFungsional.Items.AddRange(New Object() {"OPERATIONAL", "IT", "MANAGEMENT"})
-        Me.cmbFungsional.Location = New System.Drawing.Point(117, 258)
+        Me.cmbFungsional.Items.AddRange(New Object() {"OPERATIONAL", "WAREHOUSE", "CUSTOMER SERVICE", "IT", "HO", "MANAGEMENT", "EXECUTIVE"})
+        Me.cmbFungsional.Location = New System.Drawing.Point(117, 277)
         Me.cmbFungsional.Name = "cmbFungsional"
         Me.cmbFungsional.Size = New System.Drawing.Size(261, 21)
         Me.cmbFungsional.TabIndex = 8
@@ -124,7 +128,7 @@ Partial Class frmMasterPegawai
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(13, 264)
+        Me.Label5.Location = New System.Drawing.Point(13, 283)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(58, 13)
         Me.Label5.TabIndex = 9
@@ -133,7 +137,7 @@ Partial Class frmMasterPegawai
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 290)
+        Me.Label6.Location = New System.Drawing.Point(12, 309)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 13)
         Me.Label6.TabIndex = 10
@@ -141,7 +145,8 @@ Partial Class frmMasterPegawai
         '
         'txtAlamatEmail
         '
-        Me.txtAlamatEmail.Location = New System.Drawing.Point(117, 287)
+        Me.txtAlamatEmail.Enabled = False
+        Me.txtAlamatEmail.Location = New System.Drawing.Point(117, 306)
         Me.txtAlamatEmail.Name = "txtAlamatEmail"
         Me.txtAlamatEmail.Size = New System.Drawing.Size(261, 20)
         Me.txtAlamatEmail.TabIndex = 11
@@ -149,7 +154,8 @@ Partial Class frmMasterPegawai
         'cboAktif
         '
         Me.cboAktif.AutoSize = True
-        Me.cboAktif.Location = New System.Drawing.Point(117, 348)
+        Me.cboAktif.Enabled = False
+        Me.cboAktif.Location = New System.Drawing.Point(117, 367)
         Me.cboAktif.Name = "cboAktif"
         Me.cboAktif.Size = New System.Drawing.Size(53, 17)
         Me.cboAktif.TabIndex = 12
@@ -158,9 +164,9 @@ Partial Class frmMasterPegawai
         '
         'btnAksi
         '
-        Me.btnAksi.Location = New System.Drawing.Point(281, 384)
+        Me.btnAksi.Location = New System.Drawing.Point(117, 384)
         Me.btnAksi.Name = "btnAksi"
-        Me.btnAksi.Size = New System.Drawing.Size(95, 47)
+        Me.btnAksi.Size = New System.Drawing.Size(259, 47)
         Me.btnAksi.TabIndex = 14
         Me.btnAksi.Text = "Ok"
         Me.btnAksi.UseVisualStyleBackColor = True
@@ -169,7 +175,7 @@ Partial Class frmMasterPegawai
         '
         Me.picNew.BaseColor = System.Drawing.Color.White
         Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.Add_User
-        Me.picNew.Location = New System.Drawing.Point(167, 384)
+        Me.picNew.Location = New System.Drawing.Point(16, 10)
         Me.picNew.Name = "picNew"
         Me.picNew.Size = New System.Drawing.Size(47, 47)
         Me.picNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -181,7 +187,7 @@ Partial Class frmMasterPegawai
         '
         Me.picFind.BaseColor = System.Drawing.Color.White
         Me.picFind.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
-        Me.picFind.Location = New System.Drawing.Point(222, 384)
+        Me.picFind.Location = New System.Drawing.Point(69, 10)
         Me.picFind.Name = "picFind"
         Me.picFind.Size = New System.Drawing.Size(47, 47)
         Me.picFind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -192,7 +198,7 @@ Partial Class frmMasterPegawai
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(12, 321)
+        Me.Label7.Location = New System.Drawing.Point(12, 340)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(45, 13)
         Me.Label7.TabIndex = 17
@@ -200,7 +206,8 @@ Partial Class frmMasterPegawai
         '
         'txtNoTelp
         '
-        Me.txtNoTelp.Location = New System.Drawing.Point(117, 313)
+        Me.txtNoTelp.Enabled = False
+        Me.txtNoTelp.Location = New System.Drawing.Point(117, 332)
         Me.txtNoTelp.Name = "txtNoTelp"
         Me.txtNoTelp.Size = New System.Drawing.Size(261, 20)
         Me.txtNoTelp.TabIndex = 18

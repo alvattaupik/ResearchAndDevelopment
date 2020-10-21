@@ -46,9 +46,13 @@ Partial Class frmBrowseMasterStagging
         '
         'dgvListEmployee
         '
+        Me.dgvListEmployee.AllowUserToAddRows = False
+        Me.dgvListEmployee.AllowUserToDeleteRows = False
         Me.dgvListEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvListEmployee.Location = New System.Drawing.Point(13, 49)
         Me.dgvListEmployee.Name = "dgvListEmployee"
+        Me.dgvListEmployee.ReadOnly = True
+        Me.dgvListEmployee.RowHeadersVisible = False
         Me.dgvListEmployee.Size = New System.Drawing.Size(378, 190)
         Me.dgvListEmployee.TabIndex = 2
         '

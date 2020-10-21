@@ -329,7 +329,9 @@ Public Class frmMainMenu
         frmAprovalPeminjamanAsset.ShowDialog()
     End Sub
 
-    Private Sub ApprovalTemplateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApprovalTemplateToolStripMenuItem.Click
+    Private Sub ApprovalTemplateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles H_ApprovalDecisionTemplate.Click
         frmApprovalTemplate.ShowDialog()
     End Sub
+
+
 End Class

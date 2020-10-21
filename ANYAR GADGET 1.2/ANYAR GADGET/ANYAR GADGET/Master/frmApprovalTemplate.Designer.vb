@@ -36,11 +36,14 @@ Partial Class frmApprovalTemplate
         Me.dgvListTemplate = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtCariTemplateID = New System.Windows.Forms.TextBox()
+        Me.picSearch = New Guna.UI.WinForms.GunaPictureBox()
+        Me.picNew = New Guna.UI.WinForms.GunaPictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.dgvMasterStagging = New System.Windows.Forms.DataGridView()
         Me.RemoveUserStaging = New System.Windows.Forms.Button()
         Me.btnAddNewUserStaging = New System.Windows.Forms.Button()
-        Me.btnProsesMasterStaging = New System.Windows.Forms.Button()
+        Me.picSearchStaging = New Guna.UI.WinForms.GunaPictureBox()
+        Me.picNewStaging = New Guna.UI.WinForms.GunaPictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cmbKodeTemplate = New System.Windows.Forms.ComboBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -48,41 +51,30 @@ Partial Class frmApprovalTemplate
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.dgvListUsersAffected = New System.Windows.Forms.DataGridView()
-        Me.ListNum = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NamaPegawai = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TemplateID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmbCariUsers = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvListUsersMaster = New System.Windows.Forms.DataGridView()
         Me.cmbMasterStagging = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ListNumMaster = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpIDMaster = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.picSearch = New Guna.UI.WinForms.GunaPictureBox()
-        Me.picNew = New Guna.UI.WinForms.GunaPictureBox()
-        Me.picSearchStaging = New Guna.UI.WinForms.GunaPictureBox()
-        Me.picNewStaging = New Guna.UI.WinForms.GunaPictureBox()
         Me.GunaPictureBox2 = New Guna.UI.WinForms.GunaPictureBox()
         Me.GunaPictureBox3 = New Guna.UI.WinForms.GunaPictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvListTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picSearch, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picNew, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.dgvMasterStagging, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picSearchStaging, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picNewStaging, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgvListUsersAffected, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvListUsersMaster, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picSearch, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picNew, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picSearchStaging, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picNewStaging, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -233,12 +225,33 @@ Partial Class frmApprovalTemplate
         Me.txtCariTemplateID.Size = New System.Drawing.Size(281, 29)
         Me.txtCariTemplateID.TabIndex = 2
         '
+        'picSearch
+        '
+        Me.picSearch.BaseColor = System.Drawing.Color.White
+        Me.picSearch.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
+        Me.picSearch.Location = New System.Drawing.Point(47, 7)
+        Me.picSearch.Name = "picSearch"
+        Me.picSearch.Size = New System.Drawing.Size(34, 35)
+        Me.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picSearch.TabIndex = 1
+        Me.picSearch.TabStop = False
+        '
+        'picNew
+        '
+        Me.picNew.BaseColor = System.Drawing.Color.White
+        Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.Add_Document
+        Me.picNew.Location = New System.Drawing.Point(7, 7)
+        Me.picNew.Name = "picNew"
+        Me.picNew.Size = New System.Drawing.Size(34, 35)
+        Me.picNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picNew.TabIndex = 0
+        Me.picNew.TabStop = False
+        '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.dgvMasterStagging)
         Me.TabPage2.Controls.Add(Me.RemoveUserStaging)
         Me.TabPage2.Controls.Add(Me.btnAddNewUserStaging)
-        Me.TabPage2.Controls.Add(Me.btnProsesMasterStaging)
         Me.TabPage2.Controls.Add(Me.picSearchStaging)
         Me.TabPage2.Controls.Add(Me.picNewStaging)
         Me.TabPage2.Controls.Add(Me.Label6)
@@ -256,7 +269,6 @@ Partial Class frmApprovalTemplate
         Me.dgvMasterStagging.AllowUserToAddRows = False
         Me.dgvMasterStagging.AllowUserToDeleteRows = False
         Me.dgvMasterStagging.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvMasterStagging.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ListNumMaster, Me.EmpIDMaster, Me.Name})
         Me.dgvMasterStagging.Location = New System.Drawing.Point(16, 47)
         Me.dgvMasterStagging.Name = "dgvMasterStagging"
         Me.dgvMasterStagging.ReadOnly = True
@@ -282,14 +294,27 @@ Partial Class frmApprovalTemplate
         Me.btnAddNewUserStaging.Text = "Add New Users"
         Me.btnAddNewUserStaging.UseVisualStyleBackColor = True
         '
-        'btnProsesMasterStaging
+        'picSearchStaging
         '
-        Me.btnProsesMasterStaging.Location = New System.Drawing.Point(363, 369)
-        Me.btnProsesMasterStaging.Name = "btnProsesMasterStaging"
-        Me.btnProsesMasterStaging.Size = New System.Drawing.Size(157, 42)
-        Me.btnProsesMasterStaging.TabIndex = 5
-        Me.btnProsesMasterStaging.Text = "Proses"
-        Me.btnProsesMasterStaging.UseVisualStyleBackColor = True
+        Me.picSearchStaging.BaseColor = System.Drawing.Color.White
+        Me.picSearchStaging.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
+        Me.picSearchStaging.Location = New System.Drawing.Point(59, 6)
+        Me.picSearchStaging.Name = "picSearchStaging"
+        Me.picSearchStaging.Size = New System.Drawing.Size(34, 35)
+        Me.picSearchStaging.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picSearchStaging.TabIndex = 4
+        Me.picSearchStaging.TabStop = False
+        '
+        'picNewStaging
+        '
+        Me.picNewStaging.BaseColor = System.Drawing.Color.White
+        Me.picNewStaging.Image = Global.ANYAR_GADGET.My.Resources.Resources.Add_Document
+        Me.picNewStaging.Location = New System.Drawing.Point(19, 6)
+        Me.picNewStaging.Name = "picNewStaging"
+        Me.picNewStaging.Size = New System.Drawing.Size(34, 35)
+        Me.picNewStaging.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picNewStaging.TabIndex = 3
+        Me.picNewStaging.TabStop = False
         '
         'Label6
         '
@@ -359,37 +384,12 @@ Partial Class frmApprovalTemplate
         Me.dgvListUsersAffected.AllowUserToAddRows = False
         Me.dgvListUsersAffected.AllowUserToDeleteRows = False
         Me.dgvListUsersAffected.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvListUsersAffected.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ListNum, Me.NamaPegawai, Me.EmpID, Me.TemplateID})
         Me.dgvListUsersAffected.Location = New System.Drawing.Point(94, 46)
         Me.dgvListUsersAffected.Name = "dgvListUsersAffected"
         Me.dgvListUsersAffected.ReadOnly = True
         Me.dgvListUsersAffected.RowHeadersVisible = False
         Me.dgvListUsersAffected.Size = New System.Drawing.Size(337, 146)
         Me.dgvListUsersAffected.TabIndex = 3
-        '
-        'ListNum
-        '
-        Me.ListNum.HeaderText = "ListNum"
-        Me.ListNum.Name = "ListNum"
-        Me.ListNum.ReadOnly = True
-        '
-        'NamaPegawai
-        '
-        Me.NamaPegawai.HeaderText = "NamaPegawai"
-        Me.NamaPegawai.Name = "NamaPegawai"
-        Me.NamaPegawai.ReadOnly = True
-        '
-        'EmpID
-        '
-        Me.EmpID.HeaderText = "EmpID"
-        Me.EmpID.Name = "EmpID"
-        Me.EmpID.ReadOnly = True
-        '
-        'TemplateID
-        '
-        Me.TemplateID.HeaderText = "TemplateID"
-        Me.TemplateID.Name = "TemplateID"
-        Me.TemplateID.ReadOnly = True
         '
         'cmbCariUsers
         '
@@ -422,9 +422,13 @@ Partial Class frmApprovalTemplate
         '
         'dgvListUsersMaster
         '
+        Me.dgvListUsersMaster.AllowUserToAddRows = False
+        Me.dgvListUsersMaster.AllowUserToDeleteRows = False
         Me.dgvListUsersMaster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvListUsersMaster.Location = New System.Drawing.Point(94, 46)
         Me.dgvListUsersMaster.Name = "dgvListUsersMaster"
+        Me.dgvListUsersMaster.ReadOnly = True
+        Me.dgvListUsersMaster.RowHeadersVisible = False
         Me.dgvListUsersMaster.Size = New System.Drawing.Size(337, 111)
         Me.dgvListUsersMaster.TabIndex = 3
         '
@@ -444,78 +448,6 @@ Partial Class frmApprovalTemplate
         Me.Label7.Size = New System.Drawing.Size(72, 13)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Cari Template"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(134, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(307, 25)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Approval Decision Template"
-        '
-        'ListNumMaster
-        '
-        Me.ListNumMaster.HeaderText = "ListNumMaster"
-        Me.ListNumMaster.Name = "ListNumMaster"
-        Me.ListNumMaster.ReadOnly = True
-        '
-        'EmpIDMaster
-        '
-        Me.EmpIDMaster.HeaderText = "EmpIDMaster"
-        Me.EmpIDMaster.Name = "EmpIDMaster"
-        Me.EmpIDMaster.ReadOnly = True
-        '
-        'Name
-        '
-        Me.Name.HeaderText = "Name"
-        Me.Name.Name = "Name"
-        Me.Name.ReadOnly = True
-        '
-        'picSearch
-        '
-        Me.picSearch.BaseColor = System.Drawing.Color.White
-        Me.picSearch.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
-        Me.picSearch.Location = New System.Drawing.Point(47, 7)
-        Me.picSearch.Name = "picSearch"
-        Me.picSearch.Size = New System.Drawing.Size(34, 35)
-        Me.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picSearch.TabIndex = 1
-        Me.picSearch.TabStop = False
-        '
-        'picNew
-        '
-        Me.picNew.BaseColor = System.Drawing.Color.White
-        Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.Add_Document
-        Me.picNew.Location = New System.Drawing.Point(7, 7)
-        Me.picNew.Name = "picNew"
-        Me.picNew.Size = New System.Drawing.Size(34, 35)
-        Me.picNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picNew.TabIndex = 0
-        Me.picNew.TabStop = False
-        '
-        'picSearchStaging
-        '
-        Me.picSearchStaging.BaseColor = System.Drawing.Color.White
-        Me.picSearchStaging.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
-        Me.picSearchStaging.Location = New System.Drawing.Point(59, 6)
-        Me.picSearchStaging.Name = "picSearchStaging"
-        Me.picSearchStaging.Size = New System.Drawing.Size(34, 35)
-        Me.picSearchStaging.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picSearchStaging.TabIndex = 4
-        Me.picSearchStaging.TabStop = False
-        '
-        'picNewStaging
-        '
-        Me.picNewStaging.BaseColor = System.Drawing.Color.White
-        Me.picNewStaging.Image = Global.ANYAR_GADGET.My.Resources.Resources.Add_Document
-        Me.picNewStaging.Location = New System.Drawing.Point(19, 6)
-        Me.picNewStaging.Name = "picNewStaging"
-        Me.picNewStaging.Size = New System.Drawing.Size(34, 35)
-        Me.picNewStaging.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picNewStaging.TabIndex = 3
-        Me.picNewStaging.TabStop = False
         '
         'GunaPictureBox2
         '
@@ -539,6 +471,16 @@ Partial Class frmApprovalTemplate
         Me.GunaPictureBox3.TabIndex = 5
         Me.GunaPictureBox3.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(134, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(307, 25)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Approval Decision Template"
+        '
         'frmApprovalTemplate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -555,9 +497,13 @@ Partial Class frmApprovalTemplate
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvListTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picSearch, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picNew, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.dgvMasterStagging, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picSearchStaging, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picNewStaging, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
@@ -565,10 +511,6 @@ Partial Class frmApprovalTemplate
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.dgvListUsersMaster, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picSearch, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picNew, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picSearchStaging, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picNewStaging, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -600,7 +542,6 @@ Partial Class frmApprovalTemplate
     Friend WithEvents picNewStaging As Guna.UI.WinForms.GunaPictureBox
     Friend WithEvents RemoveUserStaging As System.Windows.Forms.Button
     Friend WithEvents btnAddNewUserStaging As System.Windows.Forms.Button
-    Friend WithEvents btnProsesMasterStaging As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents btnDelete As System.Windows.Forms.Button
@@ -614,11 +555,4 @@ Partial Class frmApprovalTemplate
     Friend WithEvents dgvListUsersMaster As System.Windows.Forms.DataGridView
     Friend WithEvents cmbMasterStagging As System.Windows.Forms.ComboBox
     Friend WithEvents dgvMasterStagging As System.Windows.Forms.DataGridView
-    Friend WithEvents ListNum As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NamaPegawai As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents EmpID As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents TemplateID As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ListNumMaster As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents EmpIDMaster As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Name As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

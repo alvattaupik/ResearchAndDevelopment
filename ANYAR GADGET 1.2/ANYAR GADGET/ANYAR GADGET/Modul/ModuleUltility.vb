@@ -87,8 +87,7 @@ Module ModuleUltility
                 frmMainMenu.H_Template.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "OSETTING002" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_UbahPassword.Visible = True
-            ElseIf dgv.Rows(i).Cells(0).Value = "OSETTING003" And dgv.Rows(i).Cells(1).Value = "Y" Then
-                frmMainMenu.H_PushNotification.Visible = True
+           
             ElseIf dgv.Rows(i).Cells(0).Value = "OSETTING004" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_User.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "OMASTER001" And dgv.Rows(i).Cells(1).Value = "Y" Then
@@ -145,8 +144,8 @@ Module ModuleUltility
                 frmMainMenu.I_Realstock.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "IGadget002" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_Delivery.Visible = True
-            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget003" And dgv.Rows(i).Cells(1).Value = "Y" Then
-                frmMainMenu.I_Request.Visible = True
+                'ElseIf dgv.Rows(i).Cells(0).Value = "IGadget003" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                '    frmMainMenu.I_Request.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "IGadget004" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_AnyarLocalPrint.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "IGadget005" And dgv.Rows(i).Cells(1).Value = "Y" Then

@@ -20,7 +20,7 @@ Public Class frmApprovalTemplate
 
     Private Sub cmbCariUsers_Click(sender As Object, e As EventArgs) Handles cmbCariUsers.Click
         Call KoneksiDB_EMAIL()
-        LoadComboBox(cmbKodeTemplate, "SELECT ID,NamaPegawai FROM dbo.OEmployee", "ID", "NamaPegawai", KoneksiDBEmail)
+        LoadComboBox(cmbCariUsers, "SELECT ID,NamaPegawai FROM dbo.OEmployee", "ID", "NamaPegawai", KoneksiDBEmail)
     End Sub
 
 
@@ -63,6 +63,15 @@ Public Class frmApprovalTemplate
     End Sub
 
 
+
+    Sub LoadMasterStagging()
+        Dim strQuery As String = "SELECT NamaPegawai,Jabatan,EmpID,ApvID FROM dbo.APV1" & _
+                                " LEFT OUTER JOIN dbo.OEmployee ON ID=EmpID WHere dbo.APV1.IDTemplate='" & cmbKodeTemplate.SelectedValue & "'"
+
+
+        Call KoneksiDB_EMAIL()
+        LoadDataGrid(dgvMasterStagging, strQuery, KoneksiDBEmail)
+    End Sub
 
 
     Sub AU_MASTER_APPROVAl(strFunction As String)
@@ -154,6 +163,161 @@ Public Class frmApprovalTemplate
     End Sub
 
     Private Sub btnAddNewUserStaging_Click(sender As Object, e As EventArgs) Handles btnAddNewUserStaging.Click
+        If cmbKodeTemplate.SelectedValue = "" Then
+            DisplayPesanError("Template ID Is Required", frmMainMenu.txtPesanError, 1000)
+            Exit Sub
+        End If
+        frmBrowseMasterStagging.ShowDialog()
+    End Sub
+
+    Private Sub cmbKodeTemplate_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cmbKodeTemplate.SelectionChangeCommitted
+        LoadMasterStagging()
+    End Sub
+
+    Private Sub RemoveUserStaging_Click(sender As Object, e As EventArgs) Handles RemoveUserStaging.Click
+        If dgvMasterStagging.RowCount = 0 Then Exit Sub
+        KoneksiDB_EMAIL()
+        Dim command As SqlCommand
+        command = New SqlCommand("[AU_MASTER_STAGGING]", KoneksiDBEmail)
+
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        command.Parameters.AddWithValue("IDtemplate", Trim(cmbKodeTemplate.SelectedValue))
+        command.Parameters.AddWithValue("APVStaggingID", (Trim(dgvMasterStagging.Item(3, dgvMasterStagging.CurrentRow.Index).Value)))
+        command.Parameters.AddWithValue("EmpID", (Trim(dgvMasterStagging.Item(2, dgvMasterStagging.CurrentRow.Index).Value)))
+
+        command.Parameters.Add("ErrorCodeOUT", SqlDbType.VarChar, 100)
+        command.Parameters("ErrorCodeOUT").Direction = ParameterDirection.Output
+        command.Parameters.Add("ErrorMessageOUT", SqlDbType.VarChar, 300)
+        command.Parameters("ErrorMessageOUT").Direction = ParameterDirection.Output
+
+        command.Parameters.AddWithValue("Function", Trim("D-UserStagging"))
+
+
+        If (KoneksiDBEmail.State = ConnectionState.Open) Then KoneksiDBEmail.Close()
+        command.Connection = KoneksiDBEmail
+        KoneksiDBEmail.Open()
+        command.ExecuteNonQuery()
+
+        MstrErrorCode = command.Parameters("ErrorCodeOUT").Value.ToString()
+        MstrErrorMessage = command.Parameters("ErrorMessageOUT").Value.ToString()
+
+        If MstrErrorCode = "E-00" Then
+            DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
+            Exit Sub
+        Else
+            DisplayPesanOK("Operation Success", frmMainMenu.txtPesanError, 1000)
+            LoadMasterStagging()
+            'Me.Dispose()
+        End If
+
+    End Sub
+
+    Private Sub cmbMasterStagging_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cmbMasterStagging.SelectionChangeCommitted
+        Dim strQuery As String = "SELECT NamaPegawai,Jabatan FROM dbo.APV1" & _
+                               " LEFT OUTER JOIN dbo.OEmployee ON ID=EmpID WHere dbo.APV1.IDTemplate='" & cmbMasterStagging.SelectedValue & "'"
+
+
+        Call KoneksiDB_EMAIL()
+        LoadDataGrid(dgvListUsersMaster, strQuery, KoneksiDBEmail)
+
+
+
+        Dim strQuery2 As String = "SELECT NamaPegawai,Jabatan FROM dbo.OEmployee1" & _
+                                " LEFT OUTER JOIN dbo.OEmployee ON EmpID=ID" & _
+                                " Where TemplateID='" & Trim(cmbMasterStagging.SelectedValue) & "'"
+
+
+        Call KoneksiDB_EMAIL()
+        LoadDataGrid(dgvListUsersAffected, strQuery2, KoneksiDBEmail)
+
+
+
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+
+        KoneksiDB_EMAIL()
+        Dim command As SqlCommand
+        command = New SqlCommand("[AU_MASTER_STAGGING]", KoneksiDBEmail)
+
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        command.Parameters.AddWithValue("IDtemplate", Trim(cmbMasterStagging.SelectedValue))
+        command.Parameters.AddWithValue("APVStaggingID", (""))
+        command.Parameters.AddWithValue("EmpID", (Trim(cmbCariUsers.SelectedValue)))
+
+        command.Parameters.Add("ErrorCodeOUT", SqlDbType.VarChar, 100)
+        command.Parameters("ErrorCodeOUT").Direction = ParameterDirection.Output
+        command.Parameters.Add("ErrorMessageOUT", SqlDbType.VarChar, 300)
+        command.Parameters("ErrorMessageOUT").Direction = ParameterDirection.Output
+
+        command.Parameters.AddWithValue("Function", Trim("A-AffectedUsers"))
+
+
+        If (KoneksiDBEmail.State = ConnectionState.Open) Then KoneksiDBEmail.Close()
+        command.Connection = KoneksiDBEmail
+        KoneksiDBEmail.Open()
+        command.ExecuteNonQuery()
+
+        MstrErrorCode = command.Parameters("ErrorCodeOUT").Value.ToString()
+        MstrErrorMessage = command.Parameters("ErrorMessageOUT").Value.ToString()
+
+        If MstrErrorCode = "E-00" Then
+            DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
+            Exit Sub
+        Else
+            DisplayPesanOK("Operation Success", frmMainMenu.txtPesanError, 1000)
+            LoadAffectedUsers()
+            'Me.Dispose()
+        End If
+
+    End Sub
+
+
+    Sub LoadAffectedUsers()
+        Dim strQuery2 As String = "SELECT NamaPegawai,Jabatan,EmpID,TemplateID FROM dbo.OEmployee1" & _
+                         " LEFT OUTER JOIN dbo.OEmployee ON EmpID=ID" & _
+                         " Where TemplateID='" & Trim(cmbMasterStagging.SelectedValue) & "'"
+        Call KoneksiDB_EMAIL()
+        LoadDataGrid(dgvListUsersAffected, strQuery2, KoneksiDBEmail)
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        KoneksiDB_EMAIL()
+        Dim command As SqlCommand
+        command = New SqlCommand("[AU_MASTER_STAGGING]", KoneksiDBEmail)
+
+        Dim adapter As New SqlDataAdapter(command)
+        command.CommandType = CommandType.StoredProcedure
+        command.Parameters.AddWithValue("IDtemplate", Trim((dgvListUsersAffected.Item(3, dgvListUsersAffected.CurrentRow.Index).Value)))
+        command.Parameters.AddWithValue("APVStaggingID", (""))
+        command.Parameters.AddWithValue("EmpID", Trim((dgvListUsersAffected.Item(2, dgvListUsersAffected.CurrentRow.Index).Value)))
+
+        command.Parameters.Add("ErrorCodeOUT", SqlDbType.VarChar, 100)
+        command.Parameters("ErrorCodeOUT").Direction = ParameterDirection.Output
+        command.Parameters.Add("ErrorMessageOUT", SqlDbType.VarChar, 300)
+        command.Parameters("ErrorMessageOUT").Direction = ParameterDirection.Output
+
+        command.Parameters.AddWithValue("Function", Trim("D-AffectedUsers"))
+
+
+        If (KoneksiDBEmail.State = ConnectionState.Open) Then KoneksiDBEmail.Close()
+        command.Connection = KoneksiDBEmail
+        KoneksiDBEmail.Open()
+        command.ExecuteNonQuery()
+
+        MstrErrorCode = command.Parameters("ErrorCodeOUT").Value.ToString()
+        MstrErrorMessage = command.Parameters("ErrorMessageOUT").Value.ToString()
+
+        If MstrErrorCode = "E-00" Then
+            DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
+            Exit Sub
+        Else
+            DisplayPesanOK("Operation Success", frmMainMenu.txtPesanError, 1000)
+            LoadAffectedUsers()
+            'Me.Dispose()
+        End If
 
     End Sub
 End Class
