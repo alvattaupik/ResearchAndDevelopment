@@ -71,6 +71,8 @@ Public Class frmMasterPegawai
         cmbFungsional.Text = ""
         cmbJabatan.Text = ""
         cmbJabatan.Enabled = True
+        cboAktif.Enabled = True
+        cboAktif.Checked = True
 
         txtNoTelp.Text = ""
         txtNoTelp.Enabled = True

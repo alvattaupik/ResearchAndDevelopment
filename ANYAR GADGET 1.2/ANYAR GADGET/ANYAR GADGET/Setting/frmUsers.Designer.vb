@@ -24,11 +24,15 @@ Partial Class frmUsers
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.picBrowsePegawai = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.cmbLocation = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cmbManager = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.picNew = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.cboAktif = New System.Windows.Forms.CheckBox()
+        Me.picFind = New Guna.UI.WinForms.GunaCirclePictureBox()
+        Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.btnAksi = New System.Windows.Forms.Button()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -43,6 +47,7 @@ Partial Class frmUsers
         Me.dgvHeaderMenu = New System.Windows.Forms.DataGridView()
         Me.cmMenuHeader = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CopyHeaderToAnotherUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnRefreshHeaderMenu = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.txtCariHeader = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnUpdateHdrMenu = New System.Windows.Forms.Button()
@@ -68,16 +73,16 @@ Partial Class frmUsers
         Me.cmCopyAlltoAllUsers = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CopyAllControlToAnotherUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RefreshControlToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnRefreshHeaderMenu = New Guna.UI.WinForms.GunaCirclePictureBox()
-        Me.picBrowsePegawai = New Guna.UI.WinForms.GunaCirclePictureBox()
-        Me.picNew = New Guna.UI.WinForms.GunaCirclePictureBox()
-        Me.picFind = New Guna.UI.WinForms.GunaCirclePictureBox()
-        Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.picBrowsePegawai, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picNew, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picFind, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.dgvHeaderMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cmMenuHeader.SuspendLayout()
+        CType(Me.btnRefreshHeaderMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.dgvDetailMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cmDetailMenu.SuspendLayout()
@@ -88,11 +93,6 @@ Partial Class frmUsers
         CType(Me.dgvLocationControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cmLocationControl.SuspendLayout()
         Me.cmCopyAlltoAllUsers.SuspendLayout()
-        CType(Me.btnRefreshHeaderMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picBrowsePegawai, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picNew, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picFind, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -123,19 +123,32 @@ Partial Class frmUsers
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Users Data"
         '
+        'picBrowsePegawai
+        '
+        Me.picBrowsePegawai.BaseColor = System.Drawing.Color.White
+        Me.picBrowsePegawai.Enabled = False
+        Me.picBrowsePegawai.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
+        Me.picBrowsePegawai.Location = New System.Drawing.Point(460, 56)
+        Me.picBrowsePegawai.Name = "picBrowsePegawai"
+        Me.picBrowsePegawai.Size = New System.Drawing.Size(27, 29)
+        Me.picBrowsePegawai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBrowsePegawai.TabIndex = 18
+        Me.picBrowsePegawai.TabStop = False
+        Me.picBrowsePegawai.UseTransfarantBackground = False
+        '
         'cmbLocation
         '
         Me.cmbLocation.Enabled = False
         Me.cmbLocation.FormattingEnabled = True
-        Me.cmbLocation.Location = New System.Drawing.Point(296, 95)
+        Me.cmbLocation.Location = New System.Drawing.Point(267, 114)
         Me.cmbLocation.Name = "cmbLocation"
-        Me.cmbLocation.Size = New System.Drawing.Size(195, 21)
+        Me.cmbLocation.Size = New System.Drawing.Size(224, 21)
         Me.cmbLocation.TabIndex = 17
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(207, 94)
+        Me.Label8.Location = New System.Drawing.Point(180, 114)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(48, 13)
         Me.Label8.TabIndex = 16
@@ -145,36 +158,72 @@ Partial Class frmUsers
         '
         Me.cmbManager.Enabled = False
         Me.cmbManager.FormattingEnabled = True
-        Me.cmbManager.Location = New System.Drawing.Point(296, 70)
+        Me.cmbManager.Location = New System.Drawing.Point(267, 89)
         Me.cmbManager.Name = "cmbManager"
-        Me.cmbManager.Size = New System.Drawing.Size(194, 21)
+        Me.cmbManager.Size = New System.Drawing.Size(223, 21)
         Me.cmbManager.TabIndex = 15
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(207, 67)
+        Me.Label7.Location = New System.Drawing.Point(180, 89)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(49, 13)
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Manager"
         '
+        'picNew
+        '
+        Me.picNew.BaseColor = System.Drawing.Color.White
+        Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.Add_User
+        Me.picNew.Location = New System.Drawing.Point(14, 22)
+        Me.picNew.Name = "picNew"
+        Me.picNew.Size = New System.Drawing.Size(47, 47)
+        Me.picNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picNew.TabIndex = 13
+        Me.picNew.TabStop = False
+        Me.picNew.UseTransfarantBackground = False
+        '
         'cboAktif
         '
         Me.cboAktif.AutoSize = True
         Me.cboAktif.Enabled = False
-        Me.cboAktif.Location = New System.Drawing.Point(296, 174)
+        Me.cboAktif.Location = New System.Drawing.Point(296, 188)
         Me.cboAktif.Name = "cboAktif"
         Me.cboAktif.Size = New System.Drawing.Size(47, 17)
         Me.cboAktif.TabIndex = 12
         Me.cboAktif.Text = "Aktif"
         Me.cboAktif.UseVisualStyleBackColor = True
         '
+        'picFind
+        '
+        Me.picFind.BaseColor = System.Drawing.Color.White
+        Me.picFind.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
+        Me.picFind.Location = New System.Drawing.Point(67, 22)
+        Me.picFind.Name = "picFind"
+        Me.picFind.Size = New System.Drawing.Size(47, 47)
+        Me.picFind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picFind.TabIndex = 11
+        Me.picFind.TabStop = False
+        Me.picFind.UseTransfarantBackground = False
+        '
+        'GunaTransfarantPictureBox1
+        '
+        Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Komputer
+        Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(13, 73)
+        Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
+        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(158, 151)
+        Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox1.TabIndex = 9
+        Me.GunaTransfarantPictureBox1.TabStop = False
+        '
         'btnAksi
         '
-        Me.btnAksi.Location = New System.Drawing.Point(296, 197)
+        Me.btnAksi.Location = New System.Drawing.Point(267, 207)
         Me.btnAksi.Name = "btnAksi"
-        Me.btnAksi.Size = New System.Drawing.Size(195, 47)
+        Me.btnAksi.Size = New System.Drawing.Size(224, 37)
         Me.btnAksi.TabIndex = 8
         Me.btnAksi.Text = "Ok"
         Me.btnAksi.UseVisualStyleBackColor = True
@@ -182,15 +231,15 @@ Partial Class frmUsers
         'txtPassword
         '
         Me.txtPassword.Enabled = False
-        Me.txtPassword.Location = New System.Drawing.Point(296, 146)
+        Me.txtPassword.Location = New System.Drawing.Point(267, 165)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(194, 20)
+        Me.txtPassword.Size = New System.Drawing.Size(223, 20)
         Me.txtPassword.TabIndex = 7
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(208, 146)
+        Me.Label4.Location = New System.Drawing.Point(180, 165)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(53, 13)
         Me.Label4.TabIndex = 6
@@ -199,15 +248,15 @@ Partial Class frmUsers
         'txtUsername
         '
         Me.txtUsername.Enabled = False
-        Me.txtUsername.Location = New System.Drawing.Point(296, 120)
+        Me.txtUsername.Location = New System.Drawing.Point(267, 139)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(195, 20)
+        Me.txtUsername.Size = New System.Drawing.Size(224, 20)
         Me.txtUsername.TabIndex = 5
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(207, 120)
+        Me.Label3.Location = New System.Drawing.Point(180, 139)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(57, 13)
         Me.Label3.TabIndex = 4
@@ -216,7 +265,7 @@ Partial Class frmUsers
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(206, 41)
+        Me.Label2.Location = New System.Drawing.Point(180, 62)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 13)
         Me.Label2.TabIndex = 3
@@ -225,26 +274,26 @@ Partial Class frmUsers
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(206, 15)
+        Me.Label1.Location = New System.Drawing.Point(180, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 13)
+        Me.Label1.Size = New System.Drawing.Size(67, 13)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Employee"
+        Me.Label1.Text = "Employee ID"
         '
         'txtNamaPegawai
         '
         Me.txtNamaPegawai.Enabled = False
-        Me.txtNamaPegawai.Location = New System.Drawing.Point(296, 40)
+        Me.txtNamaPegawai.Location = New System.Drawing.Point(267, 59)
         Me.txtNamaPegawai.Name = "txtNamaPegawai"
-        Me.txtNamaPegawai.Size = New System.Drawing.Size(158, 20)
+        Me.txtNamaPegawai.Size = New System.Drawing.Size(187, 20)
         Me.txtNamaPegawai.TabIndex = 1
         '
         'txtEmployee
         '
         Me.txtEmployee.Enabled = False
-        Me.txtEmployee.Location = New System.Drawing.Point(296, 15)
+        Me.txtEmployee.Location = New System.Drawing.Point(267, 13)
         Me.txtEmployee.Name = "txtEmployee"
-        Me.txtEmployee.Size = New System.Drawing.Size(194, 20)
+        Me.txtEmployee.Size = New System.Drawing.Size(223, 20)
         Me.txtEmployee.TabIndex = 0
         '
         'TabControl1
@@ -296,6 +345,17 @@ Partial Class frmUsers
         Me.CopyHeaderToAnotherUsersToolStripMenuItem.Name = "CopyHeaderToAnotherUsersToolStripMenuItem"
         Me.CopyHeaderToAnotherUsersToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
         Me.CopyHeaderToAnotherUsersToolStripMenuItem.Text = "Copy Header To Another Users"
+        '
+        'btnRefreshHeaderMenu
+        '
+        Me.btnRefreshHeaderMenu.BaseColor = System.Drawing.Color.White
+        Me.btnRefreshHeaderMenu.Location = New System.Drawing.Point(454, 6)
+        Me.btnRefreshHeaderMenu.Name = "btnRefreshHeaderMenu"
+        Me.btnRefreshHeaderMenu.Size = New System.Drawing.Size(29, 29)
+        Me.btnRefreshHeaderMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnRefreshHeaderMenu.TabIndex = 12
+        Me.btnRefreshHeaderMenu.TabStop = False
+        Me.btnRefreshHeaderMenu.UseTransfarantBackground = False
         '
         'txtCariHeader
         '
@@ -510,66 +570,6 @@ Partial Class frmUsers
         Me.RefreshControlToolStripMenuItem.Size = New System.Drawing.Size(254, 22)
         Me.RefreshControlToolStripMenuItem.Text = "Refresh Control"
         '
-        'btnRefreshHeaderMenu
-        '
-        Me.btnRefreshHeaderMenu.BaseColor = System.Drawing.Color.White
-        Me.btnRefreshHeaderMenu.Location = New System.Drawing.Point(454, 6)
-        Me.btnRefreshHeaderMenu.Name = "btnRefreshHeaderMenu"
-        Me.btnRefreshHeaderMenu.Size = New System.Drawing.Size(29, 29)
-        Me.btnRefreshHeaderMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btnRefreshHeaderMenu.TabIndex = 12
-        Me.btnRefreshHeaderMenu.TabStop = False
-        Me.btnRefreshHeaderMenu.UseTransfarantBackground = False
-        '
-        'picBrowsePegawai
-        '
-        Me.picBrowsePegawai.BaseColor = System.Drawing.Color.White
-        Me.picBrowsePegawai.Enabled = False
-        Me.picBrowsePegawai.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
-        Me.picBrowsePegawai.Location = New System.Drawing.Point(460, 37)
-        Me.picBrowsePegawai.Name = "picBrowsePegawai"
-        Me.picBrowsePegawai.Size = New System.Drawing.Size(27, 29)
-        Me.picBrowsePegawai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picBrowsePegawai.TabIndex = 18
-        Me.picBrowsePegawai.TabStop = False
-        Me.picBrowsePegawai.UseTransfarantBackground = False
-        '
-        'picNew
-        '
-        Me.picNew.BaseColor = System.Drawing.Color.White
-        Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.Add_User
-        Me.picNew.Location = New System.Drawing.Point(13, 196)
-        Me.picNew.Name = "picNew"
-        Me.picNew.Size = New System.Drawing.Size(47, 47)
-        Me.picNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picNew.TabIndex = 13
-        Me.picNew.TabStop = False
-        Me.picNew.UseTransfarantBackground = False
-        '
-        'picFind
-        '
-        Me.picFind.BaseColor = System.Drawing.Color.White
-        Me.picFind.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
-        Me.picFind.Location = New System.Drawing.Point(66, 196)
-        Me.picFind.Name = "picFind"
-        Me.picFind.Size = New System.Drawing.Size(47, 47)
-        Me.picFind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picFind.TabIndex = 11
-        Me.picFind.TabStop = False
-        Me.picFind.UseTransfarantBackground = False
-        '
-        'GunaTransfarantPictureBox1
-        '
-        Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Komputer
-        Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(9, 19)
-        Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
-        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(181, 171)
-        Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox1.TabIndex = 9
-        Me.GunaTransfarantPictureBox1.TabStop = False
-        '
         'frmUsers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -583,11 +583,16 @@ Partial Class frmUsers
         Me.Text = "Form Users"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.picBrowsePegawai, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picNew, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picFind, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         CType(Me.dgvHeaderMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.cmMenuHeader.ResumeLayout(False)
+        CType(Me.btnRefreshHeaderMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.dgvDetailMenu, System.ComponentModel.ISupportInitialize).EndInit()
@@ -600,11 +605,6 @@ Partial Class frmUsers
         CType(Me.dgvLocationControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.cmLocationControl.ResumeLayout(False)
         Me.cmCopyAlltoAllUsers.ResumeLayout(False)
-        CType(Me.btnRefreshHeaderMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picBrowsePegawai, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picNew, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picFind, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

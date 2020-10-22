@@ -356,6 +356,12 @@
     <Compile Include="frmUbahPassword.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Gadget\DetailFailedItegration.designer.vb">
+      <DependentUpon>DetailFailedItegration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\DetailFailedItegration.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Gadget\frmRequestFullfillment.Designer.vb">
       <DependentUpon>frmRequestFullfillment.vb</DependentUpon>
     </Compile>
@@ -793,6 +799,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUbahPassword.resx">
       <DependentUpon>frmUbahPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\DetailFailedItegration.resx">
+      <DependentUpon>DetailFailedItegration.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gadget\frmRequestFullfillment.resx">
       <DependentUpon>frmRequestFullfillment.vb</DependentUpon>

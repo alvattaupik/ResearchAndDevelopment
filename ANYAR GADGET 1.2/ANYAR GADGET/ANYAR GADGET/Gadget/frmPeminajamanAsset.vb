@@ -56,6 +56,7 @@ Public Class frmPeminajamanAsset
             Else
                 dgvListAssetYangDipinjam.Rows.Add(txtItemCode.Text, txtItemName.Text, txtSpesifikasi.Text, dtpAwal.Value, dtpAkhir.Value, txtCatatan.Text)
                 DisplayPesanOK("Successfully Add", frmMainMenu.txtPesanError, 1000)
+                lblJumlahItem.Text = "Jumlah Item Yg Dipinjam : " & dgvListAssetYangDipinjam.RowCount
             End If
         End If
 
@@ -280,6 +281,6 @@ Public Class frmPeminajamanAsset
         selRow = dgvListAssetYangDipinjam.Rows.Item(index)
         dgvListAssetYangDipinjam.Rows.Remove(selRow)
         row = row - 1
-        lblJumlahItem.Text = "Jumlah Item : " & dgvListAssetYangDipinjam.RowCount
+        lblJumlahItem.Text = "Jumlah Item Yg Dipinjam : " & dgvListAssetYangDipinjam.RowCount
     End Sub
 End Class

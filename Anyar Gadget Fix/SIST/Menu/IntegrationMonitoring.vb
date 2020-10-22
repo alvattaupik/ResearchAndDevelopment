@@ -474,4 +474,8 @@ Public Class IntegrationMonitoring
         lblJumlahReplikasi.Text = "Data Untuk Dikirim Ke Ivend Pusat : " & dgMonitoringReplikasi.RowCount
 
     End Sub
+
+    Private Sub dgFailedIntegration_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgFailedIntegration.CellContentClick
+
+    End Sub
 End Class

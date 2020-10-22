@@ -226,7 +226,7 @@ Public Class frmUsers
         dgvHeaderMenu.DataSource = Nothing
         dgvHeaderMenu.Rows.Clear()
         dgvHeaderMenu.Columns.Clear()
-        LoadHeadermenu()
+        'LoadHeadermenu()
 
 
 

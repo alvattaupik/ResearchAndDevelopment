@@ -39,6 +39,7 @@ Public Class frmRequestFullfillment
         txtDibuatOleh.Text = MstrNamaPegawai
         Call KoneksiDB_EMAIL()
         LoadDataGrid(dgvDaftarSurat, "SELECT Top 15 NomorSurat,CAST(TanggalSurat AS DATE) AS TglSurat,EmpName AS DibuatOleh,Perihal,DitujukanKepada AS Penerima FROM dbo.KopSurat Where EmpLocation='" & MstrKodeDivisi & "' AND Canceled='N' AND KdJenisSurat='" & lblKodeSurat.Text & "' Order By CreateDate Desc", KoneksiDBEmail)
+        dtpAkhir.Value = Now
     End Sub
 
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
@@ -58,17 +59,17 @@ Public Class frmRequestFullfillment
             Exit Sub
         Else
             dgvListItem.Rows.Add(txtKode.Text, txtDeskripsi.Text, txtNotifikasi.Text, cmbCabang.SelectedValue, dtpAwal.Value, dtpAkhir.Value, txtKeterangan.Text, txtPathLampiran.Text, cmbAction.Text)
-
             dgvListItem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
             dgvListItem.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
             dgvListItem.AutoResizeColumns()
-            lblJumlahItem.Text = "Jumlah Item Yang Dipinjam : " & dgvListItem.RowCount
+            lblJumlahItem.Text = "Jumlah Request : " & dgvListItem.RowCount
             txtKode.Text = ""
             txtDeskripsi.Text = ""
             txtNotifikasi.Text = ""
             cmbCabang.Text = ""
             cmbAction.Text = ""
             txtKeterangan.Text = ""
+            txtPathLampiran.Text = ""
         End If
 
        
@@ -107,14 +108,6 @@ Public Class frmRequestFullfillment
         Call KoneksiDB_EMAIL()
         LoadDataGrid(dgvDaftarSurat, "SELECT Top 15 NomorSurat,CAST(TanggalSurat AS DATE) AS TglSurat,EmpName AS DibuatOleh,Perihal,DitujukanKepada AS Penerima FROM dbo.KopSurat Where EmpLocation='" & MstrKodeDivisi & "' AND Canceled='N' AND KdJenisSurat='" & lblKodeSurat.Text & "' Order By CreateDate Desc", KoneksiDBEmail)
 
-        dgvListItem.DataSource = Nothing
-        dgvListItem.Rows.Clear()
-
-        txtNotifikasi.Text = ""
-        txtKeterangan.Text = ""
-        cmbCabang.Text = ""
-        txtPathLampiran.Text = ""
-        txtDeskripsi.Text = ""
 
 
 
@@ -185,6 +178,14 @@ Public Class frmRequestFullfillment
 
                 Next
 
+                dgvListItem.DataSource = Nothing
+                dgvListItem.Rows.Clear()
+
+                txtNotifikasi.Text = ""
+                txtKeterangan.Text = ""
+                cmbCabang.Text = ""
+                txtPathLampiran.Text = ""
+                txtDeskripsi.Text = ""
 
             End If
 

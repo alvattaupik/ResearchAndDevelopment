@@ -84,6 +84,11 @@ Public Class frmFullfillmentChecker
         On Error GoTo ErrorHandler
         Dim Tombol As Integer = Asc(e.KeyChar)
 
+        If txtNoStruk.Text = "" Then
+            DisplayPesanError("No Struk Is required", frmMainMenu.txtPesanError, 1000)
+            Exit Sub
+        End If
+
         If Tombol = 13 Then
             Call LoadReplicationMonitorIvendToStore()
         End If

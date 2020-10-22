@@ -23,6 +23,8 @@ Partial Class frmListKendaraan
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.picSearch = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.picNew = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -41,15 +43,13 @@ Partial Class frmListKendaraan
         Me.btnClose = New System.Windows.Forms.Button()
         Me.dgvListKendaraan = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.picSearch = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.picNew = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.picSearch, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picNew, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.gbListKendaraan.SuspendLayout()
         CType(Me.dgvListKendaraan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picSearch, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picNew, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -65,6 +65,30 @@ Partial Class frmListKendaraan
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "List Kendaraan"
+        '
+        'picSearch
+        '
+        Me.picSearch.BackColor = System.Drawing.Color.Transparent
+        Me.picSearch.BaseColor = System.Drawing.Color.Black
+        Me.picSearch.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
+        Me.picSearch.Location = New System.Drawing.Point(63, 15)
+        Me.picSearch.Name = "picSearch"
+        Me.picSearch.Size = New System.Drawing.Size(37, 38)
+        Me.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picSearch.TabIndex = 4
+        Me.picSearch.TabStop = False
+        '
+        'picNew
+        '
+        Me.picNew.BackColor = System.Drawing.Color.Transparent
+        Me.picNew.BaseColor = System.Drawing.Color.Black
+        Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.Add_Document
+        Me.picNew.Location = New System.Drawing.Point(19, 16)
+        Me.picNew.Name = "picNew"
+        Me.picNew.Size = New System.Drawing.Size(38, 37)
+        Me.picNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picNew.TabIndex = 3
+        Me.picNew.TabStop = False
         '
         'txtCari
         '
@@ -218,7 +242,7 @@ Partial Class frmListKendaraan
         Me.gbListKendaraan.Controls.Add(Me.btnClose)
         Me.gbListKendaraan.Controls.Add(Me.dgvListKendaraan)
         Me.gbListKendaraan.Controls.Add(Me.PictureBox1)
-        Me.gbListKendaraan.Location = New System.Drawing.Point(0, 64)
+        Me.gbListKendaraan.Location = New System.Drawing.Point(0, 74)
         Me.gbListKendaraan.Name = "gbListKendaraan"
         Me.gbListKendaraan.Size = New System.Drawing.Size(714, 251)
         Me.gbListKendaraan.TabIndex = 2
@@ -257,30 +281,6 @@ Partial Class frmListKendaraan
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'picSearch
-        '
-        Me.picSearch.BackColor = System.Drawing.Color.Transparent
-        Me.picSearch.BaseColor = System.Drawing.Color.Black
-        Me.picSearch.Image = Global.ANYAR_GADGET.My.Resources.Resources.Search_User
-        Me.picSearch.Location = New System.Drawing.Point(63, 15)
-        Me.picSearch.Name = "picSearch"
-        Me.picSearch.Size = New System.Drawing.Size(37, 38)
-        Me.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picSearch.TabIndex = 4
-        Me.picSearch.TabStop = False
-        '
-        'picNew
-        '
-        Me.picNew.BackColor = System.Drawing.Color.Transparent
-        Me.picNew.BaseColor = System.Drawing.Color.Black
-        Me.picNew.Image = Global.ANYAR_GADGET.My.Resources.Resources.Add_Document
-        Me.picNew.Location = New System.Drawing.Point(19, 16)
-        Me.picNew.Name = "picNew"
-        Me.picNew.Size = New System.Drawing.Size(38, 37)
-        Me.picNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picNew.TabIndex = 3
-        Me.picNew.TabStop = False
-        '
         'frmListKendaraan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -294,13 +294,13 @@ Partial Class frmListKendaraan
         Me.Text = "List Kendaraan"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.picSearch, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picNew, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.gbListKendaraan.ResumeLayout(False)
         CType(Me.dgvListKendaraan, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picSearch, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picNew, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

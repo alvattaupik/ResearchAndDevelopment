@@ -55,4 +55,6 @@
 
     Public MstrExtentionFile As String
     Public MstrpathAttatchments As String
+    Public MstrNoStruk As String
+
 End Module

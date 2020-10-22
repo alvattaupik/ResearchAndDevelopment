@@ -28,6 +28,7 @@ Partial Class frmPeminajamanAsset
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtNoTelp = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.picBrowsBusinessPartner = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtDitujukanKepada = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -42,11 +43,14 @@ Partial Class frmPeminajamanAsset
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNoSurat = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.lblKodeSurat = New System.Windows.Forms.Label()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.txtCariSurat = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
+        Me.picCancel = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.picPrint = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.dgvDaftarSurat = New System.Windows.Forms.DataGridView()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -83,22 +87,22 @@ Partial Class frmPeminajamanAsset
         Me.dtpAwal = New System.Windows.Forms.DateTimePicker()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.btnSimpanKeDaftar = New System.Windows.Forms.Button()
+        Me.picBrowseAssets = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.txtSpesifikasi = New System.Windows.Forms.RichTextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.txtItemName = New System.Windows.Forms.RichTextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.txtItemCode = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.picBrowseAssets = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.picCancel = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.picPrint = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.picBrowsBusinessPartner = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.picBrowsBusinessPartner, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
+        CType(Me.picCancel, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picPrint, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvDaftarSurat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -108,10 +112,6 @@ Partial Class frmPeminajamanAsset
         CType(Me.dgvListAssetYangDipinjam, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox12.SuspendLayout()
         CType(Me.picBrowseAssets, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picCancel, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picPrint, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picBrowsBusinessPartner, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -187,6 +187,17 @@ Partial Class frmPeminajamanAsset
         Me.Label8.Size = New System.Drawing.Size(63, 18)
         Me.Label8.TabIndex = 10
         Me.Label8.Text = "No. Tel"
+        '
+        'picBrowsBusinessPartner
+        '
+        Me.picBrowsBusinessPartner.Enabled = False
+        Me.picBrowsBusinessPartner.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
+        Me.picBrowsBusinessPartner.Location = New System.Drawing.Point(118, 41)
+        Me.picBrowsBusinessPartner.Name = "picBrowsBusinessPartner"
+        Me.picBrowsBusinessPartner.Size = New System.Drawing.Size(24, 24)
+        Me.picBrowsBusinessPartner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picBrowsBusinessPartner.TabIndex = 9
+        Me.picBrowsBusinessPartner.TabStop = False
         '
         'Label7
         '
@@ -317,6 +328,16 @@ Partial Class frmPeminajamanAsset
         Me.txtNoSurat.Size = New System.Drawing.Size(265, 24)
         Me.txtNoSurat.TabIndex = 0
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Cat_is_Typing
+        Me.PictureBox1.Location = New System.Drawing.Point(13, 28)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(150, 131)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'GroupBox4
         '
         Me.GroupBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -373,6 +394,32 @@ Partial Class frmPeminajamanAsset
         Me.Label20.Size = New System.Drawing.Size(25, 13)
         Me.Label20.TabIndex = 3
         Me.Label20.Text = "Cari"
+        '
+        'picCancel
+        '
+        Me.picCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.picCancel.BackColor = System.Drawing.Color.Transparent
+        Me.picCancel.BaseColor = System.Drawing.Color.Black
+        Me.picCancel.Image = Global.ANYAR_GADGET.My.Resources.Resources.Cancel
+        Me.picCancel.Location = New System.Drawing.Point(65, 393)
+        Me.picCancel.Name = "picCancel"
+        Me.picCancel.Size = New System.Drawing.Size(51, 53)
+        Me.picCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picCancel.TabIndex = 2
+        Me.picCancel.TabStop = False
+        '
+        'picPrint
+        '
+        Me.picPrint.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.picPrint.BackColor = System.Drawing.Color.Transparent
+        Me.picPrint.BaseColor = System.Drawing.Color.Black
+        Me.picPrint.Image = Global.ANYAR_GADGET.My.Resources.Resources.Print1
+        Me.picPrint.Location = New System.Drawing.Point(6, 393)
+        Me.picPrint.Name = "picPrint"
+        Me.picPrint.Size = New System.Drawing.Size(52, 53)
+        Me.picPrint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picPrint.TabIndex = 1
+        Me.picPrint.TabStop = False
         '
         'dgvDaftarSurat
         '
@@ -625,7 +672,7 @@ Partial Class frmPeminajamanAsset
         '
         Me.lblJumlahItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblJumlahItem.AutoSize = True
-        Me.lblJumlahItem.Location = New System.Drawing.Point(366, 314)
+        Me.lblJumlahItem.Location = New System.Drawing.Point(334, 314)
         Me.lblJumlahItem.Name = "lblJumlahItem"
         Me.lblJumlahItem.Size = New System.Drawing.Size(149, 13)
         Me.lblJumlahItem.TabIndex = 14
@@ -733,12 +780,24 @@ Partial Class frmPeminajamanAsset
         Me.btnSimpanKeDaftar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSimpanKeDaftar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSimpanKeDaftar.Location = New System.Drawing.Point(6, 403)
+        Me.btnSimpanKeDaftar.Location = New System.Drawing.Point(70, 372)
         Me.btnSimpanKeDaftar.Name = "btnSimpanKeDaftar"
-        Me.btnSimpanKeDaftar.Size = New System.Drawing.Size(385, 43)
+        Me.btnSimpanKeDaftar.Size = New System.Drawing.Size(313, 74)
         Me.btnSimpanKeDaftar.TabIndex = 8
         Me.btnSimpanKeDaftar.Text = "Tambah Ke Daftar Pinjam"
         Me.btnSimpanKeDaftar.UseVisualStyleBackColor = True
+        '
+        'picBrowseAssets
+        '
+        Me.picBrowseAssets.BackColor = System.Drawing.Color.Transparent
+        Me.picBrowseAssets.BaseColor = System.Drawing.Color.Black
+        Me.picBrowseAssets.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
+        Me.picBrowseAssets.Location = New System.Drawing.Point(70, 12)
+        Me.picBrowseAssets.Name = "picBrowseAssets"
+        Me.picBrowseAssets.Size = New System.Drawing.Size(30, 28)
+        Me.picBrowseAssets.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picBrowseAssets.TabIndex = 6
+        Me.picBrowseAssets.TabStop = False
         '
         'txtSpesifikasi
         '
@@ -793,65 +852,6 @@ Partial Class frmPeminajamanAsset
         Me.Label18.TabIndex = 0
         Me.Label18.Text = "Item Code"
         '
-        'picBrowseAssets
-        '
-        Me.picBrowseAssets.BackColor = System.Drawing.Color.Transparent
-        Me.picBrowseAssets.BaseColor = System.Drawing.Color.Black
-        Me.picBrowseAssets.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
-        Me.picBrowseAssets.Location = New System.Drawing.Point(70, 12)
-        Me.picBrowseAssets.Name = "picBrowseAssets"
-        Me.picBrowseAssets.Size = New System.Drawing.Size(30, 28)
-        Me.picBrowseAssets.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picBrowseAssets.TabIndex = 6
-        Me.picBrowseAssets.TabStop = False
-        '
-        'picCancel
-        '
-        Me.picCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.picCancel.BackColor = System.Drawing.Color.Transparent
-        Me.picCancel.BaseColor = System.Drawing.Color.Black
-        Me.picCancel.Image = Global.ANYAR_GADGET.My.Resources.Resources.Cancel
-        Me.picCancel.Location = New System.Drawing.Point(65, 393)
-        Me.picCancel.Name = "picCancel"
-        Me.picCancel.Size = New System.Drawing.Size(51, 53)
-        Me.picCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picCancel.TabIndex = 2
-        Me.picCancel.TabStop = False
-        '
-        'picPrint
-        '
-        Me.picPrint.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.picPrint.BackColor = System.Drawing.Color.Transparent
-        Me.picPrint.BaseColor = System.Drawing.Color.Black
-        Me.picPrint.Image = Global.ANYAR_GADGET.My.Resources.Resources.Print1
-        Me.picPrint.Location = New System.Drawing.Point(6, 393)
-        Me.picPrint.Name = "picPrint"
-        Me.picPrint.Size = New System.Drawing.Size(52, 53)
-        Me.picPrint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picPrint.TabIndex = 1
-        Me.picPrint.TabStop = False
-        '
-        'picBrowsBusinessPartner
-        '
-        Me.picBrowsBusinessPartner.Enabled = False
-        Me.picBrowsBusinessPartner.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
-        Me.picBrowsBusinessPartner.Location = New System.Drawing.Point(118, 41)
-        Me.picBrowsBusinessPartner.Name = "picBrowsBusinessPartner"
-        Me.picBrowsBusinessPartner.Size = New System.Drawing.Size(24, 24)
-        Me.picBrowsBusinessPartner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picBrowsBusinessPartner.TabIndex = 9
-        Me.picBrowsBusinessPartner.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Cat_is_Typing
-        Me.PictureBox1.Location = New System.Drawing.Point(13, 28)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(150, 131)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'frmPeminajamanAsset
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -871,12 +871,16 @@ Partial Class frmPeminajamanAsset
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.picBrowsBusinessPartner, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
+        CType(Me.picCancel, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picPrint, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvDaftarSurat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
@@ -892,10 +896,6 @@ Partial Class frmPeminajamanAsset
         Me.GroupBox12.ResumeLayout(False)
         Me.GroupBox12.PerformLayout()
         CType(Me.picBrowseAssets, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picCancel, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picPrint, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picBrowsBusinessPartner, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

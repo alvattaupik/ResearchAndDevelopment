@@ -33,8 +33,7 @@ Public Class frmListKendaraan
     End Sub
 
     Private Sub picNew_Click(sender As Object, e As EventArgs) Handles picNew.Click
-        'txtKode.Enabled = True
-        'txtKode.ReadOnly = False
+     
         txtNoKendaraan.Enabled = True
         txtTipeKendaraan.Enabled = True
         txtKodeNama.Enabled = True
@@ -42,6 +41,11 @@ Public Class frmListKendaraan
         txtCari.Text = ""
         txtCari.Enabled = False
         txtCari.BackColor = Color.Gray
+        txtNoKendaraan.Text = ""
+        txtKodeNama.Text = ""
+        txtKode.Text = ""
+        txtTipeKendaraan.Text = ""
+        cmbCabang.Text = ""
         btnProses.Text = "Add"
     End Sub
 
@@ -51,6 +55,13 @@ Public Class frmListKendaraan
         txtCari.BackColor = Color.PeachPuff
         txtNoKendaraan.Enabled = False
         txtNoKendaraan.ReadOnly = True
+        txtCari.Text = ""
+        txtKode.Text = ""
+        txtKodeNama.Text = ""
+        txtNoKendaraan.Text = ""
+        txtTipeKendaraan.Text = ""
+        cmbCabang.Text = ""
+
         btnProses.Text = "Update"
     End Sub
 

@@ -149,4 +149,57 @@ Public Class frmIntegrationMonitoring
 
    
 
+    Private Sub dgvListErrorIntegrasi_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListErrorIntegrasi.CellContentClick
+        If dgvListErrorIntegrasi.RowCount = 0 Then Exit Sub
+
+        If dgvListErrorIntegrasi.Item(3, dgvListErrorIntegrasi.CurrentRow.Index).Value = "" Then Exit Sub
+
+        DetailFailedItegration.txtIntegrationKey.Text = dgvListErrorIntegrasi.Item(2, dgvListErrorIntegrasi.CurrentRow.Index).Value
+        DetailFailedItegration.txtIntegrationKey.ReadOnly = True
+        DetailFailedItegration.txtNoStruk.Text = dgvListErrorIntegrasi.Item(3, dgvListErrorIntegrasi.CurrentRow.Index).Value
+        DetailFailedItegration.txtNoStruk.ReadOnly = True
+        DetailFailedItegration.txtKodeCust.Text = dgvListErrorIntegrasi.Item(5, dgvListErrorIntegrasi.CurrentRow.Index).Value
+        DetailFailedItegration.txtKodeCust.ReadOnly = True
+        DetailFailedItegration.txtNamaCust.Text = dgvListErrorIntegrasi.Item(6, dgvListErrorIntegrasi.CurrentRow.Index).Value
+        DetailFailedItegration.txtCabang.Text = dgvListErrorIntegrasi.Item(4, dgvListErrorIntegrasi.CurrentRow.Index).Value
+        DetailFailedItegration.txtNotifError.Text = dgvListErrorIntegrasi.Item(7, dgvListErrorIntegrasi.CurrentRow.Index).Value
+        DetailFailedItegration.txtNotifError.ReadOnly = True
+        MstrNoStruk = dgvListErrorIntegrasi.Item(3, dgvListErrorIntegrasi.CurrentRow.Index).Value
+
+        LoadAlamatCustomer(dgvListErrorIntegrasi.Item(3, dgvListErrorIntegrasi.CurrentRow.Index).Value, dgvListErrorIntegrasi.Item(5, dgvListErrorIntegrasi.CurrentRow.Index).Value)
+
+
+        DetailFailedItegration.ShowDialog()
+
+    End Sub
+
+    Sub LoadAlamatCustomer(strNoStruk As String, strKodeCustomer As String)
+        On Error Resume Next
+        Call Koneksi_IVEND()
+
+        Dim strSQL As String = "SELECT top 1 AlamatCustomer,AlamatDelivery FROM dbo.V_CekFullfilments WHERE NoStruk='" & strNoStruk & "' AND KodeCustomer='" & strKodeCustomer & "'"
+        cmd = New SqlCommand(strSQL, KoneksiIvend)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows = True Then
+
+            DetailFailedItegration.txtAlamatCustomer.Text = dr.GetString(0)
+            DetailFailedItegration.txtAlamatCustomer.ReadOnly = True
+
+            DetailFailedItegration.txtAlamatFullfill.Text = dr.GetString(1)
+            DetailFailedItegration.txtAlamatFullfill.ReadOnly = True
+
+
+            dr.Close()
+        Else
+
+            dr.Close()
+            Exit Sub
+        End If
+
+
+    End Sub
+
+
+
 End Class

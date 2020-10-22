@@ -100,6 +100,10 @@ Module ModuleUltility
                 frmMainMenu.H_Konten.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "OMASTER005" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_AssetManagement.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "OMASTER006" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.H_ApprovalDecisionTemplate.Visible = True
+
+
             ElseIf dgv.Rows(i).Cells(0).Value = "OGADGET001" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.H_Sidebar.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "OGADGET002" And dgv.Rows(i).Cells(1).Value = "Y" Then

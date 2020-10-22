@@ -577,9 +577,10 @@ Partial Class frmBAPSerahTerima
         '
         Me.btnTambah.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTambah.Location = New System.Drawing.Point(66, 135)
         Me.btnTambah.Name = "btnTambah"
-        Me.btnTambah.Size = New System.Drawing.Size(294, 29)
+        Me.btnTambah.Size = New System.Drawing.Size(294, 55)
         Me.btnTambah.TabIndex = 15
         Me.btnTambah.Text = "Tambah"
         Me.btnTambah.UseVisualStyleBackColor = True
@@ -648,7 +649,7 @@ Partial Class frmBAPSerahTerima
         '
         Me.lblJumlahItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblJumlahItem.AutoSize = True
-        Me.lblJumlahItem.Location = New System.Drawing.Point(741, 269)
+        Me.lblJumlahItem.Location = New System.Drawing.Point(552, 270)
         Me.lblJumlahItem.Name = "lblJumlahItem"
         Me.lblJumlahItem.Size = New System.Drawing.Size(78, 13)
         Me.lblJumlahItem.TabIndex = 14
@@ -657,6 +658,7 @@ Partial Class frmBAPSerahTerima
         'btnHapus
         '
         Me.btnHapus.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnHapus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnHapus.Location = New System.Drawing.Point(439, 254)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(95, 42)

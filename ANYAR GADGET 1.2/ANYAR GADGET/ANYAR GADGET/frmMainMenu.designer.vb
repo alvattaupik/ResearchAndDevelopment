@@ -44,7 +44,6 @@ Partial Class frmMainMenu
         Me.H_Monitoring = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_Realstock = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_Delivery = New System.Windows.Forms.ToolStripMenuItem()
-        Me.I_MonPeminjamanAsset = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_PrintServices = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_AnyarLocalPrint = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_RKMDisplayTag = New System.Windows.Forms.ToolStripMenuItem()
@@ -254,7 +253,7 @@ Partial Class frmMainMenu
         '
         'H_Monitoring
         '
-        Me.H_Monitoring.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_Realstock, Me.I_Delivery, Me.I_MonPeminjamanAsset})
+        Me.H_Monitoring.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_Realstock, Me.I_Delivery})
         Me.H_Monitoring.Image = Global.ANYAR_GADGET.My.Resources.Resources.Monitoring_Icon1
         Me.H_Monitoring.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.H_Monitoring.Name = "H_Monitoring"
@@ -265,22 +264,16 @@ Partial Class frmMainMenu
         'I_Realstock
         '
         Me.I_Realstock.Name = "I_Realstock"
-        Me.I_Realstock.Size = New System.Drawing.Size(172, 22)
+        Me.I_Realstock.Size = New System.Drawing.Size(152, 22)
         Me.I_Realstock.Text = "Real Stock"
         Me.I_Realstock.Visible = False
         '
         'I_Delivery
         '
         Me.I_Delivery.Name = "I_Delivery"
-        Me.I_Delivery.Size = New System.Drawing.Size(172, 22)
+        Me.I_Delivery.Size = New System.Drawing.Size(152, 22)
         Me.I_Delivery.Text = "Delivery"
         Me.I_Delivery.Visible = False
-        '
-        'I_MonPeminjamanAsset
-        '
-        Me.I_MonPeminjamanAsset.Name = "I_MonPeminjamanAsset"
-        Me.I_MonPeminjamanAsset.Size = New System.Drawing.Size(172, 22)
-        Me.I_MonPeminjamanAsset.Text = "Peminjaman Asset"
         '
         'H_PrintServices
         '
@@ -901,7 +894,6 @@ Partial Class frmMainMenu
     Friend WithEvents I_RequestFullfillments As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_ApprovalDecisionTemplate As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_PeminjamanAsset As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents I_MonPeminjamanAsset As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ApprovalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_ApprovalReqFullfillment As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_ApprovalPeminjaman As System.Windows.Forms.ToolStripMenuItem

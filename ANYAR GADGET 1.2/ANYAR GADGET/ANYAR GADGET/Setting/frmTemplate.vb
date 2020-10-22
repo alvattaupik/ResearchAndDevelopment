@@ -186,7 +186,7 @@
     Private Sub btnCariOutgoingPayment_Click(sender As Object, e As EventArgs) Handles btnCariOutgoingPayment.Click
         Using O As New OpenFileDialog
             If O.ShowDialog = 1 Then
-                txtLokasiGoodsIssue.Text = O.FileName
+                txtLokasiOutgoingPayments.Text = O.FileName
             End If
         End Using
 

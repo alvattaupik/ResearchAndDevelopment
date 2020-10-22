@@ -24,7 +24,9 @@ Partial Class frmFullfillmentChecker
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.GunaTransfarantPictureBox3 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.dgvListKontrolForm = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -36,42 +38,38 @@ Partial Class frmFullfillmentChecker
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
         Me.txtNoStruk = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.dgvListItemIntegrasi = New System.Windows.Forms.DataGridView()
-        Me.lbljumlahItem = New System.Windows.Forms.Label()
         Me.picFailIvend = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.picOkIvend = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.GunaTransfarantPictureBox2 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.picFailSAP = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.picOkSAP = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.GunaTransfarantPictureBox3 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.dgvListItemIntegrasi = New System.Windows.Forms.DataGridView()
+        Me.lbljumlahItem = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
+        CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvListKontrolForm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        CType(Me.dgvListItemIntegrasi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picFailIvend, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picOkIvend, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
         CType(Me.picFailSAP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picOkSAP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvListItemIntegrasi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -91,6 +89,20 @@ Partial Class frmFullfillmentChecker
         Me.Panel2.Size = New System.Drawing.Size(238, 588)
         Me.Panel2.TabIndex = 1
         '
+        'GunaTransfarantPictureBox3
+        '
+        Me.GunaTransfarantPictureBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GunaTransfarantPictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox3.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.Batik_3
+        Me.GunaTransfarantPictureBox3.Location = New System.Drawing.Point(0, 442)
+        Me.GunaTransfarantPictureBox3.Name = "GunaTransfarantPictureBox3"
+        Me.GunaTransfarantPictureBox3.Size = New System.Drawing.Size(243, 171)
+        Me.GunaTransfarantPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.GunaTransfarantPictureBox3.TabIndex = 20
+        Me.GunaTransfarantPictureBox3.TabStop = False
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -101,6 +113,16 @@ Partial Class frmFullfillmentChecker
         Me.Label6.Size = New System.Drawing.Size(213, 18)
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "Engine Version 1.2.06.2020"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Loading_7
+        Me.PictureBox1.Location = New System.Drawing.Point(13, 10)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(122, 128)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
         '
         'dgvListKontrolForm
         '
@@ -176,7 +198,6 @@ Partial Class frmFullfillmentChecker
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.PictureBox6)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Location = New System.Drawing.Point(247, 9)
         Me.Panel1.Name = "Panel1"
@@ -210,6 +231,17 @@ Partial Class frmFullfillmentChecker
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Nomor Struk :"
+        '
+        'GunaPictureBox1
+        '
+        Me.GunaPictureBox1.BaseColor = System.Drawing.Color.White
+        Me.GunaPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Receipt_2
+        Me.GunaPictureBox1.Location = New System.Drawing.Point(18, 19)
+        Me.GunaPictureBox1.Name = "GunaPictureBox1"
+        Me.GunaPictureBox1.Size = New System.Drawing.Size(46, 32)
+        Me.GunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.GunaPictureBox1.TabIndex = 1
+        Me.GunaPictureBox1.TabStop = False
         '
         'txtNoStruk
         '
@@ -256,39 +288,6 @@ Partial Class frmFullfillmentChecker
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Integration"
         '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.picFailSAP)
-        Me.GroupBox3.Controls.Add(Me.picOkSAP)
-        Me.GroupBox3.Controls.Add(Me.GunaTransfarantPictureBox1)
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 43)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(156, 79)
-        Me.GroupBox3.TabIndex = 0
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Integration"
-        '
-        'dgvListItemIntegrasi
-        '
-        Me.dgvListItemIntegrasi.AllowUserToAddRows = False
-        Me.dgvListItemIntegrasi.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvListItemIntegrasi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvListItemIntegrasi.Location = New System.Drawing.Point(249, 307)
-        Me.dgvListItemIntegrasi.Name = "dgvListItemIntegrasi"
-        Me.dgvListItemIntegrasi.RowHeadersVisible = False
-        Me.dgvListItemIntegrasi.Size = New System.Drawing.Size(675, 260)
-        Me.dgvListItemIntegrasi.TabIndex = 7
-        '
-        'lbljumlahItem
-        '
-        Me.lbljumlahItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.lbljumlahItem.AutoSize = True
-        Me.lbljumlahItem.Location = New System.Drawing.Point(247, 572)
-        Me.lbljumlahItem.Name = "lbljumlahItem"
-        Me.lbljumlahItem.Size = New System.Drawing.Size(78, 13)
-        Me.lbljumlahItem.TabIndex = 8
-        Me.lbljumlahItem.Text = "Jumlah Item : 0"
-        '
         'picFailIvend
         '
         Me.picFailIvend.BaseColor = System.Drawing.Color.White
@@ -326,6 +325,18 @@ Partial Class frmFullfillmentChecker
         Me.GunaTransfarantPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.GunaTransfarantPictureBox2.TabIndex = 1
         Me.GunaTransfarantPictureBox2.TabStop = False
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.picFailSAP)
+        Me.GroupBox3.Controls.Add(Me.picOkSAP)
+        Me.GroupBox3.Controls.Add(Me.GunaTransfarantPictureBox1)
+        Me.GroupBox3.Location = New System.Drawing.Point(6, 43)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(156, 79)
+        Me.GroupBox3.TabIndex = 0
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Integration"
         '
         'picFailSAP
         '
@@ -365,50 +376,26 @@ Partial Class frmFullfillmentChecker
         Me.GunaTransfarantPictureBox1.TabIndex = 1
         Me.GunaTransfarantPictureBox1.TabStop = False
         '
-        'GunaPictureBox1
+        'dgvListItemIntegrasi
         '
-        Me.GunaPictureBox1.BaseColor = System.Drawing.Color.White
-        Me.GunaPictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Receipt_2
-        Me.GunaPictureBox1.Location = New System.Drawing.Point(18, 19)
-        Me.GunaPictureBox1.Name = "GunaPictureBox1"
-        Me.GunaPictureBox1.Size = New System.Drawing.Size(46, 32)
-        Me.GunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.GunaPictureBox1.TabIndex = 1
-        Me.GunaPictureBox1.TabStop = False
+        Me.dgvListItemIntegrasi.AllowUserToAddRows = False
+        Me.dgvListItemIntegrasi.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvListItemIntegrasi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvListItemIntegrasi.Location = New System.Drawing.Point(249, 307)
+        Me.dgvListItemIntegrasi.Name = "dgvListItemIntegrasi"
+        Me.dgvListItemIntegrasi.RowHeadersVisible = False
+        Me.dgvListItemIntegrasi.Size = New System.Drawing.Size(675, 260)
+        Me.dgvListItemIntegrasi.TabIndex = 7
         '
-        'PictureBox6
+        'lbljumlahItem
         '
-        Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox6.Location = New System.Drawing.Point(598, 15)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(73, 46)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 46
-        Me.PictureBox6.TabStop = False
-        '
-        'GunaTransfarantPictureBox3
-        '
-        Me.GunaTransfarantPictureBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GunaTransfarantPictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox3.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox3.Image = Global.ANYAR_GADGET.My.Resources.Resources.Batik_3
-        Me.GunaTransfarantPictureBox3.Location = New System.Drawing.Point(0, 442)
-        Me.GunaTransfarantPictureBox3.Name = "GunaTransfarantPictureBox3"
-        Me.GunaTransfarantPictureBox3.Size = New System.Drawing.Size(243, 171)
-        Me.GunaTransfarantPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.GunaTransfarantPictureBox3.TabIndex = 20
-        Me.GunaTransfarantPictureBox3.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Loading_7
-        Me.PictureBox1.Location = New System.Drawing.Point(13, 10)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(122, 128)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 8
-        Me.PictureBox1.TabStop = False
+        Me.lbljumlahItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lbljumlahItem.AutoSize = True
+        Me.lbljumlahItem.Location = New System.Drawing.Point(247, 572)
+        Me.lbljumlahItem.Name = "lbljumlahItem"
+        Me.lbljumlahItem.Size = New System.Drawing.Size(78, 13)
+        Me.lbljumlahItem.TabIndex = 8
+        Me.lbljumlahItem.Text = "Jumlah Item : 0"
         '
         'frmFullfillmentChecker
         '
@@ -429,6 +416,8 @@ Partial Class frmFullfillmentChecker
         Me.Text = "IntegrationMonitoring"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvListKontrolForm, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
@@ -436,21 +425,18 @@ Partial Class frmFullfillmentChecker
         Me.Panel1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
-        CType(Me.dgvListItemIntegrasi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picFailIvend, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picOkIvend, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
         CType(Me.picFailSAP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picOkSAP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvListItemIntegrasi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -485,5 +471,4 @@ Partial Class frmFullfillmentChecker
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents GunaTransfarantPictureBox3 As Guna.UI.WinForms.GunaTransfarantPictureBox
-    Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
 End Class
