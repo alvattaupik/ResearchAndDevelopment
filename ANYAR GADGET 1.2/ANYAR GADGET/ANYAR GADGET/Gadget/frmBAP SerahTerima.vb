@@ -261,7 +261,7 @@ Public Class frmBAPSerahTerima
     End Sub
 
     Private Sub picPrint_Click(sender As Object, e As EventArgs) Handles picPrint.Click
-
+        If dgvDaftarSurat.RowCount = 0 Then Exit Sub
 
         paramField.Name = "NomorSurat@"
         paramDiscreteValue.Value = (Trim(dgvDaftarSurat.Item(0, dgvDaftarSurat.CurrentRow.Index).Value))

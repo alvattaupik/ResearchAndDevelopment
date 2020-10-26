@@ -24,19 +24,13 @@ Public Class frmUsers
         txtUsername.Enabled = True
 
         cboAktif.Enabled = True
-        cboAktif.Checked = True
-
         dgvDetailMenu.DataSource = Nothing
         dgvDetailMenu.Rows.Clear()
-
-        dgvHeaderMenu.DataSource = Nothing
-        dgvHeaderMenu.Rows.Clear()
-
 
     End Sub
 
     Private Sub btnAksi_Click(sender As Object, e As EventArgs) Handles btnAksi.Click
-        If btnAksi.Text = "OK" Then
+        If btnAksi.Text = "Ok" Then
             Me.Dispose()
         End If
 
@@ -498,7 +492,7 @@ ErrorHandler:
     End Sub
 
 
-    Private Sub btnRefreshHeaderMenu_Click(sender As Object, e As EventArgs) Handles btnRefreshHeaderMenu.Click
+    Private Sub btnRefreshHeaderMenu_Click(sender As Object, e As EventArgs)
         If txtUsername.Text <> "" Then
             dgvHeaderMenu.DataSource = Nothing
             dgvHeaderMenu.Rows.Clear()
@@ -662,7 +656,7 @@ ErrorHandler:
 
 
                 command.Parameters.AddWithValue("StatusEnabled", Trim(dgv.Rows(i).Cells(2).Value))
-                command.Parameters.AddWithValue("UsernameLogin", Trim(MstrUsernameLogin))
+                command.Parameters.AddWithValue("UsernameLogin", Trim(txtUsername.Text))
                 command.Parameters.AddWithValue("KodeAplikasi", Trim(MstrKodeAplikasi))
                 command.Parameters.AddWithValue("KodeUsernameLoginTujuan", Trim(""))
                 command.Parameters.AddWithValue("Function", Trim(strFunction))
@@ -673,7 +667,7 @@ ErrorHandler:
                 command.ExecuteNonQuery()
 
             Catch ex As Exception
-                DisplayPesanError("Operation Success", frmMainMenu.txtPesanError, 1000)
+                DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 5000)
 
             End Try
 

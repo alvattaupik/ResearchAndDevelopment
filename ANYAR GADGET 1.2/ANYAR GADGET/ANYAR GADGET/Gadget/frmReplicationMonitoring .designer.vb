@@ -503,7 +503,6 @@ Partial Class frmReplicationMonitoring
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
-        Me.MaximizeBox = False
         Me.Name = "frmReplicationMonitoring"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "IntegrationMonitoring"

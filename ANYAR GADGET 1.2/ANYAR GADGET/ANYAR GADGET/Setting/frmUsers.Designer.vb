@@ -47,7 +47,6 @@ Partial Class frmUsers
         Me.dgvHeaderMenu = New System.Windows.Forms.DataGridView()
         Me.cmMenuHeader = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CopyHeaderToAnotherUsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnRefreshHeaderMenu = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.txtCariHeader = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnUpdateHdrMenu = New System.Windows.Forms.Button()
@@ -82,7 +81,6 @@ Partial Class frmUsers
         Me.TabPage1.SuspendLayout()
         CType(Me.dgvHeaderMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cmMenuHeader.SuspendLayout()
-        CType(Me.btnRefreshHeaderMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.dgvDetailMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cmDetailMenu.SuspendLayout()
@@ -128,9 +126,9 @@ Partial Class frmUsers
         Me.picBrowsePegawai.BaseColor = System.Drawing.Color.White
         Me.picBrowsePegawai.Enabled = False
         Me.picBrowsePegawai.Image = Global.ANYAR_GADGET.My.Resources.Resources.browse
-        Me.picBrowsePegawai.Location = New System.Drawing.Point(460, 56)
+        Me.picBrowsePegawai.Location = New System.Drawing.Point(463, 36)
         Me.picBrowsePegawai.Name = "picBrowsePegawai"
-        Me.picBrowsePegawai.Size = New System.Drawing.Size(27, 29)
+        Me.picBrowsePegawai.Size = New System.Drawing.Size(27, 23)
         Me.picBrowsePegawai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picBrowsePegawai.TabIndex = 18
         Me.picBrowsePegawai.TabStop = False
@@ -188,7 +186,7 @@ Partial Class frmUsers
         '
         Me.cboAktif.AutoSize = True
         Me.cboAktif.Enabled = False
-        Me.cboAktif.Location = New System.Drawing.Point(296, 188)
+        Me.cboAktif.Location = New System.Drawing.Point(267, 191)
         Me.cboAktif.Name = "cboAktif"
         Me.cboAktif.Size = New System.Drawing.Size(47, 17)
         Me.cboAktif.TabIndex = 12
@@ -265,7 +263,7 @@ Partial Class frmUsers
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(180, 62)
+        Me.Label2.Location = New System.Drawing.Point(180, 39)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 13)
         Me.Label2.TabIndex = 3
@@ -283,7 +281,7 @@ Partial Class frmUsers
         'txtNamaPegawai
         '
         Me.txtNamaPegawai.Enabled = False
-        Me.txtNamaPegawai.Location = New System.Drawing.Point(267, 59)
+        Me.txtNamaPegawai.Location = New System.Drawing.Point(268, 39)
         Me.txtNamaPegawai.Name = "txtNamaPegawai"
         Me.txtNamaPegawai.Size = New System.Drawing.Size(187, 20)
         Me.txtNamaPegawai.TabIndex = 1
@@ -311,7 +309,6 @@ Partial Class frmUsers
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.dgvHeaderMenu)
-        Me.TabPage1.Controls.Add(Me.btnRefreshHeaderMenu)
         Me.TabPage1.Controls.Add(Me.txtCariHeader)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.btnUpdateHdrMenu)
@@ -346,32 +343,21 @@ Partial Class frmUsers
         Me.CopyHeaderToAnotherUsersToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
         Me.CopyHeaderToAnotherUsersToolStripMenuItem.Text = "Copy Header To Another Users"
         '
-        'btnRefreshHeaderMenu
-        '
-        Me.btnRefreshHeaderMenu.BaseColor = System.Drawing.Color.White
-        Me.btnRefreshHeaderMenu.Location = New System.Drawing.Point(454, 6)
-        Me.btnRefreshHeaderMenu.Name = "btnRefreshHeaderMenu"
-        Me.btnRefreshHeaderMenu.Size = New System.Drawing.Size(29, 29)
-        Me.btnRefreshHeaderMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btnRefreshHeaderMenu.TabIndex = 12
-        Me.btnRefreshHeaderMenu.TabStop = False
-        Me.btnRefreshHeaderMenu.UseTransfarantBackground = False
-        '
         'txtCariHeader
         '
         Me.txtCariHeader.Location = New System.Drawing.Point(75, 9)
         Me.txtCariHeader.Name = "txtCariHeader"
-        Me.txtCariHeader.Size = New System.Drawing.Size(373, 20)
+        Me.txtCariHeader.Size = New System.Drawing.Size(408, 20)
         Me.txtCariHeader.TabIndex = 11
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 12)
+        Me.Label6.Location = New System.Drawing.Point(7, 12)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 13)
+        Me.Label6.Size = New System.Drawing.Size(25, 13)
         Me.Label6.TabIndex = 10
-        Me.Label6.Text = "Cari Header"
+        Me.Label6.Text = "Cari"
         '
         'btnUpdateHdrMenu
         '
@@ -502,7 +488,7 @@ Partial Class frmUsers
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 7)
+        Me.Label9.Location = New System.Drawing.Point(10, 10)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(30, 13)
         Me.Label9.TabIndex = 13
@@ -592,7 +578,6 @@ Partial Class frmUsers
         Me.TabPage1.PerformLayout()
         CType(Me.dgvHeaderMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.cmMenuHeader.ResumeLayout(False)
-        CType(Me.btnRefreshHeaderMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.dgvDetailMenu, System.ComponentModel.ISupportInitialize).EndInit()
@@ -630,7 +615,6 @@ Partial Class frmUsers
     Friend WithEvents cmbHeaderMenu As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents btnUpdateDetailMenu As System.Windows.Forms.Button
-    Friend WithEvents btnRefreshHeaderMenu As Guna.UI.WinForms.GunaCirclePictureBox
     Friend WithEvents picNew As Guna.UI.WinForms.GunaCirclePictureBox
     Friend WithEvents dgvDetailMenu As System.Windows.Forms.DataGridView
     Friend WithEvents cmbLocation As System.Windows.Forms.ComboBox

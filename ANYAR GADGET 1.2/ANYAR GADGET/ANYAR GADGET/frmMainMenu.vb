@@ -334,4 +334,10 @@ Public Class frmMainMenu
     End Sub
 
 
+    Private Sub I_Penjualan_Click(sender As Object, e As EventArgs) Handles I_Penjualan.Click
+        Dim frm As New frmMonitorPenjualan
+        frm.MdiParent = Me
+        frm.BringToFront()
+        frm.Show()
+    End Sub
 End Class

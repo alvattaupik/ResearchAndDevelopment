@@ -47,13 +47,6 @@ Partial Class frmMonitoringDelivery
         Me.lblDeliveryBelumDikirim = New System.Windows.Forms.Label()
         Me.dgDeliveryBelumDikirim = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.lblDeliverySudahDikirim = New System.Windows.Forms.Label()
-        Me.dgDeliverySudahDikirim = New System.Windows.Forms.DataGridView()
-        Me.gvListItems = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtNamaCustomer = New System.Windows.Forms.TextBox()
-        Me.dgItemDelivery = New System.Windows.Forms.DataGridView()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.cmbSudahDikirim = New System.Windows.Forms.ComboBox()
         Me.btnSudahDIkirim = New Guna.UI.WinForms.GunaGradientButton()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -61,6 +54,23 @@ Partial Class frmMonitoringDelivery
         Me.Label10 = New System.Windows.Forms.Label()
         Me.dtp1SudahDikirim = New Guna.UI.WinForms.GunaDateTimePicker()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.lblDeliverySudahDikirim = New System.Windows.Forms.Label()
+        Me.dgDeliverySudahDikirim = New System.Windows.Forms.DataGridView()
+        Me.gvListItems = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtNamaCustomer = New System.Windows.Forms.TextBox()
+        Me.dgItemDelivery = New System.Windows.Forms.DataGridView()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.picExportToExcelSemua = New System.Windows.Forms.PictureBox()
+        Me.lblExportSemuaDikirim = New System.Windows.Forms.Label()
+        Me.picExportBlmDikirim = New System.Windows.Forms.PictureBox()
+        Me.lblExportBelumDikirim = New System.Windows.Forms.Label()
+        Me.lblSudahDikirim = New System.Windows.Forms.Label()
+        Me.picExportSudahDikirim = New System.Windows.Forms.PictureBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -71,6 +81,11 @@ Partial Class frmMonitoringDelivery
         CType(Me.dgDeliverySudahDikirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gvListItems.SuspendLayout()
         CType(Me.dgItemDelivery, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picExportToExcelSemua, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picExportBlmDikirim, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picExportSudahDikirim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdShow
@@ -87,7 +102,7 @@ Partial Class frmMonitoringDelivery
         Me.cmdShow.ForeColor = System.Drawing.Color.White
         Me.cmdShow.Image = Nothing
         Me.cmdShow.ImageSize = New System.Drawing.Size(20, 20)
-        Me.cmdShow.Location = New System.Drawing.Point(340, 8)
+        Me.cmdShow.Location = New System.Drawing.Point(340, 5)
         Me.cmdShow.Name = "cmdShow"
         Me.cmdShow.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.cmdShow.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -96,7 +111,7 @@ Partial Class frmMonitoringDelivery
         Me.cmdShow.OnHoverImage = Nothing
         Me.cmdShow.OnPressedColor = System.Drawing.Color.Black
         Me.cmdShow.Radius = 2
-        Me.cmdShow.Size = New System.Drawing.Size(230, 47)
+        Me.cmdShow.Size = New System.Drawing.Size(104, 51)
         Me.cmdShow.TabIndex = 36
         Me.cmdShow.Text = "Show"
         Me.cmdShow.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -176,15 +191,17 @@ Partial Class frmMonitoringDelivery
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Location = New System.Drawing.Point(8, 6)
+        Me.TabControl1.Location = New System.Drawing.Point(8, 87)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(589, 397)
+        Me.TabControl1.Size = New System.Drawing.Size(589, 316)
         Me.TabControl1.TabIndex = 4
         '
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.lblExportSemuaDikirim)
+        Me.TabPage1.Controls.Add(Me.picExportToExcelSemua)
         Me.TabPage1.Controls.Add(Me.cmbCabangAll)
         Me.TabPage1.Controls.Add(Me.cmdShow)
         Me.TabPage1.Controls.Add(Me.Label7)
@@ -197,7 +214,7 @@ Partial Class frmMonitoringDelivery
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(581, 371)
+        Me.TabPage1.Size = New System.Drawing.Size(581, 290)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Semua Delivery"
         '
@@ -235,7 +252,7 @@ Partial Class frmMonitoringDelivery
         Me.lblJumlahTransaksi.AutoSize = True
         Me.lblJumlahTransaksi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblJumlahTransaksi.ForeColor = System.Drawing.Color.Black
-        Me.lblJumlahTransaksi.Location = New System.Drawing.Point(6, 346)
+        Me.lblJumlahTransaksi.Location = New System.Drawing.Point(6, 265)
         Me.lblJumlahTransaksi.Name = "lblJumlahTransaksi"
         Me.lblJumlahTransaksi.Size = New System.Drawing.Size(209, 20)
         Me.lblJumlahTransaksi.TabIndex = 4
@@ -253,12 +270,14 @@ Partial Class frmMonitoringDelivery
         Me.dgDaftarDelivery.Location = New System.Drawing.Point(6, 65)
         Me.dgDaftarDelivery.Name = "dgDaftarDelivery"
         Me.dgDaftarDelivery.ReadOnly = True
-        Me.dgDaftarDelivery.Size = New System.Drawing.Size(564, 278)
+        Me.dgDaftarDelivery.Size = New System.Drawing.Size(564, 197)
         Me.dgDaftarDelivery.TabIndex = 3
         '
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.TabPage2.Controls.Add(Me.lblExportBelumDikirim)
+        Me.TabPage2.Controls.Add(Me.picExportBlmDikirim)
         Me.TabPage2.Controls.Add(Me.cmbCabangBelumDikirim)
         Me.TabPage2.Controls.Add(Me.btnShowBelumDikirim)
         Me.TabPage2.Controls.Add(Me.Label4)
@@ -271,7 +290,7 @@ Partial Class frmMonitoringDelivery
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(581, 371)
+        Me.TabPage2.Size = New System.Drawing.Size(581, 290)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Belum Dikirim"
         '
@@ -297,7 +316,7 @@ Partial Class frmMonitoringDelivery
         Me.btnShowBelumDikirim.ForeColor = System.Drawing.Color.White
         Me.btnShowBelumDikirim.Image = Nothing
         Me.btnShowBelumDikirim.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnShowBelumDikirim.Location = New System.Drawing.Point(340, 9)
+        Me.btnShowBelumDikirim.Location = New System.Drawing.Point(340, 6)
         Me.btnShowBelumDikirim.Name = "btnShowBelumDikirim"
         Me.btnShowBelumDikirim.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.btnShowBelumDikirim.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -306,7 +325,7 @@ Partial Class frmMonitoringDelivery
         Me.btnShowBelumDikirim.OnHoverImage = Nothing
         Me.btnShowBelumDikirim.OnPressedColor = System.Drawing.Color.Black
         Me.btnShowBelumDikirim.Radius = 2
-        Me.btnShowBelumDikirim.Size = New System.Drawing.Size(230, 47)
+        Me.btnShowBelumDikirim.Size = New System.Drawing.Size(101, 57)
         Me.btnShowBelumDikirim.TabIndex = 49
         Me.btnShowBelumDikirim.Text = "Show"
         Me.btnShowBelumDikirim.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -396,7 +415,7 @@ Partial Class frmMonitoringDelivery
         Me.lblDeliveryBelumDikirim.AutoSize = True
         Me.lblDeliveryBelumDikirim.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDeliveryBelumDikirim.ForeColor = System.Drawing.Color.White
-        Me.lblDeliveryBelumDikirim.Location = New System.Drawing.Point(6, 347)
+        Me.lblDeliveryBelumDikirim.Location = New System.Drawing.Point(6, 266)
         Me.lblDeliveryBelumDikirim.Name = "lblDeliveryBelumDikirim"
         Me.lblDeliveryBelumDikirim.Size = New System.Drawing.Size(280, 20)
         Me.lblDeliveryBelumDikirim.TabIndex = 42
@@ -414,12 +433,14 @@ Partial Class frmMonitoringDelivery
         Me.dgDeliveryBelumDikirim.Location = New System.Drawing.Point(6, 78)
         Me.dgDeliveryBelumDikirim.Name = "dgDeliveryBelumDikirim"
         Me.dgDeliveryBelumDikirim.ReadOnly = True
-        Me.dgDeliveryBelumDikirim.Size = New System.Drawing.Size(564, 254)
+        Me.dgDeliveryBelumDikirim.Size = New System.Drawing.Size(564, 185)
         Me.dgDeliveryBelumDikirim.TabIndex = 6
         '
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.TabPage3.Controls.Add(Me.lblSudahDikirim)
+        Me.TabPage3.Controls.Add(Me.picExportSudahDikirim)
         Me.TabPage3.Controls.Add(Me.cmbSudahDikirim)
         Me.TabPage3.Controls.Add(Me.btnSudahDIkirim)
         Me.TabPage3.Controls.Add(Me.Label2)
@@ -432,97 +453,9 @@ Partial Class frmMonitoringDelivery
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(581, 371)
+        Me.TabPage3.Size = New System.Drawing.Size(581, 290)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Sudah Dikirim"
-        '
-        'lblDeliverySudahDikirim
-        '
-        Me.lblDeliverySudahDikirim.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.lblDeliverySudahDikirim.AutoSize = True
-        Me.lblDeliverySudahDikirim.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDeliverySudahDikirim.ForeColor = System.Drawing.Color.White
-        Me.lblDeliverySudahDikirim.Location = New System.Drawing.Point(-1, 348)
-        Me.lblDeliverySudahDikirim.Name = "lblDeliverySudahDikirim"
-        Me.lblDeliverySudahDikirim.Size = New System.Drawing.Size(282, 20)
-        Me.lblDeliverySudahDikirim.TabIndex = 41
-        Me.lblDeliverySudahDikirim.Text = "Jumlah Delivery Sudah Di Kirim : 0"
-        '
-        'dgDeliverySudahDikirim
-        '
-        Me.dgDeliverySudahDikirim.AllowUserToAddRows = False
-        Me.dgDeliverySudahDikirim.AllowUserToDeleteRows = False
-        Me.dgDeliverySudahDikirim.AllowUserToResizeRows = False
-        Me.dgDeliverySudahDikirim.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgDeliverySudahDikirim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgDeliverySudahDikirim.Location = New System.Drawing.Point(3, 68)
-        Me.dgDeliverySudahDikirim.Name = "dgDeliverySudahDikirim"
-        Me.dgDeliverySudahDikirim.ReadOnly = True
-        Me.dgDeliverySudahDikirim.Size = New System.Drawing.Size(572, 277)
-        Me.dgDeliverySudahDikirim.TabIndex = 5
-        '
-        'gvListItems
-        '
-        Me.gvListItems.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.gvListItems.BackColor = System.Drawing.Color.White
-        Me.gvListItems.Controls.Add(Me.Label1)
-        Me.gvListItems.Controls.Add(Me.txtNamaCustomer)
-        Me.gvListItems.Controls.Add(Me.dgItemDelivery)
-        Me.gvListItems.Controls.Add(Me.Label5)
-        Me.gvListItems.Location = New System.Drawing.Point(603, 3)
-        Me.gvListItems.Name = "gvListItems"
-        Me.gvListItems.Size = New System.Drawing.Size(588, 403)
-        Me.gvListItems.TabIndex = 5
-        Me.gvListItems.TabStop = False
-        Me.gvListItems.Text = "Daftar Items"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(248, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 20)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Daftar Items"
-        '
-        'txtNamaCustomer
-        '
-        Me.txtNamaCustomer.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNamaCustomer.Location = New System.Drawing.Point(159, 55)
-        Me.txtNamaCustomer.Name = "txtNamaCustomer"
-        Me.txtNamaCustomer.ReadOnly = True
-        Me.txtNamaCustomer.Size = New System.Drawing.Size(415, 26)
-        Me.txtNamaCustomer.TabIndex = 4
-        '
-        'dgItemDelivery
-        '
-        Me.dgItemDelivery.AllowUserToAddRows = False
-        Me.dgItemDelivery.AllowUserToDeleteRows = False
-        Me.dgItemDelivery.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgItemDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgItemDelivery.Location = New System.Drawing.Point(6, 84)
-        Me.dgItemDelivery.Name = "dgItemDelivery"
-        Me.dgItemDelivery.ReadOnly = True
-        Me.dgItemDelivery.RowHeadersVisible = False
-        Me.dgItemDelivery.Size = New System.Drawing.Size(568, 313)
-        Me.dgItemDelivery.TabIndex = 2
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 61)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(137, 20)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Nama Customer"
         '
         'cmbSudahDikirim
         '
@@ -546,7 +479,7 @@ Partial Class frmMonitoringDelivery
         Me.btnSudahDIkirim.ForeColor = System.Drawing.Color.White
         Me.btnSudahDIkirim.Image = Nothing
         Me.btnSudahDIkirim.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnSudahDIkirim.Location = New System.Drawing.Point(345, 11)
+        Me.btnSudahDIkirim.Location = New System.Drawing.Point(345, 6)
         Me.btnSudahDIkirim.Name = "btnSudahDIkirim"
         Me.btnSudahDIkirim.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.btnSudahDIkirim.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -555,7 +488,7 @@ Partial Class frmMonitoringDelivery
         Me.btnSudahDIkirim.OnHoverImage = Nothing
         Me.btnSudahDIkirim.OnPressedColor = System.Drawing.Color.Black
         Me.btnSudahDIkirim.Radius = 2
-        Me.btnSudahDIkirim.Size = New System.Drawing.Size(230, 47)
+        Me.btnSudahDIkirim.Size = New System.Drawing.Size(114, 56)
         Me.btnSudahDIkirim.TabIndex = 56
         Me.btnSudahDIkirim.Text = "Show"
         Me.btnSudahDIkirim.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -639,12 +572,215 @@ Partial Class frmMonitoringDelivery
         Me.Label11.TabIndex = 51
         Me.Label11.Text = "S/D"
         '
+        'lblDeliverySudahDikirim
+        '
+        Me.lblDeliverySudahDikirim.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblDeliverySudahDikirim.AutoSize = True
+        Me.lblDeliverySudahDikirim.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDeliverySudahDikirim.ForeColor = System.Drawing.Color.White
+        Me.lblDeliverySudahDikirim.Location = New System.Drawing.Point(-1, 267)
+        Me.lblDeliverySudahDikirim.Name = "lblDeliverySudahDikirim"
+        Me.lblDeliverySudahDikirim.Size = New System.Drawing.Size(282, 20)
+        Me.lblDeliverySudahDikirim.TabIndex = 41
+        Me.lblDeliverySudahDikirim.Text = "Jumlah Delivery Sudah Di Kirim : 0"
+        '
+        'dgDeliverySudahDikirim
+        '
+        Me.dgDeliverySudahDikirim.AllowUserToAddRows = False
+        Me.dgDeliverySudahDikirim.AllowUserToDeleteRows = False
+        Me.dgDeliverySudahDikirim.AllowUserToResizeRows = False
+        Me.dgDeliverySudahDikirim.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgDeliverySudahDikirim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgDeliverySudahDikirim.Location = New System.Drawing.Point(3, 68)
+        Me.dgDeliverySudahDikirim.Name = "dgDeliverySudahDikirim"
+        Me.dgDeliverySudahDikirim.ReadOnly = True
+        Me.dgDeliverySudahDikirim.Size = New System.Drawing.Size(572, 196)
+        Me.dgDeliverySudahDikirim.TabIndex = 5
+        '
+        'gvListItems
+        '
+        Me.gvListItems.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gvListItems.BackColor = System.Drawing.Color.White
+        Me.gvListItems.Controls.Add(Me.Label1)
+        Me.gvListItems.Controls.Add(Me.txtNamaCustomer)
+        Me.gvListItems.Controls.Add(Me.dgItemDelivery)
+        Me.gvListItems.Controls.Add(Me.Label5)
+        Me.gvListItems.Location = New System.Drawing.Point(603, 3)
+        Me.gvListItems.Name = "gvListItems"
+        Me.gvListItems.Size = New System.Drawing.Size(588, 403)
+        Me.gvListItems.TabIndex = 5
+        Me.gvListItems.TabStop = False
+        Me.gvListItems.Text = "Daftar Items"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(271, 16)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(110, 20)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Daftar Items"
+        '
+        'txtNamaCustomer
+        '
+        Me.txtNamaCustomer.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtNamaCustomer.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNamaCustomer.Location = New System.Drawing.Point(159, 39)
+        Me.txtNamaCustomer.Name = "txtNamaCustomer"
+        Me.txtNamaCustomer.ReadOnly = True
+        Me.txtNamaCustomer.Size = New System.Drawing.Size(415, 26)
+        Me.txtNamaCustomer.TabIndex = 4
+        '
+        'dgItemDelivery
+        '
+        Me.dgItemDelivery.AllowUserToAddRows = False
+        Me.dgItemDelivery.AllowUserToDeleteRows = False
+        Me.dgItemDelivery.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgItemDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgItemDelivery.Location = New System.Drawing.Point(6, 71)
+        Me.dgItemDelivery.Name = "dgItemDelivery"
+        Me.dgItemDelivery.ReadOnly = True
+        Me.dgItemDelivery.RowHeadersVisible = False
+        Me.dgItemDelivery.Size = New System.Drawing.Size(568, 326)
+        Me.dgItemDelivery.TabIndex = 2
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(6, 39)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(137, 20)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "Nama Customer"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.Label13)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.PictureBox1)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 3)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(585, 78)
+        Me.GroupBox1.TabIndex = 6
+        Me.GroupBox1.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Delivery_Gif
+        Me.PictureBox1.Location = New System.Drawing.Point(6, 9)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(151, 63)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(198, 21)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(265, 31)
+        Me.Label12.TabIndex = 8
+        Me.Label12.Text = "Monitoring Delivery"
+        '
+        'picExportToExcelSemua
+        '
+        Me.picExportToExcelSemua.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.picExportToExcelSemua.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.picExportToExcelSemua.Image = Global.ANYAR_GADGET.My.Resources.Resources.Export_To_Excel
+        Me.picExportToExcelSemua.Location = New System.Drawing.Point(450, 6)
+        Me.picExportToExcelSemua.Name = "picExportToExcelSemua"
+        Me.picExportToExcelSemua.Size = New System.Drawing.Size(107, 35)
+        Me.picExportToExcelSemua.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picExportToExcelSemua.TabIndex = 37
+        Me.picExportToExcelSemua.TabStop = False
+        '
+        'lblExportSemuaDikirim
+        '
+        Me.lblExportSemuaDikirim.AutoSize = True
+        Me.lblExportSemuaDikirim.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblExportSemuaDikirim.Location = New System.Drawing.Point(450, 44)
+        Me.lblExportSemuaDikirim.Name = "lblExportSemuaDikirim"
+        Me.lblExportSemuaDikirim.Size = New System.Drawing.Size(88, 15)
+        Me.lblExportSemuaDikirim.TabIndex = 38
+        Me.lblExportSemuaDikirim.Text = "Meng Export"
+        Me.lblExportSemuaDikirim.Visible = False
+        '
+        'picExportBlmDikirim
+        '
+        Me.picExportBlmDikirim.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.picExportBlmDikirim.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.picExportBlmDikirim.Image = Global.ANYAR_GADGET.My.Resources.Resources.Export_To_Excel
+        Me.picExportBlmDikirim.Location = New System.Drawing.Point(447, 6)
+        Me.picExportBlmDikirim.Name = "picExportBlmDikirim"
+        Me.picExportBlmDikirim.Size = New System.Drawing.Size(107, 35)
+        Me.picExportBlmDikirim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picExportBlmDikirim.TabIndex = 50
+        Me.picExportBlmDikirim.TabStop = False
+        '
+        'lblExportBelumDikirim
+        '
+        Me.lblExportBelumDikirim.AutoSize = True
+        Me.lblExportBelumDikirim.BackColor = System.Drawing.Color.White
+        Me.lblExportBelumDikirim.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblExportBelumDikirim.Location = New System.Drawing.Point(447, 48)
+        Me.lblExportBelumDikirim.Name = "lblExportBelumDikirim"
+        Me.lblExportBelumDikirim.Size = New System.Drawing.Size(88, 15)
+        Me.lblExportBelumDikirim.TabIndex = 51
+        Me.lblExportBelumDikirim.Text = "Meng Export"
+        Me.lblExportBelumDikirim.Visible = False
+        '
+        'lblSudahDikirim
+        '
+        Me.lblSudahDikirim.AutoSize = True
+        Me.lblSudahDikirim.BackColor = System.Drawing.Color.White
+        Me.lblSudahDikirim.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSudahDikirim.Location = New System.Drawing.Point(465, 48)
+        Me.lblSudahDikirim.Name = "lblSudahDikirim"
+        Me.lblSudahDikirim.Size = New System.Drawing.Size(88, 15)
+        Me.lblSudahDikirim.TabIndex = 58
+        Me.lblSudahDikirim.Text = "Meng Export"
+        Me.lblSudahDikirim.Visible = False
+        '
+        'picExportSudahDikirim
+        '
+        Me.picExportSudahDikirim.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.picExportSudahDikirim.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.picExportSudahDikirim.Image = Global.ANYAR_GADGET.My.Resources.Resources.Export_To_Excel
+        Me.picExportSudahDikirim.Location = New System.Drawing.Point(465, 6)
+        Me.picExportSudahDikirim.Name = "picExportSudahDikirim"
+        Me.picExportSudahDikirim.Size = New System.Drawing.Size(107, 35)
+        Me.picExportSudahDikirim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picExportSudahDikirim.TabIndex = 57
+        Me.picExportSudahDikirim.TabStop = False
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(201, 52)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(115, 13)
+        Me.Label13.TabIndex = 9
+        Me.Label13.Text = "V 1.2 Build 24.10.2020"
+        '
         'frmMonitoringDelivery
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1200, 412)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.gvListItems)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
@@ -666,6 +802,12 @@ Partial Class frmMonitoringDelivery
         Me.gvListItems.ResumeLayout(False)
         Me.gvListItems.PerformLayout()
         CType(Me.dgItemDelivery, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picExportToExcelSemua, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picExportBlmDikirim, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picExportSudahDikirim, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -707,4 +849,14 @@ Partial Class frmMonitoringDelivery
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents dtp1SudahDikirim As Guna.UI.WinForms.GunaDateTimePicker
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents picExportToExcelSemua As System.Windows.Forms.PictureBox
+    Friend WithEvents lblExportSemuaDikirim As System.Windows.Forms.Label
+    Friend WithEvents lblExportBelumDikirim As System.Windows.Forms.Label
+    Friend WithEvents picExportBlmDikirim As System.Windows.Forms.PictureBox
+    Friend WithEvents lblSudahDikirim As System.Windows.Forms.Label
+    Friend WithEvents picExportSudahDikirim As System.Windows.Forms.PictureBox
+    Friend WithEvents Label13 As System.Windows.Forms.Label
 End Class

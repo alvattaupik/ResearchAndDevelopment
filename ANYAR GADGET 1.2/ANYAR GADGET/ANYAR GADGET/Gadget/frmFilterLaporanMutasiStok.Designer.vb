@@ -28,6 +28,8 @@ Partial Class frmFilterLaporanMutasiStok
         Me.btnOk = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.dtpTgl = New System.Windows.Forms.DateTimePicker()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -62,7 +64,7 @@ Partial Class frmFilterLaporanMutasiStok
         'btnOk
         '
         Me.btnOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOk.Location = New System.Drawing.Point(145, 110)
+        Me.btnOk.Location = New System.Drawing.Point(281, 110)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(130, 40)
         Me.btnOk.TabIndex = 4
@@ -72,7 +74,7 @@ Partial Class frmFilterLaporanMutasiStok
         'btnCancel
         '
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Location = New System.Drawing.Point(281, 110)
+        Me.btnCancel.Location = New System.Drawing.Point(457, 110)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(130, 40)
         Me.btnCancel.TabIndex = 5
@@ -88,11 +90,22 @@ Partial Class frmFilterLaporanMutasiStok
         Me.dtpTgl.Size = New System.Drawing.Size(306, 29)
         Me.dtpTgl.TabIndex = 6
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Inventory_GIF1
+        Me.PictureBox1.Location = New System.Drawing.Point(11, 17)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(118, 132)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
+        '
         'frmFilterLaporanMutasiStok
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 162)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.dtpTgl)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOk)
@@ -102,8 +115,9 @@ Partial Class frmFilterLaporanMutasiStok
         Me.MaximizeBox = False
         Me.Name = "frmFilterLaporanMutasiStok"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "LAPORAN INVENTORY CHECK"
+        Me.Text = "LAPORAN MUTASI STOCK"
         Me.TopMost = True
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -114,4 +128,5 @@ Partial Class frmFilterLaporanMutasiStok
     Friend WithEvents btnOk As System.Windows.Forms.Button
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents dtpTgl As System.Windows.Forms.DateTimePicker
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

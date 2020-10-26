@@ -25,6 +25,7 @@ Partial Class frmAnyarLocalPrint
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.crvDokumen = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.gbParameter = New System.Windows.Forms.GroupBox()
+        Me.picSettingTemplate = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.btnProses = New System.Windows.Forms.Button()
         Me.txtNoDokumen = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -33,8 +34,8 @@ Partial Class frmAnyarLocalPrint
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.picSettingTemplate = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.gbParameter.SuspendLayout()
         CType(Me.picSettingTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +84,18 @@ Partial Class frmAnyarLocalPrint
         Me.gbParameter.Size = New System.Drawing.Size(661, 164)
         Me.gbParameter.TabIndex = 0
         Me.gbParameter.TabStop = False
+        '
+        'picSettingTemplate
+        '
+        Me.picSettingTemplate.BackColor = System.Drawing.Color.Transparent
+        Me.picSettingTemplate.BaseColor = System.Drawing.Color.Black
+        Me.picSettingTemplate.Image = Global.ANYAR_GADGET.My.Resources.Resources.Setting_Icon
+        Me.picSettingTemplate.Location = New System.Drawing.Point(166, 90)
+        Me.picSettingTemplate.Name = "picSettingTemplate"
+        Me.picSettingTemplate.Size = New System.Drawing.Size(56, 55)
+        Me.picSettingTemplate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picSettingTemplate.TabIndex = 5
+        Me.picSettingTemplate.TabStop = False
         '
         'btnProses
         '
@@ -167,18 +180,6 @@ Partial Class frmAnyarLocalPrint
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "PRINT SERVICES"
         '
-        'picSettingTemplate
-        '
-        Me.picSettingTemplate.BackColor = System.Drawing.Color.Transparent
-        Me.picSettingTemplate.BaseColor = System.Drawing.Color.Black
-        Me.picSettingTemplate.Image = Global.ANYAR_GADGET.My.Resources.Resources.Setting_Icon
-        Me.picSettingTemplate.Location = New System.Drawing.Point(166, 90)
-        Me.picSettingTemplate.Name = "picSettingTemplate"
-        Me.picSettingTemplate.Size = New System.Drawing.Size(56, 55)
-        Me.picSettingTemplate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picSettingTemplate.TabIndex = 5
-        Me.picSettingTemplate.TabStop = False
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Printer
@@ -189,12 +190,22 @@ Partial Class frmAnyarLocalPrint
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(163, 117)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(115, 13)
+        Me.Label13.TabIndex = 10
+        Me.Label13.Text = "V 1.2 Build 24.10.2020"
+        '
         'frmAnyarLocalPrint
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1045, 631)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -228,4 +239,5 @@ Partial Class frmAnyarLocalPrint
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents picSettingTemplate As Guna.UI.WinForms.GunaTransfarantPictureBox
+    Friend WithEvents Label13 As System.Windows.Forms.Label
 End Class

@@ -32,7 +32,7 @@ Partial Class frmBrowsePegawai
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 4)
+        Me.Label1.Location = New System.Drawing.Point(13, 19)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(164, 18)
         Me.Label1.TabIndex = 1
@@ -42,19 +42,22 @@ Partial Class frmBrowsePegawai
         '
         Me.txtCariPegawai.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCariPegawai.Location = New System.Drawing.Point(183, 4)
+        Me.txtCariPegawai.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCariPegawai.Location = New System.Drawing.Point(183, 12)
         Me.txtCariPegawai.Name = "txtCariPegawai"
-        Me.txtCariPegawai.Size = New System.Drawing.Size(328, 20)
+        Me.txtCariPegawai.Size = New System.Drawing.Size(320, 29)
         Me.txtCariPegawai.TabIndex = 2
         '
         'dgvListPegawai
         '
         Me.dgvListPegawai.AllowUserToAddRows = False
+        Me.dgvListPegawai.AllowUserToDeleteRows = False
         Me.dgvListPegawai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvListPegawai.Location = New System.Drawing.Point(1, 38)
+        Me.dgvListPegawai.Location = New System.Drawing.Point(12, 47)
         Me.dgvListPegawai.Name = "dgvListPegawai"
         Me.dgvListPegawai.ReadOnly = True
-        Me.dgvListPegawai.Size = New System.Drawing.Size(510, 253)
+        Me.dgvListPegawai.RowHeadersVisible = False
+        Me.dgvListPegawai.Size = New System.Drawing.Size(491, 229)
         Me.dgvListPegawai.TabIndex = 3
         '
         'frmBrowsePegawai

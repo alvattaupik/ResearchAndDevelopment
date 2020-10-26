@@ -310,4 +310,15 @@ Public Class frmMonitoringDelivery
         lblDeliveryBelumDikirim.Text = "Jumlah Belum Dikirim : " & dgDeliveryBelumDikirim.RowCount
     End Sub
 
+    Private Sub picExportSudahDikirim_Click(sender As Object, e As EventArgs) Handles picExportSudahDikirim.Click
+        ExportToExcel(lblSudahDikirim, dgDeliverySudahDikirim)
+    End Sub
+
+    Private Sub picExportBlmDikirim_Click(sender As Object, e As EventArgs) Handles picExportBlmDikirim.Click
+        ExportToExcel(lblDeliveryBelumDikirim, dgDeliveryBelumDikirim)
+    End Sub
+
+    Private Sub picExportToExcelSemua_Click(sender As Object, e As EventArgs) Handles picExportToExcelSemua.Click
+        ExportToExcel(lblExportSemuaDikirim, dgDaftarDelivery)
+    End Sub
 End Class

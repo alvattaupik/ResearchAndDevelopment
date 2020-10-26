@@ -202,6 +202,8 @@ Module ModuleUltility
 
             ElseIf dgv.Rows(i).Cells(0).Value = "IGadget026" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_BuatControlling.Visible = True
+            ElseIf dgv.Rows(i).Cells(0).Value = "Mon001" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_Penjualan.Visible = True
 
             ElseIf dgv.Rows(i).Cells(0).Value = "IMenu001" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_HeaderMenu.Visible = True
@@ -654,6 +656,100 @@ Module ModuleUltility
             crtableLogoninfo.ConnectionInfo = crConnectionInfo
             CrTable.ApplyLogOnInfo(crtableLogoninfo)
         Next
+    End Sub
+
+
+
+
+    Sub CopyDataGridViewToClipboard(ByRef dgv As DataGridView)
+        Dim s As String = ""
+        Dim oCurrentCol As DataGridViewColumn    'Get header
+        oCurrentCol = dgv.Columns.GetFirstColumn(DataGridViewElementStates.Visible)
+        Do
+            s &= oCurrentCol.HeaderText & Chr(Keys.Tab)
+            oCurrentCol = dgv.Columns.GetNextColumn(oCurrentCol, _
+               DataGridViewElementStates.Visible, DataGridViewElementStates.None)
+        Loop Until oCurrentCol Is Nothing
+        s = s.Substring(0, s.Length - 1)
+        s &= Environment.NewLine    'Get rows
+        For Each row As DataGridViewRow In dgv.Rows
+            oCurrentCol = dgv.Columns.GetFirstColumn(DataGridViewElementStates.Visible)
+            Do
+                If row.Cells(oCurrentCol.Index).Value IsNot Nothing Then
+                    s &= row.Cells(oCurrentCol.Index).Value.ToString
+                End If
+                s &= Chr(Keys.Tab)
+                oCurrentCol = dgv.Columns.GetNextColumn(oCurrentCol, _
+                      DataGridViewElementStates.Visible, DataGridViewElementStates.None)
+            Loop Until oCurrentCol Is Nothing
+            s = s.Substring(0, s.Length - 1)
+            s &= Environment.NewLine
+        Next    'Put to clipboard
+        Dim o As New DataObject
+        o.SetText(s)
+
+        Clipboard.ContainsText()
+        Clipboard.SetDataObject(o, True, 10, 200)
+
+
+
+    End Sub
+
+
+
+    Sub ExportToExcel(lbl As Label, dgv As DataGridView)
+
+        If dgv.RowCount = 0 Then
+            DisplayPesanError("No Records To Export", frmMainMenu.txtPesanError, 1000)
+            Exit Sub
+        End If
+
+        Dim ApExcel As Object
+
+        'Set sebagai excel  object
+        ApExcel = CreateObject("Excel.application")
+
+        'Menyembunyikan proses excel
+        ApExcel.Visible = False
+
+        'Membuat/menambah workbook baru
+        ApExcel.Workbooks.Add()
+
+
+        'Lebar Kolom
+        ApExcel.Columns(1).ColumnWidth = 15
+        ApExcel.Columns(2).ColumnWidth = 20
+
+        'Tulis nama kolom ke excel
+        For i As Integer = 1 To dgv.Columns.Count
+            ApExcel.Cells(1, i).Value = dgv.Columns(i - 1).Name
+        Next
+
+        lbl.Visible = True
+
+        'Tulis data ke excel
+        For r = 0 To dgv.RowCount - 1
+            For i As Integer = 1 To dgv.Columns.Count
+                ApExcel.Cells(r + 2, i).Value = dgv.Rows(r).Cells(i - 1).Value
+                lbl.Text = "Mengexport : " & r & " Dari : " & dgv.RowCount
+
+            Next
+        Next
+
+        'Membuat Font Bold
+        ApExcel.Range("A1:M1").Font.Bold = True
+
+        'Memberi warna backgound
+        ApExcel.Range("A1:M1").interior.colorindex = 36
+
+        'Agar nilai cell yang panjang menjadi beberapa baris
+        ApExcel.Range("A2:B" & dgv.RowCount + 1).WrapText = True
+
+        'Membuat border hitam
+        'ApExcel.Range("A1:M" & dgDaftarMember.RowCount + 1).Borders.Color = RGB(0, 0, 0)
+        ApExcel.Visible = True
+        ApExcel = Nothing
+        lbl.Visible = False
     End Sub
 
 

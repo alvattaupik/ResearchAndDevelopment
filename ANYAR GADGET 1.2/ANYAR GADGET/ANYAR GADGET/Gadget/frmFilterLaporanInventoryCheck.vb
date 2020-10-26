@@ -24,8 +24,6 @@ Public Class frmFilterLaporanInventoryCheck
     End Sub
 
     Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
-        Dim strReportPath As String = Application.StartupPath & _
-         "\Laporan Inventory Check.rpt"
         paramField.Name = "KodeVendor@"
         paramDiscreteValue.Value = cmbKodeVendor.SelectedValue
         paramField.CurrentValues.Add(paramDiscreteValue)
@@ -34,6 +32,7 @@ Public Class frmFilterLaporanInventoryCheck
         paramField2.Name = "KodeGudang@"
         paramDiscreteValue2.Value = cmbKodeGudang.SelectedValue
         paramField2.CurrentValues.Add(paramDiscreteValue2)
+        paramFields.Add(paramField2)
 
         Dim frm As New frmTampilkanLaporan
         frm.crvTampilkanLaporan.ParameterFieldInfo = paramFields
@@ -43,6 +42,7 @@ Public Class frmFilterLaporanInventoryCheck
         frm.crvTampilkanLaporan.ReportSource = reportDocument
         frm.crvTampilkanLaporan.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         frm.crvTampilkanLaporan.Refresh()
+        frm.WindowState = FormWindowState.Maximized
         frm.Show()
 
 

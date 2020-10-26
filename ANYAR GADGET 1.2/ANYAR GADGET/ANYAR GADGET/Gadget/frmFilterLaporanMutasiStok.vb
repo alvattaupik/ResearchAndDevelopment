@@ -55,6 +55,7 @@ Public Class frmFilterLaporanMutasiStok
         frm.crvTampilkanLaporan.ReportSource = reportDocument
         frm.crvTampilkanLaporan.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         frm.crvTampilkanLaporan.Refresh()
+        frm.WindowState = FormWindowState.Maximized
         frm.Show()
 
 

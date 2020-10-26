@@ -54,7 +54,6 @@ Public Class frmListKendaraan
         txtCari.Enabled = True
         txtCari.BackColor = Color.PeachPuff
         txtNoKendaraan.Enabled = False
-        txtNoKendaraan.ReadOnly = True
         txtCari.Text = ""
         txtKode.Text = ""
         txtKodeNama.Text = ""

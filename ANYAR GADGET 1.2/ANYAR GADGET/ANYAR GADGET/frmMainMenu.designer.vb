@@ -111,6 +111,7 @@ Partial Class frmMainMenu
         Me.TimerPesanError = New System.Windows.Forms.Timer(Me.components)
         Me.TimerJam = New System.Windows.Forms.Timer(Me.components)
         Me.txtJamDanWaktu = New System.Windows.Forms.TextBox()
+        Me.I_Penjualan = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel3.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgListMenu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -253,7 +254,7 @@ Partial Class frmMainMenu
         '
         'H_Monitoring
         '
-        Me.H_Monitoring.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_Realstock, Me.I_Delivery})
+        Me.H_Monitoring.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_Realstock, Me.I_Delivery, Me.I_Penjualan})
         Me.H_Monitoring.Image = Global.ANYAR_GADGET.My.Resources.Resources.Monitoring_Icon1
         Me.H_Monitoring.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.H_Monitoring.Name = "H_Monitoring"
@@ -782,6 +783,13 @@ Partial Class frmMainMenu
         Me.txtJamDanWaktu.TabIndex = 12
         Me.txtJamDanWaktu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'I_Penjualan
+        '
+        Me.I_Penjualan.Name = "I_Penjualan"
+        Me.I_Penjualan.Size = New System.Drawing.Size(152, 22)
+        Me.I_Penjualan.Text = "Penjualan"
+        Me.I_Penjualan.Visible = False
+        '
         'frmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -897,5 +905,6 @@ Partial Class frmMainMenu
     Friend WithEvents ApprovalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_ApprovalReqFullfillment As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_ApprovalPeminjaman As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_Penjualan As System.Windows.Forms.ToolStripMenuItem
 
 End Class
