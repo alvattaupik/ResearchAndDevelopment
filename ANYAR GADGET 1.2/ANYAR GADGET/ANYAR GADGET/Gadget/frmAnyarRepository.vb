@@ -161,4 +161,12 @@ ErrorLoad:
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
         gbPathDirectory.Visible = True
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
+
+    Private Sub GunaCirclePictureBox1_Click(sender As Object, e As EventArgs) Handles GunaCirclePictureBox1.Click
+        LoadAwal()
+    End Sub
 End Class

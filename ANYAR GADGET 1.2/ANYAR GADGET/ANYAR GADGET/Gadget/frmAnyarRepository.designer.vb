@@ -42,10 +42,12 @@ Partial Class frmAnyarRepository
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.GunaCirclePictureBox1 = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.gbPathDirectory.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,6 +57,7 @@ Partial Class frmAnyarRepository
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.GunaCirclePictureBox1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.gbPathDirectory)
         Me.Panel1.Controls.Add(Me.TextBox2)
@@ -73,16 +76,16 @@ Partial Class frmAnyarRepository
         Me.gbPathDirectory.Controls.Add(Me.cmdSimpan)
         Me.gbPathDirectory.Controls.Add(Me.GunaLabel1)
         Me.gbPathDirectory.Controls.Add(Me.txtPathDirectory)
-        Me.gbPathDirectory.Location = New System.Drawing.Point(3, 94)
+        Me.gbPathDirectory.Location = New System.Drawing.Point(189, 94)
         Me.gbPathDirectory.Name = "gbPathDirectory"
-        Me.gbPathDirectory.Size = New System.Drawing.Size(720, 56)
+        Me.gbPathDirectory.Size = New System.Drawing.Size(534, 56)
         Me.gbPathDirectory.TabIndex = 6
         Me.gbPathDirectory.TabStop = False
         Me.gbPathDirectory.Visible = False
         '
         'cmdSimpan
         '
-        Me.cmdSimpan.Location = New System.Drawing.Point(615, 16)
+        Me.cmdSimpan.Location = New System.Drawing.Point(442, 14)
         Me.cmdSimpan.Name = "cmdSimpan"
         Me.cmdSimpan.Size = New System.Drawing.Size(82, 29)
         Me.cmdSimpan.TabIndex = 10
@@ -101,9 +104,9 @@ Partial Class frmAnyarRepository
         '
         'txtPathDirectory
         '
-        Me.txtPathDirectory.Location = New System.Drawing.Point(96, 21)
+        Me.txtPathDirectory.Location = New System.Drawing.Point(94, 19)
         Me.txtPathDirectory.Name = "txtPathDirectory"
-        Me.txtPathDirectory.Size = New System.Drawing.Size(503, 20)
+        Me.txtPathDirectory.Size = New System.Drawing.Size(342, 20)
         Me.txtPathDirectory.TabIndex = 8
         '
         'TextBox2
@@ -222,6 +225,18 @@ Partial Class frmAnyarRepository
         Me.Button2.Text = "Download File"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'GunaCirclePictureBox1
+        '
+        Me.GunaCirclePictureBox1.BaseColor = System.Drawing.Color.White
+        Me.GunaCirclePictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Back
+        Me.GunaCirclePictureBox1.Location = New System.Drawing.Point(25, 102)
+        Me.GunaCirclePictureBox1.Name = "GunaCirclePictureBox1"
+        Me.GunaCirclePictureBox1.Size = New System.Drawing.Size(47, 48)
+        Me.GunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaCirclePictureBox1.TabIndex = 8
+        Me.GunaCirclePictureBox1.TabStop = False
+        Me.GunaCirclePictureBox1.UseTransfarantBackground = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.ANYAR_GADGET.My.Resources.Resources.Download
@@ -249,6 +264,7 @@ Partial Class frmAnyarRepository
         Me.gbPathDirectory.ResumeLayout(False)
         Me.gbPathDirectory.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.GunaCirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -273,4 +289,5 @@ Partial Class frmAnyarRepository
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents GunaCirclePictureBox1 As Guna.UI.WinForms.GunaCirclePictureBox
 End Class

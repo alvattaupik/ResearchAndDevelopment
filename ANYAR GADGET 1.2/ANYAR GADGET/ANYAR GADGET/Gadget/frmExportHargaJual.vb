@@ -148,7 +148,7 @@ Public Class frmExportHargaJual
         Next
 
 
-        If txtPathExportDb.Text = "" Then
+        If My.Settings.P_ExportDatabase = "" Then
             cmdExport.Enabled = True
             lblProses.Visible = False
             PanelLoading.Visible = False
@@ -159,7 +159,7 @@ Public Class frmExportHargaJual
             PanelLoading.Visible = False
             lblJumlahData.Text = "Jumlah Data : " & ListView1.Items.Count
             AutoExport()
-            DisplayPesanOK("Sukses Di Export Ke Lokasi" & txtPathExportDb.Text, frmMainMenu.txtPesanError, 1000)
+            DisplayPesanOK("Sukses Di Export Ke Lokasi" & My.Settings.P_ExportDatabase, frmMainMenu.txtPesanError, 1000)
         End If
 
 

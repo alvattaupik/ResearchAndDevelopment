@@ -158,11 +158,11 @@ Public Class frmReplicationMonitoring
 
             Dim table As New DataTable
             adapter.Fill(table)
-            Me.dgvReplikasiIvendToSAP.DataSource = table
-            dgvReplikasiIvendToSAP.DataSource = table
-            dgvReplikasiIvendToSAP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-            dgvReplikasiIvendToSAP.AutoResizeColumns()
-            dgvReplikasiIvendToSAP.RowHeadersVisible = False
+            Me.dgvReplikasiCabangkeIvend.DataSource = table
+            dgvReplikasiCabangkeIvend.DataSource = table
+            dgvReplikasiCabangkeIvend.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+            dgvReplikasiCabangkeIvend.AutoResizeColumns()
+            dgvReplikasiCabangkeIvend.RowHeadersVisible = False
             lblRecordsFromIvendToBranch.Text = "Data Dari Ivend Pusat : " & dgvReplikasiCabangkeIvend.Rows.Count
 
 

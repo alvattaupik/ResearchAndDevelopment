@@ -44,19 +44,19 @@ Partial Class frmDetailMenu
         'cmbHeaders
         '
         Me.cmbHeaders.FormattingEnabled = True
-        Me.cmbHeaders.Location = New System.Drawing.Point(68, 14)
+        Me.cmbHeaders.Location = New System.Drawing.Point(190, 14)
         Me.cmbHeaders.Name = "cmbHeaders"
-        Me.cmbHeaders.Size = New System.Drawing.Size(476, 21)
+        Me.cmbHeaders.Size = New System.Drawing.Size(354, 21)
         Me.cmbHeaders.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(1, 13)
+        Me.Label1.Location = New System.Drawing.Point(65, 17)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 13)
+        Me.Label1.Size = New System.Drawing.Size(93, 13)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Detail Menu"
+        Me.Label1.Text = "Cari Header Menu"
         '
         'dgvListDetailMenu
         '

@@ -83,7 +83,7 @@ Errorhandler:
     End Sub
 
     Public Sub LoadDatagridViewInventory()
-        Dim strQuery As String = "SELECT [Nama Gudang],[In Stock],Commited,[On Order] FROM V_DaftarMonitoringStok Where ItemCode='" & Trim(txtKodeBarang.Text) & "'"
+        Dim strQuery As String = "SELECT [Nama Gudang],[In Stock],Commited,[On Order] FROM V_DaftarMonitoringStok Where ItemCode='" & Trim(txtKodeBarang.Text) & "' Order By [Kode Gudang]"
         Call Koneksi_SAP()
         LoadDataGrid(dgInventoryData, strQuery, KoneksiSAP)
     End Sub

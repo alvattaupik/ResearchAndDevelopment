@@ -246,8 +246,6 @@ Public Class frmMasterKontenBantuan
             KoneksiDBEmail.Open()
             command.ExecuteNonQuery()
 
-            'txtKodeKonten.Text = command.Parameters("IDOUT").Value.ToString()
-
             GetExtentionfile((dgv.Rows(intRow).Cells(2).Value))
             CopyFileKeDirectoryAttachment(command.Parameters("IDOUT").Value.ToString(), Trim(dgv.Rows(intRow).Cells(2).Value))
 

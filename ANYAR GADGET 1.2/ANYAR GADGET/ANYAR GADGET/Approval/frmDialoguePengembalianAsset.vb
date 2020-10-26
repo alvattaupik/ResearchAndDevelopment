@@ -87,7 +87,7 @@ Public Class frmDialoguePengembalianAsset
                 command.Parameters.AddWithValue("Spesifikasi", Trim(""))
                 command.Parameters.AddWithValue("FromDate", Trim(""))
                 command.Parameters.AddWithValue("ToDate", Trim(""))
-                command.Parameters.AddWithValue("Catatan", Trim(""))
+                command.Parameters.AddWithValue("Catatan", Trim(dgvKode.Rows(i).Cells(3).Value))
                 command.Parameters.AddWithValue("StatusPinjam", Trim(Trim(dgvKode.Rows(i).Cells(0).Value)))
                 command.Parameters.AddWithValue("EmpID", Trim(Trim(MstrKodePegawai)))
                 command.Parameters.AddWithValue("Function", Trim("U-KembaliDetailPinjam"))

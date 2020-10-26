@@ -1381,6 +1381,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LOGO ANYAR BULAT.ico" />
+    <None Include="Resources\Back.png" />
     <None Include="Resources\Inventory GIF1.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

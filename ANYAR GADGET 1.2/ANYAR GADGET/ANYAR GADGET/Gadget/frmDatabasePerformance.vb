@@ -139,6 +139,7 @@ Public Class frmDatabasePerformance
         Catch ex As Exception
             DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
             tmrPerformance.Enabled = False
+            tmrPerformance.Stop()
         End Try
 
         GetDataPoint()

@@ -171,7 +171,7 @@ Partial Class frmKonten
         Me.gbField.Controls.Add(Me.txtKode)
         Me.gbField.Location = New System.Drawing.Point(7, 289)
         Me.gbField.Name = "gbField"
-        Me.gbField.Size = New System.Drawing.Size(443, 241)
+        Me.gbField.Size = New System.Drawing.Size(443, 313)
         Me.gbField.TabIndex = 11
         Me.gbField.TabStop = False
         Me.gbField.Text = "Field"
@@ -257,7 +257,7 @@ Partial Class frmKonten
         '
         Me.cboAktif.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.cboAktif.AutoSize = True
-        Me.cboAktif.Location = New System.Drawing.Point(154, 215)
+        Me.cboAktif.Location = New System.Drawing.Point(154, 212)
         Me.cboAktif.Name = "cboAktif"
         Me.cboAktif.Size = New System.Drawing.Size(53, 17)
         Me.cboAktif.TabIndex = 8
@@ -293,7 +293,7 @@ Partial Class frmKonten
         '
         Me.btnHapusLampiran.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnHapusLampiran.Location = New System.Drawing.Point(233, 155)
+        Me.btnHapusLampiran.Location = New System.Drawing.Point(233, 237)
         Me.btnHapusLampiran.Name = "btnHapusLampiran"
         Me.btnHapusLampiran.Size = New System.Drawing.Size(97, 23)
         Me.btnHapusLampiran.TabIndex = 19
@@ -309,7 +309,7 @@ Partial Class frmKonten
         Me.GroupBox4.Controls.Add(Me.dgvListLampiran)
         Me.GroupBox4.Location = New System.Drawing.Point(497, 342)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(347, 186)
+        Me.GroupBox4.Size = New System.Drawing.Size(347, 268)
         Me.GroupBox4.TabIndex = 23
         Me.GroupBox4.TabStop = False
         '
@@ -318,7 +318,7 @@ Partial Class frmKonten
         Me.lblJumlahLampiran.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblJumlahLampiran.AutoSize = True
-        Me.lblJumlahLampiran.Location = New System.Drawing.Point(6, 160)
+        Me.lblJumlahLampiran.Location = New System.Drawing.Point(6, 242)
         Me.lblJumlahLampiran.Name = "lblJumlahLampiran"
         Me.lblJumlahLampiran.Size = New System.Drawing.Size(101, 13)
         Me.lblJumlahLampiran.TabIndex = 20
@@ -337,7 +337,7 @@ Partial Class frmKonten
         Me.dgvListLampiran.Name = "dgvListLampiran"
         Me.dgvListLampiran.ReadOnly = True
         Me.dgvListLampiran.RowHeadersVisible = False
-        Me.dgvListLampiran.Size = New System.Drawing.Size(335, 140)
+        Me.dgvListLampiran.Size = New System.Drawing.Size(335, 222)
         Me.dgvListLampiran.TabIndex = 0
         '
         'KodeKonten
@@ -426,7 +426,7 @@ Partial Class frmKonten
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(974, 547)
+        Me.ClientSize = New System.Drawing.Size(974, 629)
         Me.Controls.Add(Me.btnProses)
         Me.Controls.Add(Me.btnNew)
         Me.Controls.Add(Me.txtNamaFile)
