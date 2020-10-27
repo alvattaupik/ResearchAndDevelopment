@@ -356,6 +356,7 @@ ErrorHandler:
                 txtEmployee.Text = command.Parameters("EmployeeIDOUT").Value.ToString()
                 txtNamaPegawai.Text = command.Parameters("EmployeeNameOUT").Value.ToString()
                 txtUsername.Text = command.Parameters("UserNameLoginOUT").Value.ToString()
+                MstrUsernameCopy = command.Parameters("UserNameLoginOUT").Value.ToString()
                 txtPassword.Text = command.Parameters("PasswordLoginOUT").Value.ToString()
                 cmbManager.SelectedValue = command.Parameters("KodeManagerOUT").Value.ToString()
                 cmbManager.Text = command.Parameters("NamaManagerOUT").Value.ToString()

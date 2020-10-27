@@ -70,6 +70,12 @@ Public Class frmAnyarLocalPrint
         If cmbJenisDokumen.SelectedValue = "OWTR001" Then
             Call DisplayAnyarLocalPrintCrystalReport("SELECT Top 1 Cast(DocEntry as VARCHAR(100)) AS DocEntry FROM dbo.OWTR WHERE DocNum='" & Trim(txtNoDokumen.Text) & "'", cmbJenisDokumen.SelectedValue, MstrKodePegawai, crvDokumen)
         End If
+
+        If cmbJenisDokumen.SelectedValue = "OPKL001" Then
+            Call DisplayAnyarLocalPrintCrystalReport("SELECT Top 1 Cast(AbsEntry as VARCHAR(100)) AS DocEntry FROM dbo.OPKL WHERE AbsEntry='" & Trim(txtNoDokumen.Text) & "'", cmbJenisDokumen.SelectedValue, MstrKodePegawai, crvDokumen)
+        End If
+
+
     End Sub
 
 

@@ -101,7 +101,7 @@ Public Class frmBrowseListUserAplikasi
                 command.Parameters.AddWithValue("KodeHeader", Trim(""))
                 command.Parameters.AddWithValue("KodeDetail", Trim(""))
                 command.Parameters.AddWithValue("StatusEnabled", Trim(""))
-                command.Parameters.AddWithValue("UsernameLogin", Trim(MstrUsernameLogin))
+                command.Parameters.AddWithValue("UsernameLogin", Trim(MstrUsernameCopy))
                 command.Parameters.AddWithValue("KodeAplikasi", Trim(MstrKodeAplikasi))
                 command.Parameters.AddWithValue("KodeUsernameLoginTujuan", Trim(dgvListUserAplikasi.Rows(i).Cells(0).Value))
                 command.Parameters.AddWithValue("Function", Trim(strFunction))

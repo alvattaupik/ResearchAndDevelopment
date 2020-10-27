@@ -17,13 +17,13 @@ Public Class FormMainMenu
         Dim adapter As New SqlDataAdapter()
 
         Try
-            KoneksiDatabaseIvend()
-            cmd = New SqlCommand("SELECT LEFT(Id,3) As Id,Description FROM dbo.RtlStore WHERE CashCustomerKey<>0 ORDER BY Id", Koneksi1)
+            Koneksi_IVEND()
+            cmd = New SqlCommand("SELECT LEFT(Id,3) As Id,Description FROM dbo.RtlStore WHERE CashCustomerKey<>0 ORDER BY Id", KoneksiIvend)
             adapter.SelectCommand = cmd
             adapter.Fill(ds)
             adapter.Dispose()
             cmd.Dispose()
-            Koneksi1.Close()
+            KoneksiIvend.Close()
             cmbCabang.DataSource = ds.Tables(0)
             cmbCabang.ValueMember = "Id"
             cmbCabang.DisplayMember = "Description"
@@ -38,13 +38,13 @@ Public Class FormMainMenu
         Dim adapter As New SqlDataAdapter()
 
         Try
-            KoneksiDatabaseIvend()
-            cmd = New SqlCommand("SELECT DISTINCT '0' AS Kode, City FROM dbo.LoyLoyaltyCardInformation WHERE City<>''", Koneksi1)
+            Koneksi_IVEND()
+            cmd = New SqlCommand("SELECT DISTINCT '0' AS Kode, City FROM dbo.LoyLoyaltyCardInformation WHERE City<>''", KoneksiIvend)
             adapter.SelectCommand = cmd
             adapter.Fill(ds)
             adapter.Dispose()
             cmd.Dispose()
-            Koneksi1.Close()
+            KoneksiIvend.Close()
             cmbKota.DataSource = ds.Tables(0)
             cmbKota.ValueMember = "Kode"
             cmbKota.DisplayMember = "City"
@@ -66,8 +66,8 @@ Public Class FormMainMenu
 
     Sub LoadDaftarMember()
 
-        Call KoneksiDatabaseIvend()
-        Dim cmd As New SqlCommand("SELECT * FROM V_MonitoringMember WHERE SUBSTRING(NoMember,7,3) Like'%" & Trim(cmbCabang.SelectedValue) & "%' And Status='" & Trim(cmbStatus.Text) & "'  ", Koneksi1)
+        Call Koneksi_IVEND()
+        Dim cmd As New SqlCommand("SELECT * FROM V_MonitoringMember WHERE SUBSTRING(NoMember,7,3) Like'%" & Trim(cmbCabang.SelectedValue) & "%' And Status='" & Trim(cmbStatus.Text) & "'  ", KoneksiIvend)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -84,8 +84,8 @@ Public Class FormMainMenu
 
     Sub LoadDaftarMemberAll()
 
-        Call KoneksiDatabaseIvend()
-        Dim cmd As New SqlCommand("SELECT * FROM V_MonitoringMember WHERE  SUBSTRING(NoMember,7,3) Like'%" & Trim(cmbCabang.SelectedValue) & "%'", Koneksi1)
+        Call Koneksi_IVEND()
+        Dim cmd As New SqlCommand("SELECT * FROM V_MonitoringMember WHERE  SUBSTRING(NoMember,7,3) Like'%" & Trim(cmbCabang.SelectedValue) & "%'", KoneksiIvend)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -189,8 +189,8 @@ Public Class FormMainMenu
 
 
     Sub LoadInformasiCustomer()
-        Call KoneksiDatabaseIvend()
-        Dim cmd As New SqlCommand("SELECT Top 10 * FROM V_MonitoringMember WHERE NamaCustomer Like'%" & Trim(txtNamaCustomer.Text) & "%'", Koneksi1)
+        Call Koneksi_IVEND()
+        Dim cmd As New SqlCommand("SELECT Top 10 * FROM V_MonitoringMember WHERE NamaCustomer Like'%" & Trim(txtNamaCustomer.Text) & "%'", KoneksiIvend)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -206,8 +206,8 @@ Public Class FormMainMenu
     Sub LoadInformasiCustomerByNoMember()
 
         If txtDisplayTop.Text = "" Then
-            Call KoneksiDatabaseIvend()
-            Dim cmd As New SqlCommand("SELECT  * FROM V_MonitoringMember WHERE left(NoMember,9) ='" & Trim(txtNoMember.Text) & "' OR NoMember ='" & Trim(txtNoMember.Text) & "'", Koneksi1)
+            Call Koneksi_IVEND()
+            Dim cmd As New SqlCommand("SELECT  * FROM V_MonitoringMember WHERE left(NoMember,9) ='" & Trim(txtNoMember.Text) & "' OR NoMember ='" & Trim(txtNoMember.Text) & "'", KoneksiIvend)
             cmd.CommandTimeout = 0
             Dim adapter As New SqlDataAdapter(cmd)
             Dim table As New DataTable
@@ -220,8 +220,8 @@ Public Class FormMainMenu
 
         Else
 
-            Call KoneksiDatabaseIvend()
-            Dim cmd As New SqlCommand("SELECT Top (" & txtDisplayTop.Text & ")  * FROM V_MonitoringMember WHERE left(NoMember,9) ='" & Trim(txtNoMember.Text) & "'", Koneksi1)
+            Call Koneksi_IVEND()
+            Dim cmd As New SqlCommand("SELECT Top (" & txtDisplayTop.Text & ")  * FROM V_MonitoringMember WHERE left(NoMember,9) ='" & Trim(txtNoMember.Text) & "'", KoneksiIvend)
             cmd.CommandTimeout = 0
             Dim adapter As New SqlDataAdapter(cmd)
             Dim table As New DataTable
@@ -241,8 +241,8 @@ Public Class FormMainMenu
 
 
     Sub LoadRiwayatTransaksiCustomer()
-        Call KoneksiDatabaseSAP()
-        Dim cmd As New SqlCommand("SELECT * FROM V_PembelianCustomer WHERE KodeCustomer ='" & Trim(txtKodeCustomer.Text) & "'", Koneksi2)
+        Call Koneksi_IVEND()
+        Dim cmd As New SqlCommand("SELECT * FROM V_PembelianCustomer WHERE KodeCustomer ='" & Trim(txtKodeCustomer.Text) & "'", KoneksiIvend)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -256,8 +256,8 @@ Public Class FormMainMenu
 
 
     Sub LoadRiwayatTransaksiCustomerByNoMember()
-        Call KoneksiDatabaseSAP()
-        Dim cmd As New SqlCommand("SELECT * FROM V_PembelianCustomer WHERE left(NoMember,9) ='" & Trim(txtKodeMember.Text) & "'", Koneksi2)
+        Call Koneksi_IVEND()
+        Dim cmd As New SqlCommand("SELECT * FROM V_PembelianCustomer WHERE left(NoMember,9) ='" & Trim(txtKodeMember.Text) & "'", KoneksiIvend)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -273,8 +273,8 @@ Public Class FormMainMenu
 
 
     Sub LoadRiwayatTransaksiCustomerByNoStruk()
-        Call KoneksiDatabaseSAP()
-        Dim cmd As New SqlCommand("SELECT * FROM V_PembelianCustomer WHERE NoStruk ='" & Trim(txtNoStruk.Text) & "'", Koneksi2)
+        Call Koneksi_IVEND()
+        Dim cmd As New SqlCommand("SELECT * FROM V_PembelianCustomer WHERE NoStruk ='" & Trim(txtNoStruk.Text) & "'", KoneksiIvend)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -291,11 +291,11 @@ Public Class FormMainMenu
 
     Sub LoadDataCustomer()
         On Error GoTo ErrorLoad
-        KoneksiDatabaseSAP()
+        Koneksi_IVEND()
         Dim strSQlLogin As String
 
         strSQlLogin = "SELECT top 1 * From V_PembelianCustomer WHERE KodeCustomer='" & Trim(txtKodeCustomer.Text) & "'"
-        cmd = New SqlCommand(strSQlLogin, Koneksi2)
+        cmd = New SqlCommand(strSQlLogin, KoneksiIvend)
         dr = cmd.ExecuteReader
         dr.Read()
         If dr.HasRows = True Then
@@ -432,13 +432,13 @@ ErrorLoad:
         Dim adapter As New SqlDataAdapter()
 
         Try
-            KoneksiDatabaseIvend()
-            cmd = New SqlCommand("SELECT LEFT(Id,3) As Id,Description FROM dbo.RtlStore WHERE CashCustomerKey<>0 ORDER BY Id", Koneksi1)
+            Koneksi_IVEND()
+            cmd = New SqlCommand("SELECT LEFT(Id,3) As Id,Description FROM dbo.RtlStore WHERE CashCustomerKey<>0 ORDER BY Id", koneksiIvend)
             adapter.SelectCommand = cmd
             adapter.Fill(ds)
             adapter.Dispose()
             cmd.Dispose()
-            Koneksi1.Close()
+            KoneksiIvend.Close()
             cmbCabang2.DataSource = ds.Tables(0)
             cmbCabang2.ValueMember = "Id"
             cmbCabang2.DisplayMember = "Description"
@@ -450,8 +450,8 @@ ErrorLoad:
     Private Sub GunaGradientButton3_Click(sender As Object, e As EventArgs) Handles GunaGradientButton3.Click
         If cmbCabang2.Text = "" Then
 
-            Call KoneksiDatabaseIvend()
-            Dim cmd As New SqlCommand("SELECT  * FROM V_MonitoringMember WHERE Cast(TglRegistrasi As Date) between '" & dtp1.Value.ToString("yyyy-MM-dd") & "' AND  '" & dtp2.Value.ToString("yyyy-MM-dd") & "' AND Status='Aktif'", Koneksi1)
+            Call Koneksi_IVEND()
+            Dim cmd As New SqlCommand("SELECT  * FROM V_MonitoringMember WHERE Cast(TglRegistrasi As Date) between '" & dtp1.Value.ToString("yyyy-MM-dd") & "' AND  '" & dtp2.Value.ToString("yyyy-MM-dd") & "' AND Status='Aktif'", KoneksiIvend)
             cmd.CommandTimeout = 0
             Dim adapter As New SqlDataAdapter(cmd)
             Dim table As New DataTable
@@ -466,8 +466,8 @@ ErrorLoad:
         Else
 
 
-            Call KoneksiDatabaseIvend()
-            Dim cmd As New SqlCommand("SELECT  * FROM V_MonitoringMember WHERE Cast(TglRegistrasi As Date) between '" & dtp1.Value.ToString("yyyy-MM-dd") & "' AND  '" & dtp2.Value.ToString("yyyy-MM-dd") & "' AND SUBSTRING(NoMember,7,3) Like'%" & Trim(cmbCabang2.SelectedValue) & "%' AND Status='Aktif' ", Koneksi1)
+            Call Koneksi_IVEND()
+            Dim cmd As New SqlCommand("SELECT  * FROM V_MonitoringMember WHERE Cast(TglRegistrasi As Date) between '" & dtp1.Value.ToString("yyyy-MM-dd") & "' AND  '" & dtp2.Value.ToString("yyyy-MM-dd") & "' AND SUBSTRING(NoMember,7,3) Like'%" & Trim(cmbCabang2.SelectedValue) & "%' AND Status='Aktif' ", koneksiIvend)
             cmd.CommandTimeout = 0
             Dim adapter As New SqlDataAdapter(cmd)
             Dim table As New DataTable
@@ -494,8 +494,8 @@ ErrorLoad:
                 MsgBox("Jumlah Yang Ingin Ditampilkan", vbCritical, "Tidak Boleh Kosong")
                 Exit Sub
             Else
-                Call KoneksiDatabaseIvend()
-                Dim cmd As New SqlCommand("SELECT Top (" & txtDisplayTop.Text & ")  * FROM V_MonitoringMember WHERE left(NoMember,9) ='" & Trim(txtNoMember.Text) & "'", Koneksi1)
+                Call Koneksi_IVEND()
+                Dim cmd As New SqlCommand("SELECT Top (" & txtDisplayTop.Text & ")  * FROM V_MonitoringMember WHERE left(NoMember,9) ='" & Trim(txtNoMember.Text) & "'", koneksiIvend)
                 cmd.CommandTimeout = 0
                 Dim adapter As New SqlDataAdapter(cmd)
                 Dim table As New DataTable
@@ -524,8 +524,8 @@ ErrorLoad:
 
 
     Sub LoadListGenerateVoucher()
-        Call KoneksiDatabaseDB_EMAIL()
-        Dim cmd As New SqlCommand("SELECT * FROM dbo.GenerateVoucher", Koneksi1)
+        Call KoneksiDB_EMAIL()
+        Dim cmd As New SqlCommand("SELECT * FROM dbo.GenerateVoucher", KoneksiDBEmail)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -540,8 +540,8 @@ ErrorLoad:
 
 
     Sub LoadDetailNoVoucher()
-        Call KoneksiDatabaseDB_EMAIL()
-        Dim cmd As New SqlCommand("SELECT  NoVoucher,DocEntryVoucher As Kode FROM    dbo.MasterNoVoucher WHERE GenerateNumber='" & dgListNoGenerateVoucher.Item(0, dgListNoGenerateVoucher.CurrentRow.Index).Value() & "' Order By Cast(DocEntryVoucher As Bigint) asc", Koneksi1)
+        Call KoneksiDB_EMAIL()
+        Dim cmd As New SqlCommand("SELECT  NoVoucher,DocEntryVoucher As Kode FROM    dbo.MasterNoVoucher WHERE GenerateNumber='" & dgListNoGenerateVoucher.Item(0, dgListNoGenerateVoucher.CurrentRow.Index).Value() & "' Order By Cast(DocEntryVoucher As Bigint) asc", KoneksiDBEmail)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable
@@ -759,9 +759,9 @@ ErrorLoad:
 
     Sub GenerateNoMember()
         Try
-            KoneksiDatabaseDB_EMAIL()
+            KoneksiDB_EMAIL()
             Dim command As SqlCommand
-            command = New SqlCommand("Fn_GenerateNoMember", Koneksi1)
+            command = New SqlCommand("Fn_GenerateNoMember", koneksiIvend)
 
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure
@@ -784,9 +784,9 @@ ErrorLoad:
 
     Sub TampilkanNoMember()
         Try
-            KoneksiDatabaseDB_EMAIL()
+            KoneksiDB_EMAIL()
             Dim command As SqlCommand
-            command = New SqlCommand("Fn_GenerateNoMember", Koneksi1)
+            command = New SqlCommand("Fn_GenerateNoMember", koneksiIvend)
 
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure
@@ -809,9 +809,9 @@ ErrorLoad:
 
     Sub RefreshStokNoMember()
         Try
-            KoneksiDatabaseDB_EMAIL()
+            KoneksiDB_EMAIL()
             Dim command As SqlCommand
-            command = New SqlCommand("[AIO_MemberCard]", Koneksi1)
+            command = New SqlCommand("[AIO_MemberCard]", koneksiIvend)
 
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure
@@ -832,9 +832,9 @@ ErrorLoad:
 
     Sub ListNomorYangSUdahDibuat()
         Try
-            KoneksiDatabaseDB_EMAIL()
+            KoneksiDB_EMAIL()
             Dim command As SqlCommand
-            command = New SqlCommand("[AIO_MemberCard]", Koneksi1)
+            command = New SqlCommand("[AIO_MemberCard]", koneksiIvend)
 
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure
@@ -858,9 +858,9 @@ ErrorLoad:
     Sub AddGenerateNoMember()
 
         Try
-            KoneksiDatabaseDB_EMAIL()
+            KoneksiDB_EMAIL()
             Dim command As SqlCommand
-            command = New SqlCommand("dbo.Add_GenerateNoMember ", Koneksi1)
+            command = New SqlCommand("dbo.Add_GenerateNoMember ", koneksiIvend)
 
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure
@@ -964,9 +964,9 @@ ErrorLoad:
     Sub PreviewGenerateNoVoucher()
 
         Try
-            KoneksiDatabaseDB_EMAIL()
+            KoneksiDB_EMAIL()
             Dim command As SqlCommand
-            command = New SqlCommand("[tmsp_PreviewGenerateNoVoucher]", Koneksi1)
+            command = New SqlCommand("[tmsp_PreviewGenerateNoVoucher]", koneksiIvend)
 
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure
@@ -981,9 +981,9 @@ ErrorLoad:
             command.Parameters("isDuplicate").Direction = ParameterDirection.Output
 
 
-            If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
-            command.Connection = Koneksi1
-            Koneksi1.Open()
+            If (koneksiIvend.State = ConnectionState.Open) Then koneksiIvend.Close()
+            command.Connection = koneksiIvend
+            koneksiIvend.Open()
             command.ExecuteNonQuery()
             txtGenerateNumber.Text = command.Parameters("GenerateNumber").Value.ToString()
             txtisDuplicate.Text = command.Parameters("isDuplicate").Value.ToString()
@@ -1008,9 +1008,9 @@ ErrorLoad:
 
         Try
 
-            KoneksiDatabaseDB_EMAIL()
+            KoneksiDB_EMAIL()
             Dim command As SqlCommand
-            command = New SqlCommand("tmsp_AddGenerateNoVoucher", Koneksi1)
+            command = New SqlCommand("tmsp_AddGenerateNoVoucher", koneksiIvend)
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure
             command.Parameters.AddWithValue("Keterangan", Trim(txtKeterangan.Text))
@@ -1026,9 +1026,9 @@ ErrorLoad:
 
             lblPreview.Text = "Memproses"
 
-            If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
-            command.Connection = Koneksi1
-            Koneksi1.Open()
+            If (koneksiIvend.State = ConnectionState.Open) Then koneksiIvend.Close()
+            command.Connection = koneksiIvend
+            koneksiIvend.Open()
             command.ExecuteNonQuery()
 
             lblPreview.Text = "Sukses Disimpan"
@@ -1113,9 +1113,9 @@ ErrorLoad:
     Sub AddListDetailNoVoucher()
 
 
-        KoneksiDatabaseDB_EMAIL()
+        KoneksiDB_EMAIL()
         Dim command As SqlCommand
-        command = New SqlCommand("tmsp_AddGenerateNoVoucher", Koneksi1)
+        command = New SqlCommand("tmsp_AddGenerateNoVoucher", koneksiIvend)
         Dim adapter As New SqlDataAdapter(command)
         command.CommandType = CommandType.StoredProcedure
         command.Parameters.AddWithValue("Keterangan", Trim(txtKeterangan.Text))
@@ -1128,11 +1128,11 @@ ErrorLoad:
         command.Parameters.AddWithValue("NoVoucher", (""))
         command.Parameters.AddWithValue("Status", Trim("L"))
 
-        If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
-        command.Connection = Koneksi1
-        Koneksi1.Open()
+        If (koneksiIvend.State = ConnectionState.Open) Then koneksiIvend.Close()
+        command.Connection = koneksiIvend
+        koneksiIvend.Open()
         command.ExecuteNonQuery()
-        Koneksi1.Close()
+        koneksiIvend.Close()
         dgDaftarNoVoucher.DataSource = Nothing
         dgDaftarNoVoucher.Rows.Clear()
 
@@ -1156,11 +1156,11 @@ ErrorLoad:
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         On Error GoTo ErrorLoad
 
-        Call KoneksiDatabaseDB_EMAIL()
+        Call KoneksiDB_EMAIL()
         For i As Integer = 0 To dgDaftarNoVoucher.Rows.Count - 1
-            KoneksiDatabaseDB_EMAIL()
+            KoneksiDB_EMAIL()
             Dim command As SqlCommand
-            command = New SqlCommand("tmsp_AddGenerateNoVoucher", Koneksi1)
+            command = New SqlCommand("tmsp_AddGenerateNoVoucher", KoneksiDBEmail)
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure
             command.Parameters.AddWithValue("Keterangan", Trim(txtKeterangan.Text))
@@ -1173,15 +1173,15 @@ ErrorLoad:
             command.Parameters.AddWithValue("NoVoucher", Trim(dgDaftarNoVoucher.Rows(i).Cells(1).Value))
             command.Parameters.AddWithValue("Status", Trim("L"))
 
-            If (Koneksi1.State = ConnectionState.Open) Then Koneksi1.Close()
+            If (KoneksiDBEmail.State = ConnectionState.Open) Then KoneksiDBEmail.Close()
             command.CommandTimeout = 0
-            command.Connection = Koneksi1
-            Koneksi1.Open()
+            command.Connection = KoneksiDBEmail
+            KoneksiDBEmail.Open()
             command.ExecuteNonQuery()
 
 
         Next
-        Koneksi1.Close()
+        KoneksiDBEmail.Close()
 
 
         dgDaftarNoVoucher.DataSource = Nothing

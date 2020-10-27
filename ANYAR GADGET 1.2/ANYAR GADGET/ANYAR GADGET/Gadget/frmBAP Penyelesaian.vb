@@ -108,6 +108,7 @@ Public Class frmBAPPenyelesaian
         Call KoneksiDB_EMAIL()
         LoadDataGrid(dgvDaftarSurat, "SELECT Top 15 NomorSurat,CAST(TanggalSurat AS DATE) AS TglSurat,EmpName AS DibuatOleh,Perihal,DitujukanKepada AS Penerima FROM dbo.KopSurat Where EmpLocation='" & MstrKodeDivisi & "' AND Canceled='N' AND KdJenisSurat='" & lblKodeSurat.Text & "' Order By CreateDate Desc", KoneksiDBEmail)
 
+
         dgvListItem.DataSource = Nothing
         dgvListItem.Rows.Clear()
         dgvListItem.Columns.Clear()
@@ -262,7 +263,7 @@ Public Class frmBAPPenyelesaian
     End Sub
 
     Private Sub picPrint_Click(sender As Object, e As EventArgs) Handles picPrint.Click
-
+        If dgvDaftarSurat.RowCount = 0 Then Exit Sub
 
         paramField.Name = "NomorSurat@"
         paramDiscreteValue.Value = (Trim(dgvDaftarSurat.Item(0, dgvDaftarSurat.CurrentRow.Index).Value))
@@ -272,10 +273,12 @@ Public Class frmBAPPenyelesaian
         paramField2.Name = "KodeJenisSurat@"
         paramDiscreteValue2.Value = Trim(lblKodeSurat.Text)
         paramField2.CurrentValues.Add(paramDiscreteValue2)
+        paramFields.Add(paramField2)
 
         paramField3.Name = "EmpIDPrint@"
         paramDiscreteValue3.Value = Trim(MstrKodePegawai)
-        paramField2.CurrentValues.Add(paramDiscreteValue3)
+        paramField3.CurrentValues.Add(paramDiscreteValue3)
+        paramFields.Add(paramField3)
 
 
 
@@ -312,6 +315,8 @@ Public Class frmBAPPenyelesaian
     End Sub
 
     Private Sub dgvDaftarSurat_Click(sender As Object, e As EventArgs) Handles dgvDaftarSurat.Click
+        If dgvDaftarSurat.RowCount = 0 Then Exit Sub
+
         txtNoSurat.Text = dgvDaftarSurat.Item(0, dgvDaftarSurat.CurrentRow.Index).Value
     End Sub
 End Class

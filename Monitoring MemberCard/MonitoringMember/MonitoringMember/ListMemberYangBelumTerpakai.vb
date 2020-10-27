@@ -4,9 +4,9 @@ Public Class ListMemberYangBelumTerpakai
 
     Sub RefreshStokNoMember()
         Try
-            KoneksiDatabaseDB_EMAIL()
+            KoneksiDB_EMAIL()
             Dim command As SqlCommand
-            command = New SqlCommand("[tmsp_AvailableMember]", Koneksi1)
+            command = New SqlCommand("[tmsp_AvailableMember]", koneksiIvend)
 
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure

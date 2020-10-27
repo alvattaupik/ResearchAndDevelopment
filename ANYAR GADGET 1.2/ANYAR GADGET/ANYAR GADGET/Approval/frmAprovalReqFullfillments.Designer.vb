@@ -22,6 +22,7 @@ Partial Class frmAprovalReqFullfillments
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAprovalReqFullfillments))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvListSurat = New System.Windows.Forms.DataGridView()
         Me.btnApprove = New System.Windows.Forms.Button()
@@ -89,7 +90,7 @@ Partial Class frmAprovalReqFullfillments
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(185, 9)
+        Me.Label2.Location = New System.Drawing.Point(158, 9)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(315, 31)
         Me.Label2.TabIndex = 7
@@ -188,9 +189,10 @@ Partial Class frmAprovalReqFullfillments
         Me.ClientSize = New System.Drawing.Size(684, 492)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Label2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmAprovalReqFullfillments"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmAprovalReqFullfillments"
+        Me.Text = "Approval Request Fullfillments"
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.dgvListSurat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)

@@ -187,7 +187,6 @@ Public Class frmPeminajamanAsset
             command.Parameters.AddWithValue("StatusPinjam", Trim(""))
             command.Parameters.AddWithValue("Function", Trim(strFunction))
 
-
             If (KoneksiDBEmail.State = ConnectionState.Open) Then KoneksiDBEmail.Close()
             command.Connection = KoneksiDBEmail
             KoneksiDBEmail.Open()
@@ -228,12 +227,18 @@ Public Class frmPeminajamanAsset
         paramDiscreteValue.Value = (Trim(dgvDaftarSurat.Item(0, dgvDaftarSurat.CurrentRow.Index).Value))
         paramField.CurrentValues.Add(paramDiscreteValue)
         paramFields.Add(paramField)
+
+
         paramField2.Name = "KodeJenisSurat@"
         paramDiscreteValue2.Value = Trim(lblKodeSurat.Text)
         paramField2.CurrentValues.Add(paramDiscreteValue2)
+        paramFields.Add(paramField2)
+
         paramField3.Name = "EmpIDPrint@"
         paramDiscreteValue3.Value = Trim(MstrKodePegawai)
-        paramField2.CurrentValues.Add(paramDiscreteValue3)
+        paramField3.CurrentValues.Add(paramDiscreteValue3)
+        paramFields.Add(paramField3)
+
 
         Dim frm As New frmTampilkanSurat
         frm.crvTampilkanSurat.ParameterFieldInfo = paramFields

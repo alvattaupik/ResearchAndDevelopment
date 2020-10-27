@@ -22,6 +22,7 @@ Partial Class frmBrowseConfigurationItems
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBrowseConfigurationItems))
         Me.dgvBusinessPartner = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCari = New System.Windows.Forms.TextBox()
@@ -62,13 +63,15 @@ Partial Class frmBrowseConfigurationItems
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.ClientSize = New System.Drawing.Size(632, 316)
         Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvBusinessPartner)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBrowseConfigurationItems"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Configuration Items"
+        Me.Text = "Browse Configuration Items"
         CType(Me.dgvBusinessPartner, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

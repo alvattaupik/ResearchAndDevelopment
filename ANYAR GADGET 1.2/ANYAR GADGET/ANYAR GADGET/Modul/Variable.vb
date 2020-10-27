@@ -57,4 +57,11 @@
     Public MstrpathAttatchments As String
     Public MstrNoStruk As String
 
+
+
+    Public MstrUsernameCopy As String
+
+
+    Public MstrLinkPhotoOnline As String
+
 End Module

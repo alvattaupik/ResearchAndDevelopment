@@ -105,6 +105,10 @@ ErrorHandler:
             command.Parameters.Add("NamaCabang", SqlDbType.VarChar, 50)
             command.Parameters("NamaCabang").Direction = ParameterDirection.Output
             command.Parameters.AddWithValue("KodeAplikasi", Trim(MstrKodeAplikasi))
+
+            command.Parameters.Add("LinkFotoOnline", SqlDbType.VarChar, 300)
+            command.Parameters("LinkFotoOnline").Direction = ParameterDirection.Output
+
             command.Parameters.AddWithValue("Function", Trim("GetDataLogin"))
 
             If (KoneksiDBEmail.State = ConnectionState.Open) Then KoneksiDBEmail.Close()
@@ -122,6 +126,7 @@ ErrorHandler:
             MstrPriceListHB = command.Parameters("PriceListHB").Value.ToString()
             MstrSITEID = command.Parameters("SiteID").Value.ToString()
             MstrNamaCabang = command.Parameters("NamaCabang").Value.ToString()
+            MstrLinkPhotoOnline = command.Parameters("LinkFotoOnline").Value.ToString()
 
         Catch ex As Exception
             MessageBox.Show(Err.Description)

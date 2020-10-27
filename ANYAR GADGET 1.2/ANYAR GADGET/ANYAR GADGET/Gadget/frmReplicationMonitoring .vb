@@ -117,7 +117,7 @@ Public Class frmReplicationMonitoring
         Try
 
 
-            Dim strSQLSiteId As String = "Select SiteID,Nama From V_ListSiteIDIvend Where SiteID In (SELECT KodeLocation FROM dbo.OLocControlUsers Where UsernameLogin='" & MstrUsernameLogin & "' AND StatusEnabled='Y' AND KodeAplikasi='" & MstrKodeAplikasi & "') "
+            Dim strSQLSiteId As String = "Select SiteID,Nama From V_ListSiteIDIvend Where ID In (SELECT KodeLocation FROM dbo.OLocControlUsers Where UsernameLogin='" & MstrUsernameLogin & "' AND StatusEnabled='Y' AND KodeAplikasi='" & MstrKodeAplikasi & "') "
 
             Call KoneksiDB_EMAIL()
             LoadComboBox(cmbLocationReplication, strSQLSiteId, "SiteID", "Nama", KoneksiDBEmail)
@@ -131,7 +131,7 @@ Public Class frmReplicationMonitoring
         Try
 
 
-            Dim strSQLSiteId As String = "Select SiteID,Nama From V_ListSiteIDIvend Where SiteID In (SELECT KodeLocation FROM dbo.OLocControlUsers Where UsernameLogin='" & MstrUsernameLogin & "' AND StatusEnabled='Y' AND KodeAplikasi='" & MstrKodeAplikasi & "') "
+            Dim strSQLSiteId As String = "Select SiteID,Nama From V_ListSiteIDIvend Where ID In (SELECT KodeLocation FROM dbo.OLocControlUsers Where UsernameLogin='" & MstrUsernameLogin & "' AND StatusEnabled='Y' AND KodeAplikasi='" & MstrKodeAplikasi & "') "
 
             Call KoneksiDB_EMAIL()
             LoadComboBox(cmbListCabangKeIvend, strSQLSiteId, "SiteID", "Nama", KoneksiDBEmail)

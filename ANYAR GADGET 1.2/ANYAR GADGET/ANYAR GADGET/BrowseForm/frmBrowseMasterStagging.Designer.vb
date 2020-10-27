@@ -31,7 +31,7 @@ Partial Class frmBrowseMasterStagging
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 13)
+        Me.Label1.Location = New System.Drawing.Point(13, 17)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(74, 13)
         Me.Label1.TabIndex = 0
@@ -60,12 +60,13 @@ Partial Class frmBrowseMasterStagging
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.ClientSize = New System.Drawing.Size(403, 247)
         Me.Controls.Add(Me.dgvListEmployee)
         Me.Controls.Add(Me.txtCariEmployee)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmBrowseMasterStagging"
-        Me.Text = "frmBrowseMasterStagging"
+        Me.Text = "Browse Master Stagging"
         CType(Me.dgvListEmployee, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

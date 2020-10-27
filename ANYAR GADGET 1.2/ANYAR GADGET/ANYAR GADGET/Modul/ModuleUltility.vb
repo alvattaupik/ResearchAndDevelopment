@@ -539,6 +539,17 @@ Module ModuleUltility
         End If
 
 
+        If strKodeJenisDokumen = "OPKL001" Then
+            If My.Settings.P_OutgoingPayments = "" Then
+                DisplayPesanError("Template PickList Belum Ada !", frmMainMenu.txtPesanError, 1000)
+                Exit Sub
+            Else
+                strPathReport = My.Settings.P_PickListForm
+                GetDocEntry(strQuery, strQuery2)
+            End If
+        End If
+
+
         paramField.Name = "Dockey@"
         paramDiscreteValue.Value = MstrDocEntry
         paramField.CurrentValues.Add(paramDiscreteValue)

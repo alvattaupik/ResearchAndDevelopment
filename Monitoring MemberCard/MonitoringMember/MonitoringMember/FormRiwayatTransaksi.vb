@@ -34,8 +34,8 @@ Public Class FormRiwayatTransaksi
 
 
     Sub LoadRiwayatTransaksiCustomerByNoMember()
-        Call KoneksiDatabaseIvend()
-        Dim cmd As New SqlCommand("SELECT * FROM V_PembelianCustomer WHERE NoMember ='" & Trim(MstrNoMember) & "'", Koneksi1)
+        Call Koneksi_IVEND()
+        Dim cmd As New SqlCommand("SELECT * FROM V_PembelianCustomer WHERE NoMember ='" & Trim(MstrNoMember) & "'", koneksiIvend)
         cmd.CommandTimeout = 0
         Dim adapter As New SqlDataAdapter(cmd)
         Dim table As New DataTable

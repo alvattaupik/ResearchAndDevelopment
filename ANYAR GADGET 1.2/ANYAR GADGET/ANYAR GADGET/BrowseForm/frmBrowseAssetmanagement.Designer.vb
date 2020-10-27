@@ -22,6 +22,7 @@ Partial Class frmBrowseAssetmanagement
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBrowseAssetmanagement))
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvCariAssets = New System.Windows.Forms.DataGridView()
@@ -61,13 +62,15 @@ Partial Class frmBrowseAssetmanagement
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.ClientSize = New System.Drawing.Size(558, 287)
         Me.Controls.Add(Me.dgvCariAssets)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtCari)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBrowseAssetmanagement"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmBrowseAssetmanagement"
+        Me.Text = "Browse Asset"
         CType(Me.dgvCariAssets, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

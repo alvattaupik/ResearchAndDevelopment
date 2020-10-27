@@ -22,6 +22,7 @@ Partial Class frmBrowseUsers
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBrowseUsers))
         Me.dgvListPegawai = New System.Windows.Forms.DataGridView()
         Me.txtCariPegawai = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -42,7 +43,7 @@ Partial Class frmBrowseUsers
         '
         Me.txtCariPegawai.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCariPegawai.Location = New System.Drawing.Point(185, 5)
+        Me.txtCariPegawai.Location = New System.Drawing.Point(181, 12)
         Me.txtCariPegawai.Name = "txtCariPegawai"
         Me.txtCariPegawai.Size = New System.Drawing.Size(328, 20)
         Me.txtCariPegawai.TabIndex = 5
@@ -51,7 +52,7 @@ Partial Class frmBrowseUsers
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(14, 5)
+        Me.Label1.Location = New System.Drawing.Point(14, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(89, 18)
         Me.Label1.TabIndex = 4
@@ -61,12 +62,14 @@ Partial Class frmBrowseUsers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.ClientSize = New System.Drawing.Size(515, 293)
         Me.Controls.Add(Me.dgvListPegawai)
         Me.Controls.Add(Me.txtCariPegawai)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBrowseUsers"
-        Me.Text = "frmBrowseUsers"
+        Me.Text = "Browse Users"
         CType(Me.dgvListPegawai, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

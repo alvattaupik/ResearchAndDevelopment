@@ -22,6 +22,7 @@ Partial Class frmBrowseListUserAplikasi
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBrowseListUserAplikasi))
         Me.dgvListUserAplikasi = New System.Windows.Forms.DataGridView()
         Me.btnProses = New System.Windows.Forms.Button()
         CType(Me.dgvListUserAplikasi, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,9 +54,10 @@ Partial Class frmBrowseListUserAplikasi
         Me.ClientSize = New System.Drawing.Size(330, 221)
         Me.Controls.Add(Me.btnProses)
         Me.Controls.Add(Me.dgvListUserAplikasi)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBrowseListUserAplikasi"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmBrowseListUserAplikasi"
+        Me.Text = "Browse List User Aplikasi"
         CType(Me.dgvListUserAplikasi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

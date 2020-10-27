@@ -22,6 +22,7 @@ Partial Class frmDialogueApprovalPeminjaman
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDialogueApprovalPeminjaman))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNomorSurat = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -78,7 +79,7 @@ Partial Class frmDialogueApprovalPeminjaman
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(388, 176)
+        Me.Label4.Location = New System.Drawing.Point(380, 94)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(83, 18)
         Me.Label4.TabIndex = 6
@@ -87,7 +88,7 @@ Partial Class frmDialogueApprovalPeminjaman
         'txtPassword
         '
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(477, 171)
+        Me.txtPassword.Location = New System.Drawing.Point(477, 90)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(249, 26)
@@ -96,9 +97,9 @@ Partial Class frmDialogueApprovalPeminjaman
         'btnProses
         '
         Me.btnProses.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProses.Location = New System.Drawing.Point(391, 257)
+        Me.btnProses.Location = New System.Drawing.Point(477, 134)
         Me.btnProses.Name = "btnProses"
-        Me.btnProses.Size = New System.Drawing.Size(343, 48)
+        Me.btnProses.Size = New System.Drawing.Size(257, 107)
         Me.btnProses.TabIndex = 8
         Me.btnProses.Text = "Proses"
         Me.btnProses.UseVisualStyleBackColor = True
@@ -106,9 +107,9 @@ Partial Class frmDialogueApprovalPeminjaman
         'btnLihatRequest
         '
         Me.btnLihatRequest.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLihatRequest.Location = New System.Drawing.Point(391, 203)
+        Me.btnLihatRequest.Location = New System.Drawing.Point(477, 257)
         Me.btnLihatRequest.Name = "btnLihatRequest"
-        Me.btnLihatRequest.Size = New System.Drawing.Size(343, 48)
+        Me.btnLihatRequest.Size = New System.Drawing.Size(257, 48)
         Me.btnLihatRequest.TabIndex = 10
         Me.btnLihatRequest.Text = "Lihat Request"
         Me.btnLihatRequest.UseVisualStyleBackColor = True
@@ -138,6 +139,7 @@ Partial Class frmDialogueApprovalPeminjaman
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(738, 307)
         Me.Controls.Add(Me.btnLihatRequest)
         Me.Controls.Add(Me.GroupBox1)
@@ -148,6 +150,7 @@ Partial Class frmDialogueApprovalPeminjaman
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtNomorSurat)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmDialogueApprovalPeminjaman"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Approval Peminjaman Asset"

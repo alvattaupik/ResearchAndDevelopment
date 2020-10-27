@@ -3,13 +3,23 @@ Imports System.Data.SqlClient
 Public Class frmMasterPegawai
     Dim bolStatusSP As Boolean
     Private Sub btnAksi_Click(sender As Object, e As EventArgs) Handles btnAksi.Click
-        If btnAksi.Text = "OK" Then Me.Dispose()
+        If btnAksi.Text = "Ok" Then Me.Dispose()
 
 
 
         If btnAksi.Text = "Update" Then
 
             'Call AUDR_Employee("CekEmployee")
+            If cmbFungsional.Text = "" Then
+                DisplayPesanError("Fungsional Tidak Boleh Kosong !", frmMainMenu.txtPesanError, 1000)
+                Exit Sub
+            End If
+
+            If cmbJabatan.Text = "" Then
+                DisplayPesanError("Jabatan Tidak Boleh Kosong !", frmMainMenu.txtPesanError, 1000)
+                Exit Sub
+            End If
+
 
             If bolStatusSP = True Then
                 DisplayPesanError("Kode Pegawai telah Digunakan", frmMainMenu.txtPesanError, 1000)
@@ -83,6 +93,7 @@ Public Class frmMasterPegawai
     Private Sub picFind_Click(sender As Object, e As EventArgs) Handles picFind.Click
         txtEmployeeID.Text = ""
         txtNamaPegawai.Text = ""
+        txtNamaPegawai.Enabled = True
         txtAlamat.Text = ""
         txtAlamatEmail.Text = ""
         cmbFungsional.Text = ""
@@ -103,6 +114,10 @@ Public Class frmMasterPegawai
                 Exit Sub
             Else
                 DisplayPesanOK("Data Ditemukan !", frmMainMenu.txtPesanError, 1000)
+                txtAlamat.Enabled = True
+                txtAlamatEmail.Enabled = True
+                cmbFungsional.Enabled = True
+                cmbJabatan.Enabled = True
 
                 Exit Sub
             End If

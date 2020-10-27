@@ -22,6 +22,7 @@ Partial Class frmBrowseKomponenSAP
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBrowseKomponenSAP))
         Me.dgDaftarKomponenSAP = New System.Windows.Forms.DataGridView()
         Me.txtCariKomponen = New Guna.UI.WinForms.GunaTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -48,7 +49,7 @@ Partial Class frmBrowseKomponenSAP
         Me.txtCariKomponen.FocusedBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtCariKomponen.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtCariKomponen.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtCariKomponen.Location = New System.Drawing.Point(53, 2)
+        Me.txtCariKomponen.Location = New System.Drawing.Point(53, 4)
         Me.txtCariKomponen.Name = "txtCariKomponen"
         Me.txtCariKomponen.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtCariKomponen.Size = New System.Drawing.Size(387, 26)
@@ -72,9 +73,10 @@ Partial Class frmBrowseKomponenSAP
         Me.Controls.Add(Me.dgDaftarKomponenSAP)
         Me.Controls.Add(Me.txtCariKomponen)
         Me.Controls.Add(Me.Label3)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBrowseKomponenSAP"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmBrowseKomponenSAP"
+        Me.Text = "Browse SAP Components"
         CType(Me.dgDaftarKomponenSAP, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

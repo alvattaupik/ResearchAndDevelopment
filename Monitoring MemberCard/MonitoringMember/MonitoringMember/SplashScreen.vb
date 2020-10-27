@@ -9,7 +9,7 @@
             intJumlah += 1
         Else
             Timer1.Stop()
-            FormMainMenu.Show()
+            frmLogin.Show()
             Me.Hide()
         End If
     End Sub

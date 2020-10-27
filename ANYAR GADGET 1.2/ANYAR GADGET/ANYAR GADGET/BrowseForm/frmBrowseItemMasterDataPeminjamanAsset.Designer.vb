@@ -22,6 +22,7 @@ Partial Class frmBrowseItemMasterDataPeminjamanAsset
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBrowseItemMasterDataPeminjamanAsset))
         Me.dgvItemMasterData = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCari = New System.Windows.Forms.TextBox()
@@ -158,12 +159,14 @@ Partial Class frmBrowseItemMasterDataPeminjamanAsset
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.ClientSize = New System.Drawing.Size(599, 408)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.dgvItemMasterData)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBrowseItemMasterDataPeminjamanAsset"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Item Master Data"
+        Me.Text = "Browse Item Master Data"
         CType(Me.dgvItemMasterData, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()

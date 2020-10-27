@@ -260,19 +260,24 @@ Public Class frmSuratJalan
 
     Private Sub picPrint_Click(sender As Object, e As EventArgs) Handles picPrint.Click
 
+        If dgvDaftarSurat.RowCount = 0 Then Exit Sub
 
         paramField.Name = "NomorSurat@"
         paramDiscreteValue.Value = (Trim(dgvDaftarSurat.Item(0, dgvDaftarSurat.CurrentRow.Index).Value))
         paramField.CurrentValues.Add(paramDiscreteValue)
         paramFields.Add(paramField)
 
+
         paramField2.Name = "KodeJenisSurat@"
         paramDiscreteValue2.Value = Trim(lblKodeSurat.Text)
         paramField2.CurrentValues.Add(paramDiscreteValue2)
+        paramFields.Add(paramField2)
+
 
         paramField3.Name = "EmpIDPrint@"
         paramDiscreteValue3.Value = Trim(MstrKodePegawai)
-        paramField2.CurrentValues.Add(paramDiscreteValue3)
+        paramField3.CurrentValues.Add(paramDiscreteValue3)
+        paramFields.Add(paramField3)
 
 
 

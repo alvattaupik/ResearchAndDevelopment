@@ -330,10 +330,13 @@ Public Class frmMonitoringAndControlling
         paramField2.Name = "KodeJenisSurat@"
         paramDiscreteValue2.Value = Trim(lblKodeJenisSurat.Text)
         paramField2.CurrentValues.Add(paramDiscreteValue2)
+        paramFields.Add(paramField2)
 
         paramField3.Name = "EmpIDPrint@"
         paramDiscreteValue3.Value = Trim(MstrKodePegawai)
-        paramField2.CurrentValues.Add(paramDiscreteValue3)
+        paramField3.CurrentValues.Add(paramDiscreteValue3)
+        paramFields.Add(paramField3)
+
 
 
 

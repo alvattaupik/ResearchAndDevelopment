@@ -22,6 +22,7 @@ Partial Class frmDialogueApprovalReq
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDialogueApprovalReq))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNomorSurat = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -62,7 +63,7 @@ Partial Class frmDialogueApprovalReq
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(385, 79)
+        Me.Label2.Location = New System.Drawing.Point(384, 48)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(56, 18)
         Me.Label2.TabIndex = 2
@@ -73,7 +74,7 @@ Partial Class frmDialogueApprovalReq
         Me.cmbStatusRequest.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbStatusRequest.FormattingEnabled = True
         Me.cmbStatusRequest.Items.AddRange(New Object() {"Approve", "Reject"})
-        Me.cmbStatusRequest.Location = New System.Drawing.Point(477, 75)
+        Me.cmbStatusRequest.Location = New System.Drawing.Point(477, 44)
         Me.cmbStatusRequest.Name = "cmbStatusRequest"
         Me.cmbStatusRequest.Size = New System.Drawing.Size(249, 28)
         Me.cmbStatusRequest.TabIndex = 3
@@ -82,7 +83,7 @@ Partial Class frmDialogueApprovalReq
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(384, 114)
+        Me.Label3.Location = New System.Drawing.Point(385, 82)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(85, 18)
         Me.Label3.TabIndex = 4
@@ -91,7 +92,7 @@ Partial Class frmDialogueApprovalReq
         'txtUsername
         '
         Me.txtUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(477, 110)
+        Me.txtUsername.Location = New System.Drawing.Point(477, 78)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.ReadOnly = True
         Me.txtUsername.Size = New System.Drawing.Size(249, 26)
@@ -101,7 +102,7 @@ Partial Class frmDialogueApprovalReq
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(385, 150)
+        Me.Label4.Location = New System.Drawing.Point(388, 114)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(83, 18)
         Me.Label4.TabIndex = 6
@@ -110,7 +111,7 @@ Partial Class frmDialogueApprovalReq
         'txtPassword
         '
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(477, 142)
+        Me.txtPassword.Location = New System.Drawing.Point(477, 110)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(249, 26)
@@ -119,9 +120,9 @@ Partial Class frmDialogueApprovalReq
         'btnProses
         '
         Me.btnProses.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProses.Location = New System.Drawing.Point(383, 244)
+        Me.btnProses.Location = New System.Drawing.Point(477, 142)
         Me.btnProses.Name = "btnProses"
-        Me.btnProses.Size = New System.Drawing.Size(351, 48)
+        Me.btnProses.Size = New System.Drawing.Size(249, 99)
         Me.btnProses.TabIndex = 8
         Me.btnProses.Text = "Proses"
         Me.btnProses.UseVisualStyleBackColor = True
@@ -162,9 +163,9 @@ Partial Class frmDialogueApprovalReq
         'btnLihatRequest
         '
         Me.btnLihatRequest.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLihatRequest.Location = New System.Drawing.Point(383, 190)
+        Me.btnLihatRequest.Location = New System.Drawing.Point(477, 247)
         Me.btnLihatRequest.Name = "btnLihatRequest"
-        Me.btnLihatRequest.Size = New System.Drawing.Size(351, 48)
+        Me.btnLihatRequest.Size = New System.Drawing.Size(257, 48)
         Me.btnLihatRequest.TabIndex = 10
         Me.btnLihatRequest.Text = "Lihat Request"
         Me.btnLihatRequest.UseVisualStyleBackColor = True
@@ -173,6 +174,7 @@ Partial Class frmDialogueApprovalReq
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(738, 299)
         Me.Controls.Add(Me.btnLihatRequest)
         Me.Controls.Add(Me.GroupBox1)
@@ -185,6 +187,7 @@ Partial Class frmDialogueApprovalReq
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtNomorSurat)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmDialogueApprovalReq"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dialog Approval Request"

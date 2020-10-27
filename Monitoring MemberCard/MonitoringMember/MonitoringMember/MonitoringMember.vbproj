@@ -125,11 +125,35 @@
     <Compile Include="FormRiwayatTransaksi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmDashboard.Designer.vb">
+      <DependentUpon>frmDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenu.designer.vb">
+      <DependentUpon>frmMainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Koneksi\ModuleKoneksi.vb" />
     <Compile Include="ListMemberYangBelumTerpakai.Designer.vb">
       <DependentUpon>ListMemberYangBelumTerpakai.vb</DependentUpon>
     </Compile>
     <Compile Include="ListMemberYangBelumTerpakai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member\frmInformasiMember.Designer.vb">
+      <DependentUpon>frmInformasiMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Member\frmInformasiMember.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SplashScreen.vb">
@@ -160,13 +184,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Variable\Koneksi.vb" />
+    <Compile Include="Variable\ModuleUltility.vb" />
+    <Compile Include="Variable\Variable.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormRiwayatTransaksi.resx">
       <DependentUpon>FormRiwayatTransaksi.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListMemberYangBelumTerpakai.resx">
       <DependentUpon>ListMemberYangBelumTerpakai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member\frmInformasiMember.resx">
+      <DependentUpon>frmInformasiMember.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
@@ -208,11 +247,26 @@
   <ItemGroup>
     <None Include="Resources\logo_jpeg.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Variable\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Custom-Icon-Design-Flatastic-9-Monitoring.ico" />
+    <None Include="Resources\Search User.png" />
+    <None Include="Resources\Ubah Password logo.png" />
+    <None Include="Resources\Batik 9 rotate.png" />
+    <None Include="Resources\Batik 10.png" />
+    <None Include="Resources\Batik 9.png" />
+    <None Include="Resources\Beach.png" />
+    <None Include="Resources\Logout Icon.png" />
+    <None Include="Resources\Users logo.png" />
+    <None Include="Resources\Lembar Kertas Dashboard.jpg" />
+    <None Include="Resources\Users Dashboard.png" />
+    <None Include="Resources\Hello_%28yellow%29.png" />
+    <None Include="Resources\Batik 7.png" />
+    <None Include="Resources\Batik 6.png" />
+    <None Include="Resources\batik 4.png" />
+    <None Include="Resources\Indonesia.png" />
+    <None Include="Resources\Indonesia Maps.png" />
+    <None Include="Resources\Batik 3.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

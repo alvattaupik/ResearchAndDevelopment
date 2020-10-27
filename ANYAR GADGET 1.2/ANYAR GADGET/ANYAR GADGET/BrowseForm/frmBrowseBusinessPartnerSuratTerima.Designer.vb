@@ -22,6 +22,7 @@ Partial Class frmBrowseBusinessPartnerSuratTerima
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBrowseBusinessPartnerSuratTerima))
         Me.dgvBusinessPartner = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCari = New System.Windows.Forms.TextBox()
@@ -58,17 +59,19 @@ Partial Class frmBrowseBusinessPartnerSuratTerima
         Me.txtCari.Size = New System.Drawing.Size(535, 26)
         Me.txtCari.TabIndex = 2
         '
-        'frmBrowseBusinessPartner
+        'frmBrowseBusinessPartnerSuratTerima
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.ClientSize = New System.Drawing.Size(632, 316)
         Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvBusinessPartner)
-        Me.Name = "frmBrowseBusinessPartner"
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "frmBrowseBusinessPartnerSuratTerima"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Business Partner"
+        Me.Text = "Browse Business Partner"
         CType(Me.dgvBusinessPartner, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
