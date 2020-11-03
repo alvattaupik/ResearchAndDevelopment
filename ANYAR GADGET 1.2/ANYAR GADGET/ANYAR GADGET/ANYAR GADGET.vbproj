@@ -26,7 +26,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>ANYAR GADGET</ProductName>
     <PublisherName>IT DEPARTMENT</PublisherName>
-    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -271,6 +271,18 @@
     <Compile Include="BrowseForm\frmBrowseUsers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BrowseForm\frmLihatListVendorCode.Designer.vb">
+      <DependentUpon>frmLihatListVendorCode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmLihatListVendorCode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseForm\frmLihatListItemCode.Designer.vb">
+      <DependentUpon>frmLihatListItemCode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmLihatListItemCode.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CrystalReports\BA Penyelesaian Anyar Gadget IT001-01.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -296,6 +308,12 @@
       <DependentUpon>FormPengembalian Asset Anyar Gadget IT006-01.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReports\Inventory In Warehouse.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inventory In Warehouse.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReports\LaporanInventoryCheck.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -316,6 +334,12 @@
       <DependentUpon>MaintenanceForm.rpt</DependentUpon>
       <SubType>Component</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\Purchase Analysis By GRPO.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Purchase Analysis By GRPO.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalReports\RequestFullfillment.vb">
       <AutoGen>True</AutoGen>
@@ -367,10 +391,22 @@
     <Compile Include="Gadget\DetailFailedItegration.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Gadget\frmInventoryInWarehouse.Designer.vb">
+      <DependentUpon>frmInventoryInWarehouse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmInventoryInWarehouse.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Gadget\frmMonitorPenjualan.Designer.vb">
       <DependentUpon>frmMonitorPenjualan.vb</DependentUpon>
     </Compile>
     <Compile Include="Gadget\frmMonitorPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gadget\frmPurchaseAnalysisReport.Designer.vb">
+      <DependentUpon>frmPurchaseAnalysisReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gadget\frmPurchaseAnalysisReport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gadget\frmRequestFullfillment.Designer.vb">
@@ -753,6 +789,12 @@
     <EmbeddedResource Include="BrowseForm\frmBrowseUsers.resx">
       <DependentUpon>frmBrowseUsers.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmLihatListVendorCode.resx">
+      <DependentUpon>frmLihatListVendorCode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmLihatListItemCode.resx">
+      <DependentUpon>frmLihatListItemCode.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReports\BA Penyelesaian Anyar Gadget IT001-01.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>BA Penyelesaian Anyar Gadget IT001-01.vb</LastGenOutput>
@@ -770,6 +812,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>FormPengembalian Asset Anyar Gadget IT006-01.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\Inventory In Warehouse.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Inventory In Warehouse.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReports\LaporanInventoryCheck.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LaporanInventoryCheck.vb</LastGenOutput>
@@ -784,6 +830,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>MaintenanceForm.vb</LastGenOutput>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\Purchase Analysis By GRPO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Purchase Analysis By GRPO.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReports\RequestFullfillment.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -814,8 +864,14 @@
     <EmbeddedResource Include="Gadget\DetailFailedItegration.resx">
       <DependentUpon>DetailFailedItegration.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmInventoryInWarehouse.resx">
+      <DependentUpon>frmInventoryInWarehouse.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gadget\frmMonitorPenjualan.resx">
       <DependentUpon>frmMonitorPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gadget\frmPurchaseAnalysisReport.resx">
+      <DependentUpon>frmPurchaseAnalysisReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gadget\frmRequestFullfillment.resx">
       <DependentUpon>frmRequestFullfillment.vb</DependentUpon>
@@ -1340,6 +1396,16 @@
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
       <Visible>False</Visible>
       <Group>
       </Group>

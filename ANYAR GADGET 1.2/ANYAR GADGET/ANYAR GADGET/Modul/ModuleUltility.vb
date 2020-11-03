@@ -205,6 +205,12 @@ Module ModuleUltility
             ElseIf dgv.Rows(i).Cells(0).Value = "Mon001" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_Penjualan.Visible = True
 
+            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget027" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_InventoryInWarehouse.Visible = True
+
+            ElseIf dgv.Rows(i).Cells(0).Value = "IGadget028" And dgv.Rows(i).Cells(1).Value = "Y" Then
+                frmMainMenu.I_PurchaseAnalysisByGRPO.Visible = True
+
             ElseIf dgv.Rows(i).Cells(0).Value = "IMenu001" And dgv.Rows(i).Cells(1).Value = "Y" Then
                 frmMainMenu.I_HeaderMenu.Visible = True
             ElseIf dgv.Rows(i).Cells(0).Value = "IMenu002" And dgv.Rows(i).Cells(1).Value = "Y" Then

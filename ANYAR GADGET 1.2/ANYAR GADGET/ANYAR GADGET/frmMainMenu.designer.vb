@@ -44,6 +44,7 @@ Partial Class frmMainMenu
         Me.H_Monitoring = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_Realstock = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_Delivery = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_Penjualan = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_PrintServices = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_AnyarLocalPrint = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_RKMDisplayTag = New System.Windows.Forms.ToolStripMenuItem()
@@ -66,6 +67,8 @@ Partial Class frmMainMenu
         Me.H_LaporanLaporan = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_LapInventoryCheck = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_MutasiStock = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_InventoryInWarehouse = New System.Windows.Forms.ToolStripMenuItem()
+        Me.I_PurchaseAnalysisByGRPO = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_SISTER = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_SuratJalan = New System.Windows.Forms.ToolStripMenuItem()
         Me.I_SuratTerima = New System.Windows.Forms.ToolStripMenuItem()
@@ -111,7 +114,6 @@ Partial Class frmMainMenu
         Me.TimerPesanError = New System.Windows.Forms.Timer(Me.components)
         Me.TimerJam = New System.Windows.Forms.Timer(Me.components)
         Me.txtJamDanWaktu = New System.Windows.Forms.TextBox()
-        Me.I_Penjualan = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel3.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgListMenu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -265,16 +267,23 @@ Partial Class frmMainMenu
         'I_Realstock
         '
         Me.I_Realstock.Name = "I_Realstock"
-        Me.I_Realstock.Size = New System.Drawing.Size(152, 22)
+        Me.I_Realstock.Size = New System.Drawing.Size(128, 22)
         Me.I_Realstock.Text = "Real Stock"
         Me.I_Realstock.Visible = False
         '
         'I_Delivery
         '
         Me.I_Delivery.Name = "I_Delivery"
-        Me.I_Delivery.Size = New System.Drawing.Size(152, 22)
+        Me.I_Delivery.Size = New System.Drawing.Size(128, 22)
         Me.I_Delivery.Text = "Delivery"
         Me.I_Delivery.Visible = False
+        '
+        'I_Penjualan
+        '
+        Me.I_Penjualan.Name = "I_Penjualan"
+        Me.I_Penjualan.Size = New System.Drawing.Size(128, 22)
+        Me.I_Penjualan.Text = "Penjualan"
+        Me.I_Penjualan.Visible = False
         '
         'H_PrintServices
         '
@@ -423,7 +432,7 @@ Partial Class frmMainMenu
         '
         'H_LaporanLaporan
         '
-        Me.H_LaporanLaporan.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_LapInventoryCheck, Me.I_MutasiStock})
+        Me.H_LaporanLaporan.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.I_LapInventoryCheck, Me.I_MutasiStock, Me.I_InventoryInWarehouse, Me.I_PurchaseAnalysisByGRPO})
         Me.H_LaporanLaporan.Image = Global.ANYAR_GADGET.My.Resources.Resources.Report
         Me.H_LaporanLaporan.Name = "H_LaporanLaporan"
         Me.H_LaporanLaporan.Size = New System.Drawing.Size(222, 22)
@@ -433,16 +442,30 @@ Partial Class frmMainMenu
         'I_LapInventoryCheck
         '
         Me.I_LapInventoryCheck.Name = "I_LapInventoryCheck"
-        Me.I_LapInventoryCheck.Size = New System.Drawing.Size(160, 22)
+        Me.I_LapInventoryCheck.Size = New System.Drawing.Size(218, 22)
         Me.I_LapInventoryCheck.Text = "Inventory Check"
         Me.I_LapInventoryCheck.Visible = False
         '
         'I_MutasiStock
         '
         Me.I_MutasiStock.Name = "I_MutasiStock"
-        Me.I_MutasiStock.Size = New System.Drawing.Size(160, 22)
+        Me.I_MutasiStock.Size = New System.Drawing.Size(218, 22)
         Me.I_MutasiStock.Text = "Mutasi Stok"
         Me.I_MutasiStock.Visible = False
+        '
+        'I_InventoryInWarehouse
+        '
+        Me.I_InventoryInWarehouse.Name = "I_InventoryInWarehouse"
+        Me.I_InventoryInWarehouse.Size = New System.Drawing.Size(218, 22)
+        Me.I_InventoryInWarehouse.Text = "Inventory In Warehouse"
+        Me.I_InventoryInWarehouse.Visible = False
+        '
+        'I_PurchaseAnalysisByGRPO
+        '
+        Me.I_PurchaseAnalysisByGRPO.Name = "I_PurchaseAnalysisByGRPO"
+        Me.I_PurchaseAnalysisByGRPO.Size = New System.Drawing.Size(218, 22)
+        Me.I_PurchaseAnalysisByGRPO.Text = "Purchase Analysis By GRPO"
+        Me.I_PurchaseAnalysisByGRPO.Visible = False
         '
         'H_SISTER
         '
@@ -783,13 +806,6 @@ Partial Class frmMainMenu
         Me.txtJamDanWaktu.TabIndex = 12
         Me.txtJamDanWaktu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'I_Penjualan
-        '
-        Me.I_Penjualan.Name = "I_Penjualan"
-        Me.I_Penjualan.Size = New System.Drawing.Size(152, 22)
-        Me.I_Penjualan.Text = "Penjualan"
-        Me.I_Penjualan.Visible = False
-        '
         'frmMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -906,5 +922,7 @@ Partial Class frmMainMenu
     Friend WithEvents H_ApprovalReqFullfillment As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents H_ApprovalPeminjaman As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents I_Penjualan As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_InventoryInWarehouse As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents I_PurchaseAnalysisByGRPO As System.Windows.Forms.ToolStripMenuItem
 
 End Class

@@ -37,17 +37,17 @@ Partial Class frmAddNewControl
         Me.txtNamaValidasi = New System.Windows.Forms.TextBox()
         Me.txtKodeValidasi = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dgvListCabang = New System.Windows.Forms.DataGridView()
         Me.txtDocNum = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.dgvListCabang = New System.Windows.Forms.DataGridView()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvListCabang, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdSaveAll
@@ -227,6 +227,18 @@ Partial Class frmAddNewControl
         Me.Panel1.Size = New System.Drawing.Size(419, 42)
         Me.Panel1.TabIndex = 52
         '
+        'dgvListCabang
+        '
+        Me.dgvListCabang.AllowUserToAddRows = False
+        Me.dgvListCabang.AllowUserToDeleteRows = False
+        Me.dgvListCabang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvListCabang.Location = New System.Drawing.Point(140, 7)
+        Me.dgvListCabang.Name = "dgvListCabang"
+        Me.dgvListCabang.RowHeadersVisible = False
+        Me.dgvListCabang.Size = New System.Drawing.Size(46, 35)
+        Me.dgvListCabang.TabIndex = 2
+        Me.dgvListCabang.Visible = False
+        '
         'txtDocNum
         '
         Me.txtDocNum.Location = New System.Drawing.Point(6, 12)
@@ -282,17 +294,6 @@ Partial Class frmAddNewControl
         Me.PictureBox1.TabIndex = 67
         Me.PictureBox1.TabStop = False
         '
-        'dgvListCabang
-        '
-        Me.dgvListCabang.AllowUserToAddRows = False
-        Me.dgvListCabang.AllowUserToDeleteRows = False
-        Me.dgvListCabang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvListCabang.Location = New System.Drawing.Point(140, 7)
-        Me.dgvListCabang.Name = "dgvListCabang"
-        Me.dgvListCabang.RowHeadersVisible = False
-        Me.dgvListCabang.Size = New System.Drawing.Size(46, 35)
-        Me.dgvListCabang.TabIndex = 2
-        '
         'frmAddNewControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -320,8 +321,8 @@ Partial Class frmAddNewControl
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvListCabang, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

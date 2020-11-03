@@ -55,8 +55,6 @@ Public Class frmMainMenu
     End Sub
 
     Private Sub TimerPesanError_Tick(sender As Object, e As EventArgs) Handles TimerPesanError.Tick
-       
-
 
         If intDurasiTimer > 0 Then
             intDurasiTimer = intDurasiTimer - 1
@@ -68,18 +66,12 @@ Public Class frmMainMenu
             txtJamDanWaktu.Visible = True
         End If
 
-
-
-
-
     End Sub
 
     Private Sub H_Pegawai_Click(sender As Object, e As EventArgs) Handles H_Pegawai.Click
-
         Dim frm As New frmMasterPegawai
         frm.MdiParent = Me
         frm.BringToFront()
-        'frm.WindowState = FormWindowState.Maximized
         frm.Show()
     End Sub
 
@@ -338,6 +330,18 @@ Public Class frmMainMenu
         Dim frm As New frmMonitorPenjualan
         frm.MdiParent = Me
         frm.BringToFront()
+        frm.Show()
+    End Sub
+
+    Private Sub I_InventoryInWarehouse_Click(sender As Object, e As EventArgs) Handles I_InventoryInWarehouse.Click
+        Dim frm As New frmInventoryInWarehouse
+        'frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub I_PurchaseAnalysisByGRPO_Click(sender As Object, e As EventArgs) Handles I_PurchaseAnalysisByGRPO.Click
+        Dim frm As New frmPurchaseAnalysisReport
+        'frm.MdiParent = Me
         frm.Show()
     End Sub
 End Class

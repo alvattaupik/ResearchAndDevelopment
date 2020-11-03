@@ -18,16 +18,17 @@ Public Class frmValidationControls
         End Try
     End Sub
     Private Sub dgDaftarKontrol_DoubleClick(sender As Object, e As EventArgs) Handles dgDaftarKontrol.DoubleClick
-        Try
-            If dgDaftarKontrol.RowCount = 0 Then Exit Sub
-            frmListLokasiValidasi.txtKodeValidasi.Text = dgDaftarKontrol.Item(3, dgDaftarKontrol.CurrentRow.Index).Value
-            frmListLokasiValidasi.txtFungsiValidasi.Text = dgDaftarKontrol.Item(2, dgDaftarKontrol.CurrentRow.Index).Value
-            frmListLokasiValidasi.txtNotifikasi.Text = dgDaftarKontrol.Item(1, dgDaftarKontrol.CurrentRow.Index).Value
-            frmListLokasiValidasi.txtJenisValidasi.Text = dgDaftarKontrol.Item(0, dgDaftarKontrol.CurrentRow.Index).Value
-            frmListLokasiValidasi.ShowDialog()
-        Catch ex As Exception
-            DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
-        End Try
+        On Error Resume Next
+        'Try
+        If dgDaftarKontrol.RowCount = 0 Then Exit Sub
+        frmListLokasiValidasi.txtKodeValidasi.Text = dgDaftarKontrol.Item(3, dgDaftarKontrol.CurrentRow.Index).Value
+        frmListLokasiValidasi.txtFungsiValidasi.Text = dgDaftarKontrol.Item(2, dgDaftarKontrol.CurrentRow.Index).Value
+        frmListLokasiValidasi.txtNotifikasi.Text = dgDaftarKontrol.Item(1, dgDaftarKontrol.CurrentRow.Index).Value
+        frmListLokasiValidasi.txtJenisValidasi.Text = dgDaftarKontrol.Item(0, dgDaftarKontrol.CurrentRow.Index).Value
+        frmListLokasiValidasi.ShowDialog()
+        'Catch ex As Exception
+        '    DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
+        'End Try
     End Sub
     Private Sub cmdRefresh_Click(sender As Object, e As EventArgs) Handles cmdRefresh.Click
         Call Koneksi_SAP()
