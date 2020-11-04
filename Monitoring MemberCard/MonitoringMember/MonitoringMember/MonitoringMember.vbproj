@@ -119,6 +119,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Browse\frmCariCustomer.Designer.vb">
+      <DependentUpon>frmCariCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\frmCariCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\frmListCustomer.Designer.vb">
+      <DependentUpon>frmListCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\frmListCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormRiwayatTransaksi.Designer.vb">
       <DependentUpon>FormRiwayatTransaksi.vb</DependentUpon>
     </Compile>
@@ -150,10 +162,22 @@
     <Compile Include="ListMemberYangBelumTerpakai.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Member\frmInformasiMember.Designer.vb">
-      <DependentUpon>frmInformasiMember.vb</DependentUpon>
+    <Compile Include="Customer\frmInformasiCustomer.Designer.vb">
+      <DependentUpon>frmInformasiCustomer.vb</DependentUpon>
     </Compile>
-    <Compile Include="Member\frmInformasiMember.vb">
+    <Compile Include="Customer\frmInformasiCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Promotion\frmMemberCardGenerator.Designer.vb">
+      <DependentUpon>frmMemberCardGenerator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Promotion\frmMemberCardGenerator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Promotion\frmVoucherCodeGenerator.Designer.vb">
+      <DependentUpon>frmVoucherCodeGenerator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Promotion\frmVoucherCodeGenerator.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SplashScreen.vb">
@@ -189,6 +213,12 @@
     <Compile Include="Variable\Variable.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Browse\frmCariCustomer.resx">
+      <DependentUpon>frmCariCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\frmListCustomer.resx">
+      <DependentUpon>frmListCustomer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRiwayatTransaksi.resx">
       <DependentUpon>FormRiwayatTransaksi.vb</DependentUpon>
     </EmbeddedResource>
@@ -204,8 +234,14 @@
     <EmbeddedResource Include="ListMemberYangBelumTerpakai.resx">
       <DependentUpon>ListMemberYangBelumTerpakai.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Member\frmInformasiMember.resx">
-      <DependentUpon>frmInformasiMember.vb</DependentUpon>
+    <EmbeddedResource Include="Customer\frmInformasiCustomer.resx">
+      <DependentUpon>frmInformasiCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Promotion\frmMemberCardGenerator.resx">
+      <DependentUpon>frmMemberCardGenerator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Promotion\frmVoucherCodeGenerator.resx">
+      <DependentUpon>frmVoucherCodeGenerator.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
@@ -250,6 +286,10 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Custom-Icon-Design-Flatastic-9-Monitoring.ico" />
+    <None Include="Resources\Export.png" />
+    <None Include="Resources\See.png" />
+    <None Include="Resources\Customer.png" />
+    <None Include="Resources\Export To Excel.png" />
     <None Include="Resources\Search User.png" />
     <None Include="Resources\Ubah Password logo.png" />
     <None Include="Resources\Batik 9 rotate.png" />

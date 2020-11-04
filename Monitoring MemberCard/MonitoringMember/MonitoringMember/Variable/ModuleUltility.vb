@@ -219,6 +219,60 @@ Module ModuleUltility
 
 
 
+
+    Sub GetInformasiCustomer(strKodeCustomer As String)
+
+        Try
+            Koneksi_SAP()
+            Dim command As SqlCommand
+            command = New SqlCommand("[tmsp_InformasiCustomer]", KoneksiSAP)
+
+            Dim adapter As New SqlDataAdapter(command)
+            command.CommandType = CommandType.StoredProcedure
+            command.Parameters.AddWithValue("KodeCustomer", Trim(strKodeCustomer))
+
+            command.Parameters.Add("KodeCustomerOUT", SqlDbType.VarChar, 100)
+            command.Parameters("KodeCustomerOUT").Direction = ParameterDirection.Output
+
+
+            command.Parameters.Add("NamaCustomerOUT", SqlDbType.VarChar, 300)
+            command.Parameters("NamaCustomerOUT").Direction = ParameterDirection.Output
+
+            command.Parameters.Add("PhoneOUT", SqlDbType.VarChar, 300)
+            command.Parameters("PhoneOUT").Direction = ParameterDirection.Output
+
+            command.Parameters.Add("AlamatOUT", SqlDbType.VarChar, 300)
+            command.Parameters("AlamatOUT").Direction = ParameterDirection.Output
+
+
+            command.Parameters.Add("NoMemberOUT", SqlDbType.VarChar, 300)
+            command.Parameters("NoMemberOUT").Direction = ParameterDirection.Output
+
+
+            command.Parameters.Add("LastTransactionOUT", SqlDbType.VarChar, 300)
+            command.Parameters("LastTransactionOUT").Direction = ParameterDirection.Output
+
+
+            If (KoneksiSAP.State = ConnectionState.Open) Then KoneksiSAP.Close()
+            command.Connection = KoneksiSAP
+            KoneksiSAP.Open()
+            command.ExecuteNonQuery()
+
+            MstrkodeCustomer = command.Parameters("KodeCustomerOUT").Value.ToString()
+            MstrNamaCustomer = command.Parameters("NamaCustomerOUT").Value.ToString()
+            MstrPhoneNumber = command.Parameters("PhoneOUT").Value.ToString()
+            MstrAlamatCustomer = command.Parameters("AlamatOUT").Value.ToString()
+            MstrNoMember = command.Parameters("NoMemberOUT").Value.ToString()
+            MstrLastTransaction = command.Parameters("LastTransactionOUT").Value.ToString()
+
+
+        Catch ex As Exception
+            DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
+        End Try
+
+    End Sub
+
+
   
 
 

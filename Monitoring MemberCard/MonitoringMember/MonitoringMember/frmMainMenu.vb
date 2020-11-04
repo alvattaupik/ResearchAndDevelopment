@@ -73,18 +73,34 @@ Public Class frmMainMenu
 
 
     Private Sub InformasiMemberToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InformasiMemberToolStripMenuItem.Click
-        Dim frm As New frmInformasiMember
+        Dim frm As New frmInformasiCustomer
         frm.MdiParent = Me
         frm.Show()
     End Sub
 
-    Private Sub MemberCardGeneratorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MemberCardGeneratorToolStripMenuItem.Click
+    Private Sub MemberCardGeneratorToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub DashboardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DashboardToolStripMenuItem.Click
         Dim frm As New frmDashboard
         frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub ListCustomerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListCustomerToolStripMenuItem.Click
+        Dim frm As New frmListCustomer
+        frm.Show()
+    End Sub
+
+
+    Private Sub VoucherCodeGeneratorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VoucherCodeGeneratorToolStripMenuItem.Click
+        Dim frm As New frmVoucherCodeGenerator
+        frm.Show()
+    End Sub
+
+    Private Sub MemberCardGeneratorToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles MemberCardGeneratorToolStripMenuItem.Click
+        Dim frm As New frmMemberCardGenerator
         frm.Show()
     End Sub
 End Class

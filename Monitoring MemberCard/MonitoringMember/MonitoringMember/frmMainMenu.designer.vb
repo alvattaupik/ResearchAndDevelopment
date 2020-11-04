@@ -33,23 +33,27 @@ Partial Class frmMainMenu
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Logout = New System.Windows.Forms.ToolStripMenuItem()
         Me.H_Shutdown = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MemberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InformasiMemberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListCustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PromotionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VoucherCodeGeneratorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MemberCardGeneratorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MonitoringToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MemberCardStockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VoucherCodeStockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TransaksiMemberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KirimMemberCardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KirimVoucherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LainnyaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.txtPesanError = New System.Windows.Forms.TextBox()
         Me.TimerPesanError = New System.Windows.Forms.Timer(Me.components)
         Me.TimerJam = New System.Windows.Forms.Timer(Me.components)
         Me.txtJamDanWaktu = New System.Windows.Forms.TextBox()
-        Me.MemberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InformasiMemberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MemberCardGeneratorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PromotionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VoucherCodeGeneratorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MonitoringToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MemberToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MemberCardStockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VoucherCodeStockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TransaksiMemberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -100,7 +104,7 @@ Partial Class frmMainMenu
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.MemberToolStripMenuItem, Me.PromotionToolStripMenuItem, Me.MonitoringToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.MemberToolStripMenuItem, Me.PromotionToolStripMenuItem, Me.MonitoringToolStripMenuItem, Me.TransaksiToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1370, 24)
@@ -114,6 +118,12 @@ Partial Class frmMainMenu
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
         Me.FileToolStripMenuItem.Text = "FILE"
         '
+        'DashboardToolStripMenuItem
+        '
+        Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
+        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.DashboardToolStripMenuItem.Text = "Dashboard"
+        '
         'H_Logout
         '
         Me.H_Logout.Name = "H_Logout"
@@ -125,6 +135,94 @@ Partial Class frmMainMenu
         Me.H_Shutdown.Name = "H_Shutdown"
         Me.H_Shutdown.Size = New System.Drawing.Size(172, 22)
         Me.H_Shutdown.Text = "Shutdown Aplikasi"
+        '
+        'MemberToolStripMenuItem
+        '
+        Me.MemberToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformasiMemberToolStripMenuItem, Me.ListCustomerToolStripMenuItem})
+        Me.MemberToolStripMenuItem.Name = "MemberToolStripMenuItem"
+        Me.MemberToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
+        Me.MemberToolStripMenuItem.Text = "Customer"
+        '
+        'InformasiMemberToolStripMenuItem
+        '
+        Me.InformasiMemberToolStripMenuItem.Name = "InformasiMemberToolStripMenuItem"
+        Me.InformasiMemberToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.InformasiMemberToolStripMenuItem.Text = "Informasi Customer"
+        '
+        'ListCustomerToolStripMenuItem
+        '
+        Me.ListCustomerToolStripMenuItem.Name = "ListCustomerToolStripMenuItem"
+        Me.ListCustomerToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.ListCustomerToolStripMenuItem.Text = "List Customer"
+        '
+        'PromotionToolStripMenuItem
+        '
+        Me.PromotionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VoucherCodeGeneratorToolStripMenuItem, Me.MemberCardGeneratorToolStripMenuItem})
+        Me.PromotionToolStripMenuItem.Name = "PromotionToolStripMenuItem"
+        Me.PromotionToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
+        Me.PromotionToolStripMenuItem.Text = "Promotion"
+        '
+        'VoucherCodeGeneratorToolStripMenuItem
+        '
+        Me.VoucherCodeGeneratorToolStripMenuItem.Name = "VoucherCodeGeneratorToolStripMenuItem"
+        Me.VoucherCodeGeneratorToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
+        Me.VoucherCodeGeneratorToolStripMenuItem.Text = "Voucher Code Generator"
+        '
+        'MemberCardGeneratorToolStripMenuItem
+        '
+        Me.MemberCardGeneratorToolStripMenuItem.Name = "MemberCardGeneratorToolStripMenuItem"
+        Me.MemberCardGeneratorToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
+        Me.MemberCardGeneratorToolStripMenuItem.Text = "Member Card Generator"
+        '
+        'MonitoringToolStripMenuItem
+        '
+        Me.MonitoringToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MemberCardStockToolStripMenuItem, Me.VoucherCodeStockToolStripMenuItem, Me.TransaksiMemberToolStripMenuItem})
+        Me.MonitoringToolStripMenuItem.Name = "MonitoringToolStripMenuItem"
+        Me.MonitoringToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
+        Me.MonitoringToolStripMenuItem.Text = "Monitoring"
+        '
+        'MemberCardStockToolStripMenuItem
+        '
+        Me.MemberCardStockToolStripMenuItem.Name = "MemberCardStockToolStripMenuItem"
+        Me.MemberCardStockToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.MemberCardStockToolStripMenuItem.Text = "Member Card Stock"
+        '
+        'VoucherCodeStockToolStripMenuItem
+        '
+        Me.VoucherCodeStockToolStripMenuItem.Name = "VoucherCodeStockToolStripMenuItem"
+        Me.VoucherCodeStockToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.VoucherCodeStockToolStripMenuItem.Text = "Voucher  Stock"
+        '
+        'TransaksiMemberToolStripMenuItem
+        '
+        Me.TransaksiMemberToolStripMenuItem.Name = "TransaksiMemberToolStripMenuItem"
+        Me.TransaksiMemberToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.TransaksiMemberToolStripMenuItem.Text = "Transaksi By No Member"
+        '
+        'TransaksiToolStripMenuItem
+        '
+        Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KirimMemberCardToolStripMenuItem, Me.KirimVoucherToolStripMenuItem, Me.LainnyaToolStripMenuItem})
+        Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
+        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.TransaksiToolStripMenuItem.Text = "Transaksi"
+        '
+        'KirimMemberCardToolStripMenuItem
+        '
+        Me.KirimMemberCardToolStripMenuItem.Name = "KirimMemberCardToolStripMenuItem"
+        Me.KirimMemberCardToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
+        Me.KirimMemberCardToolStripMenuItem.Text = "Kirim Member Card"
+        '
+        'KirimVoucherToolStripMenuItem
+        '
+        Me.KirimVoucherToolStripMenuItem.Name = "KirimVoucherToolStripMenuItem"
+        Me.KirimVoucherToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
+        Me.KirimVoucherToolStripMenuItem.Text = "Kirim Voucher"
+        '
+        'LainnyaToolStripMenuItem
+        '
+        Me.LainnyaToolStripMenuItem.Name = "LainnyaToolStripMenuItem"
+        Me.LainnyaToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
+        Me.LainnyaToolStripMenuItem.Text = "Lainnya"
         '
         'txtPesanError
         '
@@ -155,75 +253,6 @@ Partial Class frmMainMenu
         Me.txtJamDanWaktu.Size = New System.Drawing.Size(896, 19)
         Me.txtJamDanWaktu.TabIndex = 12
         Me.txtJamDanWaktu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'MemberToolStripMenuItem
-        '
-        Me.MemberToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformasiMemberToolStripMenuItem, Me.MemberCardGeneratorToolStripMenuItem})
-        Me.MemberToolStripMenuItem.Name = "MemberToolStripMenuItem"
-        Me.MemberToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
-        Me.MemberToolStripMenuItem.Text = "Member"
-        '
-        'InformasiMemberToolStripMenuItem
-        '
-        Me.InformasiMemberToolStripMenuItem.Name = "InformasiMemberToolStripMenuItem"
-        Me.InformasiMemberToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
-        Me.InformasiMemberToolStripMenuItem.Text = "Informasi Member"
-        '
-        'MemberCardGeneratorToolStripMenuItem
-        '
-        Me.MemberCardGeneratorToolStripMenuItem.Name = "MemberCardGeneratorToolStripMenuItem"
-        Me.MemberCardGeneratorToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
-        Me.MemberCardGeneratorToolStripMenuItem.Text = "Member Card Generator"
-        '
-        'PromotionToolStripMenuItem
-        '
-        Me.PromotionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VoucherCodeGeneratorToolStripMenuItem})
-        Me.PromotionToolStripMenuItem.Name = "PromotionToolStripMenuItem"
-        Me.PromotionToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
-        Me.PromotionToolStripMenuItem.Text = "Promotion"
-        '
-        'VoucherCodeGeneratorToolStripMenuItem
-        '
-        Me.VoucherCodeGeneratorToolStripMenuItem.Name = "VoucherCodeGeneratorToolStripMenuItem"
-        Me.VoucherCodeGeneratorToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
-        Me.VoucherCodeGeneratorToolStripMenuItem.Text = "Voucher Code Generator"
-        '
-        'MonitoringToolStripMenuItem
-        '
-        Me.MonitoringToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MemberToolStripMenuItem1, Me.MemberCardStockToolStripMenuItem, Me.VoucherCodeStockToolStripMenuItem, Me.TransaksiMemberToolStripMenuItem})
-        Me.MonitoringToolStripMenuItem.Name = "MonitoringToolStripMenuItem"
-        Me.MonitoringToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
-        Me.MonitoringToolStripMenuItem.Text = "Monitoring"
-        '
-        'MemberToolStripMenuItem1
-        '
-        Me.MemberToolStripMenuItem1.Name = "MemberToolStripMenuItem1"
-        Me.MemberToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.MemberToolStripMenuItem1.Text = "Member"
-        '
-        'MemberCardStockToolStripMenuItem
-        '
-        Me.MemberCardStockToolStripMenuItem.Name = "MemberCardStockToolStripMenuItem"
-        Me.MemberCardStockToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.MemberCardStockToolStripMenuItem.Text = "Member Card Stock"
-        '
-        'VoucherCodeStockToolStripMenuItem
-        '
-        Me.VoucherCodeStockToolStripMenuItem.Name = "VoucherCodeStockToolStripMenuItem"
-        Me.VoucherCodeStockToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.VoucherCodeStockToolStripMenuItem.Text = "Voucher Code Stock"
-        '
-        'TransaksiMemberToolStripMenuItem
-        '
-        Me.TransaksiMemberToolStripMenuItem.Name = "TransaksiMemberToolStripMenuItem"
-        Me.TransaksiMemberToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.TransaksiMemberToolStripMenuItem.Text = "Transaksi Member"
-        '
-        'DashboardToolStripMenuItem
-        '
-        Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
-        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
-        Me.DashboardToolStripMenuItem.Text = "Dashboard"
         '
         'frmMainMenu
         '
@@ -266,14 +295,18 @@ Partial Class frmMainMenu
     Friend WithEvents txtJamDanWaktu As System.Windows.Forms.TextBox
     Friend WithEvents MemberToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents InformasiMemberToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MemberCardGeneratorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PromotionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VoucherCodeGeneratorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MonitoringToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MemberToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MemberCardStockToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VoucherCodeStockToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TransaksiMemberToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DashboardToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ListCustomerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MemberCardGeneratorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TransaksiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents KirimMemberCardToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents KirimVoucherToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LainnyaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

@@ -24,28 +24,26 @@ Partial Class frmDashboard
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblNamaCabang = New Guna.UI.WinForms.GunaLabel()
-        Me.lblKodeCabang = New Guna.UI.WinForms.GunaLabel()
-        Me.lblSiteID = New Guna.UI.WinForms.GunaLabel()
-        Me.lblNamaUser = New Guna.UI.WinForms.GunaLabel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.lblJamDigital = New System.Windows.Forms.Label()
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
-        Me.timerDashboard = New System.Windows.Forms.Timer(Me.components)
         Me.GunaTransfarantPictureBox7 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GunaTransfarantPictureBox6 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GunaTransfarantPictureBox5 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.lblNamaCabang = New Guna.UI.WinForms.GunaLabel()
+        Me.lblNamaUser = New Guna.UI.WinForms.GunaLabel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.lblJamDigital = New System.Windows.Forms.Label()
         Me.GunaTransfarantPictureBox3 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.picLogout = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.GunaCirclePictureBox3 = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.GunaTransfarantPictureBox2 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GunaTransfarantPictureBox4 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.timerDashboard = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.GunaTransfarantPictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picLogout, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaCirclePictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,8 +61,6 @@ Partial Class frmDashboard
         Me.Panel1.Controls.Add(Me.GunaTransfarantPictureBox6)
         Me.Panel1.Controls.Add(Me.GunaTransfarantPictureBox5)
         Me.Panel1.Controls.Add(Me.lblNamaCabang)
-        Me.Panel1.Controls.Add(Me.lblKodeCabang)
-        Me.Panel1.Controls.Add(Me.lblSiteID)
         Me.Panel1.Controls.Add(Me.lblNamaUser)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.GunaTransfarantPictureBox3)
@@ -77,88 +73,6 @@ Partial Class frmDashboard
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(259, 705)
         Me.Panel1.TabIndex = 40
-        '
-        'lblNamaCabang
-        '
-        Me.lblNamaCabang.AutoSize = True
-        Me.lblNamaCabang.BackColor = System.Drawing.Color.Transparent
-        Me.lblNamaCabang.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNamaCabang.ForeColor = System.Drawing.Color.White
-        Me.lblNamaCabang.Location = New System.Drawing.Point(31, 340)
-        Me.lblNamaCabang.Name = "lblNamaCabang"
-        Me.lblNamaCabang.Size = New System.Drawing.Size(68, 13)
-        Me.lblNamaCabang.TabIndex = 11
-        Me.lblNamaCabang.Text = "GunaLabel1"
-        '
-        'lblKodeCabang
-        '
-        Me.lblKodeCabang.AutoSize = True
-        Me.lblKodeCabang.BackColor = System.Drawing.Color.Transparent
-        Me.lblKodeCabang.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblKodeCabang.ForeColor = System.Drawing.Color.White
-        Me.lblKodeCabang.Location = New System.Drawing.Point(31, 390)
-        Me.lblKodeCabang.Name = "lblKodeCabang"
-        Me.lblKodeCabang.Size = New System.Drawing.Size(68, 13)
-        Me.lblKodeCabang.TabIndex = 10
-        Me.lblKodeCabang.Text = "GunaLabel1"
-        '
-        'lblSiteID
-        '
-        Me.lblSiteID.AutoSize = True
-        Me.lblSiteID.BackColor = System.Drawing.Color.Transparent
-        Me.lblSiteID.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSiteID.ForeColor = System.Drawing.Color.White
-        Me.lblSiteID.Location = New System.Drawing.Point(31, 374)
-        Me.lblSiteID.Name = "lblSiteID"
-        Me.lblSiteID.Size = New System.Drawing.Size(68, 13)
-        Me.lblSiteID.TabIndex = 9
-        Me.lblSiteID.Text = "GunaLabel1"
-        '
-        'lblNamaUser
-        '
-        Me.lblNamaUser.AutoSize = True
-        Me.lblNamaUser.BackColor = System.Drawing.Color.Transparent
-        Me.lblNamaUser.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNamaUser.ForeColor = System.Drawing.Color.White
-        Me.lblNamaUser.Location = New System.Drawing.Point(31, 357)
-        Me.lblNamaUser.Name = "lblNamaUser"
-        Me.lblNamaUser.Size = New System.Drawing.Size(68, 13)
-        Me.lblNamaUser.TabIndex = 8
-        Me.lblNamaUser.Text = "GunaLabel1"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.lblJamDigital)
-        Me.Panel2.Location = New System.Drawing.Point(12, 172)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(237, 45)
-        Me.Panel2.TabIndex = 7
-        '
-        'lblJamDigital
-        '
-        Me.lblJamDigital.AutoSize = True
-        Me.lblJamDigital.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJamDigital.Location = New System.Drawing.Point(44, 7)
-        Me.lblJamDigital.Name = "lblJamDigital"
-        Me.lblJamDigital.Size = New System.Drawing.Size(71, 31)
-        Me.lblJamDigital.TabIndex = 0
-        Me.lblJamDigital.Text = "JAM"
-        '
-        'WebBrowser1
-        '
-        Me.WebBrowser1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WebBrowser1.Location = New System.Drawing.Point(264, 2)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(661, 668)
-        Me.WebBrowser1.TabIndex = 41
-        '
-        'timerDashboard
-        '
-        Me.timerDashboard.Interval = 1000
         '
         'GunaTransfarantPictureBox7
         '
@@ -195,6 +109,49 @@ Partial Class frmDashboard
         Me.GunaTransfarantPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.GunaTransfarantPictureBox5.TabIndex = 13
         Me.GunaTransfarantPictureBox5.TabStop = False
+        '
+        'lblNamaCabang
+        '
+        Me.lblNamaCabang.AutoSize = True
+        Me.lblNamaCabang.BackColor = System.Drawing.Color.Transparent
+        Me.lblNamaCabang.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNamaCabang.ForeColor = System.Drawing.Color.White
+        Me.lblNamaCabang.Location = New System.Drawing.Point(48, 321)
+        Me.lblNamaCabang.Name = "lblNamaCabang"
+        Me.lblNamaCabang.Size = New System.Drawing.Size(79, 13)
+        Me.lblNamaCabang.TabIndex = 11
+        Me.lblNamaCabang.Text = "Nama Cabang"
+        '
+        'lblNamaUser
+        '
+        Me.lblNamaUser.AutoSize = True
+        Me.lblNamaUser.BackColor = System.Drawing.Color.Transparent
+        Me.lblNamaUser.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNamaUser.ForeColor = System.Drawing.Color.White
+        Me.lblNamaUser.Location = New System.Drawing.Point(31, 357)
+        Me.lblNamaUser.Name = "lblNamaUser"
+        Me.lblNamaUser.Size = New System.Drawing.Size(82, 13)
+        Me.lblNamaUser.TabIndex = 8
+        Me.lblNamaUser.Text = "Nama Pegawai"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.lblJamDigital)
+        Me.Panel2.Location = New System.Drawing.Point(12, 172)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(237, 45)
+        Me.Panel2.TabIndex = 7
+        '
+        'lblJamDigital
+        '
+        Me.lblJamDigital.AutoSize = True
+        Me.lblJamDigital.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJamDigital.Location = New System.Drawing.Point(44, 7)
+        Me.lblJamDigital.Name = "lblJamDigital"
+        Me.lblJamDigital.Size = New System.Drawing.Size(71, 31)
+        Me.lblJamDigital.TabIndex = 0
+        Me.lblJamDigital.Text = "JAM"
         '
         'GunaTransfarantPictureBox3
         '
@@ -268,6 +225,21 @@ Partial Class frmDashboard
         Me.GunaTransfarantPictureBox4.TabIndex = 12
         Me.GunaTransfarantPictureBox4.TabStop = False
         '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WebBrowser1.Location = New System.Drawing.Point(264, 2)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(661, 668)
+        Me.WebBrowser1.TabIndex = 41
+        '
+        'timerDashboard
+        '
+        Me.timerDashboard.Interval = 1000
+        '
         'frmDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -281,11 +253,11 @@ Partial Class frmDashboard
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         CType(Me.GunaTransfarantPictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picLogout, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaCirclePictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -297,8 +269,6 @@ Partial Class frmDashboard
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents lblNamaCabang As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents lblKodeCabang As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents lblSiteID As Guna.UI.WinForms.GunaLabel
     Friend WithEvents lblNamaUser As Guna.UI.WinForms.GunaLabel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents lblJamDigital As System.Windows.Forms.Label

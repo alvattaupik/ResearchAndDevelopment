@@ -1004,43 +1004,7 @@ ErrorLoad:
     End Sub
 
 
-    Sub AddGenerateNoVoucher()
-
-        Try
-
-            KoneksiDB_EMAIL()
-            Dim command As SqlCommand
-            command = New SqlCommand("tmsp_AddGenerateNoVoucher", koneksiIvend)
-            Dim adapter As New SqlDataAdapter(command)
-            command.CommandType = CommandType.StoredProcedure
-            command.Parameters.AddWithValue("Keterangan", Trim(txtKeterangan.Text))
-            command.Parameters.AddWithValue("Jumlah", Trim(dgDaftarNoVoucher.RowCount))
-            command.Parameters.AddWithValue("From", Trim(txtFromVoucher.Text))
-            command.Parameters.AddWithValue("To", Trim(txtToVoucher.Text))
-            command.Parameters.AddWithValue("GeneratedBy", Trim(txtDibuatOlehNovoucher.Text))
-            command.Parameters.AddWithValue("GenerateNumber", Trim(txtGenerateNumber.Text))
-            command.Parameters.AddWithValue("DocEntry", Trim(""))
-            command.Parameters.AddWithValue("NoVoucher", Trim(""))
-            command.Parameters.AddWithValue("Status", Trim("H"))
-
-
-            lblPreview.Text = "Memproses"
-
-            If (koneksiIvend.State = ConnectionState.Open) Then koneksiIvend.Close()
-            command.Connection = koneksiIvend
-            koneksiIvend.Open()
-            command.ExecuteNonQuery()
-
-            lblPreview.Text = "Sukses Disimpan"
-
-            lblJumlahNoVoucher.Text = "Jumlah Voucher :" & dgDaftarNoVoucher.RowCount
-
-        Catch ex As Exception
-            MessageBox.Show(Err.Description)
-        End Try
-
-    End Sub
-
+  
 
 
 
@@ -1094,7 +1058,7 @@ ErrorLoad:
 
 
         If MsgBox("Apakah Data Yang Di Inputkan Sudah Benar? Kode Voucher yang telah disimpan tidak dapat dibatalkan", vbYesNo, "Konfirmasi") = vbYes Then
-            AddGenerateNoVoucher()
+            'AddGenerateNoVoucher()
             AddListDetailNoVoucher()
 
 

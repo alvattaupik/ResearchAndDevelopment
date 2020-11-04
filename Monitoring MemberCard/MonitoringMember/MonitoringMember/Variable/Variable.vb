@@ -67,6 +67,12 @@
 
     Public MstrKodeCabang As String
     Public MstrNoMember As String
+    Public MstrAlamatCustomer As String
+    Public MstrLastTransaction As String
+    Public MstrPhoneNumber As String
+    Public MstrNamaCustomer As String
+    Public MstrkodeCustomer As String
+
 
 
 End Module
