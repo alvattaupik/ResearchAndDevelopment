@@ -85,6 +85,7 @@ Public Class frmMemberCardGenerator
                                 " LEFT OUTER JOIN dbo.V_Divisi ON KodeCabang COLLATE DATABASE_DEFAULT=KodeDivisi COLLATE DATABASE_DEFAULT"
         Call Koneksi_SAP()
         LoadDataGrid(dgvListGenerate, strQuery, KoneksiDBEmail)
+        lblJumlahDataNomor.Text = "Jumlah Pembuatan : " & dgvListGenerate.RowCount
     End Sub
 
 
@@ -111,7 +112,7 @@ Public Class frmMemberCardGenerator
             Me.dgvRincianNomor.DataSource = table
             dgvRincianNomor.DataSource = table
 
-            lblJumlahDataNomor.Text = "Jumlah Nomor: " & dgvRincianNomor.RowCount
+            lblJumlahNomor.Text = "Jumlah Nomor: " & dgvRincianNomor.RowCount
         Catch ex As Exception
             DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
         End Try

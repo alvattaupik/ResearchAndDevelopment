@@ -84,6 +84,11 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\Guna.UI-Framework-Lib\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
@@ -98,6 +103,8 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -119,11 +126,35 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Browse\frmBrowseBusinessPartner.designer.vb">
+      <DependentUpon>frmBrowseBusinessPartner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\frmBrowseBusinessPartner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\frmBrowseItemMasterDataKoreksi.designer.vb">
+      <DependentUpon>frmBrowseItemMasterDataKoreksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\frmBrowseItemMasterDataKoreksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browse\frmBrowseItemMasterData.designer.vb">
+      <DependentUpon>frmBrowseItemMasterData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Browse\frmBrowseItemMasterData.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Browse\frmCariCustomer.Designer.vb">
       <DependentUpon>frmCariCustomer.vb</DependentUpon>
     </Compile>
     <Compile Include="Browse\frmCariCustomer.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CR\Surat Jalan Anyar Gadget G001-01.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Surat Jalan Anyar Gadget G001-01.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Customer\frmListCustomer.Designer.vb">
       <DependentUpon>frmListCustomer.vb</DependentUpon>
@@ -143,6 +174,12 @@
     <Compile Include="frmDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmLainnya.Designer.vb">
+      <DependentUpon>frmLainnya.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLainnya.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLogin.designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
@@ -153,6 +190,12 @@
       <DependentUpon>frmMainMenu.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTampilkanLaporan.designer.vb">
+      <DependentUpon>frmTampilkanLaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTampilkanLaporan.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Koneksi\ModuleKoneksi.vb" />
@@ -166,6 +209,18 @@
       <DependentUpon>frmInformasiCustomer.vb</DependentUpon>
     </Compile>
     <Compile Include="Customer\frmInformasiCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Monitoring\frmMonitoringStokMemberdanVoucher.Designer.vb">
+      <DependentUpon>frmMonitoringStokMemberdanVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Monitoring\frmMonitoringStokMemberdanVoucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Monitoring\frmPenggunaanNoMember.Designer.vb">
+      <DependentUpon>frmPenggunaanNoMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Monitoring\frmPenggunaanNoMember.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Promotion\frmMemberCardGenerator.Designer.vb">
@@ -208,13 +263,32 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Transaksi\frmSuratJalan.designer.vb">
+      <DependentUpon>frmSuratJalan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\frmSuratJalan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Variable\Koneksi.vb" />
     <Compile Include="Variable\ModuleUltility.vb" />
     <Compile Include="Variable\Variable.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Browse\frmBrowseBusinessPartner.resx">
+      <DependentUpon>frmBrowseBusinessPartner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\frmBrowseItemMasterDataKoreksi.resx">
+      <DependentUpon>frmBrowseItemMasterDataKoreksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browse\frmBrowseItemMasterData.resx">
+      <DependentUpon>frmBrowseItemMasterData.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Browse\frmCariCustomer.resx">
       <DependentUpon>frmCariCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\Surat Jalan Anyar Gadget G001-01.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Surat Jalan Anyar Gadget G001-01.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\frmListCustomer.resx">
       <DependentUpon>frmListCustomer.vb</DependentUpon>
@@ -225,17 +299,29 @@
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLainnya.resx">
+      <DependentUpon>frmLainnya.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTampilkanLaporan.resx">
+      <DependentUpon>frmTampilkanLaporan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListMemberYangBelumTerpakai.resx">
       <DependentUpon>ListMemberYangBelumTerpakai.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\frmInformasiCustomer.resx">
       <DependentUpon>frmInformasiCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Monitoring\frmMonitoringStokMemberdanVoucher.resx">
+      <DependentUpon>frmMonitoringStokMemberdanVoucher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Monitoring\frmPenggunaanNoMember.resx">
+      <DependentUpon>frmPenggunaanNoMember.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Promotion\frmMemberCardGenerator.resx">
       <DependentUpon>frmMemberCardGenerator.vb</DependentUpon>
@@ -254,6 +340,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\frmSuratJalan.resx">
+      <DependentUpon>frmSuratJalan.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -283,9 +372,15 @@
   <ItemGroup>
     <None Include="Resources\logo_jpeg.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Custom-Icon-Design-Flatastic-9-Monitoring.ico" />
+    <None Include="Resources\SURAT.png" />
+    <None Include="Resources\browse.png" />
+    <None Include="Resources\Cancel.png" />
+    <None Include="Resources\Print1.png" />
     <None Include="Resources\Export.png" />
     <None Include="Resources\See.png" />
     <None Include="Resources\Customer.png" />

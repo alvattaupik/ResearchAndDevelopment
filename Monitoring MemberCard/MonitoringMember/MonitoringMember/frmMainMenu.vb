@@ -103,4 +103,27 @@ Public Class frmMainMenu
         Dim frm As New frmMemberCardGenerator
         frm.Show()
     End Sub
+
+    Private Sub MemberCardStockToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MemberCardStockToolStripMenuItem.Click
+        Dim frm As New frmMonitoringStokMemberdanVoucher
+        frm.Show()
+    End Sub
+
+    Private Sub KirimMemberCardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KirimMemberCardToolStripMenuItem.Click
+        Dim frm As New frmSuratJalan
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub LainnyaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LainnyaToolStripMenuItem.Click
+        Dim frm As New frmLainnya
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub NomorMemberToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NomorMemberToolStripMenuItem.Click
+        Dim frm As New frmPenggunaanNoMember
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class

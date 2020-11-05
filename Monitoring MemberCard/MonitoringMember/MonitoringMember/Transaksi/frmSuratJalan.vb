@@ -47,8 +47,19 @@ Public Class frmSuratJalan
             Exit Sub
         End If
 
+        If cmbCabang.SelectedValue = "" Or cmbCabang.Text = "" Then
+            DisplayPesanError("Cabang Tujuan Di Isi", frmMainMenu.txtPesanError, 1000)
+            Exit Sub
+        End If
 
-        dgvListItem.Rows.Add(txtKode.Text, txtDeskripsi.Text, txtQty.Text, txtKeterangan.Text)
+        If txtQty.Text = "" Then
+            DisplayPesanError("Quantity Di Isi", frmMainMenu.txtPesanError, 1000)
+            Exit Sub
+        End If
+
+
+
+        dgvListItem.Rows.Add(txtKode.Text, txtDeskripsi.Text, txtQty.Text, txtKeterangan.Text, cmbCabang.SelectedValue)
         lblJumlahItem.Text = "Jumlah Barang : " & dgvListItem.RowCount
         dgvListItem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
         dgvListItem.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
@@ -57,6 +68,8 @@ Public Class frmSuratJalan
         txtDeskripsi.Text = ""
         txtQty.Text = ""
         txtKeterangan.Text = ""
+        cmbCabang.Text = ""
+        cmbCabang.SelectedValue = ""
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
@@ -84,7 +97,7 @@ Public Class frmSuratJalan
     Private Sub btnProses_Click(sender As Object, e As EventArgs) Handles btnProses.Click
 
         If dgvListItem.RowCount = 0 Then
-            DisplayPesanError("Isi Surat Min 1 Barang", frmMainMenu.txtPesanError, 1000)
+            DisplayPesanError("Isi Surat Jalan Min 1 Barang", frmMainMenu.txtPesanError, 1000)
             Exit Sub
         End If
 
@@ -108,6 +121,7 @@ Public Class frmSuratJalan
 
         dgvListItem.DataSource = Nothing
         dgvListItem.Rows.Clear()
+
 
         txtSalamPembuka.Text = ""
         txtKalimatPembuka.Text = ""
@@ -197,7 +211,7 @@ Public Class frmSuratJalan
         Try
             KoneksiDB_EMAIL()
             Dim command As SqlCommand
-            command = New SqlCommand("[AU_SISTER_DETAILSURAT]", KoneksiDBEmail)
+            command = New SqlCommand("[AU_SISTER_DETAILSURAT_VM]", KoneksiDBEmail)
 
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure
@@ -205,6 +219,7 @@ Public Class frmSuratJalan
             command.Parameters.AddWithValue("KodeBarang", Trim(dgvKode.Rows(intRow).Cells(0).Value))
             command.Parameters.AddWithValue("Deskripsi", Trim(dgvKode.Rows(intRow).Cells(1).Value))
             command.Parameters.AddWithValue("Quantity", Trim(dgvKode.Rows(intRow).Cells(2).Value))
+            command.Parameters.AddWithValue("Cabang", Trim(dgvKode.Rows(intRow).Cells(4).Value))
             command.Parameters.AddWithValue("Keterangan", Trim(dgvKode.Rows(intRow).Cells(3).Value))
 
             command.Parameters.Add("ErrorCodeOUT", SqlDbType.VarChar, 100)
@@ -280,7 +295,7 @@ Public Class frmSuratJalan
 
 
 
-        Dim frm As New frmTampilkanSurat
+        Dim frm As New frmTampilkanLaporan
         frm.crvTampilkanSurat.ParameterFieldInfo = paramFields
         reportDocument = New Surat_Jalan_Anyar_Gadget_G001_01
         reportDocument.SetDatabaseLogon("sa", "h0spit4lity#", "10.1.0.53", "DB_EMAIL")
@@ -314,5 +329,21 @@ Public Class frmSuratJalan
 
     Private Sub dgvDaftarSurat_Click(sender As Object, e As EventArgs) Handles dgvDaftarSurat.Click
         txtNoSurat.Text = dgvDaftarSurat.Item(0, dgvDaftarSurat.CurrentRow.Index).Value
+    End Sub
+
+
+
+
+    Private Sub txtQty_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtQty.KeyPress
+        'e.Handled = Not (Char.IsDigit(e.KeyChar)) Or Asc(e.KeyChar) = 8 Or Asc(e.KeyChar) = 127
+        If e.KeyChar <> ControlChars.Back Then
+            e.Handled = Not (Char.IsDigit(e.KeyChar))
+        End If
+    End Sub
+
+
+    Private Sub cmbCabang_Click(sender As Object, e As EventArgs) Handles cmbCabang.Click
+        Call Koneksi_SAP()
+        LoadComboBox(cmbCabang, "Select PrcCode,PrcName From OPRC Where PrcCode Like '0%'", "PrcCode", "PrcName", KoneksiSAP)
     End Sub
 End Class

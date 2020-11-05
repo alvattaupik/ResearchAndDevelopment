@@ -194,9 +194,11 @@ Public Class frmVoucherCodeGenerator
                 txtPathExport.Text = FolderBrowserDialog1.SelectedPath
             End If
             Exit Sub
+        Else
+            GenerateQRCode2()
         End If
 
-        GenerateQRCode2()
+
     End Sub
 
     Sub GenerateQRCode2()
@@ -230,6 +232,8 @@ Public Class frmVoucherCodeGenerator
             End Using
 
         Next
+
+        DisplayPesanOK("Sukses Di Export Ke" & txtPathExport.Text, frmMainMenu.txtPesanError, 1000)
 
         Exit Sub
     End Sub
