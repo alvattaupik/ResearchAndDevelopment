@@ -33,7 +33,6 @@ Partial Class frmDashboard
         Me.lblJamDigital = New System.Windows.Forms.Label()
         Me.GunaTransfarantPictureBox3 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.picLogout = New Guna.UI.WinForms.GunaCirclePictureBox()
-        Me.GunaCirclePictureBox3 = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.GunaTransfarantPictureBox2 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GunaTransfarantPictureBox4 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
@@ -46,7 +45,6 @@ Partial Class frmDashboard
         Me.Panel2.SuspendLayout()
         CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picLogout, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GunaCirclePictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,7 +54,7 @@ Partial Class frmDashboard
         '
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.Controls.Add(Me.GunaTransfarantPictureBox7)
         Me.Panel1.Controls.Add(Me.GunaTransfarantPictureBox6)
         Me.Panel1.Controls.Add(Me.GunaTransfarantPictureBox5)
@@ -65,7 +63,6 @@ Partial Class frmDashboard
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.GunaTransfarantPictureBox3)
         Me.Panel1.Controls.Add(Me.picLogout)
-        Me.Panel1.Controls.Add(Me.GunaCirclePictureBox3)
         Me.Panel1.Controls.Add(Me.GunaTransfarantPictureBox2)
         Me.Panel1.Controls.Add(Me.GunaTransfarantPictureBox1)
         Me.Panel1.Controls.Add(Me.GunaTransfarantPictureBox4)
@@ -103,7 +100,7 @@ Partial Class frmDashboard
         Me.GunaTransfarantPictureBox5.BackColor = System.Drawing.Color.Transparent
         Me.GunaTransfarantPictureBox5.BaseColor = System.Drawing.Color.Black
         Me.GunaTransfarantPictureBox5.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
-        Me.GunaTransfarantPictureBox5.Location = New System.Drawing.Point(126, 0)
+        Me.GunaTransfarantPictureBox5.Location = New System.Drawing.Point(132, 0)
         Me.GunaTransfarantPictureBox5.Name = "GunaTransfarantPictureBox5"
         Me.GunaTransfarantPictureBox5.Size = New System.Drawing.Size(133, 120)
         Me.GunaTransfarantPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -113,9 +110,9 @@ Partial Class frmDashboard
         'lblNamaCabang
         '
         Me.lblNamaCabang.AutoSize = True
-        Me.lblNamaCabang.BackColor = System.Drawing.Color.Transparent
+        Me.lblNamaCabang.BackColor = System.Drawing.Color.MistyRose
         Me.lblNamaCabang.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNamaCabang.ForeColor = System.Drawing.Color.White
+        Me.lblNamaCabang.ForeColor = System.Drawing.Color.Black
         Me.lblNamaCabang.Location = New System.Drawing.Point(48, 321)
         Me.lblNamaCabang.Name = "lblNamaCabang"
         Me.lblNamaCabang.Size = New System.Drawing.Size(79, 13)
@@ -125,10 +122,10 @@ Partial Class frmDashboard
         'lblNamaUser
         '
         Me.lblNamaUser.AutoSize = True
-        Me.lblNamaUser.BackColor = System.Drawing.Color.Transparent
+        Me.lblNamaUser.BackColor = System.Drawing.Color.MistyRose
         Me.lblNamaUser.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNamaUser.ForeColor = System.Drawing.Color.White
-        Me.lblNamaUser.Location = New System.Drawing.Point(31, 357)
+        Me.lblNamaUser.ForeColor = System.Drawing.Color.Black
+        Me.lblNamaUser.Location = New System.Drawing.Point(48, 338)
         Me.lblNamaUser.Name = "lblNamaUser"
         Me.lblNamaUser.Size = New System.Drawing.Size(82, 13)
         Me.lblNamaUser.TabIndex = 8
@@ -176,18 +173,6 @@ Partial Class frmDashboard
         Me.picLogout.TabIndex = 3
         Me.picLogout.TabStop = False
         Me.picLogout.UseTransfarantBackground = False
-        '
-        'GunaCirclePictureBox3
-        '
-        Me.GunaCirclePictureBox3.BaseColor = System.Drawing.Color.White
-        Me.GunaCirclePictureBox3.Image = Global.MonitoringMember.My.Resources.Resources.Ubah_Password_logo
-        Me.GunaCirclePictureBox3.Location = New System.Drawing.Point(184, 315)
-        Me.GunaCirclePictureBox3.Name = "GunaCirclePictureBox3"
-        Me.GunaCirclePictureBox3.Size = New System.Drawing.Size(65, 63)
-        Me.GunaCirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.GunaCirclePictureBox3.TabIndex = 4
-        Me.GunaCirclePictureBox3.TabStop = False
-        Me.GunaCirclePictureBox3.UseTransfarantBackground = False
         '
         'GunaTransfarantPictureBox2
         '
@@ -260,7 +245,6 @@ Partial Class frmDashboard
         Me.Panel2.PerformLayout()
         CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picLogout, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaCirclePictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -274,7 +258,6 @@ Partial Class frmDashboard
     Friend WithEvents lblJamDigital As System.Windows.Forms.Label
     Friend WithEvents GunaTransfarantPictureBox3 As Guna.UI.WinForms.GunaTransfarantPictureBox
     Friend WithEvents picLogout As Guna.UI.WinForms.GunaCirclePictureBox
-    Friend WithEvents GunaCirclePictureBox3 As Guna.UI.WinForms.GunaCirclePictureBox
     Friend WithEvents GunaTransfarantPictureBox2 As Guna.UI.WinForms.GunaTransfarantPictureBox
     Friend WithEvents GunaTransfarantPictureBox1 As Guna.UI.WinForms.GunaTransfarantPictureBox
     Friend WithEvents GunaTransfarantPictureBox4 As Guna.UI.WinForms.GunaTransfarantPictureBox

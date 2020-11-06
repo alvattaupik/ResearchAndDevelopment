@@ -29,6 +29,7 @@ Public Class frmMonitoringStokMemberdanVoucher
     End Sub
 
     Private Sub picLihatRincianMember_Click(sender As Object, e As EventArgs) Handles picLihatRincianMember.Click
+        If dgvStokMember.RowCount = 0 Then Exit Sub
         Dim strQuery As String
         strQuery = "SELECT OVMCategories.Deskripsi,Qty,OINM.Deskripsi AS Catatan,Date,CreatedBy,Sequence FROM dbo.OINM " & _
                     " LEFT OUTER JOIN dbo.OVMCategories ON dbo.OVMCategories.ID=dbo.OINM.Transtype " & _
@@ -38,6 +39,8 @@ Public Class frmMonitoringStokMemberdanVoucher
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        If dgvStockVoucher.RowCount = 0 Then Exit Sub
+
         Dim strQuery As String
         strQuery = "SELECT OVMCategories.Deskripsi,Qty,OINM.Deskripsi AS Catatan,Date,CreatedBy,Sequence FROM dbo.OINM" & _
                     " LEFT OUTER JOIN dbo.OVMCategories ON dbo.OVMCategories.ID=dbo.OINM.Transtype" & _

@@ -23,6 +23,8 @@ Partial Class frmPenggunaanNoMember
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.txtKota = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -48,12 +50,15 @@ Partial Class frmPenggunaanNoMember
         Me.Label10 = New System.Windows.Forms.Label()
         Me.dgvSudahRegistrasi = New System.Windows.Forms.DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.dgvRincianTransaksi = New System.Windows.Forms.DataGridView()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.lblBelumDiregistrasi = New System.Windows.Forms.Label()
+        Me.gbDaftarPengguna = New System.Windows.Forms.GroupBox()
+        Me.btnLihatTransaksi = New System.Windows.Forms.Button()
+        Me.dgvPenggunaMember = New System.Windows.Forms.DataGridView()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.txtKota = New System.Windows.Forms.TextBox()
-        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.txtNoMember = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -61,8 +66,10 @@ Partial Class frmPenggunaanNoMember
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgvSudahRegistrasi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        CType(Me.dgvRincianTransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gbDaftarPengguna.SuspendLayout()
+        CType(Me.dgvPenggunaMember, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -93,11 +100,28 @@ Partial Class frmPenggunaanNoMember
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Parameter"
         '
+        'btnCancel
+        '
+        Me.btnCancel.Location = New System.Drawing.Point(195, 559)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(136, 70)
+        Me.btnCancel.TabIndex = 18
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
+        'txtKota
+        '
+        Me.txtKota.Location = New System.Drawing.Point(141, 507)
+        Me.txtKota.Name = "txtKota"
+        Me.txtKota.Size = New System.Drawing.Size(193, 26)
+        Me.txtKota.TabIndex = 17
+        '
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(152, 76)
+        Me.Label9.Location = New System.Drawing.Point(160, 78)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(151, 39)
         Me.Label9.TabIndex = 16
@@ -107,7 +131,7 @@ Partial Class frmPenggunaanNoMember
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(154, 45)
+        Me.Label8.Location = New System.Drawing.Point(162, 47)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(177, 31)
         Me.Label8.TabIndex = 15
@@ -117,7 +141,7 @@ Partial Class frmPenggunaanNoMember
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(154, 12)
+        Me.Label7.Location = New System.Drawing.Point(162, 14)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(145, 33)
         Me.Label7.TabIndex = 14
@@ -327,82 +351,129 @@ Partial Class frmPenggunaanNoMember
         Me.dgvSudahRegistrasi.Location = New System.Drawing.Point(7, 6)
         Me.dgvSudahRegistrasi.Name = "dgvSudahRegistrasi"
         Me.dgvSudahRegistrasi.ReadOnly = True
+        Me.dgvSudahRegistrasi.RowHeadersVisible = False
         Me.dgvSudahRegistrasi.Size = New System.Drawing.Size(753, 442)
         Me.dgvSudahRegistrasi.TabIndex = 0
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Label13)
+        Me.TabPage2.Controls.Add(Me.dgvRincianTransaksi)
         Me.TabPage2.Controls.Add(Me.GroupBox4)
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(766, 607)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Belum Di Registrasi"
+        Me.TabPage2.Text = "Penggunaan Transaksi Member"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'dgvRincianTransaksi
+        '
+        Me.dgvRincianTransaksi.AllowUserToAddRows = False
+        Me.dgvRincianTransaksi.AllowUserToDeleteRows = False
+        Me.dgvRincianTransaksi.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvRincianTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvRincianTransaksi.Location = New System.Drawing.Point(9, 270)
+        Me.dgvRincianTransaksi.Name = "dgvRincianTransaksi"
+        Me.dgvRincianTransaksi.ReadOnly = True
+        Me.dgvRincianTransaksi.RowHeadersVisible = False
+        Me.dgvRincianTransaksi.Size = New System.Drawing.Size(751, 331)
+        Me.dgvRincianTransaksi.TabIndex = 1
         '
         'GroupBox4
         '
-        Me.GroupBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.GroupBox4.Controls.Add(Me.lblBelumDiregistrasi)
-        Me.GroupBox4.Controls.Add(Me.Label12)
-        Me.GroupBox4.Location = New System.Drawing.Point(7, 467)
+        Me.GroupBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox4.Controls.Add(Me.gbDaftarPengguna)
+        Me.GroupBox4.Controls.Add(Me.txtNoMember)
+        Me.GroupBox4.Controls.Add(Me.Label11)
+        Me.GroupBox4.Location = New System.Drawing.Point(9, 0)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(200, 134)
-        Me.GroupBox4.TabIndex = 4
+        Me.GroupBox4.Size = New System.Drawing.Size(751, 240)
+        Me.GroupBox4.TabIndex = 0
         Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Parameter"
         '
-        'lblBelumDiregistrasi
+        'gbDaftarPengguna
         '
-        Me.lblBelumDiregistrasi.AutoSize = True
-        Me.lblBelumDiregistrasi.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBelumDiregistrasi.Location = New System.Drawing.Point(78, 75)
-        Me.lblBelumDiregistrasi.Name = "lblBelumDiregistrasi"
-        Me.lblBelumDiregistrasi.Size = New System.Drawing.Size(36, 37)
-        Me.lblBelumDiregistrasi.TabIndex = 1
-        Me.lblBelumDiregistrasi.Text = "0"
+        Me.gbDaftarPengguna.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gbDaftarPengguna.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.gbDaftarPengguna.Controls.Add(Me.btnLihatTransaksi)
+        Me.gbDaftarPengguna.Controls.Add(Me.dgvPenggunaMember)
+        Me.gbDaftarPengguna.Controls.Add(Me.Label12)
+        Me.gbDaftarPengguna.Location = New System.Drawing.Point(12, 48)
+        Me.gbDaftarPengguna.Name = "gbDaftarPengguna"
+        Me.gbDaftarPengguna.Size = New System.Drawing.Size(733, 178)
+        Me.gbDaftarPengguna.TabIndex = 2
+        Me.gbDaftarPengguna.TabStop = False
+        '
+        'btnLihatTransaksi
+        '
+        Me.btnLihatTransaksi.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnLihatTransaksi.Location = New System.Drawing.Point(602, 33)
+        Me.btnLihatTransaksi.Name = "btnLihatTransaksi"
+        Me.btnLihatTransaksi.Size = New System.Drawing.Size(125, 136)
+        Me.btnLihatTransaksi.TabIndex = 2
+        Me.btnLihatTransaksi.Text = "Lihat Transaksi"
+        Me.btnLihatTransaksi.UseVisualStyleBackColor = True
+        '
+        'dgvPenggunaMember
+        '
+        Me.dgvPenggunaMember.AllowUserToAddRows = False
+        Me.dgvPenggunaMember.AllowUserToDeleteRows = False
+        Me.dgvPenggunaMember.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvPenggunaMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPenggunaMember.Location = New System.Drawing.Point(7, 34)
+        Me.dgvPenggunaMember.Name = "dgvPenggunaMember"
+        Me.dgvPenggunaMember.ReadOnly = True
+        Me.dgvPenggunaMember.RowHeadersVisible = False
+        Me.dgvPenggunaMember.Size = New System.Drawing.Size(589, 136)
+        Me.dgvPenggunaMember.TabIndex = 1
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(27, 11)
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(10, 9)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(136, 39)
+        Me.Label12.Size = New System.Drawing.Size(226, 24)
         Me.Label12.TabIndex = 0
-        Me.Label12.Text = "Jumlah"
+        Me.Label12.Text = "Sudah Digunakan Oleh"
         '
-        'DataGridView1
+        'txtNoMember
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.txtNoMember.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(7, 15)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(753, 433)
-        Me.DataGridView1.TabIndex = 1
+        Me.txtNoMember.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNoMember.Location = New System.Drawing.Point(198, 13)
+        Me.txtNoMember.Name = "txtNoMember"
+        Me.txtNoMember.Size = New System.Drawing.Size(547, 29)
+        Me.txtNoMember.TabIndex = 1
         '
-        'txtKota
+        'Label11
         '
-        Me.txtKota.Location = New System.Drawing.Point(141, 507)
-        Me.txtKota.Name = "txtKota"
-        Me.txtKota.Size = New System.Drawing.Size(193, 26)
-        Me.txtKota.TabIndex = 17
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(21, 15)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(171, 25)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "Nomor Member"
         '
-        'btnCancel
+        'Label13
         '
-        Me.btnCancel.Location = New System.Drawing.Point(195, 559)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(136, 70)
-        Me.btnCancel.TabIndex = 18
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(6, 243)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(175, 24)
+        Me.Label13.TabIndex = 2
+        Me.Label13.Text = "Rincian Transaksi"
         '
         'frmPenggunaanNoMember
         '
@@ -423,9 +494,13 @@ Partial Class frmPenggunaanNoMember
         Me.GroupBox3.PerformLayout()
         CType(Me.dgvSudahRegistrasi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        CType(Me.dgvRincianTransaksi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbDaftarPengguna.ResumeLayout(False)
+        Me.gbDaftarPengguna.PerformLayout()
+        CType(Me.dgvPenggunaMember, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -448,17 +523,22 @@ Partial Class frmPenggunaanNoMember
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents dgvSudahRegistrasi As System.Windows.Forms.DataGridView
-    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents lblSudahDiregistrasi As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-    Friend WithEvents lblBelumDiregistrasi As System.Windows.Forms.Label
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents txtKota As System.Windows.Forms.TextBox
     Friend WithEvents btnCancel As System.Windows.Forms.Button
+    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents gbDaftarPengguna As System.Windows.Forms.GroupBox
+    Friend WithEvents btnLihatTransaksi As System.Windows.Forms.Button
+    Friend WithEvents dgvPenggunaMember As System.Windows.Forms.DataGridView
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents txtNoMember As System.Windows.Forms.TextBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents dgvRincianTransaksi As System.Windows.Forms.DataGridView
+    Friend WithEvents Label13 As System.Windows.Forms.Label
 End Class

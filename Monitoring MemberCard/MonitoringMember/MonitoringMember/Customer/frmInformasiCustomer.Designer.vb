@@ -56,6 +56,8 @@ Partial Class frmInformasiCustomer
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lblExportTransaksi = New System.Windows.Forms.Label()
+        Me.picExportTransaksi = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.btnProses = New System.Windows.Forms.Button()
@@ -64,8 +66,6 @@ Partial Class frmInformasiCustomer
         Me.dtpTglAwal = New System.Windows.Forms.DateTimePicker()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.dgvListTransaksi = New System.Windows.Forms.DataGridView()
-        Me.picExportTransaksi = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.lblExportTransaksi = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.GunaTransfarantPictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,15 +80,15 @@ Partial Class frmInformasiCustomer
         CType(Me.dgvListAlamatCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picCariCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.dgvListTransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picExportTransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvListTransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.GunaTransfarantPictureBox7)
         Me.Panel1.Controls.Add(Me.GunaTransfarantPictureBox6)
@@ -110,7 +110,7 @@ Partial Class frmInformasiCustomer
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(-1, 101)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(269, 31)
@@ -156,9 +156,9 @@ Partial Class frmInformasiCustomer
         'lblNamaCabang
         '
         Me.lblNamaCabang.AutoSize = True
-        Me.lblNamaCabang.BackColor = System.Drawing.Color.Transparent
+        Me.lblNamaCabang.BackColor = System.Drawing.Color.MistyRose
         Me.lblNamaCabang.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNamaCabang.ForeColor = System.Drawing.Color.White
+        Me.lblNamaCabang.ForeColor = System.Drawing.Color.Black
         Me.lblNamaCabang.Location = New System.Drawing.Point(53, 298)
         Me.lblNamaCabang.Name = "lblNamaCabang"
         Me.lblNamaCabang.Size = New System.Drawing.Size(68, 13)
@@ -168,10 +168,10 @@ Partial Class frmInformasiCustomer
         'lblNamaUser
         '
         Me.lblNamaUser.AutoSize = True
-        Me.lblNamaUser.BackColor = System.Drawing.Color.Transparent
+        Me.lblNamaUser.BackColor = System.Drawing.Color.MistyRose
         Me.lblNamaUser.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNamaUser.ForeColor = System.Drawing.Color.White
-        Me.lblNamaUser.Location = New System.Drawing.Point(35, 316)
+        Me.lblNamaUser.ForeColor = System.Drawing.Color.Black
+        Me.lblNamaUser.Location = New System.Drawing.Point(53, 316)
         Me.lblNamaUser.Name = "lblNamaUser"
         Me.lblNamaUser.Size = New System.Drawing.Size(68, 13)
         Me.lblNamaUser.TabIndex = 8
@@ -190,7 +190,7 @@ Partial Class frmInformasiCustomer
         '
         Me.lblJamDigital.AutoSize = True
         Me.lblJamDigital.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJamDigital.Location = New System.Drawing.Point(48, 6)
+        Me.lblJamDigital.Location = New System.Drawing.Point(51, 6)
         Me.lblJamDigital.Name = "lblJamDigital"
         Me.lblJamDigital.Size = New System.Drawing.Size(71, 31)
         Me.lblJamDigital.TabIndex = 0
@@ -480,6 +480,30 @@ Partial Class frmInformasiCustomer
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Tampilkan Daftar Transaksi"
         '
+        'lblExportTransaksi
+        '
+        Me.lblExportTransaksi.AutoSize = True
+        Me.lblExportTransaksi.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblExportTransaksi.Location = New System.Drawing.Point(77, 43)
+        Me.lblExportTransaksi.Name = "lblExportTransaksi"
+        Me.lblExportTransaksi.Size = New System.Drawing.Size(39, 18)
+        Me.lblExportTransaksi.TabIndex = 18
+        Me.lblExportTransaksi.Text = "Cari"
+        Me.lblExportTransaksi.Visible = False
+        '
+        'picExportTransaksi
+        '
+        Me.picExportTransaksi.BackColor = System.Drawing.Color.Transparent
+        Me.picExportTransaksi.BaseColor = System.Drawing.Color.Lime
+        Me.picExportTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.picExportTransaksi.Image = Global.MonitoringMember.My.Resources.Resources.Export_To_Excel
+        Me.picExportTransaksi.Location = New System.Drawing.Point(493, 13)
+        Me.picExportTransaksi.Name = "picExportTransaksi"
+        Me.picExportTransaksi.Size = New System.Drawing.Size(81, 46)
+        Me.picExportTransaksi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picExportTransaksi.TabIndex = 16
+        Me.picExportTransaksi.TabStop = False
+        '
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -561,30 +585,6 @@ Partial Class frmInformasiCustomer
         Me.dgvListTransaksi.Size = New System.Drawing.Size(1081, 294)
         Me.dgvListTransaksi.TabIndex = 44
         '
-        'picExportTransaksi
-        '
-        Me.picExportTransaksi.BackColor = System.Drawing.Color.Transparent
-        Me.picExportTransaksi.BaseColor = System.Drawing.Color.Lime
-        Me.picExportTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.picExportTransaksi.Image = Global.MonitoringMember.My.Resources.Resources.Export_To_Excel
-        Me.picExportTransaksi.Location = New System.Drawing.Point(493, 13)
-        Me.picExportTransaksi.Name = "picExportTransaksi"
-        Me.picExportTransaksi.Size = New System.Drawing.Size(81, 46)
-        Me.picExportTransaksi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picExportTransaksi.TabIndex = 16
-        Me.picExportTransaksi.TabStop = False
-        '
-        'lblExportTransaksi
-        '
-        Me.lblExportTransaksi.AutoSize = True
-        Me.lblExportTransaksi.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblExportTransaksi.Location = New System.Drawing.Point(77, 43)
-        Me.lblExportTransaksi.Name = "lblExportTransaksi"
-        Me.lblExportTransaksi.Size = New System.Drawing.Size(39, 18)
-        Me.lblExportTransaksi.TabIndex = 18
-        Me.lblExportTransaksi.Text = "Cari"
-        Me.lblExportTransaksi.Visible = False
-        '
         'frmInformasiCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -615,8 +615,8 @@ Partial Class frmInformasiCustomer
         CType(Me.picCariCustomer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.dgvListTransaksi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picExportTransaksi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvListTransaksi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

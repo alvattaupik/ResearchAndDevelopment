@@ -8,60 +8,13 @@ Public Class frmMasterPegawai
 
 
         If btnAksi.Text = "Update" Then
-
-            'Call AUDR_Employee("CekEmployee")
-            If cmbFungsional.Text = "" Then
-                DisplayPesanError("Fungsional Tidak Boleh Kosong !", frmMainMenu.txtPesanError, 1000)
-                Exit Sub
-            End If
-
-            If cmbJabatan.Text = "" Then
-                DisplayPesanError("Jabatan Tidak Boleh Kosong !", frmMainMenu.txtPesanError, 1000)
-                Exit Sub
-            End If
-
-
-            If bolStatusSP = True Then
-                DisplayPesanError("Kode Pegawai telah Digunakan", frmMainMenu.txtPesanError, 1000)
-                Exit Sub
-            Else
-                Call AUDR_Employee("UpdateEmployee")
-
-                DisplayPesanOK("Operasi berhasil", frmMainMenu.txtPesanError, 1000)
-                Exit Sub
-            End If
-
-
+            Call AU_Employee(btnAksi.Text)
         End If
 
 
 
         If btnAksi.Text = "Add" Then
-
-            Call AUDR_Employee("CekEmployee")
-
-            If bolStatusSP = True Then
-                DisplayPesanError("Kode Pegawai telah Digunakan", frmMainMenu.txtPesanError, 1000)
-                Exit Sub
-            Else
-                Call AUDR_Employee("AddEmployee")
-
-                DisplayPesanOK("Operasi berhasil", frmMainMenu.txtPesanError, 1000)
-
-
-                txtEmployeeID.Text = ""
-                txtNamaPegawai.Text = ""
-                txtAlamat.Text = ""
-                txtAlamatEmail.Text = ""
-                cmbFungsional.Text = ""
-                cmbJabatan.Text = ""
-                btnAksi.Text = "OK"
-                txtNoTelp.Text = ""
-
-                Exit Sub
-            End If
-
-
+            Call AU_Employee(btnAksi.Text)
         End If
 
 
@@ -102,90 +55,206 @@ Public Class frmMasterPegawai
     End Sub
 
     Private Sub txtNamaPegawai_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNamaPegawai.KeyPress
-        On Error GoTo ErrorHandler
+
         Dim Tombol As Integer = Asc(e.KeyChar)
 
-        If Tombol = 13 Then
+        If Tombol = 13 And Microsoft.VisualBasic.Left(txtNamaPegawai.Text, 1) <> "*" Then
 
-            AUDR_Employee("CariEmployee")
-
-            If bolStatusSP = False Then
-                DisplayPesanError("Data Tidak Ditemukan !", frmMainMenu.txtPesanError, 1000)
-                Exit Sub
-            Else
-                DisplayPesanOK("Data Ditemukan !", frmMainMenu.txtPesanError, 1000)
-                txtAlamat.Enabled = True
-                txtAlamatEmail.Enabled = True
-                cmbFungsional.Enabled = True
-                cmbJabatan.Enabled = True
-
-                Exit Sub
-            End If
-
+            F_Employee("Cari")
+            txtAlamat.Enabled = True
+            txtAlamatEmail.Enabled = True
+            cmbFungsional.Enabled = True
+            cmbJabatan.Enabled = True
         End If
+        If Tombol = 13 And Microsoft.VisualBasic.Left(txtNamaPegawai.Text, 1) = "*" Then
+            F_Employee2("Cari")
+        End If
+
         Exit Sub
 
-ErrorHandler:
-        MsgBox(Err.Description)
-        Exit Sub
+
     End Sub
 
 
 
-    Sub AUDR_Employee(strFunction As String)
+    Sub AU_Employee(strFunction As String)
 
         Try
             KoneksiDB_EMAIL()
             Dim command As SqlCommand
-            command = New SqlCommand("[tmsp_AUDR_Employee]", KoneksiDBEmail)
+            command = New SqlCommand("[tmsp_AU_Employee]", KoneksiDBEmail)
 
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure
-            command.Parameters.AddWithValue("EmployeeIDIN", Trim(txtEmployeeID.Text))
-            command.Parameters.Add("EmployeeIDOUT", SqlDbType.VarChar, 50)
-            command.Parameters("EmployeeIDOUT").Direction = ParameterDirection.Output
-
-
-            command.Parameters.AddWithValue("EmployeeNameIN", Trim(txtNamaPegawai.Text))
-            command.Parameters.Add("EmployeeNameOUT", SqlDbType.VarChar, 100)
-            command.Parameters("EmployeeNameOUT").Direction = ParameterDirection.Output
-
-            command.Parameters.AddWithValue("AlamatIn", Trim(txtAlamat.Text))
-            command.Parameters.Add("AlamatOUT", SqlDbType.VarChar, 100)
-            command.Parameters("AlamatOUT").Direction = ParameterDirection.Output
-            command.Parameters.AddWithValue("JabatanIN", Trim(cmbJabatan.Text))
-            command.Parameters.Add("JabatanOUT", SqlDbType.VarChar, 100)
-            command.Parameters("JabatanOUT").Direction = ParameterDirection.Output
-            command.Parameters.AddWithValue("FungsionalIN", Trim(cmbFungsional.Text))
-            command.Parameters.Add("FungsionalOUT", SqlDbType.VarChar, 100)
-            command.Parameters("FungsionalOUT").Direction = ParameterDirection.Output
-            command.Parameters.AddWithValue("AlamatEmailIN", Trim(txtAlamatEmail.Text))
-
-
-
-            command.Parameters.Add("AlamatEmailOUT", SqlDbType.VarChar, 100)
-            command.Parameters("AlamatEmailOUT").Direction = ParameterDirection.Output
-
-
-
+            command.Parameters.AddWithValue("EmployeeID", Trim(txtEmployeeID.Text))
+            command.Parameters.AddWithValue("EmployeeName", Trim(txtNamaPegawai.Text))
+            command.Parameters.AddWithValue("Alamat", Trim(txtAlamat.Text))
+            command.Parameters.AddWithValue("Jabatan", Trim(cmbJabatan.Text))
+            command.Parameters.AddWithValue("Fungsional", Trim(cmbFungsional.Text))
+            command.Parameters.AddWithValue("AlamatEmail", Trim(txtAlamatEmail.Text))
             If cboAktif.Checked = True Then
-                command.Parameters.AddWithValue("StatusEnabledIn", Trim("Y"))
+                command.Parameters.AddWithValue("StatusEnabled", Trim("Y"))
             Else
-                command.Parameters.AddWithValue("StatusEnabledIn", Trim("N"))
+                command.Parameters.AddWithValue("StatusEnabled", Trim("N"))
             End If
-
-            command.Parameters.Add("StatusEnabledOUT", SqlDbType.VarChar, 100)
-            command.Parameters("StatusEnabledOUT").Direction = ParameterDirection.Output
-            command.Parameters.Add("StatusRecord", SqlDbType.VarChar, 100)
-            command.Parameters("StatusRecord").Direction = ParameterDirection.Output
-
-
-            command.Parameters.AddWithValue("NoTelpIN", Trim(txtNoTelp.Text))
-            command.Parameters.Add("NoTelpOut", SqlDbType.VarChar, 100)
-            command.Parameters("NoTelpOut").Direction = ParameterDirection.Output
 
             command.Parameters.AddWithValue("Function", Trim(strFunction))
 
+            command.Parameters.Add("ErrorCodeOUT", SqlDbType.VarChar, 100)
+            command.Parameters("ErrorCodeOUT").Direction = ParameterDirection.Output
+
+            command.Parameters.Add("ErrorMessageOUT", SqlDbType.VarChar, 300)
+            command.Parameters("ErrorMessageOUT").Direction = ParameterDirection.Output
+
+            If (KoneksiDBEmail.State = ConnectionState.Open) Then KoneksiDBEmail.Close()
+            command.Connection = KoneksiDBEmail
+            KoneksiDBEmail.Open()
+            command.ExecuteNonQuery()
+
+            MstrErrorCode = command.Parameters("ErrorCodeOUT").Value.ToString()
+            MstrErrorMessage = command.Parameters("ErrorMessageOUT").Value.ToString()
+
+
+            If MstrErrorCode = "E-00" Then
+                DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
+                Exit Sub
+            Else
+                DisplayPesanOK("Operation Success", frmMainMenu.txtPesanError, 1000)
+            End If
+
+        Catch ex As Exception
+            DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
+        End Try
+
+    End Sub
+
+
+
+    Sub F_Employee(strFunction As String)
+
+        Try
+            KoneksiDB_EMAIL()
+            Dim command As SqlCommand
+            command = New SqlCommand("[tmsp_Find_Employee]]", KoneksiDBEmail)
+
+            Dim adapter As New SqlDataAdapter(command)
+            command.CommandType = CommandType.StoredProcedure
+            command.Parameters.AddWithValue("EmployeeID", Trim(txtEmployeeID.Text))
+
+            command.Parameters.Add("EmployeeIDOUT", SqlDbType.VarChar, 100)
+            command.Parameters("EmployeeIDOUT").Direction = ParameterDirection.Output
+
+            command.Parameters.AddWithValue("EmployeeName", Trim(txtNamaPegawai.Text))
+            command.Parameters.Add("EmployeeNameOUT", SqlDbType.VarChar, 100)
+            command.Parameters("EmployeeNameOUT").Direction = ParameterDirection.Output
+
+            command.Parameters.Add("AlamatOUT", SqlDbType.VarChar, 100)
+            command.Parameters("AlamatOUT").Direction = ParameterDirection.Output
+
+            command.Parameters.Add("JabatanOUT", SqlDbType.VarChar, 100)
+            command.Parameters("JabatanOUT").Direction = ParameterDirection.Output
+            command.Parameters.Add("FungsionalOUT", SqlDbType.VarChar, 100)
+            command.Parameters("FungsionalOUT").Direction = ParameterDirection.Output
+            command.Parameters.Add("AlamatEmailOUT", SqlDbType.VarChar, 100)
+            command.Parameters("AlamatEmailOUT").Direction = ParameterDirection.Output
+            command.Parameters.Add("NoTelpOut", SqlDbType.VarChar, 100)
+            command.Parameters("NoTelpOut").Direction = ParameterDirection.Output
+            command.Parameters.Add("StatusEnabledOUT", SqlDbType.VarChar, 100)
+            command.Parameters("StatusEnabledOUT").Direction = ParameterDirection.Output
+        
+   
+
+
+            command.Parameters.AddWithValue("Function", Trim(strFunction))
+
+            command.Parameters.Add("ErrorCodeOUT", SqlDbType.VarChar, 100)
+            command.Parameters("ErrorCodeOUT").Direction = ParameterDirection.Output
+
+            command.Parameters.Add("ErrorMessageOUT", SqlDbType.VarChar, 300)
+            command.Parameters("ErrorMessageOUT").Direction = ParameterDirection.Output
+
+            If (KoneksiDBEmail.State = ConnectionState.Open) Then KoneksiDBEmail.Close()
+            command.Connection = KoneksiDBEmail
+            KoneksiDBEmail.Open()
+            command.ExecuteNonQuery()
+
+            MstrErrorCode = command.Parameters("ErrorCodeOUT").Value.ToString()
+            MstrErrorMessage = command.Parameters("ErrorMessageOUT").Value.ToString()
+
+
+            If MstrErrorCode = "E-00" Or MstrErrorCode = "E-00" Then
+                DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
+                Exit Sub
+            Else
+                DisplayPesanOK("Data Ditemukan", frmMainMenu.txtPesanError, 1000)
+                txtEmployeeID.Text = command.Parameters("EmployeeIDOUT").Value.ToString()
+                txtNamaPegawai.Text = command.Parameters("EmployeeNameOUT").Value.ToString()
+                txtAlamat.Text = command.Parameters("AlamatOUT").Value.ToString()
+                cmbJabatan.Text = command.Parameters("JabatanOUT").Value.ToString()
+                cmbFungsional.Text = command.Parameters("FungsionalOUT").Value.ToString()
+                txtAlamatEmail.Text = command.Parameters("AlamatEmailOUT").Value.ToString()
+                txtNoTelp.Text = command.Parameters("NoTelpOut").Value.ToString()
+
+                If command.Parameters("StatusEnabledOUT").Value.ToString() = "Y" Then
+                    cboAktif.Checked = True
+                Else
+                    cboAktif.Checked = False
+                End If
+
+            End If
+
+        Catch ex As Exception
+            DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
+        End Try
+
+    End Sub
+
+
+
+
+
+    Sub F_Employee2(strFunction As String)
+
+        Try
+            KoneksiDB_EMAIL()
+            Dim command As SqlCommand
+            command = New SqlCommand("[tmsp_Find_Employee]]", KoneksiDBEmail)
+
+            Dim adapter As New SqlDataAdapter(command)
+            command.CommandType = CommandType.StoredProcedure
+            command.Parameters.AddWithValue("EmployeeID", Trim(txtEmployeeID.Text))
+
+            command.Parameters.Add("EmployeeIDOUT", SqlDbType.VarChar, 100)
+            command.Parameters("EmployeeIDOUT").Direction = ParameterDirection.Output
+
+            command.Parameters.AddWithValue("EmployeeName", Trim(txtNamaPegawai.Text))
+            command.Parameters.Add("EmployeeNameOUT", SqlDbType.VarChar, 100)
+            command.Parameters("EmployeeNameOUT").Direction = ParameterDirection.Output
+
+            command.Parameters.Add("AlamatOUT", SqlDbType.VarChar, 100)
+            command.Parameters("AlamatOUT").Direction = ParameterDirection.Output
+
+            command.Parameters.Add("JabatanOUT", SqlDbType.VarChar, 100)
+            command.Parameters("JabatanOUT").Direction = ParameterDirection.Output
+            command.Parameters.Add("FungsionalOUT", SqlDbType.VarChar, 100)
+            command.Parameters("FungsionalOUT").Direction = ParameterDirection.Output
+            command.Parameters.Add("AlamatEmailOUT", SqlDbType.VarChar, 100)
+            command.Parameters("AlamatEmailOUT").Direction = ParameterDirection.Output
+            command.Parameters.Add("NoTelpOut", SqlDbType.VarChar, 100)
+            command.Parameters("NoTelpOut").Direction = ParameterDirection.Output
+            command.Parameters.Add("StatusEnabledOUT", SqlDbType.VarChar, 100)
+            command.Parameters("StatusEnabledOUT").Direction = ParameterDirection.Output
+
+
+
+
+            command.Parameters.AddWithValue("Function", Trim(strFunction))
+
+            command.Parameters.Add("ErrorCodeOUT", SqlDbType.VarChar, 100)
+            command.Parameters("ErrorCodeOUT").Direction = ParameterDirection.Output
+
+            command.Parameters.Add("ErrorMessageOUT", SqlDbType.VarChar, 300)
+            command.Parameters("ErrorMessageOUT").Direction = ParameterDirection.Output
 
             If (KoneksiDBEmail.State = ConnectionState.Open) Then KoneksiDBEmail.Close()
             command.Connection = KoneksiDBEmail
@@ -193,38 +262,34 @@ ErrorHandler:
             command.ExecuteNonQuery()
 
 
+            MstrErrorCode = command.Parameters("ErrorCodeOUT").Value.ToString()
+            MstrErrorMessage = command.Parameters("ErrorMessageOUT").Value.ToString()
+
+
+            If MstrErrorCode = "E-00" Or MstrErrorCode = "E-00" Then
+                DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
+                Exit Sub
+            Else
+                DisplayPesanOK("Data Ditemukan", frmMainMenu.txtPesanError, 1000)
 
 
 
 
-            If strFunction = "CariEmployee" Then
-                If command.Parameters("StatusRecord").Value.ToString() <> "0" Then
-                    bolStatusSP = True
-                Else
-                    bolStatusSP = False
-                    Exit Sub
-                End If
-                txtEmployeeID.Text = command.Parameters("EmployeeIDOUT").Value.ToString()
-                txtNamaPegawai.Text = command.Parameters("EmployeeNameOUT").Value.ToString()
-                txtAlamat.Text = command.Parameters("AlamatOUT").Value.ToString()
-                txtAlamatEmail.Text = command.Parameters("AlamatEmailOUT").Value.ToString()
-
-                cmbFungsional.Text = command.Parameters("FungsionalOUT").Value.ToString()
-                cmbJabatan.Text = command.Parameters("JabatanOUT").Value.ToString()
-                txtNoTelp.Text = command.Parameters("NoTelpOut").Value.ToString()
 
                 If command.Parameters("StatusEnabledOUT").Value.ToString() = "Y" Then
-                    cboAktif.CheckState = CheckState.Checked
+                    cboAktif.Checked = True
                 Else
-                    cboAktif.CheckState = CheckState.Unchecked
+                    cboAktif.Checked = False
                 End If
+
             End If
 
         Catch ex As Exception
-            MessageBox.Show(Err.Description)
+            DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
         End Try
 
     End Sub
+
 
 
 

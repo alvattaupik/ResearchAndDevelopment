@@ -73,7 +73,7 @@ Partial Class frmMemberCardGenerator
         '
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.Controls.Add(Me.gbRincianNomor)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -89,7 +89,7 @@ Partial Class frmMemberCardGenerator
         '
         'gbRincianNomor
         '
-        Me.gbRincianNomor.BackColor = System.Drawing.Color.White
+        Me.gbRincianNomor.BackColor = System.Drawing.Color.Gainsboro
         Me.gbRincianNomor.Controls.Add(Me.picExportToExcel)
         Me.gbRincianNomor.Controls.Add(Me.Button1)
         Me.gbRincianNomor.Controls.Add(Me.Label5)
@@ -228,8 +228,8 @@ Partial Class frmMemberCardGenerator
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(183, 80)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(197, 88)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(265, 25)
         Me.Label1.TabIndex = 16
@@ -297,6 +297,7 @@ Partial Class frmMemberCardGenerator
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Silver
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.cmbCabang)
@@ -399,12 +400,13 @@ Partial Class frmMemberCardGenerator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(672, 558)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmMemberCardGenerator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmMemberCardGenerator"
+        Me.Text = "Member Card Generator"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.gbRincianNomor.ResumeLayout(False)
