@@ -67,7 +67,7 @@ Public Class frmMasterPegawai
             cmbJabatan.Enabled = True
         End If
         If Tombol = 13 And Microsoft.VisualBasic.Left(txtNamaPegawai.Text, 1) = "*" Then
-            F_Employee2("Cari")
+            frmBrowseEmployee.ShowDialog()
         End If
 
         Exit Sub
@@ -97,7 +97,7 @@ Public Class frmMasterPegawai
             Else
                 command.Parameters.AddWithValue("StatusEnabled", Trim("N"))
             End If
-
+            command.Parameters.AddWithValue("NoTelp", Trim(txtNoTelp.Text))
             command.Parameters.AddWithValue("Function", Trim(strFunction))
 
             command.Parameters.Add("ErrorCodeOUT", SqlDbType.VarChar, 100)
@@ -123,7 +123,7 @@ Public Class frmMasterPegawai
             End If
 
         Catch ex As Exception
-            DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
+            DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
         End Try
 
     End Sub
@@ -135,7 +135,7 @@ Public Class frmMasterPegawai
         Try
             KoneksiDB_EMAIL()
             Dim command As SqlCommand
-            command = New SqlCommand("[tmsp_Find_Employee]]", KoneksiDBEmail)
+            command = New SqlCommand("[tmsp_Find_Employee]", KoneksiDBEmail)
 
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure
@@ -204,7 +204,7 @@ Public Class frmMasterPegawai
             End If
 
         Catch ex As Exception
-            DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
+            DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
         End Try
 
     End Sub
@@ -218,7 +218,7 @@ Public Class frmMasterPegawai
         Try
             KoneksiDB_EMAIL()
             Dim command As SqlCommand
-            command = New SqlCommand("[tmsp_Find_Employee]]", KoneksiDBEmail)
+            command = New SqlCommand("[tmsp_Find_Employee]", KoneksiDBEmail)
 
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure
@@ -273,19 +273,12 @@ Public Class frmMasterPegawai
                 DisplayPesanOK("Data Ditemukan", frmMainMenu.txtPesanError, 1000)
 
 
-
-
-
-                If command.Parameters("StatusEnabledOUT").Value.ToString() = "Y" Then
-                    cboAktif.Checked = True
-                Else
-                    cboAktif.Checked = False
-                End If
+             
 
             End If
 
         Catch ex As Exception
-            DisplayPesanError(MstrErrorMessage, frmMainMenu.txtPesanError, 1000)
+            DisplayPesanError(Err.Description, frmMainMenu.txtPesanError, 1000)
         End Try
 
     End Sub

@@ -193,6 +193,12 @@
     <Compile Include="BrowseForm\frmBrowseBusinessPartnerSuratTerima.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BrowseForm\frmBrowseEmployee.Designer.vb">
+      <DependentUpon>frmBrowseEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BrowseForm\frmBrowseItemMasterDataBAPPenyelesaian.Designer.vb">
       <DependentUpon>frmBrowseItemMasterDataBAPPenyelesaian.vb</DependentUpon>
     </Compile>
@@ -749,6 +755,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseBusinessPartnerSuratTerima.resx">
       <DependentUpon>frmBrowseBusinessPartnerSuratTerima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseEmployee.resx">
+      <DependentUpon>frmBrowseEmployee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseItemMasterDataBAPPenyelesaian.resx">
       <DependentUpon>frmBrowseItemMasterDataBAPPenyelesaian.vb</DependentUpon>
