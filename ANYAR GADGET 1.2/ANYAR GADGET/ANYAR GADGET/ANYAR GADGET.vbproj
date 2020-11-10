@@ -199,6 +199,12 @@
     <Compile Include="BrowseForm\frmBrowseEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BrowseForm\frmBrowseEmployeeSetting.Designer.vb">
+      <DependentUpon>frmBrowseEmployeeSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseEmployeeSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BrowseForm\frmBrowseItemMasterDataBAPPenyelesaian.Designer.vb">
       <DependentUpon>frmBrowseItemMasterDataBAPPenyelesaian.vb</DependentUpon>
     </Compile>
@@ -239,6 +245,12 @@
       <DependentUpon>frmBrowseKomponenSAP.vb</DependentUpon>
     </Compile>
     <Compile Include="BrowseForm\frmBrowseKomponenSAP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseListUser.Designer.vb">
+      <DependentUpon>frmBrowseListUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseListUser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BrowseForm\frmBrowseListUserAplikasi.Designer.vb">
@@ -709,6 +721,12 @@
     <Compile Include="Setting\frmAutoExportDB.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Setting\frmSetttingUsers.Designer.vb">
+      <DependentUpon>frmSetttingUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\frmSetttingUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Setting\frmTemplate.Designer.vb">
       <DependentUpon>frmTemplate.vb</DependentUpon>
     </Compile>
@@ -759,6 +777,9 @@
     <EmbeddedResource Include="BrowseForm\frmBrowseEmployee.resx">
       <DependentUpon>frmBrowseEmployee.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseEmployeeSetting.resx">
+      <DependentUpon>frmBrowseEmployeeSetting.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseItemMasterDataBAPPenyelesaian.resx">
       <DependentUpon>frmBrowseItemMasterDataBAPPenyelesaian.vb</DependentUpon>
     </EmbeddedResource>
@@ -779,6 +800,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseKomponenSAP.resx">
       <DependentUpon>frmBrowseKomponenSAP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseListUser.resx">
+      <DependentUpon>frmBrowseListUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseListUserAplikasi.resx">
       <DependentUpon>frmBrowseListUserAplikasi.vb</DependentUpon>
@@ -1025,6 +1049,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Setting\frmAutoExportDB.resx">
       <DependentUpon>frmAutoExportDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\frmSetttingUsers.resx">
+      <DependentUpon>frmSetttingUsers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Setting\frmTemplate.resx">
       <DependentUpon>frmTemplate.vb</DependentUpon>

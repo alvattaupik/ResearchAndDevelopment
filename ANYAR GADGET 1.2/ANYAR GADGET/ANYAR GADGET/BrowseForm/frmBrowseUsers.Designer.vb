@@ -23,29 +23,30 @@ Partial Class frmBrowseUsers
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBrowseUsers))
-        Me.dgvListPegawai = New System.Windows.Forms.DataGridView()
+        Me.dgvListUsers = New System.Windows.Forms.DataGridView()
         Me.txtCariPegawai = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.dgvListPegawai, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvListUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'dgvListPegawai
+        'dgvListUsers
         '
-        Me.dgvListPegawai.AllowUserToAddRows = False
-        Me.dgvListPegawai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvListPegawai.Location = New System.Drawing.Point(3, 39)
-        Me.dgvListPegawai.Name = "dgvListPegawai"
-        Me.dgvListPegawai.ReadOnly = True
-        Me.dgvListPegawai.Size = New System.Drawing.Size(510, 253)
-        Me.dgvListPegawai.TabIndex = 6
+        Me.dgvListUsers.AllowUserToAddRows = False
+        Me.dgvListUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvListUsers.Location = New System.Drawing.Point(3, 39)
+        Me.dgvListUsers.Name = "dgvListUsers"
+        Me.dgvListUsers.ReadOnly = True
+        Me.dgvListUsers.Size = New System.Drawing.Size(328, 322)
+        Me.dgvListUsers.TabIndex = 6
         '
         'txtCariPegawai
         '
         Me.txtCariPegawai.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCariPegawai.Location = New System.Drawing.Point(181, 12)
+        Me.txtCariPegawai.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCariPegawai.Location = New System.Drawing.Point(109, 7)
         Me.txtCariPegawai.Name = "txtCariPegawai"
-        Me.txtCariPegawai.Size = New System.Drawing.Size(328, 20)
+        Me.txtCariPegawai.Size = New System.Drawing.Size(218, 26)
         Me.txtCariPegawai.TabIndex = 5
         '
         'Label1
@@ -63,19 +64,19 @@ Partial Class frmBrowseUsers
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.ClientSize = New System.Drawing.Size(515, 293)
-        Me.Controls.Add(Me.dgvListPegawai)
+        Me.ClientSize = New System.Drawing.Size(339, 373)
+        Me.Controls.Add(Me.dgvListUsers)
         Me.Controls.Add(Me.txtCariPegawai)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBrowseUsers"
         Me.Text = "Browse Users"
-        CType(Me.dgvListPegawai, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvListUsers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents dgvListPegawai As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvListUsers As System.Windows.Forms.DataGridView
     Friend WithEvents txtCariPegawai As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

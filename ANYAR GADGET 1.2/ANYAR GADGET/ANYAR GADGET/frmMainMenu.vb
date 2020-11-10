@@ -47,7 +47,7 @@ Public Class frmMainMenu
 
     Private Sub H_User_Click(sender As Object, e As EventArgs) Handles H_User.Click
 
-        Dim frm As New frmUsers
+        Dim frm As New frmSetttingUsers
         frm.MdiParent = Me
         frm.BringToFront()
         'frm.WindowState = FormWindowState.Maximized

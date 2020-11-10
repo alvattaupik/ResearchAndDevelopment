@@ -374,22 +374,22 @@ ErrorHandler:
 
 
 
-            If strFunction = "CekUserNameLogin" Then
-                If command.Parameters("StatusRecord").Value.ToString() <> "0" Then
-                    bolStatusSP = True
-                Else
-                    bolStatusSP = False
-                End If
-            End If
+            'If strFunction = "CekUserNameLogin" Then
+            '    If command.Parameters("StatusRecord").Value.ToString() <> "0" Then
+            '        bolStatusSP = True
+            '    Else
+            '        bolStatusSP = False
+            '    End If
+            'End If
 
 
-            If strFunction = "CekEmployee" Then
-                If command.Parameters("StatusRecord").Value.ToString() <> "0" Then
-                    bolStatusSP = True
-                Else
-                    bolStatusSP = False
-                End If
-            End If
+            'If strFunction = "CekEmployee" Then
+            '    If command.Parameters("StatusRecord").Value.ToString() <> "0" Then
+            '        bolStatusSP = True
+            '    Else
+            '        bolStatusSP = False
+            '    End If
+            'End If
 
 
 
