@@ -102,6 +102,7 @@ Partial Class frmMainMenu
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.MemberToolStripMenuItem, Me.PromotionToolStripMenuItem, Me.MonitoringToolStripMenuItem, Me.TransaksiToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -212,6 +213,7 @@ Partial Class frmMainMenu
         '
         'txtPesanError
         '
+        Me.txtPesanError.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.txtPesanError.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPesanError.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPesanError.Location = New System.Drawing.Point(367, 3)
@@ -231,9 +233,10 @@ Partial Class frmMainMenu
         '
         'txtJamDanWaktu
         '
+        Me.txtJamDanWaktu.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.txtJamDanWaktu.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtJamDanWaktu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtJamDanWaktu.Location = New System.Drawing.Point(380, 3)
+        Me.txtJamDanWaktu.Location = New System.Drawing.Point(385, 3)
         Me.txtJamDanWaktu.Name = "txtJamDanWaktu"
         Me.txtJamDanWaktu.ReadOnly = True
         Me.txtJamDanWaktu.Size = New System.Drawing.Size(896, 19)
@@ -245,7 +248,7 @@ Partial Class frmMainMenu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = Global.MonitoringMember.My.Resources.Resources.Batik_7
+        Me.BackgroundImage = Global.MonitoringMember.My.Resources.Resources.Picture1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1370, 729)
         Me.Controls.Add(Me.txtJamDanWaktu)

@@ -32,10 +32,8 @@ Partial Class frmLogin
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtUsernameLogin = New Guna.UI.WinForms.GunaTextBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GunaPictureBox1 = New Guna.UI.WinForms.GunaPictureBox()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,7 +51,7 @@ Partial Class frmLogin
         Me.btnCancel.ForeColor = System.Drawing.Color.White
         Me.btnCancel.Image = Nothing
         Me.btnCancel.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnCancel.Location = New System.Drawing.Point(295, 212)
+        Me.btnCancel.Location = New System.Drawing.Point(197, 212)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.btnCancel.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -81,7 +79,7 @@ Partial Class frmLogin
         Me.btnLogin.ForeColor = System.Drawing.Color.White
         Me.btnLogin.Image = Nothing
         Me.btnLogin.ImageSize = New System.Drawing.Size(20, 20)
-        Me.btnLogin.Location = New System.Drawing.Point(181, 212)
+        Me.btnLogin.Location = New System.Drawing.Point(83, 212)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(155, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.btnLogin.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -107,7 +105,7 @@ Partial Class frmLogin
         Me.txtPassword.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtPassword.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtPassword.ForeColor = System.Drawing.Color.White
-        Me.txtPassword.Location = New System.Drawing.Point(104, 156)
+        Me.txtPassword.Location = New System.Drawing.Point(6, 168)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Radius = 2
@@ -119,7 +117,7 @@ Partial Class frmLogin
         Me.GunaLabel4.AutoSize = True
         Me.GunaLabel4.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.GunaLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.GunaLabel4.Location = New System.Drawing.Point(101, 134)
+        Me.GunaLabel4.Location = New System.Drawing.Point(3, 146)
         Me.GunaLabel4.Name = "GunaLabel4"
         Me.GunaLabel4.Size = New System.Drawing.Size(67, 19)
         Me.GunaLabel4.TabIndex = 33
@@ -130,7 +128,7 @@ Partial Class frmLogin
         Me.GunaLabel3.AutoSize = True
         Me.GunaLabel3.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.GunaLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.GunaLabel3.Location = New System.Drawing.Point(100, 62)
+        Me.GunaLabel3.Location = New System.Drawing.Point(2, 86)
         Me.GunaLabel3.Name = "GunaLabel3"
         Me.GunaLabel3.Size = New System.Drawing.Size(71, 19)
         Me.GunaLabel3.TabIndex = 31
@@ -139,11 +137,11 @@ Partial Class frmLogin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(7, 9)
+        Me.Label1.Location = New System.Drawing.Point(57, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(123, 25)
+        Me.Label1.Size = New System.Drawing.Size(177, 37)
         Me.Label1.TabIndex = 40
         Me.Label1.Text = "Monitoring"
         '
@@ -152,7 +150,7 @@ Partial Class frmLogin
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(16, 34)
+        Me.Label2.Location = New System.Drawing.Point(90, 31)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(96, 25)
         Me.Label2.TabIndex = 41
@@ -170,7 +168,7 @@ Partial Class frmLogin
         Me.txtUsernameLogin.FocusedForeColor = System.Drawing.SystemColors.ControlText
         Me.txtUsernameLogin.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtUsernameLogin.ForeColor = System.Drawing.Color.White
-        Me.txtUsernameLogin.Location = New System.Drawing.Point(105, 81)
+        Me.txtUsernameLogin.Location = New System.Drawing.Point(7, 105)
         Me.txtUsernameLogin.Name = "txtUsernameLogin"
         Me.txtUsernameLogin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtUsernameLogin.Radius = 2
@@ -180,22 +178,12 @@ Partial Class frmLogin
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.MonitoringMember.My.Resources.Resources.Batik_6
-        Me.PictureBox3.Location = New System.Drawing.Point(393, -8)
+        Me.PictureBox3.Location = New System.Drawing.Point(305, -8)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(309, 317)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 45
         Me.PictureBox3.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.MonitoringMember.My.Resources.Resources.batik_4
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 62)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(92, 187)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 39
-        Me.PictureBox1.TabStop = False
         '
         'GunaPictureBox1
         '
@@ -219,7 +207,6 @@ Partial Class frmLogin
         Me.Controls.Add(Me.txtUsernameLogin)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.GunaPictureBox1)
@@ -232,7 +219,6 @@ Partial Class frmLogin
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormLogin"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -244,7 +230,6 @@ Partial Class frmLogin
     Friend WithEvents txtPassword As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents GunaLabel4 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents GunaLabel3 As Guna.UI.WinForms.GunaLabel
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtUsernameLogin As Guna.UI.WinForms.GunaTextBox

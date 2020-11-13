@@ -23,23 +23,16 @@ Partial Class frmInformasiCustomer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInformasiCustomer))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GunaTransfarantPictureBox7 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.GunaTransfarantPictureBox6 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.GunaTransfarantPictureBox5 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.lblNamaCabang = New Guna.UI.WinForms.GunaLabel()
         Me.lblNamaUser = New Guna.UI.WinForms.GunaLabel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblJamDigital = New System.Windows.Forms.Label()
-        Me.GunaTransfarantPictureBox3 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.picLogout = New Guna.UI.WinForms.GunaCirclePictureBox()
-        Me.GunaTransfarantPictureBox2 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.GunaTransfarantPictureBox4 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.timerInformasiMember = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblExportToExcel = New System.Windows.Forms.Label()
-        Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.txtTransaksiTerakhir = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtNoMember = New System.Windows.Forms.TextBox()
@@ -47,7 +40,6 @@ Partial Class frmInformasiCustomer
         Me.Label6 = New System.Windows.Forms.Label()
         Me.dgvListAlamatCustomer = New System.Windows.Forms.DataGridView()
         Me.txtPhoneNumber = New System.Windows.Forms.TextBox()
-        Me.picCariCustomer = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtAlamat = New System.Windows.Forms.RichTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -57,7 +49,6 @@ Partial Class frmInformasiCustomer
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.lblExportTransaksi = New System.Windows.Forms.Label()
-        Me.picExportTransaksi = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.btnProses = New System.Windows.Forms.Button()
@@ -66,22 +57,32 @@ Partial Class frmInformasiCustomer
         Me.dtpTglAwal = New System.Windows.Forms.DateTimePicker()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.dgvListTransaksi = New System.Windows.Forms.DataGridView()
+        Me.picExportTransaksi = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.picCariCustomer = New Guna.UI.WinForms.GunaCirclePictureBox()
+        Me.GunaTransfarantPictureBox7 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox6 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox5 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox3 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.picLogout = New Guna.UI.WinForms.GunaCirclePictureBox()
+        Me.GunaTransfarantPictureBox2 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox4 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.dgvListAlamatCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.dgvListTransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picExportTransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picCariCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
         CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picLogout, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvListAlamatCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picCariCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.picExportTransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvListTransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -116,42 +117,6 @@ Partial Class frmInformasiCustomer
         Me.Label1.Size = New System.Drawing.Size(269, 31)
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "Informasi Customer"
-        '
-        'GunaTransfarantPictureBox7
-        '
-        Me.GunaTransfarantPictureBox7.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox7.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox7.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9_rotate
-        Me.GunaTransfarantPictureBox7.Location = New System.Drawing.Point(126, 548)
-        Me.GunaTransfarantPictureBox7.Name = "GunaTransfarantPictureBox7"
-        Me.GunaTransfarantPictureBox7.Size = New System.Drawing.Size(133, 120)
-        Me.GunaTransfarantPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox7.TabIndex = 15
-        Me.GunaTransfarantPictureBox7.TabStop = False
-        '
-        'GunaTransfarantPictureBox6
-        '
-        Me.GunaTransfarantPictureBox6.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox6.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox6.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9_rotate
-        Me.GunaTransfarantPictureBox6.Location = New System.Drawing.Point(0, 548)
-        Me.GunaTransfarantPictureBox6.Name = "GunaTransfarantPictureBox6"
-        Me.GunaTransfarantPictureBox6.Size = New System.Drawing.Size(132, 120)
-        Me.GunaTransfarantPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox6.TabIndex = 14
-        Me.GunaTransfarantPictureBox6.TabStop = False
-        '
-        'GunaTransfarantPictureBox5
-        '
-        Me.GunaTransfarantPictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox5.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox5.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
-        Me.GunaTransfarantPictureBox5.Location = New System.Drawing.Point(132, 0)
-        Me.GunaTransfarantPictureBox5.Name = "GunaTransfarantPictureBox5"
-        Me.GunaTransfarantPictureBox5.Size = New System.Drawing.Size(139, 120)
-        Me.GunaTransfarantPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox5.TabIndex = 13
-        Me.GunaTransfarantPictureBox5.TabStop = False
         '
         'lblNamaCabang
         '
@@ -196,54 +161,6 @@ Partial Class frmInformasiCustomer
         Me.lblJamDigital.TabIndex = 0
         Me.lblJamDigital.Text = "JAM"
         '
-        'GunaTransfarantPictureBox3
-        '
-        Me.GunaTransfarantPictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox3.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox3.Image = Global.MonitoringMember.My.Resources.Resources.Users_Dashboard
-        Me.GunaTransfarantPictureBox3.Location = New System.Drawing.Point(56, 219)
-        Me.GunaTransfarantPictureBox3.Name = "GunaTransfarantPictureBox3"
-        Me.GunaTransfarantPictureBox3.Size = New System.Drawing.Size(76, 71)
-        Me.GunaTransfarantPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox3.TabIndex = 6
-        Me.GunaTransfarantPictureBox3.TabStop = False
-        '
-        'picLogout
-        '
-        Me.picLogout.BaseColor = System.Drawing.Color.White
-        Me.picLogout.Image = Global.MonitoringMember.My.Resources.Resources.Logout_Icon
-        Me.picLogout.Location = New System.Drawing.Point(184, 188)
-        Me.picLogout.Name = "picLogout"
-        Me.picLogout.Size = New System.Drawing.Size(65, 67)
-        Me.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picLogout.TabIndex = 3
-        Me.picLogout.TabStop = False
-        Me.picLogout.UseTransfarantBackground = False
-        '
-        'GunaTransfarantPictureBox2
-        '
-        Me.GunaTransfarantPictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox2.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox2.Image = Global.MonitoringMember.My.Resources.Resources.Lembar_Kertas_Dashboard
-        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(12, 188)
-        Me.GunaTransfarantPictureBox2.Name = "GunaTransfarantPictureBox2"
-        Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(166, 365)
-        Me.GunaTransfarantPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox2.TabIndex = 5
-        Me.GunaTransfarantPictureBox2.TabStop = False
-        '
-        'GunaTransfarantPictureBox4
-        '
-        Me.GunaTransfarantPictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox4.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox4.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
-        Me.GunaTransfarantPictureBox4.Location = New System.Drawing.Point(0, 0)
-        Me.GunaTransfarantPictureBox4.Name = "GunaTransfarantPictureBox4"
-        Me.GunaTransfarantPictureBox4.Size = New System.Drawing.Size(132, 120)
-        Me.GunaTransfarantPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox4.TabIndex = 12
-        Me.GunaTransfarantPictureBox4.TabStop = False
-        '
         'timerInformasiMember
         '
         Me.timerInformasiMember.Enabled = True
@@ -285,19 +202,6 @@ Partial Class frmInformasiCustomer
         Me.lblExportToExcel.TabIndex = 16
         Me.lblExportToExcel.Text = "-"
         Me.lblExportToExcel.Visible = False
-        '
-        'GunaTransfarantPictureBox1
-        '
-        Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Lime
-        Me.GunaTransfarantPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.GunaTransfarantPictureBox1.Image = Global.MonitoringMember.My.Resources.Resources.Export_To_Excel
-        Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(999, 227)
-        Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
-        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(70, 31)
-        Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox1.TabIndex = 15
-        Me.GunaTransfarantPictureBox1.TabStop = False
         '
         'txtTransaksiTerakhir
         '
@@ -376,18 +280,6 @@ Partial Class frmInformasiCustomer
         Me.txtPhoneNumber.ReadOnly = True
         Me.txtPhoneNumber.Size = New System.Drawing.Size(442, 29)
         Me.txtPhoneNumber.TabIndex = 8
-        '
-        'picCariCustomer
-        '
-        Me.picCariCustomer.BaseColor = System.Drawing.Color.White
-        Me.picCariCustomer.Image = Global.MonitoringMember.My.Resources.Resources.Search_User
-        Me.picCariCustomer.Location = New System.Drawing.Point(580, 13)
-        Me.picCariCustomer.Name = "picCariCustomer"
-        Me.picCariCustomer.Size = New System.Drawing.Size(33, 32)
-        Me.picCariCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picCariCustomer.TabIndex = 6
-        Me.picCariCustomer.TabStop = False
-        Me.picCariCustomer.UseTransfarantBackground = False
         '
         'Label5
         '
@@ -491,19 +383,6 @@ Partial Class frmInformasiCustomer
         Me.lblExportTransaksi.Text = "Cari"
         Me.lblExportTransaksi.Visible = False
         '
-        'picExportTransaksi
-        '
-        Me.picExportTransaksi.BackColor = System.Drawing.Color.Transparent
-        Me.picExportTransaksi.BaseColor = System.Drawing.Color.Lime
-        Me.picExportTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.picExportTransaksi.Image = Global.MonitoringMember.My.Resources.Resources.Export_To_Excel
-        Me.picExportTransaksi.Location = New System.Drawing.Point(493, 13)
-        Me.picExportTransaksi.Name = "picExportTransaksi"
-        Me.picExportTransaksi.Size = New System.Drawing.Size(81, 46)
-        Me.picExportTransaksi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picExportTransaksi.TabIndex = 16
-        Me.picExportTransaksi.TabStop = False
-        '
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -585,6 +464,128 @@ Partial Class frmInformasiCustomer
         Me.dgvListTransaksi.Size = New System.Drawing.Size(1081, 294)
         Me.dgvListTransaksi.TabIndex = 44
         '
+        'picExportTransaksi
+        '
+        Me.picExportTransaksi.BackColor = System.Drawing.Color.Transparent
+        Me.picExportTransaksi.BaseColor = System.Drawing.Color.Lime
+        Me.picExportTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.picExportTransaksi.Image = Global.MonitoringMember.My.Resources.Resources.Export_To_Excel
+        Me.picExportTransaksi.Location = New System.Drawing.Point(493, 13)
+        Me.picExportTransaksi.Name = "picExportTransaksi"
+        Me.picExportTransaksi.Size = New System.Drawing.Size(81, 46)
+        Me.picExportTransaksi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picExportTransaksi.TabIndex = 16
+        Me.picExportTransaksi.TabStop = False
+        '
+        'GunaTransfarantPictureBox1
+        '
+        Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Lime
+        Me.GunaTransfarantPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.GunaTransfarantPictureBox1.Image = Global.MonitoringMember.My.Resources.Resources.Export_To_Excel
+        Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(999, 227)
+        Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
+        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(70, 31)
+        Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox1.TabIndex = 15
+        Me.GunaTransfarantPictureBox1.TabStop = False
+        '
+        'picCariCustomer
+        '
+        Me.picCariCustomer.BaseColor = System.Drawing.Color.White
+        Me.picCariCustomer.Image = Global.MonitoringMember.My.Resources.Resources.Search_User
+        Me.picCariCustomer.Location = New System.Drawing.Point(580, 13)
+        Me.picCariCustomer.Name = "picCariCustomer"
+        Me.picCariCustomer.Size = New System.Drawing.Size(33, 32)
+        Me.picCariCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picCariCustomer.TabIndex = 6
+        Me.picCariCustomer.TabStop = False
+        Me.picCariCustomer.UseTransfarantBackground = False
+        '
+        'GunaTransfarantPictureBox7
+        '
+        Me.GunaTransfarantPictureBox7.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox7.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox7.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9_rotate
+        Me.GunaTransfarantPictureBox7.Location = New System.Drawing.Point(126, 548)
+        Me.GunaTransfarantPictureBox7.Name = "GunaTransfarantPictureBox7"
+        Me.GunaTransfarantPictureBox7.Size = New System.Drawing.Size(133, 120)
+        Me.GunaTransfarantPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox7.TabIndex = 15
+        Me.GunaTransfarantPictureBox7.TabStop = False
+        '
+        'GunaTransfarantPictureBox6
+        '
+        Me.GunaTransfarantPictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox6.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox6.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9_rotate
+        Me.GunaTransfarantPictureBox6.Location = New System.Drawing.Point(0, 548)
+        Me.GunaTransfarantPictureBox6.Name = "GunaTransfarantPictureBox6"
+        Me.GunaTransfarantPictureBox6.Size = New System.Drawing.Size(132, 120)
+        Me.GunaTransfarantPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox6.TabIndex = 14
+        Me.GunaTransfarantPictureBox6.TabStop = False
+        '
+        'GunaTransfarantPictureBox5
+        '
+        Me.GunaTransfarantPictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox5.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox5.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
+        Me.GunaTransfarantPictureBox5.Location = New System.Drawing.Point(132, 0)
+        Me.GunaTransfarantPictureBox5.Name = "GunaTransfarantPictureBox5"
+        Me.GunaTransfarantPictureBox5.Size = New System.Drawing.Size(139, 120)
+        Me.GunaTransfarantPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox5.TabIndex = 13
+        Me.GunaTransfarantPictureBox5.TabStop = False
+        '
+        'GunaTransfarantPictureBox3
+        '
+        Me.GunaTransfarantPictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox3.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox3.Image = Global.MonitoringMember.My.Resources.Resources.Users_Dashboard
+        Me.GunaTransfarantPictureBox3.Location = New System.Drawing.Point(56, 219)
+        Me.GunaTransfarantPictureBox3.Name = "GunaTransfarantPictureBox3"
+        Me.GunaTransfarantPictureBox3.Size = New System.Drawing.Size(76, 71)
+        Me.GunaTransfarantPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox3.TabIndex = 6
+        Me.GunaTransfarantPictureBox3.TabStop = False
+        '
+        'picLogout
+        '
+        Me.picLogout.BaseColor = System.Drawing.Color.White
+        Me.picLogout.Image = Global.MonitoringMember.My.Resources.Resources.Logout_Icon
+        Me.picLogout.Location = New System.Drawing.Point(184, 188)
+        Me.picLogout.Name = "picLogout"
+        Me.picLogout.Size = New System.Drawing.Size(65, 67)
+        Me.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picLogout.TabIndex = 3
+        Me.picLogout.TabStop = False
+        Me.picLogout.UseTransfarantBackground = False
+        '
+        'GunaTransfarantPictureBox2
+        '
+        Me.GunaTransfarantPictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox2.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox2.Image = Global.MonitoringMember.My.Resources.Resources.Lembar_Kertas_Dashboard
+        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(12, 188)
+        Me.GunaTransfarantPictureBox2.Name = "GunaTransfarantPictureBox2"
+        Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(166, 365)
+        Me.GunaTransfarantPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox2.TabIndex = 5
+        Me.GunaTransfarantPictureBox2.TabStop = False
+        '
+        'GunaTransfarantPictureBox4
+        '
+        Me.GunaTransfarantPictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox4.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox4.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
+        Me.GunaTransfarantPictureBox4.Location = New System.Drawing.Point(0, 0)
+        Me.GunaTransfarantPictureBox4.Name = "GunaTransfarantPictureBox4"
+        Me.GunaTransfarantPictureBox4.Size = New System.Drawing.Size(132, 120)
+        Me.GunaTransfarantPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox4.TabIndex = 12
+        Me.GunaTransfarantPictureBox4.TabStop = False
+        '
         'frmInformasiCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -594,29 +595,30 @@ Partial Class frmInformasiCustomer
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmInformasiCustomer"
         Me.Text = "Informasi Customer"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.dgvListAlamatCustomer, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        CType(Me.dgvListTransaksi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picExportTransaksi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picCariCustomer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picLogout, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvListAlamatCustomer, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picCariCustomer, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        CType(Me.picExportTransaksi, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvListTransaksi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

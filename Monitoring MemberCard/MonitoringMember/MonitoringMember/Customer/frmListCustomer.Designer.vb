@@ -22,24 +22,25 @@ Partial Class frmListCustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListCustomer))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lblExport = New System.Windows.Forms.Label()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.picExportTransaksi = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.btnProses = New System.Windows.Forms.Button()
         Me.cmbListCabang = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblExport = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.dgvListCustomer = New System.Windows.Forms.DataGridView()
         Me.lblJumlahRow = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.picExportTransaksi = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.picExportTransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvListCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picExportTransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -58,17 +59,6 @@ Partial Class frmListCustomer
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Parameter"
         '
-        'lblExport
-        '
-        Me.lblExport.AutoSize = True
-        Me.lblExport.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblExport.Location = New System.Drawing.Point(294, 237)
-        Me.lblExport.Name = "lblExport"
-        Me.lblExport.Size = New System.Drawing.Size(12, 16)
-        Me.lblExport.TabIndex = 20
-        Me.lblExport.Text = "-"
-        Me.lblExport.Visible = False
-        '
         'txtCari
         '
         Me.txtCari.Location = New System.Drawing.Point(90, 52)
@@ -85,19 +75,6 @@ Partial Class frmListCustomer
         Me.Label3.Size = New System.Drawing.Size(39, 18)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Cari"
-        '
-        'picExportTransaksi
-        '
-        Me.picExportTransaksi.BackColor = System.Drawing.Color.Transparent
-        Me.picExportTransaksi.BaseColor = System.Drawing.Color.Lime
-        Me.picExportTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.picExportTransaksi.Image = Global.MonitoringMember.My.Resources.Resources.Export_To_Excel
-        Me.picExportTransaksi.Location = New System.Drawing.Point(523, 13)
-        Me.picExportTransaksi.Name = "picExportTransaksi"
-        Me.picExportTransaksi.Size = New System.Drawing.Size(109, 63)
-        Me.picExportTransaksi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picExportTransaksi.TabIndex = 17
-        Me.picExportTransaksi.TabStop = False
         '
         'btnProses
         '
@@ -126,15 +103,16 @@ Partial Class frmListCustomer
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Cabang"
         '
-        'PictureBox1
+        'lblExport
         '
-        Me.PictureBox1.Image = Global.MonitoringMember.My.Resources.Resources.Customer
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(432, 143)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
+        Me.lblExport.AutoSize = True
+        Me.lblExport.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblExport.Location = New System.Drawing.Point(294, 237)
+        Me.lblExport.Name = "lblExport"
+        Me.lblExport.Size = New System.Drawing.Size(12, 16)
+        Me.lblExport.TabIndex = 20
+        Me.lblExport.Text = "-"
+        Me.lblExport.Visible = False
         '
         'Label2
         '
@@ -145,16 +123,6 @@ Partial Class frmListCustomer
         Me.Label2.Size = New System.Drawing.Size(183, 25)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Daftar Customer"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.MonitoringMember.My.Resources.Resources.logo_jpeg
-        Me.PictureBox2.Location = New System.Drawing.Point(444, 47)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(190, 99)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
         '
         'dgvListCustomer
         '
@@ -178,6 +146,39 @@ Partial Class frmListCustomer
         Me.lblJumlahRow.TabIndex = 21
         Me.lblJumlahRow.Text = "Jumlah Data : 0"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.MonitoringMember.My.Resources.Resources.logo_jpeg
+        Me.PictureBox2.Location = New System.Drawing.Point(444, 47)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(190, 99)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.MonitoringMember.My.Resources.Resources.Customer
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(432, 143)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'picExportTransaksi
+        '
+        Me.picExportTransaksi.BackColor = System.Drawing.Color.Transparent
+        Me.picExportTransaksi.BaseColor = System.Drawing.Color.Lime
+        Me.picExportTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.picExportTransaksi.Image = Global.MonitoringMember.My.Resources.Resources.Export_To_Excel
+        Me.picExportTransaksi.Location = New System.Drawing.Point(523, 13)
+        Me.picExportTransaksi.Name = "picExportTransaksi"
+        Me.picExportTransaksi.Size = New System.Drawing.Size(109, 63)
+        Me.picExportTransaksi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picExportTransaksi.TabIndex = 17
+        Me.picExportTransaksi.TabStop = False
+        '
         'frmListCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -191,15 +192,16 @@ Partial Class frmListCustomer
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmListCustomer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmListCustomer"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.picExportTransaksi, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvListCustomer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picExportTransaksi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

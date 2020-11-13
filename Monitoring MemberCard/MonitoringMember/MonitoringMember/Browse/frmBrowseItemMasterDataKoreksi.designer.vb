@@ -59,7 +59,7 @@ Partial Class frmBrowseItemMasterDataKoreksi
         Me.txtCari.Size = New System.Drawing.Size(535, 26)
         Me.txtCari.TabIndex = 2
         '
-        'frmBrowseItemMasterData
+        'frmBrowseItemMasterDataKoreksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -69,7 +69,7 @@ Partial Class frmBrowseItemMasterDataKoreksi
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvItemMasterData)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmBrowseItemMasterData"
+        Me.Name = "frmBrowseItemMasterDataKoreksi"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Browse Item Master Data"
         CType(Me.dgvItemMasterData, System.ComponentModel.ISupportInitialize).EndInit()

@@ -23,15 +23,11 @@ Partial Class frmVoucherCodeGenerator
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmVoucherCodeGenerator))
         Me.CopyToExcelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.GunaTransfarantPictureBox13 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.GunaTransfarantPictureBox12 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.GunaTransfarantPictureBox5 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.GunaTransfarantPictureBox4 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.GunaTransfarantPictureBox2 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.cmbCabang = New System.Windows.Forms.ComboBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -52,36 +48,41 @@ Partial Class frmVoucherCodeGenerator
         Me.txtFromVoucher = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.gbRincianNomor = New System.Windows.Forms.GroupBox()
-        Me.picExportToExcel = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dgvRincianNomor = New System.Windows.Forms.DataGridView()
         Me.lblJumlahVoucher = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dgvListGenerate = New System.Windows.Forms.DataGridView()
-        Me.picBarcode = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblJumlahDataNomor = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.GunaTransfarantPictureBox8 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.GunaTransfarantPictureBox13 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox12 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox5 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox4 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox2 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.picExportToExcel = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.picBarcode = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.GunaTransfarantPictureBox8 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.gbRincianNomor.SuspendLayout()
+        CType(Me.dgvRincianNomor, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.dgvListGenerate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox5.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
-        Me.gbRincianNomor.SuspendLayout()
         CType(Me.picExportToExcel, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvRincianNomor, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.dgvListGenerate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBarcode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -121,77 +122,17 @@ Partial Class frmVoucherCodeGenerator
         Me.Panel1.Size = New System.Drawing.Size(660, 722)
         Me.Panel1.TabIndex = 43
         '
-        'GunaTransfarantPictureBox13
+        'Label1
         '
-        Me.GunaTransfarantPictureBox13.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox13.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox13.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
-        Me.GunaTransfarantPictureBox13.Location = New System.Drawing.Point(555, 1)
-        Me.GunaTransfarantPictureBox13.Name = "GunaTransfarantPictureBox13"
-        Me.GunaTransfarantPictureBox13.Size = New System.Drawing.Size(94, 66)
-        Me.GunaTransfarantPictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox13.TabIndex = 28
-        Me.GunaTransfarantPictureBox13.TabStop = False
-        '
-        'GunaTransfarantPictureBox12
-        '
-        Me.GunaTransfarantPictureBox12.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox12.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox12.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
-        Me.GunaTransfarantPictureBox12.Location = New System.Drawing.Point(463, 1)
-        Me.GunaTransfarantPictureBox12.Name = "GunaTransfarantPictureBox12"
-        Me.GunaTransfarantPictureBox12.Size = New System.Drawing.Size(94, 66)
-        Me.GunaTransfarantPictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox12.TabIndex = 27
-        Me.GunaTransfarantPictureBox12.TabStop = False
-        '
-        'GunaTransfarantPictureBox5
-        '
-        Me.GunaTransfarantPictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox5.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox5.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
-        Me.GunaTransfarantPictureBox5.Location = New System.Drawing.Point(278, 1)
-        Me.GunaTransfarantPictureBox5.Name = "GunaTransfarantPictureBox5"
-        Me.GunaTransfarantPictureBox5.Size = New System.Drawing.Size(94, 66)
-        Me.GunaTransfarantPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox5.TabIndex = 26
-        Me.GunaTransfarantPictureBox5.TabStop = False
-        '
-        'GunaTransfarantPictureBox4
-        '
-        Me.GunaTransfarantPictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox4.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox4.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
-        Me.GunaTransfarantPictureBox4.Location = New System.Drawing.Point(185, 0)
-        Me.GunaTransfarantPictureBox4.Name = "GunaTransfarantPictureBox4"
-        Me.GunaTransfarantPictureBox4.Size = New System.Drawing.Size(94, 66)
-        Me.GunaTransfarantPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox4.TabIndex = 25
-        Me.GunaTransfarantPictureBox4.TabStop = False
-        '
-        'GunaTransfarantPictureBox2
-        '
-        Me.GunaTransfarantPictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox2.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox2.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
-        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(93, 0)
-        Me.GunaTransfarantPictureBox2.Name = "GunaTransfarantPictureBox2"
-        Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(94, 66)
-        Me.GunaTransfarantPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox2.TabIndex = 24
-        Me.GunaTransfarantPictureBox2.TabStop = False
-        '
-        'GunaTransfarantPictureBox1
-        '
-        Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox1.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
-        Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
-        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(94, 66)
-        Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox1.TabIndex = 23
-        Me.GunaTransfarantPictureBox1.TabStop = False
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(138, 43)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(361, 33)
+        Me.Label1.TabIndex = 16
+        Me.Label1.Text = "Voucher Code Generator"
         '
         'GroupBox5
         '
@@ -396,20 +337,6 @@ Partial Class frmVoucherCodeGenerator
         Me.gbRincianNomor.TabStop = False
         Me.gbRincianNomor.Visible = False
         '
-        'picExportToExcel
-        '
-        Me.picExportToExcel.BackColor = System.Drawing.Color.Transparent
-        Me.picExportToExcel.BaseColor = System.Drawing.Color.Lime
-        Me.picExportToExcel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.picExportToExcel.Image = Global.MonitoringMember.My.Resources.Resources.Export
-        Me.picExportToExcel.Location = New System.Drawing.Point(6, 251)
-        Me.picExportToExcel.Name = "picExportToExcel"
-        Me.picExportToExcel.Size = New System.Drawing.Size(82, 31)
-        Me.picExportToExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picExportToExcel.TabIndex = 16
-        Me.picExportToExcel.TabStop = False
-        Me.picExportToExcel.Visible = False
-        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Red
@@ -478,25 +405,6 @@ Partial Class frmVoucherCodeGenerator
         Me.dgvListGenerate.Size = New System.Drawing.Size(340, 213)
         Me.dgvListGenerate.TabIndex = 0
         '
-        'picBarcode
-        '
-        Me.picBarcode.Location = New System.Drawing.Point(324, 118)
-        Me.picBarcode.Name = "picBarcode"
-        Me.picBarcode.Size = New System.Drawing.Size(90, 88)
-        Me.picBarcode.TabIndex = 5
-        Me.picBarcode.TabStop = False
-        Me.picBarcode.Visible = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.MonitoringMember.My.Resources.Resources.See
-        Me.PictureBox1.Location = New System.Drawing.Point(354, 39)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(53, 49)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
-        '
         'lblJumlahDataNomor
         '
         Me.lblJumlahDataNomor.AutoSize = True
@@ -516,17 +424,110 @@ Partial Class frmVoucherCodeGenerator
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Daftar Voucher Yang Telah Dibuat"
         '
-        'Label1
+        'GunaTransfarantPictureBox13
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(138, 43)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(361, 33)
-        Me.Label1.TabIndex = 16
-        Me.Label1.Text = "Voucher Code Generator"
+        Me.GunaTransfarantPictureBox13.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox13.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox13.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
+        Me.GunaTransfarantPictureBox13.Location = New System.Drawing.Point(555, 1)
+        Me.GunaTransfarantPictureBox13.Name = "GunaTransfarantPictureBox13"
+        Me.GunaTransfarantPictureBox13.Size = New System.Drawing.Size(94, 66)
+        Me.GunaTransfarantPictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox13.TabIndex = 28
+        Me.GunaTransfarantPictureBox13.TabStop = False
+        '
+        'GunaTransfarantPictureBox12
+        '
+        Me.GunaTransfarantPictureBox12.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox12.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox12.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
+        Me.GunaTransfarantPictureBox12.Location = New System.Drawing.Point(463, 1)
+        Me.GunaTransfarantPictureBox12.Name = "GunaTransfarantPictureBox12"
+        Me.GunaTransfarantPictureBox12.Size = New System.Drawing.Size(94, 66)
+        Me.GunaTransfarantPictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox12.TabIndex = 27
+        Me.GunaTransfarantPictureBox12.TabStop = False
+        '
+        'GunaTransfarantPictureBox5
+        '
+        Me.GunaTransfarantPictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox5.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox5.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
+        Me.GunaTransfarantPictureBox5.Location = New System.Drawing.Point(278, 1)
+        Me.GunaTransfarantPictureBox5.Name = "GunaTransfarantPictureBox5"
+        Me.GunaTransfarantPictureBox5.Size = New System.Drawing.Size(94, 66)
+        Me.GunaTransfarantPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox5.TabIndex = 26
+        Me.GunaTransfarantPictureBox5.TabStop = False
+        '
+        'GunaTransfarantPictureBox4
+        '
+        Me.GunaTransfarantPictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox4.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox4.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
+        Me.GunaTransfarantPictureBox4.Location = New System.Drawing.Point(185, 0)
+        Me.GunaTransfarantPictureBox4.Name = "GunaTransfarantPictureBox4"
+        Me.GunaTransfarantPictureBox4.Size = New System.Drawing.Size(94, 66)
+        Me.GunaTransfarantPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox4.TabIndex = 25
+        Me.GunaTransfarantPictureBox4.TabStop = False
+        '
+        'GunaTransfarantPictureBox2
+        '
+        Me.GunaTransfarantPictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox2.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox2.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
+        Me.GunaTransfarantPictureBox2.Location = New System.Drawing.Point(93, 0)
+        Me.GunaTransfarantPictureBox2.Name = "GunaTransfarantPictureBox2"
+        Me.GunaTransfarantPictureBox2.Size = New System.Drawing.Size(94, 66)
+        Me.GunaTransfarantPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox2.TabIndex = 24
+        Me.GunaTransfarantPictureBox2.TabStop = False
+        '
+        'GunaTransfarantPictureBox1
+        '
+        Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox1.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
+        Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
+        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(94, 66)
+        Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox1.TabIndex = 23
+        Me.GunaTransfarantPictureBox1.TabStop = False
+        '
+        'picExportToExcel
+        '
+        Me.picExportToExcel.BackColor = System.Drawing.Color.Transparent
+        Me.picExportToExcel.BaseColor = System.Drawing.Color.Lime
+        Me.picExportToExcel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.picExportToExcel.Image = Global.MonitoringMember.My.Resources.Resources.Export
+        Me.picExportToExcel.Location = New System.Drawing.Point(6, 251)
+        Me.picExportToExcel.Name = "picExportToExcel"
+        Me.picExportToExcel.Size = New System.Drawing.Size(82, 31)
+        Me.picExportToExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picExportToExcel.TabIndex = 16
+        Me.picExportToExcel.TabStop = False
+        Me.picExportToExcel.Visible = False
+        '
+        'picBarcode
+        '
+        Me.picBarcode.Location = New System.Drawing.Point(324, 118)
+        Me.picBarcode.Name = "picBarcode"
+        Me.picBarcode.Size = New System.Drawing.Size(90, 88)
+        Me.picBarcode.TabIndex = 5
+        Me.picBarcode.TabStop = False
+        Me.picBarcode.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.MonitoringMember.My.Resources.Resources.See
+        Me.PictureBox1.Location = New System.Drawing.Point(354, 39)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(53, 49)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
         '
         'GunaTransfarantPictureBox8
         '
@@ -546,18 +547,13 @@ Partial Class frmVoucherCodeGenerator
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(661, 579)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmVoucherCodeGenerator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Voucher Code Generator"
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.GunaTransfarantPictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaTransfarantPictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaTransfarantPictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaTransfarantPictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         Me.Panel3.ResumeLayout(False)
@@ -565,11 +561,17 @@ Partial Class frmVoucherCodeGenerator
         Me.GroupBox6.PerformLayout()
         Me.gbRincianNomor.ResumeLayout(False)
         Me.gbRincianNomor.PerformLayout()
-        CType(Me.picExportToExcel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvRincianNomor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvListGenerate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaTransfarantPictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaTransfarantPictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaTransfarantPictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaTransfarantPictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picExportToExcel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBarcode, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox8, System.ComponentModel.ISupportInitialize).EndInit()

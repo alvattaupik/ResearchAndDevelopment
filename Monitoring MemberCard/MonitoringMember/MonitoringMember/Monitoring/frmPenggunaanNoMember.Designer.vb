@@ -22,6 +22,7 @@ Partial Class frmPenggunaanNoMember
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPenggunaanNoMember))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.txtKota = New System.Windows.Forms.TextBox()
@@ -50,6 +51,7 @@ Partial Class frmPenggunaanNoMember
         Me.Label10 = New System.Windows.Forms.Label()
         Me.dgvSudahRegistrasi = New System.Windows.Forms.DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.dgvRincianTransaksi = New System.Windows.Forms.DataGridView()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.gbDaftarPengguna = New System.Windows.Forms.GroupBox()
@@ -58,7 +60,7 @@ Partial Class frmPenggunaanNoMember
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtNoMember = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -70,17 +72,19 @@ Partial Class frmPenggunaanNoMember
         Me.GroupBox4.SuspendLayout()
         Me.gbDaftarPengguna.SuspendLayout()
         CType(Me.dgvPenggunaMember, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.GunaTransfarantPictureBox1)
         Me.GroupBox1.Controls.Add(Me.btnCancel)
         Me.GroupBox1.Controls.Add(Me.txtKota)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.btnProses)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -121,7 +125,7 @@ Partial Class frmPenggunaanNoMember
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(160, 78)
+        Me.Label9.Location = New System.Drawing.Point(188, 87)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(151, 39)
         Me.Label9.TabIndex = 16
@@ -131,7 +135,7 @@ Partial Class frmPenggunaanNoMember
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(162, 47)
+        Me.Label8.Location = New System.Drawing.Point(164, 56)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(177, 31)
         Me.Label8.TabIndex = 15
@@ -141,7 +145,7 @@ Partial Class frmPenggunaanNoMember
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(162, 14)
+        Me.Label7.Location = New System.Drawing.Point(164, 23)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(145, 33)
         Me.Label7.TabIndex = 14
@@ -368,6 +372,16 @@ Partial Class frmPenggunaanNoMember
         Me.TabPage2.Text = "Penggunaan Transaksi Member"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(6, 243)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(175, 24)
+        Me.Label13.TabIndex = 2
+        Me.Label13.Text = "Rincian Transaksi"
+        '
         'dgvRincianTransaksi
         '
         Me.dgvRincianTransaksi.AllowUserToAddRows = False
@@ -465,15 +479,17 @@ Partial Class frmPenggunaanNoMember
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Nomor Member"
         '
-        'Label13
+        'GunaTransfarantPictureBox1
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(6, 243)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(175, 24)
-        Me.Label13.TabIndex = 2
-        Me.Label13.Text = "Rincian Transaksi"
+        Me.GunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox1.Image = Global.MonitoringMember.My.Resources.Resources.Memberrrrrrrr
+        Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(6, 28)
+        Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
+        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(235, 245)
+        Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox1.TabIndex = 19
+        Me.GunaTransfarantPictureBox1.TabStop = False
         '
         'frmPenggunaanNoMember
         '
@@ -482,6 +498,7 @@ Partial Class frmPenggunaanNoMember
         Me.ClientSize = New System.Drawing.Size(1128, 648)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmPenggunaanNoMember"
         Me.Text = "frmPenggunaanNoMember"
         Me.GroupBox1.ResumeLayout(False)
@@ -501,6 +518,7 @@ Partial Class frmPenggunaanNoMember
         Me.gbDaftarPengguna.ResumeLayout(False)
         Me.gbDaftarPengguna.PerformLayout()
         CType(Me.dgvPenggunaMember, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GunaTransfarantPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -541,4 +559,5 @@ Partial Class frmPenggunaanNoMember
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents dgvRincianTransaksi As System.Windows.Forms.DataGridView
     Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents GunaTransfarantPictureBox1 As Guna.UI.WinForms.GunaTransfarantPictureBox
 End Class

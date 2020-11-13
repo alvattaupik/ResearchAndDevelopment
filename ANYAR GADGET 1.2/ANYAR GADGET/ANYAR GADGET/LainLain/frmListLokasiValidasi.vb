@@ -85,4 +85,7 @@ Public Class frmListLokasiValidasi
         txtkodeCabang.Text = dgvListLokasi.Item(1, dgvListLokasi.CurrentRow.Index).Value()
     End Sub
 
+    Private Sub GunaPictureBox1_Click(sender As Object, e As EventArgs) Handles GunaPictureBox1.Click
+        frmBrowseNoSisterRequestFullfill.ShowDialog()
+    End Sub
 End Class

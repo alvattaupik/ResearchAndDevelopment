@@ -23,26 +23,27 @@ Partial Class frmDashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDashboard))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.GunaTransfarantPictureBox7 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.GunaTransfarantPictureBox6 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.GunaTransfarantPictureBox5 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.lblNamaCabang = New Guna.UI.WinForms.GunaLabel()
         Me.lblNamaUser = New Guna.UI.WinForms.GunaLabel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblJamDigital = New System.Windows.Forms.Label()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.timerDashboard = New System.Windows.Forms.Timer(Me.components)
+        Me.GunaTransfarantPictureBox7 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox6 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
+        Me.GunaTransfarantPictureBox5 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GunaTransfarantPictureBox3 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.picLogout = New Guna.UI.WinForms.GunaCirclePictureBox()
         Me.GunaTransfarantPictureBox2 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GunaTransfarantPictureBox1 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GunaTransfarantPictureBox4 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
-        Me.timerDashboard = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         CType(Me.GunaTransfarantPictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
         CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picLogout, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,42 +71,6 @@ Partial Class frmDashboard
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(259, 705)
         Me.Panel1.TabIndex = 40
-        '
-        'GunaTransfarantPictureBox7
-        '
-        Me.GunaTransfarantPictureBox7.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox7.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox7.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9_rotate
-        Me.GunaTransfarantPictureBox7.Location = New System.Drawing.Point(126, 548)
-        Me.GunaTransfarantPictureBox7.Name = "GunaTransfarantPictureBox7"
-        Me.GunaTransfarantPictureBox7.Size = New System.Drawing.Size(133, 120)
-        Me.GunaTransfarantPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox7.TabIndex = 15
-        Me.GunaTransfarantPictureBox7.TabStop = False
-        '
-        'GunaTransfarantPictureBox6
-        '
-        Me.GunaTransfarantPictureBox6.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox6.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox6.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9_rotate
-        Me.GunaTransfarantPictureBox6.Location = New System.Drawing.Point(0, 548)
-        Me.GunaTransfarantPictureBox6.Name = "GunaTransfarantPictureBox6"
-        Me.GunaTransfarantPictureBox6.Size = New System.Drawing.Size(132, 120)
-        Me.GunaTransfarantPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox6.TabIndex = 14
-        Me.GunaTransfarantPictureBox6.TabStop = False
-        '
-        'GunaTransfarantPictureBox5
-        '
-        Me.GunaTransfarantPictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.GunaTransfarantPictureBox5.BaseColor = System.Drawing.Color.Black
-        Me.GunaTransfarantPictureBox5.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
-        Me.GunaTransfarantPictureBox5.Location = New System.Drawing.Point(132, 0)
-        Me.GunaTransfarantPictureBox5.Name = "GunaTransfarantPictureBox5"
-        Me.GunaTransfarantPictureBox5.Size = New System.Drawing.Size(133, 120)
-        Me.GunaTransfarantPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.GunaTransfarantPictureBox5.TabIndex = 13
-        Me.GunaTransfarantPictureBox5.TabStop = False
         '
         'lblNamaCabang
         '
@@ -149,6 +114,57 @@ Partial Class frmDashboard
         Me.lblJamDigital.Size = New System.Drawing.Size(71, 31)
         Me.lblJamDigital.TabIndex = 0
         Me.lblJamDigital.Text = "JAM"
+        '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WebBrowser1.Location = New System.Drawing.Point(264, 2)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(661, 668)
+        Me.WebBrowser1.TabIndex = 41
+        '
+        'timerDashboard
+        '
+        Me.timerDashboard.Interval = 1000
+        '
+        'GunaTransfarantPictureBox7
+        '
+        Me.GunaTransfarantPictureBox7.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox7.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox7.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9_rotate
+        Me.GunaTransfarantPictureBox7.Location = New System.Drawing.Point(126, 548)
+        Me.GunaTransfarantPictureBox7.Name = "GunaTransfarantPictureBox7"
+        Me.GunaTransfarantPictureBox7.Size = New System.Drawing.Size(133, 120)
+        Me.GunaTransfarantPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox7.TabIndex = 15
+        Me.GunaTransfarantPictureBox7.TabStop = False
+        '
+        'GunaTransfarantPictureBox6
+        '
+        Me.GunaTransfarantPictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox6.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox6.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9_rotate
+        Me.GunaTransfarantPictureBox6.Location = New System.Drawing.Point(0, 548)
+        Me.GunaTransfarantPictureBox6.Name = "GunaTransfarantPictureBox6"
+        Me.GunaTransfarantPictureBox6.Size = New System.Drawing.Size(132, 120)
+        Me.GunaTransfarantPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox6.TabIndex = 14
+        Me.GunaTransfarantPictureBox6.TabStop = False
+        '
+        'GunaTransfarantPictureBox5
+        '
+        Me.GunaTransfarantPictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.GunaTransfarantPictureBox5.BaseColor = System.Drawing.Color.Black
+        Me.GunaTransfarantPictureBox5.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
+        Me.GunaTransfarantPictureBox5.Location = New System.Drawing.Point(132, 0)
+        Me.GunaTransfarantPictureBox5.Name = "GunaTransfarantPictureBox5"
+        Me.GunaTransfarantPictureBox5.Size = New System.Drawing.Size(133, 120)
+        Me.GunaTransfarantPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GunaTransfarantPictureBox5.TabIndex = 13
+        Me.GunaTransfarantPictureBox5.TabStop = False
         '
         'GunaTransfarantPictureBox3
         '
@@ -210,21 +226,6 @@ Partial Class frmDashboard
         Me.GunaTransfarantPictureBox4.TabIndex = 12
         Me.GunaTransfarantPictureBox4.TabStop = False
         '
-        'WebBrowser1
-        '
-        Me.WebBrowser1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.WebBrowser1.Location = New System.Drawing.Point(264, 2)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(661, 668)
-        Me.WebBrowser1.TabIndex = 41
-        '
-        'timerDashboard
-        '
-        Me.timerDashboard.Interval = 1000
-        '
         'frmDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -232,17 +233,18 @@ Partial Class frmDashboard
         Me.ClientSize = New System.Drawing.Size(924, 664)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmDashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "My Dashboard"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         CType(Me.GunaTransfarantPictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         CType(Me.GunaTransfarantPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picLogout, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

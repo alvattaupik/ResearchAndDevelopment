@@ -265,6 +265,12 @@
     <Compile Include="BrowseForm\frmBrowseMasterStagging.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BrowseForm\frmBrowseNoSisterRequestFullfill.Designer.vb">
+      <DependentUpon>frmBrowseNoSisterRequestFullfill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseForm\frmBrowseNoSisterRequestFullfill.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BrowseForm\frmBrowsePegawai.Designer.vb">
       <DependentUpon>frmBrowsePegawai.vb</DependentUpon>
     </Compile>
@@ -809,6 +815,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowseMasterStagging.resx">
       <DependentUpon>frmBrowseMasterStagging.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForm\frmBrowseNoSisterRequestFullfill.resx">
+      <DependentUpon>frmBrowseNoSisterRequestFullfill.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BrowseForm\frmBrowsePegawai.resx">
       <DependentUpon>frmBrowsePegawai.vb</DependentUpon>

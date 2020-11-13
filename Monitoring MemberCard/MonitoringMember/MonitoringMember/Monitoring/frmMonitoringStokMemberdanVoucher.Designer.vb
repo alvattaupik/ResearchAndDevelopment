@@ -22,8 +22,13 @@ Partial Class frmMonitoringStokMemberdanVoucher
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMonitoringStokMemberdanVoucher))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.contextMenuMember = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CopyStokMemberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyRincianTransaksiStokMemberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.gbRincianTransaksi = New System.Windows.Forms.GroupBox()
         Me.dgvTransaksiMemberCard = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -34,6 +39,9 @@ Partial Class frmMonitoringStokMemberdanVoucher
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dgvStockVoucher = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.contextMenuVoucher = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CopyStokVoucherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyRincianTansaksiStokVoucherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GunaTransfarantPictureBox13 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GunaTransfarantPictureBox12 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
         Me.GunaTransfarantPictureBox5 = New Guna.UI.WinForms.GunaTransfarantPictureBox()
@@ -45,6 +53,7 @@ Partial Class frmMonitoringStokMemberdanVoucher
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.contextMenuMember.SuspendLayout()
         Me.gbRincianTransaksi.SuspendLayout()
         CType(Me.dgvTransaksiMemberCard, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvStokMember, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,6 +61,7 @@ Partial Class frmMonitoringStokMemberdanVoucher
         Me.gbRincianVoucher.SuspendLayout()
         CType(Me.dgvRincianTransaksiVoucher, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvStockVoucher, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.contextMenuVoucher.SuspendLayout()
         CType(Me.GunaTransfarantPictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GunaTransfarantPictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,6 +85,7 @@ Partial Class frmMonitoringStokMemberdanVoucher
         '
         'TabPage1
         '
+        Me.TabPage1.ContextMenuStrip = Me.contextMenuMember
         Me.TabPage1.Controls.Add(Me.picLihatRincianMember)
         Me.TabPage1.Controls.Add(Me.gbRincianTransaksi)
         Me.TabPage1.Controls.Add(Me.Label2)
@@ -86,6 +97,24 @@ Partial Class frmMonitoringStokMemberdanVoucher
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Stok Member"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'contextMenuMember
+        '
+        Me.contextMenuMember.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyStokMemberToolStripMenuItem, Me.CopyRincianTransaksiStokMemberToolStripMenuItem})
+        Me.contextMenuMember.Name = "contextMenuMember"
+        Me.contextMenuMember.Size = New System.Drawing.Size(269, 48)
+        '
+        'CopyStokMemberToolStripMenuItem
+        '
+        Me.CopyStokMemberToolStripMenuItem.Name = "CopyStokMemberToolStripMenuItem"
+        Me.CopyStokMemberToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
+        Me.CopyStokMemberToolStripMenuItem.Text = "Copy Stok Member"
+        '
+        'CopyRincianTransaksiStokMemberToolStripMenuItem
+        '
+        Me.CopyRincianTransaksiStokMemberToolStripMenuItem.Name = "CopyRincianTransaksiStokMemberToolStripMenuItem"
+        Me.CopyRincianTransaksiStokMemberToolStripMenuItem.Size = New System.Drawing.Size(268, 22)
+        Me.CopyRincianTransaksiStokMemberToolStripMenuItem.Text = "Copy Rincian Transaksi Stok Member"
         '
         'gbRincianTransaksi
         '
@@ -133,6 +162,7 @@ Partial Class frmMonitoringStokMemberdanVoucher
         '
         'TabPage2
         '
+        Me.TabPage2.ContextMenuStrip = Me.contextMenuVoucher
         Me.TabPage2.Controls.Add(Me.gbRincianVoucher)
         Me.TabPage2.Controls.Add(Me.PictureBox2)
         Me.TabPage2.Controls.Add(Me.Label3)
@@ -171,7 +201,7 @@ Partial Class frmMonitoringStokMemberdanVoucher
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(41, 3)
+        Me.Label3.Location = New System.Drawing.Point(49, 3)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(180, 33)
         Me.Label3.TabIndex = 41
@@ -193,11 +223,29 @@ Partial Class frmMonitoringStokMemberdanVoucher
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(59, 68)
+        Me.Label1.Location = New System.Drawing.Point(55, 68)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(538, 33)
         Me.Label1.TabIndex = 36
         Me.Label1.Text = "Monitoring Stok Voucher dan Member"
+        '
+        'contextMenuVoucher
+        '
+        Me.contextMenuVoucher.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyStokVoucherToolStripMenuItem, Me.CopyRincianTansaksiStokVoucherToolStripMenuItem})
+        Me.contextMenuVoucher.Name = "contextMenuVoucher"
+        Me.contextMenuVoucher.Size = New System.Drawing.Size(263, 48)
+        '
+        'CopyStokVoucherToolStripMenuItem
+        '
+        Me.CopyStokVoucherToolStripMenuItem.Name = "CopyStokVoucherToolStripMenuItem"
+        Me.CopyStokVoucherToolStripMenuItem.Size = New System.Drawing.Size(262, 22)
+        Me.CopyStokVoucherToolStripMenuItem.Text = "Copy Stok Voucher"
+        '
+        'CopyRincianTansaksiStokVoucherToolStripMenuItem
+        '
+        Me.CopyRincianTansaksiStokVoucherToolStripMenuItem.Name = "CopyRincianTansaksiStokVoucherToolStripMenuItem"
+        Me.CopyRincianTansaksiStokVoucherToolStripMenuItem.Size = New System.Drawing.Size(262, 22)
+        Me.CopyRincianTansaksiStokVoucherToolStripMenuItem.Text = "Copy Rincian Tansaksi Stok Voucher"
         '
         'GunaTransfarantPictureBox13
         '
@@ -242,7 +290,7 @@ Partial Class frmMonitoringStokMemberdanVoucher
         Me.GunaTransfarantPictureBox4.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
         Me.GunaTransfarantPictureBox4.Location = New System.Drawing.Point(184, -1)
         Me.GunaTransfarantPictureBox4.Name = "GunaTransfarantPictureBox4"
-        Me.GunaTransfarantPictureBox4.Size = New System.Drawing.Size(94, 66)
+        Me.GunaTransfarantPictureBox4.Size = New System.Drawing.Size(94, 67)
         Me.GunaTransfarantPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.GunaTransfarantPictureBox4.TabIndex = 32
         Me.GunaTransfarantPictureBox4.TabStop = False
@@ -266,7 +314,7 @@ Partial Class frmMonitoringStokMemberdanVoucher
         Me.GunaTransfarantPictureBox1.Image = Global.MonitoringMember.My.Resources.Resources.Batik_9
         Me.GunaTransfarantPictureBox1.Location = New System.Drawing.Point(-1, -1)
         Me.GunaTransfarantPictureBox1.Name = "GunaTransfarantPictureBox1"
-        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(94, 66)
+        Me.GunaTransfarantPictureBox1.Size = New System.Drawing.Size(94, 67)
         Me.GunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.GunaTransfarantPictureBox1.TabIndex = 30
         Me.GunaTransfarantPictureBox1.TabStop = False
@@ -307,7 +355,7 @@ Partial Class frmMonitoringStokMemberdanVoucher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(650, 424)
+        Me.ClientSize = New System.Drawing.Size(649, 426)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GunaTransfarantPictureBox13)
         Me.Controls.Add(Me.GunaTransfarantPictureBox12)
@@ -317,12 +365,14 @@ Partial Class frmMonitoringStokMemberdanVoucher
         Me.Controls.Add(Me.GunaTransfarantPictureBox1)
         Me.Controls.Add(Me.GunaTransfarantPictureBox8)
         Me.Controls.Add(Me.TabControl1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMonitoringStokMemberdanVoucher"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Monitoring Voucher dan Member"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.contextMenuMember.ResumeLayout(False)
         Me.gbRincianTransaksi.ResumeLayout(False)
         CType(Me.dgvTransaksiMemberCard, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvStokMember, System.ComponentModel.ISupportInitialize).EndInit()
@@ -331,6 +381,7 @@ Partial Class frmMonitoringStokMemberdanVoucher
         Me.gbRincianVoucher.ResumeLayout(False)
         CType(Me.dgvRincianTransaksiVoucher, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvStockVoucher, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.contextMenuVoucher.ResumeLayout(False)
         CType(Me.GunaTransfarantPictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GunaTransfarantPictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -365,4 +416,10 @@ Partial Class frmMonitoringStokMemberdanVoucher
     Friend WithEvents dgvStockVoucher As System.Windows.Forms.DataGridView
     Friend WithEvents gbRincianVoucher As System.Windows.Forms.GroupBox
     Friend WithEvents dgvRincianTransaksiVoucher As System.Windows.Forms.DataGridView
+    Friend WithEvents contextMenuMember As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents CopyStokMemberToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CopyRincianTransaksiStokMemberToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents contextMenuVoucher As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents CopyStokVoucherToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CopyRincianTansaksiStokVoucherToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

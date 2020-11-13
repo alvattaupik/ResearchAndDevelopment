@@ -22,9 +22,10 @@ Partial Class frmCariCustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCariCustomer))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCariCustomer = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvlistCustomer = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvlistCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,6 +42,14 @@ Partial Class frmCariCustomer
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Parameter"
         '
+        'txtCariCustomer
+        '
+        Me.txtCariCustomer.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCariCustomer.Location = New System.Drawing.Point(52, 22)
+        Me.txtCariCustomer.Name = "txtCariCustomer"
+        Me.txtCariCustomer.Size = New System.Drawing.Size(450, 26)
+        Me.txtCariCustomer.TabIndex = 1
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -50,14 +59,6 @@ Partial Class frmCariCustomer
         Me.Label1.Size = New System.Drawing.Size(36, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Cari"
-        '
-        'txtCariCustomer
-        '
-        Me.txtCariCustomer.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCariCustomer.Location = New System.Drawing.Point(52, 22)
-        Me.txtCariCustomer.Name = "txtCariCustomer"
-        Me.txtCariCustomer.Size = New System.Drawing.Size(450, 26)
-        Me.txtCariCustomer.TabIndex = 1
         '
         'dgvlistCustomer
         '
@@ -79,6 +80,7 @@ Partial Class frmCariCustomer
         Me.ClientSize = New System.Drawing.Size(517, 301)
         Me.Controls.Add(Me.dgvlistCustomer)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCariCustomer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cari Customer"

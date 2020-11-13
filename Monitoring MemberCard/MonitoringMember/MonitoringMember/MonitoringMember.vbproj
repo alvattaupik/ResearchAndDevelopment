@@ -64,7 +64,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Custom-Icon-Design-Flatastic-9-Monitoring.ico</ApplicationIcon>
+    <ApplicationIcon>Picture1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
@@ -378,6 +378,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Custom-Icon-Design-Flatastic-9-Monitoring.ico" />
+    <Content Include="Picture1.ico" />
+    <None Include="Resources\Memberrrrrrrr.png" />
+    <None Include="Resources\Picture1.png" />
+    <None Include="Resources\Logo Monitoring Member.png" />
     <None Include="Resources\SURAT.png" />
     <None Include="Resources\browse.png" />
     <None Include="Resources\Cancel.png" />

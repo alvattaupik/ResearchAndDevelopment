@@ -18,9 +18,9 @@ Public Class frmMainMenu
 
         TimerJam.Start()
 
-        Dim frm As New frmDashBoard
-        frm.MdiParent = Me
-        frm.Show()
+        'Dim frm As New frmDashBoard
+        'frm.MdiParent = Me
+        'frm.Show()
 
 
     End Sub

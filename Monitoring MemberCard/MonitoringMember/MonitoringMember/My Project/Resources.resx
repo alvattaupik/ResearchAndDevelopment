@@ -130,14 +130,20 @@
   <data name="Export To Excel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Export To Excel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Beach" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Beach.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Batik 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Batik 9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Batik 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Batik 7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="browse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\browse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logout Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logout Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo Monitoring Member" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo Monitoring Member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Customer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +169,9 @@
   <data name="Ubah Password logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ubah Password logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Picture1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Export" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Export.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,8 +187,8 @@
   <data name="batik 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\batik 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Batik 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Batik 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Beach" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Beach.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,11 +199,11 @@
   <data name="Lembar Kertas Dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lembar Kertas Dashboard.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Batik 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Batik 7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Batik 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Batik 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Batik 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Batik 9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SURAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SURAT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Indonesia Maps" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Indonesia Maps.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,7 +211,7 @@
   <data name="Batik 9 rotate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Batik 9 rotate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SURAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SURAT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Memberrrrrrrr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Memberrrrrrrr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

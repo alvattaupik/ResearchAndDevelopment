@@ -97,15 +97,12 @@ Public Class frmBAPSerahTerima
             Call AU_SISTER_SJ("ADD-BAST")
 
             For Me.intRow = 0 To dgvListItem.Rows.Count - 1
-
                 AU_SISTER_DETAILSJ("ADD-DetailSJ", dgvListItem)
-
             Next
-
-
 
         End If
         Call KoneksiDB_EMAIL()
+
         LoadDataGrid(dgvDaftarSurat, "SELECT Top 15 NomorSurat,CAST(TanggalSurat AS DATE) AS TglSurat,EmpName AS DibuatOleh,Perihal,DitujukanKepada AS Penerima FROM dbo.KopSurat Where EmpLocation='" & MstrKodeDivisi & "' AND Canceled='N' AND KdJenisSurat='" & lblKodeSurat.Text & "' Order By CreateDate Desc", KoneksiDBEmail)
         dgvListItem.DataSource = Nothing
         dgvListItem.Rows.Clear()

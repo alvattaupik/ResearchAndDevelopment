@@ -11,7 +11,6 @@ Public Class frmMonitoringStokMemberdanVoucher
             Dim adapter As New SqlDataAdapter(command)
             command.CommandType = CommandType.StoredProcedure
             command.Parameters.AddWithValue("@Function", Trim(strFunction))
-
             Dim table As New DataTable
             adapter.Fill(table)
             dgv.DataSource = table
@@ -47,5 +46,21 @@ Public Class frmMonitoringStokMemberdanVoucher
                     " WHERE dbo.OINM.ItemCode='" & dgvStockVoucher.Item(0, dgvStockVoucher.CurrentRow.Index).Value() & "' Order By OINM.Sequence"
         Call Koneksi_SAP()
         LoadDataGrid(dgvRincianTransaksiVoucher, strQuery, KoneksiDBEmail)
+    End Sub
+
+    Private Sub CopyStokMemberToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyStokMemberToolStripMenuItem.Click
+        CopyDataGridViewToClipboard(dgvStokMember)
+    End Sub
+
+    Private Sub CopyRincianTransaksiStokMemberToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyRincianTransaksiStokMemberToolStripMenuItem.Click
+        CopyDataGridViewToClipboard(dgvTransaksiMemberCard)
+    End Sub
+
+    Private Sub CopyStokVoucherToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyStokVoucherToolStripMenuItem.Click
+        CopyDataGridViewToClipboard(dgvStockVoucher)
+    End Sub
+
+    Private Sub CopyRincianTansaksiStokVoucherToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyRincianTansaksiStokVoucherToolStripMenuItem.Click
+        CopyDataGridViewToClipboard(dgvRincianTransaksiVoucher)
     End Sub
 End Class
